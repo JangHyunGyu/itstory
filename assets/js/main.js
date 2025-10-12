@@ -1,34 +1,15 @@
 
 (() => {
-	const timelineItems = Array.from(document.querySelectorAll('.timeline__item'));
 	const navLinks = Array.from(document.querySelectorAll('.page__nav a'));
+	const sectionMap = new Map();
 
-	const setActiveTimeline = (element) => {
-		if (!element) {
-			return;
+	const setActiveNav = (link) => {
+		navLinks.forEach((item) => item.classList.remove('is-active'));
+		if (link) {
+			link.classList.add('is-active');
 		}
-		timelineItems.forEach((item) => item.classList.remove('timeline__item--active'));
-		element.classList.add('timeline__item--active');
 	};
 
-	if (timelineItems.length) {
-		setActiveTimeline(timelineItems[0]);
-		if ('IntersectionObserver' in window) {
-			const observer = new IntersectionObserver(
-				(entries) => {
-					entries.forEach((entry) => {
-						if (entry.isIntersecting) {
-							setActiveTimeline(entry.target);
-						}
-					});
-				},
-				{ rootMargin: '-18% 0px -56% 0px', threshold: 0.35 }
-			);
-			timelineItems.forEach((item) => observer.observe(item));
-		}
-	}
-
-	const sectionMap = new Map();
 	navLinks.forEach((link) => {
 		const hash = link.getAttribute('href');
 		if (!hash || !hash.startsWith('#')) {
@@ -40,34 +21,97 @@
 		}
 	});
 
-	const setActiveNav = (link) => {
-		navLinks.forEach((item) => item.classList.remove('is-active'));
-		if (link) {
-			link.classList.add('is-active');
-		}
-	};
-
-	if (sectionMap.size) {
-		setActiveNav(navLinks[0] || null);
-		if ('IntersectionObserver' in window) {
-			const observer = new IntersectionObserver(
-				(entries) => {
-					entries.forEach((entry) => {
-						if (entry.isIntersecting) {
-							const link = sectionMap.get(entry.target);
-							setActiveNav(link || null);
-						}
-					});
-				},
-				{ rootMargin: '-45% 0px -45% 0px', threshold: 0.25 }
-			);
-			sectionMap.forEach((_, section) => observer.observe(section));
-		}
+	if (sectionMap.size && 'IntersectionObserver' in window) {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						const link = sectionMap.get(entry.target) || null;
+						setActiveNav(link);
+					}
+				});
+			},
+			{ rootMargin: '-45% 0px -45% 0px', threshold: 0.25 }
+		);
+		sectionMap.forEach((_, section) => observer.observe(section));
 	}
 
 	navLinks.forEach((link) => {
 		link.addEventListener('click', () => {
 			setActiveNav(link);
 		});
+	});
+
+	if (navLinks.length) {
+		setActiveNav(navLinks[0]);
+	}
+
+	const modal = document.querySelector('#event-modal');
+	const modalWindow = modal ? modal.querySelector('.modal__window') : null;
+	const modalContent = modal ? modal.querySelector('.modal__content') : null;
+	const closeTriggers = modal ? Array.from(modal.querySelectorAll('[data-modal-close]')) : [];
+	const eventButtons = Array.from(document.querySelectorAll('[data-event-id]'));
+	let lastFocusedTrigger = null;
+
+	if (!modal || !modalWindow || !modalContent) {
+		return;
+	}
+
+	const closeModal = () => {
+		if (modal.hidden) {
+			return;
+		}
+		modal.hidden = true;
+		modalContent.innerHTML = '';
+		modal.removeAttribute('aria-labelledby');
+		document.body.classList.remove('is-modal-open');
+		if (lastFocusedTrigger && typeof lastFocusedTrigger.focus === 'function') {
+			lastFocusedTrigger.focus();
+		}
+		lastFocusedTrigger = null;
+	};
+
+	const openModal = (button) => {
+		const eventId = button?.dataset?.eventId;
+		if (!eventId) {
+			return;
+		}
+		const template = document.getElementById(`event-${eventId}`);
+		if (!template) {
+			return;
+		}
+		lastFocusedTrigger = button;
+		modalContent.innerHTML = '';
+		modalContent.appendChild(template.content.cloneNode(true));
+		modal.hidden = false;
+		document.body.classList.add('is-modal-open');
+		modal.setAttribute('aria-labelledby', `${eventId}-title`);
+		modalWindow.scrollTo({ top: 0 });
+		modalWindow.focus();
+	};
+
+	eventButtons.forEach((button) => {
+		button.addEventListener('click', () => openModal(button));
+	});
+
+	closeTriggers.forEach((trigger) => {
+		trigger.addEventListener('click', () => closeModal());
+	});
+
+	modal.addEventListener('click', (event) => {
+		const target = event.target;
+		if (target && target.hasAttribute('data-modal-close')) {
+			closeModal();
+			return;
+		}
+		if (target === modal) {
+			closeModal();
+		}
+	});
+
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape') {
+			closeModal();
+		}
 	});
 })();

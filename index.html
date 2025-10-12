@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 		<link rel="stylesheet" href="assets/css/style.css">
 	</head>
-	<body>
+ 	<body>
 		<div class="page">
 			<header class="page__header" role="banner">
 				<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
@@ -21,214 +21,93 @@
 					<span class="page__brand-label">ArcherLab Chronicle</span>
 				</a>
 				<nav class="page__nav" aria-label="섹션 탐색">
-					<a href="#timeline">연표</a>
-					<a href="#insights">네트워크 인사이트</a>
+					<a href="#timeline">연도 보기</a>
+					<a href="#signals">관찰</a>
 					<a href="#sources">참고</a>
 				</nav>
 			</header>
 
 			<main class="page__main" id="main" role="main">
-				<section class="hero" id="top">
-					<p class="hero__eyebrow">1840s · Network Story</p>
-					<h1 class="hero__title">전선을 타고 흐른 첫 신호, 전신과 모스부호</h1>
-					<p class="hero__lede">
-						1840년대 중반, 전봇대를 타고 달린 짧고 긴 전류가 멀리 떨어진 도시를 바로 이어 주었습니다.
-						전신망은 기다리던 편지를 몇 초짜리 신호로 바꾸며, 모두가 함께 쓰는 첫 통신 규칙을 세웠습니다.
-					</p>
-					<div class="hero__meta">
-						<span class="hero__tag">Telegraph</span>
-						<span class="hero__tag">Morse Code</span>
-						<a class="hero__tag hero__tag--link" href="#timeline">Timeline 보기</a>
+				<section class="timeline-hero" id="timeline" aria-labelledby="timeline-title">
+					<div class="timeline-hero__head">
+						<p class="hero__eyebrow">Network Story for Web Builders</p>
+						<h1 class="timeline-hero__title" id="timeline-title">전신에서 ARPANET까지, 연도로 읽는 네트워크 진화</h1>
+						<p class="timeline-hero__lede">
+							1830년대 영국 철도 전신부터 1960년대 ARPANET까지의 사건을 정리했습니다.
+							첫 화면에는 연도와 사건 레이블만 배치했습니다. 관심 있는 연도를 클릭하면 레이어 팝업으로
+							상세 서사를 확인할 수 있습니다.
+						</p>
+					</div>
+					<div class="timeline-grid" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1837">
+							<span class="timeline-event__year">1837</span>
+							<span class="timeline-event__label">철도 안전 전신</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1844">
+							<span class="timeline-event__year">1844</span>
+							<span class="timeline-event__label">모스 부호 공공 회선</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1851">
+							<span class="timeline-event__year">1851</span>
+							<span class="timeline-event__label">도버-칼레 해저 케이블</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1866">
+							<span class="timeline-event__year">1866</span>
+							<span class="timeline-event__label">대서양 케이블 안정화</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1876">
+							<span class="timeline-event__year">1876</span>
+							<span class="timeline-event__label">벨 전화 특허</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1878">
+							<span class="timeline-event__year">1878</span>
+							<span class="timeline-event__label">수동 교환 중앙국</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1891">
+							<span class="timeline-event__year">1891</span>
+							<span class="timeline-event__label">스토로저 자동 교환기</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1913">
+							<span class="timeline-event__year">1913</span>
+							<span class="timeline-event__label">네트워크 독점 규제</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1948">
+							<span class="timeline-event__year">1948</span>
+							<span class="timeline-event__label">샤논 정보이론</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1956">
+							<span class="timeline-event__year">1956</span>
+							<span class="timeline-event__label">TAT-1 재생 케이블</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1958">
+							<span class="timeline-event__year">1958</span>
+							<span class="timeline-event__label">ARPA 설립</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1962">
+							<span class="timeline-event__year">1962</span>
+							<span class="timeline-event__label">Licklider 네트워크 구상</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1969">
+							<span class="timeline-event__year">1969</span>
+							<span class="timeline-event__label">ARPANET 첫 연결</span>
+						</button>
 					</div>
 				</section>
 
-				<section class="story-intro" aria-labelledby="story-intro-title">
-					<div class="story-intro__content">
-						<h2 id="story-intro-title">왜 1840년대 전신을 이야기할까</h2>
-						<p>
-							산업혁명 덕분에 도시와 공장은 커졌지만, 소식은 여전히 마차와 배를 타고 며칠씩 걸려야 했습니다.
-							증기기관이 멈춰도 투자자와 기자는 소식을 기다릴 수밖에 없었습니다.
-						</p>
-						<p>
-							전신과 모스부호는 이 기다림을 전기의 속도로 줄였습니다. 일정한 전류 규칙, 멀리까지 버티는 구리선,
-							누구나 읽을 수 있는 점과 선의 언어가 한 시스템 안에 모였습니다.
-						</p>
-						<p>
-							이렇게 단순한 기호를 함께 쓰면서 네트워크는 빠르게 커졌습니다. 오늘 인터넷이 정해진 패킷 규칙으로 움직이는 모습도 그때의 원리와 닮았습니다.
-						</p>
-					</div>
-					<aside class="story-intro__note" aria-label="전신 기본 지표">
-						<h3 class="story-intro__note-title">Telegraph Specs</h3>
-						<dl class="fact-list">
-							<div class="fact-list__item">
-								<dt>전송 속도</dt>
-								<dd>초당 약 30~40 심벌 (숙련 오퍼레이터 기준)</dd>
-							</div>
-							<div class="fact-list__item">
-								<dt>매체</dt>
-								<dd>동선(구리선) 위의 직류 펄스, 접지 회로로 복귀</dd>
-							</div>
-							<div class="fact-list__item">
-								<dt>프로토콜</dt>
-								<dd>국제 모스부호 (1851년 이후), 일정 길이의 점·선 패턴</dd>
-							</div>
-							<div class="fact-list__item">
-								<dt>운영 무결성</dt>
-								<dd>24시간 감시하는 중계국과 로그북, 후대 NOC 개념의 전신국</dd>
-							</div>
-						</dl>
-					</aside>
-				</section>
-
-				<section class="timeline" id="timeline" aria-labelledby="timeline-title">
+				<section class="sources" id="sources" aria-labelledby="sources-title">
 					<div class="section__head">
-						<h2 id="timeline-title">연표 · 전신망이 열어 준 사건들</h2>
+						<h2 id="sources-title">더 깊이 읽을 거리</h2>
 						<p>
-							1840년대부터 1860년대까지 이어진 실험과 실패는 네트워크를 어떻게 다뤄야 하는지 보여 주었습니다.
-							각 사건은 선을 잇는 일뿐 아니라 운영 방식과 규칙을 동시에 다듬어야 했습니다.
+							전신과 전화, 패킷 네트워크의 전환점에 관한 대표 레퍼런스를 모았습니다. 원문 아카이브에서 운영 문서를 직접 읽어 보면 재미있는 힌트를 얻을 수 있습니다.
 						</p>
 					</div>
-					<ol class="timeline__list">
-						<li class="timeline__item" data-year="1837">
-							<div class="timeline__year">1837</div>
-							<div class="timeline__card">
-								<h3>쿠크와 휘스톤의 철도 전신</h3>
-								<p>
-									영국 철도는 안전을 위해 5개의 전선으로 신호를 주고받는 전신을 시험했습니다.
-									이때 선을 관리하고 사람을 교육하는 일이 얼마나 중요한지 모두가 알게 되었습니다.
-								</p>
-								<ul class="timeline__bullets">
-									<li>폐쇄망을 맡는 전담 센터와 운영 인력 등장</li>
-									<li>전기 신호를 글자로 읽기 위한 코드북이 꼭 필요함을 확인</li>
-								</ul>
-							</div>
-						</li>
-						<li class="timeline__item" data-year="1844">
-							<div class="timeline__year">1844</div>
-							<div class="timeline__card">
-								<h3>워싱턴-볼티모어, 첫 공개 회선</h3>
-								<p>
-									새뮤얼 모스는 워싱턴과 볼티모어 사이에 첫 공공 회선을 열고 “What hath God wrought”를 보냈습니다.
-									정부와 언론이 동시에 연결되면서 통신 시간은 순식간에 몇 분 단위로 줄었습니다.
-								</p>
-								<ul class="timeline__bullets">
-									<li>선 한 가닥과 접지를 쓰는 값싼 구조 완성</li>
-									<li>전신국이 메시지 순서를 정하는 우선순위 규칙 등장</li>
-								</ul>
-							</div>
-						</li>
-						<li class="timeline__item" data-year="1846">
-							<div class="timeline__year">1846</div>
-							<div class="timeline__card">
-								<h3>뉴스 산업의 채택</h3>
-								<p>
-									뉴욕의 Associated Press는 전신망으로 분 단위 시세와 선거 결과를 나눴습니다.
-									혼자 정보를 갖는 것보다 함께 공유하는 편이 시장에 더 큰 힘이라는 점을 보여줍니다.
-								</p>
-								<ul class="timeline__bullets">
-									<li>같은 시간에 뉴스를 배포하는 구조 → 훗날 CDN의 씨앗</li>
-									<li>서비스 품질을 계약서로 약속한 첫 사례 중 하나</li>
-								</ul>
-							</div>
-						</li>
-						<li class="timeline__item" data-year="1851">
-							<div class="timeline__year">1851</div>
-							<div class="timeline__card">
-								<h3>도버-칼레 해저 케이블</h3>
-								<p>
-									영국과 프랑스를 잇는 해저 케이블이 완성되자 바다 속 소음과 지연을 줄이기 위한 중계 기술이 빠르게 발전했습니다.
-									신호가 약해지지 않도록 리피터와 절연 재료 연구도 속도를 냈습니다.
-								</p>
-								<ul class="timeline__bullets">
-									<li>손실을 줄이는 신호 증폭(리피터) 실험 시작</li>
-									<li>국경을 넘는 투자 모델과 규격 협의 모임 등장</li>
-								</ul>
-							</div>
-						</li>
-						<li class="timeline__item" data-year="1861">
-							<div class="timeline__year">1861</div>
-							<div class="timeline__card">
-								<h3>미국 대륙 횡단 전신</h3>
-								<p>
-									웨스턴유니언이 대륙을 가로지르는 회선을 깔자 폰니 익스프레스는 역할을 마쳤습니다.
-									긴 거리를 지나는 중계소는 리피터와 함께 매뉴얼, 장애 대처 방법을 하나로 묶었습니다.
-								</p>
-								<ul class="timeline__bullets">
-									<li>구간별 장애 기록 관리 → 오늘날 NMS의 뿌리</li>
-									<li>시간대별로 요금을 나누는 상용 과금 구조 정착</li>
-								</ul>
-							</div>
-						</li>
-						<li class="timeline__item" data-year="1866">
-							<div class="timeline__year">1866</div>
-							<div class="timeline__card">
-								<h3>대서양 횡단 케이블의 안정화</h3>
-								<p>
-									세 번째 시도 끝에 대서양 케이블이 20년 넘게 안정적으로 동작했습니다.
-									켈빈이 정리한 감쇠 계산법과 정기 점검 방식은 글로벌 네트워크 운영의 기본이 되었습니다.
-								</p>
-								<ul class="timeline__bullets">
-									<li>실시간으로 케이블 상태를 보는 계측 → 오늘날 트래픽 모니터링의 시작</li>
-									<li>대륙을 잇는 협력을 위해 국제 전신 협회 설립</li>
-								</ul>
-							</div>
-						</li>
-					</ol>
-				</section>
-
-				<section class="insights" id="insights" aria-labelledby="insight-title">
-					<div class="section__head">
-						<h2 id="insight-title">네트워크 관점에서 얻은 세 가지 교훈</h2>
-						<p>
-							전신은 장비만의 발명이 아니었습니다. 운영, 규칙, 사용자 경험까지 함께 설계한 첫 인터넷이었습니다.
-							오늘 네트워크를 만들 때도 여전히 통하는 원칙을 정리했습니다.
-						</p>
-					</div>
-					<div class="insight-grid">
-						<article class="insight-card">
-							<h3>프로토콜은 언어이자 계약</h3>
-							<p>
-								모스부호는 사람이 쉽게 기억하고 기계가 그대로 찍어 낼 수 있는 단순한 코드입니다.
-								길이와 공백을 정해 둔 규칙은 오늘날 패킷 헤더나 세션 시간과 같은 약속과 닮았습니다.
-							</p>
-						</article>
-						<article class="insight-card">
-							<h3>네트워크는 운영 조직과 함께 성장</h3>
-							<p>
-								전신국 직원들은 장애를 보고하고 교대 근무를 기록했습니다. 이 모습은 훗날 NOC와 SOC의 시작이며,
-								네트워크가 커질수록 운영 규칙과 문서가 필수라는 사실을 일찍 증명했습니다.
-							</p>
-						</article>
-						<article class="insight-card">
-							<h3>물리 계층의 한계를 넘는 창의성</h3>
-							<ul>
-								<li>해저 케이블 감쇠를 줄이기 위한 절연과 증폭 기술</li>
-								<li>속도가 느려질수록 메시지를 압축하고 우선순위를 세우는 전략</li>
-								<li>켈빈이 현실 제약을 수식으로 정리하며 네트워크 설계를 과학적으로 바꿈</li>
-							</ul>
-						</article>
-					</div>
-				</section>
-
-				<section class="story-outro" id="sources" aria-labelledby="outro-title">
-					<div class="story-outro__body">
-						<h2 id="outro-title">다음 장을 준비하며</h2>
-						<p>
-							전신망은 통신을 공간이 아닌 시간의 문제로 바꿨습니다. 메시지는 더 이상 달리는 마차가 아니라,
-							전압으로 만든 신호가 되었습니다. 이 변화가 음성, 데이터, 빛으로 이어지는 길을 열었습니다.
-						</p>
-						<p>
-							다음 이야기는 1870~1890년대 전화망입니다. 한 줄의 회선을 여러 사람이 나눠 쓰게 만든 스위칭 기술을 살펴보겠습니다.
-						</p>
-					</div>
-					<aside class="story-outro__sources" aria-label="참고 자료">
-						<h3>참고한 기록</h3>
-						<ul>
-							<li><a href="https://www.britannica.com/technology/telegraph" target="_blank" rel="noopener">Encyclopaedia Britannica · Telegraph</a></li>
-							<li><a href="https://www.loc.gov/collections/samuel-morse-papers/about-this-collection/" target="_blank" rel="noopener">Library of Congress · Samuel F. B. Morse Papers</a></li>
-							<li><a href="https://ieeexplore.ieee.org/document/7127" target="_blank" rel="noopener">IEEE History Center · Early Telegraphy</a></li>
-						</ul>
-					</aside>
+					<ul class="source-list">
+						<li><a href="https://www.britannica.com/technology/telegraph" target="_blank" rel="noopener">Encyclopaedia Britannica · Telegraph</a></li>
+						<li><a href="https://www.sciencehistory.org/topics/communication/telegraph" target="_blank" rel="noopener">Science History Institute · Telegraph and Cable</a></li>
+						<li><a href="https://www.loc.gov/item/96515266/" target="_blank" rel="noopener">Library of Congress · Bell Telephone Exchange Manual</a></li>
+						<li><a href="https://archive.org/details/shannon1948" target="_blank" rel="noopener">Claude Shannon · A Mathematical Theory of Communication</a></li>
+						<li><a href="https://archive.org/details/arpacomputerprog00unit" target="_blank" rel="noopener">ARPA · Information Processing Techniques Office Reports</a></li>
+					</ul>
 				</section>
 			</main>
 
@@ -237,6 +116,235 @@
 				<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
 			</footer>
 		</div>
+
+		<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
+			<div class="modal__overlay" data-modal-close></div>
+			<div class="modal__window" role="document" tabindex="-1">
+				<button class="modal__close" type="button" aria-label="레이어 닫기" data-modal-close>&times;</button>
+				<div class="modal__content"></div>
+			</div>
+		</div>
+
+		<template id="event-1837">
+			<article class="event-detail" aria-labelledby="event-1837-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1837</p>
+					<h2 id="event-1837-title">철도 안전을 위한 전신 · 쿠크 &amp; 휘스톤</h2>
+					<p class="event-detail__summary">다중 바늘 전신 장치는 런던-웨스트드라이튼 구간 열차 간격을 제어하며 최초의 실시간 모니터링 센터 개념을 제시했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<ul>
+						<li>철도 관제실은 오늘날 NOC처럼 회선 상태, 인력, 장애를 즉시 기록했습니다.</li>
+						<li>다섯 가닥 전선 유지보수로 인해 케이블 라우팅, 여분 회선 관리가 표준화되었습니다.</li>
+						<li>코드북을 기반으로 한 맵핑이 API 스펙 문서처럼 운영되었습니다.</li>
+					</ul>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1844">
+			<article class="event-detail" aria-labelledby="event-1844-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1844</p>
+					<h2 id="event-1844-title">워싱턴-볼티모어 공공 회선 · 모스 부호</h2>
+					<p class="event-detail__summary">모스는 접지 회로와 단선 회로로 비용을 획기적으로 낮추고, 누구나 쓸 수 있는 개방 규격을 공공 메시지에 적용했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<ul>
+						<li>회선 우선순위와 메시지 길이 제한이 생기며 QoS 개념이 싹텄습니다.</li>
+						<li>중계국의 전송 로그는 이후 텔레그램 감사 기록의 기초가 되었습니다.</li>
+						<li>정부/언론이 동시에 접속한 첫 B2G/B2B 플랫폼 사례로 평가됩니다.</li>
+					</ul>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1851">
+			<article class="event-detail" aria-labelledby="event-1851-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1851</p>
+					<h2 id="event-1851-title">도버-칼레 해저 케이블 · 국제 회선 운영</h2>
+					<p class="event-detail__summary">첫 상업 해저 케이블은 감쇠·절연·접속 문제를 해결하면서 국경을 넘는 인프라 투자 모델을 세웠습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<ul>
+						<li>리피터와 점검 스케줄이 등장하며 SLO 개념이 생겼습니다.</li>
+						<li>국제 전신 회의는 상호운용성을 위한 첫 프로토콜 보드였습니다.</li>
+						<li>해저 케이블 지도는 오늘날의 네트워크 토폴로지 다이어그램 전신입니다.</li>
+					</ul>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1866">
+			<article class="event-detail" aria-labelledby="event-1866-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1866</p>
+					<h2 id="event-1866-title">대서양 횡단 케이블 안정화</h2>
+					<p class="event-detail__summary">3차 시도 끝에 성공한 케이블은 켈빈의 감쇠 수식과 정기 점검 프로토콜을 통해 20년 이상 안정 운영되었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<ul>
+						<li>실시간 계측 장비가 도입되어 네트워크 모니터링 대시보드의 선례가 되었습니다.</li>
+						<li>변압기·절연유 같은 하드웨어 튜닝이 물리 레이어 최적화의 교과서가 되었습니다.</li>
+						<li>국제 전신 연합(ITU 전신부)의 설립으로 글로벌 규약이 탄생했습니다.</li>
+					</ul>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1876">
+			<article class="event-detail" aria-labelledby="event-1876-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1876</p>
+					<h2 id="event-1876-title">벨 전화 특허와 음성 전송</h2>
+					<p class="event-detail__summary">전기 신호를 음성으로 바꾸는 송수화기가 등장하면서 회선 이용 패턴이 메시지 중심에서 대화 중심으로 이동했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<ul>
+						<li>회선 당 한 세션이라는 제약이 생겨 동시성 관리가 새로운 과제가 되었습니다.</li>
+						<li>통화 품질 지표가 등장하며 음성 코덱과 필터 연구가 시작되었습니다.</li>
+						<li>장거리 음성은 증폭/리피터 비용 때문에 비즈니스 플랜이 중요했습니다.</li>
+					</ul>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1878">
+			<article class="event-detail" aria-labelledby="event-1878-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1878</p>
+					<h2 id="event-1878-title">보스턴 중앙 교환국과 수동 라우팅</h2>
+					<p class="event-detail__summary">전화 가입자가 늘면서 오퍼레이터가 패치 패널을 수동으로 연결하는 교환국이 등장했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<ul>
+						<li>운영 메뉴얼과 장애 응대 스크립트가 작성되어 런북 문화를 만들었습니다.</li>
+						<li>사용자 인증을 위해 “번호로 묻고 이름으로 확인”하는 절차가 생겼습니다.</li>
+						<li>업타임을 위해 교대·교육 시스템이 체계화되며 SRE의 조상격 조직이 됐습니다.</li>
+					</ul>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1891">
+			<article class="event-detail" aria-labelledby="event-1891-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1891</p>
+					<h2 id="event-1891-title">스토로저 자동 교환기</h2>
+					<p class="event-detail__summary">펄스 다이얼 신호를 릴레이 스택이 해석해 회선을 스스로 연결하는 장치가 상용화되었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<ul>
+						<li>인간 대신 기계가 라우팅하며 오류율·장애율이 급감했습니다.</li>
+						<li>펄스 신호 규격이 생겨 프로토콜 버전 관리가 필요해졌습니다.</li>
+						<li>하드웨어 상태 모니터링을 위한 “알람 접점”이 만들어졌습니다.</li>
+					</ul>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1913">
+			<article class="event-detail" aria-labelledby="event-1913-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1913</p>
+					<h2 id="event-1913-title">Kingsbury 약속과 네트워크 규제</h2>
+					<p class="event-detail__summary">AT&amp;T는 장거리 회선을 유지하는 대신 지역 통신사 상호접속을 허용하는 합의를 체결했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<ul>
+						<li>독점과 개방 사이 균형을 찾는 거버넌스 모델이 등장했습니다.</li>
+						<li>상호접속 요율과 SLA가 문서화되어 상업용 네트워크 규약이 확립됐습니다.</li>
+						<li>공익 서비스와 민간 혁신의 경계를 규정한 첫 법적 장치였습니다.</li>
+					</ul>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1948">
+			<article class="event-detail" aria-labelledby="event-1948-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1948</p>
+					<h2 id="event-1948-title">샤논 정보이론</h2>
+					<p class="event-detail__summary">Claude Shannon은 잡음이 있는 채널에도 적용 가능한 정보 전송의 한계를 수식으로 제시했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<ul>
+						<li>비트·엔트로피 개념은 오늘날 대역폭 계산과 압축 알고리즘의 기본 단위가 되었습니다.</li>
+						<li>에러 정정 코드가 등장해 품질을 코드로 보증하는 시대를 열었습니다.</li>
+						<li>통계적 신호 모델이 네트워크 설계에 수학적 근거를 제공했습니다.</li>
+					</ul>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1956">
+			<article class="event-detail" aria-labelledby="event-1956-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1956</p>
+					<h2 id="event-1956-title">TAT-1 해저 전화 케이블</h2>
+					<p class="event-detail__summary">첫 재생형 대서양 전화 케이블은 36회선을 지원하며 증폭기, 전원, 모니터링을 통합한 장거리 음성 백본입니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<ul>
+						<li>재생 증폭기가 도입되면서 중간 노드 헬스체크가 필수 운영 요소가 되었습니다.</li>
+						<li>대역폭 할당과 요금 정책이 오늘날 회선 과금 모델에 영향을 주었습니다.</li>
+						<li>운영 도면과 절차가 이후 광해저케이블 구축의 템플릿이 됐습니다.</li>
+					</ul>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1958">
+			<article class="event-detail" aria-labelledby="event-1958-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1958</p>
+					<h2 id="event-1958-title">ARPA 설립</h2>
+					<p class="event-detail__summary">미 국방성은 분산 연구 과제를 묶기 위해 ARPA를 만들고, 정보 처리 기술실(IPTO)에 지속적인 투자를 시작했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<ul>
+						<li>네트워크 연구의 장기 로드맵과 예산이 안정적으로 확보되었습니다.</li>
+						<li>대학·기업·정부를 연결하는 협업 모델이 만들어졌습니다.</li>
+						<li>패킷 교환, 인터랙티브 컴퓨팅 등 미래 지향 과제를 제도적으로 지원했습니다.</li>
+					</ul>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1962">
+			<article class="event-detail" aria-labelledby="event-1962-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1962</p>
+					<h2 id="event-1962-title">J.C.R. Licklider의 망상호 연결 메모</h2>
+					<p class="event-detail__summary">Licklider는 “Intergalactic Computer Network” 메모에서 개방형 통신 프로토콜과 협업 지능을 제안했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<ul>
+						<li>시간 공유 시스템과 메시지 교환을 하나의 플랫폼으로 묶는 개념이 제시되었습니다.</li>
+						<li>사용자 친화적인 인터페이스와 공동 작업이 네트워크 목표로 들어왔습니다.</li>
+						<li>IPTO는 이 비전을 바탕으로 ARPANET 설계를 발주했습니다.</li>
+					</ul>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1969">
+			<article class="event-detail" aria-labelledby="event-1969-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1969</p>
+					<h2 id="event-1969-title">ARPANET 첫 연결</h2>
+					<p class="event-detail__summary">UCLA와 SRI 사이 패킷 스위칭 노드가 연결되며 “LOGIN” 메시지를 전송한 순간 현대 인터넷이 열렸습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<ul>
+						<li>IMP(Interface Message Processor)는 라우터/방화벽/관제 장치의 시초였습니다.</li>
+						<li>패킷 분할, 재조립, 라우팅 테이블이 코드로 구현되어 운영 자동화의 기준선을 세웠습니다.</li>
+						<li>네트워크 측정과 로그 수집이 소프트웨어에서 기본 기능으로 자리 잡았습니다.</li>
+					</ul>
+				</section>
+			</article>
+		</template>
 
 		<script src="assets/js/main.js" defer></script>
 	</body>
