@@ -85,7 +85,7 @@
 		modalContent.appendChild(template.content.cloneNode(true));
 		modal.hidden = false;
 		document.body.classList.add('is-modal-open');
-		modal.setAttribute('aria-labelledby', `${eventId}-title`);
+		modal.setAttribute('aria-labelledby', `event-${eventId}-title`);
 		modalWindow.scrollTo({ top: 0 });
 		modalWindow.focus();
 	};
