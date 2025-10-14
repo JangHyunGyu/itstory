@@ -148,7 +148,157 @@
 		} else {
 			modalWindow.focus();
 		}
+
+		// 초보자용 용어 툴팁 적용: 템플릿 내용이 삽입된 직후에 실행
+		applyGlossaryTooltips(modalContent);
 	};
+
+	// 간단한 용어집: 주요 전문 용어와 쉬운 설명
+	const GLOSSARY = {
+		"Ethernet": "여러 장치가 같은 케이블로 데이터를 주고받을 수 있게 해 주는 컴퓨터 네트워크 기술의 한 종류입니다.",
+		"TSN": "Time-Sensitive Networking의 약자. 공장의 기기들처럼 시간이 아주 중요한 데이터를 우선 처리하도록 도와주는 이더넷 기술입니다.",
+		"IEEE": "전기·전자 표준을 정하는 국제 기관 이름입니다. (예: IEEE 802.3은 이더넷 표준입니다)",
+		"프레임": "네트워크에서 보내는 하나의 데이터 묶음(편지 한 통 같은 역할)입니다.",
+		"지터": "데이터가 도착하는 시간의 들쭉날쭉함을 뜻합니다. 일정하지 않으면 실시간 서비스에 문제가 생깁니다."
+	};
+
+	const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+	function applyGlossaryTooltips(root) {
+		if (!root) return;
+		const terms = Object.keys(GLOSSARY).map(escapeRegExp).join("|");
+		if (!terms) return;
+		const re = new RegExp(`\\b(${terms})\\b`, 'g');
+
+		// 텍스트 노드만 순회하며 치환
+		const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+		const nodes = [];
+		while (walker.nextNode()) nodes.push(walker.currentNode);
+
+		nodes.forEach((textNode) => {
+			const parent = textNode.parentNode;
+			if (!parent || parent.closest('abbr')) return; // 이미 감싸진 경우 스킵
+			const text = textNode.nodeValue;
+			if (!re.test(text)) return;
+			const frag = document.createDocumentFragment();
+			let lastIndex = 0;
+			text.replace(re, (match, p1, offset) => {
+				if (offset > lastIndex) {
+					frag.appendChild(document.createTextNode(text.slice(lastIndex, offset)));
+				}
+				const abbr = document.createElement('abbr');
+				abbr.textContent = match;
+				abbr.title = GLOSSARY[match] || GLOSSARY[p1] || '';
+				abbr.className = 'glossary-abbr';
+				frag.appendChild(abbr);
+				lastIndex = offset + match.length;
+				return match;
+			});
+			if (lastIndex < text.length) {
+				frag.appendChild(document.createTextNode(text.slice(lastIndex)));
+			}
+			parent.replaceChild(frag, textNode);
+		});
+	}
+
+	// 툴팁 엘리먼트 생성
+	function createTooltip() {
+		let tip = document.createElement('div');
+		tip.className = 'glossary-tooltip';
+		tip.style.display = 'none';
+		tip.style.opacity = '0';
+		document.body.appendChild(tip);
+		return tip;
+	}
+
+	const tooltip = createTooltip();
+	let tooltipHideTimer = null;
+
+	function showTooltipFor(abbr) {
+		if (!abbr) return;
+		const text = abbr.title || '';
+		tooltip.textContent = text;
+		tooltip.style.display = 'block';
+		// 렌더링 후 치수 읽기
+		requestAnimationFrame(() => {
+			const rect = abbr.getBoundingClientRect();
+			const tipW = tooltip.offsetWidth;
+			const tipH = tooltip.offsetHeight;
+			let left = rect.left + window.scrollX + rect.width / 2 - tipW / 2;
+			left = Math.max(8 + window.scrollX, Math.min(left, window.scrollX + window.innerWidth - tipW - 8));
+			// 기본은 아래에 표시, 아래로 넘치면 위에 표시
+			let top = rect.bottom + window.scrollY + 8;
+			if (top + tipH > window.scrollY + window.innerHeight - 8) {
+				top = rect.top + window.scrollY - tipH - 8;
+			}
+			tooltip.style.left = left + 'px';
+			tooltip.style.top = top + 'px';
+			tooltip.style.opacity = '1';
+		});
+		if (tooltipHideTimer) {
+			clearTimeout(tooltipHideTimer);
+			tooltipHideTimer = null;
+		}
+		// 자동 숨김(예: 모바일에서 오래 보이지 않게)
+		tooltipHideTimer = setTimeout(() => {
+			hideTooltip();
+		}, 5000);
+	}
+
+	function hideTooltip() {
+		if (tooltipHideTimer) {
+			clearTimeout(tooltipHideTimer);
+			tooltipHideTimer = null;
+		}
+		tooltip.style.opacity = '0';
+		// fade 아웃 후 숨김
+		setTimeout(() => {
+			tooltip.style.display = 'none';
+		}, 200);
+	}
+
+	// hover 처리 (데스크톱)
+	document.addEventListener('mouseover', (e) => {
+		const abbr = e.target.closest && e.target.closest('.glossary-abbr');
+		if (!abbr) return;
+		showTooltipFor(abbr);
+	});
+	document.addEventListener('mouseout', (e) => {
+		const related = e.relatedTarget;
+		if (related && related.closest && related.closest('.glossary-abbr')) return;
+		hideTooltip();
+	});
+
+	// 클릭/터치 처리 (모바일 포함) - 이벤트 위임
+	document.addEventListener('click', (e) => {
+		const abbr = e.target.closest && e.target.closest('.glossary-abbr');
+		if (!abbr) return;
+		e.preventDefault();
+		e.stopPropagation();
+		// 같은 내용이면 토글
+		if (tooltip.style.display === 'block' && tooltip.textContent === (abbr.title || '')) {
+			hideTooltip();
+			return;
+		}
+		showTooltipFor(abbr);
+	});
+
+	// 터치 전용 빠른 반응 보장 (일부 모바일 브라우저가 hover를 발생시키지 않음)
+	function __onTouchStartForGlossary(e) {
+		const abbr = e.target.closest && e.target.closest('.glossary-abbr');
+		if (!abbr) return;
+		// preventDefault required to avoid native behaviors (예: 페이지 스크롤) when tapping
+		if (typeof e.preventDefault === 'function') {
+			e.preventDefault();
+		}
+		if (typeof e.stopPropagation === 'function') {
+			e.stopPropagation();
+		}
+		showTooltipFor(abbr);
+	}
+
+	// register touch listener as non-passive so preventDefault() is allowed
+	document.addEventListener('touchstart', __onTouchStartForGlossary, { passive: false });
 
 	eventButtons.forEach((button) => {
 		button.addEventListener('click', () => openModal(button));
