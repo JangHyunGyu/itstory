@@ -1,4 +1,3 @@
-
 (() => {
 	const navLinks = Array.from(document.querySelectorAll('.page__nav a'));
 	const sectionMap = new Map();
@@ -51,7 +50,12 @@
 	const modalContent = modal ? modal.querySelector('.modal__content') : null;
 	const closeTriggers = modal ? Array.from(modal.querySelectorAll('[data-modal-close]')) : [];
 	const eventButtons = Array.from(document.querySelectorAll('[data-event-id]'));
+	const FOCUSABLE_SELECTOR =
+		'a[href], button:not([disabled]), textarea, input, select, summary, details, [tabindex]:not([tabindex="-1"])';
 	let lastFocusedTrigger = null;
+	let focusableElements = [];
+	let firstFocusable = null;
+	let lastFocusable = null;
 
 	if (!modal || !modalWindow || !modalContent) {
 		return;
@@ -65,10 +69,50 @@
 		modalContent.innerHTML = '';
 		modal.removeAttribute('aria-labelledby');
 		document.body.classList.remove('is-modal-open');
+		modalWindow.removeEventListener('keydown', trapFocusInsideModal);
+		focusableElements = [];
+		firstFocusable = null;
+		lastFocusable = null;
 		if (lastFocusedTrigger && typeof lastFocusedTrigger.focus === 'function') {
 			lastFocusedTrigger.focus();
 		}
 		lastFocusedTrigger = null;
+	};
+
+	const setModalFocusables = () => {
+		focusableElements = Array.from(
+			modalWindow.querySelectorAll(FOCUSABLE_SELECTOR)
+		).filter(
+			(element) =>
+				!element.hasAttribute('disabled') &&
+				!element.getAttribute('aria-hidden') &&
+				element.offsetParent !== null
+		);
+		firstFocusable = focusableElements[0] || modalWindow;
+		lastFocusable = focusableElements[focusableElements.length - 1] || modalWindow;
+	};
+
+	const trapFocusInsideModal = (event) => {
+		if (event.key !== 'Tab') {
+			return;
+		}
+		if (!focusableElements.length) {
+			event.preventDefault();
+			modalWindow.focus();
+			return;
+		}
+		const activeElement = document.activeElement;
+		if (event.shiftKey) {
+			if (activeElement === firstFocusable) {
+				event.preventDefault();
+				lastFocusable.focus();
+			}
+			return;
+		}
+		if (activeElement === lastFocusable) {
+			event.preventDefault();
+			firstFocusable.focus();
+		}
 	};
 
 	const openModal = (button) => {
@@ -87,7 +131,9 @@
 		document.body.classList.add('is-modal-open');
 		modal.setAttribute('aria-labelledby', `event-${eventId}-title`);
 		modalWindow.scrollTo({ top: 0 });
-		modalWindow.focus();
+		setModalFocusables();
+		modalWindow.addEventListener('keydown', trapFocusInsideModal);
+		firstFocusable.focus();
 	};
 
 	eventButtons.forEach((button) => {
