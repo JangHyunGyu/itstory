@@ -61,6 +61,12 @@
 		return;
 	}
 
+	eventButtons.forEach((button) => {
+		button.setAttribute('aria-haspopup', 'dialog');
+		button.setAttribute('aria-controls', modal.id);
+		button.setAttribute('aria-expanded', 'false');
+	});
+
 	const closeModal = () => {
 		if (modal.hidden) {
 			return;
@@ -73,6 +79,9 @@
 		focusableElements = [];
 		firstFocusable = null;
 		lastFocusable = null;
+		if (lastFocusedTrigger) {
+			lastFocusedTrigger.setAttribute('aria-expanded', 'false');
+		}
 		if (lastFocusedTrigger && typeof lastFocusedTrigger.focus === 'function') {
 			lastFocusedTrigger.focus();
 		}
@@ -125,6 +134,7 @@
 			return;
 		}
 		lastFocusedTrigger = button;
+		button.setAttribute('aria-expanded', 'true');
 		modalContent.innerHTML = '';
 		modalContent.appendChild(template.content.cloneNode(true));
 		modal.hidden = false;
@@ -133,7 +143,11 @@
 		modalWindow.scrollTo({ top: 0 });
 		setModalFocusables();
 		modalWindow.addEventListener('keydown', trapFocusInsideModal);
-		firstFocusable.focus();
+		if (firstFocusable && typeof firstFocusable.focus === 'function') {
+			firstFocusable.focus();
+		} else {
+			modalWindow.focus();
+		}
 	};
 
 	eventButtons.forEach((button) => {
