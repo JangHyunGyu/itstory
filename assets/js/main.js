@@ -54,10 +54,13 @@
 		'a[href], button:not([disabled]), textarea, input, select, summary, details, [tabindex]:not([tabindex="-1"])';
 	let lastFocusedTrigger = null;
 	let focusableElements = [];
+	// 타임라인 페이지에서 내비게이션, 모달, 용어집 툴팁을 제어하는 즉시 실행 함수입니다.
 	let firstFocusable = null;
+		// 헤더 내비게이션 링크 목록과 각 섹션을 매핑합니다.
 	let lastFocusable = null;
 
 	if (!modal || !modalWindow || !modalContent) {
+		// 현재 보고 있는 섹션에 맞춰 내비게이션에 강조 표시를 붙입니다.
 		return;
 	}
 
@@ -76,6 +79,7 @@
 		modal.removeAttribute('aria-labelledby');
 		document.body.classList.remove('is-modal-open');
 		modalWindow.removeEventListener('keydown', trapFocusInsideModal);
+		// 스크롤로 섹션이 화면 가운데로 들어오면 해당 내비게이션을 활성화합니다.
 		focusableElements = [];
 		firstFocusable = null;
 		lastFocusable = null;
@@ -101,6 +105,7 @@
 		lastFocusable = focusableElements[focusableElements.length - 1] || modalWindow;
 	};
 
+		// 모달 구조와 버튼 등 재사용할 DOM 요소를 미리 찾아 둡니다.
 	const trapFocusInsideModal = (event) => {
 		if (event.key !== 'Tab') {
 			return;
@@ -113,6 +118,7 @@
 		const activeElement = document.activeElement;
 		if (event.shiftKey) {
 			if (activeElement === firstFocusable) {
+		// 모달 구성이 정상적이지 않다면 즉시 종료해 불필요한 에러를 막습니다.
 				event.preventDefault();
 				lastFocusable.focus();
 			}
@@ -123,6 +129,7 @@
 			firstFocusable.focus();
 		}
 	};
+		// 모달 닫기 공통 로직: 내용 정리, 포커스 복귀, 이벤트 정리 등을 한 번에 처리합니다.
 
 	const openModal = (button) => {
 		const eventId = button?.dataset?.eventId;
