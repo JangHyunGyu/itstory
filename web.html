@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ArcherLab IT Story · 웹이 층을 나눈 이유</title>
+		<meta name="description" content="정적 문서에서 CGI, Ajax, SPA, 서버리스까지. 웹이 프론트엔드와 백엔드로 나뉘고 다시 협력하게 된 순간을 타임라인으로 살펴봅니다." />
+		<meta property="og:title" content="ArcherLab IT Story · Web Layers Timeline" />
+		<meta property="og:description" content="WWW 제안부터 서버리스까지, 웹이 정적 문서에서 앱 플랫폼으로 성장한 과정을 읽어 보세요." />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+		<div class="page">
+			<header class="page__header" role="banner">
+				<div class="page__header-left">
+					<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
+						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
+						<span class="page__brand-label">ArcherLab Chronicle</span>
+					</a>
+					<nav class="page__topic-nav" aria-label="주제 전환">
+						<a href="index.html">홈 허브</a>
+						<a href="networks.html">네트워크 연대기</a>
+						<a href="computers.html">컴퓨터 연대기</a>
+						<a href="web.html" class="is-current">웹 연대기</a>
+						<a href="databases.html">데이터베이스 연대기</a>
+					</nav>
+				</div>
+				<nav class="page__nav" aria-label="섹션 탐색">
+					<a href="#timeline">연도 보기</a>
+					<a href="#sources">참고</a>
+				</nav>
+			</header>
+
+			<main class="page__main" id="main" role="main">
+				<section class="timeline-hero" aria-labelledby="timeline-title">
+					<div class="timeline-hero__head">
+						<p class="hero__eyebrow">Web Story for Product Builders</p>
+						<h1 class="timeline-hero__title" id="timeline-title">정적 문서에서 API와 서버리스까지, 웹이 층을 나눠 성장한 이유를 따라가 보세요</h1>
+						<p class="timeline-hero__lede">
+							연구소 복도에서 문서를 돌려보던 과학자에게서 시작해, 전 세계 사용자를 상대하는 제품팀까지. 웹은 "파일을 보여 주는 곳"에서 "앱을 실행하는 무대"로 변하며 프론트엔드와 백엔드라는 역할을 만들었습니다.
+						</p>
+						<p class="timeline-hero__lede">
+							연도 버튼을 누르면 정적 페이지, CGI, Ajax, SPA, 서버리스로 이어지는 실험과 그 결과가 다음 세대의 개발 방식을 어떻게 바꿨는지 확인할 수 있습니다.
+						</p>
+					</div>
+				</section>
+
+				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
+					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">연도 버튼을 누르면 새 창 없이 팝업 대화 상자가 열리고, 그 자리에서 자세한 이야기를 이어서 읽을 수 있습니다.</p>
+
+					<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1990">1990–1993</p>
+							<h3 class="timeline-group__topic" id="topic-1990">정적 문서를 연결한 첫 웹</h3>
+							<p class="timeline-group__summary">WWW 제안과 최초의 브라우저·서버 구현이 등장하며 "파일을 요청하고 보여 주는" 정적 구조가 자리 잡았습니다.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1990-www-proposal">
+								<span class="timeline-event__year">1990</span>
+								<span class="timeline-event__label">WWW 제안</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1993-mosaic">
+								<span class="timeline-event__year">1993</span>
+								<span class="timeline-event__label">Mosaic 공개</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1990-dynamic topic-1990-dynamic">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1990-dynamic">1993–1997</p>
+							<h3 class="timeline-group__topic" id="topic-1990-dynamic">서버가 문서를 만들어 주기 시작하다</h3>
+							<p class="timeline-group__summary">CGI, PHP, ASP가 등장해 사용자 요청마다 HTML을 새로 만들어 주는 백엔드 개념이 자리잡았습니다.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1993-cgi">
+								<span class="timeline-event__year">1993</span>
+								<span class="timeline-event__label">CGI 표준화</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1995-php">
+								<span class="timeline-event__year">1995</span>
+								<span class="timeline-event__label">PHP 도구</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1996-asp">
+								<span class="timeline-event__year">1996</span>
+								<span class="timeline-event__label">Active Server Pages</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2000">1998–2006</p>
+							<h3 class="timeline-group__topic" id="topic-2000">브라우저가 움직임을 맡다</h3>
+							<p class="timeline-group__summary">XMLHttpRequest와 Ajax 패턴이 퍼지며 프론트엔드가 서버와 비동기 통신을 주도하기 시작했습니다.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1999-xmlhttprequest">
+								<span class="timeline-event__year">1999</span>
+								<span class="timeline-event__label">XMLHttpRequest 등장</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-ajax">
+								<span class="timeline-event__year">2005</span>
+								<span class="timeline-event__label">Ajax 패턴 확산</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2010">2010s</p>
+							<h3 class="timeline-group__topic" id="topic-2010">SPA와 컴포넌트의 시대</h3>
+							<p class="timeline-group__summary">프론트엔드가 독립된 애플리케이션으로 성장하며 AngularJS, React 같은 프레임워크가 등장했습니다.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2010-angularjs">
+								<span class="timeline-event__year">2010</span>
+								<span class="timeline-event__label">AngularJS 공개</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2013-react">
+								<span class="timeline-event__year">2013</span>
+								<span class="timeline-event__label">React 발표</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2020">2014–2025</p>
+							<h3 class="timeline-group__topic" id="topic-2020">API와 서버리스로 재조합</h3>
+							<p class="timeline-group__summary">Lambda와 JAMstack, 엣지 함수가 등장하며 백엔드는 API, 프론트는 독립 배포로 분리·협업 구조를 완성했습니다.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-lambda">
+								<span class="timeline-event__year">2014</span>
+								<span class="timeline-event__label">AWS Lambda 출시</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2020-jamstack">
+								<span class="timeline-event__year">2020</span>
+								<span class="timeline-event__label">JAMstack/엣지 확산</span>
+							</button>
+						</div>
+					</section>
+				</section>
+
+				<section class="sources" id="sources" aria-labelledby="sources-title">
+					<div class="section__head">
+						<h2 id="sources-title">참고 자료</h2>
+						<p>웹의 구조가 정적 문서에서 애플리케이션 플랫폼으로 바뀐 과정을 기록한 1차 자료와 회고를 모았습니다. 원문을 읽어 보면 각 시대의 개발자들이 어떤 문제를 해결하려 했는지 더 선명합니다.</p>
+					</div>
+					<ul class="source-list">
+						<li><a href="https://www.w3.org/Proposal.html" target="_blank" rel="noopener">Tim Berners-Lee · Information Management: A Proposal</a></li>
+						<li><a href="https://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html" target="_blank" rel="noopener">CERN · World Wide Web Project</a></li>
+						<li><a href="https://www.rfc-editor.org/rfc/rfc3875" target="_blank" rel="noopener">NCSA · Common Gateway Interface Specification</a></li>
+						<li><a href="https://queue.acm.org/detail.cfm?id=1117401" target="_blank" rel="noopener">ACM Queue · Ajax: A New Approach to Web Applications</a></li>
+						<li><a href="https://aws.amazon.com/blogs/aws/aws-lambda-event-driven-code-in-the-cloud/" target="_blank" rel="noopener">AWS News Blog · AWS Lambda Announcement</a></li>
+					</ul>
+				</section>
+			</main>
+
+			<footer class="page__footer" role="contentinfo">
+				<p>© 2025 ArcherLab · Stories on how the web split and reunited.</p>
+				<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
+			</footer>
+		</div>
+
+		<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
+			<div class="modal__overlay" data-modal-close></div>
+			<div class="modal__window" role="document" tabindex="-1">
+				<button class="modal__close" type="button" aria-label="레이어 닫기" data-modal-close>&times;</button>
+				<div class="modal__content"></div>
+			</div>
+		</div>
+
+		<template id="event-1990-www-proposal">
+			<article class="event-detail" aria-labelledby="event-1990-www-proposal-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1990</p>
+					<h2 id="event-1990-www-proposal-title">WWW 제안 · 팀 버너스-리</h2>
+					<p class="event-detail__summary">CERN 연구원들은 “문서를 공유하려면 메일을 또 보내야 하잖아요.”라고 불평했습니다. 팀 버너스-리는 하이퍼텍스트와 인터넷을 결합한 제안을 작성했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>연구소 복도에서 팀 버너스-리는 노트북에 “Information Management: A Proposal”이라는 제목을 쓰고, 메모를 넘겨 보던 동료에게 “이 링크 개념을 쓰면 문서를 서로 가리킬 수 있어요.”라고 설명했습니다. 동료는 “URL은 어떻게 생겼죠?”라고 묻자, 팀은 종이에 <code>http://</code>를 적으며 서버가 파일을 찾아 돌려주면 브라우저가 화면으로 보여 준다고 답했습니다.</p>
+						<p>시스템 관리자는 시험용 NeXT 머신을 연결해 주었고, 팀은 HTML, HTTP, 첫 웹서버인 CERN httpd를 직접 구현했습니다. 연구자들은 “이제 메일 첨부 대신 링크를 보내면 되겠네.”라며 새로운 도구를 써 보기 시작했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>제안서의 핵심은 <strong>URI</strong>, <strong>HTTP</strong>, <strong>HTML</strong>이라는 세 가지 규격이었습니다. 파일을 요청하는 규칙과 문서를 구조화하는 언어, 그리고 문서를 식별하는 주소 체계를 함께 정의하면서, 누구나 서버에 파일을 올리고 동일한 브라우저로 읽을 수 있는 정적 웹이 태어났습니다. 이 단계에서 서버는 단순히 파일을 돌려주는 역할만 수행했고, 프론트엔드와 백엔드의 구분은 아직 필요하지 않았습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1993-mosaic">
+			<article class="event-detail" aria-labelledby="event-1993-mosaic-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1993</p>
+					<h2 id="event-1993-mosaic-title">Mosaic 브라우저 공개</h2>
+					<p class="event-detail__summary">UI가 있는 브라우저가 등장하자 연구소 밖 사용자도 “링크를 클릭하는 경험”을 처음 맞이했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>NCSA의 학생들은 그래픽 버튼과 이미지가 들어간 새 브라우저를 시연하며 “여기, 직접 클릭해 보세요.”라고 관객에게 마우스를 건넸습니다. 링크가 파란색으로 표시되고 같은 창에서 다른 문서가 열리자 모두가 감탄했습니다.</p>
+						<p>신문 기자는 “웹이란 게 이렇게 생겼나요?”라고 묻고는 기사에 Mosaic 스크린샷을 실었습니다. 곧 대학과 기업에서도 Mosaic을 설치해 정적 페이지를 게시하기 시작했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Mosaic은 이미지와 텍스트를 한 화면에 보여 주는 렌더링 엔진, 마우스 중심 UI, 북마크 기능을 제공하며 웹을 대중화했습니다. 하지만 여전히 서버는 정적 파일만 전달했습니다. 프론트엔드는 HTML을 해석해 화면을 꾸미는 역할만 담당했고, 맞춤형 콘텐츠를 제공하려면 새로운 방식이 필요하다는 인식이 생겨났습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1993-cgi">
+			<article class="event-detail" aria-labelledby="event-1993-cgi-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1993</p>
+					<h2 id="event-1993-cgi-title">CGI 표준화</h2>
+					<p class="event-detail__summary">서버가 외부 프로그램을 실행해 HTML을 만들어 주는 인터페이스가 정의되면서 “백엔드 로직”이라는 개념이 태어났습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>NCSA httpd 팀은 “게스트북에 글을 남기면 바로 반영하도록 해 달라”는 요청을 받고 회의실에 모였습니다. 개발자 수지는 “요청이 들어오면 Perl 스크립트를 실행해서 HTML을 만들어 돌려주죠.”라고 제안했습니다.</p>
+						<p>그 결과가 Common Gateway Interface였습니다. 방문자가 폼을 제출하면 서버가 스크립트를 실행해 데이터베이스에 기록하고, 그 결과를 HTML로 출력했습니다. 연구자들은 “파일이 아니라 프로그램이 응답을 만든다”는 사실에 놀랐습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>CGI는 환경 변수와 표준 입력/출력을 통해 웹서버와 프로그램이 데이터를 주고받는 규칙을 정의했습니다. 이는 서버가 사용자별, 요청별로 다른 결과를 반환할 수 있는 토대를 마련했고, 프론트엔드와 구분되는 서버측 로직(백엔드)의 첫 형태가 되었습니다. 다만 매 요청마다 프로세스를 새로 띄우기 때문에 성능 부담이 컸습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1995-php">
+			<article class="event-detail" aria-labelledby="event-1995-php-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1995</p>
+					<h2 id="event-1995-php-title">PHP 도구의 공개</h2>
+					<p class="event-detail__summary">라스무스 러도프는 “웹 페이지에서 내 이력서를 동적으로 관리해 보고 싶다”라며 HTML 안에 직접 코드를 끼워 넣을 수 있는 도구를 배포했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>라스무스는 개인 홈페이지 방문 통계를 보기 위해 Perl 스크립트를 작성했지만 유지보수가 번거로웠습니다. 그래서 HTML에 <code>&lt;?php&nbsp;?&gt;</code> 블록을 넣어 바로 DB에 연결하고 결과를 출력하는 방식을 만들었습니다. 커뮤니티 게시판에는 “폼 검증이 한 줄로 끝나요!” 같은 댓글이 쏟아졌습니다.</p>
+						<p>웹마스터들은 게시판과 쇼핑몰을 만들며 PHP를 확산시켰고, 서버는 요청마다 PHP 인터프리터를 호출해 HTML을 즉석에서 생성했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>PHP는 템플릿과 로직을 한 파일에 섞어 쓸 수 있게 해 초기 웹 개발을 빠르게 했습니다. 이는 서버 측 코드를 유지하기 위한 프레임워크, 템플릿 엔진, MVC 개념이 등장하는 토대로 이어졌습니다. 백엔드는 데이터베이스 연결, 인증, 세션 관리를 맡고 프론트엔드는 생성된 HTML을 렌더링하는 역할로 나뉘기 시작했습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1996-asp">
+			<article class="event-detail" aria-labelledby="event-1996-asp-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1996</p>
+					<h2 id="event-1996-asp-title">Active Server Pages 도입</h2>
+					<p class="event-detail__summary">마이크로소프트는 IIS에 서버 스크립트를 내장해 기업용 웹 애플리케이션 개발을 지원했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>컨설팅 기업의 프로젝트 룸에서 PM은 “사내 포털을 웹으로 옮겨야 합니다.”라고 말했습니다. 개발자들은 VBScript와 JScript를 HTML에 섞어 쓰며 주문, 재고, 권한 관리를 구현했습니다. 페이지를 저장하면 IIS가 자동으로 스크립트를 실행해 결과를 돌려줬습니다.</p>
+						<p>IT 부서는 “윈도우 서버와 SQL Server를 묶어 배포할 수 있으니 편하네요.”라고 평가했습니다. 기업 웹 애플리케이션이 백엔드 로직 위주로 성장하기 시작했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>ASP는 세션 관리, 데이터베이스 연결, 컴포넌트 객체 모델(COM) 연동을 제공해 백엔드가 비즈니스 로직과 상태를 책임지는 구조를 공고히 했습니다. 이 시기부터 프론트엔드는 서버가 보낸 HTML과 최소한의 JavaScript를 담당했고, “서버 코드는 백엔드, 브라우저 코드는 프론트엔드”라는 용어가 실무에서 쓰이기 시작했습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1999-xmlhttprequest">
+			<article class="event-detail" aria-labelledby="event-1999-xmlhttprequest-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1999</p>
+					<h2 id="event-1999-xmlhttprequest-title">XMLHttpRequest 등장</h2>
+					<p class="event-detail__summary">브라우저가 페이지를 새로고침하지 않고도 서버와 데이터를 주고받을 수 있는 숨은 문이 열렸습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>마이크로소프트 Outlook Web Access 팀은 웹메일을 데스크톱 앱처럼 만들고 싶었습니다. 개발자 리나는 “프레임을 갈아치우지 말고 비동기로 데이터를 가져오자.”라며 <code>XMLHttpRequest</code> 객체를 만들었습니다. 버튼을 눌렀는데도 화면이 깜박이지 않자 사용자들은 놀랐습니다.</p>
+						<p>다른 브라우저들도 비슷한 API를 도입했고, 프론트엔드는 화면을 유지한 채 서버에서 JSON이나 XML을 받아 UI를 갱신하기 시작했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>XMLHttpRequest는 HTTP 요청을 자바스크립트로 직접 만들 수 있게 하여 브라우저가 단순 렌더러를 넘어 데이터 흐름의 주체가 되도록 했습니다. 프론트엔드는 Ajax 호출을 통해 더 많은 로직을 가져왔고, 백엔드는 템플릿 대신 JSON 등의 데이터를 반환하는 역할을 맡기 시작했습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2005-ajax">
+			<article class="event-detail" aria-labelledby="event-2005-ajax-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2005</p>
+					<h2 id="event-2005-ajax-title">Ajax 패턴 확산</h2>
+					<p class="event-detail__summary">구글 지도와 지메일이 “페이지 전환 없는 상호작용”을 대중에게 보여 주며 프론트엔드 중심 개발이 부상했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2005년, 사용자는 구글 지도에서 마우스로 지도를 끌다가 놀랐습니다. “페이지가 새로고침되지 않네요!” 개발 팀은 백엔드에 데이터를 요청하되, 브라우저에서 JavaScript로 화면을 계속 유지했습니다.</p>
+						<p>“Ajax”라는 용어가 만들어지자 각종 블로그와 컨퍼런스에서 이 패턴을 소개했습니다. 개발자들은 프론트엔드에 더 많은 상태 관리와 렌더링 로직을 두기 시작했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Ajax는 비동기 요청, JSON/ XML 응답, DOM 조작을 조합한 패턴의 이름이 되었습니다. 서버는 <strong>데이터 API</strong>를 제공하고, 프론트엔드는 사용자의 상호작용을 즉시 반영하는 역할로 진화했습니다. 이후 백엔드는 RESTful API, 인증, 확장성에 집중하고, 프론트엔드는 상태 관리와 UI 구축을 담당하는 분업 구조가 뚜렷해졌습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2010-angularjs">
+			<article class="event-detail" aria-labelledby="event-2010-angularjs-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2010</p>
+					<h2 id="event-2010-angularjs-title">AngularJS 공개</h2>
+					<p class="event-detail__summary">구글은 “브라우저 안에서 MVC를 구현하자”라며 양방향 데이터 바인딩과 템플릿 기능을 제공했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>개발자 미로슬라브는 “HTML을 앱처럼 다뤄 보자”고 결심하고 AngularJS를 오픈 소스로 공개했습니다. 폼을 조작하면 화면이 즉시 갱신되고, 컨트롤러가 데이터를 관리했습니다.</p>
+						<p>초기 스타트업과 대규모 기업 모두 AngularJS로 대시보드, 관리자 도구를 만들며 브라우저가 애플리케이션 런타임이 될 수 있음을 체감했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>AngularJS는 프론트엔드가 라우팅, 템플릿, 상태 관리를 스스로 처리하도록 만들었습니다. 이로써 백엔드는 JSON API 제공자 역할로 더 선명해졌고, CLI와 빌드 시스템 같은 프론트엔드 도구 체인이 발전하는 계기가 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2013-react">
+			<article class="event-detail" aria-labelledby="event-2013-react-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2013</p>
+					<h2 id="event-2013-react-title">React 발표</h2>
+					<p class="event-detail__summary">페이스북은 “상태가 변할 때마다 UI를 다시 선언하자”라며 컴포넌트 중심 접근을 소개했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>JSConf 무대에서 페이스북 엔지니어 조던은 “DOM을 직접 건드리는 것보다 컴포넌트를 선언하세요.”라고 이야기했습니다. Virtual DOM 개념이 발표되자 관객들은 “브라우저가 느려지지 않을까요?”라고 물었지만, 시연은 부드럽게 동작했습니다.</p>
+						<p>React는 금세 스타트업과 대규모 서비스에 채택되었고, 프론트엔드 팀은 상태 관리, 빌드 파이프라인, 테스트 도구를 포함한 독립된 조직으로 성장했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>컴포넌트 기반 개발은 UI를 재사용 가능한 모듈로 나누고, 서버와의 통신을 <strong>API 호출</strong>에 집중시키는 아키텍처를 촉진했습니다. React, Vue, Svelte 같은 프레임워크가 뒤이어 등장하면서 프론트엔드는 자체 라우팅, 상태, 렌더링 파이프라인을 갖춘 완전한 애플리케이션 계층으로 자리 잡았습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2014-lambda">
+			<article class="event-detail" aria-labelledby="event-2014-lambda-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2014</p>
+					<h2 id="event-2014-lambda-title">AWS Lambda 출시</h2>
+					<p class="event-detail__summary">“서버를 직접 관리하지 않고 코드를 올려 실행하자”는 아이디어가 실 서비스로 제공되었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>re:Invent 무대에서 AWS는 파일 업로드나 이벤트에 반응해 코드를 실행하는 Lambda를 발표했습니다. 개발자 앨리스는 “인증 웹훅을 처리하는 데 서버가 필요 없네요.”라고 감탄했습니다. 콘솔에서 함수를 저장하자 즉시 API Gateway와 연결되어 동작했습니다.</p>
+						<p>스타트업들은 로그인, 알림, 이미지 처리 등을 Lambda로 구현하며 운영 부담을 줄였습니다. 백엔드는 점점 작은 함수와 이벤트를 중심으로 재편되었습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>서버리스 모델은 확장성과 비용을 자동으로 관리해 주어 백엔드가 인프라 대신 비즈니스 로직에 집중하게 만들었습니다. 그 결과 프론트엔드는 정적 자산을 CDN에 배포하고 필요한 기능만 API 호출로 연결하는 패턴(JAMstack)의 토대가 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2020-jamstack">
+			<article class="event-detail" aria-labelledby="event-2020-jamstack-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2020</p>
+					<h2 id="event-2020-jamstack-title">JAMstack와 엣지 함수 확산</h2>
+					<p class="event-detail__summary">정적 빌드, CDN 배포, API 조합이 기본 옵션이 되면서 프론트엔드와 백엔드가 느슨하게 결합된 구조가 대중화되었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>제품팀은 Netlify, Vercel 같은 플랫폼에 리포지토리를 연결하고 “main에 머지하면 자동으로 배포됩니다.”라는 알림을 받았습니다. 프론트엔드는 정적 파일로 빌드되어 전 세계 CDN에 퍼지고, 필요한 데이터는 API나 서버리스 함수에서 가져왔습니다.</p>
+						<p>엣지 함수가 등장하면서 개발자들은 사용자 위치에 따라 맞춤 콘텐츠를 적용했습니다. “서울 사용자는 이 배너를, 뉴욕 사용자는 저 배너를 보여 줘.” 같은 요구가 코드 몇 줄로 가능해졌습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>JAMstack은 <strong>JavaScript</strong>, <strong>API</strong>, <strong>Markup</strong>의 조합을 강조하며 프론트엔드와 백엔드를 분리 배포하는 방식을 표준처럼 만들었습니다. 백엔드는 인증, 데이터, 비즈니스 로직을 API 형태로 제공하고, 프론트엔드는 정적 자산과 런타임 로직을 맡아 빠른 배포와 확장성을 누릴 수 있게 되었습니다. 이는 마이크로서비스, 엣지 컴퓨팅, 서버리스 워크플로로 이어지고 있습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<script src="assets/js/main.js" defer></script>
+	</body>
+</html>
