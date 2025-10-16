@@ -64,6 +64,31 @@
 		return;
 	}
 
+	const resetModalScroll = () => {
+		if (modalContent) {
+			if (typeof modalContent.scrollTo === 'function') {
+				modalContent.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+			} else {
+				modalContent.scrollTop = 0;
+				modalContent.scrollLeft = 0;
+			}
+		}
+		if (modalWindow) {
+			if (typeof modalWindow.scrollTo === 'function') {
+				modalWindow.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+			} else {
+				modalWindow.scrollTop = 0;
+				modalWindow.scrollLeft = 0;
+			}
+		}
+	};
+
+	const resetModalScrollDeferred = () => {
+		resetModalScroll();
+		requestAnimationFrame(resetModalScroll);
+		setTimeout(resetModalScroll, 0);
+	};
+
 	eventButtons.forEach((button) => {
 		button.setAttribute('aria-haspopup', 'dialog');
 		button.setAttribute('aria-controls', modal.id);
@@ -79,6 +104,7 @@
 		modal.removeAttribute('aria-labelledby');
 		document.body.classList.remove('is-modal-open');
 		modalWindow.removeEventListener('keydown', trapFocusInsideModal);
+		resetModalScrollDeferred();
 		// 스크롤로 섹션이 화면 가운데로 들어오면 해당 내비게이션을 활성화합니다.
 		focusableElements = [];
 		firstFocusable = null;
@@ -143,11 +169,12 @@
 		lastFocusedTrigger = button;
 		button.setAttribute('aria-expanded', 'true');
 		modalContent.innerHTML = '';
+		resetModalScrollDeferred();
 		modalContent.appendChild(template.content.cloneNode(true));
 		modal.hidden = false;
 		document.body.classList.add('is-modal-open');
 		modal.setAttribute('aria-labelledby', `event-${eventId}-title`);
-		modalWindow.scrollTo({ top: 0 });
+		resetModalScrollDeferred();
 		setModalFocusables();
 		modalWindow.addEventListener('keydown', trapFocusInsideModal);
 		if (firstFocusable && typeof firstFocusable.focus === 'function') {
@@ -160,13 +187,13 @@
 		applyGlossaryTooltips(modalContent);
 	};
 
-	// 간단한 용어집: 주요 전문 용어와 쉬운 설명
+	// 간단한 용어집: 전문 용어를 일상어로 풀어쓴 설명
 	const GLOSSARY = {
-		"Ethernet": "여러 장치가 같은 케이블로 데이터를 주고받을 수 있게 해 주는 컴퓨터 네트워크 기술의 한 종류입니다.",
-		"TSN": "Time-Sensitive Networking의 약자. 공장의 기기들처럼 시간이 아주 중요한 데이터를 우선 처리하도록 도와주는 이더넷 기술입니다.",
-		"IEEE": "전기·전자 표준을 정하는 국제 기관 이름입니다. (예: IEEE 802.3은 이더넷 표준입니다)",
-		"프레임": "네트워크에서 보내는 하나의 데이터 묶음(편지 한 통 같은 역할)입니다.",
-		"지터": "데이터가 도착하는 시간의 들쭉날쭉함을 뜻합니다. 일정하지 않으면 실시간 서비스에 문제가 생깁니다."
+		"Ethernet": "LAN 케이블이라고 부르는 선으로 여러 기기가 차례대로 데이터를 주고받을 수 있게 만든 통신 방법입니다.",
+		"TSN": "Time-Sensitive Networking의 줄임말로, 공장 로봇이나 자율주행차처럼 타이밍이 중요한 장비가 끊김 없이 정보를 처리하도록 돕는 이더넷 기능입니다.",
+		"IEEE": "전 세계 연구자와 기업이 모여 전기와 전자 제품이 같은 규칙으로 동작하도록 기준을 만드는 국제 단체입니다.",
+		"프레임": "네트워크에서 한 번에 보내는 데이터 꾸러미입니다. 편지 봉투 하나에 주소와 내용을 담아 보내는 것과 비슷합니다.",
+		"지터": "동영상이나 통화가 끊길 때 느끼는 들쭉날쭉한 지연입니다. 데이터가 제시간에 도착하지 못해 생기는 시간 차이를 말합니다."
 	};
 
 	const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
