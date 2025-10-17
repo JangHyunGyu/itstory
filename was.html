@@ -46,7 +46,7 @@
 							서블릿 사양이 요청·응답 흐름을 정리했고, Tomcat과 같은 컨테이너가 세션과 스레드를 맡으면서 운영팀의 삶이 조금씩 바뀌었습니다.
 						</p>
 						<p class="timeline-hero__lede">
-							이 타임라인에서는 CERN httpd 같은 초창기 웹 서버, 오픈소스 HTTPd 붐, 웹 서버(WAS) 컨테이너의 탄생, 프레임워크의 경량화, Nginx가 보여 준 프록시 전략, Spring Boot와 서버리스가 가져온 배포 혁신까지 이어집니다.
+							이 타임라인에서는 CERN httpd 같은 초창기 웹 서버, SSL로 연결을 암호화한 순간, mod_proxy와 LVS로 앞단을 분리한 전략, HttpSession과 Memcached로 상태를 공유한 기법, 웹 서버(WAS) 컨테이너의 탄생, 프레임워크의 경량화, Nginx와 서버리스가 가져온 배포 혁신까지 이어집니다.
 							웹 연대기에서 만난 사건과 연결되어 있으니, 프론트엔드와 서버가 어떻게 역할을 나눴는지도 함께 돌아보세요.
 						</p>
 					</div>
@@ -59,7 +59,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1990-webserver">1990–1995</p>
 							<h3 class="timeline-group__topic" id="topic-1990-webserver">첫 웹 서버와 오픈소스 확산</h3>
-							<p class="timeline-group__summary">팀 버너스-리가 만든 CERN httpd는 링크와 HTML을 이해하는 첫 웹 서버였고, 곧이어 NCSA HTTPd가 등장해 누구나 다운로드해 쓸 수 있는 오픈소스 서버 붐을 일으켰습니다.</p>
+							<p class="timeline-group__summary">팀 버너스-리가 만든 CERN httpd는 링크와 HTML을 이해하는 첫 웹 서버였고, NCSA HTTPd와 Apache HTTP Server가 잇달아 공개되며 누구나 내려받아 커뮤니티와 함께 고칠 수 있는 오픈소스 서버 붐이 일었습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1990-cern-httpd">
@@ -69,6 +69,32 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1993-ncsa-httpd">
 								<span class="timeline-event__year">1993</span>
 								<span class="timeline-event__label">NCSA HTTPd 공개</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1995-apache-httpd">
+								<span class="timeline-event__year">1995</span>
+								<span class="timeline-event__label">Apache HTTP Server 1.0</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1994-infra topic-1994-infra">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1994-infra">1994–1998</p>
+							<h3 class="timeline-group__topic" id="topic-1994-infra">보안과 트래픽 제어의 토대</h3>
+							<p class="timeline-group__summary">SSL로 암호화된 연결을 열고, Apache mod_proxy와 Linux Virtual Server 같은 도구로 프록시와 로드밸런싱을 일반화하며 “웹 서버와 애플리케이션 서버를 나눠 운영한다”는 시대가 열렸습니다.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1994-ssl">
+								<span class="timeline-event__year">1994</span>
+								<span class="timeline-event__label">Netscape SSL 2.0 시범 적용</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1996-mod-proxy">
+								<span class="timeline-event__year">1996</span>
+								<span class="timeline-event__label">Apache mod_proxy 도입</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1998-lvs">
+								<span class="timeline-event__year">1998</span>
+								<span class="timeline-event__label">Linux Virtual Server 프로젝트</span>
 							</button>
 						</div>
 					</section>
@@ -83,6 +109,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-servlet">
 								<span class="timeline-event__year">1997</span>
 								<span class="timeline-event__label">Servlet 1.0 사양</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-httpsession">
+								<span class="timeline-event__year">1997</span>
+								<span class="timeline-event__label">HttpSession 표준화</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1999-tomcat">
 								<span class="timeline-event__year">1999</span>
@@ -101,6 +131,20 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2003-spring">
 								<span class="timeline-event__year">2003</span>
 								<span class="timeline-event__label">Spring 1.0 발표</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2005-session topic-2005-session">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2005-session">2005</p>
+							<h3 class="timeline-group__topic" id="topic-2005-session">세션 공유와 캐시의 시대</h3>
+							<p class="timeline-group__summary">Memcached 같은 인메모리 캐시가 세션과 데이터를 외부 저장소에 보관하는 방식을 확산시키며 다중 WAS를 손쉽게 확장할 수 있는 토대를 마련했습니다.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-memcached">
+								<span class="timeline-event__year">2005</span>
+								<span class="timeline-event__label">Memcached 공개</span>
 							</button>
 						</div>
 					</section>
@@ -140,6 +184,12 @@
 					<ul class="source-list">
 						<li><a href="https://www.w3.org/History/1991-WWW-NeXT/Implementation/" target="_blank" rel="noopener">W3C History · CERN httpd Implementation Notes</a></li>
 						<li><a href="https://archive.ncsa.illinois.edu/General/Internet/wwwserver.html" target="_blank" rel="noopener">NCSA Archives · NCSA HTTPd Web Server</a></li>
+						<li><a href="https://httpd.apache.org/ABOUT_APACHE.html" target="_blank" rel="noopener">Apache HTTP Server Project · About Apache HTTP Server</a></li>
+						<li><a href="https://web.archive.org/web/19970222044424/http://home.netscape.com/eng/security/SSL_2.html" target="_blank" rel="noopener">Netscape · SSL 2.0 Technical Overview (1994 아카이브)</a></li>
+						<li><a href="https://httpd.apache.org/docs/1.3/mod/mod_proxy.html" target="_blank" rel="noopener">Apache HTTP Server 1.3 Docs · mod_proxy</a></li>
+						<li><a href="http://www.linuxvirtualserver.org/history.html" target="_blank" rel="noopener">Linux Virtual Server · Project History</a></li>
+						<li><a href="https://docs.oracle.com/javaee/1.3/api/javax/servlet/http/HttpSession.html" target="_blank" rel="noopener">Java Servlet API · HttpSession Interface</a></li>
+						<li><a href="https://memcached.org/about" target="_blank" rel="noopener">memcached.org · About Memcached</a></li>
 						<li><a href="https://jakarta.ee/specifications/servlet/" target="_blank" rel="noopener">Jakarta EE · Servlet Specification</a></li>
 						<li><a href="https://tomcat.apache.org/whichversion.html" target="_blank" rel="noopener">Apache Tomcat · Release History</a></li>
 						<li><a href="https://spring.io/blog/2004/03/24/announcing-spring-framework-1-0" target="_blank" rel="noopener">Spring Blog · Announcing Spring Framework 1.0</a></li>
@@ -198,6 +248,120 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>오픈소스 HTTP 서버가 널리 쓰이면서 “서버는 누구나 설치하고 고칠 수 있다”는 문화가 탄생했습니다. 이후 Apache httpd가 시장을 장악하고, 그 위에 CGI와 모듈이 얹히며 웹 애플리케이션 서버가 맡는 역할과 프록시·정적 서버의 경계가 명확해졌습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1995-apache-httpd">
+			<article class="event-detail" aria-labelledby="event-1995-apache-httpd-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1995</p>
+					<h2 id="event-1995-apache-httpd-title">Apache HTTP Server 1.0</h2>
+					<p class="event-detail__summary">NCSA 패치 모임에서 출발한 Apache HTTP Server 1.0이 공개되면서 커뮤니티 주도의 모듈형 웹 서버가 표준으로 자리잡았습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>1995년 초, NCSA httpd의 유지보수가 느려지자 브라이언 벨렌도프와 로이 필딩은 패치 기여자들을 모아 “아파치(Apache) 그룹”을 만들고 공동 저장소를 열었습니다. 같은 해 12월 1.0 버전을 발표하며 “모듈 시스템으로 필요한 기능만 켜고 끄세요”라고 안내했고, 전 세계 운영자들이 메일링 리스트에서 즉시 피드백을 주고받았습니다.</p>
+						<p>SSL, 프록시, 로드밸런싱 모듈이 빠르게 추가되면서 아파치는 ISP와 포털의 기본 선택지가 되었습니다. 넷크래프트 통계는 “웹 서버 시장의 50% 이상이 아파치”라는 사실을 반복적으로 보여 주었고, 오픈소스가 상업적 배포와 어깨를 나란히 할 수 있다는 자신감을 심어 주었습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Apache는 MPM, 모듈 구조, 설정 파일을 통해 웹 서버를 확장 가능하게 만들었습니다. 이후 CGI와 mod_php 같은 동적 모듈이 늘어나며 WAS와 웹 서버의 경계가 분명해졌고, 톰캣·JBoss 같은 애플리케이션 서버를 앞단 아파치가 리버스 프록시로 묶는 아키텍처가 업계 표준이 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1994-ssl">
+			<article class="event-detail" aria-labelledby="event-1994-ssl-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1994</p>
+					<h2 id="event-1994-ssl-title">Netscape SSL 2.0 시범 적용</h2>
+					<p class="event-detail__summary">넷스케이프는 Secure Sockets Layer를 적용한 브라우저·서버 베타를 배포하며 “웹에서도 안전한 결제를 하자”는 목표를 내걸었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>1994년 넷스케이프 엔지니어 팀은 SSL 2.0 프로토콜 초안을 만들고, Navigator와 Commerce 서버 베타 버전에 “https://” 실험 기능을 넣었습니다. 시연에서는 브라우저 주소창에 자물쇠 아이콘이 나타나고, 신용카드 정보가 암호화되어 전송되는 모습을 보여주었습니다.</p>
+						<p>전자상거래를 준비하던 기업들은 “고객의 카드 정보를 보호할 수 있다면 웹 결제를 열어 보자”고 반응했고, 은행과 결제사도 공개키 인증서와 루트 CA 체계를 논의하기 시작했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>SSL은 TCP 위에 암호화, 무결성, 인증 계층을 더해 HTTP 통신을 보호했습니다. 이후 1996년 SSL 3.0, 1999년 TLS 1.0으로 이어지며 오늘날 HTTPS가 기본이 되었습니다. 웹 서버는 인증서 관리를 맡고, WAS는 민감한 데이터를 평문으로 다루지 않아도 되면서 보안 책임이 명확히 나뉘게 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1996-mod-proxy">
+			<article class="event-detail" aria-labelledby="event-1996-mod-proxy-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1996</p>
+					<h2 id="event-1996-mod-proxy-title">Apache mod_proxy 도입</h2>
+					<p class="event-detail__summary">Apache HTTP Server는 mod_proxy 모듈을 도입해 리버스 프록시, 캐시, 로드밸런싱을 모듈 한 개로 구성할 수 있게 만들었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>1996년 아파치 코어 팀은 1.1 릴리스 노트에 “mod_proxy가 들어갑니다. 다른 서버로 요청을 넘기거나 캐시 서버를 만들 수 있어요.”라고 적었습니다. 운영자는 <code>ProxyPass</code> 지시어를 몇 줄 추가해 백엔드 CGI나 애플리케이션 서버로 트래픽을 전달할 수 있었습니다.</p>
+						<p>호스팅 업체는 정적 콘텐츠는 아파치가 직접 처리하고, 동적 요청은 별도로 관리되는 애플리케이션 서버로 전달하는 패턴을 빠르게 채택했습니다. SSL 종료, 접근 제어, 캐시 정책을 모든 요청 앞단에서 제어할 수 있게 된 것입니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>mod_proxy는 리버스 프록시를 설정 파일로 정의할 수 있게 했고, 이후 mod_proxy_balancer, mod_jk 같은 확장 모듈이 등장해 WAS(Tomcat, JBoss, WebLogic)와의 연동을 표준화했습니다. 프론트 웹 서버와 백엔드 애플리케이션 서버를 분리하는 3계층 구조가 실무 표준이 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1998-lvs">
+			<article class="event-detail" aria-labelledby="event-1998-lvs-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1998</p>
+					<h2 id="event-1998-lvs-title">Linux Virtual Server 프로젝트</h2>
+					<p class="event-detail__summary">중국의 장원송은 Linux Virtual Server를 공개해 리눅스 커널에서 L4 로드밸런싱을 구현했고, 저비용으로 대규모 트래픽을 분산할 수 있는 길을 열었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>1998년 5월 장원송은 메일링 리스트에 “리눅스 커널에서 IPVS를 이용해 여러 서버로 트래픽을 분산시키는 패치를 만들었습니다”라며 LVS 프로젝트를 발표했습니다. 간단한 라스베리파이 사이즈의 PC가 수천 개의 HTTP 연결을 여러 대의 백엔드로 나눠 주는 데 성공했습니다.</p>
+						<p>운영자들은 값비싼 하드웨어 대신 리눅스 박스 두세 대를 엮어 고가용성 로드밸런서를 구성했고, Keepalived 같은 도구와 결합해 가상 IP를 이용한 이중화까지 구현했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>LVS는 IPVS 모듈과 ipvsadm 유틸리티로 네트워크 계층에서 요청을 분산시켰습니다. 세션 스티키, 헬스 체크가 더해지면서 WAS 인스턴스를 여러 대로 늘려도 사용자 경험을 유지할 수 있었고, 이후 HAProxy, Nginx, 클라우드 로드밸런서가 이어 받는 분산 구조의 기초가 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1997-httpsession">
+			<article class="event-detail" aria-labelledby="event-1997-httpsession-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1997</p>
+					<h2 id="event-1997-httpsession-title">HttpSession 표준화</h2>
+					<p class="event-detail__summary">Servlet 1.0 사양은 `HttpSession` API를 정의해, 쿠키와 세션 저장소를 컨테이너가 일괄 관리하도록 표준화했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>서블릿 1.0 초안에는 <code>HttpSession</code> 인터페이스와 <code>getSession()</code> 메서드가 포함돼 있었습니다. 개발자는 `session.setAttribute("cart", items)` 처럼 키-값을 저장하고, 컨테이너는 세션 쿠키 생성과 타임아웃, 클러스터 동기화를 맡았습니다.</p>
+						<p>은행·커머스 사이트는 로그인 상태와 장바구니를 HttpSession에 저장하며 “HTTP는 무상태지만, 우리 애플리케이션은 사용자를 기억한다”는 경험을 구현했습니다. 복잡한 세션 관리 코드를 직접 작성할 필요가 줄어든 순간입니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>HttpSession은 쿠키 기반 세션 ID, URL 리라이팅, 분산 세션 스토리지 등 다양한 확장 전략을 지원했습니다. 이후 PHP, ASP, Rails 등도 비슷한 세션 API를 제공하며 WAS와 프레임워크가 사용자 상태를 책임지고, 프론트엔드는 쿠키만 전달하는 구조가 확산되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2005-memcached">
+			<article class="event-detail" aria-labelledby="event-2005-memcached-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2005</p>
+					<h2 id="event-2005-memcached-title">Memcached 공개</h2>
+					<p class="event-detail__summary">LiveJournal는 Memcached를 오픈소스로 공개해 세션과 캐시를 네트워크 분산 메모리에 저장하는 방식을 대중화했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2003년 LiveJournal에서 탄생한 Memcached는 2005년 소스포지에 공개되며 “TCP 포트를 열고 <code>set</code>/<code>get</code> 명령으로 메모리를 공유하세요”라는 간단한 API를 제시했습니다. 많은 웹 서비스가 세션과 쿼리 결과를 Memcached에 저장해 DB 부하를 줄이기 시작했습니다.</p>
+						<p>2005년부터 Flickr, YouTube, Facebook 등이 “새로고침을 눌러도 빠른 이유는 Memcached 덕분입니다”라고 발표하면서, 캐시 클러스터를 운영하는 방식이 대규모 서비스의 필수 전략이 되었습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Memcached는 키-값 인메모리 저장소로, 애플리케이션 서버 여러 대에서 같은 캐시를 공유하게 해 줍니다. 세션 데이터를 외부 캐시에 저장하면 로드밸런서가 어느 WAS로 보내든 상태를 유지할 수 있고, 백엔드는 읽기 부하를 줄이며 수평 확장을 쉽게 할 수 있습니다.</p>
 					</div>
 				</section>
 			</article>
