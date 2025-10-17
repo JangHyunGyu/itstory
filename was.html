@@ -89,9 +89,9 @@
 
 					<section class="timeline-group" aria-labelledby="decade-2010-was topic-2010-was">
 						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2010-was">2011–2014</p>
-							<h3 class="timeline-group__topic" id="topic-2010-was">프록시, 자동 설정, 서버리스</h3>
-							<p class="timeline-group__summary">Nginx가 가벼운 프록시 전략을 증명했고, Spring Boot는 설정을 줄였으며, AWS Lambda는 아예 서버를 관리하지 않는 방식을 제시했습니다.</p>
+							<p class="timeline-group__decade" id="decade-2010-was">2011–2015</p>
+							<h3 class="timeline-group__topic" id="topic-2010-was">프록시, 자동 설정, 서버리스, 클러스터 게이트웨이</h3>
+							<p class="timeline-group__summary">Nginx가 가벼운 프록시 전략을 증명했고, Spring Boot는 설정을 줄였으며, AWS Lambda는 아예 서버를 관리하지 않는 방식을 제시했습니다. Kubernetes Ingress는 컨테이너 클러스터에서 HTTP 트래픽을 일관되게 돌보는 관문으로 자리 잡았습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2011-nginx">
@@ -105,6 +105,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-lambda">
 								<span class="timeline-event__year">2014</span>
 								<span class="timeline-event__label">AWS Lambda 출시</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2015-k8s-ingress">
+								<span class="timeline-event__year">2015</span>
+								<span class="timeline-event__label">Kubernetes Ingress 리소스</span>
 							</button>
 						</div>
 					</section>
@@ -122,6 +126,7 @@
 						<li><a href="https://nginx.org/en/announcements.html" target="_blank" rel="noopener">NGINX · Announcements Archive</a></li>
 						<li><a href="https://spring.io/blog/2014/04/01/spring-boot-1-0-available-now" target="_blank" rel="noopener">Spring Blog · Spring Boot 1.0 Available Now</a></li>
 						<li><a href="https://aws.amazon.com/blogs/aws/aws-lambda-event-driven-code-in-the-cloud/" target="_blank" rel="noopener">AWS News Blog · AWS Lambda Announcement</a></li>
+						<li><a href="https://kubernetes.io/blog/2015/11/introducing-ingress-resource/" target="_blank" rel="noopener">Kubernetes Blog · Introducing the Ingress Resource</a></li>
 					</ul>
 				</section>
 			</main>
@@ -249,6 +254,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>서버리스 모델은 확장과 비용을 자동으로 처리해 줍니다. 백엔드는 서버 관리 대신 핵심 로직에 집중할 수 있고, 프론트엔드는 정적 자산을 CDN에 올린 뒤 필요한 기능만 API로 호출하는 패턴을 손쉽게 실행할 수 있게 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2015-k8s-ingress">
+			<article class="event-detail" aria-labelledby="event-2015-k8s-ingress-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2015</p>
+					<h2 id="event-2015-k8s-ingress-title">Kubernetes Ingress 리소스</h2>
+					<p class="event-detail__summary">Kubernetes 1.1은 Ingress 리소스를 도입해 “클러스터 안 여러 서비스로 향하는 HTTP(S)를 한 관문에서 통제하자”고 제안했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2015년 가을 Kubernetes 팀은 블로그에 “YAML 몇 줄로 TLS 종료와 가상 호스트를 정의하세요”라며 Ingress를 소개했습니다. 데모에서는 <code>host: api.example.com</code>이라는 설정만 추가해도 엣지 프록시가 자동으로 백엔드 서비스로 트래픽을 넘겼습니다.</p>
+						<p>운영팀은 컨테이너마다 Nginx 인스턴스를 직접 관리하던 습관을 버리고, 클러스터 차원의 Ingress 컨트롤러에 규칙을 맡기기 시작했습니다. 배포 파이프라인은 애플리케이션 코드와 함께 라우팅 정책을 선언적으로 배포하도록 바뀌었습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Ingress는 L7 라우팅과 TLS 종료를 Kubernetes 오브젝트로 흡수해 “WAS는 애플리케이션을 실행하고, 프록시는 플랫폼이 책임진다”는 경계를 다시 그었습니다. 덕분에 Spring Boot나 Tomcat을 컨테이너로 묶어 배포할 때에도, 트래픽 분배와 정책은 Ingress 컨트롤러·서비스 메시가 대신 맡는 현대적 패턴이 자리 잡았습니다.</p>
 					</div>
 				</section>
 			</article>
