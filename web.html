@@ -52,6 +52,48 @@
 				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
 					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">연도 버튼을 누르면 새 창 없이 팝업 대화 상자가 열리고, 그 자리에서 자세한 이야기를 이어서 읽을 수 있습니다.</p>
 
+					<section class="timeline-group" aria-labelledby="decade-1960 topic-1960">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1960">1968–1986</p>
+							<h3 class="timeline-group__topic" id="topic-1960">웹을 가능하게 한 토대</h3>
+							<p class="timeline-group__summary">하이퍼텍스트 시연, ARPANET, TCP/IP, DNS, SGML이 등장하며 링크된 문서와 계층화된 네트워크라는 웹의 기반이 갖춰졌습니다.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1968-mother-demo">
+								<span class="timeline-event__year">1968</span>
+								<span class="timeline-event__label">Mother of All Demos</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1969-arpanet">
+								<span class="timeline-event__year">1969</span>
+								<span class="timeline-event__label">ARPANET 최초 연결</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1974-tcpip">
+								<span class="timeline-event__year">1974</span>
+								<span class="timeline-event__label">TCP/IP 설계</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1978-usenet">
+								<span class="timeline-event__year">1978</span>
+								<span class="timeline-event__label">Usenet 개시</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1980-enquire">
+								<span class="timeline-event__year">1980</span>
+								<span class="timeline-event__label">ENQUIRE 구축</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1983-flag-day">
+								<span class="timeline-event__year">1983</span>
+								<span class="timeline-event__label">TCP/IP 전환일</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1984-dns">
+								<span class="timeline-event__year">1984</span>
+								<span class="timeline-event__label">DNS 도입</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1986-sgml">
+								<span class="timeline-event__year">1986</span>
+								<span class="timeline-event__label">ISO SGML 표준</span>
+							</button>
+						</div>
+					</section>
+
 					<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1990">1990–1993</p>
@@ -108,7 +150,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2000">1998–2008</p>
 							<h3 class="timeline-group__topic" id="topic-2000">브라우저가 움직임을 맡다</h3>
-							<p class="timeline-group__summary">HTTP/1.1, XMLHttpRequest, LAMP, Ajax가 맞물리며 프론트엔드는 비동기 상호작용을, 백엔드는 표준화된 서버 구성을 맡았고, 모바일 기기가 새로운 요구를 던졌습니다.</p>
+							<p class="timeline-group__summary">HTTP/1.1, XMLHttpRequest, LAMP, Ajax, Chrome/V8이 맞물리며 프론트엔드는 비동기 상호작용과 성능을, 백엔드는 표준화된 서버 구성을 맡았고, 모바일 기기가 새로운 요구를 던졌습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1999-http11">
@@ -130,6 +172,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2007-mobile-web">
 								<span class="timeline-event__year">2007</span>
 								<span class="timeline-event__label">모바일 웹 전환점</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2008-chrome">
+								<span class="timeline-event__year">2008</span>
+								<span class="timeline-event__label">Chrome &amp; V8 공개</span>
 							</button>
 						</div>
 					</section>
@@ -164,12 +210,16 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2020">2014–2025</p>
 							<h3 class="timeline-group__topic" id="topic-2020">API와 서버리스로 재조합</h3>
-							<p class="timeline-group__summary">Lambda, HTTP/2, GraphQL, PWA, WebAssembly, JAMstack이 이어지며 백엔드는 API와 이벤트를, 프론트는 독립 배포와 조합을 맡는 구조가 완성되었습니다.</p>
+							<p class="timeline-group__summary">HTML5, Lambda, HTTP/2, GraphQL, PWA, HTTPS 자동화, WebAssembly, 엣지 런타임, JAMstack이 이어지며 백엔드는 API와 이벤트를, 프론트는 독립 배포와 조합을 맡는 구조가 완성되었습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-lambda">
 								<span class="timeline-event__year">2014</span>
 								<span class="timeline-event__label">AWS Lambda 출시</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-html5">
+								<span class="timeline-event__year">2014</span>
+								<span class="timeline-event__label">HTML5 최종 권고</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2015-http2">
 								<span class="timeline-event__year">2015</span>
@@ -179,6 +229,10 @@
 								<span class="timeline-event__year">2015</span>
 								<span class="timeline-event__label">GraphQL 공개</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2015-lets-encrypt">
+								<span class="timeline-event__year">2015</span>
+								<span class="timeline-event__label">Let’s Encrypt 런칭</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2016-pwa">
 								<span class="timeline-event__year">2016</span>
 								<span class="timeline-event__label">PWA 권장 아키텍처</span>
@@ -186,6 +240,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2017-webassembly">
 								<span class="timeline-event__year">2017</span>
 								<span class="timeline-event__label">WebAssembly MVP 완료</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2017-cloudflare-workers">
+								<span class="timeline-event__year">2017</span>
+								<span class="timeline-event__label">Cloudflare Workers</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2020-jamstack">
 								<span class="timeline-event__year">2020</span>
@@ -201,6 +259,14 @@
 						<p>웹의 구조가 정적 문서에서 애플리케이션 플랫폼으로 바뀐 과정을 기록한 1차 자료와 회고를 모았습니다. 원문을 읽어 보면 각 시대의 개발자들이 어떤 문제를 해결하려 했는지 더 선명합니다.</p>
 					</div>
 					<ul class="source-list">
+						<li><a href="https://dougengelbart.org/content/view/209/448/" target="_blank" rel="noopener">Doug Engelbart Institute · The Mother of All Demos</a></li>
+						<li><a href="https://www.netlab.cs.ucla.edu/papers/UCLA_Internet_1969.pdf" target="_blank" rel="noopener">UCLA · Birth of the ARPANET</a></li>
+						<li><a href="https://www.rfc-editor.org/rfc/rfc675" target="_blank" rel="noopener">IETF · RFC 675: Specification of Internet Transmission Control Program</a></li>
+						<li><a href="https://www.cs.unc.edu/~barman/usenet/" target="_blank" rel="noopener">Usenet Historical Documents · A Brief History of Usenet</a></li>
+						<li><a href="https://www.w3.org/History/1980/EnquireFrame.html" target="_blank" rel="noopener">W3C History · ENQUIRE Manual</a></li>
+						<li><a href="https://www.livinginternet.com/i/ii_arpanet_flagday.htm" target="_blank" rel="noopener">Living Internet · ARPANET Flag Day</a></li>
+						<li><a href="https://www.rfc-editor.org/rfc/rfc1034" target="_blank" rel="noopener">IETF · RFC 1034: Domain Names - Concepts and Facilities</a></li>
+						<li><a href="https://www.iso.org/standard/16387.html" target="_blank" rel="noopener">ISO · ISO 8879:1986 Standard Generalized Markup Language</a></li>
 						<li><a href="https://www.w3.org/Proposal.html" target="_blank" rel="noopener">Tim Berners-Lee · Information Management: A Proposal</a></li>
 						<li><a href="https://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html" target="_blank" rel="noopener">CERN · World Wide Web Project</a></li>
 						<li><a href="https://www.rfc-editor.org/rfc/rfc3875" target="_blank" rel="noopener">NCSA · Common Gateway Interface Specification</a></li>
@@ -210,8 +276,12 @@
 						<li><a href="https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/" target="_blank" rel="noopener">Apple Newsroom · Apple Reinvents the Phone with iPhone</a></li>
 						<li><a href="https://www.rfc-editor.org/rfc/rfc6455" target="_blank" rel="noopener">IETF · RFC 6455: The WebSocket Protocol</a></li>
 						<li><a href="https://www.rfc-editor.org/rfc/rfc7540" target="_blank" rel="noopener">IETF · RFC 7540: Hypertext Transfer Protocol 2</a></li>
+						<li><a href="https://blog.chromium.org/2008/09/google-chrome-now-available-in-beta.html" target="_blank" rel="noopener">Chromium Blog · Google Chrome Beta Announcement</a></li>
+						<li><a href="https://www.w3.org/blog/news/archives/4167" target="_blank" rel="noopener">W3C News · HTML5 Is a W3C Recommendation</a></li>
+						<li><a href="https://letsencrypt.org/2015/12/03/launching-lets-encrypt.html" target="_blank" rel="noopener">ISRG · Launching Let’s Encrypt</a></li>
 						<li><a href="https://developers.google.com/web/progressive-web-apps" target="_blank" rel="noopener">Google Developers · Progressive Web Apps Guide</a></li>
 						<li><a href="https://webassembly.org/news/announcing-the-webassembly-mvp/" target="_blank" rel="noopener">WebAssembly.org · Announcing the WebAssembly MVP</a></li>
+						<li><a href="https://blog.cloudflare.com/introducing-cloudflare-workers/" target="_blank" rel="noopener">Cloudflare Blog · Introducing Cloudflare Workers</a></li>
 						<li><a href="https://aws.amazon.com/blogs/aws/aws-lambda-event-driven-code-in-the-cloud/" target="_blank" rel="noopener">AWS News Blog · AWS Lambda Announcement</a></li>
 						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript" target="_blank" rel="noopener">MDN · A re-introduction to JavaScript</a></li>
 						<li><a href="https://nodejs.org/en/about" target="_blank" rel="noopener">Node.js Foundation · About Node.js</a></li>
@@ -233,6 +303,158 @@
 				<div class="modal__content"></div>
 			</div>
 		</div>
+
+		<template id="event-1968-mother-demo">
+			<article class="event-detail" aria-labelledby="event-1968-mother-demo-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1968</p>
+					<h2 id="event-1968-mother-demo-title">Mother of All Demos</h2>
+					<p class="event-detail__summary">더글러스 엥겔바트는 마우스, 하이퍼텍스트, 원격 협업을 묶은 시연으로 “링크로 연결된 작업 공간”을 세상에 처음 보여 주었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>샌프란시스코의 컨벤션 센터에서 엥겔바트는 마우스를 움직이며 화면을 가리켰습니다. “여기를 클릭하면 관련 문서로 이동합니다.” 대형 스크린에는 텍스트가 하이라이트되며 다음 노드가 열렸고, 원격지 동료와 화면을 공유해 공동 편집을 시연했습니다.</p>
+						<p>관객은 전화 회선을 통한 원격 커서, 하이퍼링크, 실시간 회의 기능을 보며 탄성을 질렀습니다. 이 데모는 “문서가 서로 연결되고, 사람들은 떨어져 있어도 협력한다”는 비전을 현실처럼 체감하게 했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>이 시연은 <strong>하이퍼텍스트</strong>, <strong>인풋 장치</strong>, <strong>콜라보레이션</strong> 개념을 한 번에 보여 주며 웹의 사용자 경험을 예감하게 만들었습니다. 이후 프론트엔드는 링크를 따라 탐색하는 UI를 기본으로 삼게 되었고, 백엔드는 여러 사용자가 공유하는 정보를 저장하고 동기화하는 역할로 발전할 토대를 마련했습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1969-arpanet">
+			<article class="event-detail" aria-labelledby="event-1969-arpanet-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1969</p>
+					<h2 id="event-1969-arpanet-title">ARPANET 최초 연결</h2>
+					<p class="event-detail__summary">캘리포니아와 스탠퍼드 사이에 ‘LO’ 문자가 전송되며 패킷 스위칭 네트워크가 현실로 등장했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>UCLA의 연구자 찰리는 IMP 단말 앞에서 “LOGIN을 보내 보죠.”라고 말했습니다. 하지만 세 번째 글자를 입력하기도 전에 연결이 끊어졌습니다. 그럼에도 과학자들은 “우리가 방금 원격 컴퓨터에 메시지를 보냈다”는 사실에 환호했습니다.</p>
+						<p>수주 후 네트워크는 유타, 산타바바라까지 확장되었고, 대학과 연구소는 서로의 컴퓨터 자원을 공유하며 협력하기 시작했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>ARPANET은 패킷 스위칭과 분산 노드 설계를 통해 서버가 끊어져도 네트워크가 유지될 수 있음을 입증했습니다. 후일 웹 서버가 전 세계에 흩어져 있어도 하나의 공간처럼 동작할 수 있었던 이유가 여기서 비롯되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1974-tcpip">
+			<article class="event-detail" aria-labelledby="event-1974-tcpip-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1974</p>
+					<h2 id="event-1974-tcpip-title">TCP/IP 설계</h2>
+					<p class="event-detail__summary">빈튼 서프와 밥 칸은 ‘패킷 네트워크의 상호연결’을 발표하며 오늘날 인터넷 계층 모델을 정의했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>서프와 칸은 논문에서 “다른 네트워크가 끊김 없이 대화를 이어가려면 공통 전송 계층이 필요합니다.”라고 주장했습니다. TCP는 신뢰성을, IP는 주소 지정과 라우팅을 담당하며 여러 네트워크를 하나로 묶는 구조를 제안했습니다.</p>
+						<p>군사·학술 프로젝트들은 곧 이 설계를 시험했고, 1970년대 말에는 다양한 하드웨어가 TCP/IP를 구현하기 시작했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>TCP/IP의 계층화 원칙은 이후 HTTP와 HTML이 ‘응용 계층’에서 독립적으로 진화할 수 있게 만들었습니다. 백엔드는 IP 위에서 서버를 운영하고, 프론트엔드는 TCP 연결을 통해 안정적으로 콘텐츠를 받아올 수 있게 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1978-usenet">
+			<article class="event-detail" aria-labelledby="event-1978-usenet-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1978</p>
+					<h2 id="event-1978-usenet-title">Usenet 개시</h2>
+					<p class="event-detail__summary">두 대학이 전화선으로 게시판 메시지를 교환하며 서버 간 분산 협업의 가능성을 입증했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>듀크 대학의 짐과 톰은 UUCP를 이용해 밤마다 뉴스 그룹 데이터를 주고받았습니다. “잠자는 동안에도 새 글이 복제되네요.” 그들은 <code>net.general</code>에 첫 글을 남기며 다른 학교를 초대했습니다.</p>
+						<p>곧 수십 개 기관이 참여해 주제별 그룹이 생겨났고, 전용 서버가 메시지를 받아 보관하고 사용자는 로컬 클라이언트로 읽고 답글을 달았습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Usenet은 <strong>스토어-앤드-포워드</strong>와 <strong>클라이언트/서버 분리</strong>를 실험했습니다. 서버는 데이터를 저장·전달하는 백엔드로, 사용자는 단말에서 콘텐츠를 읽고 작성하는 프론트엔드로 역할이 나뉘는 모델의 선례가 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1980-enquire">
+			<article class="event-detail" aria-labelledby="event-1980-enquire-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1980</p>
+					<h2 id="event-1980-enquire-title">ENQUIRE 구축</h2>
+					<p class="event-detail__summary">팀 버너스-리는 CERN의 실험 정보를 연결하는 개인 하이퍼텍스트 시스템을 만들며 웹 설계의 씨앗을 심었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>버너스-리는 “연구 장비와 사람들의 관계를 기록할 방법이 필요하다”는 생각에 ENQUIRE 프로그램을 개발했습니다. 각 노드는 질문과 답 형식으로 연결되었고, 사용자는 링크를 따라 관련 문서를 탐색할 수 있었습니다.</p>
+						<p>그는 “모든 문서는 서로 연결되어야 기억에 남는다”는 메모를 남겼고, 이후 WWW 제안서에서 ENQUIRE의 아이디어가 그대로 발전했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>ENQUIRE는 <strong>노드와 링크</strong>, <strong>문서의 메타데이터</strong>를 다루는 방법을 실험했습니다. 프론트엔드는 사용자가 원하는 정보를 맥락과 함께 보여주는 구조를, 백엔드는 링크 그래프를 유지하는 저장소라는 개념을 구체화했습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1983-flag-day">
+			<article class="event-detail" aria-labelledby="event-1983-flag-day-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1983</p>
+					<h2 id="event-1983-flag-day-title">TCP/IP 전환일</h2>
+					<p class="event-detail__summary">1983년 1월 1일, ARPANET은 일괄적으로 TCP/IP로 갈아타며 인터넷의 공통 언어를 확립했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>미 국방성은 모든 ARPANET 호스트에게 “1983년 새해에 TCP/IP 스택을 가동하라”는 지침을 보냈습니다. 운영자들은 밤새 코드를 배포했고, 전환일 아침에는 네트워크가 새 프로토콜로 정상 동작했습니다.</p>
+						<p>이후 다른 연구망도 TCP/IP를 채택했고, 상업적 네트워크 역시 같은 표준을 쓰기 시작했습니다. 세계가 하나의 인터넷으로 묶이기 시작한 순간이었습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Flag Day는 상호 운용성의 승리였습니다. 백엔드는 TCP/IP 스택 위에서 동작하면 전 세계 어디와도 통신할 수 있게 되었고, 프론트엔드는 표준화된 주소 체계를 이용해 어떤 서버와도 연결을 시도할 수 있게 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1984-dns">
+			<article class="event-detail" aria-labelledby="event-1984-dns-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1984</p>
+					<h2 id="event-1984-dns-title">DNS 도입</h2>
+					<p class="event-detail__summary">도메인 이름 시스템이 등장해 사람 친화적인 주소와 계층적 네임스페이스가 정착했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>폴 모카페트리스는 “호스트 파일을 계속 수동으로 배포할 수는 없습니다.”라며 DNS 설계를 발표했습니다. 루트 서버와 권한 있는 네임서버가 계층적으로 응답을 위임하는 구조였고, <code>.com</code>, <code>.edu</code> 같은 최상위 도메인이 정의되었습니다.</p>
+						<p>네트워크 관리자는 새 서버를 추가할 때 IP 주소 대신 도메인 이름을 등록했고, 사용자들은 기억하기 쉬운 이름으로 원격 자원에 접속하게 되었습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>DNS는 URL과 URI 개념이 등장할 수 있는 토대였습니다. 백엔드는 서비스를 도메인 이름으로 노출하고, 프론트엔드는 하드코딩된 IP 대신 인간이 읽을 수 있는 주소를 사용하며 하이퍼링크를 작성할 수 있게 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1986-sgml">
+			<article class="event-detail" aria-labelledby="event-1986-sgml-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1986</p>
+					<h2 id="event-1986-sgml-title">ISO SGML 표준</h2>
+					<p class="event-detail__summary">국제 표준 SGML은 문서 구조를 태그로 정의하는 방식을 정리하며 HTML의 직계 조상이 되었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>ISO는 SGML(ISO 8879)을 채택하며 “문서를 텍스트와 구조로 분리해 표현하자”는 원칙을 정했습니다. 출판사와 정부 기관은 표준화된 태그 세트를 사용해 문서를 교환하기 시작했습니다.</p>
+						<p>젊은 개발자들은 태그 기반 문서가 다른 시스템으로 전송되어도 의미를 유지하는 것을 보며, 플랫폼 독립적인 표현 방식의 필요성을 인식했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>SGML은 HTML과 XML의 설계 철학을 제공합니다. 프론트엔드는 구조화된 마크업을 렌더링해 표현을 담당하고, 백엔드는 태그를 출력하거나 변환하며 데이터를 관리하는 역할로 나뉘는 기반을 마련했습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
 
 		<template id="event-1990-www-proposal">
 			<article class="event-detail" aria-labelledby="event-1990-www-proposal-title">
@@ -481,6 +703,25 @@
 			</article>
 		</template>
 
+		<template id="event-2008-chrome">
+			<article class="event-detail" aria-labelledby="event-2008-chrome-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2008</p>
+					<h2 id="event-2008-chrome-title">Google Chrome &amp; V8 공개</h2>
+					<p class="event-detail__summary">구글은 크롬과 V8 엔진을 공개하며 자바스크립트 성능 전쟁을 촉발했고, 웹앱이 데스크톱을 대체할 수 있다는 기대를 만들었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2008년 9월, 구글은 만화 형식 브랜딩으로 새 브라우저를 발표했습니다. 런칭 이벤트에서 개발자들은 “탭마다 별도 프로세스를 돌리고, V8이 자바스크립트를 JIT 컴파일합니다.”라고 소개했습니다.</p>
+						<p>개발자들은 곧 Gmail, Google Docs, Wave 같은 대규모 앱을 시연하며 “브라우저도 복잡한 애플리케이션을 거뜬히 처리한다”는 메시지를 전했습니다. 경쟁 브라우저들도 엔진을 최적화하며 속도 경쟁이 본격화됐습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>V8은 <strong>JIT 컴파일</strong>과 <strong>가비지 컬렉션 최적화</strong>로 자바스크립트 속도를 대폭 향상했습니다. 프론트엔드는 복잡한 상태 관리, 실시간 협업, 3D 렌더링을 브라우저에서 직접 수행하게 되었고, 백엔드는 REST/JSON API와 WebSocket을 통해 가벼운 데이터 전달과 이벤트 중심 설계에 집중했습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-2009-node">
 			<article class="event-detail" aria-labelledby="event-2009-node-title">
 				<header class="event-detail__header">
@@ -576,6 +817,25 @@
 			</article>
 		</template>
 
+		<template id="event-2014-html5">
+			<article class="event-detail" aria-labelledby="event-2014-html5-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2014</p>
+					<h2 id="event-2014-html5-title">HTML5 최종 권고</h2>
+					<p class="event-detail__summary">W3C가 HTML5를 권고안으로 발표하며 비디오, 캔버스, 오프라인 저장소 등 브라우저 내장 기능이 정식 표준이 되었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2014년 10월, W3C는 HTML5 권고안을 발표하며 “플러그인 없이 웹에서 멀티미디어를 구현하세요.”라는 메시지를 전했습니다. 브라우저는 <code>&lt;video&gt;</code>, <code>&lt;canvas&gt;</code>, <code>localStorage</code> 같은 기능을 기본으로 탑재했습니다.</p>
+						<p>개발자들은 워크숍에서 HTML5 기반 게임과 교육 콘텐츠를 시연했고, 기업들은 플래시에서 벗어나기 위한 마이그레이션 계획을 세웠습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>HTML5는 웹 플랫폼을 운영체제에 준하는 런타임으로 끌어올렸습니다. 프론트엔드는 비디오 스트리밍, 그래픽, 오프라인 UX를 직접 구현했고, 백엔드는 REST·스트리밍 API, 콘텐츠 보호, 적응형 비트레이트 제공 같은 서비스를 준비해야 했습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-2015-http2">
 			<article class="event-detail" aria-labelledby="event-2015-http2-title">
 				<header class="event-detail__header">
@@ -614,6 +874,25 @@
 			</article>
 		</template>
 
+		<template id="event-2015-lets-encrypt">
+			<article class="event-detail" aria-labelledby="event-2015-lets-encrypt-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2015</p>
+					<h2 id="event-2015-lets-encrypt-title">Let’s Encrypt 런칭</h2>
+					<p class="event-detail__summary">비영리 인증기관 Let’s Encrypt가 등장하며 HTTPS 발급과 갱신이 자동화되어 웹 전반이 암호화를 기본값으로 삼게 되었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2015년 12월, ISRG는 “무료 자동화된 인증서”를 내세운 Let’s Encrypt 베타를 열었습니다. <code>certbot</code> 명령을 실행하자 몇 초 만에 TLS 인증서가 발급·설치되었습니다.</p>
+						<p>몇 달 뒤 브라우저는 HTTP 페이지에 “Not Secure” 경고를 표시했고, 호스팅 업체는 기본 옵션으로 HTTPS를 제공하기 시작했습니다. 개발 팀은 자동 갱신을 CI/CD 파이프라인에 통합했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>HTTPS 기본화는 프론트엔드가 서비스 워커, PWA, WebAuthn처럼 보안 연결을 전제로 하는 기능을 자유롭게 활용할 수 있게 했습니다. 백엔드는 TLS 자동화, HSTS, CSP를 관리하며 보안 계층을 운영의 필수 요소로 만들었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-2016-pwa">
 			<article class="event-detail" aria-labelledby="event-2016-pwa-title">
 				<header class="event-detail__header">
@@ -647,6 +926,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>WebAssembly는 <strong>바이너리 포맷</strong>과 <strong>샌드박스 실행</strong>을 제공해 백엔드에서 쓰던 언어를 프론트엔드로 가져올 수 있게 했습니다. 백엔드는 CPU 집약 기능을 클라이언트로 이전하거나, BFF를 통해 필요한 데이터만 전달하는 구조를 설계하며 작업 부하를 재배치했습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2017-cloudflare-workers">
+			<article class="event-detail" aria-labelledby="event-2017-cloudflare-workers-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2017</p>
+					<h2 id="event-2017-cloudflare-workers-title">Cloudflare Workers 출시</h2>
+					<p class="event-detail__summary">CDN 엣지에서 자바스크립트를 실행하는 Workers가 출시되며 “사용자 가까운 런타임”이 보편화되었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Cloudflare는 Recurse Center에서 열린 프레스 브리핑에서 “글로벌 네트워크 어디서든 10ms 안에 코드를 실행하세요.”라며 Workers 베타를 소개했습니다. 개발자는 몇 줄의 자바스크립트를 배포해 A/B 테스트, 사용자 지정 라우팅, 이미지 변환을 실행했습니다.</p>
+						<p>이후 Vercel, Netlify도 유사한 엣지 함수 플랫폼을 출시했고, 제품팀은 “정적 배포 + 엣지 + 서버리스”라는 삼단 구성을 채택했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>엣지 런타임은 백엔드가 중앙 데이터베이스와 API를 유지하면서도 지연시간이 중요한 로직을 사용자 가까이로 분산할 수 있게 했습니다. 프론트엔드는 엣지에서 실행되는 미들웨어를 활용해 맞춤 렌더링, 인증, 국제화를 빠르게 처리했습니다.</p>
 					</div>
 				</section>
 			</article>
