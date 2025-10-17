@@ -54,6 +54,10 @@
 		'a[href], button:not([disabled]), textarea, input, select, summary, details, [tabindex]:not([tabindex="-1"])';
 	let lastFocusedTrigger = null;
 	let focusableElements = [];
+	const pageScrollTopButton = document.querySelector('[data-scroll-top]');
+	let modalScrollButton = null;
+	let modalScrollHandler = null;
+	let modalScrollTicking = false;
 	// 타임라인 페이지에서 내비게이션, 모달, 용어집 툴팁을 제어하는 즉시 실행 함수입니다.
 	let firstFocusable = null;
 		// 헤더 내비게이션 링크 목록과 각 섹션을 매핑합니다.
@@ -63,6 +67,75 @@
 		// 현재 보고 있는 섹션에 맞춰 내비게이션에 강조 표시를 붙입니다.
 		return;
 	}
+
+	const hidePageScrollTop = () => {
+		if (pageScrollTopButton) {
+			pageScrollTopButton.setAttribute('hidden', '');
+		}
+	};
+
+	const requestPageScrollUpdate = () => {
+		window.dispatchEvent(new Event('scroll'));
+	};
+
+	const updateModalScrollButtonVisibility = () => {
+		if (!modalScrollButton) {
+			return;
+		}
+		const shouldShow = modalContent && modalContent.scrollTop > 180;
+		const isHidden = modalScrollButton.hasAttribute('hidden');
+		if (shouldShow && isHidden) {
+			modalScrollButton.removeAttribute('hidden');
+		} else if (!shouldShow && !isHidden) {
+			modalScrollButton.setAttribute('hidden', '');
+		}
+	};
+
+	const detachModalScrollHandler = () => {
+		if (modalContent && modalScrollHandler) {
+			modalContent.removeEventListener('scroll', modalScrollHandler);
+		}
+		modalScrollHandler = null;
+		modalScrollTicking = false;
+	};
+
+	const attachModalScrollHandler = () => {
+		if (!modalWindow || !modalContent) {
+			return;
+		}
+		if (!modalScrollButton) {
+			modalScrollButton = document.createElement('button');
+			modalScrollButton.type = 'button';
+			modalScrollButton.className = 'modal-scroll-top';
+			modalScrollButton.setAttribute('aria-label', '이야기 맨 위로 이동');
+			modalScrollButton.textContent = '↑';
+			modalScrollButton.setAttribute('hidden', '');
+			modalScrollButton.addEventListener('click', (event) => {
+				event.preventDefault();
+				if (typeof modalContent.scrollTo === 'function') {
+					modalContent.scrollTo({ top: 0, behavior: 'smooth' });
+				} else {
+					modalContent.scrollTop = 0;
+				}
+			});
+		}
+		if (!modalScrollButton.isConnected) {
+			modalWindow.appendChild(modalScrollButton);
+		}
+		detachModalScrollHandler();
+		modalScrollHandler = () => {
+			if (modalScrollTicking) {
+				return;
+			}
+			modalScrollTicking = true;
+			requestAnimationFrame(() => {
+				updateModalScrollButtonVisibility();
+				modalScrollTicking = false;
+			});
+		};
+		modalContent.addEventListener('scroll', modalScrollHandler, { passive: true });
+		updateModalScrollButtonVisibility();
+	};
 
 	const resetModalScroll = () => {
 		if (modalContent) {
@@ -105,6 +178,10 @@
 		document.body.classList.remove('is-modal-open');
 		modalWindow.removeEventListener('keydown', trapFocusInsideModal);
 		resetModalScrollDeferred();
+		detachModalScrollHandler();
+		if (modalScrollButton) {
+			modalScrollButton.setAttribute('hidden', '');
+		}
 		// 스크롤로 섹션이 화면 가운데로 들어오면 해당 내비게이션을 활성화합니다.
 		focusableElements = [];
 		firstFocusable = null;
@@ -116,6 +193,7 @@
 			lastFocusedTrigger.focus();
 		}
 		lastFocusedTrigger = null;
+		requestPageScrollUpdate();
 	};
 
 	const setModalFocusables = () => {
@@ -173,6 +251,7 @@
 		modalContent.appendChild(template.content.cloneNode(true));
 		modal.hidden = false;
 		document.body.classList.add('is-modal-open');
+		hidePageScrollTop();
 		modal.setAttribute('aria-labelledby', `event-${eventId}-title`);
 		resetModalScrollDeferred();
 		setModalFocusables();
@@ -185,6 +264,7 @@
 
 		// 초보자용 용어 툴팁 적용: 템플릿 내용이 삽입된 직후에 실행
 		applyGlossaryTooltips(modalContent);
+		attachModalScrollHandler();
 	};
 
 	// 간단한 용어집: 전문 용어를 일상어로 풀어쓴 설명
@@ -367,6 +447,10 @@
 		}
 
 		const toggleScrollTop = () => {
+			if (document.body.classList.contains('is-modal-open')) {
+				scrollTopButton.setAttribute('hidden', '');
+				return;
+			}
 			const shouldShow = window.scrollY > 320;
 			const isHidden = scrollTopButton.hasAttribute('hidden');
 			if (shouldShow && isHidden) {
