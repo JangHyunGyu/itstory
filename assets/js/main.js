@@ -54,7 +54,7 @@
 		'a[href], button:not([disabled]), textarea, input, select, summary, details, [tabindex]:not([tabindex="-1"])';
 	let lastFocusedTrigger = null;
 	let focusableElements = [];
-	const pageScrollTopButton = document.querySelector('[data-scroll-top]');
+	const pageScrollTopButtons = Array.from(document.querySelectorAll('[data-scroll-top]'));
 	let modalScrollButton = null;
 	let modalScrollHandler = null;
 	let modalScrollTicking = false;
@@ -69,9 +69,10 @@
 	}
 
 	const hidePageScrollTop = () => {
-		if (pageScrollTopButton) {
-			pageScrollTopButton.setAttribute('hidden', '');
+		if (!pageScrollTopButtons.length) {
+			return;
 		}
+		pageScrollTopButtons.forEach((button) => button.setAttribute('hidden', ''));
 	};
 
 	const requestPageScrollUpdate = () => {
@@ -441,22 +442,29 @@
 })();
 
 	(() => {
-		const scrollTopButton = document.querySelector('[data-scroll-top]');
-		if (!scrollTopButton) {
+		const scrollTopButtons = Array.from(document.querySelectorAll('[data-scroll-top]'));
+		if (!scrollTopButtons.length) {
 			return;
 		}
 
+		const hideAll = () => {
+			scrollTopButtons.forEach((button) => button.setAttribute('hidden', ''));
+		};
+
+		const showAll = () => {
+			scrollTopButtons.forEach((button) => button.removeAttribute('hidden'));
+		};
+
 		const toggleScrollTop = () => {
 			if (document.body.classList.contains('is-modal-open')) {
-				scrollTopButton.setAttribute('hidden', '');
+				hideAll();
 				return;
 			}
 			const shouldShow = window.scrollY > 320;
-			const isHidden = scrollTopButton.hasAttribute('hidden');
-			if (shouldShow && isHidden) {
-				scrollTopButton.removeAttribute('hidden');
-			} else if (!shouldShow && !isHidden) {
-				scrollTopButton.setAttribute('hidden', '');
+			if (shouldShow) {
+				showAll();
+			} else {
+				hideAll();
 			}
 		};
 
@@ -474,8 +482,10 @@
 
 		toggleScrollTop();
 		window.addEventListener('scroll', onScroll, { passive: true });
-		scrollTopButton.addEventListener('click', (event) => {
-			event.preventDefault();
-			window.scrollTo({ top: 0, behavior: 'smooth' });
+		scrollTopButtons.forEach((button) => {
+			button.addEventListener('click', (event) => {
+				event.preventDefault();
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			});
 		});
 	})();
