@@ -176,9 +176,13 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1980">1980s</p>
 							<h3 class="timeline-group__topic" id="topic-1980">표준 PC와 하이퍼텍스트</h3>
-							<p class="timeline-group__summary">기업이 표준화된 개인용 컴퓨터를 도입했고, 인터넷 위에서 문서를 연결하는 방식이 정리됐습니다.</p>
+							<p class="timeline-group__summary">표준 PC와 함께 RISC 프로세서 실험이 상용화되고, 인터넷 위에서 문서를 연결하는 방식이 정리됐습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1980-ibm801">
+								<span class="timeline-event__year">1980</span>
+								<span class="timeline-event__label">IBM 801 RISC 실험</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1981-ibmpc">
 								<span class="timeline-event__year">1981</span>
 								<span class="timeline-event__label">IBM PC 공개</span>
@@ -212,9 +216,13 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2000">2000s</p>
 							<h3 class="timeline-group__topic" id="topic-2000">클라우드와 휴대 컴퓨팅</h3>
-							<p class="timeline-group__summary">데이터센터의 컴퓨팅 자원을 빌려 쓰고, 스마트폰에서 언제든 앱을 실행하는 흐름이 시작됐습니다.</p>
+							<p class="timeline-group__summary">데이터센터 자원을 빌려 쓰는 클라우드와 함께 x86-64 서버, CUDA GPU가 등장해 컴퓨팅 방식이 넓어졌습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2003-x8664">
+								<span class="timeline-event__year">2003</span>
+								<span class="timeline-event__label">x86-64 서버 공개</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2006-aws">
 								<span class="timeline-event__year">2006</span>
 								<span class="timeline-event__label">AWS EC2 발표</span>
@@ -222,6 +230,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2007-iphone">
 								<span class="timeline-event__year">2007</span>
 								<span class="timeline-event__label">아이폰 공개</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2007-cuda">
+								<span class="timeline-event__year">2007</span>
+								<span class="timeline-event__label">NVIDIA CUDA 발표</span>
 							</button>
 						</div>
 					</section>
@@ -276,6 +288,10 @@
 						<li><a href="https://www.ibm.com/ibm/history/system360/" target="_blank" rel="noopener">IBM Archives · System/360</a></li>
 						<li><a href="https://www.intel.com/content/www/us/en/history/museum-intel-timeline-txt.html" target="_blank" rel="noopener">Intel Museum · Processor Timeline</a></li>
 						<li><a href="https://aws.amazon.com/blogs/aws/ec2-beta/" target="_blank" rel="noopener">AWS News Blog · EC2 Beta Announcement</a></li>
+						<li><a href="https://www.ibm.com/ibm/history/exhibits/risc/risc_intro.html" target="_blank" rel="noopener">IBM Archives · 801 and the Rise of RISC</a></li>
+						<li><a href="https://www.amd.com/en/press-releases/2003-04-22-opteron-launch" target="_blank" rel="noopener">AMD Newsroom · Opteron Launch and x86-64</a></li>
+						<li><a href="https://news.nvidia.com/news/nvidia-unveils-cuda" target="_blank" rel="noopener">NVIDIA News · CUDA Platform Announcement</a></li>
+						<li><a href="https://www.apple.com/newsroom/2020/11/apple-unveils-m1/" target="_blank" rel="noopener">Apple Newsroom · Apple Unveils M1</a></li>
 					</ul>
 				</section>
 			</main>
@@ -522,6 +538,25 @@
 			</article>
 		</template>
 
+		<template id="event-1980-ibm801">
+			<article class="event-detail" aria-labelledby="event-1980-ibm801-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1980</p>
+					<h2 id="event-1980-ibm801-title">IBM 801 · RISC 설계 시험</h2>
+					<p class="event-detail__summary">IBM 801 팀이 단순한 명령 집합으로 빠른 프로세서를 증명하며 RISC 개념을 현실로 만들었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>뉴욕 요크타운 연구소에서 존 콕은 회의실 칠판에 “명령을 줄이면 제어가 빨라집니다.”라고 적었습니다. 회로 엔지니어 엘렌은 필요 없는 마이크로코드를 지우며 “이렇게 단순하면 파이프라인을 더 길게 만들 수 있어요.”라고 설명했습니다.</p>
+						<p>시제품 보드를 부팅하자 801 프로세서는 기존 미니컴퓨터보다 빠른 수치를 기록했습니다. 팀원은 “어셈블리 코드가 훨씬 짧네.”라며 디버거 화면을 가리켰고, 연구실은 환호로 가득 찼습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>801은 <strong>고정 길이 명령</strong>과 <strong>로드/스토어 분리</strong> 같은 RISC 원칙을 실제 칩으로 구현했습니다. 덕분에 제어 회로가 단순해져 클록을 높일 수 있었고, 이 설계는 곧 POWER, SPARC 같은 상용 RISC CPU로 이어졌습니다. 컴파일러 팀도 최적화를 통해 간결한 명령 조합으로 복잡한 루프를 처리할 수 있다는 사실을 확인했습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-1981-ibmpc">
 			<article class="event-detail" aria-labelledby="event-1981-ibmpc-title">
 				<header class="event-detail__header">
@@ -598,6 +633,25 @@
 			</article>
 		</template>
 
+		<template id="event-2003-x8664">
+			<article class="event-detail" aria-labelledby="event-2003-x8664-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2003</p>
+					<h2 id="event-2003-x8664-title">x86-64 서버 공개</h2>
+					<p class="event-detail__summary">AMD가 x86-64 프로세서를 공개해 32비트 호환성을 유지하면서도 64비트 컴퓨팅을 열었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2003년 4월, 샌프란시스코 발표회에서 AMD는 Opteron 서버를 무대에 올렸습니다. 엔지니어 리사는 “기존 32비트 코드가 그대로 실행되고, 64비트 메모리 공간도 쓸 수 있습니다.”라고 설명했습니다.</p>
+						<p>데이터센터 운영자 마크는 테스트 랙에서 새 칩을 부팅하며 “이제 4GB 제한 걱정은 끝이네요.”라고 말했습니다. 리눅스 커뮤니티는 며칠 만에 64비트 배포판을 릴리스하며 “커널도 바로 지원합니다.”라는 공지를 올렸습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>x86-64는 <strong>64비트 주소 공간</strong>, <strong>확장된 레지스터</strong>, <strong>SSE2</strong>를 기본 제공하면서도 기존 x86 명령과 호환했습니다. 운영체제는 더 큰 메모리를 직접 다룰 수 있게 되었고, 데이터베이스와 가상화 워크로드가 대규모 RAM을 활용할 수 있게 되었습니다. 이후 인텔도 호환 아키텍처(EM64T)를 발표하며 64비트 PC가 표준이 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-2006-aws">
 			<article class="event-detail" aria-labelledby="event-2006-aws-title">
 				<header class="event-detail__header">
@@ -631,6 +685,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>터치 기반 UI, 센서 통합, 모바일 브라우저 성능 향상 덕분에 스마트폰은 데스크톱의 많은 기능을 대체했습니다. 앱 스토어 모델은 소프트웨어 배포와 수익 구조를 새롭게 정의했습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2007-cuda">
+			<article class="event-detail" aria-labelledby="event-2007-cuda-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2007</p>
+					<h2 id="event-2007-cuda-title">NVIDIA CUDA 공개</h2>
+					<p class="event-detail__summary">CUDA 플랫폼이 공개되면서 개발자들은 GPU를 그래픽 외 연산에도 활용하기 시작했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>젠슨 황은 GTC 무대에서 “GPU 수천 개 코어를 마음껏 사용하세요.”라며 CUDA를 소개했습니다. 대학 연구실의 줄리는 행렬 곱셈 예제를 실행하고 “CPU보다 훨씬 빠르네요!”라고 외쳤습니다.</p>
+						<p>포럼에는 곧 “영상 변환을 GPU로 옮겼더니 처리 시간이 10분에서 1분으로 줄었습니다.”라는 후기들이 올라왔습니다. 스타트업과 연구소는 밤새 코드를 이식하며 가능성을 시험했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>CUDA는 <strong>스레드 블록</strong>, <strong>공유 메모리</strong>, <strong>커널</strong> 개념을 제공해 개발자가 병렬 연산을 직접 제어하게 했습니다. 이후 과학 계산, 영상 처리, 딥러닝까지 GPU 가속이 기본 옵션이 되었고, 고성능 컴퓨팅 설계가 크게 달라졌습니다.</p>
 					</div>
 				</section>
 			</article>
