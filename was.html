@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>ArcherLab IT Story · WAS 연대기</title>
-		<meta name="description" content="서블릿 사양부터 서버리스까지, 웹 애플리케이션 서버가 어떻게 진화했는지 사건 중심으로 정리했습니다." />
-		<meta property="og:title" content="ArcherLab IT Story · Web Application Servers" />
-		<meta property="og:description" content="Tomcat, Spring, Nginx, Spring Boot, Lambda가 어떻게 백엔드 역할을 바꿨는지 타임라인으로 살펴보세요." />
+		<title>ArcherLab IT Story · 웹 서버 연대기</title>
+		<meta name="description" content="CERN httpd에서 Tomcat, Spring Boot, 서버리스까지 웹 서버(WAS)의 진화를 사건 중심으로 정리했습니다." />
+		<meta property="og:title" content="ArcherLab IT Story · Web Server Timeline" />
+		<meta property="og:description" content="첫 웹 서버부터 Nginx, Spring Boot, Lambda, Ingress까지 백엔드 요청 흐름을 바꾼 순간을 따라가 보세요." />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
 						<a href="networks.html">네트워크 연대기</a>
 						<a href="computers.html">컴퓨터 연대기</a>
 						<a href="web.html">웹 연대기</a>
-						<a href="was.html" class="is-current">WAS 연대기</a>
+						<a href="was.html" class="is-current">웹 서버 연대기</a>
 						<a href="databases.html">데이터베이스 연대기</a>
 					</nav>
 				</div>
@@ -39,14 +39,14 @@
 			<main class="page__main" id="main" role="main">
 				<section class="timeline-hero" aria-labelledby="timeline-title">
 					<div class="timeline-hero__head">
-						<p class="hero__eyebrow">WAS Story for Backend Builders</p>
-						<h1 class="timeline-hero__title" id="timeline-title">서블릿부터 서버리스까지, 요청을 책임져 온 백엔드 엔진의 변화를 따라가세요</h1>
+						<p class="hero__eyebrow">Web Server Story for Backend Builders</p>
+						<h1 class="timeline-hero__title" id="timeline-title">서블릿부터 서버리스까지, 웹 서버가 요청을 책임져 온 방법을 따라가세요</h1>
 						<p class="timeline-hero__lede">
 							처음에는 정적 HTML을 돌려주던 웹 서버가 “사용자마다 다른 응답을 보내 주세요”라는 요구를 듣는 순간부터 이야기가 달라졌습니다.
 							서블릿 사양이 요청·응답 흐름을 정리했고, Tomcat과 같은 컨테이너가 세션과 스레드를 맡으면서 운영팀의 삶이 조금씩 바뀌었습니다.
 						</p>
 						<p class="timeline-hero__lede">
-							이 타임라인에서는 컨테이너의 탄생, 프레임워크의 경량화, Nginx가 보여 준 프록시 전략, Spring Boot와 서버리스가 가져온 배포 혁신까지 이어집니다.
+							이 타임라인에서는 CERN httpd 같은 초창기 웹 서버, 오픈소스 HTTPd 붐, 웹 서버(WAS) 컨테이너의 탄생, 프레임워크의 경량화, Nginx가 보여 준 프록시 전략, Spring Boot와 서버리스가 가져온 배포 혁신까지 이어집니다.
 							웹 연대기에서 만난 사건과 연결되어 있으니, 프론트엔드와 서버가 어떻게 역할을 나눴는지도 함께 돌아보세요.
 						</p>
 					</div>
@@ -54,6 +54,24 @@
 
 				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
 					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">연도 버튼을 누르면 새 창 없이 팝업 대화 상자가 열리고, 그 자리에서 자세한 이야기를 이어서 읽을 수 있습니다.</p>
+
+					<section class="timeline-group" aria-labelledby="decade-1990-webserver topic-1990-webserver">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1990-webserver">1990–1995</p>
+							<h3 class="timeline-group__topic" id="topic-1990-webserver">첫 웹 서버와 오픈소스 확산</h3>
+							<p class="timeline-group__summary">팀 버너스-리가 만든 CERN httpd는 링크와 HTML을 이해하는 첫 웹 서버였고, 곧이어 NCSA HTTPd가 등장해 누구나 다운로드해 쓸 수 있는 오픈소스 서버 붐을 일으켰습니다.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1990-cern-httpd">
+								<span class="timeline-event__year">1990</span>
+								<span class="timeline-event__label">CERN httpd 시범 운영</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1993-ncsa-httpd">
+								<span class="timeline-event__year">1993</span>
+								<span class="timeline-event__label">NCSA HTTPd 공개</span>
+							</button>
+						</div>
+					</section>
 
 					<section class="timeline-group" aria-labelledby="decade-1990-was topic-1990-was">
 						<header class="timeline-group__head">
@@ -117,9 +135,11 @@
 				<section class="sources" id="sources" aria-labelledby="sources-title">
 					<div class="section__head">
 						<h2 id="sources-title">참고 자료</h2>
-						<p>사양 문서, 배포 공지, 그리고 운영팀의 회고를 모았습니다. 원문을 읽어 보면 WAS가 어떤 문제를 해결하려고 태어났는지 더 분명하게 들어옵니다.</p>
+						<p>사양 문서, 배포 공지, 그리고 운영팀의 회고를 모았습니다. 원문을 읽어 보면 웹 서버(WAS)가 어떤 문제를 해결하려고 태어났는지 더 분명하게 들어옵니다.</p>
 					</div>
 					<ul class="source-list">
+						<li><a href="https://www.w3.org/History/1991-WWW-NeXT/Implementation/" target="_blank" rel="noopener">W3C History · CERN httpd Implementation Notes</a></li>
+						<li><a href="https://archive.ncsa.illinois.edu/General/Internet/wwwserver.html" target="_blank" rel="noopener">NCSA Archives · NCSA HTTPd Web Server</a></li>
 						<li><a href="https://jakarta.ee/specifications/servlet/" target="_blank" rel="noopener">Jakarta EE · Servlet Specification</a></li>
 						<li><a href="https://tomcat.apache.org/whichversion.html" target="_blank" rel="noopener">Apache Tomcat · Release History</a></li>
 						<li><a href="https://spring.io/blog/2004/03/24/announcing-spring-framework-1-0" target="_blank" rel="noopener">Spring Blog · Announcing Spring Framework 1.0</a></li>
@@ -144,6 +164,44 @@
 				<div class="modal__content"></div>
 			</div>
 		</div>
+
+		<template id="event-1990-cern-httpd">
+			<article class="event-detail" aria-labelledby="event-1990-cern-httpd-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1990</p>
+					<h2 id="event-1990-cern-httpd-title">CERN httpd 시범 운영</h2>
+					<p class="event-detail__summary">팀 버너스-리는 스위스 CERN 연구소에서 HTML과 HTTP를 처리하는 첫 웹 서버인 CERN httpd를 구축해 연구자들이 내부 문서를 링크로 주고받게 했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>1990년 말, 버너스-리는 NeXT 컴퓨터 한 대에 <code>httpd</code> 데몬을 띄우고 “브라우저가 GET을 보내면 여기서 HTML 파일을 찾아 돌려줘요”라고 동료에게 설명했습니다. CERN 인트라넷에 첫 페이지가 열리자, 연구자들은 새 문서를 올릴 때마다 링크를 달아 서로의 실험 노트를 연결했습니다.</p>
+						<p>초기 소스는 연구소 내부에서만 공유됐지만, 1991년 여름에는 외부 메일링 리스트에 배포되어 다른 연구기관도 같은 서버를 시험하기 시작했습니다. “HTTP는 가볍고 HTML은 쓰기 쉽다”는 입소문이 퍼지면서 웹 서버라는 개념이 현실이 되었습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>CERN httpd는 정적 파일을 서비스했지만, 디렉토리 리스팅과 간단한 실행 스크립트를 지원해 이후 CGI가 자리 잡는 발판이 되었습니다. “요청을 받아 해석한 뒤 응답을 돌려준다”는 서버의 기본 틀이 이때 마련되었고, 훗날 WAS가 등장해 로직을 맡을 수 있었던 것도 이 구조 덕분입니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1993-ncsa-httpd">
+			<article class="event-detail" aria-labelledby="event-1993-ncsa-httpd-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1993</p>
+					<h2 id="event-1993-ncsa-httpd-title">NCSA HTTPd 공개</h2>
+					<p class="event-detail__summary">일리노이 NCSA 팀은 누구나 다운로드해 쓸 수 있는 HTTP 서버를 공개하며 대학과 기업에 웹을 빠르게 퍼뜨렸습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>마크 안드리센과 에릭 빈나는 Mosaic 브라우저를 만들면서 “서버도 쉽게 설치할 수 있게 하자”고 결정했습니다. 1993년 11월, 그들은 <code>httpd_1.0.tar.Z</code> 파일을 FTP에 올리고 설치 방법을 README로 안내했습니다. 대학 연구실과 커뮤니티는 하루가 멀다 하고 패치를 올려 기능을 보강했습니다.</p>
+						<p>NCSA HTTPd는 접근 제어, 로그, CGI 훅을 내장해 상용 서비스에도 적합했습니다. 넷스케이프는 이 코드를 바탕으로 상업용 서버를 출시했고, Apache httpd 프로젝트도 NCSA HTTPd의 패치 킷에서 출발했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>오픈소스 HTTP 서버가 널리 쓰이면서 “서버는 누구나 설치하고 고칠 수 있다”는 문화가 탄생했습니다. 이후 Apache httpd가 시장을 장악하고, 그 위에 CGI와 모듈이 얹히며 웹 애플리케이션 서버가 맡는 역할과 프록시·정적 서버의 경계가 명확해졌습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
 
 		<template id="event-1997-servlet">
 			<article class="event-detail" aria-labelledby="event-1997-servlet-title">
