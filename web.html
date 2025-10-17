@@ -26,6 +26,7 @@
 						<a href="networks.html">네트워크 연대기</a>
 						<a href="computers.html">컴퓨터 연대기</a>
 						<a href="web.html" class="is-current">웹 연대기</a>
+						<a href="was.html">WAS 연대기</a>
 						<a href="databases.html">데이터베이스 연대기</a>
 					</nav>
 				</div>
@@ -45,6 +46,9 @@
 						</p>
 						<p class="timeline-hero__lede">
 							연도 버튼을 눌러 보세요. 정적 페이지에서 출발해 CGI, Ajax, 단일 페이지 앱, 서버리스와 엣지 컴퓨팅까지 이어지는 흐름을 소설 읽듯 차근차근 풀어 드립니다. 낯선 단어는 바로 옆 문장에서 설명하고, 다음 시대 이야기로 어떻게 이어졌는지도 함께 적어 두었습니다.
+						</p>
+						<p class="timeline-hero__lede">
+							서버 쪽 엔진의 상세한 변화가 궁금하다면 <a href="was.html">WAS 연대기</a>에서 서블릿, Tomcat, Spring, 서버리스 같은 사건을 따로 모아 읽어 보세요.
 						</p>
 					</div>
 				</section>
@@ -143,10 +147,6 @@
 								<span class="timeline-event__year">1996</span>
 								<span class="timeline-event__label">Active Server Pages</span>
 							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-servlet">
-								<span class="timeline-event__year">1997</span>
-								<span class="timeline-event__label">Servlet 1.0 사양</span>
-							</button>
 						</div>
 					</section>
 
@@ -165,17 +165,9 @@
 								<span class="timeline-event__year">1999</span>
 								<span class="timeline-event__label">XMLHttpRequest 등장</span>
 							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1999-tomcat">
-								<span class="timeline-event__year">1999</span>
-								<span class="timeline-event__label">Apache Tomcat 공개</span>
-							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2001-lamp">
 								<span class="timeline-event__year">2001</span>
 								<span class="timeline-event__label">LAMP 스택 확산</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2003-spring">
-								<span class="timeline-event__year">2003</span>
-								<span class="timeline-event__label">Spring 1.0 발표</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-ajax">
 								<span class="timeline-event__year">2005</span>
@@ -211,10 +203,6 @@
 								<span class="timeline-event__year">2011</span>
 								<span class="timeline-event__label">WebSocket 표준 확정</span>
 							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2011-nginx">
-								<span class="timeline-event__year">2011</span>
-								<span class="timeline-event__label">Nginx 1.0 안정화</span>
-							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2013-react">
 								<span class="timeline-event__year">2013</span>
 								<span class="timeline-event__label">React 발표</span>
@@ -229,17 +217,9 @@
 							<p class="timeline-group__summary">서버를 직접 살피지 않아도 되는 시대가 왔습니다. HTML5, 서버리스, GraphQL, PWA, WebAssembly, 엣지 함수, JAMstack 흐름이 이어지며 “필요한 기능만 조각처럼 가져다 쓰자”는 방식이 자리 잡았습니다. 프론트엔드는 독립적으로 배포하고, 백엔드는 API와 이벤트로 조용히 힘을 보탭니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-lambda">
-								<span class="timeline-event__year">2014</span>
-								<span class="timeline-event__label">AWS Lambda 출시</span>
-							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-html5">
 								<span class="timeline-event__year">2014</span>
 								<span class="timeline-event__label">HTML5 최종 권고</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-spring-boot">
-								<span class="timeline-event__year">2014</span>
-								<span class="timeline-event__label">Spring Boot 1.0</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2015-http2">
 								<span class="timeline-event__year">2015</span>
@@ -381,43 +361,6 @@
 			</article>
 		</template>
 
-		<template id="event-1978-usenet">
-			<article class="event-detail" aria-labelledby="event-1978-usenet-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1978</p>
-					<h2 id="event-1978-usenet-title">Usenet 개시</h2>
-					<p class="event-detail__summary">두 대학이 전화선을 연결해 밤마다 글을 주고받으며 “서버끼리 서로 대신 전달하는 게시판”을 처음으로 선보였습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>듀크 대학의 짐과 톰은 저녁마다 전화선을 연결해 프로그램을 돌렸습니다. “자고 일어나면 다른 학교에서 올라온 새 글이 우리 서버에 있네요!” 그들은 <code>net.general</code> 게시판에 ‘안녕하세요’라는 첫 글을 남기며 실험을 시작했습니다.</p>
-						<p>얼마 지나지 않아 다른 학교도 합류했고, 각 학교 서버는 받은 글을 보관했다가 다음 서버로 넘겨주었습니다. 학생들은 자신의 단말에서 조용히 글을 읽고, 답글을 쓰면서 보이지 않는 협업이 펼쳐졌습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Usenet은 “스토어 앤드 포워드”라는 단순한 원리를 따랐습니다. 서버는 받은 글을 잠시 저장했다가 다음 서버로 넘겨 주고, 사용자는 자기 컴퓨터에서 내용을 읽고 썼습니다. 오늘날 웹 서비스가 “서버는 데이터를 보관하고, 브라우저는 보여 준다”고 나누는 방식과 꼭 닮은 첫 연습장이었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1980-enquire">
-			<article class="event-detail" aria-labelledby="event-1980-enquire-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1980</p>
-					<h2 id="event-1980-enquire-title">ENQUIRE 구축</h2>
-					<p class="event-detail__summary">팀 버너스-리는 실험 장비와 사람 정보를 엮어 보겠다며 ENQUIRE라는 개인 노트 프로그램을 만들었고, 이 경험이 훗날 웹으로 이어집니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>버너스-리는 CERN 복도에서 “이 장비는 누가 책임지고 있지?”라는 질문을 자주 들었습니다. 그래서 ENQUIRE라는 작은 프로그램을 만들어 “장비 → 담당자 → 실험”이 서로 연결되도록 글을 써 내려갔습니다.</p>
-						<p>종이 공책 대신 컴퓨터 화면에서 링크를 눌러 이동하는 경험은 그에게 큰 인상을 남겼고, “이 구조를 전 세계 문서에도 적용할 수 있지 않을까?”라는 생각이 서서히 자라났습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>ENQUIRE는 “노드와 링크”라는 단순한 구조를 시험한 도구였습니다. 화면은 필요한 정보를 보기 좋게 보여 주고, 프로그램 속 저장소는 문서 사이 관계를 조용히 기억했습니다. 나중에 웹이 “브라우저는 보여 주고 서버는 기억한다”는 역할을 나누게 된 것도 이 경험에서 비롯됩니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
 
 		<template id="event-1983-flag-day">
 			<article class="event-detail" aria-labelledby="event-1983-flag-day-title">
@@ -628,24 +571,6 @@
 			</article>
 		</template>
 
-		<template id="event-1997-servlet">
-			<article class="event-detail" aria-labelledby="event-1997-servlet-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1997</p>
-					<h2 id="event-1997-servlet-title">Servlet 1.0 사양</h2>
-					<p class="event-detail__summary">Sun은 자바 서블릿 사양을 발표해 “HTTP 요청을 클래스로 처리하자”는 공통 규칙을 제시했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>Sun 개발자 회의에서 발표자는 <code>HttpServlet</code> 클래스를 띄우며 “doGet과 doPost 안에서 필요한 일을 하세요”라고 설명했습니다. 시연에서 사용자가 폼을 제출하자, 서블릿이 주문 데이터를 읽고 새로운 HTML을 만들어 돌려줬습니다.</p>
-						<p>은행과 공공기관은 “동시에 많은 요청을 다루는 표준이 드디어 생겼다”며 서블릿 컨테이너 도입을 검토했습니다. 자바 진영은 공용 API를 중심으로 WAS를 발전시킬 발판을 마련했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>서블릿 사양은 요청·응답 객체, 필터, 라이프사이클 메서드 같은 개념을 정의했습니다. 덕분에 개발자는 어떤 컨테이너에서 실행하든 같은 코드를 사용할 수 있었고, WAS 벤더는 세션, 스레드, 보안 같은 공통 기능을 책임지게 되었습니다. 이는 이후 JSP, Tomcat, Spring 같은 기술이 함께 돌아가게 만든 토대였습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
 
 		<template id="event-1999-http11">
 			<article class="event-detail" aria-labelledby="event-1999-http11-title">
@@ -666,24 +591,6 @@
 			</article>
 		</template>
 
-		<template id="event-1999-tomcat">
-			<article class="event-detail" aria-labelledby="event-1999-tomcat-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1999</p>
-					<h2 id="event-1999-tomcat-title">Apache Tomcat 공개</h2>
-					<p class="event-detail__summary">Sun은 서블릿·JSP 레퍼런스 구현을 Apache 재단에 기증하며 Tomcat을 오픈소스로 공개했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>자바원 행사장에서 제임스 던컨 데이비슨은 노트북을 열고 <code>startup.sh</code>를 실행했습니다. 콘솔에 고양이 로고가 뜨자 청중이 웃었고, 곧바로 브라우저에서 JSP가 새 HTML을 만들어 응답하는 장면이 재현됐습니다.</p>
-						<p>Sun은 “표준은 개방형 구현이 있어야 널리 쓰입니다”라며 코드를 Apache에 넘겼습니다. 개발자들은 Tomcat을 내려받아 <code>webapps</code> 폴더에 WAR 파일을 복사하는 것만으로 서블릿 애플리케이션을 배포할 수 있게 됐습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Tomcat은 커넥터, 스레드 풀, JSP 컴파일러를 내장해 개발용 WAS의 사실상 표준이 되었습니다. 덕분에 팀은 동일한 컨테이너 위에서 개발·운영 환경을 맞출 수 있었고, 이후 Spring, Struts 같은 프레임워크와 자연스럽게 통합되었습니다. Tomcat의 오픈소스 모델은 Jetty, JBoss 등 다른 WAS의 등장을 자극했습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
 
 		<template id="event-1999-xmlhttprequest">
 			<article class="event-detail" aria-labelledby="event-1999-xmlhttprequest-title">
@@ -723,24 +630,6 @@
 			</article>
 		</template>
 
-		<template id="event-2003-spring">
-			<article class="event-detail" aria-labelledby="event-2003-spring-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2003</p>
-					<h2 id="event-2003-spring-title">Spring 1.0 발표</h2>
-					<p class="event-detail__summary">Spring 1.0은 “EJB 없이도 견고한 서버를 만들 수 있다”는 해법을 제시하며 자바 백엔드 구조를 가볍게 바꿨습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>Rod Johnson은 《Expert One-on-One J2EE》에서 무거운 EJB 사용기를 털어놓은 뒤, 컨퍼런스에서 “객체를 단순 자바 클래스로 유지하고 외부에서 주입하면 됩니다”라며 Spring 1.0을 선보였습니다.</p>
-						<p>데모에서는 XML 설정으로 서비스 객체와 DAO를 연결하고, 테스트에서는 컨테이너 없이도 단위 테스트가 돌아갔습니다. 기업 개발팀은 “경량 컨테이너로도 트랜잭션과 보안을 처리할 수 있네”라며 도입을 시작했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Spring은 IoC 컨테이너와 AOP로 의존성을 주입하고 트랜잭션을 선언적으로 관리하게 했습니다. 덕분에 백엔드는 얇은 서비스 계층을 유지하면서도 확장성과 테스트 용이성을 갖출 수 있었고, 프론트엔드는 안정적인 API를 기대할 수 있었습니다. 이후 Spring MVC, Spring Security, Spring Boot가 같은 철학을 이어갑니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
 
 		<template id="event-2005-ajax">
 			<article class="event-detail" aria-labelledby="event-2005-ajax-title">
@@ -856,24 +745,6 @@
 			</article>
 		</template>
 
-		<template id="event-2011-nginx">
-			<article class="event-detail" aria-labelledby="event-2011-nginx-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2011</p>
-					<h2 id="event-2011-nginx-title">Nginx 1.0 안정화</h2>
-					<p class="event-detail__summary">Nginx 1.0은 이벤트 기반 웹 서버를 안정판으로 공개하며 “가볍고 빠른 리버스 프록시” 시대를 열었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>2011년 4월, 이고르 시소예프는 메일링 리스트에 “Nginx 1.0이 나왔습니다. 이제 생산 환경에서 마음껏 쓰세요”라는 짧은 공지를 남겼습니다. 벤치마크에서는 수만 개의 동시 연결을 적은 메모리로 처리하는 모습이 잡혔습니다.</p>
-						<p>스타트업은 정적 파일을 Nginx로 서빙하고, 백엔드 애플리케이션 앞단에는 리버스 프록시로 배치했습니다. 운영팀은 <code>nginx.conf</code>에 로드밸런싱과 캐시 설정을 적으며 “서버 한 대로도 많은 사용자를 버틴다”고 보고했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Nginx는 비동기 이벤트 루프, 비차단 I/O, 설정 기반 리버스 프록시를 제공했습니다. 덕분에 백엔드는 WAS와 API 서버를 여러 대로 쪼개고, 앞단에서는 Nginx가 트래픽을 분산했습니다. 이 구조는 이후 마이크로서비스, 컨테이너 오케스트레이션에서도 기본 패턴이 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
 
 		<template id="event-2013-react">
 			<article class="event-detail" aria-labelledby="event-2013-react-title">
@@ -894,24 +765,6 @@
 			</article>
 		</template>
 
-		<template id="event-2014-lambda">
-			<article class="event-detail" aria-labelledby="event-2014-lambda-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2014</p>
-					<h2 id="event-2014-lambda-title">AWS Lambda 출시</h2>
-					<p class="event-detail__summary">AWS는 Lambda를 내놓으며 “서버를 직접 돌리지 말고, 필요한 코드만 올려 두세요”라는 메시지를 현실로 만들었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>AWS re:Invent 무대에서 발표자가 “이제 서버를 예약하지 않아도 됩니다”라며 Lambda를 소개했습니다. 개발자 앨리스가 콘솔에 짧은 함수를 저장하자, 곧바로 웹훅 주소가 생겨 요청을 받아들였습니다.</p>
-						<p>스타트업들은 로그인, 알림, 이미지 처리 등을 Lambda로 옮겨 운영 부담을 줄였고, 백엔드는 점점 더 작은 함수와 이벤트 중심 구조로 나뉘기 시작했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>서버리스 모델은 확장과 비용을 자동으로 처리해 줍니다. 백엔드는 서버 관리 대신 핵심 로직에 집중할 수 있고, 프론트엔드는 정적 자산을 CDN에 올린 뒤 필요한 기능만 API로 호출하는 패턴을 손쉽게 실행할 수 있게 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
 
 		<template id="event-2014-html5">
 			<article class="event-detail" aria-labelledby="event-2014-html5-title">
@@ -932,24 +785,6 @@
 			</article>
 		</template>
 
-		<template id="event-2014-spring-boot">
-			<article class="event-detail" aria-labelledby="event-2014-spring-boot-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2014</p>
-					<h2 id="event-2014-spring-boot-title">Spring Boot 1.0</h2>
-					<p class="event-detail__summary">Spring Boot 1.0은 “설정 대신 실행”을 내세우며 스프링 백엔드를 몇 분 만에 띄울 수 있게 했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>2014년 Pivotal 개발자 필 웹은 무대에서 <code>spring init --dependencies=web demo</code>를 실행했습니다. IDE에서 <code>DemoApplication.java</code>를 열고 바로 실행하자 Tomcat이 내장된 애플리케이션이 5초 만에 떠올랐습니다.</p>
-						<p>팀은 “설정 XML을 어디에 둬야 하지?” 같은 고민 대신 <code>application.properties</code>에 필요한 옵션만 적고 배포 파이프라인에 Jar 파일을 올렸습니다. 마이크로서비스 전환을 계획하던 조직은 “서비스 하나당 스프링 부트 하나”라는 전략을 채택했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Spring Boot는 자동 설정, 스타터 의존성, 내장 Tomcat/Jetty를 제공해 배포 단위를 Jar 파일로 단순화했습니다. 백엔드는 마이크로서비스와 CI/CD에 맞춰 작은 모듈을 빠르게 만들 수 있었고, 프론트엔드는 일관된 REST/GraphQL API를 더 쉽게 받을 수 있었습니다. 이 접근은 이후 Spring Cloud, Kubernetes 배포 모델과 자연스럽게 이어집니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
 
 		<template id="event-2015-http2">
 			<article class="event-detail" aria-labelledby="event-2015-http2-title">
