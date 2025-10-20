@@ -54,6 +54,20 @@
 		);
 	};
 
+	const getSelectedOption = (select) => {
+		if (!select) {
+			return null;
+		}
+		if (select.selectedOptions && select.selectedOptions.length) {
+			return select.selectedOptions[0];
+		}
+		const index = typeof select.selectedIndex === 'number' ? select.selectedIndex : -1;
+		if (index < 0 || !select.options || !select.options.length) {
+			return null;
+		}
+		return select.options[index] || null;
+	};
+
 	const currentDocumentLanguage = normalizeLanguage(document.documentElement?.lang || '');
 	const storedLanguage = normalizeLanguage(getStoredLanguage());
 	const browserLanguage = detectBrowserLanguage();
@@ -86,7 +100,7 @@
 		select.addEventListener('change', (event) => {
 			const target = event.target;
 			const destination = target?.value;
-			const selectedOption = target?.selectedOptions?.[0] || null;
+			const selectedOption = getSelectedOption(target);
 			const selectedLanguageCode = normalizeLanguage(
 				selectedOption?.dataset?.languageCode || selectedOption?.value || ''
 			);
