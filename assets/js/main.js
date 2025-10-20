@@ -75,6 +75,41 @@
 	const shouldAttemptRedirect =
 		!storedLanguage && preferredLanguage && currentDocumentLanguage && preferredLanguage !== currentDocumentLanguage;
 
+	const languageLinkTargets = {
+		main: {
+			ko: 'https://archerlab.dev',
+			en: 'https://archerlab.dev/index-en.html'
+		}
+	};
+
+	const resolveActiveLanguage = () =>
+		normalizeLanguage(getStoredLanguage()) || currentDocumentLanguage || 'ko';
+
+	const syncLanguageAwareLinks = () => {
+		const activeLanguage = resolveActiveLanguage();
+		const candidates = new Set();
+		const annotatedNodes = document.querySelectorAll('[data-language-link][data-link-key]');
+		annotatedNodes.forEach((node) => candidates.add(node));
+		const fallbackNodes = document.querySelectorAll('a[href^="https://archerlab.dev"]');
+		fallbackNodes.forEach((node) => candidates.add(node));
+		if (!candidates.size) {
+			return;
+		}
+		candidates.forEach((node) => {
+			const key = node.dataset?.linkKey || 'main';
+			const targets = languageLinkTargets[key] || languageLinkTargets.main;
+			if (!targets) {
+				return;
+			}
+			const href = targets[activeLanguage] || targets.en || targets.ko;
+			if (href) {
+				node.setAttribute('href', href);
+			}
+		});
+	};
+
+	syncLanguageAwareLinks();
+
 	languageSelects.forEach((select) => {
 		const optionForCurrent = findOptionByLanguage(select, currentDocumentLanguage);
 		if (optionForCurrent) {
