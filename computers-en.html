@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ArcherLab IT Story · Computers in Motion</title>
+		<meta name="description" content="From mechanical calculators in the 1800s to generative AI in the 2020s, follow how computers kept turning ideas into reality." />
+		<meta property="og:title" content="ArcherLab IT Story · Computers in Motion" />
+		<meta property="og:description" content="Explore the innovations that carried computing from gears and vacuum tubes to cloud services and AI." />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+		<div class="page">
+			<header class="page__header" role="banner">
+				<div class="page__header-left">
+					<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
+						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
+						<span class="page__brand-label">ArcherLab Chronicle</span>
+					</a>
+					<nav class="page__topic-nav" aria-label="Topic navigation">
+						<a href="index.html">Home Hub</a>
+						<a href="networks.html">Network Timeline</a>
+						<a href="computers-en.html" class="is-current">Computers Timeline</a>
+						<div class="page__topic-nav-group" role="group" aria-label="Web creation timelines">
+							<span class="page__topic-nav-label">Web Making</span>
+							<a href="web.html" data-topic-role="parent">Web Timeline Hub</a>
+							<a href="web-structure.html" data-topic-role="child">Document Structure</a>
+							<a href="web-styling.html" data-topic-role="child">Styling Evolution</a>
+							<a href="web-interaction.html" data-topic-role="child">Browser Interaction</a>
+							<a href="web-tools.html" data-topic-role="child">Creation Tools</a>
+						</div>
+						<a href="was.html">Web Server Timeline</a>
+						<a href="databases.html">Database Timeline</a>
+					</nav>
+				</div>
+				<nav class="page__nav" aria-label="Page sections">
+					<a href="#timeline">View Years</a>
+					<a href="#sources">Sources</a>
+					<div class="language-switch">
+						<label class="sr-only" for="language-select-computers-en">Language</label>
+						<select id="language-select-computers-en" data-language-switch>
+							<option value="computers.html" data-language-code="ko">한국어</option>
+							<option value="computers-en.html" data-language-code="en" selected>English</option>
+						</select>
+					</div>
+				</nav>
+			</header>
+
+			<main class="page__main" id="main" role="main">
+				<section class="timeline-hero" aria-labelledby="timeline-title">
+					<div class="timeline-hero__head">
+						<p class="hero__eyebrow">Computer Story for Curious Builders</p>
+						<h1 class="timeline-hero__title" id="timeline-title">Trace how ideas grew into computers, from gears and vacuum tubes to cloud services and AI accelerators</h1>
+						<p class="timeline-hero__lede">
+							Charles Babbage drew plans for a machine that could finish astronomical tables, while wartime researchers strung together thousands of vacuum tubes just to get answers faster.
+							A century later, engineers asked, “Could we code from a device in our pocket?” and teams proposed renting servers on-demand through the cloud.
+						</p>
+						<p class="timeline-hero__lede">
+							Tap any year to see which problem inspired that computer, how it worked, and the clues it left for the next generation of builders.
+							If unfamiliar terms show up, no worries—we focus on the people and the problems they solved so the journey stays approachable.
+						</p>
+					</div>
+				</section>
+
+				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
+					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">Selecting a year opens a dialog in place so you can keep reading without leaving the page.</p>
+
+					<section class="timeline-group" aria-labelledby="decade-1820 topic-1820">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1820">1820s</p>
+							<h3 class="timeline-group__topic" id="topic-1820">Mechanical calculation begins</h3>
+							<p class="timeline-group__summary">Mathematicians tired of copying tables by hand experimented with gears and cogs that could repeat calculations for them.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1822-difference">
+								<span class="timeline-event__year">1822</span>
+								<span class="timeline-event__label">Difference Engine Plans</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1840 topic-1840">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1840">1840s</p>
+							<h3 class="timeline-group__topic" id="topic-1840">Turning instructions into code</h3>
+							<p class="timeline-group__summary">Cards and symbols began to replace people in describing how a machine should move, planting the idea of “software.”</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1843-lovelace">
+								<span class="timeline-event__year">1843</span>
+								<span class="timeline-event__label">Lovelace Notes</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1930 topic-1930">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1930">1930s</p>
+							<h3 class="timeline-group__topic" id="topic-1930">Explaining computation</h3>
+							<p class="timeline-group__summary">Researchers explored abstract models and electronic circuits at the same time to ask, “What counts as computation?”</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1936-turing">
+								<span class="timeline-event__year">1936</span>
+								<span class="timeline-event__label">Turing Machine Concept</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1937-atanasoff">
+								<span class="timeline-event__year">1937</span>
+								<span class="timeline-event__label">Atanasoff-Berry Computer</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1940 topic-1940">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1940">1940s</p>
+							<h3 class="timeline-group__topic" id="topic-1940">Electronic computers arrive</h3>
+							<p class="timeline-group__summary">Thousands of vacuum tubes wired together finally delivered multipurpose computers that produced answers in seconds.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1946-eniac">
+								<span class="timeline-event__year">1946</span>
+								<span class="timeline-event__label">ENIAC Operational</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1949-edsac">
+								<span class="timeline-event__year">1949</span>
+								<span class="timeline-event__label">EDSAC Stored Program</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1950 topic-1950">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1950">1950s</p>
+							<h3 class="timeline-group__topic" id="topic-1950">Commercial machines and transistors</h3>
+							<p class="timeline-group__summary">Governments and businesses began to buy computers while transistors made circuits smaller and more reliable.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1951-univac">
+								<span class="timeline-event__year">1951</span>
+								<span class="timeline-event__label">UNIVAC Delivery</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1956-transistor">
+								<span class="timeline-event__year">1956</span>
+								<span class="timeline-event__label">Transistor Computer Trials</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1960 topic-1960">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1960">1960s</p>
+							<h3 class="timeline-group__topic" id="topic-1960">Compatibility and operating systems</h3>
+							<p class="timeline-group__summary">Compatibility and shared operating systems emerged so programs could run across different machines.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1964-system360">
+								<span class="timeline-event__year">1964</span>
+								<span class="timeline-event__label">IBM System/360</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1969-unix">
+								<span class="timeline-event__year">1969</span>
+								<span class="timeline-event__label">UNIX Kernel</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1970 topic-1970">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1970">1970s</p>
+							<h3 class="timeline-group__topic" id="topic-1970">Microprocessors and personal kits</h3>
+							<p class="timeline-group__summary">Putting the CPU on a single chip and shipping hobbyist kits opened computing to individuals.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1971-4004">
+								<span class="timeline-event__year">1971</span>
+								<span class="timeline-event__label">Intel 4004</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1977-apple2">
+								<span class="timeline-event__year">1977</span>
+								<span class="timeline-event__label">Apple II Release</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1980 topic-1980">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1980">1980s</p>
+							<h3 class="timeline-group__topic" id="topic-1980">Standard PCs and hypertext</h3>
+							<p class="timeline-group__summary">Standardized PCs and new RISC processors met the ideas that would link documents across the Internet.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1980-ibm801">
+								<span class="timeline-event__year">1980</span>
+								<span class="timeline-event__label">IBM 801 RISC</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1981-ibmpc">
+								<span class="timeline-event__year">1981</span>
+								<span class="timeline-event__label">IBM PC Launch</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1989-www">
+								<span class="timeline-event__year">1989</span>
+								<span class="timeline-event__label">World Wide Web Proposal</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1990">1990s</p>
+							<h3 class="timeline-group__topic" id="topic-1990">Open source and the mainstream</h3>
+							<p class="timeline-group__summary">As the Internet spread, freely downloadable operating systems and graphical interfaces reached everyday users.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1991-linux">
+								<span class="timeline-event__year">1991</span>
+								<span class="timeline-event__label">Linux Kernel Release</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1995-windows95">
+								<span class="timeline-event__year">1995</span>
+								<span class="timeline-event__label">Windows 95 Launch</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2000">2000s</p>
+							<h3 class="timeline-group__topic" id="topic-2000">Cloud and mobile computing</h3>
+							<p class="timeline-group__summary">Cloud services, x86-64 servers, and general-purpose GPU computing reshaped how we rent and scale computing.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2003-x8664">
+								<span class="timeline-event__year">2003</span>
+								<span class="timeline-event__label">x86-64 Servers</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2006-aws">
+								<span class="timeline-event__year">2006</span>
+								<span class="timeline-event__label">AWS EC2 Announcement</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2007-iphone">
+								<span class="timeline-event__year">2007</span>
+								<span class="timeline-event__label">iPhone Reveal</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2007-cuda">
+								<span class="timeline-event__year">2007</span>
+								<span class="timeline-event__label">NVIDIA CUDA Launch</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2010">2010s</p>
+							<h3 class="timeline-group__topic" id="topic-2010">Data-driven architectures</h3>
+							<p class="timeline-group__summary">Machine learning and container ecosystems grew to manage massive data and quick deployments.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2012-deeplearning">
+								<span class="timeline-event__year">2012</span>
+								<span class="timeline-event__label">Deep Learning Image Breakthrough</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-containers">
+								<span class="timeline-event__year">2014</span>
+								<span class="timeline-event__label">Containers Adopted</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2020">2020s</p>
+							<h3 class="timeline-group__topic" id="topic-2020">Custom chips and generative tools</h3>
+							<p class="timeline-group__summary">Specialized chips sped up laptops and data centers, while generative AI pushed demand for compute even higher.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2020-m1">
+								<span class="timeline-event__year">2020</span>
+								<span class="timeline-event__label">Apple M1 Chip</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-genai-compute">
+								<span class="timeline-event__year">2023</span>
+								<span class="timeline-event__label">Generative AI Acceleration</span>
+							</button>
+						</div>
+					</section>
+				</section>
+
+				<section class="sources" id="sources" aria-labelledby="sources-title">
+					<div class="section__head">
+						<h2 id="sources-title">Source Library</h2>
+						<p>
+							Here are the primary documents that carry the story from mechanical calculators to modern cloud systems. Reading the originals reveals what problems the engineers tried to solve at each step.
+						</p>
+					</div>
+					<ul class="source-list">
+						<li><a href="https://www.computerhistory.org/babbage/" target="_blank" rel="noopener">Computer History Museum · Babbage Engine</a></li>
+						<li><a href="https://www.cl.cam.ac.uk/events/EDSAC99/lookup.php?id=1" target="_blank" rel="noopener">University of Cambridge · EDSAC Papers</a></li>
+						<li><a href="https://www.ibm.com/ibm/history/system360/" target="_blank" rel="noopener">IBM Archives · System/360</a></li>
+						<li><a href="https://www.intel.com/content/www/us/en/history/museum-intel-timeline-txt.html" target="_blank" rel="noopener">Intel Museum · Processor Timeline</a></li>
+						<li><a href="https://aws.amazon.com/blogs/aws/ec2-beta/" target="_blank" rel="noopener">AWS News Blog · EC2 Beta Announcement</a></li>
+						<li><a href="https://www.ibm.com/ibm/history/exhibits/risc/risc_intro.html" target="_blank" rel="noopener">IBM Archives · 801 and the Rise of RISC</a></li>
+						<li><a href="https://www.amd.com/en/press-releases/2003-04-22-opteron-launch" target="_blank" rel="noopener">AMD Newsroom · Opteron Launch and x86-64</a></li>
+						<li><a href="https://news.nvidia.com/news/nvidia-unveils-cuda" target="_blank" rel="noopener">NVIDIA News · CUDA Platform Announcement</a></li>
+						<li><a href="https://www.apple.com/newsroom/2020/11/apple-unveils-m1/" target="_blank" rel="noopener">Apple Newsroom · Apple Unveils M1</a></li>
+					</ul>
+				</section>
+			</main>
+
+			<footer class="page__footer" role="contentinfo">
+				<p>© 2025 ArcherLab · Stories on computers through time.</p>
+				<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
+			</footer>
+		</div>
+
+		<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
+			<div class="modal__overlay" data-modal-close></div>
+			<div class="modal__window" role="document" tabindex="-1">
+				<button class="modal__close" type="button" aria-label="Close dialog" data-modal-close>&times;</button>
+				<div class="modal__content"></div>
+			</div>
+		</div>
+
+		<template id="event-1822-difference">
+			<article class="event-detail" aria-labelledby="event-1822-difference-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1822</p>
+					<h2 id="event-1822-difference-title">Difference Engine Plans · Charles Babbage</h2>
+					<p class="event-detail__summary">Babbage imagined a machine that could print accurate tables after long nights correcting mistakes by hand.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Working on astronomical tables for the Royal Astronomical Society, Babbage grew frustrated by constant transcription errors. He sketched a device that combined gears and cogs to repeat addition and subtraction. Apprentices at nearby workshops asked, “How can we cut gears this precise?” so Babbage carried brass samples and diagrams between the workshop and his desk, demonstrating each assembly step.</p>
+						<p>The prototype never finished, but the idea of breaking calculations into repeated mechanical steps carried forward. It offered a future where machines could deliver the correct values without someone checking every row.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The Difference Engine applied a mathematical insight: polynomials can be evaluated with addition alone when broken into finite differences. Inputs became the positions of metal rods, and outputs appeared on numbered wheels. Technology of the time could not produce a full-scale machine, yet the notion of delegating repetitive calculations heavily influenced later computer designs.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1843-lovelace">
+			<article class="event-detail" aria-labelledby="event-1843-lovelace-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1843</p>
+					<h2 id="event-1843-lovelace-title">Lovelace Notes · Analyzing the Analytical Engine</h2>
+					<p class="event-detail__summary">Ada Lovelace described how punch cards and symbols could reconfigure a machine, articulating early concepts of programming.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>While translating Luigi Menabrea’s lecture on Babbage’s Analytical Engine, Lovelace inserted her own extensive annotations. One passage suggested that combining instructions on cards could even make the machine “compose elaborate music,” astonishing her peers. She drew tables that laid out loops and branches—the first documentation of such ideas.</p>
+						<p>Babbage replied, “You have explicated possibilities I had not yet detailed.” Her notes reframed the engine as more than a calculator; it could manipulate symbols and patterns.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>In Lovelace’s description, punch cards encoded commands, and the engine separated storage from computation units. Today we recognize that structure as the basis for modern programs. Her observation that the machine might operate on symbols beyond numbers opened the door to viewing computing as a general-purpose medium.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1936-turing">
+			<article class="event-detail" aria-labelledby="event-1936-turing-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1936</p>
+					<h2 id="event-1936-turing-title">Turing Machine Model · Computability</h2>
+					<p class="event-detail__summary">Alan Turing described an abstract device with an endless tape to define what it means for a problem to be solvable by a machine.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Prompted by his advisor to formalize the notion of procedure, Turing imagined a machine with a read/write head scanning symbols on a tape. A table of state transitions dictated each move. Colleagues recognized that even though the device was abstract, it let them reason about the limits of computation.</p>
+						<p>The model helped mathematicians prove the existence of unsolvable problems, such as the Halting Problem, and provided the conceptual bedrock for future computer architectures.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The Turing Machine separates instructions, states, and inputs in a way that mirrors modern computers. By consuming symbols one at a time, it became the standard language for discussing algorithms, and it remains a fundamental tool for exploring theoretical boundaries.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1937-atanasoff">
+			<article class="event-detail" aria-labelledby="event-1937-atanasoff-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1937</p>
+					<h2 id="event-1937-atanasoff-title">Atanasoff-Berry Computer</h2>
+					<p class="event-detail__summary">John Atanasoff and Clifford Berry built an electronic device that solved linear equations using binary arithmetic and capacitors.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>During a harsh Iowa winter, Atanasoff lamented over coffee that students were exhausted from solving equations. He proposed mounting capacitors on a rotating drum for storage and using vacuum tube amplifiers for arithmetic. Berry assisted with soldering and teased, “Now you just press a button for the answer.”</p>
+						<p>The machine impressed faculty by solving 29 simultaneous equations, showing that binary electronics could tackle serious scientific problems.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The ABC did not separate CPU and memory, yet it combined binary logic, electronic switching, and automated operations in one system. Data lived on a capacitor drum and results exported to punched cards, influencing later projects such as ENIAC.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1946-eniac">
+			<article class="event-detail" aria-labelledby="event-1946-eniac-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1946</p>
+					<h2 id="event-1946-eniac-title">ENIAC Activated · Programmable Electronics</h2>
+					<p class="event-detail__summary">The ENIAC team wired over 17,000 vacuum tubes to deliver artillery tables and scientific results in record time.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Engineers at the University of Pennsylvania’s Moore School spent nights rewiring patch panels. Programmers like Jean Jennings and Betty Holberton wrote detailed charts mapping every accumulator and cable. When the Army witnessed ENIAC complete calculations in seconds, the project proved that electronics could dramatically outperform mechanical methods.</p>
+						<p>Although programming meant physically rerouting cables, the team demonstrated that complex problems—from artillery trajectories to weather simulations—were within reach.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>ENIAC’s architecture included accumulators, function tables, and control units tied together by patch cords. The experience highlighted the need for faster reconfiguration, motivating the stored-program concept realized in later systems.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1949-edsac">
+			<article class="event-detail" aria-labelledby="event-1949-edsac-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1949</p>
+					<h2 id="event-1949-edsac-title">EDSAC Stored Program · Cambridge</h2>
+					<p class="event-detail__summary">Maurice Wilkes and his team delivered one of the first computers that read instructions and data from the same memory.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Wilkes returned from wartime radar work determined to build a practical computer for Cambridge researchers. He adopted mercury delay lines for memory and designed an instruction set simple enough for students to grasp. When the machine drew a table of squares in May 1949, it marked a milestone: programs now resided in memory rather than in rewired panels.</p>
+						<p>Scientists quickly used EDSAC for genetics and physics problems, demonstrating how stored programs could support diverse research.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>EDSAC’s accumulator-based design, instruction tape loader, and subroutine library shaped early programming practice. Wilkes’ later reflections on debugging became foundational reading for generations of programmers.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1951-univac">
+			<article class="event-detail" aria-labelledby="event-1951-univac-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1951</p>
+					<h2 id="event-1951-univac-title">UNIVAC Delivery · First Commercial Computer</h2>
+					<p class="event-detail__summary">The U.S. Census Bureau received the first UNIVAC, showing that computers could handle government and business workloads.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>J. Presper Eckert and John Mauchly formed a company to commercialize computing. Their engineers tackled production challenges from vacuum tube reliability to magnetic tape handling. During the famous 1952 election broadcast, UNIVAC correctly predicted Eisenhower’s victory, surprising television audiences and cementing its reputation.</p>
+						<p>Businesses soon imagined computers for inventory, payroll, and logistics, expanding demand for commercial systems.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>UNIVAC I featured mercury delay-line memory, magnetic tapes, and decimal arithmetic. Its success signaled a shift from research labs to enterprise deployments and directly influenced competing offerings such as IBM’s 701.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1956-transistor">
+			<article class="event-detail" aria-labelledby="event-1956-transistor-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1956</p>
+					<h2 id="event-1956-transistor-title">Transistor Computer Experiments</h2>
+					<p class="event-detail__summary">Researchers replaced vacuum tubes with transistors, proving that solid-state components could run faster with less heat.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Teams at Bell Labs, Manchester, and elsewhere rebuilt existing designs using newly invented transistors. Engineers noted how the machines warmed rooms far less and required fewer maintenance visits. Programming teams worked alongside hardware engineers to adapt timing circuits and logic families.</p>
+						<p>These prototypes paved the way for mass-produced transistor computers, leading to smaller, more dependable systems by the end of the decade.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The Manchester Transistor Computer and Bell Labs’ TRADIC experiments demonstrated point-contact and junction transistor viability. Solid-state reliability ultimately made integrated circuits feasible.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1964-system360">
+			<article class="event-detail" aria-labelledby="event-1964-system360-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1964</p>
+					<h2 id="event-1964-system360-title">IBM System/360 · Family Architecture</h2>
+					<p class="event-detail__summary">IBM introduced a line of compatible computers so customers could upgrade hardware without rewriting software.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Project leader Gene Amdahl coordinated thousands of engineers to create a unified instruction set across small and large models. Businesses could start with an affordable system and move upward as workloads grew. IBM’s marketing emphasized that “one family of machines fits every department,” a compelling promise for enterprises investing in software.</p>
+						<p>The approach reshaped buyer expectations: compatibility became a requirement, not a luxury.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>System/360 adopted 8-bit bytes, microcoded control, and standardized peripherals. These decisions influenced decades of mainframe and minicomputer design, seeding modern notions of upward-compatible platforms.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1969-unix">
+			<article class="event-detail" aria-labelledby="event-1969-unix-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1969</p>
+					<h2 id="event-1969-unix-title">UNIX Kernel · Shared Operating System</h2>
+					<p class="event-detail__summary">A small team at Bell Labs built UNIX so multiple researchers could share a machine with files, tools, and a common interface.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Ken Thompson and Dennis Ritchie kept the system small enough for a PDP-7. They wrote assemblers, a file system, and utilities that formed a cohesive environment. When universities licensed UNIX source code, students experimented freely and contributed their own tools.</p>
+						<p>The culture of sharing code and ideas shaped the software industry, birthing portable tools and eventually the C language.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>UNIX’s hierarchical file system, process model, and text-centric philosophy influenced everything from BSD to Linux and macOS. Its source-sharing terms encouraged the earliest open development communities.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1971-4004">
+			<article class="event-detail" aria-labelledby="event-1971-4004-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1971</p>
+					<h2 id="event-1971-4004-title">Intel 4004 · Single-Chip CPU</h2>
+					<p class="event-detail__summary">A four-bit processor built for calculators showed that an entire CPU could live on one silicon chip.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Federico Faggin and his colleagues compressed multiple instruction sets into a compact design for Busicom calculators. Once the chip shipped, Intel realized the architecture’s versatility and began marketing it as a general-purpose component. Hobbyists and engineers alike started dreaming about custom electronics powered by tiny CPUs.</p>
+						<p>The success paved the way for the 8008, 8080, and ultimately the x86 line that dominates modern computing.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The 4004’s silicon gate MOS technology enabled higher switching speeds and density. Intel’s decision to sell the chip broadly helped establish the microprocessor industry.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1977-apple2">
+			<article class="event-detail" aria-labelledby="event-1977-apple2-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1977</p>
+					<h2 id="event-1977-apple2-title">Apple II Launch · Personal Computing Jumps</h2>
+					<p class="event-detail__summary">A polished case, color graphics, and bundled software made the Apple II attractive to households and classrooms.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Steve Wozniak’s clever design used a minimal component count while delivering smooth video output. Steve Jobs pushed for a complete product with manuals and packaging. Early adopters wrote games and spreadsheets, inspiring others to learn programming at home.</p>
+						<p>Retail visibility and user groups turned personal computing into a mainstream hobby and, soon, a necessity.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The Apple II’s expansion slots, Integer BASIC, and later VisiCalc support cemented the platform in business and education, boosting the entire personal computer market.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1980-ibm801">
+			<article class="event-detail" aria-labelledby="event-1980-ibm801-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1980</p>
+					<h2 id="event-1980-ibm801-title">IBM 801 RISC · Streamlined Instruction Sets</h2>
+					<p class="event-detail__summary">IBM engineers showed that a small, fast instruction set could outperform complex CISC designs on many tasks.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>John Cocke’s team profiled software and realized most instructions were rarely used. By simplifying the architecture and depending on compilers for optimization, they achieved significant performance gains. The 801 project influenced academic research and commercial RISC chips throughout the 1980s.</p>
+						<p>Manufacturers such as MIPS, SPARC, and ARM adopted similar philosophies, powering everything from workstations to mobile phones.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The 801’s register windows, pipeline-friendly design, and compiler cooperation defined RISC principles, reshaping CPU design debates for decades.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1981-ibmpc">
+			<article class="event-detail" aria-labelledby="event-1981-ibmpc-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1981</p>
+					<h2 id="event-1981-ibmpc-title">IBM PC Announcement</h2>
+					<p class="event-detail__summary">IBM introduced an open architecture PC, inviting third-party peripherals and software to flourish.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Don Estridge led a small team that sourced off-the-shelf components to meet an aggressive schedule. IBM published documentation so developers could build compatible expansion cards and applications. Within months, an ecosystem of clones and accessories appeared, expanding PC adoption worldwide.</p>
+						<p>The machine brought PCs into offices, classrooms, and eventually homes at unprecedented scale.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The PC’s ISA bus, BIOS interface, and partnership with Microsoft for PC DOS created standards that guided the personal computer industry for decades.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1989-www">
+			<article class="event-detail" aria-labelledby="event-1989-www-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1989</p>
+					<h2 id="event-1989-www-title">World Wide Web Proposal</h2>
+					<p class="event-detail__summary">Tim Berners-Lee sketched a system of hypertext documents linked across the Internet to help CERN researchers share knowledge.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Puzzled by how easily project details were lost, Berners-Lee proposed a “web” of nodes connected by typed links. He built the first browser-editor prototype on a NeXT workstation and persuaded colleagues to experiment. The idea rapidly spread beyond CERN as universities and hobbyists adopted browsers.</p>
+						<p>Within a few years, web servers and standards groups appeared, transforming information sharing and the broader software industry.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The proposal introduced URLs, HTTP, and HTML—core concepts that still anchor the modern web. Its emphasis on openness allowed anyone to publish and link content globally.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1991-linux">
+			<article class="event-detail" aria-labelledby="event-1991-linux-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1991</p>
+					<h2 id="event-1991-linux-title">Linux Kernel Release</h2>
+					<p class="event-detail__summary">Linus Torvalds shared the first Linux kernel online, inviting anyone to hack, test, and redistribute the code.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Torvalds posted his now-famous Usenet message asking for feedback on a “hobby” operating system. Developers worldwide contributed device drivers, file systems, and patches. Mailing lists and versioned tarballs became living documentation of open collaboration.</p>
+						<p>Linux soon powered servers, desktops, and embedded devices, showing that community-driven development could rival proprietary efforts.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Linux integrated GNU tools, adopted modular kernels, and inspired distributions like Debian and Red Hat. Its licensing and collaboration model influenced countless open-source projects.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1995-windows95">
+			<article class="event-detail" aria-labelledby="event-1995-windows95-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1995</p>
+					<h2 id="event-1995-windows95-title">Windows 95 Launch · GUI for the Masses</h2>
+					<p class="event-detail__summary">Microsoft released an operating system with a Start menu, taskbar, and plug-and-play support that defined mainstream PC use.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Months of flashy marketing culminated in midnight store openings. Users found a friendly desktop, 32-bit APIs, and bundled networking tools. Software vendors rushed to update applications to match the new interface expectations.</p>
+						<p>The release accelerated Internet adoption and standardized usability patterns that persist today.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Windows 95 introduced Win32, long filenames, and the Explorer shell. Its success cemented the PC as a family and office appliance.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2003-x8664">
+			<article class="event-detail" aria-labelledby="event-2003-x8664-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2003</p>
+					<h2 id="event-2003-x8664-title">x86-64 Servers · Extended Architectures</h2>
+					<p class="event-detail__summary">AMD’s Opteron chips added 64-bit extensions to the x86 architecture, balancing compatibility with headroom for large workloads.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Server builders welcomed the ability to keep existing software while addressing more memory and registers. Enterprises migrated critical databases and virtualization platforms onto x86-64 hardware, accelerating the decline of proprietary RISC systems in data centers.</p>
+						<p>The design was widely licensed, and Intel adopted similar extensions soon after, making 64-bit computing the standard for PCs and servers.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>x86-64 introduced additional general-purpose registers, a flat 64-bit address space, and long mode. These extensions supported modern operating systems and virtualization technologies.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2006-aws">
+			<article class="event-detail" aria-labelledby="event-2006-aws-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2006</p>
+					<h2 id="event-2006-aws-title">AWS EC2 Announcement · On-Demand Servers</h2>
+					<p class="event-detail__summary">Amazon invited developers to rent virtual machines by the hour, changing how teams scale infrastructure.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>After experimenting with internal automation, Amazon exposed APIs so external developers could launch instances in minutes. Startups loved skipping hardware purchases, while enterprises explored burst capacity without long procurement cycles.</p>
+						<p>EC2 kicked off a wave of cloud services—from storage to managed databases—and popularized infrastructure as code.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Elastic IPs, AMIs, and autoscaling groups became standard vocabulary. The model inspired competing clouds and fundamentally shifted operational practices.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2007-iphone">
+			<article class="event-detail" aria-labelledby="event-2007-iphone-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2007</p>
+					<h2 id="event-2007-iphone-title">iPhone Reveal · Computing in the Pocket</h2>
+					<p class="event-detail__summary">Apple blended multitouch hardware, a desktop-class browser, and visual design into a phone that felt like a tiny computer.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Steve Jobs unveiled the device as three products in one. Developers soon pushed for native apps beyond the initial web-only approach, leading to the App Store and a new marketplace.</p>
+						<p>The smartphone era redefined expectations for connectivity, pushing networks, processors, and battery technologies forward.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The iPhone’s ARM-based architecture, accelerometers, and capacitive touch interface set the template for modern smartphones and mobile development ecosystems.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2007-cuda">
+			<article class="event-detail" aria-labelledby="event-2007-cuda-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2007</p>
+					<h2 id="event-2007-cuda-title">NVIDIA CUDA Launch · GPUs for General Computing</h2>
+					<p class="event-detail__summary">CUDA let programmers tap GPU parallelism with C-like code, unlocking new performance for simulations and AI.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Researchers previously wrote shader-based hacks to use GPUs. CUDA provided a clearer API, memory model, and toolchain. Universities and startups rapidly adopted the platform for scientific workloads, inspiring rival frameworks and accelerating interest in GPGPU computing.</p>
+						<p>That groundwork later supported deep learning breakthroughs as large neural networks thrived on GPU clusters.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>CUDA’s kernels, thread blocks, and shared memory abstractions became standard vocabulary. The ecosystem matured with libraries, debuggers, and successive GPU architectures optimized for compute.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2012-deeplearning">
+			<article class="event-detail" aria-labelledby="event-2012-deeplearning-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2012</p>
+					<h2 id="event-2012-deeplearning-title">Deep Learning Image Breakthrough · AlexNet</h2>
+					<p class="event-detail__summary">A convolutional neural network running on GPUs halved the ImageNet error rate, igniting global interest in deep learning.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton trained a deep network using CUDA and ReLU activations. When their results dominated the ImageNet competition, labs worldwide pivoted toward neural approaches. Companies raced to apply the techniques to speech, translation, and recommendation systems.</p>
+						<p>The achievement underscored the tight link between algorithms, datasets, and compute power.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>AlexNet’s use of data augmentation, dropout, and GPU acceleration established practices that still guide modern model development. It also exposed the need for larger accelerators and optimized frameworks.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2014-containers">
+			<article class="event-detail" aria-labelledby="event-2014-containers-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2014</p>
+					<h2 id="event-2014-containers-title">Container Adoption · Docker and Beyond</h2>
+					<p class="event-detail__summary">Containers packaged applications with their dependencies, making deployments faster and more reproducible.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Docker popularized container tooling once reserved for platform teams. Developers built images locally and shipped the same bits to staging and production. Orchestration tools like Kubernetes soon followed, helping operators manage fleets of containers across clusters.</p>
+						<p>This shift encouraged microservices, CI/CD pipelines, and infrastructure automation in companies of every size.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Linux namespaces, cgroups, and image registries formed the foundation. The ecosystem now spans service meshes, observability stacks, and managed container platforms.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2020-m1">
+			<article class="event-detail" aria-labelledby="event-2020-m1-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2020</p>
+					<h2 id="event-2020-m1-title">Apple M1 Chip · Custom Silicon for Laptops</h2>
+					<p class="event-detail__summary">Apple’s first Mac chip combined CPU, GPU, and neural engines, proving that custom ARM designs could beat legacy x86 laptops.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Years of iPhone and iPad silicon expertise culminated in the M1. Reviewers praised silent performance and long battery life, hinting that vertical integration could redefine personal computing.</p>
+						<p>Competitors responded with their own custom SoCs, and developers optimized software for heterogeneous cores and accelerators.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The M1’s unified memory, high-efficiency cores, and integrated neural engine signaled a broader industry trend toward specialized silicon.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2023-genai-compute">
+			<article class="event-detail" aria-labelledby="event-2023-genai-compute-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2023</p>
+					<h2 id="event-2023-genai-compute-title">Generative AI Surge · Accelerated Infrastructure</h2>
+					<p class="event-detail__summary">Training large language and diffusion models demanded vast GPU clusters, renewing focus on power, efficiency, and supply chains.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Tech companies scrambled to secure H100 GPUs and design specialized AI accelerators. Researchers tuned model architectures while operations teams redesigned data centers for higher-density cooling. Discussions about responsible deployment accompanied the technical sprint.</p>
+						<p>The rush highlighted how computing innovation now intertwines with ethics, accessibility, and sustainability.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Generative AI workloads spurred advances in transformer optimization, inference serving, and hardware-software co-design, influencing every layer from silicon to user-facing products.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<button type="button" class="scroll-top" data-scroll-top aria-label="Back to top" hidden>↑</button>
+
+		<script src="assets/js/main.js" defer></script>
+	</body>
+</html>

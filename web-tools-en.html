@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ArcherLab IT Story · Web Tools Timeline</title>
+		<meta name="description" content="Follow the journey from WYSIWYG editors to Git, cloud IDEs, and AI partners that reshaped how we build the web." />
+		<meta property="og:title" content="ArcherLab IT Story · Web Tools Timeline" />
+		<meta property="og:description" content="See how web makers collaborated, automated, and shipped faster as their toolchain evolved." />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+		<div class="page">
+			<header class="page__header" role="banner">
+				<div class="page__header-left">
+					<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
+						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
+						<span class="page__brand-label">ArcherLab Chronicle</span>
+					</a>
+					<nav class="page__topic-nav" aria-label="Switch topic">
+						<a href="index-en.html">Home Hub</a>
+						<a href="networks-en.html">Networks Timeline</a>
+						<a href="computers-en.html">Computers Timeline</a>
+						<div class="page__topic-nav-group" role="group" aria-label="Web making timelines">
+							<span class="page__topic-nav-label">Web Making</span>
+							<a href="web-en.html" data-topic-role="parent">Web Making Hub</a>
+							<a href="web-structure-en.html" data-topic-role="child">Document Structure Timeline</a>
+							<a href="web-styling-en.html" data-topic-role="child">Styling Evolution Timeline</a>
+							<a href="web-interaction-en.html" data-topic-role="child">Browser Interaction Timeline</a>
+							<a href="web-tools-en.html" class="is-current" data-topic-role="child">Web Tools Timeline</a>
+						</div>
+						<a href="was-en.html">Web Server Timeline</a>
+						<a href="databases-en.html">Database Timeline</a>
+						<a href="web-tools.html">한국어</a>
+					</nav>
+				</div>
+				<nav class="page__nav" aria-label="Page sections">
+					<a href="#timeline">View Years</a>
+					<a href="#sources">Sources</a>
+					<div class="language-switch">
+						<label class="sr-only" for="language-select-web-tools">Language</label>
+						<select id="language-select-web-tools" data-language-switch>
+							<option value="web-tools.html" data-language-code="ko">한국어</option>
+							<option value="web-tools-en.html" data-language-code="en" selected>English</option>
+						</select>
+					</div>
+				</nav>
+			</header>
+
+			<main class="page__main" id="main" role="main">
+				<section class="timeline-hero" aria-labelledby="timeline-title">
+					<div class="timeline-hero__head">
+						<p class="hero__eyebrow">Tools Story for Makers</p>
+						<h1 class="timeline-hero__title" id="timeline-title">Tools that kept web teams shipping faster</h1>
+						<p class="timeline-hero__lede">
+							Visual editors, version control, module bundlers, cloud IDEs, and now AI copilots. Every step answered the same question: "How do we deploy the web faster and safer?" This timeline captures those leaps.
+						</p>
+						<p class="timeline-hero__lede">
+							Tap a card to see who built the tool, the barriers they broke, and the differences that builders on the ground actually felt.
+						</p>
+					</div>
+				</section>
+
+				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
+					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">Pick a year to open a nearby dialog so you can keep your place in the timeline.</p>
+
+					<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1990">1990s</p>
+							<h3 class="timeline-group__topic" id="topic-1990">Visual editing and version control begin</h3>
+							<p class="timeline-group__summary">WYSIWYG editors and hosted repositories helped teams move design and code forward together.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-dreamweaver">
+								<span class="timeline-event__year">1997</span>
+								<span class="timeline-event__label">Dreamweaver 1.0</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1999-cvs-hosting">
+								<span class="timeline-event__year">1999</span>
+								<span class="timeline-event__label">CVS hosting services</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2000">2000s</p>
+							<h3 class="timeline-group__topic" id="topic-2000">Distributed version control and shared platforms</h3>
+							<p class="timeline-group__summary">Git and GitHub turned distributed collaboration and open source workflows into everyday practice.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-git">
+								<span class="timeline-event__year">2005</span>
+								<span class="timeline-event__label">Git debuts</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2008-github">
+								<span class="timeline-event__year">2008</span>
+								<span class="timeline-event__label">GitHub launches</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2010">2010s</p>
+							<h3 class="timeline-group__topic" id="topic-2010">Frontend build systems and automation</h3>
+							<p class="timeline-group__summary">Task runners, bundlers, and deployment services made it easier to manage and ship ever-growing codebases.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2012-grunt">
+								<span class="timeline-event__year">2012</span>
+								<span class="timeline-event__label">Grunt 0.4</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-webpack">
+								<span class="timeline-event__year">2014</span>
+								<span class="timeline-event__label">Webpack 1.0</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2016-netlify">
+								<span class="timeline-event__year">2016</span>
+								<span class="timeline-event__label">Netlify CI/CD</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2020">2020s</p>
+							<h3 class="timeline-group__topic" id="topic-2020">Cloud IDEs and AI partners</h3>
+							<p class="timeline-group__summary">Teams opened full IDEs in the browser and invited AI copilots into production workflows.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2021-codespaces">
+								<span class="timeline-event__year">2021</span>
+								<span class="timeline-event__label">GitHub Codespaces GA</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-ai-assist">
+								<span class="timeline-event__year">2023</span>
+								<span class="timeline-event__label">AI coding copilots</span>
+							</button>
+						</div>
+					</section>
+				</section>
+
+				<section class="sources" id="sources" aria-labelledby="sources-title">
+					<div class="section__head">
+						<h2 id="sources-title">Go deeper</h2>
+						<p>Explore how teams manage version control, build pipelines, deployments, and AI collaboration across the modern web stack.</p>
+					</div>
+					<ul class="source-list">
+						<li><a href="https://helpx.adobe.com/dreamweaver/how-to/dreamweaver-first-website.html" target="_blank" rel="noopener">Adobe · Dreamweaver how-to</a></li>
+						<li><a href="https://git-scm.com/book/" target="_blank" rel="noopener">Pro Git Book</a></li>
+						<li><a href="https://webpack.js.org/concepts/" target="_blank" rel="noopener">Webpack · Concepts</a></li>
+						<li><a href="https://www.netlify.com/blog/" target="_blank" rel="noopener">Netlify · Engineering Blog</a></li>
+						<li><a href="https://docs.github.com/en/codespaces" target="_blank" rel="noopener">GitHub · Codespaces Docs</a></li>
+						<li><a href="https://learn.microsoft.com/azure/ai-services/openai/" target="_blank" rel="noopener">Microsoft Learn · AI Pair Programming</a></li>
+					</ul>
+				</section>
+			</main>
+
+			<footer class="page__footer" role="contentinfo">
+				<p>© 2025 ArcherLab · Stories on web making tools.</p>
+				<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
+			</footer>
+		</div>
+
+		<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
+			<div class="modal__overlay" data-modal-close></div>
+			<div class="modal__window" role="document" tabindex="-1">
+				<button class="modal__close" type="button" aria-label="Close dialog" data-modal-close>&times;</button>
+				<div class="modal__content"></div>
+			</div>
+		</div>
+
+		<template id="event-1997-dreamweaver">
+			<article class="event-detail" aria-labelledby="event-1997-dreamweaver-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1997</p>
+					<h2 id="event-1997-dreamweaver-title">Dreamweaver 1.0 makes WYSIWYG editing mainstream</h2>
+					<p class="event-detail__summary">Macromedia blurred the boundary between layout and code so designers and developers could work in the same canvas.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>In a creative studio, designer Min launched Dreamweaver and dragged imagery into place. HTML appeared instantly in a pane to the right. Developer June leaned over and said, "I can tweak this markup without waiting for an export."</p>
+						<p>The team cloned pages with templates and showed clients interactive mockups days sooner than before.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Dreamweaver combined visual editing with a code view so nondevelopers could participate in shipping websites. Later web IDEs borrowed the idea of keeping design and markup connected.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1999-cvs-hosting">
+			<article class="event-detail" aria-labelledby="event-1999-cvs-hosting-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1999</p>
+					<h2 id="event-1999-cvs-hosting-title">CVS hosting plants the seeds of remote collaboration</h2>
+					<p class="event-detail__summary">Services like SourceForge encouraged teams to store code centrally and share version history.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>An open-source crew created a repository on SourceForge and pulled code with CVS commands. Weekend patches landed on the central server, so Monday standups finally had a clear history to review together.</p>
+						<p>Maintenance agencies adopted CVS to show clients which files changed and when, building trust through transparent logs.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Hosted CVS made server-backed version control normal. Teams learned conflict resolution and code review habits that paved the way for Git-era workflows.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2005-git">
+			<article class="event-detail" aria-labelledby="event-2005-git-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2005</p>
+					<h2 id="event-2005-git-title">Git turns distributed version control into a daily habit</h2>
+					<p class="event-detail__summary">Linus Torvalds released Git so developers could experiment locally and sync with speed.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Linux maintainers tested Git and marveled at the speed. They could create branches and commits locally, then push to a shared origin when ready, no central gatekeeper needed.</p>
+						<p>Web agencies mirrored that habit: feature branches emerged for every experiment, and merges waited until client approval arrived.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Git stores snapshots instead of file diffs and embraces offline work. Fast branching and merging encouraged fearless experimentation and defined modern collaboration patterns.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2008-github">
+			<article class="event-detail" aria-labelledby="event-2008-github-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2008</p>
+					<h2 id="event-2008-github-title">GitHub brings social coding to the browser</h2>
+					<p class="event-detail__summary">Pull requests, issues, and wikis landed in one interface, accelerating both open source and in-house collaboration.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Early adopter Alex uploaded a side project to GitHub and invited a friend to review it through a pull request. Diff views appeared in the browser, and nobody needed to email patches around anymore.</p>
+						<p>Startups tracked tasks in issues, wrote handbooks in the wiki, and made shipping discipline a shared responsibility.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>GitHub wrapped Git workflows in a shared UI so reviews and documentation stayed close to the code. The blueprint inspired countless DevOps platforms that followed.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2012-grunt">
+			<article class="event-detail" aria-labelledby="event-2012-grunt-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2012</p>
+					<h2 id="event-2012-grunt-title">Grunt 0.4 ushers in scripted automation</h2>
+					<p class="event-detail__summary">Grunt popularized bundling build, lint, and optimization steps into repeatable scripts.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>A frontend squad wrote a Gruntfile to compile Sass and compress images in one command. Teammate Jun said, "Our deploy checklist just became a script."</p>
+						<p>Communities shared a flood of Grunt plugins, and automation pipelines became part of the default project scaffold.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Grunt invited teams to declare command-line tasks in configuration files. The pattern paved the way for Gulp, npm scripts, and today's CI pipelines.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2014-webpack">
+			<article class="event-detail" aria-labelledby="event-2014-webpack-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2014</p>
+					<h2 id="event-2014-webpack-title">Webpack 1.0 makes module bundling the norm</h2>
+					<p class="event-detail__summary">Webpack introduced dependency graphs, loaders, and code splitting so large SPAs stayed manageable.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>A startup wired Webpack into its release process, bundling JavaScript modules, styles, and images into one graph. Before launch, the team watched bundle analyzer charts shrink after adding code splitting.</p>
+						<p>Open source maintainers published loaders and plugins, and Webpack became the default build step for complex frontends.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Webpack parsed dependency graphs and supported dynamic imports, aligning with the need to ship efficient, modular applications. It set expectations for modern module systems.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2016-netlify">
+			<article class="event-detail" aria-labelledby="event-2016-netlify-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2016</p>
+					<h2 id="event-2016-netlify-title">Netlify unites build and deployment</h2>
+					<p class="event-detail__summary">Netlify wired Git-based CI/CD, CDN, and serverless features into one button-driven workflow.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>A content team connected a GitHub repo to Netlify, triggering preview deploys for every pull request. Marketing reviewers said, "I just click a link and see the new version."</p>
+						<p>Engineers shipped forms and edge functions without standing up custom servers, proving small teams could operate globally.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Netlify combined build pipelines, CDN edge delivery, and serverless glue, spreading JAMstack practices. Automated deploys became approachable for teams of any size.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2021-codespaces">
+			<article class="event-detail" aria-labelledby="event-2021-codespaces-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2021</p>
+					<h2 id="event-2021-codespaces-title">GitHub Codespaces brings full IDEs to the browser</h2>
+					<p class="event-detail__summary">General availability meant teams could onboard with a single click and code in familiar VS Code layouts remotely.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>New hires opened Codespaces with no laptop setup. Installs were ready, caches were warm, and work began within minutes. The lead engineer reported saving a full day per onboarding.</p>
+						<p>During pair programming, Live Share kept collaborators editing the same browser workspace, shrinking review cycles.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Codespaces delivers containerized environments on demand, simplifying onboarding and collaboration. Shared configs replaced manual machine setup.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2023-ai-assist">
+			<article class="event-detail" aria-labelledby="event-2023-ai-assist-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2023</p>
+					<h2 id="event-2023-ai-assist-title">AI coding copilots enter the delivery pipeline</h2>
+					<p class="event-detail__summary">AI-driven suggestions landed inside editors, speeding repetitive work and summarizing changes.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Teams installed AI extensions, described a function, and received inline code proposals. Junior developers said, "It drafted the test skeleton so I could focus on edge cases."</p>
+						<p>Later, AI summarized pull requests so senior reviewers spent more time on architecture and less on rote description.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>AI copilots blend natural language understanding with code generation, trimming repetitive tasks and reframing reviews. Web production teams now expect these assistants in their toolbox.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<button type="button" class="scroll-top" data-scroll-top aria-label="Scroll to top" hidden>↑</button>
+
+		<script src="assets/js/main.js" defer></script>
+	</body>
+</html>

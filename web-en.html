@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ArcherLab IT Story · Web Making Hub</title>
+		<meta name="description" content="Explore four companion timelines that explain how the web’s structure, styling, interaction, and tools evolved." />
+		<meta property="og:title" content="ArcherLab IT Story · Web Making Hub" />
+		<meta property="og:description" content="Follow the people and prototypes that shaped HTML structure, CSS design, interactive browsers, and the tooling that ties it together." />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+		<div class="page">
+			<header class="page__header" role="banner">
+				<div class="page__header-left">
+					<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
+						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
+						<span class="page__brand-label">ArcherLab Chronicle</span>
+					</a>
+					<nav class="page__topic-nav" aria-label="Switch topic">
+						<a href="index-en.html">Home Hub</a>
+						<a href="networks-en.html">Networks Timeline</a>
+						<a href="computers-en.html">Computers Timeline</a>
+						<div class="page__topic-nav-group" role="group" aria-label="Web making timelines">
+							<span class="page__topic-nav-label">Web Making</span>
+							<a href="web-en.html" class="is-current" data-topic-role="parent">Web Making Hub</a>
+							<a href="web-structure-en.html" data-topic-role="child">Document Structure Timeline</a>
+							<a href="web-styling-en.html" data-topic-role="child">Styling Evolution Timeline</a>
+							<a href="web-interaction-en.html" data-topic-role="child">Browser Interaction Timeline</a>
+							<a href="web-tools-en.html" data-topic-role="child">Web Tools Timeline</a>
+						</div>
+						<a href="was-en.html">Web Server Timeline</a>
+						<a href="databases-en.html">Database Timeline</a>
+						<a href="web.html">한국어</a>
+					</nav>
+				</div>
+				<nav class="page__nav" aria-label="Page sections">
+					<a href="#overview">Overview</a>
+					<a href="#series">Series</a>
+					<a href="#sources">Sources</a>
+					<div class="language-switch">
+						<label class="sr-only" for="language-select-web">Language</label>
+						<select id="language-select-web" data-language-switch>
+							<option value="web.html" data-language-code="ko">한국어</option>
+							<option value="web-en.html" data-language-code="en" selected>English</option>
+						</select>
+					</div>
+				</nav>
+			</header>
+
+			<main class="page__main" id="main" role="main">
+				<section class="timeline-hero" id="overview" aria-labelledby="timeline-title">
+					<div class="timeline-hero__head">
+						<p class="hero__eyebrow">Web Story for Makers</p>
+						<h1 class="timeline-hero__title" id="timeline-title">Four adventures in building the web—where do you want to start?</h1>
+						<p class="timeline-hero__lede">
+							From static documents to component systems, design tokens, Jamstack, and AI helpers, the craft of building for the web keeps expanding. This hub introduces four companion timelines—structure, styling, interaction, and tooling—so you can jump straight to the thread you need.
+						</p>
+						<p class="timeline-hero__lede">
+							Each series narrates the same loop—pain, need, fix—highlighting the people who noticed friction and the prototypes they shared. Follow the sequence and the intimidating jargon quickly turns into relatable stories.
+						</p>
+						<p class="timeline-hero__lede">
+							Skim the cards below for a quick orientation, then dive into the timeline that matches your current project. Every page offers modal stories with plain-language glossaries when the terminology ramps up.
+						</p>
+					</div>
+				</section>
+
+				<section class="home-topics" id="series" aria-labelledby="series-title">
+					<div class="section__head">
+						<h2 id="series-title">Four Web Making Timelines</h2>
+						<p>
+							Builders in each era chased different questions: How do we structure documents? How do we make screens inviting? How do we add rich interaction? How do we collaborate faster? These timelines trace how those questions intertwined.
+						</p>
+					</div>
+					<div class="home-topics__grid">
+						<article class="topic-card" aria-labelledby="topic-structure-title">
+							<h3 class="topic-card__title" id="topic-structure-title">Document Structure Timeline</h3>
+							<p class="topic-card__summary">From the first HTML tags to responsive layout systems and web components, track how we learned to give structure to meaning.</p>
+							<a class="topic-card__link" href="web-structure-en.html">Open timeline</a>
+						</article>
+						<article class="topic-card" aria-labelledby="topic-styling-title">
+							<h3 class="topic-card__title" id="topic-styling-title">Styling Evolution Timeline</h3>
+							<p class="topic-card__summary">CSS, Flexbox, Grid, design systems, and container queries—see how we kept refining the craft of readable, resilient layouts.</p>
+							<a class="topic-card__link" href="web-styling-en.html">Open timeline</a>
+						</article>
+						<article class="topic-card" aria-labelledby="topic-interaction-title">
+							<h3 class="topic-card__title" id="topic-interaction-title">Browser Interaction Timeline</h3>
+							<p class="topic-card__summary">JavaScript, Ajax, SPAs, Service Workers, WebAssembly, WebGPU—follow how the browser earned app-like superpowers.</p>
+							<a class="topic-card__link" href="web-interaction-en.html">Open timeline</a>
+						</article>
+						<article class="topic-card" aria-labelledby="topic-tools-title">
+							<h3 class="topic-card__title" id="topic-tools-title">Web Tools Timeline</h3>
+							<p class="topic-card__summary">From FTP clients and Dreamweaver to npm, bundlers, Vite, and AI copilots, explore how toolchains accelerated delivery.</p>
+							<a class="topic-card__link" href="web-tools-en.html">Open timeline</a>
+						</article>
+					</div>
+				</section>
+
+				<section class="story-outro" aria-labelledby="story-outro-title">
+					<div class="section__head">
+						<h2 id="story-outro-title">No discipline grows alone</h2>
+						<p>
+							Better structure empowered styling. Immersive interaction demanded smarter tools. Whenever you finish one timeline, another will point toward the next leap. Keep this hub bookmarked whenever you need a fresh perspective.
+						</p>
+					</div>
+				</section>
+
+				<section class="sources" id="sources" aria-labelledby="sources-title">
+					<div class="section__head">
+						<h2 id="sources-title">Further Reading</h2>
+						<p>Key archives and documentation that informed every timeline in this web making series.</p>
+					</div>
+					<ul class="source-list">
+						<li><a href="https://www.w3.org/History.html" target="_blank" rel="noopener">W3C · Web history timeline</a></li>
+						<li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+						<li><a href="https://web.dev/" target="_blank" rel="noopener">web.dev · Modern web guidance</a></li>
+						<li><a href="https://www.chromium.org/blink/" target="_blank" rel="noopener">Chromium Projects · Blink updates</a></li>
+					</ul>
+				</section>
+			</main>
+
+			<footer class="page__footer" role="contentinfo">
+				<p>© 2025 ArcherLab · Stories designed by ArcherLab.</p>
+				<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
+			</footer>
+		</div>
+
+		<button type="button" class="scroll-top" data-scroll-top aria-label="Back to top" hidden>↑</button>
+
+		<script src="assets/js/main.js" defer></script>
+	</body>
+</html>

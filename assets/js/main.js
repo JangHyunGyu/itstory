@@ -1,5 +1,105 @@
 (() => {
 	const navLinks = Array.from(document.querySelectorAll('.page__nav a'));
+	const languageSelects = Array.from(document.querySelectorAll('[data-language-switch]'));
+	const LANGUAGE_STORAGE_KEY = 'archerlab:language';
+
+	const normalizeLanguage = (value) => {
+		if (!value || typeof value !== 'string') {
+			return null;
+		}
+		const lowered = value.toLowerCase();
+		if (lowered.startsWith('ko')) {
+			return 'ko';
+		}
+		if (lowered.startsWith('en')) {
+			return 'en';
+		}
+		return 'en';
+	};
+
+	const getStoredLanguage = () => {
+		try {
+			return localStorage.getItem(LANGUAGE_STORAGE_KEY);
+		} catch (error) {
+			return null;
+		}
+	};
+
+	const setStoredLanguage = (code) => {
+		if (!code) {
+			return;
+		}
+		try {
+			localStorage.setItem(LANGUAGE_STORAGE_KEY, code);
+		} catch (error) {
+			// 저장이 불가능한 환경에서는 조용히 무시합니다.
+		}
+	};
+
+	const detectBrowserLanguage = () => {
+		const candidate = Array.isArray(navigator.languages) && navigator.languages.length
+			? navigator.languages[0]
+			: navigator.language || navigator.userLanguage || '';
+		return normalizeLanguage(candidate);
+	};
+
+	const findOptionByLanguage = (select, languageCode) => {
+		if (!select || !languageCode) {
+			return null;
+		}
+		return (
+			Array.from(select.options || []).find((option) =>
+				normalizeLanguage(option.dataset?.languageCode || option.value) === languageCode
+			) || null
+		);
+	};
+
+	const currentDocumentLanguage = normalizeLanguage(document.documentElement?.lang || '');
+	const storedLanguage = normalizeLanguage(getStoredLanguage());
+	const browserLanguage = detectBrowserLanguage();
+	const preferredLanguage = storedLanguage || browserLanguage;
+	const shouldAttemptRedirect =
+		!storedLanguage && preferredLanguage && currentDocumentLanguage && preferredLanguage !== currentDocumentLanguage;
+
+	languageSelects.forEach((select) => {
+		const optionForCurrent = findOptionByLanguage(select, currentDocumentLanguage);
+		if (optionForCurrent) {
+			select.value = optionForCurrent.value;
+		}
+	});
+
+	if (shouldAttemptRedirect) {
+		const redirectSelect = languageSelects[0] || null;
+		const redirectOption = findOptionByLanguage(redirectSelect, preferredLanguage);
+		if (redirectOption) {
+			setStoredLanguage(preferredLanguage);
+			window.location.replace(redirectOption.value);
+			return;
+		}
+	}
+
+	if (!storedLanguage && currentDocumentLanguage) {
+		setStoredLanguage(currentDocumentLanguage);
+	}
+
+	languageSelects.forEach((select) => {
+		select.addEventListener('change', (event) => {
+			const target = event.target;
+			const destination = target?.value;
+			const selectedOption = target?.selectedOptions?.[0] || null;
+			const selectedLanguageCode = normalizeLanguage(
+				selectedOption?.dataset?.languageCode || selectedOption?.value || ''
+			);
+			if (selectedLanguageCode) {
+				setStoredLanguage(selectedLanguageCode);
+			}
+			if (!destination) {
+				return;
+			}
+			window.location.href = destination;
+		});
+	});
+
 	const sectionMap = new Map();
 
 	const setActiveNav = (link) => {

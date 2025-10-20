@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ArcherLab IT Story · Web Document Structure Timeline</title>
+		<meta name="description" content="Trace how RUNOFF, SGML, HTML5, and design systems taught us to structure content with meaning." />
+		<meta property="og:title" content="ArcherLab IT Story · Web Structure Timeline" />
+		<meta property="og:description" content="Follow the builders who kept asking how to describe documents so people and machines understand them." />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+		<div class="page">
+			<header class="page__header" role="banner">
+				<div class="page__header-left">
+					<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
+						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
+						<span class="page__brand-label">ArcherLab Chronicle</span>
+					</a>
+					<nav class="page__topic-nav" aria-label="Switch topic">
+						<a href="index-en.html">Home Hub</a>
+						<a href="networks-en.html">Networks Timeline</a>
+						<a href="computers-en.html">Computers Timeline</a>
+						<div class="page__topic-nav-group" role="group" aria-label="Web making timelines">
+							<span class="page__topic-nav-label">Web Making</span>
+							<a href="web-en.html" data-topic-role="parent">Web Making Hub</a>
+							<a href="web-structure-en.html" class="is-current" data-topic-role="child">Document Structure Timeline</a>
+							<a href="web-styling-en.html" data-topic-role="child">Styling Evolution Timeline</a>
+							<a href="web-interaction-en.html" data-topic-role="child">Browser Interaction Timeline</a>
+							<a href="web-tools-en.html" data-topic-role="child">Web Tools Timeline</a>
+						</div>
+						<a href="was-en.html">Web Server Timeline</a>
+						<a href="databases-en.html">Database Timeline</a>
+						<a href="web-structure.html">한국어</a>
+					</nav>
+				</div>
+				<nav class="page__nav" aria-label="Page sections">
+					<a href="#timeline">View Years</a>
+					<a href="#sources">Sources</a>
+					<div class="language-switch">
+						<label class="sr-only" for="language-select-web-structure">Language</label>
+						<select id="language-select-web-structure" data-language-switch>
+							<option value="web-structure.html" data-language-code="ko">한국어</option>
+							<option value="web-structure-en.html" data-language-code="en" selected>English</option>
+						</select>
+					</div>
+				</nav>
+			</header>
+
+			<main class="page__main" id="main" role="main">
+				<section class="timeline-hero" aria-labelledby="timeline-title">
+					<div class="timeline-hero__head">
+						<p class="hero__eyebrow">Structure Story for Makers</p>
+						<h1 class="timeline-hero__title" id="timeline-title">The long conversation about tags, meaning, and reusable document structure</h1>
+						<p class="timeline-hero__lede">
+							From mainframe line printers to custom elements and public design systems, teams kept asking the same thing: “How do we describe this document so humans and software read it well?” This timeline captures those moments.
+						</p>
+						<p class="timeline-hero__lede">
+							Tap any year to open a quick story—who raised the problem, how they solved it, and why later builders kept the pattern. Jargon appears alongside friendly explanations so you can stay in the flow.
+						</p>
+					</div>
+				</section>
+
+				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
+					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">Selecting a year opens a dialog close to the button so you can keep your reading position.</p>
+
+					<section class="timeline-group" aria-labelledby="decade-1960 topic-1960">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1960">1960s</p>
+							<h3 class="timeline-group__topic" id="topic-1960">Mainframes learn to paginate</h3>
+							<p class="timeline-group__summary">Researchers taught machines to mark sections so printers could format reports automatically. Structure became a programming problem.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1967-runoff">
+								<span class="timeline-event__year">1967</span>
+								<span class="timeline-event__label">RUNOFF Text Formatter</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1969-gml">
+								<span class="timeline-event__year">1969</span>
+								<span class="timeline-event__label">IBM GML Trial</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1970 topic-1970">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1970">1970s</p>
+							<h3 class="timeline-group__topic" id="topic-1970">Toward SGML standards</h3>
+							<p class="timeline-group__summary">Government archives demanded shared rules for tagging, pushing academics to draft standard generalized markup language.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1973-scribe">
+								<span class="timeline-event__year">1973</span>
+								<span class="timeline-event__label">Scribe Markup Language</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1978-sgml-draft">
+								<span class="timeline-event__year">1978</span>
+								<span class="timeline-event__label">ISO SGML Draft</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1980 topic-1980">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1980">1980s</p>
+							<h3 class="timeline-group__topic" id="topic-1980">Standards meet hypertext</h3>
+							<p class="timeline-group__summary">SGML became an international standard just as CERN researchers drafted hypertext notes that evolved into HTML.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1986-sgml">
+								<span class="timeline-event__year">1986</span>
+								<span class="timeline-event__label">ISO 8879:1986</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1989-html-memo">
+								<span class="timeline-event__year">1989</span>
+								<span class="timeline-event__label">HTML Concept Memo</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1990">1990s</p>
+							<h3 class="timeline-group__topic" id="topic-1990">HTML and the DOM find order</h3>
+							<p class="timeline-group__summary">IETF and W3C teams cataloged elements and scripting hooks so browsers and editors could treat documents consistently.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1995-html2">
+								<span class="timeline-event__year">1995</span>
+								<span class="timeline-event__label">HTML 2.0 RFC</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1998-dom1">
+								<span class="timeline-event__year">1998</span>
+								<span class="timeline-event__label">DOM Level 1</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2000">2000s</p>
+							<h3 class="timeline-group__topic" id="topic-2000">Richer semantics for web apps</h3>
+							<p class="timeline-group__summary">Bottom-up communities and new working groups extended HTML to describe data, feeds, and application state.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2004-whatwg">
+								<span class="timeline-event__year">2004</span>
+								<span class="timeline-event__label">WHATWG Forms</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-microformats">
+								<span class="timeline-event__year">2005</span>
+								<span class="timeline-event__label">Microformats Community</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2010">2010s</p>
+							<h3 class="timeline-group__topic" id="topic-2010">HTML5 and accessibility patterns</h3>
+							<p class="timeline-group__summary">The HTML standard stabilized while accessibility authorship guides ensured structure and assistive tech worked hand in hand.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-html5">
+								<span class="timeline-event__year">2014</span>
+								<span class="timeline-event__label">HTML5 Recommendation</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2017-aria11">
+								<span class="timeline-event__year">2017</span>
+								<span class="timeline-event__label">ARIA 1.1 Patterns</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2020">2020s</p>
+							<h3 class="timeline-group__topic" id="topic-2020">Components and design systems</h3>
+							<p class="timeline-group__summary">Custom elements, design tokens, and reference libraries made structural choices repeatable across products.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2020-custom-elements">
+								<span class="timeline-event__year">2020</span>
+								<span class="timeline-event__label">Custom Elements v1</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2022-design-systems">
+								<span class="timeline-event__year">2022</span>
+								<span class="timeline-event__label">Design System Guides</span>
+							</button>
+						</div>
+					</section>
+				</section>
+
+				<section class="sources" id="sources" aria-labelledby="sources-title">
+					<div class="section__head">
+						<h2 id="sources-title">Further Reading</h2>
+						<p>Primary specifications and field notes that shaped SGML, HTML, and accessibility best practices.</p>
+					</div>
+					<ul class="source-list">
+						<li><a href="https://www.iso.org/standard/16387.html" target="_blank" rel="noopener">ISO · ISO 8879:1986 SGML</a></li>
+						<li><a href="https://www.w3.org/MarkUp/html-spec/" target="_blank" rel="noopener">W3C · HTML 2.0 Specification</a></li>
+						<li><a href="https://dom.spec.whatwg.org/" target="_blank" rel="noopener">WHATWG · DOM Living Standard</a></li>
+						<li><a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener">WHATWG · HTML Standard</a></li>
+						<li><a href="https://www.w3.org/WAI/ARIA/apg/" target="_blank" rel="noopener">W3C · WAI-ARIA Authoring Practices</a></li>
+						<li><a href="https://web.dev/design-systems/" target="_blank" rel="noopener">web.dev · Design Systems Guide</a></li>
+					</ul>
+				</section>
+			</main>
+
+			<footer class="page__footer" role="contentinfo">
+				<p>© 2025 ArcherLab · Stories on web document structure.</p>
+				<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
+			</footer>
+		</div>
+
+		<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
+			<div class="modal__overlay" data-modal-close></div>
+			<div class="modal__window" role="document" tabindex="-1">
+				<button class="modal__close" type="button" aria-label="Close dialog" data-modal-close>&times;</button>
+				<div class="modal__content"></div>
+			</div>
+		</div>
+
+		<template id="event-1967-runoff">
+			<article class="event-detail" aria-labelledby="event-1967-runoff-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1967</p>
+					<h2 id="event-1967-runoff-title">RUNOFF Text Formatter</h2>
+					<p class="event-detail__summary">MIT researcher Jerry Saltzer scripted commands like .he and .fo so computers could paginate reports reliably.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Graduate students hoisted punch cards into the mainframe queue, anxious for perfectly formatted thesis drafts. RUNOFF let them mark headings, footers, and spacing before printing. When the output matched their layout plan, they realized structure could be declared with simple inline tokens.</p>
+						<p>RUNOFF’s ideas spread quickly: early email and Unix man pages borrowed the dot-command approach, proving that structure and presentation could be automated.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>RUNOFF inspired a family of markup systems (troff, TeX) that separated document intent from printer commands. It set the stage for generalized markup languages.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1969-gml">
+			<article class="event-detail" aria-labelledby="event-1969-gml-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1969</p>
+					<h2 id="event-1969-gml-title">IBM GML Trial</h2>
+					<p class="event-detail__summary">Charles Goldfarb, Ed Mosher, and Ray Lorie built GML so legal teams could tag contracts consistently across mainframes.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>IBM’s legal department struggled to reuse templates. The trio created macros to label sections like <legalid> and let secretaries reuse clauses safely. After pilots succeeded, IBM shared the approach with government agencies to ease cross-system document exchange.</p>
+						<p>GML proved that descriptive tags, not printer codes, were the key to portability—laying groundwork for SGML.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>GML introduced generalized markup: tags described meaning, not appearance. It influenced the ISO committee that drafted SGML and, by extension, HTML.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1973-scribe">
+			<article class="event-detail" aria-labelledby="event-1973-scribe-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1973</p>
+					<h2 id="event-1973-scribe-title">Scribe Markup Language</h2>
+					<p class="event-detail__summary">Brian Reid’s dissertation introduced a portable document system that separated content, style, and processing rules.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>At Carnegie Mellon, Reid built Scribe so academics could share papers without rewriting macros for each printer. Authors defined structure with tags, then compiled to multiple formats. When the thesis committee saw consistent layouts across devices, they applauded the automation.</p>
+						<p>Scribe influenced thinking around extensible markup and licensing for document processors.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Scribe’s context-sensitive macros foreshadowed templates and style sheets. SGML designers cited it when arguing for generalized tags and document type definitions.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1978-sgml-draft">
+			<article class="event-detail" aria-labelledby="event-1978-sgml-draft-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1978</p>
+					<h2 id="event-1978-sgml-draft-title">ISO SGML Draft</h2>
+					<p class="event-detail__summary">International committees circulated the first SGML draft, inviting industries to describe documents with shared grammars.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Representatives from publishing, aerospace, and government spent weeks merging requirements. The draft introduced DTDs—formal blueprints for documents. Test implementations confirmed that conforming parsers could enforce structure automatically.</p>
+						<p>The collaborative drafting culture encouraged open discussion of markup semantics, later mirrored by the W3C.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>SGML’s draft cemented the idea of validating structure before rendering. It established the terminology (entities, elements, attributes) carried into HTML and XML.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1986-sgml">
+			<article class="event-detail" aria-labelledby="event-1986-sgml-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1986</p>
+					<h2 id="event-1986-sgml-title">ISO 8879:1986 SGML</h2>
+					<p class="event-detail__summary">SGML became an official international standard, giving organizations a stable foundation for structured authoring.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>When ISO ratified SGML, vendors hurried to ship compliant editors and parsers. Documentation teams defined DTDs for aircraft manuals and legal codes. Validation caught missing sections before printing, saving costly rework.</p>
+						<p>The standard legitimized markup as an enterprise discipline, not merely an academic experiment.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>SGML’s requirement for explicit document types influenced HTML’s element definitions and XML’s strict syntax rules.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1989-html-memo">
+			<article class="event-detail" aria-labelledby="event-1989-html-memo-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1989</p>
+					<h2 id="event-1989-html-memo-title">HTML Concept Memo</h2>
+					<p class="event-detail__summary">Tim Berners-Lee’s memo merged hypertext links with SGML tagging to organize CERN’s research notes.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Berners-Lee sketched tags like &lt;title&gt; and &lt;link&gt; on a notepad, imagining physicists navigating documents by clicking references. Colleagues quickly prototyped parsers, and the idea evolved into HTML and URLs.</p>
+						<p>The memo reframed structure as an interactive map, not just print layout.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>By grounding HTML in SGML, Berners-Lee ensured compatibility with existing parsers while enabling hypertext-specific semantics.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1995-html2">
+			<article class="event-detail" aria-labelledby="event-1995-html2-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1995</p>
+					<h2 id="event-1995-html2-title">HTML 2.0 RFC</h2>
+					<p class="event-detail__summary">HTML 2.0 collected widespread tags into a single specification so browser makers would stop improvising.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>IETF engineers compiled existing practices from CERN and NCSA browsers and published RFC 1866. Developers finally had authoritative definitions for forms, headings, and lists. Browser vendors aligned their parsers, reducing cross-compatibility bugs.</p>
+						<p>With stable tags, content management systems emerged to output compliant HTML automatically.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The RFC formalized SGML DOCTYPE declarations and MIME types, paving the way for scripting and styling layers.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1998-dom1">
+			<article class="event-detail" aria-labelledby="event-1998-dom1-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1998</p>
+					<h2 id="event-1998-dom1-title">DOM Level 1</h2>
+					<p class="event-detail__summary">W3C released DOM Level 1 so scripts could traverse and manipulate document structure consistently.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Before the DOM, each browser exposed different APIs. The new standard defined nodes, attributes, and methods like getElementById. Developers debugged less and shipped more interactive pages. Tools like Dreamweaver and early static site generators used the DOM for WYSIWYG editing.</p>
+						<p>The DOM helped bridge authorship and runtime, making structure programmable.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>DOM Level 1 codified the tree representation underpinning modern frameworks and accessibility tooling.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2004-whatwg">
+			<article class="event-detail" aria-labelledby="event-2004-whatwg-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2004</p>
+					<h2 id="event-2004-whatwg-title">WHATWG Forms</h2>
+					<p class="event-detail__summary">Browser vendors launched WHATWG to evolve HTML beyond documents toward rich applications.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Representatives from Apple, Mozilla, and Opera met at the Web Hypertext Application Technology Working Group. They drafted Web Forms 2.0, canvas, and new semantic elements. Feedback loops through public mailing lists kept the spec aligned with real-world needs.</p>
+						<p>WHATWG’s living standard model ensured structure could adapt without waiting years for formal ratification.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The group’s work led directly to HTML5’s richer element set, integrating multimedia and offline capabilities into the document model.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2005-microformats">
+			<article class="event-detail" aria-labelledby="event-2005-microformats-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2005</p>
+					<h2 id="event-2005-microformats-title">Microformats Community</h2>
+					<p class="event-detail__summary">Designers and developers published small, reusable vocabularies like hCard and hCalendar for richer metadata.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Meetups in San Francisco and London brainstormed structured class names that search engines could parse. Bloggers annotated contact info and events, spawning mashups and feed readers that understood the metadata. The movement proved that semantics could evolve from the grassroots.</p>
+						<p>Microformats influenced HTML5 additions such as microdata, schema.org, and ARIA roles.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The approach championed progressive enhancement: HTML stayed valid while offering machine-readable hints—an idea reused by JSON-LD and structured data today.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2014-html5">
+			<article class="event-detail" aria-labelledby="event-2014-html5-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2014</p>
+					<h2 id="event-2014-html5-title">HTML5 Recommendation</h2>
+					<p class="event-detail__summary">After a decade of drafts, W3C published HTML5 as a Recommendation, solidifying new semantic elements and APIs.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>The release introduced &lt;article&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;video&gt;, and a formal parsing algorithm. Front-end teams celebrated: accessible landmarks and multimedia no longer required plug-ins. Books, courses, and validators taught the new structure quickly.</p>
+						<p>HTML5 marked the moment the web officially moved beyond documents into app territory.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The spec clarified error handling so browsers behaved predictably even with imperfect markup, empowering tooling like linters and formatters.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2017-aria11">
+			<article class="event-detail" aria-labelledby="event-2017-aria11-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2017</p>
+					<h2 id="event-2017-aria11-title">ARIA 1.1 Authoring Practices</h2>
+					<p class="event-detail__summary">Accessibility experts published detailed patterns for menus, dialogs, and complex widgets to keep structure inclusive.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>The WAI community documented keyboard behavior, roles, and states for interactive components. Designers mapped the guidance into design systems, ensuring assistive technologies announced content correctly. Workshops showed developers how to test with screen readers.</p>
+						<p>Structure and accessibility became inseparable parts of the conversation.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>ARIA 1.1 patterns reinforced semantic HTML and offered fallbacks when custom widgets were unavoidable, setting expectations for modern component libraries.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2020-custom-elements">
+			<article class="event-detail" aria-labelledby="event-2020-custom-elements-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2020</p>
+					<h2 id="event-2020-custom-elements-title">Custom Elements v1</h2>
+					<p class="event-detail__summary">Browsers converged on the Custom Elements v1 API, letting teams ship reusable HTML tags backed by JavaScript classes.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Framework authors and standards editors collaborated to stabilize lifecycle callbacks and shadow DOM behavior. Companies packaged button, card, and chart elements for use across frameworks. Design system teams rejoiced at finally sharing structure without rewriting per stack.</p>
+						<p>Custom elements nudged architecture toward encapsulated, semantic building blocks.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The v1 spec defined connected/disconnected callbacks, template slots, and attribute reflection—features embraced by modern component authoring tools.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2022-design-systems">
+			<article class="event-detail" aria-labelledby="event-2022-design-systems-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2022</p>
+					<h2 id="event-2022-design-systems-title">Design System Guides</h2>
+					<p class="event-detail__summary">Public playbooks from teams like Shopify, IBM, and GOV.UK showed how to align structure, tokens, and accessibility at scale.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Design ops teams published documentation covering component anatomy, semantics, and ARIA usage. Community contributors filed issues pointing out edge cases, helping the guides mature. Organizations adopted the recipes to keep cross-platform products structurally consistent.</p>
+						<p>Design systems turned structural decisions into reusable policy, not tribal knowledge.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Guides emphasized design tokens, semantic naming, and documentation tooling—principles vital for multi-brand, multi-device ecosystems.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<button type="button" class="scroll-top" data-scroll-top aria-label="Back to top" hidden>↑</button>
+
+		<script src="assets/js/main.js" defer></script>
+	</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ArcherLab IT Story · Web Interaction Timeline</title>
+		<meta name="description" content="See how JavaScript, Ajax, React, Service Worker, WebAssembly, and WebGPU turned the web into an interactive app platform." />
+		<meta property="og:title" content="ArcherLab IT Story · Web Interaction Timeline" />
+		<meta property="og:description" content="Follow the breakthroughs that moved the browser from document viewer to rich, real-time runtime." />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+		<div class="page">
+			<header class="page__header" role="banner">
+				<div class="page__header-left">
+					<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
+						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
+						<span class="page__brand-label">ArcherLab Chronicle</span>
+					</a>
+					<nav class="page__topic-nav" aria-label="Switch topic">
+						<a href="index-en.html">Home Hub</a>
+						<a href="networks-en.html">Networks Timeline</a>
+						<a href="computers-en.html">Computers Timeline</a>
+						<div class="page__topic-nav-group" role="group" aria-label="Web making timelines">
+							<span class="page__topic-nav-label">Web Making</span>
+							<a href="web-en.html" data-topic-role="parent">Web Making Hub</a>
+							<a href="web-structure-en.html" data-topic-role="child">Document Structure Timeline</a>
+							<a href="web-styling-en.html" data-topic-role="child">Styling Evolution Timeline</a>
+							<a href="web-interaction-en.html" class="is-current" data-topic-role="child">Browser Interaction Timeline</a>
+							<a href="web-tools-en.html" data-topic-role="child">Web Tools Timeline</a>
+						</div>
+						<a href="was-en.html">Web Server Timeline</a>
+						<a href="databases-en.html">Database Timeline</a>
+						<a href="web-interaction.html">한국어</a>
+					</nav>
+				</div>
+				<nav class="page__nav" aria-label="Page sections">
+					<a href="#timeline">View Years</a>
+					<a href="#sources">Sources</a>
+					<div class="language-switch">
+						<label class="sr-only" for="language-select-web-interaction">Language</label>
+						<select id="language-select-web-interaction" data-language-switch>
+							<option value="web-interaction.html" data-language-code="ko">한국어</option>
+							<option value="web-interaction-en.html" data-language-code="en" selected>English</option>
+						</select>
+					</div>
+				</nav>
+			</header>
+
+			<main class="page__main" id="main" role="main">
+				<section class="timeline-hero" aria-labelledby="timeline-title">
+					<div class="timeline-hero__head">
+						<p class="hero__eyebrow">Interaction Story for Makers</p>
+						<h1 class="timeline-hero__title" id="timeline-title">How the browser learned to behave like a living app</h1>
+						<p class="timeline-hero__lede">
+							Scripting experiments, Ajax buzz, component frameworks, offline-first tooling, and GPU-grade APIs—each milestone asked the same question: “What else can run directly in the browser?” This timeline shares the answers.
+						</p>
+						<p class="timeline-hero__lede">
+							Tap a year to open a concise story with context and approachable notes. You will meet the teams who kept stretching what the web platform could do.
+						</p>
+					</div>
+				</section>
+
+				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
+					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">Selecting a year opens a dialog in place so you can keep your reading position.</p>
+
+					<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1990">1990s</p>
+							<h3 class="timeline-group__topic" id="topic-1990">Scripting and async requests</h3>
+							<p class="timeline-group__summary">JavaScript arrived inside the browser, and XMLHttpRequest quietly taught pages to refresh data without a full reload.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1995-javascript">
+								<span class="timeline-event__year">1995</span>
+								<span class="timeline-event__label">JavaScript Debuts</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1999-xmlhttprequest">
+								<span class="timeline-event__year">1999</span>
+								<span class="timeline-event__label">XMLHttpRequest Adopted</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2000">2000s</p>
+							<h3 class="timeline-group__topic" id="topic-2000">Ajax and JavaScript everywhere</h3>
+							<p class="timeline-group__summary">“Ajax” gave asynchronous techniques a name, and Node.js extended JavaScript to the server.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-ajax">
+								<span class="timeline-event__year">2005</span>
+								<span class="timeline-event__label">Ajax Essay</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2009-nodejs">
+								<span class="timeline-event__year">2009</span>
+								<span class="timeline-event__label">Node.js Launch</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2010">2010s</p>
+							<h3 class="timeline-group__topic" id="topic-2010">Components and offline power</h3>
+							<p class="timeline-group__summary">React popularized component-based UI, while Service Worker unlocked offline caching and push notifications.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2013-react">
+								<span class="timeline-event__year">2013</span>
+								<span class="timeline-event__label">React Open-Sourced</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-service-worker">
+								<span class="timeline-event__year">2014</span>
+								<span class="timeline-event__label">Service Worker Draft</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2020">2020s</p>
+							<h3 class="timeline-group__topic" id="topic-2020">High-performance web and real-time collaboration</h3>
+							<p class="timeline-group__summary">WebAssembly matured, WebGPU exposed the graphics pipeline, and collaboration APIs made the browser feel native.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2020-wasm">
+								<span class="timeline-event__year">2020</span>
+								<span class="timeline-event__label">WebAssembly 1.0</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-webgpu">
+								<span class="timeline-event__year">2023</span>
+								<span class="timeline-event__label">WebGPU Stable Release</span>
+							</button>
+						</div>
+					</section>
+				</section>
+
+				<section class="sources" id="sources" aria-labelledby="sources-title">
+					<div class="section__head">
+						<h2 id="sources-title">Further Reading</h2>
+						<p>Specifications, essays, and release posts that mark the browser’s journey from simple scripts to GPU-accelerated apps.</p>
+					</div>
+					<ul class="source-list">
+						<li><a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank" rel="noopener">MDN · JavaScript Guide</a></li>
+						<li><a href="https://ajaxpatterns.org/" target="_blank" rel="noopener">Ajax Patterns</a></li>
+						<li><a href="https://react.dev/blog/2013/07/17/react-v0-3-0" target="_blank" rel="noopener">React Team Blog</a></li>
+						<li><a href="https://w3c.github.io/ServiceWorker/" target="_blank" rel="noopener">W3C · Service Worker</a></li>
+						<li><a href="https://webassembly.org/roadmap/" target="_blank" rel="noopener">WebAssembly.org · Roadmap</a></li>
+						<li><a href="https://developer.chrome.com/docs/web-platform/webgpu" target="_blank" rel="noopener">Chrome Developers · WebGPU</a></li>
+					</ul>
+				</section>
+			</main>
+
+			<footer class="page__footer" role="contentinfo">
+				<p>© 2025 ArcherLab · Stories on browser interaction.</p>
+				<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
+			</footer>
+		</div>
+
+		<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
+			<div class="modal__overlay" data-modal-close></div>
+			<div class="modal__window" role="document" tabindex="-1">
+				<button class="modal__close" type="button" aria-label="Close dialog" data-modal-close>&times;</button>
+				<div class="modal__content"></div>
+			</div>
+		</div>
+
+		<template id="event-1995-javascript">
+			<article class="event-detail" aria-labelledby="event-1995-javascript-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1995</p>
+					<h2 id="event-1995-javascript-title">JavaScript Debuts in Navigator</h2>
+					<p class="event-detail__summary">Brendan Eich prototyped a scripting language in 10 days so web authors could add logic directly in the browser.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>During internal demos, teammates clicked a button and saw an alert without contacting the server. Marketers promised dynamic “LiveScript” features, and soon forms validated instantly, thrilling webmasters who were tired of round trips.</p>
+						<p>The language adopted the JavaScript name and shipped with Navigator 2.0, inspiring a wave of interactive websites.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>JavaScript introduced the event loop, dynamic typing, and DOM scripting—capabilities that defined the browser as an application runtime.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1999-xmlhttprequest">
+			<article class="event-detail" aria-labelledby="event-1999-xmlhttprequest-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1999</p>
+					<h2 id="event-1999-xmlhttprequest-title">XMLHttpRequest Adopted</h2>
+					<p class="event-detail__summary">Originally an IE ActiveX control, XMLHttpRequest let web apps fetch data asynchronously and update views in place.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Outlook Web Access used the feature so users could open mail quickly without reloading. Developers reverse-engineered the API, and Mozilla plus Safari added compatible implementations, pushing it toward standardization.</p>
+						<p>Suddenly dashboards, maps, and search suggestions felt responsive without page refreshes.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>XMLHttpRequest introduced async callbacks and laid the groundwork for Fetch, Promises, and modern SPA data flows.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2005-ajax">
+			<article class="event-detail" aria-labelledby="event-2005-ajax-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2005</p>
+					<h2 id="event-2005-ajax-title">Ajax Essay Coins the Term</h2>
+					<p class="event-detail__summary">Jesse James Garrett’s article branded a set of techniques—JavaScript, XML, JSON, XHR—as “Ajax,” helping executives understand a new UX pattern.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Product teams printed the essay and pitched Gmail-style interactivity to stakeholders. Meetups sprang up to share best practices for partial page updates. The label “Ajax” gave developers language to request budget for richer front ends.</p>
+						<p>Frameworks like Prototype, Dojo, and jQuery soon packaged Ajax utilities for mainstream use.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Naming the pattern legitimized asynchronous web apps, accelerating the shift toward single-page application architecture.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2009-nodejs">
+			<article class="event-detail" aria-labelledby="event-2009-nodejs-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2009</p>
+					<h2 id="event-2009-nodejs-title">Node.js Launch</h2>
+					<p class="event-detail__summary">Ryan Dahl introduced Node.js, bringing JavaScript’s event loop to the server for real-time apps.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>At JSConf EU, Dahl’s live demo streamed file changes to the browser via WebSockets. Developers cheered at the ability to use one language across client and server, jump-starting an ecosystem of npm packages.</p>
+						<p>Companies adopted Node for chat, data streaming, and build tooling, cementing JavaScript’s full-stack role.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Node popularized non-blocking I/O patterns and birthed the package ecosystem that fuels today’s front-end tooling.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2013-react">
+			<article class="event-detail" aria-labelledby="event-2013-react-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2013</p>
+					<h2 id="event-2013-react-title">React Open-Sourced</h2>
+					<p class="event-detail__summary">Facebook released React, introducing a declarative component model and virtual DOM diffing.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Initially controversial, React’s JSX demos at JSConf US showed how UI updates could be predictable. Teams rapidly built single-page apps with reusable components and improved developer tooling.</p>
+						<p>The component mindset spread to other frameworks, influencing Angular, Vue, and design systems.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>React normalized unidirectional data flow, state management patterns, and server rendering strategies that define modern web app architecture.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2014-service-worker">
+			<article class="event-detail" aria-labelledby="event-2014-service-worker-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2014</p>
+					<h2 id="event-2014-service-worker-title">Service Worker Draft</h2>
+					<p class="event-detail__summary">Google and Mozilla engineers published the first Service Worker draft, giving web apps controllable offline caching and push.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Developers prototyped offline-first to-do apps and background sync. Standards discussions focused on security and lifecycle guarantees. By the time PWA guidance launched, teams were confident the browser could deliver app-like reliability.</p>
+						<p>Service Worker became the heart of progressive web apps, enabling installability and push notifications.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Fetch interception and programmable caches redefined the web as a capable offline platform, influencing edge and worker-based architectures.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2020-wasm">
+			<article class="event-detail" aria-labelledby="event-2020-wasm-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2020</p>
+					<h2 id="event-2020-wasm-title">WebAssembly 1.0</h2>
+					<p class="event-detail__summary">Browser vendors agreed on WebAssembly 1.0, letting compiled languages run with near-native speed on the web.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Game studios, CAD tools, and data science projects ported code to WebAssembly, noting predictable performance. Toolchains like Emscripten and Rust targets matured, expanding the developer base.</p>
+						<p>The milestone signaled that the browser could host compute-heavy workloads once reserved for native apps.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>WebAssembly introduced a secure binary format, linear memory, and streaming compilation—features now used in serverless runtimes and edge workers.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2023-webgpu">
+			<article class="event-detail" aria-labelledby="event-2023-webgpu-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2023</p>
+					<h2 id="event-2023-webgpu-title">WebGPU Stable Release</h2>
+					<p class="event-detail__summary">Chrome shipped WebGPU, granting web apps low-level access to modern graphics pipelines for 3D, ML, and simulation.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Developers ported compute shaders and real-time rendering engines, demonstrating browser-based ML training and immersive experiences. Mozilla and Apple followed with implementations, confirming cross-browser viability.</p>
+						<p>WebGPU narrowed the gap between native and web, especially for creative and scientific tools.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>WebGPU’s explicit API, bind groups, and compute passes open doors for high-performance workloads, complementing WebAssembly and WebRTC.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<button type="button" class="scroll-top" data-scroll-top aria-label="Back to top" hidden>↑</button>
+
+		<script src="assets/js/main.js" defer></script>
+	</body>
+</html>
