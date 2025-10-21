@@ -299,7 +299,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1980">1980s</p>
 							<h3 class="timeline-group__topic" id="topic-1980">인터넷의 공통 언어</h3>
-							<p class="timeline-group__summary">이더넷 규격, TCP/IP 전환, BGP 합의가 차례로 이뤄지면서 모두가 같은 언어와 길찾기를 공유하는 진짜 인터넷이 만들어졌습니다.</p>
+							<p class="timeline-group__summary">이더넷 규격, TCP/IP 전환, 도메인 이름 체계, BGP 합의가 차례로 자리 잡으며 모두가 같은 주소와 언어, 길찾기를 공유하는 진짜 인터넷이 만들어졌습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1980-ethernet-standard">
@@ -309,6 +309,14 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1983-flagday">
 								<span class="timeline-event__year">1983</span>
 								<span class="timeline-event__label">TCP/IP 플래그 데이</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1984-dns">
+								<span class="timeline-event__year">1984</span>
+								<span class="timeline-event__label">DNS 가동</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1985-symbolics">
+								<span class="timeline-event__year">1985</span>
+								<span class="timeline-event__label">Symbolics.com 등록</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1989-bgp">
 								<span class="timeline-event__year">1989</span>
@@ -1080,6 +1088,44 @@
 				</section>
 			</article>
 		</template>
+
+			<template id="event-1984-dns">
+				<article class="event-detail" aria-labelledby="event-1984-dns-title">
+					<header class="event-detail__header">
+						<p class="event-detail__year">1984</p>
+						<h2 id="event-1984-dns-title">DNS, 도메인 이름 시스템 가동</h2>
+						<p class="event-detail__summary">USC ISI 연구진은 호스트 파일을 매일 배포하느라 지친 운영자를 위해 계층형 서버를 만들고, 최초의 DNS 쿼리를 성공시켰습니다.</p>
+					</header>
+					<section class="event-detail__body">
+						<div class="event-detail__story">
+							<p>폴 목카페트리스와 연구원들은 “hosts.txt를 또 수정해야 하네요.”라는 전화에 시달렸습니다. 그래서 이름을 숫자로 바꿔주는 일을 여러 서버가 나눠 맡는 도메인 이름 시스템(DNS)을 설계하고, USC ISI에 첫 네임 서버를 띄웠습니다.</p>
+							<p>운영자는 터미널에 `dig isi.edu`에 해당하는 초기 테스트 명령을 입력했고, 몇 밀리초 뒤 IP 주소가 화면에 나타나자 “됐다! 중앙 파일을 더는 배포하지 않아도 돼요.”라며 팀과 하이파이브를 나눴습니다. 이후 버클리와 SRI에도 서버가 추가되어 분산 구조가 완성됐습니다.</p>
+						</div>
+						<div class="event-detail__notes">
+							<p>DNS는 루트·TLD·권한 있는 네임 서버가 계층적으로 동작해, 각 조직이 자신이 관리하는 구역(zone)만 책임지면 된다는 원리를 남겼습니다. 곧바로 BIND 구현이 대학에 배포되면서 모든 패킷이 같은 규칙으로 도메인 이름을 IP로 바꿀 수 있게 되었고, 오늘날에도 이 구조가 인터넷 주소 체계의 기본입니다.</p>
+						</div>
+					</section>
+				</article>
+			</template>
+
+			<template id="event-1985-symbolics">
+				<article class="event-detail" aria-labelledby="event-1985-symbolics-title">
+					<header class="event-detail__header">
+						<p class="event-detail__year">1985</p>
+						<h2 id="event-1985-symbolics-title">Symbolics.com, 첫 상업용 도메인</h2>
+						<p class="event-detail__summary">NIC 담당자는 보스턴 스타트업 심볼릭스의 신청서를 검토하고 “이제 .com 주소를 기업에 개방합니다.”라고 선언했습니다.</p>
+					</header>
+					<section class="event-detail__body">
+						<div class="event-detail__story">
+							<p>1985년 3월, 심볼릭스 마케팅 팀은 전화선 너머로 “우리 회사 이름을 인터넷 주소로 갖고 싶습니다.”라고 문의했습니다. 관리 기관인 SRI-NIC의 닉 클라인은 신청서를 확인하고 운영 일지에 `symbolics.com`을 기록했습니다.</p>
+							<p>등록이 승인되자 심볼릭스 직원은 “이제 카탈로그에 웹 주소처럼 적을 수 있겠네요!”라며 환호했습니다. 곧 다른 기업도 줄지어 신청했고, .com·.org·.net 상용 도메인 이름이 현실이 되었습니다.</p>
+						</div>
+						<div class="event-detail__notes">
+							<p>최초 등록은 단순히 한 회사 주소를 만든 사건을 넘어, 도메인을 ‘조직별 브랜드 자산’으로 보는 문화를 열었습니다. 이후 등록 절차는 계약서와 누적 데이터베이스로 체계화되었고, 오늘날 ICANN 레지스트리·레지스트라 모델의 출발점이 되었습니다.</p>
+						</div>
+					</section>
+				</article>
+			</template>
 
 		<template id="event-1989-www">
 			<article class="event-detail" aria-labelledby="event-1989-www-title">

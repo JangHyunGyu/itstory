@@ -375,7 +375,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2000">2000s</p>
 							<h3 class="timeline-group__topic" id="topic-2000">Cloud and mobile</h3>
-							<p class="timeline-group__summary">Power over Ethernet, elastic compute, and smartphones changed how we rent and experience networks.</p>
+							<p class="timeline-group__summary">Ethernet standards, the TCP/IP cutover, the new Domain Name System, and BGP agreements arrived in sequence so addressing, naming, and routing finally shared the same rules.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2003-poe">
@@ -385,6 +385,14 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2006-cloud">
 								<span class="timeline-event__year">2006</span>
 								<span class="timeline-event__label">Cloud Infrastructure Launch</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1984-dns">
+								<span class="timeline-event__year">1984</span>
+								<span class="timeline-event__label">DNS Goes Live</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1985-symbolics">
+								<span class="timeline-event__year">1985</span>
+								<span class="timeline-event__label">Symbolics.com Registered</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2007-phone">
 								<span class="timeline-event__year">2007</span>
@@ -1015,6 +1023,44 @@
 				</div>
 				<div class="event-detail__notes">
 					<p>TCP/IP offered end-to-end reliability, routing flexibility, and support for diverse link layers. Flag Day’s success encouraged academia and industry to adopt the suite.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1984-dns">
+		<article class="event-detail" aria-labelledby="event-1984-dns-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1984</p>
+				<h2 id="event-1984-dns-title">DNS Goes Live</h2>
+				<p class="event-detail__summary">Engineers at USC ISI launched the first domain name servers, replacing the brittle hosts.txt file with a distributed lookup system.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>Paul Mockapetris and the ISI crew were exhausted from daily host-file updates. They coded the Domain Name System so root, top-level, and authoritative servers could share the workload. When the first recursive query returned an IP address, the team erupted: “We never have to mail out hosts.txt again!”</p>
+					<p>Within weeks Berkeley and SRI brought additional name servers online. Zone files delegated authority cleanly, and caching slashed lookup time, proving the hierarchy could scale with the Internet.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>DNS introduced zones, resource records, and caching resolvers—the foundations of today’s addressing fabric. The BIND implementation shipped with BSD Unix, spreading the protocol worldwide and making human-readable names a core Internet feature.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1985-symbolics">
+		<article class="event-detail" aria-labelledby="event-1985-symbolics-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1985</p>
+				<h2 id="event-1985-symbolics-title">Symbolics.com Registered</h2>
+				<p class="event-detail__summary">SRI-NIC approved Symbolics’ request for symbolics.com, opening .com domains to commercial use.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>On March 15, 1985, Symbolics filed paperwork asking to register its company name. NIC administrator Doreen added the record to the new DNS database and confirmed the name over the phone. Marketing teams cheered—they finally had an easy-to-print Internet address.</p>
+					<p>The registration triggered a wave of requests from other firms. Coherent procedures for .com, .org, and .net emerged, along with billing and renewal policies that treated domains as organizational assets.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>The first commercial domain showed the DNS could support branding and navigation, not just research hosts. The practice evolved into today’s registry–registrar ecosystem governed by ICANN, with millions of domains managed by accredited providers.</p>
 				</div>
 			</section>
 		</article>
