@@ -328,6 +328,14 @@
 		if (!modalWindow || !modalContent) {
 			return;
 		}
+		const hasVerticalOverflow = modalContent.scrollHeight - modalContent.clientHeight > 2;
+		if (!hasVerticalOverflow) {
+			detachModalScrollHandler();
+			if (modalScrollButton) {
+				modalScrollButton.setAttribute('hidden', '');
+			}
+			return;
+		}
 		if (!modalScrollButton) {
 			modalScrollButton = document.createElement('button');
 			modalScrollButton.type = 'button';
