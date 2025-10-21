@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ArcherLab IT Story · Operating Systems Timeline</title>
+		<meta name="description" content="Follow how batch monitors, time-sharing, personal computing, mobile platforms, and cloud runtimes shaped modern operating systems." />
+		<meta property="og:title" content="ArcherLab IT Story · Operating Systems Timeline" />
+		<meta property="og:description" content="Explore the breakthroughs that taught computers how to schedule work, share resources, and power devices of every size." />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/os.html" />
+		<link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/os-en.html" />
+		<link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/os-en.html" />
+	</head>
+	<body>
+		<div class="page">
+			<header class="page__header" role="banner">
+				<div class="page__header-left">
+					<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
+						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
+						<span class="page__brand-label">ArcherLab Chronicle</span>
+					</a>
+					<nav class="page__topic-nav" aria-label="Switch topic">
+						<a href="index-en.html">Home Hub</a>
+						<a href="networks-en.html">Networks Timeline</a>
+						<a href="computers-en.html">Computers Timeline</a>
+						<a href="os-en.html" class="is-current">Operating Systems Timeline</a>
+						<div class="page__topic-nav-group" role="group" aria-label="Web making timelines">
+							<span class="page__topic-nav-label">Web Making</span>
+							<a href="web-en.html" data-topic-role="parent">Web Timeline Hub</a>
+							<a href="web-structure-en.html" data-topic-role="child">Document Structure Timeline</a>
+							<a href="web-styling-en.html" data-topic-role="child">Styling Evolution Timeline</a>
+							<a href="web-interaction-en.html" data-topic-role="child">Browser Interaction Timeline</a>
+							<a href="web-tools-en.html" data-topic-role="child">Web Tools Timeline</a>
+						</div>
+						<a href="was-en.html">Web Server Timeline</a>
+						<a href="databases-en.html">Database Timeline</a>
+					</nav>
+				</div>
+				<nav class="page__nav" aria-label="Page sections">
+					<a href="#timeline">View Years</a>
+					<a href="#sources">Sources</a>
+					<div class="language-switch">
+						<label class="sr-only" for="language-select-os-en">Language</label>
+						<select id="language-select-os-en" data-language-switch>
+							<option value="os.html" data-language-code="ko">한국어</option>
+							<option value="os-en.html" data-language-code="en" selected>English</option>
+						</select>
+					</div>
+				</nav>
+			</header>
+
+			<main class="page__main" id="main" role="main">
+				<section class="timeline-hero" aria-labelledby="timeline-title">
+					<div class="timeline-hero__head">
+						<p class="hero__eyebrow">Operating System Story for Builders</p>
+						<h1 class="timeline-hero__title" id="timeline-title">How operating systems learned to share hardware, delight users, and power the cloud</h1>
+						<p class="timeline-hero__lede">
+							Early batch monitors squeezed more work out of expensive mainframes, time-sharing turned waiting lines into interactive sessions, and personal computers made graphical desktops normal.
+						</p>
+						<p class="timeline-hero__lede">
+							Scroll through the decades to see how mobile, open source, and cloud-native ideas reshaped the kernel. Tap any year to open a focused dialog with the people, constraints, and ripple effects behind that release.
+						</p>
+					</div>
+				</section>
+
+				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
+					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">Selecting a year opens a dialog in place so you can keep your reading position.</p>
+
+					<section class="timeline-group" aria-labelledby="decade-1950 topic-1950">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1950">1950s</p>
+							<h3 class="timeline-group__topic" id="topic-1950">Batch monitors tame mainframes</h3>
+							<p class="timeline-group__summary">Operations teams automated job sequencing so astronomers and engineers could queue programs without rewiring a room-sized computer.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1956-gmnaa">
+								<span class="timeline-event__year">1956</span>
+								<span class="timeline-event__label">GM-NAA I/O Monitor</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1959-fms">
+								<span class="timeline-event__year">1959</span>
+								<span class="timeline-event__label">Fortran Monitor System</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1960 topic-1960">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1960">1960s</p>
+							<h3 class="timeline-group__topic" id="topic-1960">Time-sharing becomes real</h3>
+							<p class="timeline-group__summary">Vendors pursued compatibility, while Bell Labs researchers chased portability so software could move across machines.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1964-os360">
+								<span class="timeline-event__year">1964</span>
+								<span class="timeline-event__label">IBM OS/360 Announced</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1969-unix">
+								<span class="timeline-event__year">1969</span>
+								<span class="timeline-event__label">UNIX Kernel Debuts</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1970 topic-1970">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1970">1970s</p>
+							<h3 class="timeline-group__topic" id="topic-1970">Microcomputers demand lean kernels</h3>
+							<p class="timeline-group__summary">Portable firmware and virtual memory let smaller machines schedule work previously reserved for mainframes.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1974-cpm">
+								<span class="timeline-event__year">1974</span>
+								<span class="timeline-event__label">CP/M Takes Off</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1978-vms">
+								<span class="timeline-event__year">1978</span>
+								<span class="timeline-event__label">VAX/VMS Ships</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1980 topic-1980">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1980">1980s</p>
+							<h3 class="timeline-group__topic" id="topic-1980">PC operating systems go mainstream</h3>
+							<p class="timeline-group__summary">DOS put disk management on cheap PCs while graphical desktops promised friendlier workflows.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1981-msdos">
+								<span class="timeline-event__year">1981</span>
+								<span class="timeline-event__label">MS-DOS 1.0</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1984-system1">
+								<span class="timeline-event__year">1984</span>
+								<span class="timeline-event__label">Macintosh System 1</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-1990">1990s</p>
+							<h3 class="timeline-group__topic" id="topic-1990">Networking and open source reshape platforms</h3>
+							<p class="timeline-group__summary">The kernel became a collaborative project while consumer systems embraced plug-and-play hardware and the web.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1991-linux">
+								<span class="timeline-event__year">1991</span>
+								<span class="timeline-event__label">Linux Kernel Posted</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1995-win95">
+								<span class="timeline-event__year">1995</span>
+								<span class="timeline-event__label">Windows 95 Launch</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2000">2000s</p>
+							<h3 class="timeline-group__topic" id="topic-2000">Mobile and UNIX descendants converge</h3>
+							<p class="timeline-group__summary">Desktop UNIX gained a new Aqua interface while open-source kernels powered the smartphone boom.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2001-macosx">
+								<span class="timeline-event__year">2001</span>
+								<span class="timeline-event__label">Mac OS X Ships</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2008-android">
+								<span class="timeline-event__year">2008</span>
+								<span class="timeline-event__label">Android 1.0 Release</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2010">2010s</p>
+							<h3 class="timeline-group__topic" id="topic-2010">Cloud-native runtimes take shape</h3>
+							<p class="timeline-group__summary">Containers and orchestration reframed the OS as a programmable control plane for fleets of services.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2013-docker">
+								<span class="timeline-event__year">2013</span>
+								<span class="timeline-event__label">Docker Open-Sourced</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2015-kubernetes">
+								<span class="timeline-event__year">2015</span>
+								<span class="timeline-event__label">Kubernetes 1.0</span>
+							</button>
+						</div>
+					</section>
+
+					<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
+						<header class="timeline-group__head">
+							<p class="timeline-group__decade" id="decade-2020">2020s</p>
+							<h3 class="timeline-group__topic" id="topic-2020">Silicon shifts and hybrid desktops</h3>
+							<p class="timeline-group__summary">Vendors rewrote kernels to embrace custom chips while delivering desktop experiences that span local and cloud PCs.</p>
+						</header>
+						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2020-big-sur">
+								<span class="timeline-event__year">2020</span>
+								<span class="timeline-event__label">macOS Big Sur on Apple Silicon</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2021-windows11">
+								<span class="timeline-event__year">2021</span>
+								<span class="timeline-event__label">Windows 11 Releases</span>
+							</button>
+						</div>
+					</section>
+				</section>
+
+				<section class="sources" id="sources" aria-labelledby="sources-title">
+					<div class="section__head">
+						<h2 id="sources-title">Further Reading</h2>
+						<p>Dig into original memos and retrospectives that document how operating systems evolved from batch queues to ubiquitous services.</p>
+					</div>
+					<ul class="source-list">
+						<li><a href="https://www.computerhistory.org/revolution/mainframe-computers/7/169" target="_blank" rel="noopener">Computer History Museum · GM-NAA I/O</a></li>
+						<li><a href="https://www.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP105.html" target="_blank" rel="noopener">IBM Archives · System/360</a></li>
+						<li><a href="https://www.bell-labs.com/usr/dmr/www/hist.html" target="_blank" rel="noopener">Bell Labs · UNIX History</a></li>
+						<li><a href="https://computerhistory.org/blog/the-rise-and-fall-of-digital-research/" target="_blank" rel="noopener">Computer History Museum · CP/M Story</a></li>
+						<li><a href="https://android-developers.googleblog.com/2008/09/android-10-launched.html" target="_blank" rel="noopener">Android Developers Blog · Android 1.0</a></li>
+						<li><a href="https://www.apple.com/newsroom/2020/11/apple-unleashes-m1/" target="_blank" rel="noopener">Apple Newsroom · Apple Silicon</a></li>
+					</ul>
+				</section>
+			</main>
+
+			<footer class="page__footer" role="contentinfo">
+				<p>© 2025 ArcherLab · Stories on operating systems.</p>
+				<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
+			</footer>
+		</div>
+
+		<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
+			<div class="modal__overlay" data-modal-close></div>
+			<div class="modal__window" role="document" tabindex="-1">
+				<button class="modal__close" type="button" aria-label="Close dialog" data-modal-close>&times;</button>
+				<div class="modal__content"></div>
+			</div>
+		</div>
+
+		<template id="event-1956-gmnaa">
+			<article class="event-detail" aria-labelledby="event-1956-gmnaa-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1956</p>
+					<h2 id="event-1956-gmnaa-title">GM-NAA I/O keeps the mainframe busy</h2>
+					<p class="event-detail__summary">General Motors engineers scripted job control for IBM’s 704 so production runs no longer stalled between programs.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Factory analysts lined up deck after deck of punch cards. Each batch needed an operator to mount tapes and restart the machine. GM’s team worked with IBM to predefine those steps so the monitor could mount tapes, load programs, and collect results automatically.</p>
+						<p>Suddenly, the same hardware finished overnight schedules without an operator babysitting each run, convincing managers that software could orchestrate hardware.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>GM-NAA I/O introduced job control languages and automatic error recovery—concepts that survive in today’s batch schedulers and CI pipelines.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1959-fms">
+			<article class="event-detail" aria-labelledby="event-1959-fms-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1959</p>
+					<h2 id="event-1959-fms-title">Fortran Monitor System standardizes batch queues</h2>
+					<p class="event-detail__summary">IBM responded to customer clubs with a monitor that matched FORTRAN jobs to the right compilers and devices.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>SHARE, the volunteer user group, kept asking for reusable job control macros. IBM packaged their requests into the Fortran Monitor System so scientists in different labs could submit programs the same way.</p>
+						<p>The monitor reduced setup time drastically, and customers who lived on time-sharing soon asked for similar tooling on newer models.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>FMS popularized reusable job control statements and device-independent I/O—a stepping stone toward operating systems that abstract hardware details.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1964-os360">
+			<article class="event-detail" aria-labelledby="event-1964-os360-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1964</p>
+					<h2 id="event-1964-os360-title">System/360 brings a family OS</h2>
+					<p class="event-detail__summary">IBM designed OS/360 so one operating system could run across a family of mainframes, preserving customer investments.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Instead of rewriting software for each hardware upgrade, clients could recompile on System/360 and run on anything from entry-level to high-end machines. Teams inside IBM fought hard to unify I/O and memory management under a single kernel.</p>
+						<p>Delivering OS/360 demanded unprecedented project management, but the payoff was a platform customers trusted for decades.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>OS/360’s compatibility contracts inspired systems programming interfaces and vendor support policies still visible in enterprise platforms today.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1969-unix">
+			<article class="event-detail" aria-labelledby="event-1969-unix-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1969</p>
+					<h2 id="event-1969-unix-title">UNIX thrives on simplicity</h2>
+					<p class="event-detail__summary">Bell Labs researchers rewrote their time-sharing ideas in C, proving an operating system could be portable and elegant.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Ken Thompson explored file systems that treated everything as a stream, while Dennis Ritchie refined the C language so the kernel and userland shared tooling. Universities quickly adopted UNIX for teaching and research.</p>
+						<p>Source licenses let students and vendors adapt the code, growing a culture that prized small programs and composability.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>UNIX popularized multitasking, pipes, and a philosophy of modular utilities—patterns that continue in POSIX systems and shells.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1974-cpm">
+			<article class="event-detail" aria-labelledby="event-1974-cpm-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1974</p>
+					<h2 id="event-1974-cpm-title">CP/M carries microcomputers into business</h2>
+					<p class="event-detail__summary">Gary Kildall adapted his compiler environment into an OS that hid disk hardware differences on 8-bit machines.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Developers could now build software once and run it across MITS, IMSAI, and other early PCs. CP/M’s BIOS abstraction shipped with manuals so third parties could port the OS to new controllers.</p>
+						<p>Word processors and spreadsheets suddenly followed users from lab to office, convincing executives that microcomputers had serious potential.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>CP/M’s modular BIOS and BDOS layers foreshadowed the driver model in later PC operating systems.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1978-vms">
+			<article class="event-detail" aria-labelledby="event-1978-vms-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1978</p>
+					<h2 id="event-1978-vms-title">VAX/VMS delivers virtual memory to the masses</h2>
+					<p class="event-detail__summary">Digital Equipment Corporation blended clustering and virtual memory so midsize teams could share power once reserved for mainframes.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Customers combined several VAX machines into a VMScluster, keeping work online even when a node failed. Programmers praised the system services that made writing multiuser software approachable.</p>
+						<p>The reliability opened doors for universities, labs, and hospitals that needed round-the-clock computing without mainframe budgets.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>VMS influenced security rings, clustering APIs, and the POSIX compatibility layers later adopted by Windows NT.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1981-msdos">
+			<article class="event-detail" aria-labelledby="event-1981-msdos-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1981</p>
+					<h2 id="event-1981-msdos-title">MS-DOS anchors the IBM PC</h2>
+					<p class="event-detail__summary">Microsoft licensed QDOS, rebranded it MS-DOS, and delivered disk services that let PC makers ship affordable systems fast.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>IBM’s tight launch schedule needed an operating system quickly. Microsoft’s team cleaned up QDOS APIs, documented BIOS hooks, and built the foundation for countless PC clones.</p>
+						<p>Software vendors embraced the platform, creating the PC ecosystem that drove personal computing forward.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>MS-DOS popularized a consistent executable format and extended BIOS interrupts—key stepping stones toward Windows.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1984-system1">
+			<article class="event-detail" aria-labelledby="event-1984-system1-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1984</p>
+					<h2 id="event-1984-system1-title">Macintosh System 1 mainstreams the GUI</h2>
+					<p class="event-detail__summary">Apple paired a graphical desktop with menus, icons, and a mouse-driven file manager built into the OS.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Human interface guidelines accompanied the launch, showing developers how to make consistent menus and dialog boxes. Users could drag files and print visually, reducing the learning curve.</p>
+						<p>The success accelerated GUI adoption across the industry, pressuring rivals to follow suit.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>System 1’s resource manager and quick-draw APIs influenced desktop UI toolkits that still echo in modern frameworks.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1991-linux">
+			<article class="event-detail" aria-labelledby="event-1991-linux-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1991</p>
+					<h2 id="event-1991-linux-title">Linux invites the world to hack the kernel</h2>
+					<p class="event-detail__summary">Linus Torvalds published a hobby UNIX clone under a copyleft license, igniting a global collaboration.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Torvalds posted to comp.os.minix, asking for feedback on his terminal emulator. Contributors rushed in with drivers, schedulers, and filesystems. GNU tools filled the userland gap, turning the hobby project into a full OS.</p>
+						<p>Linux quickly powered servers, routers, and later Android phones, proving open source could rival any vendor kernel.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>The GPL license ensured improvements circulated, creating the distributed development model that underpins today’s open infrastructure.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-1995-win95">
+			<article class="event-detail" aria-labelledby="event-1995-win95-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1995</p>
+					<h2 id="event-1995-win95-title">Windows 95 blends DOS heritage with a GUI shell</h2>
+					<p class="event-detail__summary">Microsoft unified 32-bit APIs, plug-and-play hardware, and a Start menu that reshaped desktop workflows.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Users lined up at midnight launches. The Start button demystified multitasking, and built-in networking acknowledged the web’s arrival. OEMs preinstalled the system, cementing the PC ecosystem.</p>
+						<p>Developers embraced Win32 as a stable surface, setting the stage for the modern Windows platform.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Windows 95 normalized user-friendly setup wizards and standardized driver models, critical for large-scale PC adoption.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2001-macosx">
+			<article class="event-detail" aria-labelledby="event-2001-macosx-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2001</p>
+					<h2 id="event-2001-macosx-title">Mac OS X fuses UNIX with Aqua design</h2>
+					<p class="event-detail__summary">Apple blended NeXTSTEP’s UNIX core with a brand-new interface, giving developers POSIX foundations and users a polished desktop.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Carbon and Cocoa frameworks eased the transition for classic Mac apps while encouraging native Objective-C development. Under the hood, Darwin exposed familiar UNIX tools that sysadmins already trusted.</p>
+						<p>The hybrid appeal drew creatives, scientists, and developers who needed both a friendly UI and a robust terminal.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Mac OS X revived the idea of a consumer UNIX desktop, accelerating trends like package managers, scripting, and cross-platform toolchains.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2008-android">
+			<article class="event-detail" aria-labelledby="event-2008-android-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2008</p>
+					<h2 id="event-2008-android-title">Android 1.0 powers the open smartphone</h2>
+					<p class="event-detail__summary">Google and the Open Handset Alliance shipped a Linux-based mobile OS with a touchscreen UI and app marketplace.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Developers downloaded the SDK months before launch, experimenting with intents and background services. Carriers embraced the open model, bringing smartphones to wider audiences.</p>
+						<p>Android’s rapid update cycle proved Linux could power billions of devices, not just servers.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Android popularized app sandboxing, permissions, and an open distribution ecosystem that still shapes mobile OS expectations.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2013-docker">
+			<article class="event-detail" aria-labelledby="event-2013-docker-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2013</p>
+					<h2 id="event-2013-docker-title">Docker makes containers accessible</h2>
+					<p class="event-detail__summary">dotCloud open-sourced Docker, pairing Linux namespaces with an easy CLI so teams could package apps once and run anywhere.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Live demos showed developers building images and shipping them to production in minutes. Operations teams loved the reproducible environments, and cloud providers quickly added managed services.</p>
+						<p>Containers reframed the operating system as a lightweight substrate for distributed applications.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Docker popularized layered filesystems, image registries, and DevOps workflows that define modern platform engineering.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2015-kubernetes">
+			<article class="event-detail" aria-labelledby="event-2015-kubernetes-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2015</p>
+					<h2 id="event-2015-kubernetes-title">Kubernetes treats clusters like one computer</h2>
+					<p class="event-detail__summary">Google donated Kubernetes to the CNCF, offering controllers that schedule containers across clusters with declarative configs.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Platform teams wrote YAML manifests describing desired state, and the control plane handled rescheduling, rollouts, and scaling automatically. Cloud providers launched managed offerings almost immediately.</p>
+						<p>The line between operating system and cloud service blurred as developers targeted Kubernetes APIs instead of individual machines.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Kubernetes codified reconciliation loops and service discovery—concepts now expected from any modern infrastructure stack.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2020-big-sur">
+			<article class="event-detail" aria-labelledby="event-2020-big-sur-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2020</p>
+					<h2 id="event-2020-big-sur-title">macOS Big Sur embraces Apple Silicon</h2>
+					<p class="event-detail__summary">Apple launched the M1 chip and recompiled macOS with Rosetta 2 translation so apps could run on new ARM-based Macs.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Developers received Universal build tooling that produced binaries for both Intel and Apple Silicon. Battery life leaps and instant wake experiences showcased what tight OS-hardware integration could deliver.</p>
+						<p>The transition reminded the industry how strategic control over silicon and the OS stack can unlock new product categories.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Big Sur’s compatibility layers and secure enclave integrations pushed platform owners toward vertically integrated hardware-software roadmaps.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2021-windows11">
+			<article class="event-detail" aria-labelledby="event-2021-windows11-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2021</p>
+					<h2 id="event-2021-windows11-title">Windows 11 blends local and cloud PCs</h2>
+					<p class="event-detail__summary">Microsoft refreshed the desktop with a new shell, tightened security defaults, and shipped deeper integration with Azure-powered PCs.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Windows 11 introduced mandatory TPM-backed security, WSLg for running Linux GUIs, and hooks for Windows 365 Cloud PCs. IT teams could extend the desktop into the cloud without retraining users.</p>
+						<p>The release framed the operating system as a hybrid control plane spanning local hardware, virtualization, and managed cloud desktops.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Windows 11’s security baselines and cross-environment integration foreshadow the blended future of workspace operating systems.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<button type="button" class="scroll-top" data-scroll-top aria-label="Back to top" hidden>↑</button>
+
+		<script src="assets/js/main.js" defer></script>
+	</body>
+</html>
