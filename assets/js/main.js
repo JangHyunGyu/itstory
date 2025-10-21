@@ -223,7 +223,7 @@
 		};
 		const labels = messages[language];
 		const archiveSection = document.createElement('section');
-		archiveSection.className = 'timeline-archive';
+		archiveSection.classList.add('timeline-archive', 'is-visually-hidden');
 		archiveSection.setAttribute('data-event-archive', '');
 		const heading = document.createElement('h2');
 		heading.className = 'timeline-archive__title';
