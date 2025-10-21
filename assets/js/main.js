@@ -199,6 +199,81 @@
 	const modalContent = modal ? modal.querySelector('.modal__content') : null;
 	const closeTriggers = modal ? Array.from(modal.querySelectorAll('[data-modal-close]')) : [];
 	const eventButtons = Array.from(document.querySelectorAll('[data-event-id]'));
+
+	const buildTimelineArchive = () => {
+		if (!eventButtons.length) {
+			return;
+		}
+		const timelineGrid = document.querySelector('.timeline-grid');
+		if (!timelineGrid) {
+			return;
+		}
+		const language = currentDocumentLanguage === 'en' ? 'en' : 'ko';
+		const messages = {
+			ko: {
+				title: '이야기 텍스트로 모두 읽기',
+				intro:
+					'각 연도의 이야기를 접거나 펼쳐서 순서대로 읽을 수 있는 텍스트 버전입니다. 검색엔진과 보조공학에서도 전체 내용을 곧바로 확인할 수 있어요.'
+			},
+			en: {
+				title: 'Read Every Story As Text',
+				intro:
+					'This section lists every timeline story in collapsible text so search engines and assistive tech can access the full content without opening modals.'
+			}
+		};
+		const labels = messages[language];
+		const archiveSection = document.createElement('section');
+		archiveSection.className = 'timeline-archive';
+		archiveSection.setAttribute('data-event-archive', '');
+		const heading = document.createElement('h2');
+		heading.className = 'timeline-archive__title';
+		heading.textContent = labels.title;
+		const intro = document.createElement('p');
+		intro.className = 'timeline-archive__intro';
+		intro.textContent = labels.intro;
+		archiveSection.append(heading, intro);
+		const listContainer = document.createElement('div');
+		listContainer.className = 'timeline-archive__list';
+		archiveSection.appendChild(listContainer);
+		eventButtons.forEach((button, index) => {
+			const eventId = button.dataset?.eventId;
+			if (!eventId) {
+				return;
+			}
+			const template = document.getElementById(`event-${eventId}`);
+			if (!template) {
+				return;
+			}
+			const details = document.createElement('details');
+			details.className = 'timeline-archive__item';
+			if (index === 0) {
+				details.open = true;
+			}
+			const summary = document.createElement('summary');
+			summary.className = 'timeline-archive__summary';
+			const yearText = button.querySelector('.timeline-event__year')?.textContent?.trim();
+			const labelText = button.querySelector('.timeline-event__label')?.textContent?.trim();
+			summary.textContent = yearText && labelText ? `${yearText} · ${labelText}` : button.textContent.trim();
+			details.appendChild(summary);
+			const body = document.createElement('div');
+			body.className = 'timeline-archive__body';
+			const fragment = template.content
+				? template.content.cloneNode(true)
+				: (() => {
+					const fallbackFragment = document.createDocumentFragment();
+					Array.from(template.childNodes).forEach((node) => {
+						fallbackFragment.appendChild(node.cloneNode(true));
+					});
+					return fallbackFragment;
+				})();
+			body.appendChild(fragment);
+			details.appendChild(body);
+			listContainer.appendChild(details);
+		});
+		timelineGrid.insertAdjacentElement('afterend', archiveSection);
+	};
+
+	buildTimelineArchive();
 	const FOCUSABLE_SELECTOR =
 		'a[href], button:not([disabled]), textarea, input, select, summary, details, [tabindex]:not([tabindex="-1"])';
 	let lastFocusedTrigger = null;
