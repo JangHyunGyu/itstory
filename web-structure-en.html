@@ -139,6 +139,10 @@
 								<span class="timeline-event__year">1995</span>
 								<span class="timeline-event__label">HTML 2.0 RFC</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-xml10">
+								<span class="timeline-event__year">1997</span>
+								<span class="timeline-event__label">XML 1.0 Recommendation</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1998-dom1">
 								<span class="timeline-event__year">1998</span>
 								<span class="timeline-event__label">DOM Level 1</span>
@@ -171,6 +175,10 @@
 							<p class="timeline-group__summary">HTML5 went stable, and accessibility experts insisted, “Name your landmarks, declare your roles,” turning structure into shared etiquette.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2011-schema-org">
+								<span class="timeline-event__year">2011</span>
+								<span class="timeline-event__label">schema.org alliance</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-html5">
 								<span class="timeline-event__year">2014</span>
 								<span class="timeline-event__label">HTML5 Recommendation</span>
@@ -196,6 +204,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2022-design-systems">
 								<span class="timeline-event__year">2022</span>
 								<span class="timeline-event__label">Design System Guides</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-design-tokens">
+								<span class="timeline-event__year">2023</span>
+								<span class="timeline-event__label">Design Tokens draft</span>
 							</button>
 						</div>
 					</section>
@@ -364,6 +376,25 @@
 			</article>
 		</template>
 
+		<template id="event-1997-xml10">
+			<article class="event-detail" aria-labelledby="event-1997-xml10-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1997</p>
+					<h2 id="event-1997-xml10-title">XML 1.0 Recommendation</h2>
+					<p class="event-detail__summary">“Keep SGML’s rigor but drop the baggage,” Tim Bray urged as XML 1.0 arrived and teams rushed to share data with the same tags.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>At the W3C briefing, Bray and Bosak demonstrated how invoices, news feeds, and documentation could travel as the same tree of elements. A publisher exported article metadata, while an ERP vendor parsed purchase orders—both using custom DTDs atop XML. Developers exclaimed, “Finally we can read it like a document and process it like data.”</p>
+						<p>Browsers shipped XML viewers, and APIs such as SAX and DOM parsers spread. XML became the handshake between CMSs, web services, and device sync.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>XML enforced namespaces, well-formed documents, and explicit schemas. It shaped SOAP, RSS, SVG, and countless configuration formats, embedding structural thinking into both frontend rendering and backend integration.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-1998-dom1">
 			<article class="event-detail" aria-labelledby="event-1998-dom1-title">
 				<header class="event-detail__header">
@@ -416,6 +447,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>The approach championed progressive enhancement: HTML stayed valid while offering machine-readable hints—an idea reused by JSON-LD and structured data today.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2011-schema-org">
+			<article class="event-detail" aria-labelledby="event-2011-schema-org-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2011</p>
+					<h2 id="event-2011-schema-org-title">schema.org Alliance</h2>
+					<p class="event-detail__summary">Search teams stood shoulder to shoulder saying, “Mark it once, all engines understand,” as schema.org launched shared vocabularies.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>At SMX Advanced, engineers from Google, Bing, and Yahoo demoed recipe cards lighting up SERPs the moment <code>itemprop="ratingValue"</code> appeared. Marketers hurried back to add microdata and JSON-LD. “Our concert dates finally show on the right rail!” one promoter cheered.</p>
+						<p>Rich snippets drove adoption. CMS plugins shipped schema templates, and DevTools gained structured data validators, making semantic markup part of daily workflows.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>schema.org unified microdata, RDFa, and JSON-LD vocabularies. Frontends expose consistent structures for accessibility and SEO, while backends maintain canonical schemas that feed search, voice assistants, and analytics.</p>
 					</div>
 				</section>
 			</article>
@@ -492,6 +542,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>Guides emphasized design tokens, semantic naming, and documentation tooling—principles vital for multi-brand, multi-device ecosystems.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2023-design-tokens">
+			<article class="event-detail" aria-labelledby="event-2023-design-tokens-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2023</p>
+					<h2 id="event-2023-design-tokens-title">Design Tokens Working Draft</h2>
+					<p class="event-detail__summary">“Ship color, spacing, and roles as one source of truth,” the W3C draft urged, letting teams deploy structure and style together.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>The W3C Community Group unveiled a JSON schema for tokens like <code>"color.background.surface"</code>. Designers exported Figma variables, engineers piped them into React, iOS, and email templates. “Flip the theme file and every surface updates before QA finishes coffee,” one design systems lead joked.</p>
+						<p>Workflows shifted: tokens now document component hierarchy, accessibility contrast, and motion preferences. Structure files travel alongside code, ensuring every surface reflects the same intent.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Design tokens bridge semantic structure with presentation. Build tools translate them into CSS custom properties, native constants, and docs. Backends reuse the same definitions for PDFs and notifications, keeping multi-channel structure in sync.</p>
 					</div>
 				</section>
 			</article>

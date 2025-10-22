@@ -135,6 +135,10 @@
 								<span class="timeline-event__year">1995</span>
 								<span class="timeline-event__label">HTML 2.0 RFC</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-xml10">
+								<span class="timeline-event__year">1997</span>
+								<span class="timeline-event__label">XML 1.0 권고</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1998-dom1">
 								<span class="timeline-event__year">1998</span>
 								<span class="timeline-event__label">DOM Level 1</span>
@@ -165,6 +169,10 @@
 							<p class="timeline-group__summary">HTML5 권고안과 WAI-ARIA 패턴이 “랜드마크를 분명히, 역할을 정확히”라는 원칙을 정착시키며 구조와 접근성을 함께 묶었습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2011-schema-org">
+								<span class="timeline-event__year">2011</span>
+								<span class="timeline-event__label">schema.org 연합</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-html5">
 								<span class="timeline-event__year">2014</span>
 								<span class="timeline-event__label">HTML5 권고</span>
@@ -189,6 +197,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2022-design-systems">
 								<span class="timeline-event__year">2022</span>
 								<span class="timeline-event__label">디자인 시스템 가이드</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-design-tokens">
+								<span class="timeline-event__year">2023</span>
+								<span class="timeline-event__label">Design Tokens 초안</span>
 							</button>
 						</div>
 					</section>
@@ -357,6 +369,25 @@
 			</article>
 		</template>
 
+		<template id="event-1997-xml10">
+			<article class="event-detail" aria-labelledby="event-1997-xml10-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1997</p>
+					<h2 id="event-1997-xml10-title">XML 1.0 권고, 데이터와 문서를 잇다</h2>
+					<p class="event-detail__summary">W3C가 XML 1.0을 승인하자 개발자들은 “같은 태그 구조로 문서와 데이터를 모두 주고받자.”며 구조 실험을 가속했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>1997년 12월, W3C 기술 브리핑에서 팀 브레이는 슬라이드를 넘기며 말했습니다. “SGML은 무겁지만 XML은 가볍습니다. 서버와 브라우저, 심지어 PDA까지 같은 트리를 이해하게 만들 수 있죠.” 참가자 미셸은 노트북에서 주문 데이터를 XML로 변환해 보여 주며 “API 없이도 구조를 공유할 수 있어요.”라고 감탄했습니다.</p>
+						<p>신문사는 기사 피드를 XML로 배포하기 시작했고, ERP 업체는 회사 간 통합을 위해 DTD와 네임스페이스를 작성했습니다. “문서처럼 읽고 데이터처럼 파싱한다”는 접근이 현실이 되었습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>XML 1.0은 태그, 속성, 네임스페이스를 엄격히 정의해 다양한 시스템에서 같은 구조를 이해하도록 했습니다. 프론트엔드는 XML 기반 SVG, RSS를 읽으며 시맨틱을 확장했고, 백엔드는 SOAP, B2B 연동 등에서 XML 스키마를 활용했습니다. 이후 JSON이 등장해도 “데이터와 문서를 구조로 정의한다”는 사고방식은 계속 이어졌습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-1998-dom1">
 			<article class="event-detail" aria-labelledby="event-1998-dom1-title">
 				<header class="event-detail__header">
@@ -409,6 +440,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>마이크로포맷은 기존 HTML 요소에 클래스 이름을 붙여 의미를 표현하자는 약속이었습니다. 구조화된 데이터를 공유하면 검색과 일정 통합이 쉬워진다는 사실이 드러났고, 이는 나중에 schema.org와 같은 시맨틱 웹 표준으로 이어졌습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2011-schema-org">
+			<article class="event-detail" aria-labelledby="event-2011-schema-org-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2011</p>
+					<h2 id="event-2011-schema-org-title">schema.org, 검색엔진이 손잡고 구조를 정의하다</h2>
+					<p class="event-detail__summary">구글·빙·야후가 “같은 마크업이면 서로 이해하자.”며 schema.org를 발표하자, 제작자들은 구조화 데이터를 본격 채택했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2011년 SMX 컨퍼런스에서 구글의 리치어와 빙 엔지니어가 함께 무대에 섰습니다. “이제 <code>itemscope</code>와 <code>itemprop</code>만 맞추면 검색 결과에 리뷰 별점과 행사 일정이 바로 뜹니다.” 발표 후 마케팅 팀장 수지는 “우리 레시피에도 별점이 나오게 할래요!”라며 개발자에게 구조화 마크업을 요청했습니다.</p>
+						<p>이듬해 전자상거래 사이트가 상품, 가격, 재고 정보를 schema.org 어휘로 노출하면서, 크롬과 파이어폭스 개발자 도구에는 구조화 데이터 점검 기능이 추가됐습니다. “구조가 곧 검색 트래픽”이라는 말이 현실이 되었습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>schema.org는 검색엔진이 공동으로 유지하는 어휘집입니다. HTML과 JSON-LD 어디에서든 사용할 수 있어 구조를 표시하는 방식이 통일되었고, 접근성 도구와 음성 비서가 같은 구조를 재사용할 수 있게 했습니다. 프론트엔드는 구조화된 정보를 시각적으로 드러내고, 백엔드는 정해진 스키마에 따라 데이터를 제공하며 협업 범위를 넓혔습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -485,6 +535,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>디자인 시스템은 구성요소뿐 아니라 문서 구조, 접근성 체크리스트를 포함하기 시작했습니다. 구조 규칙을 문서화하면 새 페이지도 같은 의미 체계를 따르게 되고, 콘텐츠 품질이 일정하게 유지된다는 장점이 확인되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2023-design-tokens">
+			<article class="event-detail" aria-labelledby="event-2023-design-tokens-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2023</p>
+					<h2 id="event-2023-design-tokens-title">Design Tokens 초안, 구조와 스타일을 함께 배포하다</h2>
+					<p class="event-detail__summary">W3C Design Tokens 초안이 “색과 컴포넌트 속성을 한 구조에 담자.”고 제안하자, 제품팀은 구조와 스타일 자산을 한 번에 배포하기 시작했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2023년 W3C 커뮤니티 그룹은 Design Tokens Working Draft를 공개하며 `"color.background.surface"` 같은 키 구조를 소개했습니다. 피그마 디자이너 안나는 “이제 변수 이름만 공유하면 앱과 웹이 동시에 업데이트돼요.”라고 말했고, 프론트엔드 리드는 토큰 JSON을 라이브러리에 가져와 즉시 테마를 교체했습니다.</p>
+						<p>컨퍼런스에서는 “토큰이 곧 구조다”라는 말이 따라붙었습니다. 토큰 파일에 역할, 계층, 접근성 대비 정보까지 적어 두며 구조와 스타일 정의가 하나의 출처에서 관리되기 시작했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Design Tokens 규격은 색상, 간격, 타입 스케일 같은 시각 속성을 키-값 구조로 정의하고, 플랫폼별 빌더가 이를 변환하도록 합니다. 프론트엔드는 토큰을 읽어 컴포넌트 구조를 일관되게 렌더링하고, 백엔드는 같은 토큰을 이메일, PDF 템플릿에도 적용하면서 “구조와 스타일의 단일 진실”을 유지할 수 있게 되었습니다.</p>
 					</div>
 				</section>
 			</article>

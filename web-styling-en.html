@@ -107,6 +107,10 @@
 								<span class="timeline-event__year">1996</span>
 								<span class="timeline-event__label">CSS1 Recommendation</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1998-css2">
+								<span class="timeline-event__year">1998</span>
+								<span class="timeline-event__label">CSS2 Recommendation</span>
+							</button>
 						</div>
 					</section>
 
@@ -120,6 +124,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2003-css-zengarden">
 								<span class="timeline-event__year">2003</span>
 								<span class="timeline-event__label">CSS Zen Garden</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2006-firebug">
+								<span class="timeline-event__year">2006</span>
+								<span class="timeline-event__label">Firebug 1.0</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2009-sass">
 								<span class="timeline-event__year">2009</span>
@@ -143,6 +151,10 @@
 								<span class="timeline-event__year">2017</span>
 								<span class="timeline-event__label">CSS Grid Support</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2018-css-vars">
+								<span class="timeline-event__year">2018</span>
+								<span class="timeline-event__label">CSS custom properties</span>
+							</button>
 						</div>
 					</section>
 
@@ -156,6 +168,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2021-container-queries">
 								<span class="timeline-event__year">2021</span>
 								<span class="timeline-event__label">Container Query Demos</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2022-css-layers">
+								<span class="timeline-event__year">2022</span>
+								<span class="timeline-event__label">Cascade Layers land</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-css-nesting">
 								<span class="timeline-event__year">2023</span>
@@ -271,6 +287,25 @@
 			</article>
 		</template>
 
+		<template id="event-1998-css2">
+			<article class="event-detail" aria-labelledby="event-1998-css2-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1998</p>
+					<h2 id="event-1998-css2-title">CSS2 Recommendation</h2>
+					<p class="event-detail__summary">Spec editors grinned, “Position it anywhere, target any media,” as CSS2 delivered absolute positioning, @media rules, and @font-face.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>During the W3C press call, Håkon Wium Lie showcased `position:absolute` keeping nav bars fixed while content scrolled. Print designers cheered at `@media print`, and accessibility advocates tested the aural media profile. Suddenly the same HTML branched into screen, print, and speech experiences.</p>
+						<p>Newsrooms exported layout-ready print styles without touching markup, while early web apps used z-index and stacking contexts to layer menus and dialogs.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>CSS2’s positioning model, media types, and font embedding made layout a first-class capability. It laid the groundwork for responsive design, component overlays, and the modern cascade strategies teams rely on today.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-2003-css-zengarden">
 			<article class="event-detail" aria-labelledby="event-2003-css-zengarden-title">
 				<header class="event-detail__header">
@@ -285,6 +320,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>The project popularized CSS-only redesigns, encouraging browser vendors to fix rendering bugs and paving the way for responsive techniques.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2006-firebug">
+			<article class="event-detail" aria-labelledby="event-2006-firebug-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2006</p>
+					<h2 id="event-2006-firebug-title">Firebug 1.0</h2>
+					<p class="event-detail__summary">Firebug let developers “click an element, edit the rule,” turning CSS debugging into an interactive loop.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Joe Hewitt demoed Firebug at Mozilla Summit: the crowd watched the Rules panel light up as he hovered the DOM tree. Changing a color or margin refreshed instantly. Designers leaned over laptops whispering, “No more reloading after every tweak!”</p>
+						<p>Agencies adopted Firebug for late-night polish, refactoring table layouts into floats and testing complex selectors live. Browser vendors soon built competing DevTools suites.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Firebug’s inspect-and-edit pattern became the blueprint for Chrome, Safari, and Edge DevTools. Fast feedback tightened the designer-developer loop and made large style systems viable.</p>
 					</div>
 				</section>
 			</article>
@@ -347,6 +401,25 @@
 			</article>
 		</template>
 
+		<template id="event-2018-css-vars">
+			<article class="event-detail" aria-labelledby="event-2018-css-vars-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2018</p>
+					<h2 id="event-2018-css-vars-title">CSS Custom Properties Everywhere</h2>
+					<p class="event-detail__summary">With cross-browser support locked in, teams declared, “Ship tokens as --variables,” and theming flipped from build-time to runtime.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Design systems exported palettes and spacing as <code>--brand-color</code> and <code>--space-md</code>. Switching themes no longer required recompiling Sass; toggling a class updated the entire application live. Dark mode rollouts happened overnight.</p>
+						<p>Frameworks like Lit and design tokens pipelines built on custom properties, letting product teams inject brand kits without touching component code.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Custom properties inherit, respond to media queries, and update at runtime. They bridge design tokens, theming, and user preferences across frontend and backend deliveries.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-2021-container-queries">
 			<article class="event-detail" aria-labelledby="event-2021-container-queries-title">
 				<header class="event-detail__header">
@@ -361,6 +434,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>They ushered in container units, style queries, and cascade layers—features that respect component boundaries in large design systems.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2022-css-layers">
+			<article class="event-detail" aria-labelledby="event-2022-css-layers-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2022</p>
+					<h2 id="event-2022-css-layers-title">Cascade Layers Land</h2>
+					<p class="event-detail__summary">Specs added <code>@layer</code> so teams could promise, “Resets, components, utilities—each gets its own lane.”</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>When Chrome 99 shipped cascade layers, design system maintainers rewrote guidelines overnight: `@layer reset, base, components, utilities;`. Suddenly utility classes stopped bulldozing component styles. QA celebrated fewer “why did this button break?” bugs.</p>
+						<p>Frameworks like Tailwind and Open Props introduced layer-aware configuration, and enterprise teams mapped ownership to layers for safer experimentation.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Cascade layers complement BEM and design tokens. They let product teams codify override rules, easing collaboration across micro-frontends, SSR templates, and design system packages.</p>
 					</div>
 				</section>
 			</article>

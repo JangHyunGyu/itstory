@@ -85,6 +85,10 @@
 								<span class="timeline-event__year">1995</span>
 								<span class="timeline-event__label">JavaScript Debuts</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1996-flash">
+								<span class="timeline-event__year">1996</span>
+								<span class="timeline-event__label">Macromedia Flash 1.0</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1999-xmlhttprequest">
 								<span class="timeline-event__year">1999</span>
 								<span class="timeline-event__label">XMLHttpRequest Adopted</span>
@@ -103,6 +107,10 @@
 								<span class="timeline-event__year">2005</span>
 								<span class="timeline-event__label">Ajax Essay</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2006-jquery">
+								<span class="timeline-event__year">2006</span>
+								<span class="timeline-event__label">jQuery 1.0</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2009-nodejs">
 								<span class="timeline-event__year">2009</span>
 								<span class="timeline-event__label">Node.js Launch</span>
@@ -117,6 +125,10 @@
 							<p class="timeline-group__summary">React’s component pitch and Service Worker’s offline promises helped web teams argue that “app-like” wasn’t just for native.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2011-websocket">
+								<span class="timeline-event__year">2011</span>
+								<span class="timeline-event__label">WebSocket Standard</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2013-react">
 								<span class="timeline-event__year">2013</span>
 								<span class="timeline-event__label">React Open-Sourced</span>
@@ -138,6 +150,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2020-wasm">
 								<span class="timeline-event__year">2020</span>
 								<span class="timeline-event__label">WebAssembly 1.0</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2021-webcodecs">
+								<span class="timeline-event__year">2021</span>
+								<span class="timeline-event__label">WebCodecs API</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-webgpu">
 								<span class="timeline-event__year">2023</span>
@@ -196,6 +212,25 @@
 			</article>
 		</template>
 
+		<template id="event-1996-flash">
+			<article class="event-detail" aria-labelledby="event-1996-flash-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1996</p>
+					<h2 id="event-1996-flash-title">Macromedia Flash 1.0</h2>
+					<p class="event-detail__summary">Flash players lit up splash pages—“Click this button, it twirls!”—proving browsers could host cinematic interaction.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Macromedia rebranded FutureSplash as Flash and demoed vector animation that stayed crisp on any monitor. Agencies rushed to craft intro reels and interactive menus, while bands launched music microsites with synchronized audio.</p>
+						<p>Users endured loading bars but reveled in motion graphics, setting expectations that the web could feel alive—not just static hyperlinks.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Although plugin-based, Flash nudged the platform toward canvas, SVG, and video tags. It conditioned teams to think in timelines, easing the later shift to JavaScript-driven animation frameworks.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-1999-xmlhttprequest">
 			<article class="event-detail" aria-labelledby="event-1999-xmlhttprequest-title">
 				<header class="event-detail__header">
@@ -234,6 +269,25 @@
 			</article>
 		</template>
 
+		<template id="event-2006-jquery">
+			<article class="event-detail" aria-labelledby="event-2006-jquery-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2006</p>
+					<h2 id="event-2006-jquery-title">jQuery 1.0</h2>
+					<p class="event-detail__summary">With “Write less, do more,” jQuery unified a fractured DOM—developers finally shipped cross-browser effects without rewrites.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>John Resig unveiled a chainable API that normalized selectors, events, and animation. Teams dropped bags of conditional comments and maintained one script that ran from IE6 to Firefox.</p>
+						<p>Plugins flourished: lightboxes, tabs, sliders, autocomplete—all composable with a single `$(".widget").plugin()` call.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>jQuery popularized fluent APIs and a vibrant plugin ecosystem. It paved the way for modern utility libraries and helped developers acclimate to JavaScript-heavy frontends before frameworks took over.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-2009-nodejs">
 			<article class="event-detail" aria-labelledby="event-2009-nodejs-title">
 				<header class="event-detail__header">
@@ -248,6 +302,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>Node popularized non-blocking I/O patterns and birthed the package ecosystem that fuels today’s front-end tooling.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2011-websocket">
+			<article class="event-detail" aria-labelledby="event-2011-websocket-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2011</p>
+					<h2 id="event-2011-websocket-title">WebSocket Standard Published</h2>
+					<p class="event-detail__summary">IETF finalized WebSocket, and chat startups boasted, “No more ping hacks—this stays open as long as you need.”</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Browsers shipped the Upgrade handshake so apps could keep one persistent connection alive. Trading floors streamed prices, multiplayer games synchronized positions, and support teams embedded real-time chat without Flash.</p>
+						<p>Developers ditched comet and long-poll workarounds, simplifying infrastructure while lowering latency.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>WebSocket laid the groundwork for realtime APIs and influenced later specs like WebRTC’s data channels. It remains the baseline for push notifications and collaborative editing.</p>
 					</div>
 				</section>
 			</article>
@@ -271,7 +344,7 @@
 				</section>
 			</article>
 		</template>
-
+		
 		<template id="event-2014-service-worker">
 			<article class="event-detail" aria-labelledby="event-2014-service-worker-title">
 				<header class="event-detail__header">
@@ -305,6 +378,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>WebAssembly introduced a secure binary format, linear memory, and streaming compilation—features now used in serverless runtimes and edge workers.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2021-webcodecs">
+			<article class="event-detail" aria-labelledby="event-2021-webcodecs-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2021</p>
+					<h2 id="event-2021-webcodecs-title">WebCodecs Arrives</h2>
+					<p class="event-detail__summary">Chrome shipped WebCodecs, and streaming engineers cheered—finally, low-latency pipelines without brittle plugin fallbacks.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>Video platforms prototyped real-time editing tools where creators trimmed clips entirely client-side. Cloud gaming teams shaved frame delays by decoding streams on the spot while keeping controller feedback tight.</p>
+						<p>Developers gained direct access to hardware decoders, stitching WebRTC, Canvas, and Workers into seamless multimedia workflows.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>WebCodecs complements WebAssembly and WebGPU, turning the browser into a production studio for encoding, compositing, and playback—without native dependencies.</p>
 					</div>
 				</section>
 			</article>

@@ -263,6 +263,10 @@
 								<span class="timeline-event__year">1991</span>
 								<span class="timeline-event__label">첫 웹사이트 공개</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1992-line-mode">
+								<span class="timeline-event__year">1992</span>
+								<span class="timeline-event__label">Line Mode 브라우저 확장</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1993-mosaic">
 								<span class="timeline-event__year">1993</span>
 								<span class="timeline-event__label">Mosaic 공개</span>
@@ -322,6 +326,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-ajax">
 								<span class="timeline-event__year">2005</span>
 								<span class="timeline-event__label">Ajax 패턴 확산</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-google-maps">
+								<span class="timeline-event__year">2005</span>
+								<span class="timeline-event__label">Google Maps 대화형 지도</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2007-mobile-web">
 								<span class="timeline-event__year">2007</span>
@@ -607,6 +615,25 @@
 			</article>
 		</template>
 
+		<template id="event-1992-line-mode">
+			<article class="event-detail" aria-labelledby="event-1992-line-mode-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1992</p>
+					<h2 id="event-1992-line-mode-title">Line Mode 브라우저 확장</h2>
+					<p class="event-detail__summary">"터미널에서도 링크를 누를 수 있어요." CERN 팀이 라인 모드 브라우저를 배포하며 누구나 텍스트 환경에서 웹을 읽을 수 있게 만들었습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>1992년 초, CERN의 니콜라 펠로와 토마스 레이놀즈는 텍스트만 있는 터미널에서도 웹을 탐색할 수 있는 Line Mode 브라우저를 공개했습니다. "모뎀으로 접속해도 링크를 왔다 갔다 할 수 있어요"라는 설명과 함께, 방향키와 숫자 키로 이동하는 시연 영상을 배포했습니다.</p>
+						<p>초기 인터넷 사용자는 “그래픽 카드가 없어도 이걸로 읽고 북마크할 수 있네”라며 환호했고, 대학 Unix 서버에 일제히 설치되었습니다. 텍스트 기반이라 배포도 가벼워, 연구소 밖의 일반 해커와 동호회까지 빠르게 퍼져 나갔습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>라인 모드 브라우저는 "하드웨어 조건이 달라도 웹은 같은 문서로 연결돼야 한다"는 웹의 철학을 실현했습니다. 서버와 브라우저는 여전히 정적인 HTML만 주고받았지만, 접근성이 높아지면서 "웹은 특정 기기에 묶이지 않는다"는 인식이 생겼고, 이후 반응형 레이아웃과 접근성 표준 논의의 기초가 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-1993-mosaic">
 			<article class="event-detail" aria-labelledby="event-1993-mosaic-title">
 				<header class="event-detail__header">
@@ -795,6 +822,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>Ajax는 “필요한 데이터만 몰래 가져와 화면 일부만 바꾼다”는 단순한 아이디어입니다. 서버는 JSON 같은 데이터를 준비하고, 브라우저는 DOM을 직접 고쳐 사용자에게 즉시 반응했습니다. 이 방식이 REST API 확산과 맞물리며 프론트엔드와 백엔드 분업을 한층 뚜렷하게 만들었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2005-google-maps">
+			<article class="event-detail" aria-labelledby="event-2005-google-maps-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2005</p>
+					<h2 id="event-2005-google-maps-title">Google Maps 대화형 지도</h2>
+					<p class="event-detail__summary">“마우스로 지도를 끌어보세요.” 구글이 지도 타일을 즉시 불러오는 데모를 보여 주며 Ajax의 가능성을 전 세계에 각인시켰습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2005년 2월, 구글은 새 지도 서비스를 공개하며 기자들에게 “손으로 화면을 끌어도 페이지가 다시 로드되지 않습니다”라고 강조했습니다. 사용자가 지도를 이리저리 움직이자, 타일이 부드럽게 이어졌고 검색 결과도 한쪽 패널에서 바로 반영되었습니다.</p>
+						<p>실제로 지도 화면은 브라우저가 필요한 타일 이미지를 비동기로 요청해 조각처럼 이어 붙이는 구조였습니다. 제품팀은 “이 패턴이면 대시보드와 쇼핑몰도 자연스럽게 만들 수 있겠네”라며 곧바로 자사 서비스에 적용하기 시작했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Google Maps는 Ajax 패턴을 시각적으로 증명해 준 서비스였습니다. 브라우저는 사용자 동작을 감지해 필요한 데이터만 요청했고, 서버는 타일, 좌표, 장소 정보를 가볍게 제공했습니다. 이 모델은 이후 SPA 프레임워크와 지도/데이터 시각화 라이브러리의 기본 구조가 되어 "프론트는 상태와 렌더링", "백엔드는 데이터 공급"이라는 역할 구분을 확고히 했습니다.</p>
 					</div>
 				</section>
 			</article>

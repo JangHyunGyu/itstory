@@ -105,6 +105,10 @@
 								<span class="timeline-event__year">1996</span>
 								<span class="timeline-event__label">CSS1 권고</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1998-css2">
+								<span class="timeline-event__year">1998</span>
+								<span class="timeline-event__label">CSS2 권고</span>
+							</button>
 						</div>
 					</section>
 					<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
@@ -117,6 +121,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2003-css-zengarden">
 								<span class="timeline-event__year">2003</span>
 								<span class="timeline-event__label">CSS Zen Garden</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2006-firebug">
+								<span class="timeline-event__year">2006</span>
+								<span class="timeline-event__label">Firebug 1.0</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2009-sass">
 								<span class="timeline-event__year">2009</span>
@@ -139,6 +147,10 @@
 								<span class="timeline-event__year">2017</span>
 								<span class="timeline-event__label">CSS Grid 지원</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2018-css-vars">
+								<span class="timeline-event__year">2018</span>
+								<span class="timeline-event__label">CSS 커스텀 속성</span>
+							</button>
 						</div>
 					</section>
 					<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
@@ -151,6 +163,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2021-container-queries">
 								<span class="timeline-event__year">2021</span>
 								<span class="timeline-event__label">컨테이너 쿼리 시연</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2022-css-layers">
+								<span class="timeline-event__year">2022</span>
+								<span class="timeline-event__label">CSS 캐스케이드 레이어</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-css-nesting">
 								<span class="timeline-event__year">2023</span>
@@ -266,6 +282,25 @@
 			</article>
 		</template>
 
+		<template id="event-1998-css2">
+			<article class="event-detail" aria-labelledby="event-1998-css2-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1998</p>
+					<h2 id="event-1998-css2-title">CSS2 권고, 레이아웃과 미디어를 세분화하다</h2>
+					<p class="event-detail__summary">W3C가 CSS2를 발표하며 “스크린·프린트·음성마다 규칙을 나눠 쓰자.”고 제안하자, 스타일 전략이 한층 정교해졌습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>1998년 W3C 브리핑에서 하콘 비움 리는 `@media print`와 절대·상대 위치 지정이 담긴 CSS2 초안을 소개했습니다. 컨퍼런스 참가자 미나는 “이제 메뉴는 고정하고 내용만 스크롤하게 할 수 있겠네요.”라며 즉석에서 데모를 따라 했습니다.</p>
+						<p>신문사와 포털은 같은 HTML을 두고 인쇄 스타일과 화면 스타일을 분리했습니다. 접근성 팀은 `aural` 미디어 타입으로 음성 브라우저를 지원하며 “스타일만 바꿔도 사용자 경험이 달라진다.”는 사실을 증명했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>CSS2는 포지셔닝, z-index, 미디어 쿼리 전신, @font-face를 명세하면서 레이아웃과 타이포그래피를 코드로 제어할 기반을 마련했습니다. 프론트엔드는 구조를 건드리지 않고 연출을 조정할 수 있게 됐고, 백엔드는 같은 마크업을 여러 채널로 재사용하며 퍼블리싱 효율을 높였습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-2003-css-zengarden">
 			<article class="event-detail" aria-labelledby="event-2003-css-zengarden-title">
 				<header class="event-detail__header">
@@ -280,6 +315,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>Zen Garden은 구조와 표현 분리를 실감나게 보여 준 사례입니다. CSS만으로 디자인을 교체할 수 있다는 메시지가 퍼지며, 테이블 레이아웃에서 CSS 레이아웃으로 전환하려는 팀이 늘어났습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2006-firebug">
+			<article class="event-detail" aria-labelledby="event-2006-firebug-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2006</p>
+					<h2 id="event-2006-firebug-title">Firebug 1.0, 스타일 디버깅이 실시간이 되다</h2>
+					<p class="event-detail__summary">파이어폭스 확장 Firebug가 “요소를 클릭하면 규칙이 바로 보입니다.”라며 발표되자 프론트엔드 팀이 밤새 디버깅을 갈아탔습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2006년, 조 롤이 Mozilla Summit에서 Firebug를 시연했습니다. 요소를 클릭하자 오른쪽 패널에 적용된 CSS와 상속 경로가 즉시 나타났고, 색상 값을 수정하자 화면이 곧바로 바뀌었습니다. 관객은 “뷰소스 시대가 끝났네!”라며 탄성을 질렀습니다.</p>
+						<p>웹 에이전시들은 그날 밤부터 테이블을 Flexbox로, float를 정리하며 실험했습니다. 스타일 수정이 저장 없이 이루어지자 디자인 검수 회의도 훨씬 가벼워졌습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Firebug는 DOM 검사, CSS 실시간 편집, 네트워크 패널을 제공하며 개발자 도구의 표준을 정했습니다. 이후 Chrome DevTools, Safari Web Inspector 등 모든 브라우저가 비슷한 기능을 기본 제공했고, 스타일 시스템도 빠른 피드백을 전제로 설계되기 시작했습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -342,6 +396,25 @@
 			</article>
 		</template>
 
+		<template id="event-2018-css-vars">
+			<article class="event-detail" aria-labelledby="event-2018-css-vars-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2018</p>
+					<h2 id="event-2018-css-vars-title">CSS 커스텀 속성, 테마를 변수로 관리하다</h2>
+					<p class="event-detail__summary">브라우저가 커스텀 속성을 안정 지원하자 디자이너들은 “--brand-color만 바꾸면 브랜드 전체가 바뀐다.”며 토큰 전략을 확산시켰습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2018년, 모든 메이저 브라우저가 CSS 커스텀 속성을 기본 지원하면서 디자인 시스템 팀은 색상과 거리 값을 변수로 묶었습니다. 프론트엔드 개발자 진수는 `:root { --spacing-md: 1.5rem; }`를 선언하고 “테마 JSON만 바꾸면 전체 간격이 맞춰져요.”라고 설명했습니다.</p>
+						<p>React, Vue 컴포넌트 라이브러리는 커스텀 속성을 토큰으로 사용하며, 고객사별 테마 교체 시간을 크게 줄였습니다. 사용자들에게는 다크 모드 전환이 실시간으로 제공됐습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>커스텀 속성은 런타임에 값이 바뀌고 자식 요소가 상속받는다는 점에서 전처리기 변수와 다릅니다. 덕분에 프론트엔드는 테마, 상태, 사용자 설정을 CSS 계층에서 직접 표현할 수 있고, 백엔드는 토큰 파일을 내려주어 다중 브랜드를 지원할 수 있게 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-2021-container-queries">
 			<article class="event-detail" aria-labelledby="event-2021-container-queries-title">
 				<header class="event-detail__header">
@@ -356,6 +429,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>컨테이너 쿼리는 요소가 자신의 부모 크기나 스타일 컨텍스트를 기준으로 조건을 평가하도록 했습니다. 컴포넌트 단위로 반응형을 설계할 수 있어, 디자인 시스템과 모듈화 전략이 크게 단순해졌습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2022-css-layers">
+			<article class="event-detail" aria-labelledby="event-2022-css-layers-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2022</p>
+					<h2 id="event-2022-css-layers-title">CSS 캐스케이드 레이어, 충돌을 설계로 관리하다</h2>
+					<p class="event-detail__summary">사양 edit 팀이 “레이어마다 우선순위를 지정하자.”고 제안하자, 대형 서비스는 스타일 충돌을 정리한 레이어 가이드를 채택했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2022년, Chrome 99와 Firefox 97이 <code>@layer</code>를 지원하자 디자인 시스템 팀은 `@layer reset, base, components, utilities;`를 선언한 뒤 슬랙에 붙여 넣었습니다. QA 엔지니어 세라는 “reset 레이어 덕분에 유틸 클래스가 마음대로 덮어쓰지 못하네요.”라며 안도했습니다.</p>
+						<p>대시보드 제품은 기능별 레이어를 분리해 실험 기능이 기본 테마를 망가뜨리지 않도록 했고, 오픈소스 프레임워크는 레이어 순서를 문서화하며 협업 규칙을 공유했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>캐스케이드 레이어는 CSS 우선순위를 선언적으로 관리할 수 있게 했습니다. 프론트엔드는 레이어별 책임을 문서화해 충돌을 예방하고, 백엔드는 빌드 도구에서 레이어를 병합해 테마 패키지를 배포하며 다중 브랜드 환경을 안정화했습니다.</p>
 					</div>
 				</section>
 			</article>

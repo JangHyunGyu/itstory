@@ -84,6 +84,10 @@
 								<span class="timeline-event__year">1995</span>
 								<span class="timeline-event__label">JavaScript 발표</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1996-flash">
+								<span class="timeline-event__year">1996</span>
+								<span class="timeline-event__label">Macromedia Flash 1.0</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1999-xmlhttprequest">
 								<span class="timeline-event__year">1999</span>
 								<span class="timeline-event__label">XMLHttpRequest 도입</span>
@@ -101,6 +105,10 @@
 								<span class="timeline-event__year">2005</span>
 								<span class="timeline-event__label">Ajax 아티클</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2006-jquery">
+								<span class="timeline-event__year">2006</span>
+								<span class="timeline-event__label">jQuery 1.0</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2009-nodejs">
 								<span class="timeline-event__year">2009</span>
 								<span class="timeline-event__label">Node.js 공개</span>
@@ -114,6 +122,10 @@
 							<p class="timeline-group__summary">React가 상태 중심 UI를 보여주고 Service Worker가 오프라인 경험을 가능하게 하며, 웹앱이 네이티브 앱과 맞붙기 시작했습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2011-websocket">
+								<span class="timeline-event__year">2011</span>
+								<span class="timeline-event__label">WebSocket 표준</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2013-react">
 								<span class="timeline-event__year">2013</span>
 								<span class="timeline-event__label">React 공개</span>
@@ -134,6 +146,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2020-wasm">
 								<span class="timeline-event__year">2020</span>
 								<span class="timeline-event__label">WebAssembly 1.0 채택</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2021-webcodecs">
+								<span class="timeline-event__year">2021</span>
+								<span class="timeline-event__label">WebCodecs API</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-webgpu">
 								<span class="timeline-event__year">2023</span>
@@ -192,6 +208,25 @@
 			</article>
 		</template>
 
+		<template id="event-1996-flash">
+			<article class="event-detail" aria-labelledby="event-1996-flash-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">1996</p>
+					<h2 id="event-1996-flash-title">Macromedia Flash 1.0, 애니메이션과 인터랙션의 돌풍</h2>
+					<p class="event-detail__summary">“버튼이 춤을 추네!” Flash 플레이어가 배포되자 웹사이트는 음악과 모션으로 사용자 시선을 붙잡았습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>1996년 Macromedia는 FutureSplash를 인수해 Flash 1.0을 공개했습니다. 에이전시 디자이너 윤아는 마우스를 올리면 반응하는 네비게이션을 만들어 보여 주며 “GIF로는 못 하던 일이 가능해졌어요.”라고 말했습니다.</p>
+						<p>브랜드 사이트와 뮤직비디오 프로모션이 Flash를 채택했고, 방송국은 “로딩 바가 끝나면 풀 화면 애니메이션이 펼쳐진다”고 홍보했습니다. 사용자들은 처음으로 브라우저에서 풀 모션 인터랙션을 경험했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Flash는 벡터 그래픽, 타임라인 애니메이션, ActionScript 스크립트를 제공하면서 웹 인터랙션을 시각적으로 표현할 수 있게 했습니다. 표준 기반이 아니었지만 “브라우저 안에서 앱처럼 움직인다”는 기대를 키워, 이후 캔버스, SVG, WebGL 같은 표준 기술 개발에 자극을 주었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-1999-xmlhttprequest">
 			<article class="event-detail" aria-labelledby="event-1999-xmlhttprequest-title">
 				<header class="event-detail__header">
@@ -230,6 +265,25 @@
 			</article>
 		</template>
 
+		<template id="event-2006-jquery">
+			<article class="event-detail" aria-labelledby="event-2006-jquery-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2006</p>
+					<h2 id="event-2006-jquery-title">jQuery 1.0, DOM 제어를 한 줄로</h2>
+					<p class="event-detail__summary">존 레식은 “한 줄이면 됩니다.”라고 말하며 <code>$("#menu li")</code> 데모를 선보였고, 전 세계 개발자가 같은 API를 쓰기 시작했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2006년 BarCamp에서 레식은 슬라이드 대신 브라우저 콘솔을 열어 `$("#todo li").addClass("done")`를 실행했습니다. 관객은 “브라우저마다 다르게 동작하던 작업이 한 번에 끝나네!”라며 환호했습니다.</p>
+						<p>곧이어 플러그인 생태계가 폭발하며 슬라이더, 모달, Ajax 래퍼가 공유되었습니다. 디자이너와 개발자는 같은 API로 이벤트와 애니메이션을 다뤘습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>jQuery는 CSS 선택자 기반 DOM 조작, 체이닝, Ajax 헬퍼를 제공해 브라우저 호환성을 숨겼습니다. 프론트엔드는 인터랙션 구현 속도를 크게 높였고, 백엔드는 REST/JSON 응답으로 데이터를 제공하며 협업 구조를 단순화했습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-2009-nodejs">
 			<article class="event-detail" aria-labelledby="event-2009-nodejs-title">
 				<header class="event-detail__header">
@@ -244,6 +298,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>Node.js는 V8 엔진과 이벤트 루프를 재사용해 서버에서도 JavaScript를 활용하도록 했습니다. 프런트와 백엔드 로직을 하나의 언어로 다루게 되면서, 인터랙션 개발 사이클이 빨라졌습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2011-websocket">
+			<article class="event-detail" aria-labelledby="event-2011-websocket-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2011</p>
+					<h2 id="event-2011-websocket-title">WebSocket 표준, 실시간 대화의 시작</h2>
+					<p class="event-detail__summary">IETF가 WebSocket을 승인하자 제품팀은 “폴링 없이 채팅이 된다!”며 대화형 서비스를 본격화했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2011년, HTML5 표준화 회의장에서 이안 히콘은 브라우저-서버 간 양방향 소켓 데모를 보여주었습니다. 콘솔에 “Hello”를 치자 서버가 즉시 답했고, 참석자들은 “이제 롱 폴링을 버려도 되겠네요.”라고 말했다.</p>
+						<p>트레이딩, 게임, 고객 지원 챗봇이 WebSocket으로 실시간 알림을 구현했고, 기업용 메신저는 기존 폴링 코드에서 벗어나 서버 부하를 크게 줄였습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>WebSocket은 하나의 TCP 연결에서 양방향 메시지를 주고받아 지연을 줄였습니다. 프론트엔드는 이벤트 기반 상태 업데이트를 구현하고, 백엔드는 메시지 브로커와 연계해 실시간 시스템을 구축했습니다. 이는 이후 GraphQL Subscriptions, WebRTC 같은 스트리밍 기술의 토대를 닦았습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -301,6 +374,25 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>WebAssembly는 빠른 로딩과 네이티브에 가까운 성능을 제공해, 브라우저가 고성능 애플리케이션 플랫폼으로 도약하는 기반이 되었습니다. 다양한 언어가 웹 런타임을 목표로 삼게 되었습니다.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2021-webcodecs">
+			<article class="event-detail" aria-labelledby="event-2021-webcodecs-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2021</p>
+					<h2 id="event-2021-webcodecs-title">WebCodecs API, 딜레이 없는 영상 처리</h2>
+					<p class="event-detail__summary">Chrome 94가 WebCodecs를 도입하자 “브라우저에서 직접 인코더를 돌리자”는 실시간 미디어 실험이 폭발했습니다.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>2021년 Google I/O 세션에서 엔지니어 사라는 WebCodecs로 웹캠 피드를 8ms 안에 처리하는 데모를 보여주었습니다. 참가자들은 “이제 스트리밍 앱이 데스크톱 앱과 같은 속도를 내네!”라고 놀랐습니다.</p>
+						<p>협업 화이트보드, 클라우드 게임, 비디오 편집 SaaS가 WebCodecs를 도입해 저지연 영상 전송과 AR 필터를 구현했습니다. 기존 WebRTC 파이프라인에 새로운 가속 옵션이 더해졌습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>WebCodecs는 디코더·인코더에 직접 접근하게 해 GPU 가속과 하드웨어 코덱을 활용할 수 있게 했습니다. 프론트엔드는 영상·음성 처리 지연을 줄였고, 백엔드는 가벼운 바이트스트림을 제공하며 협업 도구와 미디어 서비스의 품질을 높였습니다.</p>
 					</div>
 				</section>
 			</article>
