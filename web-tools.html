@@ -58,12 +58,15 @@
 				<section class="timeline-hero" aria-labelledby="timeline-title">
 					<div class="timeline-hero__head">
 						<p class="hero__eyebrow">Tools Story for Makers</p>
-						<h1 class="timeline-hero__title" id="timeline-title">웹을 만드는 손을 도운 도구들의 진화</h1>
+						<h1 class="timeline-hero__title" id="timeline-title">“이 도구가 있으면 더 빨라질까?”를 묻던 제작자들</h1>
 						<p class="timeline-hero__lede">
-							시각 편집기, 버전 관리, 모듈 번들러, 클라우드 IDE, 그리고 AI 동료까지. “어떻게 하면 더 빨리, 안전하게 웹을 배포할까?”라는 질문을 해결한 도구의 역사를 모았습니다.
+							1997년 스튜디오에서 디자이너 민경이 말했습니다. “그냥 드래그하면 페이지가 만들어지네요?” Dreamweaver 화면을 본 개발자는 곧바로 코드 창을 확인하며 웃었죠. 같은 시기 팀들은 “소스 파일을 어디에 모아두지?”라며 CVS 서버를 세웠습니다.
 						</p>
 						<p class="timeline-hero__lede">
-							각 사건 카드를 누르면 도구를 만든 사람과 맞닥뜨린 문제, 이를 해결한 방식이 모달로 펼쳐집니다. 사용자가 직접 체감한 변화도 함께 소개합니다.
+							2000년대엔 분산 버전 관리와 GitHub가 등장했고, 누구나 “브랜치를 파고 Pull Request로 리뷰하자”라고 외쳤습니다. 이어 Grunt와 Webpack이 “반복 작업은 자동화하자”, “모듈은 번들로 묶자”는 메시지를 남겼고, Netlify는 단추 한 번으로 전 세계에 배포하는 습관을 심었습니다.
+						</p>
+						<p class="timeline-hero__lede">
+							이제는 Codespaces와 AI 동료가 “노트북 세팅 말고 바로 코드를 치자”, “설명만 하면 초안이 나온다”라고 속삭입니다. 아래 카드를 눌러 당시 제작자들이 어떤 문제를 겪었고, 어떤 도구로 해결했는지 가볍게 따라가 보세요.
 						</p>
 					</div>
 				</section>
@@ -73,8 +76,8 @@
 					<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1990">1990s</p>
-							<h3 class="timeline-group__topic" id="topic-1990">시각 편집과 버전 관리의 출발</h3>
-							<p class="timeline-group__summary">WYSIWYG 웹 편집기와 협업을 위한 버전 관리가 보급되며, 팀이 코드와 디자인을 함께 다루기 시작했습니다.</p>
+							<h3 class="timeline-group__topic" id="topic-1990">“드래그하면 코드가 따라온다”</h3>
+							<p class="timeline-group__summary">WYSIWYG 편집기와 초기 버전 관리가 퍼지며, 디자이너와 개발자가 한 화면에서 결과를 맞춰 보기 시작했습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-dreamweaver">
@@ -90,8 +93,8 @@
 					<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2000">2000s</p>
-							<h3 class="timeline-group__topic" id="topic-2000">분산 버전 관리와 협업 플랫폼</h3>
-							<p class="timeline-group__summary">Git과 GitHub가 등장하며, 분산 협업과 오픈소스 워크플로가 일상이 되었습니다.</p>
+							<h3 class="timeline-group__topic" id="topic-2000">“브랜치 파고 PR로 모이자”</h3>
+							<p class="timeline-group__summary">Git과 GitHub가 분산 협업을 정착시키며, 오픈소스와 사내 팀 모두 Pull Request와 Issue 중심으로 움직이기 시작했습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-git">
@@ -107,8 +110,8 @@
 					<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2010">2010s</p>
-							<h3 class="timeline-group__topic" id="topic-2010">프런트엔드 빌드와 자동화</h3>
-							<p class="timeline-group__summary">태스크 러너, 모듈 번들러, 자동 배포 서비스가 정착하며, 코드가 커져도 관리와 배포가 쉬워졌습니다.</p>
+							<h3 class="timeline-group__topic" id="topic-2010">“반복 작업은 스크립트가 맡습니다”</h3>
+							<p class="timeline-group__summary">태스크 러너, 모듈 번들러, 자동 배포가 자리 잡으며, 복잡한 프런트엔드도 꾸준히 빌드·배포할 수 있게 됐습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2012-grunt">
@@ -128,8 +131,8 @@
 					<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2020">2020s</p>
-							<h3 class="timeline-group__topic" id="topic-2020">클라우드 IDE와 AI 파트너</h3>
-							<p class="timeline-group__summary">브라우저에서 바로 코드를 작성하고, AI와 함께 작업하는 도구가 실무에 스며들며 제작 방식이 다시 바뀌고 있습니다.</p>
+							<h3 class="timeline-group__topic" id="topic-2020">“설치 없이 개발하고, AI와 짝코딩”</h3>
+							<p class="timeline-group__summary">클라우드 IDE와 AI 파트너가 온보딩과 코드 작성을 거들며, 제작 흐름이 다시 한 번 재편되고 있습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2021-codespaces">
@@ -179,7 +182,7 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1997</p>
 					<h2 id="event-1997-dreamweaver-title">Dreamweaver 1.0, WYSIWYG 웹 편집기의 상징</h2>
-					<p class="event-detail__summary">매크로미디어가 Dreamweaver를 선보이자 디자이너는 코드 없이 레이아웃을 잡고, 개발자는 즉시 HTML을 확인할 수 있게 됐습니다.</p>
+					<p class="event-detail__summary">“그냥 드래그했는데 HTML이 따라오네!” Dreamweaver는 디자이너와 개발자가 한 화면을 공유하게 만들었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -198,7 +201,7 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1999</p>
 					<h2 id="event-1999-cvs-hosting-title">CVS 호스팅, 원격 협업의 씨앗</h2>
-					<p class="event-detail__summary">SourceForge 같은 서비스가 등장하며, 팀은 중앙 서버에 코드를 저장하고 버전 히스토리를 공유하기 시작했습니다.</p>
+					<p class="event-detail__summary">팀이 “중앙 서버에 올려두자”라며 CVS 호스팅을 쓰기 시작하자, 원격 협업의 문이 열렸습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -217,7 +220,7 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2005</p>
 					<h2 id="event-2005-git-title">Git, 분산 버전 관리의 전환점</h2>
-					<p class="event-detail__summary">리누스 토르발스가 Git을 만들며, 개발자는 로컬에서 안전하게 실험하고 분산 협업을 할 수 있게 됐습니다.</p>
+					<p class="event-detail__summary">“로컬에서 마음껏 브랜치를 파도 된다!” Git은 분산 버전 관리의 전환점을 만들었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -236,7 +239,7 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2008</p>
 					<h2 id="event-2008-github-title">GitHub, 소셜 코딩의 무대</h2>
-					<p class="event-detail__summary">GitHub가 등장하며 Pull Request, Issue, Wiki가 하나로 묶여 오픈소스와 사내 협업이 단숨에 가속했습니다.</p>
+					<p class="event-detail__summary">개발자들이 “PR 보내줘”라고 말하기 시작한 건 GitHub가 리뷰와 Issue를 한 무대에 올렸기 때문입니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -255,7 +258,7 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2012</p>
 					<h2 id="event-2012-grunt-title">Grunt 0.4, 태스크 자동화의 시대</h2>
-					<p class="event-detail__summary">Grunt가 등장하며 빌드, 압축, 린트 작업을 스크립트로 묶는 문화가 본격화되었습니다.</p>
+					<p class="event-detail__summary">“버튼 한 번이면 린트·빌드 끝!” Grunt가 반복 작업을 스크립트로 묶는 문화를 열었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -274,7 +277,7 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2014</p>
 					<h2 id="event-2014-webpack-title">Webpack 1.0, 모듈 번들링의 표준</h2>
-					<p class="event-detail__summary">Webpack이 코드 스플리팅과 로더 개념을 소개하자, 대형 SPA도 구조적으로 관리할 수 있게 됐습니다.</p>
+					<p class="event-detail__summary">팀이 “코드 스플리팅으로 첫 화면을 줄이자”라 말하며 Webpack을 표준 번들러로 삼았습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -293,7 +296,7 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2016</p>
 					<h2 id="event-2016-netlify-title">Netlify, 빌드와 배포를 한 번에</h2>
-					<p class="event-detail__summary">Netlify가 깃 연동 CI/CD를 제공하며, 정적 사이트와 JAMstack 배포가 버튼 클릭으로 가능해졌습니다.</p>
+					<p class="event-detail__summary">“PR에 미리보기 링크가 따라오네?” Netlify는 깃 연동 배포를 버튼 한 번으로 만들었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -312,7 +315,7 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2021</p>
 					<h2 id="event-2021-codespaces-title">GitHub Codespaces, 브라우저 속 개발 환경</h2>
-					<p class="event-detail__summary">GitHub가 Codespaces를 일반 제공하면서, 팀은 브라우저에서 VS Code 환경을 즉시 띄워 협업할 수 있게 됐습니다.</p>
+					<p class="event-detail__summary">입사 첫날 “브라우저만 열면 VS Code가 뜬다”는 놀라움이 Codespaces 도입으로 퍼졌습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -331,7 +334,7 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2023</p>
 					<h2 id="event-2023-ai-assist-title">AI 코드 동료, 개발 프로세스에 들어오다</h2>
-					<p class="event-detail__summary">AI 기반 코드 보조가 상용화되며, 개발자는 에디터 안에서 자연어로 코드를 제안받고 리뷰를 자동화하기 시작했습니다.</p>
+					<p class="event-detail__summary">“함수 설명만 했는데 테스트가 짜였어!” AI 코드 동료가 에디터 속 파트너로 자리 잡았습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">

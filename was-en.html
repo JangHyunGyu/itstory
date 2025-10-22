@@ -60,13 +60,15 @@
 				<section class="timeline-hero" aria-labelledby="timeline-title">
 					<div class="timeline-hero__head">
 						<p class="hero__eyebrow">Web Server Story for Backend Builders</p>
-						<h1 class="timeline-hero__title" id="timeline-title">Follow how requests moved from servlets to serverless, and how teams kept web servers ready for change</h1>
+						<h1 class="timeline-hero__title" id="timeline-title">“Can we trust the response?” The operators who kept web servers evolving</h1>
 						<p class="timeline-hero__lede">
-							The first web daemons only returned static HTML. Everything shifted once users asked for personalized responses. Servlet specs defined the request and response flow, Tomcat containers juggled sessions and threads, and operators slowly reclaimed their evenings.
+							In 1990 a CERN researcher gasped, “I click one link and the paper opens?” Tim Berners-Lee grinned and said, “Just send a GET.” From that moment the server stopped being a dusty file cabinet and became an active teammate.
 						</p>
 						<p class="timeline-hero__lede">
-							This timeline walks through CERN httpd, the arrival of SSL, proxy and load balancing tricks, HttpSession storage, the birth of servlet containers, lightweight frameworks, cache clusters, Nginx, Spring Boot, serverless, and Kubernetes Ingress.
-							Pair it with the web-making timelines to see how frontends and servers split the work.
+							Soon teams demanded, “Remember each user, encrypt their session, split traffic from logic.” Servlet specs promised consistent request objects, Tomcat bragged “Drop in a WAR, I’ll handle threads,” and SSL crews flashed lock icons to win over finance leads.
+						</p>
+						<p class="timeline-hero__lede">
+							Today operators demo Nginx configs, Spring Boot starters, Lambda triggers, and Kubernetes Ingress rules while saying, “Setup is scripted, scaling is automatic.” Pick a year to hear the quote, the pain, and the pattern each tool left behind.
 						</p>
 					</div>
 				</section>
@@ -77,8 +79,8 @@
 					<section class="timeline-group" aria-labelledby="decade-1990-webserver topic-1990-webserver">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1990-webserver">1990–1995</p>
-							<h3 class="timeline-group__topic" id="topic-1990-webserver">First web servers and the open-source wave</h3>
-							<p class="timeline-group__summary">Tim Berners-Lee's CERN httpd understood HTML links, then NCSA HTTPd and Apache landed with source code in tow, letting anyone install and patch their own server.</p>
+							<h3 class="timeline-group__topic" id="topic-1990-webserver">“Drag the code, run your own server”</h3>
+							<p class="timeline-group__summary">CERN, NCSA, and Apache teams handed out source tarballs and said, “Install it yourself,” igniting the open-source web server wave.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1990-cern-httpd">
@@ -99,8 +101,8 @@
 					<section class="timeline-group" aria-labelledby="decade-1994-infra topic-1994-infra">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1994-infra">1994–1998</p>
-							<h3 class="timeline-group__topic" id="topic-1994-infra">Security and traffic control foundations</h3>
-							<p class="timeline-group__summary">SSL encrypted traffic, Apache mod_proxy and Linux Virtual Server split edges from backend logic, and the idea of front web tier plus application tier took hold.</p>
+							<h3 class="timeline-group__topic" id="topic-1994-infra">“Edge handles the lock, backend handles the logic”</h3>
+							<p class="timeline-group__summary">SSL, mod_proxy, and LVS let operators declare, “Encrypt here, split traffic here,” cementing the web-tier plus app-tier split.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1994-ssl">
@@ -121,8 +123,8 @@
 					<section class="timeline-group" aria-labelledby="decade-1990-was topic-1990-was">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1990-was">1997–1999</p>
-							<h3 class="timeline-group__topic" id="topic-1990-was">Servlets and the first containers</h3>
-							<p class="timeline-group__summary">Servers learned to treat requests as objects and shepherd user sessions. Servlet specs wrote the rules and Tomcat shipped an implementation everyone could run.</p>
+							<h3 class="timeline-group__topic" id="topic-1990-was">“Requests are objects, sessions are mine”</h3>
+							<p class="timeline-group__summary">Servlet specs and Tomcat containers promised, “We’ll model the request and remember the user,” powering dynamic web apps.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-servlet">
@@ -143,8 +145,8 @@
 					<section class="timeline-group" aria-labelledby="decade-2000-was topic-2000-was">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2000-was">2003</p>
-							<h3 class="timeline-group__topic" id="topic-2000-was">Lightweight frameworks appear</h3>
-							<p class="timeline-group__summary">Spring 1.0 proved you could skip heavy EJB stacks and still gain transactions, security, and clean structure with plain Java classes.</p>
+							<h3 class="timeline-group__topic" id="topic-2000-was">“EJB isn’t the only path”</h3>
+							<p class="timeline-group__summary">Spring 1.0 told teams, “Keep plain Java classes, we’ll wire the rest,” ushering in lightweight application stacks.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2003-spring">
@@ -157,8 +159,8 @@
 					<section class="timeline-group" aria-labelledby="decade-2005-session topic-2005-session">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2005-session">2005</p>
-							<h3 class="timeline-group__topic" id="topic-2005-session">Shared sessions and caches</h3>
-							<p class="timeline-group__summary">Memcached popularized storing sessions and hot data in networked memory, making multi-node WAS clusters practical.</p>
+							<h3 class="timeline-group__topic" id="topic-2005-session">“Throw the session into the cache”</h3>
+							<p class="timeline-group__summary">Memcached fans insisted, “Store it in shared memory,” unlocking easy scaling across application nodes.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-memcached">
@@ -171,8 +173,8 @@
 					<section class="timeline-group" aria-labelledby="decade-2010-was topic-2010-was">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2010-was">2011–2015</p>
-							<h3 class="timeline-group__topic" id="topic-2010-was">Proxies, auto configuration, serverless, and cluster gateways</h3>
-							<p class="timeline-group__summary">Nginx proved a lean reverse proxy could do the heavy lifting, Spring Boot cut boilerplate, AWS Lambda shed servers entirely, and Kubernetes Ingress centralized HTTP routing for containers.</p>
+							<h3 class="timeline-group__topic" id="topic-2010-was">“Configure less, let the platform route”</h3>
+							<p class="timeline-group__summary">Nginx, Spring Boot, Lambda, and Ingress declared, “We’ll proxy, auto-configure, run on demand, and route for the cluster,” reshaping operations.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2011-nginx">
@@ -239,7 +241,7 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1990</p>
 					<h2 id="event-1990-cern-httpd-title">CERN httpd pilot</h2>
-					<p class="event-detail__summary">Tim Berners-Lee ran the first web daemon at CERN so researchers could share documents through hyperlinked HTML.</p>
+					<p class="event-detail__summary">“Hit GET and the paper appears.” Tim Berners-Lee ran CERN’s first web daemon so researchers could share linked docs.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -258,7 +260,7 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1993</p>
 					<h2 id="event-1993-ncsa-httpd-title">NCSA HTTPd release</h2>
-					<p class="event-detail__summary">The NCSA team published a downloadable HTTP server, spreading the web across universities and companies.</p>
+					<p class="event-detail__summary">Teams whispered, “Grab the tarball and run it tonight,” as NCSA HTTPd spread across campuses and companies.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -277,7 +279,7 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1995</p>
 					<h2 id="event-1995-apache-httpd-title">Apache HTTP Server 1.0</h2>
-					<p class="event-detail__summary">The Apache Group released version 1.0, showing that a community-led modular server could become the default choice.</p>
+					<p class="event-detail__summary">“Flip on the modules you need,” the Apache Group said as version 1.0 became the web’s default server.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
