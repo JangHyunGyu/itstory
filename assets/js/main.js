@@ -197,15 +197,11 @@
 	const modal = document.querySelector('#event-modal');
 	const modalWindow = modal ? modal.querySelector('.modal__window') : null;
 	const modalContent = modal ? modal.querySelector('.modal__content') : null;
-	const closeTriggers = modal ? Array.from(modal.querySelectorAll('[data-modal-close]')) : [];
-	const eventButtons = Array.from(document.querySelectorAll('[data-event-id]'));
+	const timelineRoot = document.querySelector('.timeline-grid');
+	const eventButtons = timelineRoot ? Array.from(timelineRoot.querySelectorAll('[data-event-id]')) : [];
 
 	const buildTimelineArchive = () => {
-		if (!eventButtons.length) {
-			return;
-		}
-		const timelineGrid = document.querySelector('.timeline-grid');
-		if (!timelineGrid) {
+		if (!eventButtons.length || !timelineRoot) {
 			return;
 		}
 		const language = currentDocumentLanguage === 'en' ? 'en' : 'ko';
@@ -270,10 +266,22 @@
 			details.appendChild(body);
 			listContainer.appendChild(details);
 		});
-		timelineGrid.insertAdjacentElement('afterend', archiveSection);
+		timelineRoot.insertAdjacentElement('afterend', archiveSection);
 	};
 
-	buildTimelineArchive();
+	const scheduleArchiveBuild = () => {
+		if (!eventButtons.length || !timelineRoot) {
+			return;
+		}
+		const run = () => buildTimelineArchive();
+		if (typeof window.requestIdleCallback === 'function') {
+			window.requestIdleCallback(run, { timeout: 1200 });
+		} else {
+			setTimeout(run, 200);
+		}
+	};
+
+	scheduleArchiveBuild();
 	const FOCUSABLE_SELECTOR =
 		'a[href], button:not([disabled]), textarea, input, select, summary, details, [tabindex]:not([tabindex="-1"])';
 	let lastFocusedTrigger = null;
@@ -510,12 +518,14 @@
 	};
 
 	const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+	const GLOSSARY_PATTERN = Object.keys(GLOSSARY).map(escapeRegExp).join("|");
+	const GLOSSARY_REGEX_SOURCE = GLOSSARY_PATTERN ? `\\b(${GLOSSARY_PATTERN})\\b` : '';
+	const buildGlossaryRegex = () => (GLOSSARY_REGEX_SOURCE ? new RegExp(GLOSSARY_REGEX_SOURCE, 'g') : null);
 
 	function applyGlossaryTooltips(root) {
 		if (!root) return;
-		const terms = Object.keys(GLOSSARY).map(escapeRegExp).join("|");
-		if (!terms) return;
-		const re = new RegExp(`\\b(${terms})\\b`, 'g');
+		const re = buildGlossaryRegex();
+		if (!re) return;
 
 		// 텍스트 노드만 순회하며 치환
 		const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
@@ -526,7 +536,9 @@
 			const parent = textNode.parentNode;
 			if (!parent || parent.closest('abbr')) return; // 이미 감싸진 경우 스킵
 			const text = textNode.nodeValue;
+			re.lastIndex = 0;
 			if (!re.test(text)) return;
+			re.lastIndex = 0;
 			const frag = document.createDocumentFragment();
 			let lastIndex = 0;
 			text.replace(re, (match, p1, offset) => {
@@ -647,13 +659,15 @@
 	// register touch listener as non-passive so preventDefault() is allowed
 	document.addEventListener('touchstart', __onTouchStartForGlossary, { passive: false });
 
-	eventButtons.forEach((button) => {
-		button.addEventListener('click', () => openModal(button));
-	});
-
-	closeTriggers.forEach((trigger) => {
-		trigger.addEventListener('click', () => closeModal());
-	});
+	if (timelineRoot) {
+		timelineRoot.addEventListener('click', (event) => {
+			const trigger = event.target && event.target.closest('[data-event-id]');
+			if (!trigger) {
+				return;
+			}
+			openModal(trigger);
+		});
+	}
 
 	modal.addEventListener('click', (event) => {
 		const target = event.target;
