@@ -25,46 +25,189 @@
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
-			"@type": "CollectionPage",
-			"name": "ArcherLab IT Story · 홈 허브",
-			"description": "네트워크, 컴퓨터, 운영체제, 웹, 웹 서버, 데이터베이스 타임라인을 한자리에서 살펴보는 ArcherLab IT Story 허브입니다.",
-			"url": "https://itstory.archerlab.dev/",
-			"inLanguage": "ko-KR",
-			"isPartOf": {
-				"@type": "Organization",
-				"name": "ArcherLab",
-				"url": "https://archerlab.dev/"
-			},
-			"hasPart": [
+			"@graph": [
+				{
+					"@type": "Organization",
+					"@id": "https://itstory.archerlab.dev/#organization",
+					"name": "ArcherLab",
+					"url": "https://itstory.archerlab.dev/",
+					"logo": {
+						"@type": "ImageObject",
+						"url": "https://itstory.archerlab.dev/assets/images/archerlab_mini_logo.png",
+						"width": 512,
+						"height": 512
+					},
+					"sameAs": [
+						"https://archerlab.dev/",
+						"https://walkwithme.archerlab.dev/",
+						"https://github.com/JangHyunGyu"
+					]
+				},
+				{
+					"@type": "WebSite",
+					"@id": "https://itstory.archerlab.dev/#website",
+					"url": "https://itstory.archerlab.dev/",
+					"name": "ArcherLab IT Story",
+					"inLanguage": "ko-KR",
+					"description": "네트워크, 컴퓨터, 운영체제, 웹, 웹 서버, 데이터베이스 타임라인을 한 번에 탐색하는 ArcherLab IT Story 허브입니다.",
+					"publisher": {
+						"@id": "https://itstory.archerlab.dev/#organization"
+					},
+					"potentialAction": {
+						"@type": "SearchAction",
+						"target": "https://itstory.archerlab.dev/?q={search_term_string}",
+						"query-input": "required name=search_term_string"
+					}
+				},
+				{
+					"@type": ["WebPage", "CollectionPage"],
+					"@id": "https://itstory.archerlab.dev/#hub",
+					"url": "https://itstory.archerlab.dev/",
+					"name": "ArcherLab IT Story · 홈 허브",
+					"inLanguage": "ko-KR",
+					"description": "1830년대 전신부터 현대 AI까지 이어지는 IT 연대기를 한자리에서 살펴보는 허브 페이지입니다.",
+					"isPartOf": {
+						"@id": "https://itstory.archerlab.dev/#website"
+					},
+					"publisher": {
+						"@id": "https://itstory.archerlab.dev/#organization"
+					},
+					"breadcrumb": {
+						"@id": "https://itstory.archerlab.dev/#breadcrumb"
+					},
+					"mainEntity": {
+						"@id": "https://itstory.archerlab.dev/#series-list"
+					},
+					"hasPart": [
+						{"@id": "https://itstory.archerlab.dev/#series-networks"},
+						{"@id": "https://itstory.archerlab.dev/#series-computers"},
+						{"@id": "https://itstory.archerlab.dev/#series-os"},
+						{"@id": "https://itstory.archerlab.dev/#series-web"},
+						{"@id": "https://itstory.archerlab.dev/#series-was"},
+						{"@id": "https://itstory.archerlab.dev/#series-databases"}
+					]
+				},
+				{
+					"@type": "ItemList",
+					"@id": "https://itstory.archerlab.dev/#series-list",
+					"name": "IT Story 주요 타임라인",
+					"itemListOrder": "http://schema.org/ItemListOrderAscending",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"item": {"@id": "https://itstory.archerlab.dev/#series-networks"}
+						},
+						{
+							"@type": "ListItem",
+							"position": 2,
+							"item": {"@id": "https://itstory.archerlab.dev/#series-computers"}
+						},
+						{
+							"@type": "ListItem",
+							"position": 3,
+							"item": {"@id": "https://itstory.archerlab.dev/#series-os"}
+						},
+						{
+							"@type": "ListItem",
+							"position": 4,
+							"item": {"@id": "https://itstory.archerlab.dev/#series-web"}
+						},
+						{
+							"@type": "ListItem",
+							"position": 5,
+							"item": {"@id": "https://itstory.archerlab.dev/#series-was"}
+						},
+						{
+							"@type": "ListItem",
+							"position": 6,
+							"item": {"@id": "https://itstory.archerlab.dev/#series-databases"}
+						}
+					]
+				},
 				{
 					"@type": "CreativeWorkSeries",
+					"@id": "https://itstory.archerlab.dev/#series-networks",
 					"name": "네트워크 연대기",
-					"url": "https://itstory.archerlab.dev/networks.html"
+					"url": "https://itstory.archerlab.dev/networks.html",
+					"inLanguage": "ko-KR",
+					"description": "철도 전신부터 AI 기반 동반자까지 통신 기술의 변화를 기록한 네트워크 타임라인.",
+					"keywords": ["통신사", "전신", "인터넷", "네트워크 역사"],
+					"publisher": {
+						"@id": "https://itstory.archerlab.dev/#organization"
+					}
 				},
 				{
 					"@type": "CreativeWorkSeries",
+					"@id": "https://itstory.archerlab.dev/#series-computers",
 					"name": "컴퓨터 연대기",
-					"url": "https://itstory.archerlab.dev/computers.html"
+					"url": "https://itstory.archerlab.dev/computers.html",
+					"inLanguage": "ko-KR",
+					"description": "기계식 계산기부터 클라우드 및 생성형 AI까지 컴퓨터 발전사를 다룬 타임라인.",
+					"keywords": ["컴퓨터 역사", "클라우드", "AI", "하드웨어"],
+					"publisher": {
+						"@id": "https://itstory.archerlab.dev/#organization"
+					}
 				},
 				{
 					"@type": "CreativeWorkSeries",
+					"@id": "https://itstory.archerlab.dev/#series-os",
 					"name": "운영체제 연대기",
-					"url": "https://itstory.archerlab.dev/os.html"
+					"url": "https://itstory.archerlab.dev/os.html",
+					"inLanguage": "ko-KR",
+					"description": "배치 처리에서 모바일과 클라우드 런타임까지 운영체제의 진화를 정리한 타임라인.",
+					"keywords": ["운영체제", "OS 역사", "클라우드 런타임"],
+					"publisher": {
+						"@id": "https://itstory.archerlab.dev/#organization"
+					}
 				},
 				{
 					"@type": "CreativeWorkSeries",
+					"@id": "https://itstory.archerlab.dev/#series-web",
 					"name": "웹 연대기",
-					"url": "https://itstory.archerlab.dev/web.html"
+					"url": "https://itstory.archerlab.dev/web.html",
+					"inLanguage": "ko-KR",
+					"description": "정적 웹에서 서버리스까지, 프론트엔드와 백엔드 협업 역사를 다룬 웹 제작 타임라인.",
+					"keywords": ["웹 역사", "프론트엔드", "백엔드", "서버리스"],
+					"publisher": {
+						"@id": "https://itstory.archerlab.dev/#organization"
+					}
 				},
 				{
 					"@type": "CreativeWorkSeries",
+					"@id": "https://itstory.archerlab.dev/#series-was",
 					"name": "웹 서버 연대기",
-					"url": "https://itstory.archerlab.dev/was.html"
+					"url": "https://itstory.archerlab.dev/was.html",
+					"inLanguage": "ko-KR",
+					"description": "서블릿부터 서버리스 운영까지 웹 서버(WAS)의 역할 변화를 추적한 타임라인.",
+					"keywords": ["WAS", "웹 서버", "스케일링", "프록시"],
+					"publisher": {
+						"@id": "https://itstory.archerlab.dev/#organization"
+					}
 				},
 				{
 					"@type": "CreativeWorkSeries",
+					"@id": "https://itstory.archerlab.dev/#series-databases",
 					"name": "데이터베이스 연대기",
-					"url": "https://itstory.archerlab.dev/databases.html"
+					"url": "https://itstory.archerlab.dev/databases.html",
+					"inLanguage": "ko-KR",
+					"description": "천공 카드에서 레이크하우스까지 데이터베이스 기술의 주요 전환점을 모은 타임라인.",
+					"keywords": ["데이터베이스", "RDBMS", "NoSQL", "데이터 레이크"],
+					"publisher": {
+						"@id": "https://itstory.archerlab.dev/#organization"
+					}
+				},
+				{
+					"@type": "BreadcrumbList",
+					"@id": "https://itstory.archerlab.dev/#breadcrumb",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"name": "IT Story",
+							"item": "https://itstory.archerlab.dev/"
+						}
+					]
 				}
 			]
 		}

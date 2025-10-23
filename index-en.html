@@ -25,46 +25,153 @@
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
-			"@type": "CollectionPage",
-			"name": "ArcherLab IT Story · Home Hub",
-			"description": "The ArcherLab IT Story hub that brings together timelines for networks, computers, operating systems, the web, web servers, and databases in one place.",
-			"url": "https://itstory.archerlab.dev/index-en.html",
-			"inLanguage": "en-US",
-			"isPartOf": {
-				"@type": "Organization",
-				"name": "ArcherLab",
-				"url": "https://archerlab.dev/"
-			},
-			"hasPart": [
+			"@graph": [
 				{
-					"@type": "CreativeWorkSeries",
-					"name": "Networks Timeline",
-					"url": "https://itstory.archerlab.dev/networks-en.html"
+					"@type": "Organization",
+					"@id": "https://itstory.archerlab.dev/index-en.html#organization",
+					"name": "ArcherLab",
+					"url": "https://itstory.archerlab.dev/index-en.html",
+					"logo": {
+						"@type": "ImageObject",
+						"url": "https://itstory.archerlab.dev/assets/images/archerlab_mini_logo.png",
+						"width": 512,
+						"height": 512
+					},
+					"sameAs": [
+						"https://archerlab.dev/index-en.html",
+						"https://walkwithme.archerlab.dev/index-en.html",
+						"https://github.com/JangHyunGyu"
+					]
+				},
+				{
+					"@type": "WebSite",
+					"@id": "https://itstory.archerlab.dev/index-en.html#website",
+					"url": "https://itstory.archerlab.dev/index-en.html",
+					"name": "ArcherLab IT Story",
+					"inLanguage": "en",
+					"description": "ArcherLab IT Story collects timelines for networking, computing, operating systems, the web, web servers, and databases in one place.",
+					"publisher": {
+						"@id": "https://itstory.archerlab.dev/index-en.html#organization"
+					},
+					"potentialAction": {
+						"@type": "SearchAction",
+						"target": "https://itstory.archerlab.dev/index-en.html?q={search_term_string}",
+						"query-input": "required name=search_term_string"
+					}
+				},
+				{
+					"@type": ["WebPage", "CollectionPage"],
+					"@id": "https://itstory.archerlab.dev/index-en.html#hub",
+					"url": "https://itstory.archerlab.dev/index-en.html",
+					"name": "ArcherLab IT Story · Home Hub",
+					"inLanguage": "en",
+					"description": "A single hub that links every ArcherLab IT Story timeline, from early telegraphs to modern AI infrastructure.",
+					"isPartOf": {
+						"@id": "https://itstory.archerlab.dev/index-en.html#website"
+					},
+					"publisher": {
+						"@id": "https://itstory.archerlab.dev/index-en.html#organization"
+					},
+					"breadcrumb": {
+						"@id": "https://itstory.archerlab.dev/index-en.html#breadcrumb"
+					},
+					"mainEntity": {
+						"@id": "https://itstory.archerlab.dev/index-en.html#series-list"
+					},
+					"hasPart": [
+						{"@id": "https://itstory.archerlab.dev/index-en.html#series-networks"},
+						{"@id": "https://itstory.archerlab.dev/index-en.html#series-computers"},
+						{"@id": "https://itstory.archerlab.dev/index-en.html#series-os"},
+						{"@id": "https://itstory.archerlab.dev/index-en.html#series-web"},
+						{"@id": "https://itstory.archerlab.dev/index-en.html#series-was"},
+						{"@id": "https://itstory.archerlab.dev/index-en.html#series-databases"}
+					]
+				},
+				{
+					"@type": "ItemList",
+					"@id": "https://itstory.archerlab.dev/index-en.html#series-list",
+					"name": "IT Story timeline collection",
+					"itemListOrder": "http://schema.org/ItemListOrderAscending",
+					"itemListElement": [
+						{"@type": "ListItem", "position": 1, "item": {"@id": "https://itstory.archerlab.dev/index-en.html#series-networks"}},
+						{"@type": "ListItem", "position": 2, "item": {"@id": "https://itstory.archerlab.dev/index-en.html#series-computers"}},
+						{"@type": "ListItem", "position": 3, "item": {"@id": "https://itstory.archerlab.dev/index-en.html#series-os"}},
+						{"@type": "ListItem", "position": 4, "item": {"@id": "https://itstory.archerlab.dev/index-en.html#series-web"}},
+						{"@type": "ListItem", "position": 5, "item": {"@id": "https://itstory.archerlab.dev/index-en.html#series-was"}},
+						{"@type": "ListItem", "position": 6, "item": {"@id": "https://itstory.archerlab.dev/index-en.html#series-databases"}}
+					]
 				},
 				{
 					"@type": "CreativeWorkSeries",
-					"name": "Computers Timeline",
-					"url": "https://itstory.archerlab.dev/computers-en.html"
+					"@id": "https://itstory.archerlab.dev/index-en.html#series-networks",
+					"name": "Network Timeline",
+					"url": "https://itstory.archerlab.dev/networks-en.html",
+					"inLanguage": "en",
+					"description": "Tracks communication innovations from railway telegraphs to AI-enhanced companions.",
+					"keywords": ["telegraph", "network history", "internet", "connectivity"],
+					"publisher": {"@id": "https://itstory.archerlab.dev/index-en.html#organization"}
 				},
 				{
 					"@type": "CreativeWorkSeries",
-					"name": "Operating Systems Timeline",
-					"url": "https://itstory.archerlab.dev/os-en.html"
+					"@id": "https://itstory.archerlab.dev/index-en.html#series-computers",
+					"name": "Computer Timeline",
+					"url": "https://itstory.archerlab.dev/computers-en.html",
+					"inLanguage": "en",
+					"description": "Follows computing milestones from mechanical calculators to cloud-scale AI infrastructure.",
+					"keywords": ["computer history", "hardware", "cloud", "AI"],
+					"publisher": {"@id": "https://itstory.archerlab.dev/index-en.html#organization"}
 				},
 				{
 					"@type": "CreativeWorkSeries",
+					"@id": "https://itstory.archerlab.dev/index-en.html#series-os",
+					"name": "Operating System Timeline",
+					"url": "https://itstory.archerlab.dev/os-en.html",
+					"inLanguage": "en",
+					"description": "Highlights how operating systems evolved from batch monitors to cloud-native runtimes.",
+					"keywords": ["operating system", "OS history", "runtime", "cloud"],
+					"publisher": {"@id": "https://itstory.archerlab.dev/index-en.html#organization"}
+				},
+				{
+					"@type": "CreativeWorkSeries",
+					"@id": "https://itstory.archerlab.dev/index-en.html#series-web",
 					"name": "Web Timeline",
-					"url": "https://itstory.archerlab.dev/web-en.html"
+					"url": "https://itstory.archerlab.dev/web-en.html",
+					"inLanguage": "en",
+					"description": "Explains the web's journey from static documents to rich serverless experiences.",
+					"keywords": ["web history", "frontend", "backend", "serverless"],
+					"publisher": {"@id": "https://itstory.archerlab.dev/index-en.html#organization"}
 				},
 				{
 					"@type": "CreativeWorkSeries",
+					"@id": "https://itstory.archerlab.dev/index-en.html#series-was",
 					"name": "Web Server Timeline",
-					"url": "https://itstory.archerlab.dev/was-en.html"
+					"url": "https://itstory.archerlab.dev/was-en.html",
+					"inLanguage": "en",
+					"description": "Follows how web servers and WAS platforms evolved to handle scale, reliability, and automation.",
+					"keywords": ["web server", "WAS", "scaling", "proxy"],
+					"publisher": {"@id": "https://itstory.archerlab.dev/index-en.html#organization"}
 				},
 				{
 					"@type": "CreativeWorkSeries",
+					"@id": "https://itstory.archerlab.dev/index-en.html#series-databases",
 					"name": "Database Timeline",
-					"url": "https://itstory.archerlab.dev/databases-en.html"
+					"url": "https://itstory.archerlab.dev/databases-en.html",
+					"inLanguage": "en",
+					"description": "Summarizes data-management breakthroughs from punched cards to modern lakehouse systems.",
+					"keywords": ["database", "RDBMS", "NoSQL", "lakehouse"],
+					"publisher": {"@id": "https://itstory.archerlab.dev/index-en.html#organization"}
+				},
+				{
+					"@type": "BreadcrumbList",
+					"@id": "https://itstory.archerlab.dev/index-en.html#breadcrumb",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"name": "IT Story",
+							"item": "https://itstory.archerlab.dev/index-en.html"
+						}
+					]
 				}
 			]
 		}
