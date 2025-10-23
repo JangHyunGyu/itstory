@@ -83,7 +83,7 @@
 	};
 
 	const resolveActiveLanguage = () =>
-		normalizeLanguage(getStoredLanguage()) || currentDocumentLanguage || 'ko';
+		currentDocumentLanguage || normalizeLanguage(getStoredLanguage()) || 'ko';
 
 	const syncLanguageAwareLinks = () => {
 		const activeLanguage = resolveActiveLanguage();
