@@ -61,15 +61,15 @@
 				<section class="timeline-hero" aria-labelledby="timeline-title">
 					<div class="timeline-hero__head">
 						<p class="hero__eyebrow">Web Server Story for Backend Builders</p>
-						<h1 class="timeline-hero__title" id="timeline-title">“요청을 안전하게 돌려보내려면?”이라 묻던 운영자의 연대기</h1>
+						<h1 class="timeline-hero__title" id="timeline-title">정적 파일 서버에서 글로벌 백엔드까지, 웹 서버가 커진 발자취</h1>
 						<p class="timeline-hero__lede">
-							1990년 CERN에서 연구원이 말했습니다. “링크만 눌러도 보고서를 열 수 있다고요?” httpd 데몬 앞에서 팀 버너스-리가 웃으며 “GET 한 번이면 됩니다”라고 답했습니다. 그 순간부터 서버는 단순 파일 창고가 아니라, 요청을 받아 판단하는 동료가 되었습니다.
+							1990년 CERN 연구실에서는 NeXT 컴퓨터 한 대가 httpd 데몬으로 동작하며 동료들이 링크를 눌러 바로 문서를 읽을 수 있게 되었습니다. 팀 버너스-리는 요청이 오면 HTML 파일을 찾아 돌려보내면 된다고 설명했고, 웹 서버라는 역할이 처음 구체화되었습니다.
 						</p>
 						<p class="timeline-hero__lede">
-							곧 운영팀은 “사용자마다 다른 응답을 보내려면 어떻게 하지?”라며 서블릿과 HttpSession을 붙잡았고, Tomcat은 “세션은 내가 지킬게요”라며 새벽 호출을 줄여 주었습니다. 보안 담당자는 SSL 자물쇠를 가리키며 “이제 카드 결제도 해봅시다”라고 설득했고, 인프라 엔지니어는 mod_proxy와 LVS 앞에서 “정적·동적 요청을 갈라보죠”라며 트래픽을 쪼개기 시작했습니다.
+							곧 NCSA와 Apache가 누구나 설치할 수 있는 배포판을 내놓았고, 운영팀은 SSL, mod_proxy, LVS 같은 도구로 앞단에서 보안과 분산을 처리하기 시작했습니다. 애플리케이션 서버는 세션을 기억하고, 웹 서버는 요청을 정리하는 분업 구조가 자리 잡았습니다.
 						</p>
 						<p class="timeline-hero__lede">
-							오늘날 Nginx, Spring Boot, Lambda, Ingress 운영자는 “설정은 줄이고 배포는 자동으로, 필요하면 컨테이너가 대신 받아요”라고 자신 있게 말합니다. 아래 연대를 눌러 당시 엔지니어가 어떤 결정을 내렸고, 어떤 대사로 팀을 설득했는지 함께 들어보세요.
+							지금은 Nginx와 Spring Boot가 기본 설정을 줄여 주고, Lambda와 Kubernetes Ingress가 필요할 때 자동으로 확장해 줍니다. 아래 연표를 따라가며 각 시기에 어떤 고민이 있었고 어떻게 해결했는지 차근차근 살펴보세요.
 						</p>
 					</div>
 				</section>
@@ -81,7 +81,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1990-webserver">1990–1995</p>
 							<h3 class="timeline-group__topic" id="topic-1990-webserver">“서버도 우리 손으로 돌리자”</h3>
-							<p class="timeline-group__summary">CERN, NCSA, Apache 팀이 코드를 공개하며 “다운로드해서 직접 고쳐 보세요”라고 말하자 전 세계 운영자가 자신만의 웹 서버를 세우기 시작했습니다.</p>
+							<p class="timeline-group__summary">CERN, NCSA, Apache가 소스를 공개하며 누구나 웹 서버를 내려받아 설치하고 고칠 수 있는 기반을 열었습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1990-cern-httpd">
@@ -103,7 +103,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1994-infra">1994–1998</p>
 							<h3 class="timeline-group__topic" id="topic-1994-infra">“앞단은 내가, 뒤는 너네”</h3>
-							<p class="timeline-group__summary">SSL, mod_proxy, LVS가 등장하며 운영자들은 “보안은 여기서 끝내고, 트래픽은 여기서 갈라요”라며 웹 서버와 애플리케이션 서버를 분리했습니다.</p>
+							<p class="timeline-group__summary">SSL, mod_proxy, LVS가 앞단에서 보안과 트래픽 분산을 맡으면서 웹 서버와 애플리케이션 서버를 나누는 운영 방식이 보편화되었습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1994-ssl">
@@ -125,7 +125,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1990-was">1997–1999</p>
 							<h3 class="timeline-group__topic" id="topic-1990-was">“요청은 객체로, 세션은 컨테이너로”</h3>
-							<p class="timeline-group__summary">Servlet 규칙과 Tomcat 컨테이너가 “요청은 내가 받아 줄게, 세션은 내가 기억할게”라며 동적 웹의 토대를 닦았습니다.</p>
+							<p class="timeline-group__summary">Servlet 사양과 Tomcat 컨테이너가 요청을 객체로 다루고 세션을 공통 규칙으로 관리하도록 정리하면서 동적 웹의 기초가 마련되었습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-servlet">
@@ -147,7 +147,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2000-was">2003</p>
 							<h3 class="timeline-group__topic" id="topic-2000-was">“EJB 말고도 길이 있다”</h3>
-							<p class="timeline-group__summary">Spring 1.0이 “Plain Java로도 트랜잭션 돌릴 수 있어요”라며 경량 프레임워크 시대를 열었습니다.</p>
+							<p class="timeline-group__summary">Spring 1.0은 무거운 EJB 대신 가벼운 컨테이너로 트랜잭션과 보안을 처리할 수 있다는 사실을 보여줬습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2003-spring">
@@ -161,7 +161,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2005-session">2005</p>
 							<h3 class="timeline-group__topic" id="topic-2005-session">“세션은 메모리 풀에 맡기자”</h3>
-							<p class="timeline-group__summary">Memcached가 “세션과 캐시는 밖에 둬요”라며 여러 대의 WAS를 묶을 수 있는 확장 전략을 제시했습니다.</p>
+							<p class="timeline-group__summary">Memcached가 여러 대의 애플리케이션 서버가 공유하는 분산 캐시 전략을 제시하며 확장 공식을 정리했습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-memcached">
@@ -175,7 +175,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2010-was">2011–2015</p>
 							<h3 class="timeline-group__topic" id="topic-2010-was">“설정은 줄이고, 트래픽은 맡겨라”</h3>
-							<p class="timeline-group__summary">Nginx, Spring Boot, Lambda, Ingress가 “가벼운 프록시, 자동 설정, 서버 없는 실행, 클러스터 관문”을 선언하며 운영 방식을 새로 썼습니다.</p>
+							<p class="timeline-group__summary">Nginx, Spring Boot, Lambda, Ingress가 가벼운 프록시와 자동화된 배포, 서버리스 실행, 클러스터 라우팅을 묶어 현대적인 운영 방식을 만들었습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2011-nginx">
@@ -242,15 +242,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1990</p>
 					<h2 id="event-1990-cern-httpd-title">CERN httpd 시범 운영</h2>
-					<p class="event-detail__summary">“GET 한 번이면 논문이 열려요.” 팀 버너스-리는 CERN에서 HTML과 HTTP를 이해하는 첫 서버를 띄웠습니다.</p>
+					<p class="event-detail__summary">CERN httpd는 연구실에서 첫 웹 서버를 띄워, 요청이 오면 HTML을 돌려보내는 방식을 처음 보여줬습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>1990년 말, 버너스-리는 NeXT 컴퓨터 한 대에 <code>httpd</code> 데몬을 띄우고 “브라우저가 GET을 보내면 여기서 HTML 파일을 찾아 돌려줘요”라고 동료에게 설명했습니다. CERN 인트라넷에 첫 페이지가 열리자, 연구자들은 새 문서를 올릴 때마다 링크를 달아 서로의 실험 노트를 연결했습니다.</p>
-						<p>초기 소스는 연구소 내부에서만 공유됐지만, 1991년 여름에는 외부 메일링 리스트에 배포되어 다른 연구기관도 같은 서버를 시험하기 시작했습니다. “HTTP는 가볍고 HTML은 쓰기 쉽다”는 입소문이 퍼지면서 웹 서버라는 개념이 현실이 되었습니다.</p>
+						<p>1990년 말 팀 버너스-리는 CERN의 NeXT 컴퓨터에 <code>httpd</code> 데몬을 올리고 브라우저가 GET을 보내면 HTML 파일을 찾아 응답하는 과정을 동료에게 시연했습니다. 연구자들은 링크를 클릭하자마자 실험 노트를 확인할 수 있었고, 연구실 게시판은 서로 연결된 문서 모음으로 바뀌었습니다.</p>
+						<p>초기 소스는 연구소 내부에서만 돌았지만 1991년 여름 메일링 리스트에 바이너리와 설명이 공개되면서 다른 연구기관도 같은 서버를 설치했습니다. 간단한 설정만으로 문서를 열어 줄 수 있다는 사실이 알려지며 웹 서버가 실험을 넘어 실제 서비스가 될 수 있다는 확신이 생겼습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>CERN httpd는 정적 파일을 서비스했지만, 디렉토리 리스팅과 간단한 실행 스크립트를 지원해 이후 CGI가 자리 잡는 발판이 되었습니다. “요청을 받아 해석한 뒤 응답을 돌려준다”는 서버의 기본 틀이 이때 마련되었고, 훗날 WAS가 등장해 로직을 맡을 수 있었던 것도 이 구조 덕분입니다.</p>
+						<p>CERN httpd는 정적 파일, 디렉터리 목록, 간단한 실행 스크립트를 지원해 이후 CGI가 자리 잡을 발판을 만들었습니다. 요청을 받아 해석하고 응답을 돌려준다는 서버의 기본 구조가 이때 드러났고, 훗날 애플리케이션 서버가 같은 흐름 위에서 비즈니스 로직을 맡을 수 있었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -261,15 +261,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1993</p>
 					<h2 id="event-1993-ncsa-httpd-title">NCSA HTTPd 공개</h2>
-					<p class="event-detail__summary">“FTP에서 내려받아 바로 돌려보자.” NCSA HTTPd는 누구나 설치할 수 있는 오픈 서버로 웹을 퍼뜨렸습니다.</p>
+					<p class="event-detail__summary">NCSA HTTPd는 누구나 내려받아 설치할 수 있는 오픈소스 웹 서버로 웹을 빠르게 퍼뜨렸습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>마크 안드리센과 에릭 빈나는 Mosaic 브라우저를 만들면서 “서버도 쉽게 설치할 수 있게 하자”고 결정했습니다. 1993년 11월, 그들은 <code>httpd_1.0.tar.Z</code> 파일을 FTP에 올리고 설치 방법을 README로 안내했습니다. 대학 연구실과 커뮤니티는 하루가 멀다 하고 패치를 올려 기능을 보강했습니다.</p>
-						<p>NCSA HTTPd는 접근 제어, 로그, CGI 훅을 내장해 상용 서비스에도 적합했습니다. 넷스케이프는 이 코드를 바탕으로 상업용 서버를 출시했고, Apache httpd 프로젝트도 NCSA HTTPd의 패치 킷에서 출발했습니다.</p>
+						<p>마크 안드리센과 에릭 빈나는 Mosaic 브라우저를 만들면서 서버도 쉽게 설치할 수 있어야 한다고 판단했습니다. 1993년 11월, 그들은 <code>httpd_1.0.tar.Z</code>와 README를 FTP 서버에 올렸고, 대학과 커뮤니티 개발자들은 파일을 내려받아 즉시 실험하며 버그와 개선안을 메일링 리스트로 공유했습니다.</p>
+						<p>NCSA HTTPd는 접근 제어, 로그, CGI 훅을 기본으로 제공해 교육 기관뿐 아니라 상용 서비스에도 올랐습니다. Netscape Enterprise Server와 Apache HTTP Server 프로젝트가 모두 이 코드에서 출발하면서 웹 서버 시장 전체가 열린 형태로 움직이기 시작했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>오픈소스 HTTP 서버가 널리 쓰이면서 “서버는 누구나 설치하고 고칠 수 있다”는 문화가 탄생했습니다. 이후 Apache httpd가 시장을 장악하고, 그 위에 CGI와 모듈이 얹히며 웹 애플리케이션 서버가 맡는 역할과 프록시·정적 서버의 경계가 명확해졌습니다.</p>
+						<p>오픈소스 웹 서버가 널리 쓰이면서 운영자는 직접 소스를 수정하고 기능을 추가하는 문화에 익숙해졌습니다. Apache httpd가 시장을 장악하고, 그 위에 CGI와 모듈이 붙으면서 프론트 웹 서버와 애플리케이션 서버의 역할이 뚜렷해졌습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -280,15 +280,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1995</p>
 					<h2 id="event-1995-apache-httpd-title">Apache HTTP Server 1.0</h2>
-					<p class="event-detail__summary">패치 모임은 “아파치로 갈아타요, 모듈만 켜면 돼요”라며 커뮤니티 주도 서버를 세상에 내놨습니다.</p>
+					<p class="event-detail__summary">Apache 1.0은 커뮤니티가 함께 유지하는 모듈형 웹 서버를 내놓아 실무 표준이 되었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>1995년 초, NCSA httpd의 유지보수가 느려지자 브라이언 벨렌도프와 로이 필딩은 패치 기여자들을 모아 “아파치(Apache) 그룹”을 만들고 공동 저장소를 열었습니다. 같은 해 12월 1.0 버전을 발표하며 “모듈 시스템으로 필요한 기능만 켜고 끄세요”라고 안내했고, 전 세계 운영자들이 메일링 리스트에서 즉시 피드백을 주고받았습니다.</p>
-						<p>SSL, 프록시, 로드밸런싱 모듈이 빠르게 추가되면서 아파치는 ISP와 포털의 기본 선택지가 되었습니다. 넷크래프트 통계는 “웹 서버 시장의 50% 이상이 아파치”라는 사실을 반복적으로 보여 주었고, 오픈소스가 상업적 배포와 어깨를 나란히 할 수 있다는 자신감을 심어 주었습니다.</p>
+						<p>1995년 초 NCSA httpd 개선이 늦어지자 브라이언 벨렌도프와 로이 필딩은 패치 기여자를 모아 Apache 그룹을 만들고 공용 저장소를 열었습니다. 12월 1.0을 발표하며 필요한 모듈만 선택해 켜고 끌 수 있다고 알렸고, 운영자들은 메일링 리스트에서 즉시 피드백을 주고받았습니다.</p>
+						<p>SSL, 프록시, 로드밸런싱 모듈이 빠르게 추가되자 ISP와 포털은 기본 웹 서버로 Apache를 채택했습니다. 넷크래프트 통계에서 다수가 Apache로 집계되면서 오픈소스가 상용 제품과 어깨를 나란히 할 수 있다는 인식이 넓어졌습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Apache는 MPM, 모듈 구조, 설정 파일을 통해 웹 서버를 확장 가능하게 만들었습니다. 이후 CGI와 mod_php 같은 동적 모듈이 늘어나며 WAS와 웹 서버의 경계가 분명해졌고, 톰캣·JBoss 같은 애플리케이션 서버를 앞단 아파치가 리버스 프록시로 묶는 아키텍처가 업계 표준이 되었습니다.</p>
+						<p>Apache는 MPM 구조와 모듈 설정으로 확장 가능한 웹 서버 운영을 가능하게 했습니다. CGI와 mod_php가 붙고, 앞단 Apache가 뒤쪽 애플리케이션 서버를 리버스 프록시로 묶는 아키텍처가 업계 표준으로 자리 잡았습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -299,15 +299,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1994</p>
 					<h2 id="event-1994-ssl-title">Netscape SSL 2.0 시범 적용</h2>
-					<p class="event-detail__summary">“https 자물쇠가 켜졌습니다.” 넷스케이프는 SSL 2.0으로 웹 결제의 문을 열었습니다.</p>
+					<p class="event-detail__summary">Netscape의 SSL 2.0은 웹에서 카드 결제를 시연하며 HTTPS 보안 통신의 출발점이 되었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>1994년 넷스케이프 엔지니어 팀은 SSL 2.0 프로토콜 초안을 만들고, Navigator와 Commerce 서버 베타 버전에 “https://” 실험 기능을 넣었습니다. 시연에서는 브라우저 주소창에 자물쇠 아이콘이 나타나고, 신용카드 정보가 암호화되어 전송되는 모습을 보여주었습니다.</p>
-						<p>전자상거래를 준비하던 기업들은 “고객의 카드 정보를 보호할 수 있다면 웹 결제를 열어 보자”고 반응했고, 은행과 결제사도 공개키 인증서와 루트 CA 체계를 논의하기 시작했습니다.</p>
+						<p>1994년 넷스케이프 엔지니어들은 SSL 2.0 초안을 작성하고 Navigator와 Commerce 서버 베타 버전에 <code>https://</code> 옵션을 넣었습니다. 시연에서 주소창에는 자물쇠 아이콘이 표시됐고, 브라우저와 서버 사이 데이터가 암호화되어 전송되는 모습을 확인할 수 있었습니다.</p>
+						<p>전자상거래를 준비하던 기업들은 고객 카드 정보를 보호할 수 있다면 웹 결제를 도입할 수 있다고 보고 테스트를 시작했습니다. 은행과 결제사는 공개키 인증서와 루트 CA 체계를 논의하며 신뢰 가능한 인증 구조를 마련했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>SSL은 TCP 위에 암호화, 무결성, 인증 계층을 더해 HTTP 통신을 보호했습니다. 이후 1996년 SSL 3.0, 1999년 TLS 1.0으로 이어지며 오늘날 HTTPS가 기본이 되었습니다. 웹 서버는 인증서 관리를 맡고, WAS는 민감한 데이터를 평문으로 다루지 않아도 되면서 보안 책임이 명확히 나뉘게 되었습니다.</p>
+						<p>SSL은 TCP 위에 암호화, 무결성, 서버 인증을 더해 HTTP 통신을 보호했습니다. 이후 SSL 3.0과 TLS 1.0으로 발전하며 오늘날 HTTPS가 기본이 되었고, 웹 서버가 인증서를 관리하면서 애플리케이션 서버는 평문 데이터를 직접 다루지 않아도 되는 구조가 자리 잡았습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -318,15 +318,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1996</p>
 					<h2 id="event-1996-mod-proxy-title">Apache mod_proxy 도입</h2>
-					<p class="event-detail__summary">“ProxyPass 몇 줄이면 돼.” mod_proxy는 리버스 프록시와 캐시를 손쉽게 붙였습니다.</p>
+					<p class="event-detail__summary">mod_proxy는 Apache 설정 몇 줄로 리버스 프록시와 캐시를 구성할 수 있게 만들었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>1996년 아파치 코어 팀은 1.1 릴리스 노트에 “mod_proxy가 들어갑니다. 다른 서버로 요청을 넘기거나 캐시 서버를 만들 수 있어요.”라고 적었습니다. 운영자는 <code>ProxyPass</code> 지시어를 몇 줄 추가해 백엔드 CGI나 애플리케이션 서버로 트래픽을 전달할 수 있었습니다.</p>
-						<p>호스팅 업체는 정적 콘텐츠는 아파치가 직접 처리하고, 동적 요청은 별도로 관리되는 애플리케이션 서버로 전달하는 패턴을 빠르게 채택했습니다. SSL 종료, 접근 제어, 캐시 정책을 모든 요청 앞단에서 제어할 수 있게 된 것입니다.</p>
+						<p>1996년 Apache 코어 팀은 1.1 릴리스 노트에 mod_proxy가 포함된다고 알리며 다른 서버로 요청을 넘기거나 캐시를 둘 수 있다고 설명했습니다. 운영자는 설정 파일에 <code>ProxyPass</code> 지시어를 몇 줄 추가하는 것만으로 백엔드 CGI나 애플리케이션 서버로 트래픽을 전달할 수 있었습니다.</p>
+						<p>호스팅 업체는 정적 콘텐츠는 Apache가 직접 처리하고 동적 요청은 별도의 애플리케이션 서버로 넘기는 패턴을 빠르게 채택했습니다. SSL 종료, 접근 제어, 캐시 정책도 앞단 Apache에서 통합 관리할 수 있게 되었습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>mod_proxy는 리버스 프록시를 설정 파일로 정의할 수 있게 했고, 이후 mod_proxy_balancer, mod_jk 같은 확장 모듈이 등장해 WAS(Tomcat, JBoss, WebLogic)와의 연동을 표준화했습니다. 프론트 웹 서버와 백엔드 애플리케이션 서버를 분리하는 3계층 구조가 실무 표준이 되었습니다.</p>
+						<p>mod_proxy는 설정 파일만으로 리버스 프록시를 정의하게 했고, 이후 mod_proxy_balancer와 mod_jk가 등장해 Tomcat, JBoss, WebLogic 같은 WAS 연동을 표준화했습니다. 프론트 웹 서버와 백엔드 애플리케이션 서버를 분리하는 3계층 구조가 실무 표준이 되었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -337,15 +337,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1998</p>
 					<h2 id="event-1998-lvs-title">Linux Virtual Server 프로젝트</h2>
-					<p class="event-detail__summary">운영자들은 “비싼 로드밸런서 말고 리눅스로 해보자.” LVS가 커널 레벨 분산을 열었습니다.</p>
+					<p class="event-detail__summary">Linux Virtual Server는 커널 수준에서 트래픽을 여러 서버로 나누는 방법을 제시했습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>1998년 5월 장원송은 메일링 리스트에 “리눅스 커널에서 IPVS를 이용해 여러 서버로 트래픽을 분산시키는 패치를 만들었습니다”라며 LVS 프로젝트를 발표했습니다. 간단한 라스베리파이 사이즈의 PC가 수천 개의 HTTP 연결을 여러 대의 백엔드로 나눠 주는 데 성공했습니다.</p>
-						<p>운영자들은 값비싼 하드웨어 대신 리눅스 박스 두세 대를 엮어 고가용성 로드밸런서를 구성했고, Keepalived 같은 도구와 결합해 가상 IP를 이용한 이중화까지 구현했습니다.</p>
+						<p>1998년 5월 장원송은 메일링 리스트에 Linux Virtual Server 프로젝트를 공개하며 리눅스 커널의 IPVS 모듈로 여러 서버에 트래픽을 나눠 보냈다고 보고했습니다. 범용 PC 한 대가 수천 건의 HTTP 연결을 받아 뒤쪽 서버에 분산시키는 데 성공한 것입니다.</p>
+						<p>운영자들은 값비싼 하드웨어 로드밸런서 대신 리눅스 박스를 두세 대 묶어 고가용성 구성을 만들었습니다. 곧 Keepalived 같은 도구가 더해져 가상 IP 기반 이중화도 손쉽게 구현할 수 있게 되었습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>LVS는 IPVS 모듈과 ipvsadm 유틸리티로 네트워크 계층에서 요청을 분산시켰습니다. 세션 스티키, 헬스 체크가 더해지면서 WAS 인스턴스를 여러 대로 늘려도 사용자 경험을 유지할 수 있었고, 이후 HAProxy, Nginx, 클라우드 로드밸런서가 이어 받는 분산 구조의 기초가 되었습니다.</p>
+						<p>LVS는 IPVS 모듈과 <code>ipvsadm</code> 유틸리티로 네트워크 계층에서 요청을 분산시켰고, 세션 스티키와 헬스 체크를 지원했습니다. 덕분에 애플리케이션 서버를 여러 대로 늘려도 사용자 경험을 유지할 수 있었고, HAProxy, Nginx, 클라우드 로드밸런서 등 후속 기술의 기반이 되었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -356,15 +356,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1997</p>
 					<h2 id="event-1997-httpsession-title">HttpSession 표준화</h2>
-					<p class="event-detail__summary">“session.setAttribute만 하면 돼요.” Servlet 1.0은 HttpSession으로 상태 관리를 컨테이너에 맡겼습니다.</p>
+					<p class="event-detail__summary">HttpSession 표준은 세션 상태를 컨테이너가 책임지도록 정해 웹 애플리케이션이 사용자를 쉽게 기억하게 만들었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>서블릿 1.0 초안에는 <code>HttpSession</code> 인터페이스와 <code>getSession()</code> 메서드가 포함돼 있었습니다. 개발자는 `session.setAttribute("cart", items)` 처럼 키-값을 저장하고, 컨테이너는 세션 쿠키 생성과 타임아웃, 클러스터 동기화를 맡았습니다.</p>
-						<p>은행·커머스 사이트는 로그인 상태와 장바구니를 HttpSession에 저장하며 “HTTP는 무상태지만, 우리 애플리케이션은 사용자를 기억한다”는 경험을 구현했습니다. 복잡한 세션 관리 코드를 직접 작성할 필요가 줄어든 순간입니다.</p>
+						<p>Servlet 1.0 초안에는 <code>HttpSession</code> 인터페이스와 <code>getSession()</code> 메서드가 포함돼 있었습니다. 개발자는 <code>session.setAttribute("cart", items)</code>처럼 키-값 쌍을 저장하고, 컨테이너는 세션 쿠키 생성과 만료, 클러스터 동기화를 맡았습니다.</p>
+						<p>은행과 커머스 사이트는 로그인 상태와 장바구니를 HttpSession에 올리며 HTTP가 무상태라는 한계를 우회했습니다. 애플리케이션 팀은 세션 저장소를 직접 구현하지 않아도 되었고, 동시 사용자 수가 늘어나도 컨테이너가 일관된 동작을 보장했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>HttpSession은 쿠키 기반 세션 ID, URL 리라이팅, 분산 세션 스토리지 등 다양한 확장 전략을 지원했습니다. 이후 PHP, ASP, Rails 등도 비슷한 세션 API를 제공하며 WAS와 프레임워크가 사용자 상태를 책임지고, 프론트엔드는 쿠키만 전달하는 구조가 확산되었습니다.</p>
+						<p>HttpSession은 쿠키 기반 세션 ID, URL 리라이팅, 분산 세션 저장소 등 다양한 확장 전략을 정의했습니다. 이후 PHP, ASP, Rails도 비슷한 세션 API를 제공하며 애플리케이션 서버와 프레임워크가 사용자 상태를 책임지고, 프론트엔드는 쿠키만 전달하는 구조가 확산되었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -375,15 +375,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2005</p>
 					<h2 id="event-2005-memcached-title">Memcached 공개</h2>
-					<p class="event-detail__summary">“세션은 memcached에 던져요.” LiveJournal는 분산 메모리 캐시로 확장 공식을 보여줬습니다.</p>
+					<p class="event-detail__summary">Memcached는 여러 WAS가 공유하는 분산 메모리 캐시로 세션과 데이터를 빠르게 가져오게 했습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>2003년 LiveJournal에서 탄생한 Memcached는 2005년 소스포지에 공개되며 “TCP 포트를 열고 <code>set</code>/<code>get</code> 명령으로 메모리를 공유하세요”라는 간단한 API를 제시했습니다. 많은 웹 서비스가 세션과 쿼리 결과를 Memcached에 저장해 DB 부하를 줄이기 시작했습니다.</p>
-						<p>2005년부터 Flickr, YouTube, Facebook 등이 “새로고침을 눌러도 빠른 이유는 Memcached 덕분입니다”라고 발표하면서, 캐시 클러스터를 운영하는 방식이 대규모 서비스의 필수 전략이 되었습니다.</p>
+						<p>2003년 LiveJournal에서 시작된 Memcached는 2005년 소스포지에 공개되며 TCP 포트를 열고 <code>set</code>/<code>get</code> 명령으로 메모리를 공유하는 간단한 API를 제시했습니다. 많은 웹 서비스가 세션과 데이터베이스 조회 결과를 Memcached에 저장해 백엔드 부하를 줄였습니다.</p>
+						<p>2005년 이후 Flickr, YouTube, Facebook이 Memcached 운영 사례를 공유하면서 분산 캐시 클러스터가 대규모 서비스의 기본 전략으로 자리 잡았습니다. 세션을 외부 캐시에 두면 로드밸런서가 어느 애플리케이션 서버로 보내도 상태를 유지할 수 있었습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Memcached는 키-값 인메모리 저장소로, 애플리케이션 서버 여러 대에서 같은 캐시를 공유하게 해 줍니다. 세션 데이터를 외부 캐시에 저장하면 로드밸런서가 어느 WAS로 보내든 상태를 유지할 수 있고, 백엔드는 읽기 부하를 줄이며 수평 확장을 쉽게 할 수 있습니다.</p>
+						<p>Memcached는 네트워크를 통한 키-값 인메모리 저장소로 여러 애플리케이션 서버가 동일한 캐시를 공유하게 합니다. 세션과 빈번한 조회 결과를 외부 캐시에 두면 읽기 부하가 줄고, 서버를 수평으로 늘려도 사용자 경험을 지킬 수 있습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -394,15 +394,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1997</p>
 					<h2 id="event-1997-servlet-title">Servlet 1.0 사양</h2>
-					<p class="event-detail__summary">Sun은 “doGet에 로직만 쓰세요”라며 HTTP 요청을 자바 클래스로 다루는 규칙을 내놨습니다.</p>
+					<p class="event-detail__summary">Servlet 1.0 사양은 HTTP 요청을 자바 클래스로 처리하는 공통 규칙을 정의했습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Sun 개발자 회의에서 발표자는 <code>HttpServlet</code> 클래스를 띄우며 “doGet과 doPost 안에서 필요한 일을 하세요”라고 설명했습니다. 시연에서 사용자가 폼을 제출하자, 서블릿이 주문 데이터를 읽고 새로운 HTML을 만들어 돌려줬습니다.</p>
-						<p>은행과 공공기관은 “동시에 많은 요청을 다루는 표준이 드디어 생겼다”며 서블릿 컨테이너 도입을 검토했습니다. 자바 진영은 공용 API를 중심으로 WAS를 발전시킬 발판을 마련했습니다.</p>
+						<p>Sun 개발자 회의에서는 <code>HttpServlet</code> 클래스를 소개하며 <code>doGet</code>과 <code>doPost</code> 안에서 요청을 읽고 응답을 작성하는 모습을 시연했습니다. 사용자가 폼을 제출하자 서블릿이 주문 데이터를 읽어 새로운 HTML을 만들어 돌려주는 과정이 그대로 재현됐습니다.</p>
+						<p>은행과 공공기관은 동시에 많은 요청을 다루는 공통 규칙이 생겼다며 서블릿 컨테이너 도입을 검토했습니다. 자바 진영은 공용 API를 중심으로 애플리케이션 서버를 발전시킬 발판을 확보했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>서블릿 사양은 요청·응답 객체, 필터, 라이프사이클 메서드 같은 개념을 정의했습니다. 덕분에 개발자는 어떤 컨테이너에서 실행하든 같은 코드를 사용할 수 있었고, WAS 벤더는 세션, 스레드, 보안 같은 공통 기능을 책임지게 되었습니다. 이는 이후 JSP, Tomcat, Spring 같은 기술이 함께 돌아가게 만든 토대였습니다.</p>
+						<p>Servlet 사양은 요청·응답 객체, 필터, 라이프사이클 메서드를 정의했습니다. 덕분에 개발자는 어떤 컨테이너에서도 같은 코드를 사용할 수 있었고, WAS 벤더는 스레드 관리와 보안 같은 공통 기능을 책임지게 되었습니다. 이 토대 위에서 JSP, Tomcat, Spring 같은 기술이 함께 움직일 수 있었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -413,15 +413,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1999</p>
 					<h2 id="event-1999-tomcat-title">Apache Tomcat 공개</h2>
-					<p class="event-detail__summary">“WAR 파일만 던져보세요.” Sun은 Tomcat을 아파치에 기증하며 모두의 서블릿 컨테이너를 열었습니다.</p>
+					<p class="event-detail__summary">Tomcat은 누구나 내려받아 WAR 파일만 올리면 서블릿 애플리케이션을 돌릴 수 있는 오픈소스 컨테이너였습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>자바원 행사장에서 제임스 던컨 데이비슨은 노트북을 열고 <code>startup.sh</code>를 실행했습니다. 콘솔에 고양이 로고가 뜨자 청중이 웃었고, 곧바로 브라우저에서 JSP가 새 HTML을 만들어 응답하는 장면이 재현됐습니다.</p>
-						<p>Sun은 “표준은 개방형 구현이 있어야 널리 쓰입니다”라며 코드를 Apache에 넘겼습니다. 개발자들은 Tomcat을 내려받아 <code>webapps</code> 폴더에 WAR 파일을 복사하는 것만으로 서블릿 애플리케이션을 배포할 수 있게 됐습니다.</p>
+						<p>자바원 행사장에서 제임스 던컨 데이비슨은 노트북을 열고 <code>startup.sh</code>를 실행했습니다. 콘솔에 고양이 로고가 뜨자 청중이 웃었고, 곧바로 브라우저에서 JSP가 새로운 HTML을 만들어 응답하는 장면이 이어졌습니다.</p>
+						<p>Sun은 표준이 널리 쓰이려면 개방형 구현이 필요하다고 보고 Tomcat 코드를 Apache 재단에 기증했습니다. 개발자들은 Tomcat을 내려받아 <code>webapps</code> 폴더에 WAR 파일을 복사하는 것만으로 서블릿 애플리케이션을 배포할 수 있게 됐습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Tomcat은 커넥터, 스레드 풀, JSP 컴파일러를 내장해 개발용 WAS의 사실상 표준이 되었습니다. 덕분에 팀은 동일한 컨테이너 위에서 개발·운영 환경을 맞출 수 있었고, 이후 Spring, Struts 같은 프레임워크와 자연스럽게 통합되었습니다. Tomcat의 오픈소스 모델은 Jetty, JBoss 등 다른 WAS의 등장을 자극했습니다.</p>
+						<p>Tomcat은 커넥터, 스레드 풀, JSP 컴파일러를 내장해 개발용 WAS의 사실상 표준이 되었습니다. 팀은 개발과 운영 환경을 같은 컨테이너로 맞출 수 있었고, Spring과 Struts 같은 프레임워크와도 자연스럽게 통합되었습니다. Tomcat의 오픈소스 모델은 Jetty, JBoss 등 다른 WAS가 등장하는 계기가 되었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -432,15 +432,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2003</p>
 					<h2 id="event-2003-spring-title">Spring 1.0 발표</h2>
-					<p class="event-detail__summary">Rod Johnson은 “EJB 없이도 된다니까요”라며 Spring 1.0으로 경량 백엔드를 제시했습니다.</p>
+					<p class="event-detail__summary">Spring 1.0은 무거운 EJB 대신 가벼운 IoC 컨테이너로 백엔드 구조를 단순하게 만들었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Rod Johnson은 《Expert One-on-One J2EE》에서 무거운 EJB 사용기를 털어놓은 뒤, 컨퍼런스에서 “객체를 단순 자바 클래스로 유지하고 외부에서 주입하면 됩니다”라며 Spring 1.0을 선보였습니다.</p>
-						<p>데모에서는 XML 설정으로 서비스 객체와 DAO를 연결하고, 테스트에서는 컨테이너 없이도 단위 테스트가 돌아갔습니다. 기업 개발팀은 “경량 컨테이너로도 트랜잭션과 보안을 처리할 수 있네”라며 도입을 시작했습니다.</p>
+						<p>Rod Johnson은 《Expert One-on-One J2EE》에서 복잡한 EJB 경험을 공유한 뒤 컨퍼런스 무대에서 Spring 1.0을 소개했습니다. XML 설정으로 서비스와 DAO를 연결하고, 테스트에서는 컨테이너 없이도 단위 테스트가 돌아가는 모습을 보여줬습니다.</p>
+						<p>기업 개발팀은 가벼운 컨테이너로도 트랜잭션과 보안을 처리할 수 있다는 점에 주목했습니다. 기존 애플리케이션을 단계적으로 옮기며 서비스 계층을 간단한 자바 클래스로 유지하는 전략이 확산됐습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Spring은 IoC 컨테이너와 AOP로 의존성을 주입하고 트랜잭션을 선언적으로 관리하게 했습니다. 덕분에 백엔드는 얇은 서비스 계층을 유지하면서도 확장성과 테스트 용이성을 갖출 수 있었고, 프론트엔드는 안정적인 API를 기대할 수 있었습니다. 이후 Spring MVC, Spring Security, Spring Boot가 같은 철학을 이어갑니다.</p>
+						<p>Spring은 IoC 컨테이너와 AOP로 의존성을 주입하고 트랜잭션을 선언적으로 관리하게 했습니다. 백엔드는 얇은 서비스 계층을 유지하면서도 확장성과 테스트 용이성을 확보했고, 이후 Spring MVC와 Spring Security, Spring Boot가 같은 철학을 이어갔습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -451,15 +451,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2011</p>
 					<h2 id="event-2011-nginx-title">Nginx 1.0 안정화</h2>
-					<p class="event-detail__summary">“동시 연결 5만 개? 문제없어요.” Nginx 1.0은 가벼운 리버스 프록시 시대를 선언했습니다.</p>
+					<p class="event-detail__summary">Nginx 1.0은 가벼운 이벤트 기반 구조로 동시 연결이 많은 사이트의 기본 리버스 프록시가 되었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>2011년 4월, 이고르 시소예프는 메일링 리스트에 “Nginx 1.0이 나왔습니다. 이제 생산 환경에서 마음껏 쓰세요”라는 짧은 공지를 남겼습니다. 벤치마크에서는 수만 개의 동시 연결을 적은 메모리로 처리하는 모습이 잡혔습니다.</p>
-						<p>스타트업은 정적 파일을 Nginx로 서빙하고, 백엔드 애플리케이션 앞단에는 리버스 프록시로 배치했습니다. 운영팀은 <code>nginx.conf</code>에 로드밸런싱과 캐시 설정을 적으며 “서버 한 대로도 많은 사용자를 버틴다”고 보고했습니다.</p>
+						<p>2011년 4월 이고르 시소예프는 메일링 리스트에 Nginx 1.0이 안정화됐다고 알리며 생산 환경에서 사용해도 된다고 전했습니다. 벤치마크에서는 수만 건의 동시 연결을 적은 메모리로 처리하는 결과가 나왔습니다.</p>
+						<p>스타트업은 정적 파일을 Nginx로 제공하고, 백엔드 애플리케이션 앞단에는 리버스 프록시로 배치했습니다. 운영팀은 <code>nginx.conf</code>에 로드밸런싱과 캐시 설정을 적어 서버 한 대로도 많은 사용자를 버틸 수 있다고 보고했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Nginx는 비동기 이벤트 루프, 비차단 I/O, 설정 기반 리버스 프록시를 제공했습니다. 덕분에 백엔드는 WAS와 API 서버를 여러 대로 쪼개고, 앞단에서는 Nginx가 트래픽을 분산했습니다. 이 구조는 이후 마이크로서비스, 컨테이너 오케스트레이션에서도 기본 패턴이 되었습니다.</p>
+						<p>Nginx는 비동기 이벤트 루프와 비차단 I/O, 설정 기반 리버스 프록시를 제공했습니다. 백엔드는 애플리케이션 서버를 여러 대로 쪼갤 수 있었고, 앞단 Nginx가 트래픽을 분산하며 마이크로서비스와 컨테이너 오케스트레이션의 기본 패턴이 되었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -470,15 +470,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2014</p>
 					<h2 id="event-2014-spring-boot-title">Spring Boot 1.0</h2>
-					<p class="event-detail__summary">“init 한 번이면 서비스가 뜬다.” Spring Boot 1.0은 설정 대신 실행을 보여줬습니다.</p>
+					<p class="event-detail__summary">Spring Boot 1.0은 기본 설정과 내장 Tomcat을 제공해 자바 백엔드 배포 과정을 크게 줄였습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>2014년 Pivotal 개발자 필 웹은 무대에서 <code>spring init --dependencies=web demo</code>를 실행했습니다. IDE에서 <code>DemoApplication.java</code>를 열고 바로 실행하자 Tomcat이 내장된 애플리케이션이 5초 만에 떠올랐습니다.</p>
-						<p>팀은 “설정 XML을 어디에 둬야 하지?” 같은 고민 대신 <code>application.properties</code>에 필요한 옵션만 적고 배포 파이프라인에 Jar 파일을 올렸습니다. 마이크로서비스 전환을 계획하던 조직은 “서비스 하나당 스프링 부트 하나”라는 전략을 채택했습니다.</p>
+						<p>2014년 Pivotal 개발자 필 웹은 무대에서 <code>spring init --dependencies=web demo</code>를 실행하고 생성된 프로젝트를 IDE에서 바로 구동했습니다. 내장 Tomcat이 포함된 애플리케이션이 몇 초 만에 올라가자 관객은 설정 과정이 생략된다는 점을 확인했습니다.</p>
+						<p>팀은 방대한 XML 설정 대신 <code>application.properties</code>에 필요한 옵션만 적고 Jar 파일을 배포 파이프라인에 올렸습니다. 마이크로서비스를 준비하던 조직은 서비스 하나당 Spring Boot 애플리케이션 하나를 운영하는 전략을 채택했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Spring Boot는 자동 설정, 스타터 의존성, 내장 Tomcat/Jetty를 제공해 배포 단위를 Jar 파일로 단순화했습니다. 백엔드는 마이크로서비스와 CI/CD에 맞춰 작은 모듈을 빠르게 만들 수 있었고, 프론트엔드는 일관된 REST/GraphQL API를 더 쉽게 받을 수 있었습니다. 이 접근은 이후 Spring Cloud, Kubernetes 배포 모델과 자연스럽게 이어집니다.</p>
+						<p>Spring Boot는 자동 설정, 스타터 의존성, 내장 Tomcat/Jetty를 제공해 배포 단위를 Jar 파일로 단순화했습니다. 백엔드는 마이크로서비스와 CI/CD 흐름에 맞춰 작은 모듈을 빠르게 만들 수 있었고, 이 접근은 Spring Cloud와 Kubernetes 배포 모델로 자연스럽게 이어졌습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -489,15 +489,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2014</p>
 					<h2 id="event-2014-lambda-title">AWS Lambda 출시</h2>
-					<p class="event-detail__summary">AWS는 “서버는 잊고 함수만 올리세요”라며 Lambda로 서버리스 모델을 현실화했습니다.</p>
+					<p class="event-detail__summary">AWS Lambda는 서버를 직접 관리하지 않고 함수 단위로 코드를 실행하는 방식을 공개했습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>AWS re:Invent 무대에서 발표자가 “이제 서버를 예약하지 않아도 됩니다”라며 Lambda를 소개했습니다. 개발자 앨리스가 콘솔에 짧은 함수를 저장하자, 곧바로 웹훅 주소가 생겨 요청을 받아들였습니다.</p>
-						<p>스타트업들은 로그인, 알림, 이미지 처리 등을 Lambda로 옮겨 운영 부담을 줄였고, 백엔드는 점점 더 작은 함수와 이벤트 중심 구조로 나뉘기 시작했습니다.</p>
+						<p>AWS re:Invent 무대에서 발표자는 서버를 예약하지 않아도 되는 실행 환경이라며 Lambda를 소개했습니다. 콘솔에 짧은 함수를 저장하자 곧바로 웹훅 주소가 생성되고, 이벤트가 들어오면 해당 함수를 실행하는 모습이 시연되었습니다.</p>
+						<p>스타트업은 로그인과 알림, 이미지 처리 같은 기능을 Lambda로 옮겨 운영 부담을 줄였습니다. 백엔드는 점점 더 작은 함수와 이벤트 중심 구조로 나뉘었고, 비용은 사용한 만큼만 지불할 수 있게 되었습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>서버리스 모델은 확장과 비용을 자동으로 처리해 줍니다. 백엔드는 서버 관리 대신 핵심 로직에 집중할 수 있고, 프론트엔드는 정적 자산을 CDN에 올린 뒤 필요한 기능만 API로 호출하는 패턴을 손쉽게 실행할 수 있게 되었습니다.</p>
+						<p>서버리스 모델은 확장과 비용을 자동으로 처리해 운영팀의 부담을 크게 줄였습니다. 백엔드는 서버 관리 대신 핵심 로직에 집중할 수 있고, 프론트엔드는 정적 자산을 CDN에 두고 필요한 기능만 API로 호출하는 패턴을 쉽게 구현할 수 있습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -508,15 +508,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2015</p>
 					<h2 id="event-2015-k8s-ingress-title">Kubernetes Ingress 리소스</h2>
-					<p class="event-detail__summary">쿠버네티스 팀은 “YAML 몇 줄로 트래픽 관문을 만들자”라며 Ingress 리소스를 내놨습니다.</p>
+					<p class="event-detail__summary">Kubernetes Ingress는 YAML 설정만으로 L7 라우팅과 TLS 종료를 선언할 수 있게 했습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>2015년 가을 Kubernetes 팀은 블로그에 “YAML 몇 줄로 TLS 종료와 가상 호스트를 정의하세요”라며 Ingress를 소개했습니다. 데모에서는 <code>host: api.example.com</code>이라는 설정만 추가해도 엣지 프록시가 자동으로 백엔드 서비스로 트래픽을 넘겼습니다.</p>
-						<p>운영팀은 컨테이너마다 Nginx 인스턴스를 직접 관리하던 습관을 버리고, 클러스터 차원의 Ingress 컨트롤러에 규칙을 맡기기 시작했습니다. 배포 파이프라인은 애플리케이션 코드와 함께 라우팅 정책을 선언적으로 배포하도록 바뀌었습니다.</p>
+						<p>2015년 가을 Kubernetes 팀은 블로그에서 Ingress를 공개하며 YAML 몇 줄로 TLS 종료와 가상 호스트를 정의할 수 있다고 설명했습니다. 데모에서는 <code>host: api.example.com</code> 설정만 추가해도 엣지 프록시가 자동으로 백엔드 서비스로 트래픽을 넘겼습니다.</p>
+						<p>운영팀은 컨테이너마다 Nginx를 직접 관리하던 방식에서 벗어나 클러스터 차원의 Ingress 컨트롤러에 규칙을 맡기기 시작했습니다. 배포 파이프라인은 애플리케이션 코드와 함께 라우팅 정책을 선언적으로 배포하도록 바뀌었습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Ingress는 L7 라우팅과 TLS 종료를 Kubernetes 오브젝트로 흡수해 “WAS는 애플리케이션을 실행하고, 프록시는 플랫폼이 책임진다”는 경계를 다시 그었습니다. 덕분에 Spring Boot나 Tomcat을 컨테이너로 묶어 배포할 때에도, 트래픽 분배와 정책은 Ingress 컨트롤러·서비스 메시가 대신 맡는 현대적 패턴이 자리 잡았습니다.</p>
+						<p>Ingress는 L7 라우팅과 TLS 종료를 Kubernetes 오브젝트로 흡수해 애플리케이션과 엣지 프록시의 책임을 명확히 했습니다. Spring Boot나 Tomcat을 컨테이너로 배포할 때에도 트래픽 분배와 정책은 Ingress 컨트롤러나 서비스 메시가 맡는 현대적 패턴이 자리 잡았습니다.</p>
 					</div>
 				</section>
 			</article>
