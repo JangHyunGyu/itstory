@@ -3,15 +3,15 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>ArcherLab IT Story · Database Timeline</title>
+				<p class="event-detail__summary">Herman Hollerith wheeled in punch cards and tabulators so the 1890 census could wrap in two years instead of seven.</p>
 		<meta name="description" content="Trace how punch cards, relational theory, cloud warehousing, and vector search made it possible to trust databases with critical data." />
 		<meta property="og:title" content="ArcherLab IT Story · Database Timeline" />
 		<meta property="og:description" content="Follow the milestones from Hollerith cards to lakehouses and vector databases, and meet the teams who kept data safe and useful." />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+					<p>The 1880 census dragged on for seven years, and clerks groaned, “We’ll begin the next count before this one ends.” Hollerith rolled in carts packed with punch cards and wiring, clipped leads into place, and invited the team to try a demo.</p>
+					<p>When they flipped the switch the counters spun wildly, tallying rows as fast as the cards fed through. The bureau finished the 1890 results in just two years and decided repetitive counting belonged to machines from then on.</p>
 		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-		<link rel="stylesheet" href="assets/css/style.css">
+					<p>Punch cards encoded each row and column as specific hole locations. Electrodes sensed the holes, completed a circuit, and bumped mechanical counters. Manuals listed which column matched each survey question so every field office punched cards the same way.</p>
 		<link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/databases.html" />
 		<link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/databases-en.html" />
 		<link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/databases-en.html" />
@@ -22,15 +22,15 @@
 	<body>
 		<div class="page">
 			<header class="page__header" role="banner">
-				<div class="page__header-left">
+				<p class="event-detail__summary">A San Francisco branch installed RAMAC, watched the disk arm fetch accounts in seconds, and finally shortened the line out the door.</p>
 					<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
 						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
 						<span class="page__brand-label">ArcherLab Chronicle</span>
-					</a>
-					<nav class="page__topic-nav" aria-label="Switch topic">
+					<p>Lunchtime lines wrapped around the block. “If balances synced faster, these customers could go back to work,” one teller sighed. IBM engineers wheeled in the refrigerator-sized RAMAC, wired it to the mainframe, and explained that spinning disks meant no more rewinding tape.</p>
+					<p>After the first account lookup finished in seconds the branch manager clapped. “We can finally serve people before their lunch break ends.” Teams left the demo talking about real-time transaction systems instead of overnight batches.</p>
 						<a href="index-en.html">Home Hub</a>
 						<a href="computers-en.html">Computers Timeline</a>
-						<a href="networks-en.html">Networks Timeline</a>
+					<p>RAMAC stacked 50 metal platters to hold 5 MB and moved the read head directly to the needed block. Random access kicked off the age of online transaction processing (<abbr title="online transaction processing">OLTP</abbr>) and made magnetic disks the default storage for databases.</p>
 						<a href="databases-en.html" class="is-current">Database Timeline</a>
 						<a href="os-en.html">Operating Systems Timeline</a>
 						<div class="page__topic-nav-group" role="group" aria-label="Web making timelines">
@@ -41,60 +41,60 @@
 							<a href="web-interaction-en.html" data-topic-role="child">Browser Interaction Timeline</a>
 							<a href="web-tools-en.html" data-topic-role="child">Web Tools Timeline</a>
 						</div>
-						<a href="was-en.html">Web Server Timeline</a>
+				<p class="event-detail__summary">Insurance and manufacturing delegates admitted “no one understands our file layouts,” then agreed on shared names for records and links.</p>
 					</nav>
 				</div>
 				<nav class="page__nav" aria-label="Page sections">
-					<a href="#timeline">View Years</a>
-					<a href="#sources">Sources</a>
+					<p>Inside a New York boardroom the delegates drew diagrams that disagreed on nearly everything. “We store the contract after the customer record.” “We keep links in a separate file.” The chair finally wrote RECORD · SET · LINK on the chalkboard and asked everyone to map their systems to that trio.</p>
+					<p>After hours of debate they settled on common link names and took a draft spec back to their shops. Those reports became the handbook for hierarchical and network databases throughout the 1960s.</p>
 					<div class="language-switch">
-						<label class="sr-only" for="language-select-databases">Language</label>
-						<select id="language-select-databases" data-language-switch>
+							<p class="event-detail__summary">MySQL arrived as a free download, giving web developers a lightweight database they could install in minutes.</p>
+					<p>The CODASYL model defined record types, sets, owners, and members linked by pointers. Because programs had to follow those pointers manually, designers staged the storage order in advance—experience that later fueled enthusiasm for declarative SQL.</p>
 							<option value="databases.html" data-language-code="ko">한국어</option>
 							<option value="databases-en.html" data-language-code="en" selected>English</option>
-						</select>
-					</div>
+								<p>Monty Widenius and David Axmark posted source code, a README, and promised quick bug fixes. Developers on mailing lists grabbed the tarball, compiled it, and pointed their CGI scripts at the new server.</p>
+								<p>Forums, guestbooks, and shopping carts appeared on shared hosting plans overnight. “It’s fast enough and free,” became the rallying cry that spread MySQL across the early web.</p>
 				</nav>
 			</header>
-
+								<p>MySQL paired a lightweight storage engine with an SQL interface and powered the LAMP stack (Linux, Apache, MySQL, PHP/Perl/Python). Replication and the InnoDB engine later added transactions and durability.</p>
 			<main class="page__main" id="main" role="main">
 				<section class="timeline-hero" aria-labelledby="timeline-title">
 					<div class="timeline-hero__head">
-						<p class="hero__eyebrow">Database Story for Curious Builders</p>
+				<p class="event-detail__summary">The Apollo parts team used IMS’s hierarchy to see which stage needed which component before the line ran out.</p>
 						<h1 class="timeline-hero__title" id="timeline-title">From punch cards to lakehouses, meet the people who taught databases to safeguard our records</h1>
 						<p class="timeline-hero__lede">
 							In 1890 census clerks feared they would miss yet another publication deadline. Herman Hollerith rolled in his punch card machines and promised, “Let holes carry the numbers for you.” Decades later bank tellers and Apollo coordinators pleaded for faster lookups, so they tried spinning disks and hierarchical maps.
-						</p>
-						<p class="timeline-hero__lede">
+					<p>Rockwell engineers fretted that a missing bolt could stall an entire stage. Working with IBM, they loaded IMS so each assembly step had a tidy list of needed parts. A technician punched in a work-order code and the required items popped onto the terminal.</p>
+					<p>Shortages plummeted and the floor supervisor grinned, “We can stop tearing apart warehouses in a panic.” Banks and airlines borrowed the same hierarchy to manage accounts and reservations.</p>
 							During the 1970s E.F. Codd and Peter Chen organized data into tables and diagrams, while Oracle proved those ideas worked on the shop floor. In the 1990s MySQL and PostgreSQL broadened open-source options, and the 2000s brought Dynamo and MongoDB for web-scale experiments.
-						</p>
-						<p class="timeline-hero__lede">
+							<p class="event-detail__summary">The Berkeley crew renamed Postgres95 to PostgreSQL and doubled down on standards-compliant SQL with extensibility.</p>
+					<p>IMS stores root segments with nested children. The structure delivers fast, repeatable lookups, but any new query pattern usually demands new code—a limitation that later made relational databases attractive.</p>
 							Tap any year to discover the problem each era faced, the fix they shipped, and how it echoes in today’s systems. New to terms like SQL, NoSQL, lakehouse, or vector search? Each modal keeps the focus on people and decisions so you never get lost.
 						</p>
-					</div>
-				</section>
+								<p>Students dusted off Michael Stonebraker’s code, patched in SQL syntax, and pushed “Postgres95” to the web. Community requests poured in for better standards support, so the next preview rebranded as PostgreSQL 6.0.</p>
+								<p>Mailing lists buzzed about custom types, MVCC, and ODBC drivers. Contributors treated the project as the open-source relational database that could rival proprietary systems.</p>
 
 				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
-					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">Selecting a year opens a nearby dialog so you can keep your place while reading the details.</p>
+								<p>PostgreSQL offered extensible types, functions, indexes, and MVCC concurrency control. Community governance and portability helped it become the dependable open-source choice for serious workloads.</p>
 
 					<section class="timeline-group" aria-labelledby="decade-1890 topic-1890">
 						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1890">1890s</p>
+				<p class="event-detail__summary">IDS let engineers map a single part across many products by following networked pointers instead of rigid trees.</p>
 							<h3 class="timeline-group__topic" id="topic-1890">Census clerks and punch cards</h3>
 							<p class="timeline-group__summary">Clerks and engineers traded paper tables for punch cards and electromechanical tabulators so machines could shoulder repetitive counts.</p>
 						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1890-hollerith">
+					<p>General Electric’s Charles Bachman noted, “Hierarchies fall apart when the same part belongs to multiple assemblies.” His IDS database mapped supplier → part → product relationships with pointers that worked in either direction.</p>
+					<p>At the demo an engineer laughed, “We can finally trace where this bolt ends up—and who supplied it.” IDS nudged teams to view databases as exploration tools, not just storage bins.</p>
 								<span class="timeline-event__year">1890</span>
-								<span class="timeline-event__label">Hollerith Punch Card System</span>
-							</button>
+							<p class="event-detail__summary">Executives wanted yesterday’s numbers every morning, so consultants spread star schemas and ETL blueprints far and wide.</p>
+					<p>Network databases allowed one record to belong to multiple sets, graph-style. Developers still wrote the navigation logic by hand, which led many to dream about a language that could declare joins automatically—enter SQL.</p>
 						</div>
 					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-1950 topic-1950">
+								<p>Consultants drew a star on the whiteboard: fact table in the middle, dimensions around it. “Run nightly ETL, load the warehouse, and the CFO can open dashboards before the 8 a.m. meeting,” they promised.</p>
+								<p>Companies raced to follow the playbook, wiring operational systems into staging servers and overnight jobs. SQL replaced endless spreadsheet merges for quarterly reviews.</p>
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1950">1950s</p>
-							<h3 class="timeline-group__topic" id="topic-1950">Magnetic disks promise instant updates</h3>
+								<p>Star schemas separate fact and dimension tables to speed repeatable analytics. ETL (extract, transform, load) pipelines became standard for moving data from OLTP systems into dedicated warehouses.</p>
 							<p class="timeline-group__summary">Bank and insurance teams were tired of swapping tapes, and spinning disks offered a “fix it the moment you notice it” workflow.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
@@ -105,15 +105,15 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1959-codasyl">
 								<span class="timeline-event__year">1959</span>
 								<span class="timeline-event__label">CODASYL DB Committee</span>
-							</button>
+							<p class="event-detail__summary">Google revealed MapReduce, explaining how simple map and reduce functions could harness thousands of servers.</p>
 						</div>
 					</section>
 
-					<section class="timeline-group" aria-labelledby="decade-1960 topic-1960">
-						<header class="timeline-group__head">
+								<p>Google engineers described how web indexing jobs split into map tasks, shuffled data across the network, and merged results with reduce. Developers outside Google saw the paper and immediately started re-creating the pattern.</p>
+								<p>Hadoop emerged from that excitement, powering log crunching, personalization, and large-scale analytics with commodity hardware.</p>
 							<p class="timeline-group__decade" id="decade-1960">1960s</p>
 							<h3 class="timeline-group__topic" id="topic-1960">Rockets and banks map hierarchies</h3>
-							<p class="timeline-group__summary">Apollo parts and airline bookings forced teams to stack records in layers or link them with network models.</p>
+								<p>MapReduce processes key-value pairs, spreading work across map tasks and aggregating through reduce tasks. Automatic retries, data locality, and shuffle phases became standard features of distributed processing systems.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1966-ims">
@@ -124,15 +124,15 @@
 								<span class="timeline-event__year">1969</span>
 								<span class="timeline-event__label">IDS Network Model</span>
 							</button>
-						</div>
+							<p class="event-detail__summary">Amazon shared Dynamo, the always-on key-value store that kept shopping carts alive through hardware failures.</p>
 					</section>
 
 					<section class="timeline-group" aria-labelledby="decade-1970 topic-1970">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1970">1970s</p>
+								<p>With peak season looming, Amazon’s engineers insisted a dead server must not erase a customer’s cart. They divided key space with consistent hashing and replicated data across multiple nodes.</p>
+								<p>Internal demos showed carts surviving node outages, convincing the company to keep the architecture and later publish the design. Dynamo influenced Cassandra, Riak, and countless “always writeable” systems.</p>
 							<h3 class="timeline-group__topic" id="topic-1970">Relational thinking and diagram language</h3>
 							<p class="timeline-group__summary">Researchers and designers agreed to “just state the conditions,” standardizing SQL and ER diagrams along the way.</p>
-						</header>
+								<p>Dynamo combined consistent hashing, vector clocks, and gossip protocols. It favored eventual consistency and availability, setting expectations for modern distributed key-value stores.</p>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1970-codd">
 								<span class="timeline-event__year">1970</span>
@@ -143,15 +143,15 @@
 								<span class="timeline-event__label">Peter Chen ER Model</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1979-oracle">
-								<span class="timeline-event__year">1979</span>
+							<p class="event-detail__summary">MongoDB 1.0 let teams store JSON-like documents directly, postponing schema decisions without slowing delivery.</p>
 								<span class="timeline-event__label">Oracle V2 SQL DB</span>
 							</button>
 						</div>
-					</section>
-
+								<p>10gen engineers held meetups showing how to insert BSON documents without declaring rigid tables. Startups embraced the idea, adding new fields as quickly as product managers dreamed them up.</p>
+								<p>MongoDB spread from side projects to content platforms and logging pipelines because it felt natural for JSON-heavy apps.</p>
 					<section class="timeline-group" aria-labelledby="decade-1980 topic-1980">
 						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1980">1980s</p>
+								<p>MongoDB stores BSON documents with dynamic schemas, adds indexes per collection, and supports sharding. Later releases added transactions and stronger consistency to complement the rapid iteration workflow.</p>
 							<h3 class="timeline-group__topic" id="topic-1980">Standardization and parallel engines spread</h3>
 							<p class="timeline-group__summary">Large enterprises made relational databases their default tool, accelerating SQL standards and massive parallel hardware.</p>
 						</header>
@@ -162,15 +162,15 @@
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1986-sql-standard">
 								<span class="timeline-event__year">1986</span>
-								<span class="timeline-event__label">ANSI SQL-86</span>
+							<p class="event-detail__summary">Google described Spanner, a globally consistent database synchronized with GPS and atomic clocks.</p>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1988-teradata">
 								<span class="timeline-event__year">1988</span>
-								<span class="timeline-event__label">Teradata DBC/1012</span>
-							</button>
+								<p>Google mounted atomic clocks and GPS receivers next to server racks, exposing a TrueTime API that returned a precise time window. The Spanner paper explained how that window let distant data centers commit transactions in a consistent order.</p>
+								<p>Teams building global banking, ads, and gaming platforms saw a path to strong consistency without abandoning scale.</p>
 						</div>
 					</section>
-
+								<p>Spanner combines the TrueTime API, Paxos replication, and two-phase commit to deliver global transactions. It inspired modern “NewSQL” systems that pursue scale and consistency together.</p>
 					<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1990">1990s</p>
@@ -181,15 +181,15 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1995-mysql">
 								<span class="timeline-event__year">1995</span>
 								<span class="timeline-event__label">MySQL Release</span>
-							</button>
+							<p class="event-detail__summary">Kafka 0.8 stabilized partition replication, making streaming pipelines dependable in production.</p>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1996-postgres95">
 								<span class="timeline-event__year">1996</span>
 								<span class="timeline-event__label">PostgreSQL 6 Preview</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1998-datawarehouse">
+								<p>LinkedIn engineers set a goal: “If a leader dies, a follower must take over instantly.” The 0.8 release delivered that promise, and operators began treating Kafka as critical infrastructure.</p>
+								<p>Businesses routed logs, metrics, and clickstreams through Kafka, building real-time transformations that fed dashboards and downstream databases.</p>
 								<span class="timeline-event__year">1998</span>
 								<span class="timeline-event__label">Data Warehouse Reference Model</span>
-							</button>
+								<p>Kafka partitions topics, tracks offsets, and coordinates consumer groups for scale. The 0.8 replication model and controller laid the groundwork for today’s streaming stacks with ksqlDB, Flink, and more.</p>
 						</div>
 					</section>
 
@@ -200,15 +200,15 @@
 							<p class="timeline-group__summary">Internet companies sharded logs across thousands of machines and tested document or key-value stores for flexibility.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2004-mapreduce">
+							<p class="event-detail__summary">Snowflake popularized cloud warehouses that separate storage from compute and charge only for what you run.</p>
 								<span class="timeline-event__year">2004</span>
 								<span class="timeline-event__label">Google MapReduce Paper</span>
 							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2006-dynamo">
-								<span class="timeline-event__year">2006</span>
+								<p>Data teams logged into Snowflake, created virtual warehouses, and loaded CSV or JSON without provisioning servers. Minutes later analysts were running SQL against cloud storage.</p>
+								<p>Pay-per-second pricing meant startups could pause compute when idle. Built-in replication and data sharing won over global enterprises.</p>
 								<span class="timeline-event__label">Amazon Dynamo Design</span>
 							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2009-mongodb">
+								<p>Snowflake’s architecture splits centralized storage from independent compute clusters, improving concurrency. Optimization and data sharing features let multiple teams work on the same datasets safely.</p>
 								<span class="timeline-event__year">2009</span>
 								<span class="timeline-event__label">MongoDB 1.0</span>
 							</button>
@@ -219,15 +219,15 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2010">2010s</p>
 							<h3 class="timeline-group__topic" id="topic-2010">Global consistency and streaming pipelines</h3>
-							<p class="timeline-group__summary">Worldwide services needed the same data everywhere and streamed events to prepare real-time analytics.</p>
+							<p class="event-detail__summary">Databricks proposed the “lakehouse,” layering warehouse features on top of open data lakes.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2012-spanner">
-								<span class="timeline-event__year">2012</span>
-								<span class="timeline-event__label">Google Spanner Paper</span>
+								<p>Data scientists complained about copying files from lakes into warehouses just to run BI queries. Databricks demoed Delta Lake tables: ACID transactions, schema evolution, and time travel sitting directly on object storage.</p>
+								<p>Analysts saw they could query raw and curated data in one place while machine learning teams kept using the same files. Competitors raced to add similar lakehouse features.</p>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-kafka">
-								<span class="timeline-event__year">2014</span>
+								<p>Lakehouse architectures rely on open table formats (Delta Lake, Apache Iceberg, Apache Hudi) to provide ACID guarantees, schema evolution, and unified access for BI, ML, and streaming workloads.</p>
 								<span class="timeline-event__label">Apache Kafka 0.8</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2018-snowflake">
@@ -238,15 +238,15 @@
 					</section>
 
 					<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
-						<header class="timeline-group__head">
+							<p class="event-detail__summary">The generative AI surge brought vector databases into production for semantic search and retrieval-augmented chatbots.</p>
 							<p class="timeline-group__decade" id="decade-2020">2020s</p>
 							<h3 class="timeline-group__topic" id="topic-2020">Lakehouses and vector search arrive</h3>
 							<p class="timeline-group__summary">Architects bridged lakes and warehouses as AI teams adopted vector databases for semantic search.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
+								<p>Product teams asked how to make chatbots remember policy documents. The answer was embeddings: convert each paragraph to a vector, store it, and retrieve the closest match during a conversation.</p>
+								<p>Pilot projects showed support agents getting suggested answers in milliseconds, sparking new requirements around relevance tuning, privacy filters, and latency budgets.</p>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2020-lakehouse">
 								<span class="timeline-event__year">2020</span>
-								<span class="timeline-event__label">Lakehouse Strategy</span>
+								<p>Vector databases pair embeddings with approximate nearest neighbor (ANN) search and filtering. Production rollouts now weigh hybrid queries, security boundaries, and refresh cadences alongside accuracy.</p>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-vector">
 								<span class="timeline-event__year">2023</span>
@@ -293,15 +293,15 @@
 				<button class="modal__close" type="button" aria-label="Close dialog" data-modal-close>&times;</button>
 				<div class="modal__content"></div>
 			</div>
-		</div>
+						<p class="event-detail__summary">E.F. Codd pitched the idea of “treat data as tables, state the conditions, and let math do the rest.”</p>
 
 		<template id="event-1890-hollerith">
 			<article class="event-detail" aria-labelledby="event-1890-hollerith-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1890</p>
+							<p>Codd kept seeing customer systems trip over pointer chains and thought, “What if we only described the answer we want?” In his 1970 paper he defined tables, rows, columns, and a handful of algebraic operations to combine them.</p>
+							<p>Colleagues erased pointer diagrams from the whiteboard and wrote “SELECT … FROM … WHERE …” instead. Prototype query engines appeared quickly, proving you could state conditions and let the system figure out the path.</p>
 					<h2 id="event-1890-hollerith-title">Hollerith Punch Card System</h2>
 					<p class="event-detail__summary">Census clerk Helen worried, “Can we finish on time?” until Hollerith’s punch cards and electrical counters delivered the totals.</p>
-				</header>
+							<p>The relational model defined relations (tables), tuples (rows), attributes (columns), and operators such as selection and join. By separating storage concerns from queries, it made room for portable, declarative SQL.</p>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
 						<p>The 1880 census had taken seven years to compile. Statistician Helen sighed, “We will start the next count before the last one finishes.” Herman Hollerith arrived with carts of punch cards and electric tabulators, inviting the team to test them.</p>
@@ -312,15 +312,15 @@
 					</div>
 				</section>
 			</article>
-		</template>
+						<p class="event-detail__summary">Peter Chen introduced entity-relationship diagrams so teams could sketch data structures instead of arguing over prose.</p>
 
 		<template id="event-1956-ramac">
 			<article class="event-detail" aria-labelledby="event-1956-ramac-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1956</p>
+							<p>Chen noticed students stumbling through long textual specs. He grabbed a marker and drew rectangles for entities, diamonds for relationships, and labeled the lines with cardinalities. Suddenly everyone in the room pictured the same structure.</p>
+							<p>Systems analysts copied the approach into design meetings. Sharing one diagram kept product managers, DBAs, and developers aligned before a single table was built.</p>
 					<h2 id="event-1956-ramac-title">IBM 305 RAMAC introduces the magnetic disk</h2>
 					<p class="event-detail__summary">San Francisco teller Robert watched a disk arm fetch records in seconds and sighed, “Customers won’t wait forever now.”</p>
-				</header>
+							<p>ER diagrams use rectangles for entities, diamonds for relationships, and ovals for attributes. Cardinality markers on the lines communicate business rules that later become table constraints.</p>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
 						<p>San Francisco tellers faced endless lunchtime lines. Clerk Robert muttered, “If only card balances updated faster.” IBM rolled in the refrigerator-sized RAMAC, whose platters spun hundreds of times per second while an arm darted to the right block.</p>
@@ -331,15 +331,15 @@
 					</div>
 				</section>
 			</article>
-		</template>
+						<p class="event-detail__summary">Oracle’s V2 release showed SQL could run outside the lab and keep factory systems humming.</p>
 
 		<template id="event-1959-codasyl">
 			<article class="event-detail" aria-labelledby="event-1959-codasyl-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1959</p>
+							<p>In Redwood Shores a small team rehearsed demos that started with “Type SELECT to fetch the rows you need.” They shipped disks and binders to early adopters, crossing their fingers that SQL would survive outside the lab.</p>
+							<p>The first customer called back grinning: “Our analysts ran ad-hoc queries on the plant floor and the system stayed up.” That endorsement gave SQL databases credibility in production settings.</p>
 					<h2 id="event-1959-codasyl-title">CODASYL Database Committee</h2>
 					<p class="event-detail__summary">Insurance and manufacturing delegates said, “Nobody else understands our file layout,” then drafted shared rules for records and links.</p>
-				</header>
+							<p>Oracle V2 was among the first commercial SQL databases. Feedback from those deployments accelerated work on transactions, locking, recovery, and tuning tools.</p>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
 						<p>Around a New York conference table, delegates compared wildly different file layouts. “Our customer record sits right before the contract record.” “We keep links elsewhere.” Chair Betty wrote “RECORD · SET · LINK” on the board and steered the group toward common names.</p>
@@ -350,15 +350,15 @@
 					</div>
 				</section>
 			</article>
-		</template>
+						<p class="event-detail__summary">IBM shipped DB2 betas to mainframe clients so they could try SQL on mission-critical workloads.</p>
 
 		<template id="event-1966-ims">
 			<article class="event-detail" aria-labelledby="event-1966-ims-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1966</p>
+							<p>At IBM’s Poughkeepsie lab engineers swapped COBOL record handlers for SQL statements and pointed DB2 at nightly batch jobs. Pilot customers ran the new software over weekends, sending back punch-card stacks of feedback.</p>
+							<p>One bank reported, “We can retire half our custom file updates.” IBM tuned the optimizer and lock manager accordingly before the general release.</p>
 					<h2 id="event-1966-ims-title">IMS tracks Apollo rocket parts</h2>
 					<p class="event-detail__summary">The Apollo parts team asked IMS, “Which stage needs this component next?” and the hierarchy answered instantly.</p>
-				</header>
+							<p>DB2 ran on the MVS mainframe OS and paired SQL with a cost-based optimizer, buffer pools, and recovery utilities. It bridged IMS and VSAM shops into the relational era.</p>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
 						<p>Rockwell engineers supporting Apollo worried, “One missing bolt delays the whole build.” The IMS database stored each assembly step with its required parts. Technician Angela entered a work order at her terminal and the list appeared immediately.</p>
@@ -369,15 +369,15 @@
 					</div>
 				</section>
 			</article>
-		</template>
+						<p class="event-detail__summary">ANSI and ISO ratified SQL-86, turning SELECT-FROM-WHERE into the official universal syntax.</p>
 
 		<template id="event-1969-ids">
 			<article class="event-detail" aria-labelledby="event-1969-ids-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1969</p>
+							<p>Committee notes from 1986 show bold letters around a simple promise: “Vendors will use the same SELECT clause.” Teams spent late nights aligning their dialects to the draft.</p>
+							<p>Once the vote passed, customers relaxed. “We can move workloads without rewriting everything,” one CIO said, as training materials and tools standardized on the new syntax.</p>
 					<h2 id="event-1969-ids-title">IDS network model</h2>
 					<p class="event-detail__summary">Aircraft designers adopted IDS so a single part could appear across many products through networked pointers.</p>
-				</header>
+							<p>SQL-86 defined core statements (SELECT, INSERT, UPDATE, DELETE), views, and transaction controls. Later SQL-89 and SQL-92 revisions expanded the language but kept backward compatibility with this baseline.</p>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
 						<p>Charles Bachman of General Electric argued, “Hierarchies break when a single part appears in many assemblies.” His IDS database linked relationships like supplier → part and part → product with explicit pointers.
@@ -388,15 +388,15 @@
 						<p>Network databases let records participate in multiple sets, much like a graph. Developers still coded the joins themselves, which inspired the question, “What if a language described these joins for us?” Relational SQL became the answer.</p>
 					</div>
 				</section>
-			</article>
+						<p class="event-detail__summary">Teradata delivered racks of parallel nodes so retailers could crunch nationwide sales overnight.</p>
 		</template>
 
 		<template id="event-1970-codd">
-			<article class="event-detail" aria-labelledby="event-1970-codd-title">
-				<header class="event-detail__header">
+							<p>A national retailer unpacked Teradata cabinets and watched dozens of nodes fill with data. Operators learned how BYNET moved rows between nodes without choking the system.</p>
+							<p>After the first nightly run finished hours faster than before, analysts cheered. Parallel databases soon migrated from retail into finance and telecom workloads.</p>
 					<p class="event-detail__year">1970</p>
 					<h2 id="event-1970-codd-title">Relational model published</h2>
-					<p class="event-detail__summary">E.F. Codd urged teams to “treat data as tables and math,” opening the door to declarative SQL.</p>
+							<p>The DBC/1012 used a shared-nothing architecture with BYNET interconnects to exchange data. Splitting huge queries into smaller tasks launched the mainstream use of massively parallel processing (MPP) for analytics.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
