@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>ArcherLab IT Story 쨌 ???쒕쾭 ?곕?湲?/title>
-		<meta name="description" content="CERN httpd?먯꽌 Tomcat, Spring Boot, ?쒕쾭由ъ뒪源뚯? ???쒕쾭(WAS)??吏꾪솕瑜??ш굔 以묒떖?쇰줈 ?뺣━?덉뒿?덈떎." />
-		<meta property="og:title" content="ArcherLab IT Story 쨌 Web Server Timeline" />
-		<meta property="og:description" content="泥????쒕쾭遺??Nginx, Spring Boot, Lambda, Ingress源뚯? 諛깆뿏???붿껌 ?먮쫫??諛붽씔 ?쒓컙???곕씪媛 蹂댁꽭??" />
+		<title>ArcherLab IT Story · 웹 서버 연대기</title>
+		<meta name="description" content="CERN httpd에서 Tomcat, Spring Boot, 서버리스까지 웹 서버(WAS)의 진화를 사건 중심으로 정리했습니다." />
+		<meta property="og:title" content="ArcherLab IT Story · Web Server Timeline" />
+		<meta property="og:description" content="첫 웹 서버부터 Nginx, Spring Boot, Lambda, Ingress까지 백엔드 요청 흐름을 바꾼 순간을 따라가 보세요." />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -27,30 +27,30 @@
 						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
 						<span class="page__brand-label">ArcherLab Chronicle</span>
 					</a>
-					<nav class="page__topic-nav" aria-label="二쇱젣 ?꾪솚">
-						<a href="index.html">???덈툕</a>
-						<a href="computers.html">而댄벂???곕?湲?/a>
-						<a href="networks.html">?ㅽ듃?뚰겕 ?곕?湲?/a>
-						<a href="databases.html">?곗씠?곕쿋?댁뒪 ?곕?湲?/a>
-						<a href="os.html">?댁쁺泥댁젣 ?곕?湲?/a>
-						<div class="page__topic-nav-group" role="group" aria-label="???쒖옉 ?곕?湲?>
-							<span class="page__topic-nav-label">???쒖옉 ?곕?湲?/span>
-							<a href="web.html" data-topic-role="parent">???쒖옉 ?곕?湲??덈툕</a>
-							<a href="web-structure.html" data-topic-role="child">??臾몄꽌 ?ㅺ퀎 ?곕?湲?/a>
-							<a href="web-styling.html" data-topic-role="child">?ㅽ??쇰쭅 吏꾪솕 ?곕?湲?/a>
-							<a href="web-interaction.html" data-topic-role="child">釉뚮씪?곗? ?명꽣?숈뀡 ?곕?湲?/a>
-							<a href="web-tools.html" data-topic-role="child">???쒖옉 ?꾧뎄 ?곕?湲?/a>
+					<nav class="page__topic-nav" aria-label="주제 전환">
+						<a href="index.html">홈 허브</a>
+						<a href="computers.html">컴퓨터 연대기</a>
+						<a href="networks.html">네트워크 연대기</a>
+						<a href="databases.html">데이터베이스 연대기</a>
+						<a href="os.html">운영체제 연대기</a>
+						<div class="page__topic-nav-group" role="group" aria-label="웹 제작 연대기">
+							<span class="page__topic-nav-label">웹 제작 연대기</span>
+							<a href="web.html" data-topic-role="parent">웹 제작 연대기 허브</a>
+							<a href="web-structure.html" data-topic-role="child">웹 문서 설계 연대기</a>
+							<a href="web-styling.html" data-topic-role="child">스타일링 진화 연대기</a>
+							<a href="web-interaction.html" data-topic-role="child">브라우저 인터랙션 연대기</a>
+							<a href="web-tools.html" data-topic-role="child">웹 제작 도구 연대기</a>
 						</div>
-						<a href="was.html" class="is-current">???쒕쾭 ?곕?湲?/a>
+						<a href="was.html" class="is-current">웹 서버 연대기</a>
 					</nav>
 				</div>
-				<nav class="page__nav" aria-label="?뱀뀡 ?먯깋">
-					<a href="#timeline">?곕룄 蹂닿린</a>
-					<a href="#sources">李멸퀬</a>
+				<nav class="page__nav" aria-label="섹션 탐색">
+					<a href="#timeline">연도 보기</a>
+					<a href="#sources">참고</a>
 					<div class="language-switch">
-						<label class="sr-only" for="language-select-was">?몄뼱 ?좏깮</label>
+						<label class="sr-only" for="language-select-was">언어 선택</label>
 						<select id="language-select-was" data-language-switch>
-							<option value="was.html" data-language-code="ko" selected>?쒓뎅??/option>
+							<option value="was.html" data-language-code="ko" selected>한국어</option>
 							<option value="was-en.html" data-language-code="en">English</option>
 						</select>
 					</div>
@@ -61,36 +61,36 @@
 				<section class="timeline-hero" aria-labelledby="timeline-title">
 					<div class="timeline-hero__head">
 						<p class="hero__eyebrow">Web Server Story for Backend Builders</p>
-						<h1 class="timeline-hero__title" id="timeline-title">?쒖슂泥?쓣 ?덉쟾?섍쾶 ?뚮젮蹂대궡?ㅻ㈃??앹씠??臾삳뜕 ?댁쁺?먯쓽 ?곕?湲?/h1>
+						<h1 class="timeline-hero__title" id="timeline-title">“요청을 안전하게 돌려보내려면?”이라 묻던 운영자의 연대기</h1>
 						<p class="timeline-hero__lede">
-							1990??CERN?먯꽌 ?곌뎄?먯씠 留먰뻽?듬땲?? ?쒕쭅?щ쭔 ?뚮윭??蹂닿퀬?쒕? ?????덈떎怨좎슂???httpd ?곕が ?욎뿉??? 踰꾨꼫??由ш? ?껋쑝硫??쏥ET ??踰덉씠硫??⑸땲?ㅲ앸씪怨??듯뻽?듬땲?? 洹??쒓컙遺???쒕쾭???⑥닚 ?뚯씪 李쎄퀬媛 ?꾨땲?? ?붿껌??諛쏆븘 ?먮떒?섎뒗 ?숇즺媛 ?섏뿀?듬땲??
+							1990년 CERN에서 연구원이 말했습니다. “링크만 눌러도 보고서를 열 수 있다고요?” httpd 데몬 앞에서 팀 버너스-리가 웃으며 “GET 한 번이면 됩니다”라고 답했습니다. 그 순간부터 서버는 단순 파일 창고가 아니라, 요청을 받아 판단하는 동료가 되었습니다.
 						</p>
 						<p class="timeline-hero__lede">
-							怨??댁쁺?? ?쒖궗?⑹옄留덈떎 ?ㅻⅨ ?묐떟??蹂대궡?ㅻ㈃ ?대뼸寃??섏???앸씪硫??쒕툝由욧낵 HttpSession??遺숈옟?섍퀬, Tomcat? ?쒖꽭?섏? ?닿? 吏?ш쾶?붴앸씪硫??덈꼍 ?몄텧??以꾩뿬 二쇱뿀?듬땲?? 蹂댁븞 ?대떦?먮뒗 SSL ?먮Ъ?좊? 媛由ы궎硫??쒖씠??移대뱶 寃곗젣???대큶?쒕떎?앸씪怨??ㅻ뱷?덇퀬, ?명봽???붿??덉뼱??mod_proxy? LVS ?욎뿉???쒖젙?겶룸룞???붿껌??媛덈씪蹂댁짛?앸씪硫??몃옒?쎌쓣 履쇨컻湲??쒖옉?덉뒿?덈떎.
+							곧 운영팀은 “사용자마다 다른 응답을 보내려면 어떻게 하지?”라며 서블릿과 HttpSession을 붙잡았고, Tomcat은 “세션은 내가 지킬게요”라며 새벽 호출을 줄여 주었습니다. 보안 담당자는 SSL 자물쇠를 가리키며 “이제 카드 결제도 해봅시다”라고 설득했고, 인프라 엔지니어는 mod_proxy와 LVS 앞에서 “정적·동적 요청을 갈라보죠”라며 트래픽을 쪼개기 시작했습니다.
 						</p>
 						<p class="timeline-hero__lede">
-							?ㅻ뒛??Nginx, Spring Boot, Lambda, Ingress ?댁쁺?먮뒗 ?쒖꽕?뺤? 以꾩씠怨?諛고룷???먮룞?쇰줈, ?꾩슂?섎㈃ 而⑦뀒?대꼫媛 ???諛쏆븘?붴앸씪怨??먯떊 ?덇쾶 留먰빀?덈떎. ?꾨옒 ?곕?瑜??뚮윭 ?뱀떆 ?붿??덉뼱媛 ?대뼡 寃곗젙???대졇怨? ?대뼡 ??щ줈 ????ㅻ뱷?덈뒗吏 ?④퍡 ?ㅼ뼱蹂댁꽭??
+							오늘날 Nginx, Spring Boot, Lambda, Ingress 운영자는 “설정은 줄이고 배포는 자동으로, 필요하면 컨테이너가 대신 받아요”라고 자신 있게 말합니다. 아래 연대를 눌러 당시 엔지니어가 어떤 결정을 내렸고, 어떤 대사로 팀을 설득했는지 함께 들어보세요.
 						</p>
 					</div>
 				</section>
 
 				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
-					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">?곕룄 踰꾪듉???꾨Ⅴ硫???李??놁씠 ?앹뾽 ????곸옄媛 ?대━怨? 洹??먮━?먯꽌 ?먯꽭???댁빞湲곕? ?댁뼱???쎌쓣 ???덉뒿?덈떎.</p>
+					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">연도 버튼을 누르면 새 창 없이 팝업 대화 상자가 열리고, 그 자리에서 자세한 이야기를 이어서 읽을 수 있습니다.</p>
 
 					<section class="timeline-group" aria-labelledby="decade-1990-webserver topic-1990-webserver">
 						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1990-webserver">1990??995</p>
-							<h3 class="timeline-group__topic" id="topic-1990-webserver">?쒖꽌踰꾨룄 ?곕━ ?먯쑝濡??뚮━?먥?/h3>
-							<p class="timeline-group__summary">CERN, NCSA, Apache ???肄붾뱶瑜?怨듦컻?섎ŉ ?쒕떎?대줈?쒗빐??吏곸젒 怨좎퀜 蹂댁꽭?붴앸씪怨?留먰븯?????멸퀎 ?댁쁺?먭? ?먯떊留뚯쓽 ???쒕쾭瑜??몄슦湲??쒖옉?덉뒿?덈떎.</p>
+							<p class="timeline-group__decade" id="decade-1990-webserver">1990–1995</p>
+							<h3 class="timeline-group__topic" id="topic-1990-webserver">“서버도 우리 손으로 돌리자”</h3>
+							<p class="timeline-group__summary">CERN, NCSA, Apache 팀이 코드를 공개하며 “다운로드해서 직접 고쳐 보세요”라고 말하자 전 세계 운영자가 자신만의 웹 서버를 세우기 시작했습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1990-cern-httpd">
 								<span class="timeline-event__year">1990</span>
-								<span class="timeline-event__label">CERN httpd ?쒕쾾 ?댁쁺</span>
+								<span class="timeline-event__label">CERN httpd 시범 운영</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1993-ncsa-httpd">
 								<span class="timeline-event__year">1993</span>
-								<span class="timeline-event__label">NCSA HTTPd 怨듦컻</span>
+								<span class="timeline-event__label">NCSA HTTPd 공개</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1995-apache-httpd">
 								<span class="timeline-event__year">1995</span>
@@ -101,44 +101,44 @@
 
 					<section class="timeline-group" aria-labelledby="decade-1994-infra topic-1994-infra">
 						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1994-infra">1994??998</p>
-							<h3 class="timeline-group__topic" id="topic-1994-infra">?쒖븵?⑥? ?닿?, ?ㅻ뒗 ?덈꽕??/h3>
-							<p class="timeline-group__summary">SSL, mod_proxy, LVS媛 ?깆옣?섎ŉ ?댁쁺?먮뱾? ?쒕낫?덉? ?ш린???앸궡怨? ?몃옒?쎌? ?ш린??媛덈씪?붴앸씪硫????쒕쾭? ?좏뵆由ъ??댁뀡 ?쒕쾭瑜?遺꾨━?덉뒿?덈떎.</p>
+							<p class="timeline-group__decade" id="decade-1994-infra">1994–1998</p>
+							<h3 class="timeline-group__topic" id="topic-1994-infra">“앞단은 내가, 뒤는 너네”</h3>
+							<p class="timeline-group__summary">SSL, mod_proxy, LVS가 등장하며 운영자들은 “보안은 여기서 끝내고, 트래픽은 여기서 갈라요”라며 웹 서버와 애플리케이션 서버를 분리했습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1994-ssl">
 								<span class="timeline-event__year">1994</span>
-								<span class="timeline-event__label">Netscape SSL 2.0 ?쒕쾾 ?곸슜</span>
+								<span class="timeline-event__label">Netscape SSL 2.0 시범 적용</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1996-mod-proxy">
 								<span class="timeline-event__year">1996</span>
-								<span class="timeline-event__label">Apache mod_proxy ?꾩엯</span>
+								<span class="timeline-event__label">Apache mod_proxy 도입</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1998-lvs">
 								<span class="timeline-event__year">1998</span>
-								<span class="timeline-event__label">Linux Virtual Server ?꾨줈?앺듃</span>
+								<span class="timeline-event__label">Linux Virtual Server 프로젝트</span>
 							</button>
 						</div>
 					</section>
 
 					<section class="timeline-group" aria-labelledby="decade-1990-was topic-1990-was">
 						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1990-was">1997??999</p>
-							<h3 class="timeline-group__topic" id="topic-1990-was">?쒖슂泥?? 媛앹껜濡? ?몄뀡? 而⑦뀒?대꼫濡쒋?/h3>
-							<p class="timeline-group__summary">Servlet 洹쒖튃怨?Tomcat 而⑦뀒?대꼫媛 ?쒖슂泥?? ?닿? 諛쏆븘 以꾧쾶, ?몄뀡? ?닿? 湲곗뼲?좉쾶?앸씪硫??숈쟻 ?뱀쓽 ?좊?瑜???븯?듬땲??</p>
+							<p class="timeline-group__decade" id="decade-1990-was">1997–1999</p>
+							<h3 class="timeline-group__topic" id="topic-1990-was">“요청은 객체로, 세션은 컨테이너로”</h3>
+							<p class="timeline-group__summary">Servlet 규칙과 Tomcat 컨테이너가 “요청은 내가 받아 줄게, 세션은 내가 기억할게”라며 동적 웹의 토대를 닦았습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-servlet">
 								<span class="timeline-event__year">1997</span>
-								<span class="timeline-event__label">Servlet 1.0 ?ъ뼇</span>
+								<span class="timeline-event__label">Servlet 1.0 사양</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-httpsession">
 								<span class="timeline-event__year">1997</span>
-								<span class="timeline-event__label">HttpSession ?쒖???/span>
+								<span class="timeline-event__label">HttpSession 표준화</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1999-tomcat">
 								<span class="timeline-event__year">1999</span>
-								<span class="timeline-event__label">Apache Tomcat 怨듦컻</span>
+								<span class="timeline-event__label">Apache Tomcat 공개</span>
 							</button>
 						</div>
 					</section>
@@ -146,13 +146,13 @@
 					<section class="timeline-group" aria-labelledby="decade-2000-was topic-2000-was">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2000-was">2003</p>
-							<h3 class="timeline-group__topic" id="topic-2000-was">?쏣JB 留먭퀬??湲몄씠 ?덈떎??/h3>
-							<p class="timeline-group__summary">Spring 1.0???쏱lain Java濡쒕룄 ?몃옖??뀡 ?뚮┫ ???덉뼱?붴앸씪硫?寃쎈웾 ?꾨젅?꾩썙???쒕?瑜??댁뿀?듬땲??</p>
+							<h3 class="timeline-group__topic" id="topic-2000-was">“EJB 말고도 길이 있다”</h3>
+							<p class="timeline-group__summary">Spring 1.0이 “Plain Java로도 트랜잭션 돌릴 수 있어요”라며 경량 프레임워크 시대를 열었습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2003-spring">
 								<span class="timeline-event__year">2003</span>
-								<span class="timeline-event__label">Spring 1.0 諛쒗몴</span>
+								<span class="timeline-event__label">Spring 1.0 발표</span>
 							</button>
 						</div>
 					</section>
@@ -160,27 +160,27 @@
 					<section class="timeline-group" aria-labelledby="decade-2005-session topic-2005-session">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2005-session">2005</p>
-							<h3 class="timeline-group__topic" id="topic-2005-session">?쒖꽭?섏? 硫붾え由????留↔린?먥?/h3>
-							<p class="timeline-group__summary">Memcached媛 ?쒖꽭?섍낵 罹먯떆??諛뽰뿉 ?ъ슂?앸씪硫??щ윭 ???WAS瑜?臾띠쓣 ???덈뒗 ?뺤옣 ?꾨왂???쒖떆?덉뒿?덈떎.</p>
+							<h3 class="timeline-group__topic" id="topic-2005-session">“세션은 메모리 풀에 맡기자”</h3>
+							<p class="timeline-group__summary">Memcached가 “세션과 캐시는 밖에 둬요”라며 여러 대의 WAS를 묶을 수 있는 확장 전략을 제시했습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-memcached">
 								<span class="timeline-event__year">2005</span>
-								<span class="timeline-event__label">Memcached 怨듦컻</span>
+								<span class="timeline-event__label">Memcached 공개</span>
 							</button>
 						</div>
 					</section>
 
 					<section class="timeline-group" aria-labelledby="decade-2010-was topic-2010-was">
 						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2010-was">2011??015</p>
-							<h3 class="timeline-group__topic" id="topic-2010-was">?쒖꽕?뺤? 以꾩씠怨? ?몃옒?쎌? 留↔꺼?쇄?/h3>
-							<p class="timeline-group__summary">Nginx, Spring Boot, Lambda, Ingress媛 ?쒓?踰쇱슫 ?꾨줉?? ?먮룞 ?ㅼ젙, ?쒕쾭 ?녿뒗 ?ㅽ뻾, ?대윭?ㅽ꽣 愿臾멤앹쓣 ?좎뼵?섎ŉ ?댁쁺 諛⑹떇???덈줈 ?쇱뒿?덈떎.</p>
+							<p class="timeline-group__decade" id="decade-2010-was">2011–2015</p>
+							<h3 class="timeline-group__topic" id="topic-2010-was">“설정은 줄이고, 트래픽은 맡겨라”</h3>
+							<p class="timeline-group__summary">Nginx, Spring Boot, Lambda, Ingress가 “가벼운 프록시, 자동 설정, 서버 없는 실행, 클러스터 관문”을 선언하며 운영 방식을 새로 썼습니다.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2011-nginx">
 								<span class="timeline-event__year">2011</span>
-								<span class="timeline-event__label">Nginx 1.0 ?덉젙??/span>
+								<span class="timeline-event__label">Nginx 1.0 안정화</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-spring-boot">
 								<span class="timeline-event__year">2014</span>
@@ -188,11 +188,11 @@
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-lambda">
 								<span class="timeline-event__year">2014</span>
-								<span class="timeline-event__label">AWS Lambda 異쒖떆</span>
+								<span class="timeline-event__label">AWS Lambda 출시</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2015-k8s-ingress">
 								<span class="timeline-event__year">2015</span>
-								<span class="timeline-event__label">Kubernetes Ingress 由ъ냼??/span>
+								<span class="timeline-event__label">Kubernetes Ingress 리소스</span>
 							</button>
 						</div>
 					</section>
@@ -200,31 +200,31 @@
 
 				<section class="sources" id="sources" aria-labelledby="sources-title">
 					<div class="section__head">
-						<h2 id="sources-title">李멸퀬 ?먮즺</h2>
-						<p>?ъ뼇 臾몄꽌, 諛고룷 怨듭?, 洹몃━怨??댁쁺????뚭퀬瑜?紐⑥븯?듬땲?? ?먮Ц???쎌뼱 蹂대㈃ ???쒕쾭(WAS)媛 ?대뼡 臾몄젣瑜??닿껐?섎젮怨??쒖뼱?щ뒗吏 ??遺꾨챸?섍쾶 ?ㅼ뼱?듬땲??</p>
+						<h2 id="sources-title">참고 자료</h2>
+						<p>사양 문서, 배포 공지, 그리고 운영팀의 회고를 모았습니다. 원문을 읽어 보면 웹 서버(WAS)가 어떤 문제를 해결하려고 태어났는지 더 분명하게 들어옵니다.</p>
 					</div>
 					<ul class="source-list">
-						<li><a href="https://www.w3.org/History/1991-WWW-NeXT/Implementation/" target="_blank" rel="noopener">W3C History 쨌 CERN httpd Implementation Notes</a></li>
-						<li><a href="https://archive.ncsa.illinois.edu/General/Internet/wwwserver.html" target="_blank" rel="noopener">NCSA Archives 쨌 NCSA HTTPd Web Server</a></li>
-						<li><a href="https://httpd.apache.org/ABOUT_APACHE.html" target="_blank" rel="noopener">Apache HTTP Server Project 쨌 About Apache HTTP Server</a></li>
-						<li><a href="https://web.archive.org/web/19970222044424/http://home.netscape.com/eng/security/SSL_2.html" target="_blank" rel="noopener">Netscape 쨌 SSL 2.0 Technical Overview (1994 ?꾩뭅?대툕)</a></li>
-						<li><a href="https://httpd.apache.org/docs/1.3/mod/mod_proxy.html" target="_blank" rel="noopener">Apache HTTP Server 1.3 Docs 쨌 mod_proxy</a></li>
-						<li><a href="http://www.linuxvirtualserver.org/history.html" target="_blank" rel="noopener">Linux Virtual Server 쨌 Project History</a></li>
-						<li><a href="https://docs.oracle.com/javaee/1.3/api/javax/servlet/http/HttpSession.html" target="_blank" rel="noopener">Java Servlet API 쨌 HttpSession Interface</a></li>
-						<li><a href="https://memcached.org/about" target="_blank" rel="noopener">memcached.org 쨌 About Memcached</a></li>
-						<li><a href="https://jakarta.ee/specifications/servlet/" target="_blank" rel="noopener">Jakarta EE 쨌 Servlet Specification</a></li>
-						<li><a href="https://tomcat.apache.org/whichversion.html" target="_blank" rel="noopener">Apache Tomcat 쨌 Release History</a></li>
-						<li><a href="https://spring.io/blog/2004/03/24/announcing-spring-framework-1-0" target="_blank" rel="noopener">Spring Blog 쨌 Announcing Spring Framework 1.0</a></li>
-						<li><a href="https://nginx.org/en/announcements.html" target="_blank" rel="noopener">NGINX 쨌 Announcements Archive</a></li>
-						<li><a href="https://spring.io/blog/2014/04/01/spring-boot-1-0-available-now" target="_blank" rel="noopener">Spring Blog 쨌 Spring Boot 1.0 Available Now</a></li>
-						<li><a href="https://aws.amazon.com/blogs/aws/aws-lambda-event-driven-code-in-the-cloud/" target="_blank" rel="noopener">AWS News Blog 쨌 AWS Lambda Announcement</a></li>
-						<li><a href="https://kubernetes.io/blog/2015/11/introducing-ingress-resource/" target="_blank" rel="noopener">Kubernetes Blog 쨌 Introducing the Ingress Resource</a></li>
+						<li><a href="https://www.w3.org/History/1991-WWW-NeXT/Implementation/" target="_blank" rel="noopener">W3C History · CERN httpd Implementation Notes</a></li>
+						<li><a href="https://archive.ncsa.illinois.edu/General/Internet/wwwserver.html" target="_blank" rel="noopener">NCSA Archives · NCSA HTTPd Web Server</a></li>
+						<li><a href="https://httpd.apache.org/ABOUT_APACHE.html" target="_blank" rel="noopener">Apache HTTP Server Project · About Apache HTTP Server</a></li>
+						<li><a href="https://web.archive.org/web/19970222044424/http://home.netscape.com/eng/security/SSL_2.html" target="_blank" rel="noopener">Netscape · SSL 2.0 Technical Overview (1994 아카이브)</a></li>
+						<li><a href="https://httpd.apache.org/docs/1.3/mod/mod_proxy.html" target="_blank" rel="noopener">Apache HTTP Server 1.3 Docs · mod_proxy</a></li>
+						<li><a href="http://www.linuxvirtualserver.org/history.html" target="_blank" rel="noopener">Linux Virtual Server · Project History</a></li>
+						<li><a href="https://docs.oracle.com/javaee/1.3/api/javax/servlet/http/HttpSession.html" target="_blank" rel="noopener">Java Servlet API · HttpSession Interface</a></li>
+						<li><a href="https://memcached.org/about" target="_blank" rel="noopener">memcached.org · About Memcached</a></li>
+						<li><a href="https://jakarta.ee/specifications/servlet/" target="_blank" rel="noopener">Jakarta EE · Servlet Specification</a></li>
+						<li><a href="https://tomcat.apache.org/whichversion.html" target="_blank" rel="noopener">Apache Tomcat · Release History</a></li>
+						<li><a href="https://spring.io/blog/2004/03/24/announcing-spring-framework-1-0" target="_blank" rel="noopener">Spring Blog · Announcing Spring Framework 1.0</a></li>
+						<li><a href="https://nginx.org/en/announcements.html" target="_blank" rel="noopener">NGINX · Announcements Archive</a></li>
+						<li><a href="https://spring.io/blog/2014/04/01/spring-boot-1-0-available-now" target="_blank" rel="noopener">Spring Blog · Spring Boot 1.0 Available Now</a></li>
+						<li><a href="https://aws.amazon.com/blogs/aws/aws-lambda-event-driven-code-in-the-cloud/" target="_blank" rel="noopener">AWS News Blog · AWS Lambda Announcement</a></li>
+						<li><a href="https://kubernetes.io/blog/2015/11/introducing-ingress-resource/" target="_blank" rel="noopener">Kubernetes Blog · Introducing the Ingress Resource</a></li>
 					</ul>
 				</section>
 			</main>
 
 			<footer class="page__footer" role="contentinfo">
-				<p>짤 2025 ArcherLab 쨌 Stories on how web servers learned to scale.</p>
+				<p>© 2025 ArcherLab · Stories on how web servers learned to scale.</p>
 				<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
 			</footer>
 		</div>
@@ -232,7 +232,7 @@
 		<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
 			<div class="modal__overlay" data-modal-close></div>
 			<div class="modal__window" role="document" tabindex="-1">
-				<button class="modal__close" type="button" aria-label="?덉씠???リ린" data-modal-close>&times;</button>
+				<button class="modal__close" type="button" aria-label="레이어 닫기" data-modal-close>&times;</button>
 				<div class="modal__content"></div>
 			</div>
 		</div>
@@ -241,16 +241,16 @@
 			<article class="event-detail" aria-labelledby="event-1990-cern-httpd-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1990</p>
-					<h2 id="event-1990-cern-httpd-title">CERN httpd ?쒕쾾 ?댁쁺</h2>
-					<p class="event-detail__summary">?쏥ET ??踰덉씠硫??쇰Ц???대젮????? 踰꾨꼫??由щ뒗 CERN?먯꽌 HTML怨?HTTP瑜??댄빐?섎뒗 泥??쒕쾭瑜??꾩썱?듬땲??</p>
+					<h2 id="event-1990-cern-httpd-title">CERN httpd 시범 운영</h2>
+					<p class="event-detail__summary">“GET 한 번이면 논문이 열려요.” 팀 버너스-리는 CERN에서 HTML과 HTTP를 이해하는 첫 서버를 띄웠습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>1990??留? 踰꾨꼫??由щ뒗 NeXT 而댄벂???????<code>httpd</code> ?곕が???꾩슦怨??쒕툕?쇱슦?媛 GET??蹂대궡硫??ш린??HTML ?뚯씪??李얠븘 ?뚮젮以섏슂?앸씪怨??숇즺?먭쾶 ?ㅻ챸?덉뒿?덈떎. CERN ?명듃?쇰꽬??泥??섏씠吏媛 ?대━?? ?곌뎄?먮뱾? ??臾몄꽌瑜??щ┫ ?뚮쭏??留곹겕瑜??ъ븘 ?쒕줈???ㅽ뿕 ?명듃瑜??곌껐?덉뒿?덈떎.</p>
-						<p>珥덇린 ?뚯뒪???곌뎄???대??먯꽌留?怨듭쑀?먯?留? 1991???щ쫫?먮뒗 ?몃? 硫붿씪留?由ъ뒪?몄뿉 諛고룷?섏뼱 ?ㅻⅨ ?곌뎄湲곌???媛숈? ?쒕쾭瑜??쒗뿕?섍린 ?쒖옉?덉뒿?덈떎. ?쏦TTP??媛蹂띻퀬 HTML? ?곌린 ?쎈떎?앸뒗 ?낆냼臾몄씠 ?쇱?硫댁꽌 ???쒕쾭?쇰뒗 媛쒕뀗???꾩떎???섏뿀?듬땲??</p>
+						<p>1990년 말, 버너스-리는 NeXT 컴퓨터 한 대에 <code>httpd</code> 데몬을 띄우고 “브라우저가 GET을 보내면 여기서 HTML 파일을 찾아 돌려줘요”라고 동료에게 설명했습니다. CERN 인트라넷에 첫 페이지가 열리자, 연구자들은 새 문서를 올릴 때마다 링크를 달아 서로의 실험 노트를 연결했습니다.</p>
+						<p>초기 소스는 연구소 내부에서만 공유됐지만, 1991년 여름에는 외부 메일링 리스트에 배포되어 다른 연구기관도 같은 서버를 시험하기 시작했습니다. “HTTP는 가볍고 HTML은 쓰기 쉽다”는 입소문이 퍼지면서 웹 서버라는 개념이 현실이 되었습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>CERN httpd???뺤쟻 ?뚯씪???쒕퉬?ㅽ뻽吏留? ?붾젆?좊━ 由ъ뒪?낃낵 媛꾨떒???ㅽ뻾 ?ㅽ겕由쏀듃瑜?吏?먰빐 ?댄썑 CGI媛 ?먮━ ?〓뒗 諛쒗뙋???섏뿀?듬땲?? ?쒖슂泥?쓣 諛쏆븘 ?댁꽍?????묐떟???뚮젮以?ㅲ앸뒗 ?쒕쾭??湲곕낯 ????대븣 留덈젴?섏뿀怨? ?쀫궇 WAS媛 ?깆옣??濡쒖쭅??留≪쓣 ???덉뿀??寃껊룄 ??援ъ“ ?뺣텇?낅땲??</p>
+						<p>CERN httpd는 정적 파일을 서비스했지만, 디렉토리 리스팅과 간단한 실행 스크립트를 지원해 이후 CGI가 자리 잡는 발판이 되었습니다. “요청을 받아 해석한 뒤 응답을 돌려준다”는 서버의 기본 틀이 이때 마련되었고, 훗날 WAS가 등장해 로직을 맡을 수 있었던 것도 이 구조 덕분입니다.</p>
 					</div>
 				</section>
 			</article>
@@ -260,16 +260,16 @@
 			<article class="event-detail" aria-labelledby="event-1993-ncsa-httpd-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1993</p>
-					<h2 id="event-1993-ncsa-httpd-title">NCSA HTTPd 怨듦컻</h2>
-					<p class="event-detail__summary">?쏤TP?먯꽌 ?대젮諛쏆븘 諛붾줈 ?뚮젮蹂댁옄.??NCSA HTTPd???꾧뎄???ㅼ튂?????덈뒗 ?ㅽ뵂 ?쒕쾭濡??뱀쓣 ?쇰쑉?몄뒿?덈떎.</p>
+					<h2 id="event-1993-ncsa-httpd-title">NCSA HTTPd 공개</h2>
+					<p class="event-detail__summary">“FTP에서 내려받아 바로 돌려보자.” NCSA HTTPd는 누구나 설치할 수 있는 오픈 서버로 웹을 퍼뜨렸습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>留덊겕 ?덈뱶由ъ꽱怨??먮┃ 鍮덈굹??Mosaic 釉뚮씪?곗?瑜?留뚮뱾硫댁꽌 ?쒖꽌踰꾨룄 ?쎄쾶 ?ㅼ튂?????덇쾶 ?섏옄?앷퀬 寃곗젙?덉뒿?덈떎. 1993??11?? 洹몃뱾? <code>httpd_1.0.tar.Z</code> ?뚯씪??FTP???щ━怨??ㅼ튂 諛⑸쾿??README濡??덈궡?덉뒿?덈떎. ????곌뎄?ㅺ낵 而ㅻ??덊떚???섎（媛 硫???섍퀬 ?⑥튂瑜??щ젮 湲곕뒫??蹂닿컯?덉뒿?덈떎.</p>
-						<p>NCSA HTTPd???묎렐 ?쒖뼱, 濡쒓렇, CGI ?낆쓣 ?댁옣???곸슜 ?쒕퉬?ㅼ뿉???곹빀?덉뒿?덈떎. ?룹뒪耳?댄봽????肄붾뱶瑜?諛뷀깢?쇰줈 ?곸뾽???쒕쾭瑜?異쒖떆?덇퀬, Apache httpd ?꾨줈?앺듃??NCSA HTTPd???⑥튂 ?룹뿉??異쒕컻?덉뒿?덈떎.</p>
+						<p>마크 안드리센과 에릭 빈나는 Mosaic 브라우저를 만들면서 “서버도 쉽게 설치할 수 있게 하자”고 결정했습니다. 1993년 11월, 그들은 <code>httpd_1.0.tar.Z</code> 파일을 FTP에 올리고 설치 방법을 README로 안내했습니다. 대학 연구실과 커뮤니티는 하루가 멀다 하고 패치를 올려 기능을 보강했습니다.</p>
+						<p>NCSA HTTPd는 접근 제어, 로그, CGI 훅을 내장해 상용 서비스에도 적합했습니다. 넷스케이프는 이 코드를 바탕으로 상업용 서버를 출시했고, Apache httpd 프로젝트도 NCSA HTTPd의 패치 킷에서 출발했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>?ㅽ뵂?뚯뒪 HTTP ?쒕쾭媛 ?먮━ ?곗씠硫댁꽌 ?쒖꽌踰꾨뒗 ?꾧뎄???ㅼ튂?섍퀬 怨좎튌 ???덈떎?앸뒗 臾명솕媛 ?꾩깮?덉뒿?덈떎. ?댄썑 Apache httpd媛 ?쒖옣???μ븙?섍퀬, 洹??꾩뿉 CGI? 紐⑤뱢???뱁엳硫????좏뵆由ъ??댁뀡 ?쒕쾭媛 留〓뒗 ??븷怨??꾨줉?쑣룹젙???쒕쾭??寃쎄퀎媛 紐낇솗?댁죱?듬땲??</p>
+						<p>오픈소스 HTTP 서버가 널리 쓰이면서 “서버는 누구나 설치하고 고칠 수 있다”는 문화가 탄생했습니다. 이후 Apache httpd가 시장을 장악하고, 그 위에 CGI와 모듈이 얹히며 웹 애플리케이션 서버가 맡는 역할과 프록시·정적 서버의 경계가 명확해졌습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -280,15 +280,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1995</p>
 					<h2 id="event-1995-apache-httpd-title">Apache HTTP Server 1.0</h2>
-					<p class="event-detail__summary">?⑥튂 紐⑥엫? ?쒖븘?뚯튂濡?媛덉븘??? 紐⑤뱢留?耳쒕㈃ ?쇱슂?앸씪硫?而ㅻ??덊떚 二쇰룄 ?쒕쾭瑜??몄긽???대넧?듬땲??</p>
+					<p class="event-detail__summary">패치 모임은 “아파치로 갈아타요, 모듈만 켜면 돼요”라며 커뮤니티 주도 서버를 세상에 내놨습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>1995??珥? NCSA httpd???좎?蹂댁닔媛 ?먮젮吏??釉뚮씪?댁뼵 踰⑤젋?꾪봽? 濡쒖씠 ?꾨뵫? ?⑥튂 湲곗뿬?먮뱾??紐⑥븘 ?쒖븘?뚯튂(Apache) 洹몃９?앹쓣 留뚮뱾怨?怨듬룞 ??μ냼瑜??댁뿀?듬땲?? 媛숈? ??12??1.0 踰꾩쟾??諛쒗몴?섎ŉ ?쒕え???쒖뒪?쒖쑝濡??꾩슂??湲곕뒫留?耳쒓퀬 ?꾩꽭?붴앸씪怨??덈궡?덇퀬, ???멸퀎 ?댁쁺?먮뱾??硫붿씪留?由ъ뒪?몄뿉??利됱떆 ?쇰뱶諛깆쓣 二쇨퀬諛쏆븯?듬땲??</p>
-						<p>SSL, ?꾨줉?? 濡쒕뱶諛몃윴??紐⑤뱢??鍮좊Ⅴ寃?異붽??섎㈃???꾪뙆移섎뒗 ISP? ?ы꽭??湲곕낯 ?좏깮吏媛 ?섏뿀?듬땲?? ?룻겕?섑봽???듦퀎???쒖쎒 ?쒕쾭 ?쒖옣??50% ?댁긽???꾪뙆移섃앸씪???ъ떎??諛섎났?곸쑝濡?蹂댁뿬 二쇱뿀怨? ?ㅽ뵂?뚯뒪媛 ?곸뾽??諛고룷? ?닿묠瑜??섎????????덈떎???먯떊媛먯쓣 ?ъ뼱 二쇱뿀?듬땲??</p>
+						<p>1995년 초, NCSA httpd의 유지보수가 느려지자 브라이언 벨렌도프와 로이 필딩은 패치 기여자들을 모아 “아파치(Apache) 그룹”을 만들고 공동 저장소를 열었습니다. 같은 해 12월 1.0 버전을 발표하며 “모듈 시스템으로 필요한 기능만 켜고 끄세요”라고 안내했고, 전 세계 운영자들이 메일링 리스트에서 즉시 피드백을 주고받았습니다.</p>
+						<p>SSL, 프록시, 로드밸런싱 모듈이 빠르게 추가되면서 아파치는 ISP와 포털의 기본 선택지가 되었습니다. 넷크래프트 통계는 “웹 서버 시장의 50% 이상이 아파치”라는 사실을 반복적으로 보여 주었고, 오픈소스가 상업적 배포와 어깨를 나란히 할 수 있다는 자신감을 심어 주었습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Apache??MPM, 紐⑤뱢 援ъ“, ?ㅼ젙 ?뚯씪???듯빐 ???쒕쾭瑜??뺤옣 媛?ν븯寃?留뚮뱾?덉뒿?덈떎. ?댄썑 CGI? mod_php 媛숈? ?숈쟻 紐⑤뱢???섏뼱?섎ŉ WAS? ???쒕쾭??寃쎄퀎媛 遺꾨챸?댁죱怨? ?곗베쨌JBoss 媛숈? ?좏뵆由ъ??댁뀡 ?쒕쾭瑜??욌떒 ?꾪뙆移섍? 由щ쾭???꾨줉?쒕줈 臾띕뒗 ?꾪궎?띿쿂媛 ?낃퀎 ?쒖????섏뿀?듬땲??</p>
+						<p>Apache는 MPM, 모듈 구조, 설정 파일을 통해 웹 서버를 확장 가능하게 만들었습니다. 이후 CGI와 mod_php 같은 동적 모듈이 늘어나며 WAS와 웹 서버의 경계가 분명해졌고, 톰캣·JBoss 같은 애플리케이션 서버를 앞단 아파치가 리버스 프록시로 묶는 아키텍처가 업계 표준이 되었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -298,16 +298,16 @@
 			<article class="event-detail" aria-labelledby="event-1994-ssl-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1994</p>
-					<h2 id="event-1994-ssl-title">Netscape SSL 2.0 ?쒕쾾 ?곸슜</h2>
-					<p class="event-detail__summary">?쐆ttps ?먮Ъ?좉? 耳쒖죱?듬땲?????룹뒪耳?댄봽??SSL 2.0?쇰줈 ??寃곗젣??臾몄쓣 ?댁뿀?듬땲??</p>
+					<h2 id="event-1994-ssl-title">Netscape SSL 2.0 시범 적용</h2>
+					<p class="event-detail__summary">“https 자물쇠가 켜졌습니다.” 넷스케이프는 SSL 2.0으로 웹 결제의 문을 열었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>1994???룹뒪耳?댄봽 ?붿??덉뼱 ?? SSL 2.0 ?꾨줈?좎퐳 珥덉븞??留뚮뱾怨? Navigator? Commerce ?쒕쾭 踰좏? 踰꾩쟾???쐆ttps://???ㅽ뿕 湲곕뒫???ｌ뿀?듬땲?? ?쒖뿰?먯꽌??釉뚮씪?곗? 二쇱냼李쎌뿉 ?먮Ъ???꾩씠肄섏씠 ?섑??섍퀬, ?좎슜移대뱶 ?뺣낫媛 ?뷀샇?붾릺???꾩넚?섎뒗 紐⑥뒿??蹂댁뿬二쇱뿀?듬땲??</p>
-						<p>?꾩옄?곴굅?섎? 以鍮꾪븯??湲곗뾽?ㅼ? ?쒓퀬媛앹쓽 移대뱶 ?뺣낫瑜?蹂댄샇?????덈떎硫???寃곗젣瑜??댁뼱 蹂댁옄?앷퀬 諛섏쓳?덇퀬, ??됯낵 寃곗젣?щ룄 怨듦컻???몄쬆?쒖? 猷⑦듃 CA 泥닿퀎瑜??쇱쓽?섍린 ?쒖옉?덉뒿?덈떎.</p>
+						<p>1994년 넷스케이프 엔지니어 팀은 SSL 2.0 프로토콜 초안을 만들고, Navigator와 Commerce 서버 베타 버전에 “https://” 실험 기능을 넣었습니다. 시연에서는 브라우저 주소창에 자물쇠 아이콘이 나타나고, 신용카드 정보가 암호화되어 전송되는 모습을 보여주었습니다.</p>
+						<p>전자상거래를 준비하던 기업들은 “고객의 카드 정보를 보호할 수 있다면 웹 결제를 열어 보자”고 반응했고, 은행과 결제사도 공개키 인증서와 루트 CA 체계를 논의하기 시작했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>SSL? TCP ?꾩뿉 ?뷀샇?? 臾닿껐?? ?몄쬆 怨꾩링???뷀빐 HTTP ?듭떊??蹂댄샇?덉뒿?덈떎. ?댄썑 1996??SSL 3.0, 1999??TLS 1.0?쇰줈 ?댁뼱吏硫??ㅻ뒛??HTTPS媛 湲곕낯???섏뿀?듬땲?? ???쒕쾭???몄쬆??愿由щ? 留↔퀬, WAS??誘쇨컧???곗씠?곕? ?됰Ц?쇰줈 ?ㅻ（吏 ?딆븘???섎㈃??蹂댁븞 梨낆엫??紐낇솗???섎돇寃??섏뿀?듬땲??</p>
+						<p>SSL은 TCP 위에 암호화, 무결성, 인증 계층을 더해 HTTP 통신을 보호했습니다. 이후 1996년 SSL 3.0, 1999년 TLS 1.0으로 이어지며 오늘날 HTTPS가 기본이 되었습니다. 웹 서버는 인증서 관리를 맡고, WAS는 민감한 데이터를 평문으로 다루지 않아도 되면서 보안 책임이 명확히 나뉘게 되었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -317,16 +317,16 @@
 			<article class="event-detail" aria-labelledby="event-1996-mod-proxy-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1996</p>
-					<h2 id="event-1996-mod-proxy-title">Apache mod_proxy ?꾩엯</h2>
-					<p class="event-detail__summary">?쏱roxyPass 紐?以꾩씠硫?????mod_proxy??由щ쾭???꾨줉?쒖? 罹먯떆瑜??먯돺寃?遺숈??듬땲??</p>
+					<h2 id="event-1996-mod-proxy-title">Apache mod_proxy 도입</h2>
+					<p class="event-detail__summary">“ProxyPass 몇 줄이면 돼.” mod_proxy는 리버스 프록시와 캐시를 손쉽게 붙였습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>1996???꾪뙆移?肄붿뼱 ?? 1.1 由대━???명듃???쐌od_proxy媛 ?ㅼ뼱媛묐땲?? ?ㅻⅨ ?쒕쾭濡??붿껌???섍린嫄곕굹 罹먯떆 ?쒕쾭瑜?留뚮뱾 ???덉뼱???앸씪怨??곸뿀?듬땲?? ?댁쁺?먮뒗 <code>ProxyPass</code> 吏?쒖뼱瑜?紐?以?異붽???諛깆뿏??CGI???좏뵆由ъ??댁뀡 ?쒕쾭濡??몃옒?쎌쓣 ?꾨떖?????덉뿀?듬땲??</p>
-						<p>?몄뒪???낆껜???뺤쟻 肄섑뀗痢좊뒗 ?꾪뙆移섍? 吏곸젒 泥섎━?섍퀬, ?숈쟻 ?붿껌? 蹂꾨룄濡?愿由щ릺???좏뵆由ъ??댁뀡 ?쒕쾭濡??꾨떖?섎뒗 ?⑦꽩??鍮좊Ⅴ寃?梨꾪깮?덉뒿?덈떎. SSL 醫낅즺, ?묎렐 ?쒖뼱, 罹먯떆 ?뺤콉??紐⑤뱺 ?붿껌 ?욌떒?먯꽌 ?쒖뼱?????덇쾶 ??寃껋엯?덈떎.</p>
+						<p>1996년 아파치 코어 팀은 1.1 릴리스 노트에 “mod_proxy가 들어갑니다. 다른 서버로 요청을 넘기거나 캐시 서버를 만들 수 있어요.”라고 적었습니다. 운영자는 <code>ProxyPass</code> 지시어를 몇 줄 추가해 백엔드 CGI나 애플리케이션 서버로 트래픽을 전달할 수 있었습니다.</p>
+						<p>호스팅 업체는 정적 콘텐츠는 아파치가 직접 처리하고, 동적 요청은 별도로 관리되는 애플리케이션 서버로 전달하는 패턴을 빠르게 채택했습니다. SSL 종료, 접근 제어, 캐시 정책을 모든 요청 앞단에서 제어할 수 있게 된 것입니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>mod_proxy??由щ쾭???꾨줉?쒕? ?ㅼ젙 ?뚯씪濡??뺤쓽?????덇쾶 ?덇퀬, ?댄썑 mod_proxy_balancer, mod_jk 媛숈? ?뺤옣 紐⑤뱢???깆옣??WAS(Tomcat, JBoss, WebLogic)????곕룞???쒖??뷀뻽?듬땲?? ?꾨줎?????쒕쾭? 諛깆뿏???좏뵆由ъ??댁뀡 ?쒕쾭瑜?遺꾨━?섎뒗 3怨꾩링 援ъ“媛 ?ㅻТ ?쒖????섏뿀?듬땲??</p>
+						<p>mod_proxy는 리버스 프록시를 설정 파일로 정의할 수 있게 했고, 이후 mod_proxy_balancer, mod_jk 같은 확장 모듈이 등장해 WAS(Tomcat, JBoss, WebLogic)와의 연동을 표준화했습니다. 프론트 웹 서버와 백엔드 애플리케이션 서버를 분리하는 3계층 구조가 실무 표준이 되었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -336,16 +336,16 @@
 			<article class="event-detail" aria-labelledby="event-1998-lvs-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1998</p>
-					<h2 id="event-1998-lvs-title">Linux Virtual Server ?꾨줈?앺듃</h2>
-					<p class="event-detail__summary">?댁쁺?먮뱾? ?쒕퉬??濡쒕뱶諛몃윴??留먭퀬 由щ늼?ㅻ줈 ?대낫????LVS媛 而ㅻ꼸 ?덈꺼 遺꾩궛???댁뿀?듬땲??</p>
+					<h2 id="event-1998-lvs-title">Linux Virtual Server 프로젝트</h2>
+					<p class="event-detail__summary">운영자들은 “비싼 로드밸런서 말고 리눅스로 해보자.” LVS가 커널 레벨 분산을 열었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>1998??5???μ썝?≪? 硫붿씪留?由ъ뒪?몄뿉 ?쒕━?낆뒪 而ㅻ꼸?먯꽌 IPVS瑜??댁슜???щ윭 ?쒕쾭濡??몃옒?쎌쓣 遺꾩궛?쒗궎???⑥튂瑜?留뚮뱾?덉뒿?덈떎?앸씪硫?LVS ?꾨줈?앺듃瑜?諛쒗몴?덉뒿?덈떎. 媛꾨떒???쇱뒪踰좊━?뚯씠 ?ъ씠利덉쓽 PC媛 ?섏쿇 媛쒖쓽 HTTP ?곌껐???щ윭 ???諛깆뿏?쒕줈 ?섎닠 二쇰뒗 ???깃났?덉뒿?덈떎.</p>
-						<p>?댁쁺?먮뱾? 媛믩퉬???섎뱶?⑥뼱 ???由щ늼??諛뺤뒪 ?먯꽭 ?瑜???뼱 怨좉??⑹꽦 濡쒕뱶諛몃윴?쒕? 援ъ꽦?덇퀬, Keepalived 媛숈? ?꾧뎄? 寃고빀??媛??IP瑜??댁슜???댁쨷?붽퉴吏 援ы쁽?덉뒿?덈떎.</p>
+						<p>1998년 5월 장원송은 메일링 리스트에 “리눅스 커널에서 IPVS를 이용해 여러 서버로 트래픽을 분산시키는 패치를 만들었습니다”라며 LVS 프로젝트를 발표했습니다. 간단한 라스베리파이 사이즈의 PC가 수천 개의 HTTP 연결을 여러 대의 백엔드로 나눠 주는 데 성공했습니다.</p>
+						<p>운영자들은 값비싼 하드웨어 대신 리눅스 박스 두세 대를 엮어 고가용성 로드밸런서를 구성했고, Keepalived 같은 도구와 결합해 가상 IP를 이용한 이중화까지 구현했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>LVS??IPVS 紐⑤뱢怨?ipvsadm ?좏떥由ы떚濡??ㅽ듃?뚰겕 怨꾩링?먯꽌 ?붿껌??遺꾩궛?쒖섟?듬땲?? ?몄뀡 ?ㅽ떚?? ?ъ뒪 泥댄겕媛 ?뷀빐吏硫댁꽌 WAS ?몄뒪?댁뒪瑜??щ윭 ?濡??섎젮???ъ슜??寃쏀뿕???좎??????덉뿀怨? ?댄썑 HAProxy, Nginx, ?대씪?곕뱶 濡쒕뱶諛몃윴?쒓? ?댁뼱 諛쏅뒗 遺꾩궛 援ъ“??湲곗큹媛 ?섏뿀?듬땲??</p>
+						<p>LVS는 IPVS 모듈과 ipvsadm 유틸리티로 네트워크 계층에서 요청을 분산시켰습니다. 세션 스티키, 헬스 체크가 더해지면서 WAS 인스턴스를 여러 대로 늘려도 사용자 경험을 유지할 수 있었고, 이후 HAProxy, Nginx, 클라우드 로드밸런서가 이어 받는 분산 구조의 기초가 되었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -355,16 +355,16 @@
 			<article class="event-detail" aria-labelledby="event-1997-httpsession-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1997</p>
-					<h2 id="event-1997-httpsession-title">HttpSession ?쒖???/h2>
-					<p class="event-detail__summary">?쐓ession.setAttribute留??섎㈃ ?쇱슂.??Servlet 1.0? HttpSession?쇰줈 ?곹깭 愿由щ? 而⑦뀒?대꼫??留↔꼈?듬땲??</p>
+					<h2 id="event-1997-httpsession-title">HttpSession 표준화</h2>
+					<p class="event-detail__summary">“session.setAttribute만 하면 돼요.” Servlet 1.0은 HttpSession으로 상태 관리를 컨테이너에 맡겼습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>?쒕툝由?1.0 珥덉븞?먮뒗 <code>HttpSession</code> ?명꽣?섏씠?ㅼ? <code>getSession()</code> 硫붿꽌?쒓? ?ы븿???덉뿀?듬땲?? 媛쒕컻?먮뒗 `session.setAttribute("cart", items)` 泥섎읆 ??媛믪쓣 ??ν븯怨? 而⑦뀒?대꼫???몄뀡 荑좏궎 ?앹꽦怨???꾩븘?? ?대윭?ㅽ꽣 ?숆린?붾? 留≪븯?듬땲??</p>
-						<p>??됀룹빱癒몄뒪 ?ъ씠?몃뒗 濡쒓렇???곹깭? ?λ컮援щ땲瑜?HttpSession????ν븯硫??쏦TTP??臾댁긽?쒖?留? ?곕━ ?좏뵆由ъ??댁뀡? ?ъ슜?먮? 湲곗뼲?쒕떎?앸뒗 寃쏀뿕??援ы쁽?덉뒿?덈떎. 蹂듭옟???몄뀡 愿由?肄붾뱶瑜?吏곸젒 ?묒꽦???꾩슂媛 以꾩뼱???쒓컙?낅땲??</p>
+						<p>서블릿 1.0 초안에는 <code>HttpSession</code> 인터페이스와 <code>getSession()</code> 메서드가 포함돼 있었습니다. 개발자는 `session.setAttribute("cart", items)` 처럼 키-값을 저장하고, 컨테이너는 세션 쿠키 생성과 타임아웃, 클러스터 동기화를 맡았습니다.</p>
+						<p>은행·커머스 사이트는 로그인 상태와 장바구니를 HttpSession에 저장하며 “HTTP는 무상태지만, 우리 애플리케이션은 사용자를 기억한다”는 경험을 구현했습니다. 복잡한 세션 관리 코드를 직접 작성할 필요가 줄어든 순간입니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>HttpSession? 荑좏궎 湲곕컲 ?몄뀡 ID, URL 由щ씪?댄똿, 遺꾩궛 ?몄뀡 ?ㅽ넗由ъ? ???ㅼ뼇???뺤옣 ?꾨왂??吏?먰뻽?듬땲?? ?댄썑 PHP, ASP, Rails ?깅룄 鍮꾩듂???몄뀡 API瑜??쒓났?섎ŉ WAS? ?꾨젅?꾩썙?ш? ?ъ슜???곹깭瑜?梨낆엫吏怨? ?꾨줎?몄뿏?쒕뒗 荑좏궎留??꾨떖?섎뒗 援ъ“媛 ?뺤궛?섏뿀?듬땲??</p>
+						<p>HttpSession은 쿠키 기반 세션 ID, URL 리라이팅, 분산 세션 스토리지 등 다양한 확장 전략을 지원했습니다. 이후 PHP, ASP, Rails 등도 비슷한 세션 API를 제공하며 WAS와 프레임워크가 사용자 상태를 책임지고, 프론트엔드는 쿠키만 전달하는 구조가 확산되었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -374,16 +374,16 @@
 			<article class="event-detail" aria-labelledby="event-2005-memcached-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">2005</p>
-					<h2 id="event-2005-memcached-title">Memcached 怨듦컻</h2>
-					<p class="event-detail__summary">?쒖꽭?섏? memcached???섏졇????LiveJournal??遺꾩궛 硫붾え由?罹먯떆濡??뺤옣 怨듭떇??蹂댁뿬以ъ뒿?덈떎.</p>
+					<h2 id="event-2005-memcached-title">Memcached 공개</h2>
+					<p class="event-detail__summary">“세션은 memcached에 던져요.” LiveJournal는 분산 메모리 캐시로 확장 공식을 보여줬습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>2003??LiveJournal?먯꽌 ?꾩깮??Memcached??2005???뚯뒪?ъ???怨듦컻?섎ŉ ?쏷CP ?ы듃瑜??닿퀬 <code>set</code>/<code>get</code> 紐낅졊?쇰줈 硫붾え由щ? 怨듭쑀?섏꽭?붴앸씪??媛꾨떒??API瑜??쒖떆?덉뒿?덈떎. 留롮? ???쒕퉬?ㅺ? ?몄뀡怨?荑쇰━ 寃곌낵瑜?Memcached????ν빐 DB 遺?섎? 以꾩씠湲??쒖옉?덉뒿?덈떎.</p>
-						<p>2005?꾨???Flickr, YouTube, Facebook ?깆씠 ?쒖깉濡쒓퀬移⑥쓣 ?뚮윭??鍮좊Ⅸ ?댁쑀??Memcached ?뺣텇?낅땲?ㅲ앸씪怨?諛쒗몴?섎㈃?? 罹먯떆 ?대윭?ㅽ꽣瑜??댁쁺?섎뒗 諛⑹떇???洹쒕え ?쒕퉬?ㅼ쓽 ?꾩닔 ?꾨왂???섏뿀?듬땲??</p>
+						<p>2003년 LiveJournal에서 탄생한 Memcached는 2005년 소스포지에 공개되며 “TCP 포트를 열고 <code>set</code>/<code>get</code> 명령으로 메모리를 공유하세요”라는 간단한 API를 제시했습니다. 많은 웹 서비스가 세션과 쿼리 결과를 Memcached에 저장해 DB 부하를 줄이기 시작했습니다.</p>
+						<p>2005년부터 Flickr, YouTube, Facebook 등이 “새로고침을 눌러도 빠른 이유는 Memcached 덕분입니다”라고 발표하면서, 캐시 클러스터를 운영하는 방식이 대규모 서비스의 필수 전략이 되었습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Memcached????媛??몃찓紐⑤━ ??μ냼濡? ?좏뵆由ъ??댁뀡 ?쒕쾭 ?щ윭 ??먯꽌 媛숈? 罹먯떆瑜?怨듭쑀?섍쾶 ??以띾땲?? ?몄뀡 ?곗씠?곕? ?몃? 罹먯떆????ν븯硫?濡쒕뱶諛몃윴?쒓? ?대뒓 WAS濡?蹂대궡???곹깭瑜??좎??????덇퀬, 諛깆뿏?쒕뒗 ?쎄린 遺?섎? 以꾩씠硫??섑룊 ?뺤옣???쎄쾶 ?????덉뒿?덈떎.</p>
+						<p>Memcached는 키-값 인메모리 저장소로, 애플리케이션 서버 여러 대에서 같은 캐시를 공유하게 해 줍니다. 세션 데이터를 외부 캐시에 저장하면 로드밸런서가 어느 WAS로 보내든 상태를 유지할 수 있고, 백엔드는 읽기 부하를 줄이며 수평 확장을 쉽게 할 수 있습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -393,16 +393,16 @@
 			<article class="event-detail" aria-labelledby="event-1997-servlet-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1997</p>
-					<h2 id="event-1997-servlet-title">Servlet 1.0 ?ъ뼇</h2>
-					<p class="event-detail__summary">Sun? ?쐂oGet??濡쒖쭅留??곗꽭?붴앸씪硫?HTTP ?붿껌???먮컮 ?대옒?ㅻ줈 ?ㅻ（??洹쒖튃???대넧?듬땲??</p>
+					<h2 id="event-1997-servlet-title">Servlet 1.0 사양</h2>
+					<p class="event-detail__summary">Sun은 “doGet에 로직만 쓰세요”라며 HTTP 요청을 자바 클래스로 다루는 규칙을 내놨습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Sun 媛쒕컻???뚯쓽?먯꽌 諛쒗몴?먮뒗 <code>HttpServlet</code> ?대옒?ㅻ? ?꾩슦硫??쐂oGet怨?doPost ?덉뿉???꾩슂???쇱쓣 ?섏꽭?붴앸씪怨??ㅻ챸?덉뒿?덈떎. ?쒖뿰?먯꽌 ?ъ슜?먭? ?쇱쓣 ?쒖텧?섏옄, ?쒕툝由우씠 二쇰Ц ?곗씠?곕? ?쎄퀬 ?덈줈??HTML??留뚮뱾???뚮젮以ъ뒿?덈떎.</p>
-						<p>??됯낵 怨듦났湲곌?? ?쒕룞?쒖뿉 留롮? ?붿껌???ㅻ（???쒖????쒕뵒???앷꼈?ㅲ앸ŉ ?쒕툝由?而⑦뀒?대꼫 ?꾩엯??寃?좏뻽?듬땲?? ?먮컮 吏꾩쁺? 怨듭슜 API瑜?以묒떖?쇰줈 WAS瑜?諛쒖쟾?쒗궗 諛쒗뙋??留덈젴?덉뒿?덈떎.</p>
+						<p>Sun 개발자 회의에서 발표자는 <code>HttpServlet</code> 클래스를 띄우며 “doGet과 doPost 안에서 필요한 일을 하세요”라고 설명했습니다. 시연에서 사용자가 폼을 제출하자, 서블릿이 주문 데이터를 읽고 새로운 HTML을 만들어 돌려줬습니다.</p>
+						<p>은행과 공공기관은 “동시에 많은 요청을 다루는 표준이 드디어 생겼다”며 서블릿 컨테이너 도입을 검토했습니다. 자바 진영은 공용 API를 중심으로 WAS를 발전시킬 발판을 마련했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>?쒕툝由??ъ뼇? ?붿껌쨌?묐떟 媛앹껜, ?꾪꽣, ?쇱씠?꾩궗?댄겢 硫붿꽌??媛숈? 媛쒕뀗???뺤쓽?덉뒿?덈떎. ?뺣텇??媛쒕컻?먮뒗 ?대뼡 而⑦뀒?대꼫?먯꽌 ?ㅽ뻾?섎뱺 媛숈? 肄붾뱶瑜??ъ슜?????덉뿀怨? WAS 踰ㅻ뜑???몄뀡, ?ㅻ젅?? 蹂댁븞 媛숈? 怨듯넻 湲곕뒫??梨낆엫吏寃??섏뿀?듬땲?? ?대뒗 ?댄썑 JSP, Tomcat, Spring 媛숈? 湲곗닠???④퍡 ?뚯븘媛寃?留뚮뱺 ?좊???듬땲??</p>
+						<p>서블릿 사양은 요청·응답 객체, 필터, 라이프사이클 메서드 같은 개념을 정의했습니다. 덕분에 개발자는 어떤 컨테이너에서 실행하든 같은 코드를 사용할 수 있었고, WAS 벤더는 세션, 스레드, 보안 같은 공통 기능을 책임지게 되었습니다. 이는 이후 JSP, Tomcat, Spring 같은 기술이 함께 돌아가게 만든 토대였습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -412,16 +412,16 @@
 			<article class="event-detail" aria-labelledby="event-1999-tomcat-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1999</p>
-					<h2 id="event-1999-tomcat-title">Apache Tomcat 怨듦컻</h2>
-					<p class="event-detail__summary">?쏻AR ?뚯씪留??섏졇蹂댁꽭????Sun? Tomcat???꾪뙆移섏뿉 湲곗쬆?섎ŉ 紐⑤몢???쒕툝由?而⑦뀒?대꼫瑜??댁뿀?듬땲??</p>
+					<h2 id="event-1999-tomcat-title">Apache Tomcat 공개</h2>
+					<p class="event-detail__summary">“WAR 파일만 던져보세요.” Sun은 Tomcat을 아파치에 기증하며 모두의 서블릿 컨테이너를 열었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>?먮컮???됱궗?μ뿉???쒖엫???섏빻 ?곗씠鍮꾩뒯? ?명듃遺곸쓣 ?닿퀬 <code>startup.sh</code>瑜??ㅽ뻾?덉뒿?덈떎. 肄섏넄??怨좎뼇??濡쒓퀬媛 ?⑥옄 泥?쨷???껋뿀怨? 怨㏓컮濡?釉뚮씪?곗??먯꽌 JSP媛 ??HTML??留뚮뱾???묐떟?섎뒗 ?λ㈃???ы쁽?먯뒿?덈떎.</p>
-						<p>Sun? ?쒗몴以? 媛쒕갑??援ы쁽???덉뼱???먮━ ?곗엯?덈떎?앸씪硫?肄붾뱶瑜?Apache???섍꼈?듬땲?? 媛쒕컻?먮뱾? Tomcat???대젮諛쏆븘 <code>webapps</code> ?대뜑??WAR ?뚯씪??蹂듭궗?섎뒗 寃껊쭔?쇰줈 ?쒕툝由??좏뵆由ъ??댁뀡??諛고룷?????덇쾶 ?먯뒿?덈떎.</p>
+						<p>자바원 행사장에서 제임스 던컨 데이비슨은 노트북을 열고 <code>startup.sh</code>를 실행했습니다. 콘솔에 고양이 로고가 뜨자 청중이 웃었고, 곧바로 브라우저에서 JSP가 새 HTML을 만들어 응답하는 장면이 재현됐습니다.</p>
+						<p>Sun은 “표준은 개방형 구현이 있어야 널리 쓰입니다”라며 코드를 Apache에 넘겼습니다. 개발자들은 Tomcat을 내려받아 <code>webapps</code> 폴더에 WAR 파일을 복사하는 것만으로 서블릿 애플리케이션을 배포할 수 있게 됐습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Tomcat? 而ㅻ꽖?? ?ㅻ젅???, JSP 而댄뙆?쇰윭瑜??댁옣??媛쒕컻??WAS???ъ떎???쒖????섏뿀?듬땲?? ?뺣텇???? ?숈씪??而⑦뀒?대꼫 ?꾩뿉??媛쒕컻쨌?댁쁺 ?섍꼍??留욎텧 ???덉뿀怨? ?댄썑 Spring, Struts 媛숈? ?꾨젅?꾩썙?ъ? ?먯뿰?ㅻ읇寃??듯빀?섏뿀?듬땲?? Tomcat???ㅽ뵂?뚯뒪 紐⑤뜽? Jetty, JBoss ???ㅻⅨ WAS???깆옣???먭레?덉뒿?덈떎.</p>
+						<p>Tomcat은 커넥터, 스레드 풀, JSP 컴파일러를 내장해 개발용 WAS의 사실상 표준이 되었습니다. 덕분에 팀은 동일한 컨테이너 위에서 개발·운영 환경을 맞출 수 있었고, 이후 Spring, Struts 같은 프레임워크와 자연스럽게 통합되었습니다. Tomcat의 오픈소스 모델은 Jetty, JBoss 등 다른 WAS의 등장을 자극했습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -431,16 +431,16 @@
 			<article class="event-detail" aria-labelledby="event-2003-spring-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">2003</p>
-					<h2 id="event-2003-spring-title">Spring 1.0 諛쒗몴</h2>
-					<p class="event-detail__summary">Rod Johnson? ?쏣JB ?놁씠???쒕떎?덇퉴?붴앸씪硫?Spring 1.0?쇰줈 寃쎈웾 諛깆뿏?쒕? ?쒖떆?덉뒿?덈떎.</p>
+					<h2 id="event-2003-spring-title">Spring 1.0 발표</h2>
+					<p class="event-detail__summary">Rod Johnson은 “EJB 없이도 된다니까요”라며 Spring 1.0으로 경량 백엔드를 제시했습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Rod Johnson? ?둉xpert One-on-One J2EE?뗭뿉??臾닿굅??EJB ?ъ슜湲곕? ?몄뼱?볦? ?? 而⑦띁?곗뒪?먯꽌 ?쒓컼泥대? ?⑥닚 ?먮컮 ?대옒?ㅻ줈 ?좎??섍퀬 ?몃??먯꽌 二쇱엯?섎㈃ ?⑸땲?ㅲ앸씪硫?Spring 1.0???좊낫??듬땲??</p>
-						<p>?곕え?먯꽌??XML ?ㅼ젙?쇰줈 ?쒕퉬??媛앹껜? DAO瑜??곌껐?섍퀬, ?뚯뒪?몄뿉?쒕뒗 而⑦뀒?대꼫 ?놁씠???⑥쐞 ?뚯뒪?멸? ?뚯븘媛붿뒿?덈떎. 湲곗뾽 媛쒕컻?? ?쒓꼍??而⑦뀒?대꼫濡쒕룄 ?몃옖??뀡怨?蹂댁븞??泥섎━?????덈꽕?앸씪硫??꾩엯???쒖옉?덉뒿?덈떎.</p>
+						<p>Rod Johnson은 《Expert One-on-One J2EE》에서 무거운 EJB 사용기를 털어놓은 뒤, 컨퍼런스에서 “객체를 단순 자바 클래스로 유지하고 외부에서 주입하면 됩니다”라며 Spring 1.0을 선보였습니다.</p>
+						<p>데모에서는 XML 설정으로 서비스 객체와 DAO를 연결하고, 테스트에서는 컨테이너 없이도 단위 테스트가 돌아갔습니다. 기업 개발팀은 “경량 컨테이너로도 트랜잭션과 보안을 처리할 수 있네”라며 도입을 시작했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Spring? IoC 而⑦뀒?대꼫? AOP濡??섏〈?깆쓣 二쇱엯?섍퀬 ?몃옖??뀡???좎뼵?곸쑝濡?愿由ы븯寃??덉뒿?덈떎. ?뺣텇??諛깆뿏?쒕뒗 ?뉗? ?쒕퉬??怨꾩링???좎??섎㈃?쒕룄 ?뺤옣?깃낵 ?뚯뒪???⑹씠?깆쓣 媛뽰텧 ???덉뿀怨? ?꾨줎?몄뿏?쒕뒗 ?덉젙?곸씤 API瑜?湲곕??????덉뿀?듬땲?? ?댄썑 Spring MVC, Spring Security, Spring Boot媛 媛숈? 泥좏븰???댁뼱媛묐땲??</p>
+						<p>Spring은 IoC 컨테이너와 AOP로 의존성을 주입하고 트랜잭션을 선언적으로 관리하게 했습니다. 덕분에 백엔드는 얇은 서비스 계층을 유지하면서도 확장성과 테스트 용이성을 갖출 수 있었고, 프론트엔드는 안정적인 API를 기대할 수 있었습니다. 이후 Spring MVC, Spring Security, Spring Boot가 같은 철학을 이어갑니다.</p>
 					</div>
 				</section>
 			</article>
@@ -450,16 +450,16 @@
 			<article class="event-detail" aria-labelledby="event-2011-nginx-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">2011</p>
-					<h2 id="event-2011-nginx-title">Nginx 1.0 ?덉젙??/h2>
-					<p class="event-detail__summary">?쒕룞???곌껐 5留?媛? 臾몄젣?놁뼱????Nginx 1.0? 媛踰쇱슫 由щ쾭???꾨줉???쒕?瑜??좎뼵?덉뒿?덈떎.</p>
+					<h2 id="event-2011-nginx-title">Nginx 1.0 안정화</h2>
+					<p class="event-detail__summary">“동시 연결 5만 개? 문제없어요.” Nginx 1.0은 가벼운 리버스 프록시 시대를 선언했습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>2011??4?? ?닿퀬瑜??쒖냼?덊봽??硫붿씪留?由ъ뒪?몄뿉 ?쏯ginx 1.0???섏솕?듬땲?? ?댁젣 ?앹궛 ?섍꼍?먯꽌 留덉쓬猿??곗꽭?붴앸씪??吏㏃? 怨듭?瑜??④꼈?듬땲?? 踰ㅼ튂留덊겕?먯꽌???섎쭔 媛쒖쓽 ?숈떆 ?곌껐???곸? 硫붾え由щ줈 泥섎━?섎뒗 紐⑥뒿???≫삍?듬땲??</p>
-						<p>?ㅽ??몄뾽? ?뺤쟻 ?뚯씪??Nginx濡??쒕튃?섍퀬, 諛깆뿏???좏뵆由ъ??댁뀡 ?욌떒?먮뒗 由щ쾭???꾨줉?쒕줈 諛곗튂?덉뒿?덈떎. ?댁쁺?? <code>nginx.conf</code>??濡쒕뱶諛몃윴?깃낵 罹먯떆 ?ㅼ젙???곸쑝硫??쒖꽌踰????濡쒕룄 留롮? ?ъ슜?먮? 踰꾪떞?ㅲ앷퀬 蹂닿퀬?덉뒿?덈떎.</p>
+						<p>2011년 4월, 이고르 시소예프는 메일링 리스트에 “Nginx 1.0이 나왔습니다. 이제 생산 환경에서 마음껏 쓰세요”라는 짧은 공지를 남겼습니다. 벤치마크에서는 수만 개의 동시 연결을 적은 메모리로 처리하는 모습이 잡혔습니다.</p>
+						<p>스타트업은 정적 파일을 Nginx로 서빙하고, 백엔드 애플리케이션 앞단에는 리버스 프록시로 배치했습니다. 운영팀은 <code>nginx.conf</code>에 로드밸런싱과 캐시 설정을 적으며 “서버 한 대로도 많은 사용자를 버틴다”고 보고했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Nginx??鍮꾨룞湲??대깽??猷⑦봽, 鍮꾩감??I/O, ?ㅼ젙 湲곕컲 由щ쾭???꾨줉?쒕? ?쒓났?덉뒿?덈떎. ?뺣텇??諛깆뿏?쒕뒗 WAS? API ?쒕쾭瑜??щ윭 ?濡?履쇨컻怨? ?욌떒?먯꽌??Nginx媛 ?몃옒?쎌쓣 遺꾩궛?덉뒿?덈떎. ??援ъ“???댄썑 留덉씠?щ줈?쒕퉬?? 而⑦뀒?대꼫 ?ㅼ??ㅽ듃?덉씠?섏뿉?쒕룄 湲곕낯 ?⑦꽩???섏뿀?듬땲??</p>
+						<p>Nginx는 비동기 이벤트 루프, 비차단 I/O, 설정 기반 리버스 프록시를 제공했습니다. 덕분에 백엔드는 WAS와 API 서버를 여러 대로 쪼개고, 앞단에서는 Nginx가 트래픽을 분산했습니다. 이 구조는 이후 마이크로서비스, 컨테이너 오케스트레이션에서도 기본 패턴이 되었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -470,15 +470,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2014</p>
 					<h2 id="event-2014-spring-boot-title">Spring Boot 1.0</h2>
-					<p class="event-detail__summary">?쐇nit ??踰덉씠硫??쒕퉬?ㅺ? ?щ떎.??Spring Boot 1.0? ?ㅼ젙 ????ㅽ뻾??蹂댁뿬以ъ뒿?덈떎.</p>
+					<p class="event-detail__summary">“init 한 번이면 서비스가 뜬다.” Spring Boot 1.0은 설정 대신 실행을 보여줬습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>2014??Pivotal 媛쒕컻?????뱀? 臾대??먯꽌 <code>spring init --dependencies=web demo</code>瑜??ㅽ뻾?덉뒿?덈떎. IDE?먯꽌 <code>DemoApplication.java</code>瑜??닿퀬 諛붾줈 ?ㅽ뻾?섏옄 Tomcat???댁옣???좏뵆由ъ??댁뀡??5珥?留뚯뿉 ?좎삱?먯뒿?덈떎.</p>
-						<p>?? ?쒖꽕??XML???대뵒???ъ빞 ?섏????媛숈? 怨좊? ???<code>application.properties</code>???꾩슂???듭뀡留??곴퀬 諛고룷 ?뚯씠?꾨씪?몄뿉 Jar ?뚯씪???щ졇?듬땲?? 留덉씠?щ줈?쒕퉬???꾪솚??怨꾪쉷?섎뜕 議곗쭅? ?쒖꽌鍮꾩뒪 ?섎굹???ㅽ봽留?遺???섎굹?앸씪???꾨왂??梨꾪깮?덉뒿?덈떎.</p>
+						<p>2014년 Pivotal 개발자 필 웹은 무대에서 <code>spring init --dependencies=web demo</code>를 실행했습니다. IDE에서 <code>DemoApplication.java</code>를 열고 바로 실행하자 Tomcat이 내장된 애플리케이션이 5초 만에 떠올랐습니다.</p>
+						<p>팀은 “설정 XML을 어디에 둬야 하지?” 같은 고민 대신 <code>application.properties</code>에 필요한 옵션만 적고 배포 파이프라인에 Jar 파일을 올렸습니다. 마이크로서비스 전환을 계획하던 조직은 “서비스 하나당 스프링 부트 하나”라는 전략을 채택했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Spring Boot???먮룞 ?ㅼ젙, ?ㅽ????섏〈?? ?댁옣 Tomcat/Jetty瑜??쒓났??諛고룷 ?⑥쐞瑜?Jar ?뚯씪濡??⑥닚?뷀뻽?듬땲?? 諛깆뿏?쒕뒗 留덉씠?щ줈?쒕퉬?ㅼ? CI/CD??留욎떠 ?묒? 紐⑤뱢??鍮좊Ⅴ寃?留뚮뱾 ???덉뿀怨? ?꾨줎?몄뿏?쒕뒗 ?쇨???REST/GraphQL API瑜????쎄쾶 諛쏆쓣 ???덉뿀?듬땲?? ???묎렐? ?댄썑 Spring Cloud, Kubernetes 諛고룷 紐⑤뜽怨??먯뿰?ㅻ읇寃??댁뼱吏묐땲??</p>
+						<p>Spring Boot는 자동 설정, 스타터 의존성, 내장 Tomcat/Jetty를 제공해 배포 단위를 Jar 파일로 단순화했습니다. 백엔드는 마이크로서비스와 CI/CD에 맞춰 작은 모듈을 빠르게 만들 수 있었고, 프론트엔드는 일관된 REST/GraphQL API를 더 쉽게 받을 수 있었습니다. 이 접근은 이후 Spring Cloud, Kubernetes 배포 모델과 자연스럽게 이어집니다.</p>
 					</div>
 				</section>
 			</article>
@@ -488,16 +488,16 @@
 			<article class="event-detail" aria-labelledby="event-2014-lambda-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">2014</p>
-					<h2 id="event-2014-lambda-title">AWS Lambda 異쒖떆</h2>
-					<p class="event-detail__summary">AWS???쒖꽌踰꾨뒗 ?딄퀬 ?⑥닔留??щ━?몄슂?앸씪硫?Lambda濡??쒕쾭由ъ뒪 紐⑤뜽???꾩떎?뷀뻽?듬땲??</p>
+					<h2 id="event-2014-lambda-title">AWS Lambda 출시</h2>
+					<p class="event-detail__summary">AWS는 “서버는 잊고 함수만 올리세요”라며 Lambda로 서버리스 모델을 현실화했습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>AWS re:Invent 臾대??먯꽌 諛쒗몴?먭? ?쒖씠???쒕쾭瑜??덉빟?섏? ?딆븘???⑸땲?ㅲ앸씪硫?Lambda瑜??뚭컻?덉뒿?덈떎. 媛쒕컻???⑤━?ㅺ? 肄섏넄??吏㏃? ?⑥닔瑜???ν븯?? 怨㏓컮濡??뱁썒 二쇱냼媛 ?앷꺼 ?붿껌??諛쏆븘?ㅼ??듬땲??</p>
-						<p>?ㅽ??몄뾽?ㅼ? 濡쒓렇?? ?뚮┝, ?대?吏 泥섎━ ?깆쓣 Lambda濡???꺼 ?댁쁺 遺?댁쓣 以꾩?怨? 諛깆뿏?쒕뒗 ?먯젏 ???묒? ?⑥닔? ?대깽??以묒떖 援ъ“濡??섎돇湲??쒖옉?덉뒿?덈떎.</p>
+						<p>AWS re:Invent 무대에서 발표자가 “이제 서버를 예약하지 않아도 됩니다”라며 Lambda를 소개했습니다. 개발자 앨리스가 콘솔에 짧은 함수를 저장하자, 곧바로 웹훅 주소가 생겨 요청을 받아들였습니다.</p>
+						<p>스타트업들은 로그인, 알림, 이미지 처리 등을 Lambda로 옮겨 운영 부담을 줄였고, 백엔드는 점점 더 작은 함수와 이벤트 중심 구조로 나뉘기 시작했습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>?쒕쾭由ъ뒪 紐⑤뜽? ?뺤옣怨?鍮꾩슜???먮룞?쇰줈 泥섎━??以띾땲?? 諛깆뿏?쒕뒗 ?쒕쾭 愿由?????듭떖 濡쒖쭅??吏묒쨷?????덇퀬, ?꾨줎?몄뿏?쒕뒗 ?뺤쟻 ?먯궛??CDN???щ┛ ???꾩슂??湲곕뒫留?API濡??몄텧?섎뒗 ?⑦꽩???먯돺寃??ㅽ뻾?????덇쾶 ?섏뿀?듬땲??</p>
+						<p>서버리스 모델은 확장과 비용을 자동으로 처리해 줍니다. 백엔드는 서버 관리 대신 핵심 로직에 집중할 수 있고, 프론트엔드는 정적 자산을 CDN에 올린 뒤 필요한 기능만 API로 호출하는 패턴을 손쉽게 실행할 수 있게 되었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -507,24 +507,23 @@
 			<article class="event-detail" aria-labelledby="event-2015-k8s-ingress-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">2015</p>
-					<h2 id="event-2015-k8s-ingress-title">Kubernetes Ingress 由ъ냼??/h2>
-					<p class="event-detail__summary">荑좊쾭?ㅽ떚???? ?쏽AML 紐?以꾨줈 ?몃옒??愿臾몄쓣 留뚮뱾?먥앸씪硫?Ingress 由ъ냼?ㅻ? ?대넧?듬땲??</p>
+					<h2 id="event-2015-k8s-ingress-title">Kubernetes Ingress 리소스</h2>
+					<p class="event-detail__summary">쿠버네티스 팀은 “YAML 몇 줄로 트래픽 관문을 만들자”라며 Ingress 리소스를 내놨습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>2015??媛??Kubernetes ?? 釉붾줈洹몄뿉 ?쏽AML 紐?以꾨줈 TLS 醫낅즺? 媛???몄뒪?몃? ?뺤쓽?섏꽭?붴앸씪硫?Ingress瑜??뚭컻?덉뒿?덈떎. ?곕え?먯꽌??<code>host: api.example.com</code>?대씪???ㅼ젙留?異붽??대룄 ?ｌ? ?꾨줉?쒓? ?먮룞?쇰줈 諛깆뿏???쒕퉬?ㅻ줈 ?몃옒?쎌쓣 ?섍꼈?듬땲??</p>
-						<p>?댁쁺?? 而⑦뀒?대꼫留덈떎 Nginx ?몄뒪?댁뒪瑜?吏곸젒 愿由ы븯???듦???踰꾨━怨? ?대윭?ㅽ꽣 李⑥썝??Ingress 而⑦듃濡ㅻ윭??洹쒖튃??留↔린湲??쒖옉?덉뒿?덈떎. 諛고룷 ?뚯씠?꾨씪?몄? ?좏뵆由ъ??댁뀡 肄붾뱶? ?④퍡 ?쇱슦???뺤콉???좎뼵?곸쑝濡?諛고룷?섎룄濡?諛붾뚯뿀?듬땲??</p>
+						<p>2015년 가을 Kubernetes 팀은 블로그에 “YAML 몇 줄로 TLS 종료와 가상 호스트를 정의하세요”라며 Ingress를 소개했습니다. 데모에서는 <code>host: api.example.com</code>이라는 설정만 추가해도 엣지 프록시가 자동으로 백엔드 서비스로 트래픽을 넘겼습니다.</p>
+						<p>운영팀은 컨테이너마다 Nginx 인스턴스를 직접 관리하던 습관을 버리고, 클러스터 차원의 Ingress 컨트롤러에 규칙을 맡기기 시작했습니다. 배포 파이프라인은 애플리케이션 코드와 함께 라우팅 정책을 선언적으로 배포하도록 바뀌었습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Ingress??L7 ?쇱슦?낃낵 TLS 醫낅즺瑜?Kubernetes ?ㅻ툕?앺듃濡??≪닔???쏻AS???좏뵆由ъ??댁뀡???ㅽ뻾?섍퀬, ?꾨줉?쒕뒗 ?뚮옯?쇱씠 梨낆엫吏꾨떎?앸뒗 寃쎄퀎瑜??ㅼ떆 洹몄뿀?듬땲?? ?뺣텇??Spring Boot??Tomcat??而⑦뀒?대꼫濡?臾띠뼱 諛고룷???뚯뿉?? ?몃옒??遺꾨같? ?뺤콉? Ingress 而⑦듃濡ㅻ윭쨌?쒕퉬??硫붿떆媛 ???留〓뒗 ?꾨????⑦꽩???먮━ ?≪븯?듬땲??</p>
+						<p>Ingress는 L7 라우팅과 TLS 종료를 Kubernetes 오브젝트로 흡수해 “WAS는 애플리케이션을 실행하고, 프록시는 플랫폼이 책임진다”는 경계를 다시 그었습니다. 덕분에 Spring Boot나 Tomcat을 컨테이너로 묶어 배포할 때에도, 트래픽 분배와 정책은 Ingress 컨트롤러·서비스 메시가 대신 맡는 현대적 패턴이 자리 잡았습니다.</p>
 					</div>
 				</section>
 			</article>
 		</template>
 
-		<button type="button" class="scroll-top" data-scroll-top aria-label="留??꾨줈 ?대룞" hidden>??/button>
+		<button type="button" class="scroll-top" data-scroll-top aria-label="맨 위로 이동" hidden>↑</button>
 
 		<script src="assets/js/main.js" defer></script>
 	</body>
 </html>
-
