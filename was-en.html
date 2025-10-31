@@ -33,15 +33,15 @@
 						<a href="networks-en.html">Networks Timeline</a>
 						<a href="databases-en.html">Database Timeline</a>
 						<a href="os-en.html">Operating Systems Timeline</a>
-									<p class="event-detail__summary">Spring 1.0 offered a lightweight IoC container that replaced heavy EJB stacks for many teams.</p>
+						<div class="page__topic-nav-group" role="group" aria-label="Web making timelines">
 							<span class="page__topic-nav-label">Web Making</span>
 							<a href="web-en.html" data-topic-role="parent">Web Making Hub</a>
 							<a href="web-structure-en.html" data-topic-role="child">Document Structure Timeline</a>
-										<p>After critiquing heavyweight J2EE in his book, Rod Johnson demonstrated Spring 1.0 wiring services and DAOs via XML while running unit tests without a full container.</p>
-										<p>Teams realised they could keep business logic as plain Java objects while Spring handled transactions and security, kicking off the lightweight container era.</p>
+							<a href="web-styling-en.html" data-topic-role="child">Styling Evolution Timeline</a>
+							<a href="web-interaction-en.html" data-topic-role="child">Browser Interaction Timeline</a>
 							<a href="web-tools-en.html" data-topic-role="child">Web Tools Timeline</a>
 						</div>
-										<p>Spring introduced IoC and AOP so dependencies were injected and transactions managed declaratively. Backends stayed slim yet testable, and later modules like Spring MVC, Security, and Boot extended the same ideas.</p>
+						<a href="was-en.html" class="is-current">Web Server Timeline</a>
 					</nav>
 				</div>
 				<nav class="page__nav" aria-label="Page sections">
@@ -52,36 +52,36 @@
 						<select id="language-select-was" data-language-switch>
 							<option value="was.html" data-language-code="ko">한국어</option>
 							<option value="was-en.html" data-language-code="en" selected>English</option>
-									<p class="event-detail__summary">Nginx 1.0 delivered a stable, event-driven proxy that handled huge concurrent loads with low memory.</p>
+						</select>
 					</div>
 				</nav>
 			</header>
-										<p>Igor Sysoev announced Nginx 1.0 on the mailing list in April 2011 and called it production ready. Benchmarks showed tens of thousands of concurrent connections on modest hardware.</p>
-										<p>Startups used Nginx for static assets and as a reverse proxy in front of their application tiers. Configuration snippets in <code>nginx.conf</code> handled load balancing and caching.</p>
+
+			<main class="page__main" id="main" role="main">
 				<section class="timeline-hero" aria-labelledby="timeline-title">
 					<div class="timeline-hero__head">
-										<p>Nginx’s asynchronous event loop, non-blocking I/O, and configuration-driven routing let teams split backend services without thread-per-connection overhead. The pattern carried forward into microservices and container orchestration.</p>
-						<h1 class="timeline-hero__title" id="timeline-title">From static files to global backends: how web servers kept growing</h1>
+						<p class="hero__eyebrow">Web Server Story for Backend Builders</p>
+						<h1 class="timeline-hero__title" id="timeline-title">“Can we trust the response?” The operators who kept web servers evolving</h1>
 						<p class="timeline-hero__lede">
-							In 1990 a single NeXT machine at CERN ran httpd so colleagues could click a link and read a paper immediately. Tim Berners-Lee showed that a server could read a request, find the right HTML file, and send it back without ceremony.
+							In 1990 a CERN researcher gasped, “I click one link and the paper opens?” Tim Berners-Lee grinned and said, “Just send a GET.” From that moment the server stopped being a dusty file cabinet and became an active teammate.
 						</p>
 						<p class="timeline-hero__lede">
-							Open releases from NCSA and Apache spread that idea to every lab and ISP. Operators soon added SSL, mod_proxy, and LVS to terminate encryption, fan out requests, and keep application logic on its own machines. Servlet specs and Tomcat gave dynamic sites a consistent home for code and sessions.
+							Soon teams demanded, “Remember each user, encrypt their session, split traffic from logic.” Servlet specs promised consistent request objects, Tomcat bragged “Drop in a WAR, I’ll handle threads,” and SSL crews flashed lock icons to win over finance leads.
 						</p>
 						<p class="timeline-hero__lede">
-							Today Nginx, Spring Boot, Lambda, and Kubernetes Ingress minimize manual configuration and turn scaling into an automated routine. Browse the timeline to see the problems engineers faced each year and the solutions they shipped to move the web forward.
+							Today operators demo Nginx configs, Spring Boot starters, Lambda triggers, and Kubernetes Ingress rules while saying, “Setup is scripted, scaling is automatic.” Pick a year to hear the quote, the pain, and the pattern each tool left behind.
 						</p>
-									<p class="event-detail__summary">Spring Boot 1.0 packaged auto-configuration and embedded servers so teams could ship a single executable JAR.</p>
+					</div>
 				</section>
 
 				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
-										<p>Pivotal’s Phil Webb demoed <code>spring init --dependencies=web demo</code> and ran <code>DemoApplication</code> seconds later with Tomcat embedded. The audience saw a working service without XML boilerplate.</p>
-										<p>Teams replaced sprawling XML with targeted settings in <code>application.properties</code> and shipped executable JARs through their pipelines. Many microservice efforts adopted a “one Spring Boot app per service” approach.</p>
+					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">Selecting a year opens a nearby dialog so you can keep your place while reading the full story.</p>
+
 					<section class="timeline-group" aria-labelledby="decade-1990-webserver topic-1990-webserver">
 						<header class="timeline-group__head">
-										<p>Spring Boot’s starters, auto-configuration, and embedded Tomcat or Jetty collapsed deployment into a single artifact. Backends lined up with CI/CD pipelines, feeding naturally into Spring Cloud and Kubernetes rollouts.</p>
+							<p class="timeline-group__decade" id="decade-1990-webserver">1990–1995</p>
 							<h3 class="timeline-group__topic" id="topic-1990-webserver">“Drag the code, run your own server”</h3>
-							<p class="timeline-group__summary">CERN, NCSA, and Apache shared their source so anyone could install, modify, and operate a web server on their own machines.</p>
+							<p class="timeline-group__summary">CERN, NCSA, and Apache teams handed out source tarballs and said, “Install it yourself,” igniting the open-source web server wave.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1990-cern-httpd">
@@ -90,34 +90,34 @@
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1993-ncsa-httpd">
 								<span class="timeline-event__year">1993</span>
-									<p class="event-detail__summary">AWS Lambda let developers run code as small functions without managing servers.</p>
+								<span class="timeline-event__label">NCSA HTTPd release</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1995-apache-httpd">
 								<span class="timeline-event__year">1995</span>
-										<p>At re:Invent AWS showed a console demo where a developer pasted a function, saved it, and immediately received an endpoint that triggered the code on demand.</p>
-										<p>Startups moved login, notifications, and image processing to Lambda, shifting backend work to small event-driven units billed only for execution time.</p>
+								<span class="timeline-event__label">Apache HTTP Server 1.0</span>
+							</button>
 						</div>
 					</section>
-										<p>Serverless platforms handled scaling and billing automatically, letting backends focus on logic. Front ends kept static assets on CDNs and called small APIs only when needed.</p>
+
 					<section class="timeline-group" aria-labelledby="decade-1994-infra topic-1994-infra">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1994-infra">1994–1998</p>
 							<h3 class="timeline-group__topic" id="topic-1994-infra">“Edge handles the lock, backend handles the logic”</h3>
-							<p class="timeline-group__summary">SSL, mod_proxy, and LVS made it normal to terminate security and split traffic at the edge while application servers handled business logic.</p>
+							<p class="timeline-group__summary">SSL, mod_proxy, and LVS let operators declare, “Encrypt here, split traffic here,” cementing the web-tier plus app-tier split.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1994-ssl">
 								<span class="timeline-event__year">1994</span>
 								<span class="timeline-event__label">Netscape SSL 2.0 pilot</span>
-									<p class="event-detail__summary">Kubernetes Ingress let teams declare L7 routing and TLS in YAML instead of hand-managed proxies.</p>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1996-mod-proxy">
 								<span class="timeline-event__year">1996</span>
 								<span class="timeline-event__label">Apache mod_proxy arrives</span>
-										<p>A 2015 blog post walked through defining <code>host: api.example.com</code> and TLS rules in YAML so traffic automatically flowed to the right service.</p>
-										<p>Operations teams stopped managing per-application Nginx instances and wrote cluster-level Ingress rules instead. Deployment pipelines began shipping routing config alongside application code.</p>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="1998-lvs">
 								<span class="timeline-event__year">1998</span>
 								<span class="timeline-event__label">Linux Virtual Server</span>
-										<p>Ingress absorbed L7 routing and TLS into Kubernetes objects. Application containers focused on execution while the platform enforced traffic policies, paving the way for service mesh patterns.</p>
+							</button>
 						</div>
 					</section>
 
@@ -125,7 +125,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1990-was">1997–1999</p>
 							<h3 class="timeline-group__topic" id="topic-1990-was">“Requests are objects, sessions are mine”</h3>
-							<p class="timeline-group__summary">Servlet specifications and Tomcat containers treated requests as objects and kept session state consistent, laying the groundwork for dynamic sites.</p>
+							<p class="timeline-group__summary">Servlet specs and Tomcat containers promised, “We’ll model the request and remember the user,” powering dynamic web apps.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-servlet">
@@ -147,7 +147,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2000-was">2003</p>
 							<h3 class="timeline-group__topic" id="topic-2000-was">“EJB isn’t the only path”</h3>
-							<p class="timeline-group__summary">Spring 1.0 showed that lightweight containers could handle transactions and security without heavy EJB stacks.</p>
+							<p class="timeline-group__summary">Spring 1.0 told teams, “Keep plain Java classes, we’ll wire the rest,” ushering in lightweight application stacks.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2003-spring">
@@ -161,7 +161,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2005-session">2005</p>
 							<h3 class="timeline-group__topic" id="topic-2005-session">“Throw the session into the cache”</h3>
-							<p class="timeline-group__summary">Memcached encouraged teams to share session and query data in memory so multiple application nodes could stay in sync.</p>
+							<p class="timeline-group__summary">Memcached fans insisted, “Store it in shared memory,” unlocking easy scaling across application nodes.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-memcached">
@@ -175,7 +175,7 @@
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2010-was">2011–2015</p>
 							<h3 class="timeline-group__topic" id="topic-2010-was">“Configure less, let the platform route”</h3>
-							<p class="timeline-group__summary">Nginx, Spring Boot, Lambda, and Ingress combined lightweight proxies, auto-configuration, serverless execution, and cluster routing into the default operating model.</p>
+							<p class="timeline-group__summary">Nginx, Spring Boot, Lambda, and Ingress declared, “We’ll proxy, auto-configure, run on demand, and route for the cluster,” reshaping operations.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2011-nginx">
@@ -242,15 +242,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1990</p>
 					<h2 id="event-1990-cern-httpd-title">CERN httpd pilot</h2>
-					<p class="event-detail__summary">The HttpSession API let containers manage cookies and session state so apps could focus on logic.</p>
+					<p class="event-detail__summary">“Hit GET and the paper appears.” Tim Berners-Lee ran CERN’s first web daemon so researchers could share linked docs.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Servlet 1.0 introduced the <code>HttpSession</code> interface and the <code>getSession()</code> method. Developers used calls like <code>session.setAttribute("cart", items)</code> while the container created session cookies, set expirations, and synced clusters.</p>
-						<p>Banks and commerce sites stored login state and shopping carts in HttpSession, showing that stateless HTTP could still deliver personalised flows. Teams no longer needed to write fragile session plumbing by hand.</p>
+						<p>Toward the end of 1990 Berners-Lee launched the <code>httpd</code> daemon on a single NeXT cube. “When a browser sends GET, the server finds the HTML file and ships it back,” he told a colleague. Once CERN's intranet page went live, researchers began linking their experiment notes to one another.</p>
+						<p>The code first circulated internally, then in mid-1991 an email list released it to other labs. Word spread quickly: “HTTP is light, HTML is easy.” The notion of a web server solidified.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>HttpSession supported cookie-based identifiers, URL rewriting, and clustered storage. PHP, ASP, Rails, and other stacks later adopted similar session APIs so frameworks, not developers, managed user state.</p>
+						<p>CERN httpd primarily served static files but also listed directories and triggered simple scripts, paving the way for CGI. The pattern of accepting a request, interpreting it, and returning a response was set, allowing later WAS platforms to plug in business logic while reusing the same flow.</p>
 					</div>
 				</section>
 			</article>
@@ -261,15 +261,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1993</p>
 					<h2 id="event-1993-ncsa-httpd-title">NCSA HTTPd release</h2>
-					<p class="event-detail__summary">Memcached let multiple application servers share a fast in-memory cache for sessions and hot data.</p>
+					<p class="event-detail__summary">Teams whispered, “Grab the tarball and run it tonight,” as NCSA HTTPd spread across campuses and companies.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Memcached started at LiveJournal in 2003 and went public on SourceForge in 2005 with a straightforward TCP protocol built around <code>set</code> and <code>get</code>. Teams pushed sessions and frequently used query results into the cache to ease database load.</p>
-						<p>Flickr, YouTube, and Facebook soon shared success stories about using Memcached, making cache clusters a standard scaling move. Sharing the same cache meant any application node could serve a returning user.</p>
+						<p>Marc Andreessen and Eric Bina built the Mosaic browser and decided, “Let’s make the server easy too.” In November 1993 they posted <code>httpd_1.0.tar.Z</code> on FTP with a detailed README. Within days labs and hobbyists submitted patches to extend features.</p>
+						<p>NCSA HTTPd shipped access control, logging, and CGI hooks suited for commercial sites. Netscape based its commercial server on the code, and the Apache project grew out of the patch kit. The web now had an accessible backbone.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Memcached gave multiple application servers access to the same in-memory key/value store. Offloading sessions and hot data kept responses quick while allowing horizontal scaling behind the load balancer.</p>
+						<p>Open-source HTTP servers normalized the idea that anyone could install and modify their own infrastructure. Apache eventually dominated usage, and a clean separation formed between proxy/static tiers and application servers underneath.</p>
 					</div>
 				</section>
 			</article>
@@ -280,15 +280,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1995</p>
 					<h2 id="event-1995-apache-httpd-title">Apache HTTP Server 1.0</h2>
-					<p class="event-detail__summary">Apache 1.0 turned the volunteer patch crew into a dependable, modular web server project.</p>
+					<p class="event-detail__summary">“Flip on the modules you need,” the Apache Group said as version 1.0 became the web’s default server.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>When NCSA updates slowed in 1995, Brian Behlendorf, Roy Fielding, and fellow contributors opened a shared repository and released Apache 1.0 on December 1. They emphasised that modules could be enabled or disabled as needed and that every patch would be reviewed in public.</p>
-						<p>SSL, proxy, and load-balancing modules appeared almost immediately, so ISPs and portals made Apache their default front end. Netcraft surveys soon showed Apache powering most measured sites, demonstrating that open-source infrastructure could lead the market.</p>
+						<p>In early 1995 NCSA httpd slowed down, so Brian Behlendorf and Roy Fielding formed the “Apache Group,” pooling contributors and opening a shared repository. On December 1 they shipped 1.0 with the message, “Toggle features with modules.” Operators around the globe replied with instant feedback over mailing lists.</p>
+						<p>SSL, proxy, and load balancing modules arrived quickly, making Apache the default for ISPs and portals. Netcraft surveys repeatedly showed Apache past the 50 percent mark, proving open source could rival commercial offerings.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Apache’s MPM design and configuration system let operators add scripting engines and reverse proxies without touching the core. That made it natural to run Apache at the edge while Tomcat, JBoss, or other application servers handled business logic behind it.</p>
+						<p>Apache introduced multi-processing modules (MPM) and a modular config system, so new capabilities like CGI and PHP slots could be added without rewriting the core. The front web server versus backend application server pattern became the operational standard, often with Apache proxying traffic to Tomcat or JBoss.</p>
 					</div>
 				</section>
 			</article>
@@ -299,15 +299,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1994</p>
 					<h2 id="event-1994-ssl-title">Netscape SSL 2.0 pilot</h2>
-					<p class="event-detail__summary">Servlet 1.0 defined a common Java lifecycle for handling HTTP requests and responses.</p>
+					<p class="event-detail__summary">“See the lock icon stay on,” Netscape promised as the SSL 2.0 beta proved web checkout could be trusted.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>On stage a Sun engineer live-coded an <code>HttpServlet</code>, then showed how <code>doGet</code> and <code>doPost</code> could read form data and render a dynamic page immediately after submission.</p>
-						<p>Banks and public agencies now had a shared contract for transaction-heavy Java workloads, giving vendors a roadmap for building servlet containers.</p>
+						<p>In 1994 the Netscape team drafted SSL 2.0 and shipped a Navigator plus Commerce Server beta with experimental <code>https://</code> support. During demos a padlock icon appeared and credit card data moved over an encrypted tunnel.</p>
+						<p>Retailers preparing for e-commerce reacted, “If customers can trust the wire, we can open online checkout.” Banks and payment providers joined the conversation about certificate authorities and key exchange.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>The servlet spec outlined request and response objects, filters, and lifecycle methods. Developers could write once and deploy anywhere, while container vendors focused on sessions, threading, and security.</p>
+						<p>SSL layered encryption, integrity, and authentication on top of TCP. Later TLS versions refined it, making HTTPS the norm. Web servers handled certificate management, letting WAS tiers avoid storing sensitive data in plaintext.</p>
 					</div>
 				</section>
 			</article>
@@ -318,15 +318,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1996</p>
 					<h2 id="event-1996-mod-proxy-title">Apache mod_proxy arrives</h2>
-					<p class="event-detail__summary">Tomcat gave teams an open servlet container that ran WAR files with almost no setup.</p>
+					<p class="event-detail__summary">Admins cheered, “Point this upstream tonight,” when Apache dropped mod_proxy to handle proxying, caching, and balancing in one hit.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>At JavaOne James Duncan Davidson ran <code>startup.sh</code>; the cat logo appeared and a browser rendered a JSP page seconds later. Sun donated the code to the Apache Software Foundation so the implementation would remain open.</p>
-						<p>Developers downloaded Tomcat, copied WAR files into <code>webapps</code>, and saw their servlet applications deploy immediately. Open source now anchored the Java middle tier.</p>
+						<p>The Apache core team announced in release notes, “mod_proxy is here. Forward requests to other servers or build a cache.” A few lines of <code>ProxyPass</code> suddenly routed traffic from Apache to backend CGI or application servers.</p>
+						<p>Hosting companies let Apache handle static content and SSL while dynamic requests moved to a separate tier. Operators gained control over caching and access policies before requests ever touched application code.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Tomcat bundled connectors, thread pools, and a JSP compiler, quickly becoming the default development container. Teams matched dev and production environments, and frameworks such as Struts and Spring integrated smoothly. Tomcat’s open model nudged other WAS vendors toward more open stacks.</p>
+						<p>mod_proxy later grew balancer and <code>mod_jk</code> add-ons, standardizing connections to Tomcat, JBoss, and WebLogic. Three-tier layouts with Apache in front became the rule, clarifying the boundary between web serving and application execution.</p>
 					</div>
 				</section>
 			</article>
@@ -337,15 +337,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1998</p>
 					<h2 id="event-1998-lvs-title">Linux Virtual Server project</h2>
-					<p class="event-detail__summary">Linux Virtual Server introduced kernel-level load balancing without specialised hardware.</p>
+					<p class="event-detail__summary">“Kernel-level load balancing, no pricey appliance,” Zhang Wensong said unveiling Linux Virtual Server for every Linux rack.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>In May 1998 Zhang Wensong announced on a mailing list that he had built kernel patches using IPVS to distribute traffic. A small Linux PC could now split thousands of HTTP connections across several backends.</p>
-						<p>Administrators replaced costly hardware load balancers with a few commodity servers running LVS and paired them with Keepalived for virtual IP failover. High availability no longer required proprietary appliances.</p>
+						<p>In May 1998 Zhang announced on a mailing list, “I built kernel patches using IPVS to spread traffic.” A small PC suddenly split thousands of HTTP connections across multiple backends.</p>
+						<p>Admins replaced expensive hardware with a few Linux boxes running LVS, pairing it with Keepalived for virtual IP failover. High availability no longer required proprietary appliances.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>LVS shipped the IPVS kernel module and <code>ipvsadm</code> tooling for layer 4 distribution. Sticky sessions and health checks meant application servers could scale out while preserving user experience, laying groundwork for HAProxy, Nginx, and cloud load balancers.</p>
+						<p>LVS exposed the IPVS module plus <code>ipvsadm</code> tooling for layer 4 distribution. Sticky sessions and health checks meant WAS nodes could scale out while preserving user experience, laying groundwork later refined by HAProxy, Nginx, and cloud load balancers.</p>
 					</div>
 				</section>
 			</article>
