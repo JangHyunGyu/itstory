@@ -261,16 +261,16 @@
 			<article class="event-detail" aria-labelledby="event-1956-gmnaa-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1956</p>
-					<h2 id="event-1956-gmnaa-title">GM-NAA I/O로 작업을 끊김 없이 이어가다</h2>
-					<p class="event-detail__summary">헬싱키의 학생이 “GNU 없는 UNIX를 같이 만들자”는 글을 올리자 전 세계 개발자가 리눅스 커널에 합류했습니다.</p>
+					<h2 id="event-1956-gmnaa-title">GM-NAA I/O, 배치 작업을 자동으로 넘기다</h2>
+					<p class="event-detail__summary">GM과 North American Aviation은 펀치카드 프로그램을 끊김 없이 이어 주는 GM-NAA I/O를 IBM 704에 올려 초기 운영체제의 모습을 보여 줬습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>리누스 토르발스는 386 PC에서 돌아갈 미니 커널을 자습 프로젝트로 만들다가 “같이 고쳐 보자”는 글을 게시했습니다. 메일링 리스트에 스케줄러 개선, 파일시스템 추가, 네트워크 스택 제안이 이어졌고 커뮤니티가 직접 코드를 고쳤습니다.</p>
-						<p>GNU 도구와 결합하면서 리눅스는 완전한 운영체제가 되었고, 소스가 공개돼 누구나 읽고 수정하고 다시 배포할 수 있었습니다. 이 자유도가 전 세계 개발자를 끌어들였습니다.</p>
+						<p>GM 연구소는 계산 작업이 끝날 때마다 다음 카드 덱을 사람이 직접 올려야 하는 비효율에 지쳐 있었습니다. GM-NAA I/O는 제어 카드와 모니터 루틴을 두어 한 작업이 끝나면 자동으로 다음 작업을 적재하고 프린터·테이프 장치를 초기화했습니다.</p>
+						<p>연속 실행이 가능해지자 야간 배치 시간을 확보할 수 있었고, 운영 요원은 장치를 전환하거나 오류를 수집하는 데 집중했습니다. 사용자는 “카드만 맞게 주면 순서대로 결과가 나온다”는 믿음을 갖게 되었습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>GPL 라이선스가 “수정하면 다시 공개한다”는 규칙을 강제했고, 패치 리뷰와 배포판을 통한 릴리스 주기가 오늘날 오픈소스 운영체제 개발의 기본 모델이 되었습니다.</p>
+						<p>GM-NAA I/O는 모니터 프로그램 개념을 확립해 이후 IBSYS, OS/360 같은 배치형 운영체제의 기반이 되었고, 작업 제어 언어(JCL)의 전신을 제공했습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -280,16 +280,16 @@
 			<article class="event-detail" aria-labelledby="event-1959-fms-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1959</p>
-					<h2 id="event-1959-fms-title">Fortran Monitor System, 공유 매크로를 제품화하다</h2>
-					<p class="event-detail__summary">스티브 잡스는 “스타일러스는 필요 없어요”라며 iPhone OS 1을 소개했고, 멀티터치 제스처가 모바일 OS 표준이 되었습니다.</p>
+					<h2 id="event-1959-fms-title">Fortran Monitor System, 코드 재사용을 지원하다</h2>
+					<p class="event-detail__summary">IBM은 Fortran Monitor System(FMS)을 통해 컴파일·링크·실행을 한 번에 처리하고, 매크로 라이브러리를 공유하는 배치 운영 환경을 상품화했습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>iPhone OS는 손가락 탭, 핀치, 스와이프를 전제로 한 UI를 제시했습니다. 홈 화면 아이콘과 커버 플로우 같은 요소가 곧 사용법이 되었습니다.</p>
-						<p>당시 스마트폰은 물리 키보드나 스타일러스를 기본으로 했지만, 애플은 소프트 키보드를 표준으로 두고 자동 완성을 더해 손가락만으로 타이핑하도록 했습니다.</p>
+						<p>FMS는 사용자가 카드 덱 앞부분에 제어 문장을 붙여두면 컴파일과 링크, 실행 결과 출력까지 자동으로 이어지는 흐름을 제공했습니다. 반복되는 라이브러리는 공용 테이프에 등록해 여러 프로젝트가 공유했습니다.</p>
+						<p>이 덕분에 과학자와 공업 엔지니어는 카드 덱만 준비하면 밤새 계산 작업을 맡길 수 있었고, 오류 메시지는 표준 형식으로 모여 다음 배치 전에 수정할 수 있었습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>멀티터치 제스처와 앱 샌드박스 구조는 이후 iOS SDK와 App Store 보안 모델의 기초가 되어 모바일 OS 전반이 터치 UX를 채택하게 만들었습니다.</p>
+						<p>FMS에서 쓰인 작업 제어 카드와 라이브러리 관리 방식은 이후 IBSYS와 OS/360의 JCL, 유틸리티 프로그램 설계에 직접적인 영향을 주었습니다.</p>
 					</div>
 				</section>
 			</article>
@@ -376,15 +376,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1981</p>
 					<h2 id="event-1981-msdos-title">MS-DOS, IBM PC 생태계를 단단히 묶다</h2>
-					<p class="event-detail__summary">애플은 “예쁜데 UNIX예요”라는 메시지로 Mac OS X를 소개하며 Aqua 인터페이스와 Darwin 커널을 묶었습니다.</p>
+					<p class="event-detail__summary">마이크로소프트는 OEM 라이선스를 무기로 MS-DOS를 배포해 IBM PC 호환기종이 공통 운영체제를 공유하도록 만들었습니다.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>NeXTSTEP 기반 커널 위에 Aqua 그래픽을 얹어 프리엠프티브 멀티태스킹과 보호 메모리를 기본으로 제공했습니다. 앱 하나가 멈춰도 시스템 전체는 버텼습니다.</p>
-						<p>Quartz, Carbon, Cocoa API를 정리해 개발자가 단계적으로 새 환경으로 옮겨올 수 있도록 했습니다. 애플은 WWDC에서 “크래시가 줄었다”는 그래프를 보여 주며 안정성과 디자인을 동시에 잡았다고 강조했습니다.</p>
+						<p>MS-DOS는 간결한 커맨드 라인과 BIOS 호출 규칙만으로 구성돼, 하드웨어 제조사가 자신의 기기에 빠르게 이식할 수 있었습니다. `CONFIG.SYS`와 `AUTOEXEC.BAT`로 드라이버와 환경을 설정하자 부품이 달라도 같은 명령을 쓸 수 있었습니다.</p>
+						<p>워드프로세서, 스프레드시트, 회계 프로그램이 DOS를 표준 플랫폼으로 삼으면서 “IBM PC 호환” 로고만 있으면 업무용 소프트웨어가 돌아가는 시장이 열렸습니다.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Mac OS X는 인증받은 UNIX 데스크톱으로 자리 잡아 이후 iOS와 watchOS까지 이어지는 애플 플랫폼 운영체제의 공통 기반이 되었습니다.</p>
+						<p>MS-DOS의 OEM 계약과 앱 호환성 생태계는 PC 산업을 급속히 확장시켰고, 이후 Windows 3.x와 95로 이어지는 GUI 전환의 기반을 마련했습니다.</p>
 					</div>
 				</section>
 			</article>
