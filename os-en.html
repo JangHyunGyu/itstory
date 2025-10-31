@@ -64,13 +64,13 @@
 						<p class="hero__eyebrow">Operating System Story for Builders</p>
 						<h1 class="timeline-hero__title" id="timeline-title">From batch monitors to pocket OSes, how teams kept people and hardware in sync</h1>
 						<p class="timeline-hero__lede">
-							In 1948 the Manchester Baby showed that a few starter instructions were enough for a computer to pull in the rest of its program on its own. A short time later GM’s night shift grumbled that they spent more time swapping tapes than running jobs, so monitors like GM-NAA I/O and FMS took over the handoff and groups such as SHARE rallied around a shared procedure. NASA labs and universities soon sliced time so several people could take turns chatting with a single machine.
+							In Manchester a night-shift engineer leaned over the Baby test machine and wondered, “Will a handful of bootstrap lines really be enough?” Across the ocean GM’s graveyard crew sighed, “We spend more time swapping tapes than running jobs,” while NASA labs tried to slice time so students could share one mainframe without fighting over the console.
 						</p>
 						<p class="timeline-hero__lede">
-							IBM’s System/360 promised, “Different models, same operating system,” while Bell Labs’ UNIX popularized chaining small tools together. The 1980s and 1990s pulled MS-DOS, the Macintosh, and Windows 95 into homes, and the Linux community showed that a mailing list full of strangers could evolve a kernel side by side. In the 2000s and beyond, Mac OS X, iPhone OS, and Android put powerful computing in our pockets, Docker and Kubernetes made cloud deployments routine, and custom silicon now asks every OS to keep the experience consistent wherever code runs.
+							IBM answered with System/360 and its promise, “Different models, same OS,” and Bell Labs’ UNIX crew countered with, “Just string small tools together.” MS-DOS, the Macintosh, and Windows 95 pulled the desktop into homes and offices, the Linux community proved strangers on a mailing list could co-own a kernel, and later Mac OS X, iPhone OS, Android, Docker, and Kubernetes stretched the idea of an operating system from pockets to whole clouds.
 						</p>
 						<p class="timeline-hero__lede">
-							Pick a year to see what each team worried about, how they answered it, and where that habit still lives today. No textbook required—the stories stay with the people, real problems, and the simple ideas that stuck around.
+							Scroll through the years to hear what each team worried about, how they answered it, and which habits survived. No jargon exam awaits—each modal keeps the focus on people, the problem on their mind, and the lesson that stayed behind.
 						</p>
 					</div>
 				</section>
@@ -278,15 +278,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1948</p>
 					<h2 id="event-1948-manchester-title">Manchester Baby proves the stored-program bootstrap</h2>
-					<p class="event-detail__summary">Engineers in Manchester flipped in a few “initial orders” so the Baby could fetch and run its own code, showing instructions could live beside data.</p>
+					<p class="event-detail__summary">Manchester engineers proved “a tiny bootstrap is enough” when the Baby pulled in its own program.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Frederic Williams and Tom Kilburn wired the Small-Scale Experimental Machine (Baby) with a 32×32-bit Williams-Kilburn tube memory. On 21 June 1948 it found the highest factor of 2<sup>18</sup> − 1, booting from a tiny hand-entered program that pulled the rest of the instructions from memory.</p>
-						<p>Instead of rewiring relays, researchers swapped out software and reran the stored program minutes later. The Baby demonstrated the von Neumann idea that instructions and data could share the same storage, opening the door to reusable bootstraps.</p>
+						<p>Just before dawn on 21 June 1948 Frederic Williams and Tom Kilburn took turns flipping toggle switches beside the Williams-Kilburn tube. “Boot sequence coming up,” one of them said as the last bit clicked into place. The Baby immediately began fetching the rest of its code from memory.</p>
+						<p>While the machine hunted for the largest factor of 2<sup>18</sup> − 1, a lab assistant scribbled “First night the computer loaded itself” into the notebook. Everyone in the room felt the era of rewiring racks was ending.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>That short bootstrap—load a few bits, then let the machine take over—quickly became the template for the “initial program load” sequences that every later operating system adopted.</p>
+						<p>The Baby’s short-bootstrap-then-program routine became the initial program load ritual every later operating system inherits.</p>
 					</div>
 				</section>
 			</article>
@@ -297,15 +297,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1949</p>
 					<h2 id="event-1949-edsac-title">EDSAC Initial Orders standardize the bootstrap</h2>
-					<p class="event-detail__summary">Maurice Wilkes’ team packed 31 instructions into EDSAC’s Initial Orders so operators could load programs from paper tape and call shared subroutines automatically.</p>
+					<p class="event-detail__summary">Cambridge’s Initial Orders delivered on the promise, “Just feed the tape and stand back.”</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>After switch-loading the Initial Orders, EDSAC reset its tape reader, read the next spool into memory, and jumped into the freshly loaded program with no rewiring. Operators started a run, stepped aside, and let the bootstrap handle the rest.</p>
-						<p>The Cambridge group curated a library tape containing square roots, logarithms, and trigonometric routines. Scientists fetched those subroutines on demand, trusting the Initial Orders to wire everything together consistently.</p>
+						<p>At the EDSAC lab an operator powered on the machine, flipped a row of switches, and called out, “Initial Orders ready!” Moments later a researcher slid a paper tape into the reader and watched the program copy itself into memory without further help.</p>
+						<p>When someone needed square roots or logarithms they grabbed the shared library tape and trusted the bootstrap to stitch it in. Runs finished with the same layout every time, no matter who queued the job.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>The EDSAC bootstrap plus library showed a repeatable chain: load a monitor, bring in the job, then link shared routines. Later monitor systems and operating systems kept that structure for device setup and program loading.</p>
+						<p>Initial Orders plus the shared library cemented the “tiny monitor → loader → reusable routines” chain that later monitor systems and operating systems used for device setup and program loading.</p>
 					</div>
 				</section>
 			</article>
@@ -316,15 +316,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1956</p>
 					<h2 id="event-1956-gmnaa-title">GM-NAA I/O keeps batch jobs moving</h2>
-					<p class="event-detail__summary">GM’s night shift could finally let the IBM 704 run on its own because GM-NAA I/O queued tape swaps and jobs automatically.</p>
+					<p class="event-detail__summary">GM and NAA’s graveyard crews stopped saying “We’ll be here till dawn swapping tapes” once GM-NAA I/O took over.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Before GM-NAA I/O, operators shuffled card decks, mounted tapes, and hit start for every single batch. The mainframe waited while people did the prep work.</p>
-						<p>GM-NAA I/O read a short instruction sheet for each job and handled the routine steps itself. Overnight runs finished without constant babysitting, showing that a small control program could keep costly hardware busy.</p>
+						<p>In Detroit the overnight operator stacked card decks on a chair and joked, “Maybe the monitor will take a turn tonight,” as they loaded GM-NAA I/O. Each time a job ended the monitor flipped to the next tape and queued the following deck without human hands.</p>
+						<p>Job cards arriving from plants spelled out requests like “Print on device A,” and the monitor dutifully followed the script. Operators gathered only the error slips while the mainframe stayed busy until sunrise.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>GM-NAA I/O popularized job control language, the idea that you list the program and devices you need and let the OS handle the steps. Modern batch schedulers and CI pipelines still follow that pattern.</p>
+						<p>GM-NAA I/O’s job control cards and automatic device setup became the blueprint for later batch operating systems and, eventually, modern schedulers and CI pipelines.</p>
 					</div>
 				</section>
 			</article>
@@ -335,15 +335,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1959</p>
 					<h2 id="event-1959-fms-title">Fortran Monitor System puts common macros in a box</h2>
-					<p class="event-detail__summary">SHARE members had been trading FORTRAN macros by mail, so IBM bundled the popular ones into FMS and shipped one monitor everyone could use.</p>
+					<p class="event-detail__summary">FMS told customers, “We’ll compile, link, and print in one go,” and bundled the shared macros like a ready-made kit.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Each lab had written its own little scripts to read cards, run the compiler, and print results. IBM took the most-used routines and wrapped them in the Fortran Monitor System.</p>
-						<p>Operators only had to pick a job type and FMS handled the rest—mounting tapes, starting the compiler, and printing reports. Labs finally shared one reliable playbook instead of dozens of local hacks.</p>
+						<p>SHARE members laid their favorite macro decks on an IBM conference table and asked, “Can you ship these as one package?” IBM responded with FMS: add a few control cards up front and the monitor chained compilation, linking, execution, and printing without supervision.</p>
+						<p>Night operators checked the control cards—“Ah, the science bundle again”—and pressed start. The shared library tape guaranteed the same math routines everywhere, so results matched whether the job came from a lab or an aerospace plant.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>FMS showed that device-independent I/O mattered: programs describe the work, and the OS matches it to real hardware. That mindset shaped later driver models and even how cloud services map storage for you today.</p>
+						<p>FMS’s device-independent I/O mindset fed directly into OS/360’s JCL and still echoes in how modern operating systems and cloud services build their driver layers.</p>
 					</div>
 				</section>
 			</article>
@@ -354,15 +354,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1964</p>
 					<h2 id="event-1964-os360-title">System/360 delivers one OS for many models</h2>
-					<p class="event-detail__summary">IBM told customers, “Swap the hardware, keep the software,” and OS/360 was the compatibility pledge that made the 360 family believable.</p>
+					<p class="event-detail__summary">System/360 promised, “Trade the hardware, keep the code,” and turned compatibility into a business contract.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Upgrading mainframes once meant rewriting applications from scratch. OS/360 split the system into layers—kernel, I/O control, device drivers—so different 360 models could share the same interface.</p>
-						<p>Companies could recompile and move software between machines without changing business logic. From then on, operating systems were judged by how well they protected customer investments when hardware changed.</p>
+						<p>At launch briefings IBM reps told customers, “Model numbers may change, the calls stay the same.” Engineers layered OS/360 into kernel, I/O control, and device drivers so every 360 box exposed the same interfaces.</p>
+						<p>Early adopters left budget meetings saying, “We’ll start with a 40-series and upgrade next year,” knowing the software would follow. Compatibility turned into the deciding factor for mainframe purchases.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>OS/360 made the stable systems programming interface a business promise: follow the documented calls and upgrades will keep working. POSIX standards and cloud instance families still echo that contract.</p>
+						<p>OS/360’s stable systems interface became a promise that stretches from mainframes to POSIX and even modern cloud instance families.</p>
 					</div>
 				</section>
 			</article>
@@ -373,15 +373,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1969</p>
 					<h2 id="event-1969-unix-title">UNIX spreads the “small tools” idea</h2>
-					<p class="event-detail__summary">Bell Labs engineers said, “Keep it small and pipe it together,” rewriting the UNIX kernel in C so it stayed portable and easy to tweak.</p>
+					<p class="event-detail__summary">UNIX preached, “Chain the small tools,” and showed the world how to treat everything like a file.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Ken Thompson and Dennis Ritchie rebuilt the system around one idea: treat devices and programs as files, and chain their outputs with pipes. C made the kernel easy to move between machines.</p>
-						<p>Universities got the source code, rewrote parts for their hardware, and sent patches back. A culture formed around combining small commands and trusting the OS to juggle processes in the background.</p>
+						<p>In the Bell Labs basement Ken Thompson and Dennis Ritchie nudged coffee cups aside and agreed, “Let’s make everything look like a file.” Once pipes arrived, two or three tiny commands could solve chores that used to need whole programs.</p>
+						<p>When the code reached universities, students said, “Our PDP-11 is quirky, but we can tweak the C,” and dove into porting. Patches flew back and forth, and the habit of chaining small commands became a way of life.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>UNIX proved portability, multitasking, and modular utilities could coexist. Modern shells, POSIX APIs, and even container images still lean on its “small tools do one thing well” rule.</p>
+						<p>That filing-cabinet view of the world—and the belief in small commands—still anchors POSIX shells, scripting, and even how container images are composed today.</p>
 					</div>
 				</section>
 			</article>
@@ -392,15 +392,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1974</p>
 					<h2 id="event-1974-cpm-title">CP/M gives microcomputers a common language</h2>
-					<p class="event-detail__summary">Gary Kildall said, “Match this BIOS layer and your apps will run,” and CP/M quickly became the shared OS for 8-bit machines.</p>
+					<p class="event-detail__summary">CP/M told manufacturers, “Match the BIOS and your apps will run,” and handed microcomputers a shared language.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Every early microcomputer wired its disks differently. CP/M split the system into BDOS for shared services and a small BIOS wedge for hardware quirks. Vendors only had to swap that thin BIOS slice to join the ecosystem.</p>
-						<p>Suddenly one floppy with WordStar or VisiCalc ran on many brands of machines. Businesses trusted that a microcomputer would behave the same at work and at home.</p>
+						<p>Gary Kildall met with hardware vendors and said, “Your disk routines all look different—just tailor this bottom layer.” CP/M split common services into BDOS and left a thin BIOS slice for quirks, so companies could adapt the OS in days.</p>
+						<p>Sales reps carrying WordStar floppies walked into offices saying, “Plug this in and it’ll just work.” When the same software looked identical on wildly different hardware, purchasing managers signed orders with confidence.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>CP/M’s BDOS/BIOS split became the template for modern driver models: keep common logic in the core and isolate device quirks inside replaceable modules.</p>
+						<p>The BDOS/BIOS split became the pattern for PC BIOS, hardware abstraction layers, and the driver stacks inside modern operating systems.</p>
 					</div>
 				</section>
 			</article>
@@ -411,15 +411,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1978</p>
 					<h2 id="event-1978-vms-title">VAX/VMS brings virtual memory and clustering</h2>
-					<p class="event-detail__summary">DEC promised, “Mainframe tricks on a midsize budget,” and paired VAX hardware with VMS to deliver virtual memory and clustering.</p>
+					<p class="event-detail__summary">VAX/VMS reassured midsize shops, “You can stay up all night,” by popularizing virtual memory and clustering.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>VMS paged memory to disk so programs could outgrow physical RAM, and it linked multiple VAX machines into a cluster that kept working if one failed.</p>
-						<p>The OS shipped with record locking, job scheduling, and error handling that gave administrators confidence in round-the-clock service. Hospitals and universities finally ran continuous systems without paying for a mainframe.</p>
+						<p>On stage a DEC engineer pointed to a VAX console and said, “This job uses more memory than the box actually has.” VMS quietly paged data to disk so applications ignored physical limits.</p>
+						<p>Night crews in hospital data centers tested VMScluster and heard the chime: “Node failed, partner taking over.” Administrators realized they could promise 24/7 service without renting a mainframe.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>VMS made virtual memory, protection rings, and cluster APIs mainstream. Microsoft later hired VMS architects for Windows NT, so those ideas still show up in modern Windows kernels.</p>
+						<p>VMS’s protection rings, record services, and cluster APIs became the playbook Microsoft reused in Windows NT and that hypervisor designers still study today.</p>
 					</div>
 				</section>
 			</article>
@@ -430,15 +430,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1981</p>
 					<h2 id="event-1981-msdos-title">MS-DOS holds the IBM PC ecosystem together</h2>
-					<p class="event-detail__summary">Microsoft told PC makers, “If the rules match, the apps will run,” and MS-DOS gave every IBM PC clone the same commands and APIs.</p>
+					<p class="event-detail__summary">MS-DOS promised, “Keep the commands, swap the parts,” and bound the IBM PC clone market together.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>IBM needed an operating system fast, so Microsoft reworked QDOS into MS-DOS and documented how programs should call BIOS interrupts, read disks, and access devices.</p>
-						<p>With the rules clear, software shipped once and ran across IBM PCs and clones. Everyday commands like <code>DIR</code> and <code>COPY</code> introduced millions to the idea that the OS sits between people and hardware.</p>
+						<p>In meetings with IBM, Microsoft argued, “Write the BIOS rules down and the manufacturers will follow.” OEMs soon shipped their own hardware, but kept MS-DOS commands and APIs identical.</p>
+						<p>Users learned <code>DIR</code> and <code>COPY</code> once and carried those habits to any clone. Homes and offices started saying the same thing: “If it runs DOS, we’re safe.”</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>MS-DOS cemented the .COM/.EXE formats and BIOS interrupt calls, patterns that flowed into early Windows releases and even today’s PC boot sequences.</p>
+						<p>The BIOS interrupt map and .EXE format MS-DOS left behind still anchor Windows compatibility and even today’s PC boot rituals.</p>
 					</div>
 				</section>
 			</article>
@@ -449,15 +449,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1984</p>
 					<h2 id="event-1984-system1-title">Macintosh System 1 makes the GUI familiar</h2>
-					<p class="event-detail__summary">Apple cheerfully said, “Drag the file to the trash,” and System 1 showed everyday users how icons and menus could replace typed commands.</p>
+					<p class="event-detail__summary">Macintosh System 1 told newcomers, “Just drag the icon,” and turned graphical desktops into everyday language.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>System 1 used real-world metaphors—folders, a trash can, and a single menu bar—to guide people who had never touched a computer. You could drag a document to a printer icon instead of memorizing commands.</p>
-						<p>Apple’s Human Interface Guidelines taught outside developers to follow the same scroll bars and alerts. The operating system became a shared language for pointing and clicking.</p>
+						<p>At 1984 demos Apple staff pointed to the trash icon and said, “Drop anything you don’t need right here.” People who had never touched a mouse were soon opening folders, choosing menus, and smiling at the on-screen metaphors.</p>
+						<p>The Human Interface Guidelines spread the same menus and alerts to outside developers. Users could open a new app and still feel at home because every window behaved the same way.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>System 1’s QuickDraw graphics and Resource Manager let the OS handle fonts, icons, and input events. Modern UI frameworks still use that event loop where the system hands clicks and redraws to each app.</p>
+						<p>System 1’s event loop, QuickDraw engine, and Resource Manager became the grammar modern desktop UI frameworks still follow.</p>
 					</div>
 				</section>
 			</article>
@@ -468,15 +468,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1991</p>
 					<h2 id="event-1991-linux-title">Linux turns kernel hacking into a community sport</h2>
-					<p class="event-detail__summary">A Helsinki student posted, “Just a hobby, want feedback,” and the Linux kernel quickly became a shared project that anyone could improve.</p>
+					<p class="event-detail__summary">Linux began with a note that said, “Just a hobby—want to help?” and turned kernel building into a shared craft.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Linus Torvalds shared an early kernel on comp.os.minix and asked for help. People replied with disk drivers, schedulers, and filesystems, while GNU tools filled in the user space. Almost overnight it grew into a complete UNIX-like stack.</p>
-						<p>The GPL license required improvements to stay open, so every patch benefited the next person. Linux moved from hobby PCs to servers, routers, and phones, proving a worldwide mailing list could maintain a production kernel.</p>
+						<p>Linus Torvalds posted to comp.os.minix, “I’m building a 386 kernel for fun—any ideas?” Within days his mailbox filled with disk drivers, scheduler tweaks, and filesystem experiments from strangers.</p>
+						<p>The source stayed open, so anyone could read, modify, and pass it along. Universities, ISPs, and hobbyists treated the same kernel as a group project and patched it together on a global mailing list.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>The GPL kept code open and nudged contributors toward modular patches. Modern infrastructure projects—from Kubernetes to router firmware—still rely on that distributed workflow.</p>
+						<p>The GPL license and mailing-list review culture became the skeleton modern open-source operating-system projects still follow.</p>
 					</div>
 				</section>
 			</article>
@@ -487,15 +487,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">1995</p>
 					<h2 id="event-1995-win95-title">Windows 95 makes Start the home base</h2>
-					<p class="event-detail__summary">Microsoft said, “Tap Start and you’re never lost,” bundling 32-bit APIs, plug and play, and a friendlier desktop for homes and offices.</p>
+					<p class="event-detail__summary">Windows 95 invited everyone to “Hit Start and go,” tying homes and offices to the same desktop language.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Windows 95 welcomed people with the Start button and taskbar so launching or switching programs made sense immediately. Plug and Play found new hardware, grabbed drivers, and made upgrades much less scary.</p>
-						<p>Under the hood, the 32-bit Win32 API modernized development while DOS apps still ran. Built-in networking and a polished shell arrived right as the web took off, cementing PCs at work and at home.</p>
+						<p>On launch night Steve Ballmer tapped the green Start button and said, “Everything you need begins here.” Plug and Play found new devices, installed drivers, and made upgrades feel harmless.</p>
+						<p>People opened the same Start menu to map a network drive at work and launch games at home. One desktop vocabulary suddenly served both worlds.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Windows 95 locked in patterns like the Start menu, system tray, and setup wizards. Today’s desktop OSes still reuse those cues for hardware, apps, and updates.</p>
+						<p>The Start menu, taskbar, and Win32 API Windows 95 introduced still underpin the Windows NT line and influence every modern desktop OS.</p>
 					</div>
 				</section>
 			</article>
@@ -506,15 +506,35 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2001</p>
 					<h2 id="event-2001-macosx-title">Mac OS X marries UNIX stability with Aqua style</h2>
-					<p class="event-detail__summary">Apple said, “Keep the Terminal and enjoy the polish,” blending NeXTSTEP’s UNIX core with the Aqua interface in Mac OS X.</p>
+					<p class="event-detail__summary">Mac OS X promised, “UNIX bones with a polished face,” and kept stability and design in the same box.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Mac OS X layered the shiny Aqua desktop on top of Darwin, a UNIX core from NeXTSTEP. Designers got drop shadows and the Dock, while developers opened Terminal and saw familiar POSIX tools.</p>
-						<p>Carbon let classic Mac apps move over slowly, and Cocoa pushed new apps toward a consistent look. The release proved the same machine could feel friendly and still run UNIX under the hood.</p>
+						<p>On the WWDC stage Apple showed off shimmering Aqua windows, then popped open Terminal and ran <code>ls</code>. Designers cheered the interface while developers nodded at the UNIX tools sitting underneath.</p>
+						<p>Carbon and Cocoa shipped side by side so classic Mac apps could migrate gradually while new apps embraced the modern APIs. Users trusted the system not to crash, and developers leaned on POSIX whenever they needed it.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Mac OS X normalized the “GUI up front, UNIX underneath” model. Modern development workflows with package managers and cross-platform toolchains still lean on that POSIX foundation.</p>
+						<p>Mac OS X popularized the “GUI up front, UNIX underneath” model that later powered iOS, watchOS, and today’s cross-platform development workflows.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+
+		<template id="event-2007-ios">
+			<article class="event-detail" aria-labelledby="event-2007-ios-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2007</p>
+					<h2 id="event-2007-ios-title">iPhone OS 1 brings a touch-first interface</h2>
+					<p class="event-detail__summary">iPhone OS 1 promised, “Your fingers are the only stylus you need,” and kicked off the touch-first era.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>On stage Steve Jobs held up the original iPhone and said, “Who wants a stylus? You’re going to use the best pointing device in the world.” Home screen icons, pinch-to-zoom, and flicking between lists taught the UI without a manual.</p>
+						<p>The software keyboard predicted words and the OS reacted to swipes instantly. People used to buttons and styli found themselves saying, “It just works with my fingers.”</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Multi-touch gestures and iPhone OS’s sandbox model became the blueprint every mobile platform studied, paving the way for the App Store ecosystem.</p>
 					</div>
 				</section>
 			</article>
@@ -525,15 +545,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2008</p>
 					<h2 id="event-2008-android-title">Android 1.0 brings an open phone platform</h2>
-					<p class="event-detail__summary">Google said, “Any manufacturer can ship this,” releasing Android 1.0 with a Linux base, intents, a touchscreen UI, and an app store.</p>
+					<p class="event-detail__summary">Android 1.0 told manufacturers, “Anyone can ship this,” and turned openness into a shipping product.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Android 1.0 sat on the Linux kernel but offered a Java-style SDK, a touch home screen, and the early Android Market. Intents let apps hand off tasks like maps or photos without hard wiring integrations.</p>
-						<p>Because the code was open, handset makers and carriers could add their own skins and still stay compatible. Android proved Linux could shrink to phone size while keeping power management, radios, and sandboxes under control.</p>
+						<p>At the Open Handset Alliance launch Google said, “Follow this SDK and API guide and you can release an Android phone.” Carriers and hardware makers layered their own skins on top while keeping the shared framework underneath.</p>
+						<p>Developers wrote apps for the Dalvik VM and uploaded them to the Android Market. Even “unknown sources” installs were allowed, giving experimenters a playground.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Android made per-app sandboxes and permission prompts normal. That security model influenced other mobile platforms and even modern desktop app stores.</p>
+						<p>Intents, APK packaging, and the permission model let a messy set of manufacturers stay compatible and still define today’s Android experience.</p>
 					</div>
 				</section>
 			</article>
@@ -544,15 +564,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2013</p>
 					<h2 id="event-2013-docker-title">Docker turns containers into everyday tools</h2>
-					<p class="event-detail__summary">dotCloud said, “Ship the image, not the instructions,” and Docker wrapped Linux containers in commands anyone could learn.</p>
+					<p class="event-detail__summary">Docker’s pitch was simple: “Ship the image, not the checklist,” and containers suddenly felt approachable.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Docker hid namespaces and cgroups behind simple commands like <code>docker build</code> and <code>docker run</code>. Developers packed their app and libraries into an image and knew it would behave the same on laptops, servers, or clouds.</p>
-						<p>Operations teams trusted the repeatability: a container that worked in testing behaved the same in production. The OS increasingly acted as a launcher while images carried the full environment.</p>
+						<p>At early demos dotCloud engineers ran <code>docker run</code> and said, “Push an image, pull it anywhere—it’s the same box.” Namespaces and cgroups hid behind friendly commands, so developers bundled code and dependencies without reading kernel docs.</p>
+						<p>Ops teams deployed the exact image they tested, and cloud providers rushed to offer managed container services. The operating system focused on isolation while images hauled around whole environments.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Docker popularized layered images, hosted registries, and a DevOps workflow where the OS focuses on isolation. Modern serverless platforms and CI/CD pipelines borrow that model.</p>
+						<p>Layered images, hosted registries, and Compose workflows became the default DevOps toolkit, echoing through today’s CI/CD pipelines and platform engineering stacks.</p>
 					</div>
 				</section>
 			</article>
@@ -563,15 +583,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2015</p>
 					<h2 id="event-2015-kubernetes-title">Kubernetes 1.0 treats clusters like one computer</h2>
-					<p class="event-detail__summary">Google, Red Hat, and CoreOS said, “Describe the desired state and we’ll keep it there,” when they donated Kubernetes 1.0 to the CNCF.</p>
+					<p class="event-detail__summary">Kubernetes 1.0 said, “Write the YAML and we’ll make it true,” turning cluster ops into a declarative habit.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Kubernetes let teams declare how many pods to run, which ports to expose, and how to roll out updates. Controllers kept comparing that wish list to reality and nudged the cluster until it matched.</p>
-						<p>Developers targeted the Kubernetes API instead of individual servers, and cloud providers launched managed clusters. The OS role stretched into running control loops for fleets of machines.</p>
+						<p>At the CNCF launch Google, Red Hat, and CoreOS demoed YAML manifests and said, “This file describes the state, the control loops chase it.” ReplicaSets, Services, and controllers kept reconciling the cluster without anyone SSHing into nodes.</p>
+						<p>Companies adopted Kubernetes as the common language for container fleets, and clouds rushed out managed clusters. The operating system’s job description expanded from guarding a single host to steering an entire herd.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Kubernetes formalized reconciliation loops and built-in service discovery. Infrastructure-as-code tools and managed platforms still copy those patterns today.</p>
+						<p>Declarative state and reconciliation loops quickly spread to infrastructure-as-code tools, service meshes, and most of today’s cloud-native stack.</p>
 					</div>
 				</section>
 			</article>
@@ -582,15 +602,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2020</p>
 					<h2 id="event-2020-big-sur-title">macOS Big Sur smooths the Apple Silicon leap</h2>
-					<p class="event-detail__summary">Apple promised, “The chip changed, your apps stay,” bundling M1 hardware, macOS Big Sur, and Rosetta 2 for a painless transition.</p>
+					<p class="event-detail__summary">macOS Big Sur promised, “New chip, same apps,” and became Apple’s playbook for the Silicon transition.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>macOS Big Sur launched with Apple’s M1 chips. Xcode produced Universal apps with Intel and ARM slices, and Rosetta 2 translated older binaries as they ran so most software kept working.</p>
-						<p>The OS coordinated high-efficiency and high-performance cores to stretch battery life and deliver instant wake. Users saw the same icons even though the processors underneath had changed completely.</p>
+						<p>During the launch stream Apple opened an M1 Mac, double-clicked an Intel-only app, and said, “Rosetta 2 is translating this live.” Users didn’t need to tweak settings—their existing tools simply opened.</p>
+						<p>Xcode generated Universal binaries by default so one build covered Intel and ARM. Battery life stretched, instant wake returned, and the familiar desktop disguised the silicon swap underneath.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Big Sur highlighted Universal binaries, ahead-of-time translation, and tighter hardware security. Other vendors still study that playbook when planning processor transitions.</p>
+						<p>Universal binaries, real-time translation, and tighter security layers formed a migration guide other platforms still study when planning processor shifts.</p>
 					</div>
 				</section>
 			</article>
@@ -601,15 +621,15 @@
 				<header class="event-detail__header">
 					<p class="event-detail__year">2021</p>
 					<h2 id="event-2021-windows11-title">Windows 11 connects local and cloud desktops</h2>
-					<p class="event-detail__summary">Microsoft said, “Your desk and our cloud should feel the same,” refreshing Windows 11 with a new shell, default security, and hybrid PC links.</p>
+					<p class="event-detail__summary">Windows 11 promised, “Your desk and our cloud should feel familiar,” and defined the hybrid desktop playbook.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Windows 11 shipped with a redesigned Start menu and taskbar but kept familiar shortcuts. It also required TPM 2.0 and enabled Secure Boot and virtualization-based protection by default.</p>
-						<p>WSLg let Linux GUI apps sit next to native Windows apps, while Windows 365 streamed cloud PCs to local devices. The OS started coordinating hardware on your desk alongside machines that live in Microsoft’s data centers.</p>
+						<p>During the launch stream Microsoft showed the centered Start menu and said, “Mouse or touch, it should feel the same.” TPM 2.0, Secure Boot, and virtualization-based security flipped on by default, giving IT teams firmer ground.</p>
+						<p>WSLg placed Linux GUI apps beside native windows, and Windows 365 streamed managed cloud PCs to local devices. Windows began orchestrating laptops at home, desktops at work, and virtual machines in Microsoft’s data centers as one workspace.</p>
 					</div>
 					<div class="event-detail__notes">
-						<p>Windows 11’s hardware-backed security and hybrid management hint at a future where operating systems orchestrate local devices, virtual machines, and cloud apps as one workspace.</p>
+						<p>Hardware-backed security plus hybrid management became the new baseline other desktop platforms now measure themselves against.</p>
 					</div>
 				</section>
 			</article>
