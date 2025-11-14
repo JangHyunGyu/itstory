@@ -18,6 +18,30 @@
 		<link rel="canonical" href="https://itstory.archerlab.dev/was-en.html" />
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
 		<script defer src="assets/js/ga.js"></script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "FAQPage",
+				"mainEntity": [
+					{
+						"@type": "Question",
+						"name": "Which milestones from this web server timeline show the shift from handcrafted daemons to scalable delivery stacks?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Start with 1990's CERN httpd to capture the first publish-and-browse moment, add 1995's Apache modular boom, and close with 2011's Nginx reverse proxy surge to explain how teams moved from single daemons to load-balanced clusters."
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "How do I link serverless platforms and Ingress controllers back to earlier server milestones?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Show how 2005 Memcached offloaded state from app servers, then connect 2014's AWS Lambda and 2015's Kubernetes Ingress to illustrate how routing, scaling, and stateless execution keep building on those lessons."
+						}
+					}
+				]
+			}
+		</script>
 	</head>
 	<body>
 		<div class="page">
@@ -220,6 +244,31 @@
 						<li><a href="https://aws.amazon.com/blogs/aws/aws-lambda-event-driven-code-in-the-cloud/" target="_blank" rel="noopener">AWS News Blog · AWS Lambda Announcement</a></li>
 						<li><a href="https://kubernetes.io/blog/2015/11/introducing-ingress-resource/" target="_blank" rel="noopener">Kubernetes Blog · Introducing the Ingress Resource</a></li>
 					</ul>
+				</section>
+
+				<section class="timeline-insights" aria-labelledby="insights-was">
+					<h2 id="insights-was">How backend teams use this web server timeline</h2>
+					<p>Platform engineers and solution architects revisit these moments to explain why web delivery stacks care about statelessness, caching, and routing.</p>
+					<ul class="timeline-insights__list">
+						<li>1990s entries such as CERN httpd and Apache show how open protocols and modular servers made the web approachable.</li>
+						<li>Servlets, Tomcat, and Spring highlight the era when shared APIs kept business logic portable across vendors.</li>
+						<li>Memcached, Nginx, Lambda, and Kubernetes Ingress trace how scaling and traffic management pushed teams toward stateless, scripted infrastructure.</li>
+					</ul>
+					<p>Compare these patterns with the <a href="os-en.html">Operating Systems timeline</a> or the <a href="web-interaction-en.html">Browser Interaction timeline</a> to show full-stack cause and effect.</p>
+				</section>
+
+				<section class="timeline-faq" aria-labelledby="faq-was">
+					<h2 id="faq-was">Common questions from readers</h2>
+					<dl class="timeline-faq__list">
+						<div class="timeline-faq__item">
+							<dt>Which milestones from this web server timeline show the shift from handcrafted daemons to scalable delivery stacks?</dt>
+							<dd>Start with 1990's CERN httpd to capture the first publish-and-browse moment, add 1995's Apache modular boom, and close with 2011's Nginx reverse proxy surge to explain how teams moved from single daemons to load-balanced clusters.</dd>
+						</div>
+						<div class="timeline-faq__item">
+							<dt>How do I link serverless platforms and Ingress controllers back to earlier server milestones?</dt>
+							<dd>Show how 2005 Memcached offloaded state from app servers, then connect 2014's AWS Lambda and 2015's Kubernetes Ingress to illustrate how routing, scaling, and stateless execution keep building on those lessons.</dd>
+						</div>
+					</dl>
 				</section>
 			</main>
 

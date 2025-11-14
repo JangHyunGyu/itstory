@@ -19,6 +19,30 @@
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
 		<script defer src="assets/js/ga.js"></script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "FAQPage",
+				"mainEntity": [
+					{
+						"@type": "Question",
+						"name": "Which operating system milestones should I cite to explain compatibility planning to stakeholders?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Layer 1964's System/360 promise of one OS across hardware, 1969's UNIX portability experiments, and 1995's Windows 95 rollout to show how compatibility decisions shape entire software ecosystems."
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "How do I connect the rise of mobile platforms with containers and cloud runtimes in this timeline?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Trace 2007's iPhone OS debut and 2008's Android launch alongside 2013 Docker and 2015 Kubernetes so teams see how mobile sandboxing and cloud orchestration both extended operating system ideas."
+						}
+					}
+				]
+			}
+		</script>
 	</head>
 	<body>
 		<div class="page">
@@ -256,6 +280,31 @@
 						<li><a href="https://android-developers.googleblog.com/2008/09/android-10-launched.html" target="_blank" rel="noopener">Android Developers Blog · Android 1.0</a></li>
 						<li><a href="https://www.apple.com/newsroom/2020/11/apple-unleashes-m1/" target="_blank" rel="noopener">Apple Newsroom · Apple Silicon</a></li>
 					</ul>
+				</section>
+
+				<section class="timeline-insights" aria-labelledby="insights-os">
+					<h2 id="insights-os">How teams use this OS history</h2>
+					<p>Engineering managers and educators lean on these milestones to explain scheduling, portability, and platform ecosystems.</p>
+					<ul class="timeline-insights__list">
+						<li>Early entries like the 1948 Manchester Baby and 1955 GM-NAA I/O show why bootstraps and job control mattered to mainframe crews.</li>
+						<li>System/360 and UNIX demonstrate how standard interfaces and portability unlocked software reuse across machines.</li>
+						<li>iPhone OS, Android, Docker, and Kubernetes highlight how sandboxing and orchestration stretched operating system ideas to pockets and clouds.</li>
+					</ul>
+					<p>Pair these notes with the <a href="computers-en.html">Computers timeline</a> for hardware progress or the <a href="was-en.html">Web Server timeline</a> to track how runtimes moved into data centers.</p>
+				</section>
+
+				<section class="timeline-faq" aria-labelledby="faq-os">
+					<h2 id="faq-os">Common questions from readers</h2>
+					<dl class="timeline-faq__list">
+						<div class="timeline-faq__item">
+							<dt>Which operating system milestones should I cite to explain compatibility planning to stakeholders?</dt>
+							<dd>Layer 1964's System/360 promise of one OS across hardware, 1969's UNIX portability experiments, and 1995's Windows 95 rollout to show how compatibility decisions shape entire software ecosystems.</dd>
+						</div>
+						<div class="timeline-faq__item">
+							<dt>How do I connect the rise of mobile platforms with containers and cloud runtimes in this timeline?</dt>
+							<dd>Trace 2007's iPhone OS debut and 2008's Android launch alongside 2013 Docker and 2015 Kubernetes so teams see how mobile sandboxing and cloud orchestration both extended operating system ideas.</dd>
+						</div>
+					</dl>
 				</section>
 			</main>
 

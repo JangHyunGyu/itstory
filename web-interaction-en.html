@@ -19,6 +19,30 @@
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
 		<script defer src="assets/js/ga.js"></script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "FAQPage",
+				"mainEntity": [
+					{
+						"@type": "Question",
+						"name": "Which interaction milestones explain how the browser became an application runtime?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Point to 1995's JavaScript debut for client-side logic, 2005's Ajax mapping frenzy for asynchronous updates, and 2013's React release for component-driven rendering to show how interactivity matured."
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "How can I connect Service Worker, WebAssembly, and WebGPU when coaching teams on modern web apps?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Link 2014's Service Worker for offline control, 2020's WebAssembly for near-native compute, and 2023's WebGPU for hardware-accelerated graphics to highlight how the platform now handles background tasks, performance, and rendering in the browser."
+						}
+					}
+				]
+			}
+		</script>
 	</head>
 	<body>
 		<div class="page">
@@ -180,6 +204,31 @@
 						<li><a href="https://webassembly.org/roadmap/" target="_blank" rel="noopener">WebAssembly.org · Roadmap</a></li>
 						<li><a href="https://developer.chrome.com/docs/web-platform/webgpu" target="_blank" rel="noopener">Chrome Developers · WebGPU</a></li>
 					</ul>
+				</section>
+
+				<section class="timeline-insights" aria-labelledby="insights-web-interaction">
+					<h2 id="insights-web-interaction">How teams apply this interaction timeline</h2>
+					<p>Product educators and developer advocates use these highlights to explain why browser capabilities grew from simple scripts to offline-first runtimes.</p>
+					<ul class="timeline-insights__list">
+						<li>JavaScript and XMLHttpRequest entries show how client-side logic and async calls unlocked instant feedback.</li>
+						<li>Ajax patterns, jQuery, and React capture the tooling shift toward components and declarative UI.</li>
+						<li>Service Worker, WebAssembly, and WebGPU reveal how modern browsers handle offline caching, heavy compute, and GPU work.</li>
+					</ul>
+					<p>Relate these changes to the <a href="web-styling-en.html">Web Styling timeline</a> for layout context or the <a href="was-en.html">Web Server timeline</a> to discuss backend coordination.</p>
+				</section>
+
+				<section class="timeline-faq" aria-labelledby="faq-web-interaction">
+					<h2 id="faq-web-interaction">Common questions from readers</h2>
+					<dl class="timeline-faq__list">
+						<div class="timeline-faq__item">
+							<dt>Which interaction milestones explain how the browser became an application runtime?</dt>
+							<dd>Point to 1995's JavaScript debut for client-side logic, 2005's Ajax mapping frenzy for asynchronous updates, and 2013's React release for component-driven rendering to show how interactivity matured.</dd>
+						</div>
+						<div class="timeline-faq__item">
+							<dt>How can I connect Service Worker, WebAssembly, and WebGPU when coaching teams on modern web apps?</dt>
+							<dd>Link 2014's Service Worker for offline control, 2020's WebAssembly for near-native compute, and 2023's WebGPU for hardware-accelerated graphics to highlight how the platform now handles background tasks, performance, and rendering in the browser.</dd>
+						</div>
+					</dl>
 				</section>
 			</main>
 

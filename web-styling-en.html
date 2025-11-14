@@ -19,6 +19,30 @@
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
 		<script defer src="assets/js/ga.js"></script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "FAQPage",
+				"mainEntity": [
+					{
+						"@type": "Question",
+						"name": "Which milestones from this styling timeline should I cite when teaching CSS history?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Point students to the 1994 CSS proposal for the cascade concept, the 2003 CSS Zen Garden showcase for separation of concerns, and the 2017 grid rollout that finally shipped two-dimensional layout. They illustrate why modern layout tooling looks the way it does."
+						}
+					},
+					{
+						"@type": "Question",
+						"name": "How can I apply the container query era lessons to a current design system?",
+						"acceptedAnswer": {
+							"@type": "Answer",
+							"text": "Treat components as self-contained: define fallback layouts with flexbox and grid, add container query breakpoints for richer contexts, and pair them with cascade layers so utilities cannot unexpectedly override component styles."
+						}
+					}
+				]
+			}
+		</script>
 	</head>
 	<body>
 		<div class="page">
@@ -198,6 +222,31 @@
 						<li><a href="https://web.dev/at-scale-css/" target="_blank" rel="noopener">web.dev · Managing CSS at Scale</a></li>
 						<li><a href="https://moderncss.dev/" target="_blank" rel="noopener">ModernCSS.dev · Patterns</a></li>
 					</ul>
+				</section>
+
+				<section class="timeline-insights" aria-labelledby="insights-web-styling">
+					<h2 id="insights-web-styling">Why this styling timeline still matters</h2>
+					<p>Product designers and educators use this chronology to show how layout flourished—from desktop publishing to cascade layers—so teams understand why modern CSS tools behave the way they do.</p>
+					<ul class="timeline-insights__list">
+						<li>The 1980s section explains how digital typography promised device independence, a precursor to today’s variable font strategies.</li>
+						<li>CSS1 and CSS2 highlights document when the cascade, media queries, and positioning shipped, arming curriculum writers with concrete release years.</li>
+						<li>Recent milestones capture container queries, cascade layers, and native nesting so design-system owners can justify component-first roadmaps.</li>
+					</ul>
+					<p>Compare these styling shifts with the <a href="web-structure-en.html">Document Structure timeline</a> or the <a href="web-interaction-en.html">Browser Interaction history</a> to surface parallel innovations for a workshop or article.</p>
+				</section>
+
+				<section class="timeline-faq" aria-labelledby="faq-web-styling">
+					<h2 id="faq-web-styling">Common questions from readers</h2>
+					<dl class="timeline-faq__list">
+						<div class="timeline-faq__item">
+							<dt>Which milestones should I highlight when creating a CSS training plan?</dt>
+							<dd>Use 1994’s CSS proposal to explain the cascade, 2003’s CSS Zen Garden to demonstrate separation of content and design, and 2017’s Grid rollout to showcase modern layout. Including these three anchors gives students historical context for current tooling.</dd>
+						</div>
+						<div class="timeline-faq__item">
+							<dt>How do container queries and cascade layers translate into daily component work?</dt>
+							<dd>Pair container queries with flexbox or grid fallbacks, then organise tokens with <code>@layer</code> so utilities cannot override components. This mirrors the practices highlighted in the 2020s portion of the timeline.</dd>
+						</div>
+					</dl>
 				</section>
 			</main>
 
