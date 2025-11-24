@@ -1,32 +1,36 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>ArcherLab IT Story · 웹 문서 설계 연대기</title>
-		<meta name="description" content="SGML부터 HTML5, 웹 컴포넌트까지 웹 문서 구조가 발전해 온 흐름을 정리했습니다." />
-		<meta name="title" content="웹 문서 설계 연대기 | ArcherLab IT Story" />
-		<meta name="keywords" content="웹 문서 구조, HTML 역사, SGML, XML, 문서 설계, 디자인 시스템, 웹 표준" />
-		<meta name="robots" content="index, follow" />
-		<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-		<meta property="og:title" content="ArcherLab IT Story · Web Structure Timeline" />
-		<meta property="og:description" content="문서를 어떻게 설계하고 의미를 붙여 왔는지, 구조의 진화를 사건별로 따라가 보세요." />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://itstory.archerlab.dev/web-structure.html" />
-		<meta property="og:locale" content="ko_KR" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-		<link rel="stylesheet" href="assets/css/style.css">
-		<link rel="canonical" href="https://itstory.archerlab.dev/web-structure.html" />
-		<link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-structure.html" />
-		<link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-structure-en.html" />
-		<link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-structure-en.html" />
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
-		<script defer src="assets/js/ga.js"></script>
-		<script type="application/ld+json">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArcherLab IT Story · 웹 문서 설계 연대기</title>
+	<meta name="description" content="SGML부터 HTML5, 웹 컴포넌트까지 웹 문서 구조가 발전해 온 흐름을 정리했습니다." />
+	<meta name="title" content="웹 문서 설계 연대기 | ArcherLab IT Story" />
+	<meta name="keywords" content="웹 문서 구조, HTML 역사, SGML, XML, 문서 설계, 디자인 시스템, 웹 표준" />
+	<meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+	<meta property="og:title" content="ArcherLab IT Story · Web Structure Timeline" />
+	<meta property="og:description" content="문서를 어떻게 설계하고 의미를 붙여 왔는지, 구조의 진화를 사건별로 따라가 보세요." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://itstory.archerlab.dev/web-structure.html" />
+	<meta property="og:locale" content="ko_KR" />
+	<meta property="og:image" content="https://itstory.archerlab.dev/assets/images/archerlab_logo.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="canonical" href="https://itstory.archerlab.dev/web-structure.html" />
+	<link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-structure.html" />
+	<link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-structure-en.html" />
+	<link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-structure-en.html" />
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
+	<script defer src="assets/js/ga.js"></script>
+	<script type="application/ld+json">
 {
 	"@context": "https://schema.org",
 	"@type": "WebPage",
@@ -59,7 +63,7 @@
 	}
 }
 		</script>
-		<script type="application/ld+json">
+	<script type="application/ld+json">
 {
 	"@context": "https://schema.org",
 	"@type": "FAQPage",
@@ -92,571 +96,701 @@
 	]
 }
 		</script>
-	</head>
-	<body data-page="web-structure">
-		<div class="page">
-			<header class="page__header" role="banner">
-				<div class="page__header-left">
-					<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
-						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
-						<span class="page__brand-label">ArcherLab Chronicle</span>
-					</a>
-					<nav class="page__topic-nav" aria-label="주제 전환">
-						<a href="index.html">홈 허브</a>
-						<a href="computers.html">컴퓨터 연대기</a>
-						<a href="networks.html">네트워크 연대기</a>
-						<a href="databases.html">데이터베이스 연대기</a>
-						<a href="os.html">운영체제 연대기</a>
-						<div class="page__topic-nav-group" role="group" aria-label="웹 제작 연대기">
-							<span class="page__topic-nav-label">웹 제작 연대기</span>
-							<a href="web.html" data-topic-role="parent">웹 제작 연대기 허브</a>
-							<a href="web-structure.html" class="is-current" data-topic-role="child">웹 문서 설계 연대기</a>
-							<a href="web-styling.html" data-topic-role="child">스타일링 진화 연대기</a>
-							<a href="web-interaction.html" data-topic-role="child">브라우저 인터랙션 연대기</a>
-							<a href="web-tools.html" data-topic-role="child">웹 제작 도구 연대기</a>
-						</div>
-						<a href="was.html">웹 서버 연대기</a>
-					</nav>
-				</div>
-				<nav class="page__nav" aria-label="섹션 탐색">
-					<a href="#timeline">연도 보기</a>
-					<a href="#sources">참고</a>
-					<div class="language-switch">
-						<label class="sr-only" for="language-select-web-structure">언어 선택</label>
-						<select id="language-select-web-structure" data-language-switch>
-							<option value="web-structure.html" data-language-code="ko" selected>한국어</option>
-							<option value="web-structure-en.html" data-language-code="en">English</option>
-						</select>
-					</div>
-				</nav>
-			</header>
-
-			<main class="page__main" id="main" role="main">
-				<section class="timeline-hero" aria-labelledby="timeline-title">
-					<div class="timeline-hero__head">
-						<p class="hero__eyebrow">Structure Story for Makers</p>
-						<h1 class="timeline-hero__title" id="timeline-title">펀치카드 들고 내려간 지하실에서 디자인 시스템 회의실까지, 문서 구조를 다듬어 온 사람들</h1>
-						<p class="timeline-hero__lede">
-							1960년대 MIT 지하 연구실에서는 각주와 제목을 매번 손으로 맞추느라 새벽까지 남는 일이 잦았습니다. 연구자들은 메인프레임에 RUNOFF 같은 조판 프로그램과 GML 태그 세트를 가르쳐 “지시만 하면 문서가 정리되게 하자”고 실험했습니다.
-						</p>
-						<p class="timeline-hero__lede">
-							몇 년 뒤 ISO 대표단은 같은 보고서를 서로 다른 마크업으로 나눠 읽다가 “규칙을 하나로 묶어야 한다”며 SGML을 만들었습니다. CERN 연구원은 이 규칙을 HTML로 다듬어 링크를 붙였고, 브라우저 팀은 DOM과 함께 움직이도록 표준을 정비했습니다.
-						</p>
-						<p class="timeline-hero__lede">
-							오늘날 디자인 시스템 팀은 “이 컴포넌트를 쓰면 구조와 접근성 표기도 따라옵니다”라며 템플릿을 배포합니다. 연도 버튼을 눌러 사람들이 어떤 고민을 했고 어떤 습관을 남겼는지 살펴보세요.
-						</p>
-						<aside class="timeline-hero__note" role="note" aria-label="schema.org 설명">
-							<h2 class="timeline-hero__note-title">schema.org란?</h2>
-							<p>schema.org는 구글·마이크로소프트·야후가 2011년에 공동으로 발표하고 이후 얀덱스가 합류한 구조화 데이터 어휘집입니다. 검색엔진이 같은 방식으로 정보를 읽을 수 있도록 항목별 속성과 예시를 정리했습니다.</p>
-							<p>행사, 레시피, 상품처럼 자주 쓰이는 정보를 HTML 마이크로데이터나 JSON-LD로 기록할 수 있게 해 주며, 음성 비서와 SNS 카드까지 같은 규칙으로 구조를 해석합니다. 제작자는 백엔드와 SEO 팀과 동일한 단어를 쓰면서 정보를 설계할 수 있습니다.</p>
-						</aside>
-					</div>
-				</section>
-
-				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
-					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">연도 버튼을 누르면 같은 화면에서 자세한 이야기를 읽을 수 있는 대화 상자가 열립니다.</p>
-					<section class="timeline-group" aria-labelledby="decade-1960 topic-1960">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1960">1960s</p>
-							<h3 class="timeline-group__topic" id="topic-1960">야근을 줄이려던 지하실 실험</h3>
-							<p class="timeline-group__summary">각주와 제목을 손으로 맞추느라 지친 연구자들이 RUNOFF 조판 프로그램과 GML 태그 언어를 실험하며 문서를 기계에 맡기자는 발상을 확인했습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1967-runoff">
-								<span class="timeline-event__year">1967</span>
-								<span class="timeline-event__label">RUNOFF 조판 프로그램</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1969-gml">
-								<span class="timeline-event__year">1969</span>
-								<span class="timeline-event__label">IBM GML 태그 세트</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-1970 topic-1970">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1970">1970s</p>
-							<h3 class="timeline-group__topic" id="topic-1970">“같은 문서인데 태그가 달라요”</h3>
-							<p class="timeline-group__summary">학회와 공공기관이 휴대 가능한 마크업을 연구하며 Scribe와 SGML 초안을 통해 구조 규칙을 문서화했습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1973-scribe">
-								<span class="timeline-event__year">1973</span>
-								<span class="timeline-event__label">Scribe 문서 언어</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1978-sgml-draft">
-								<span class="timeline-event__year">1978</span>
-								<span class="timeline-event__label">ISO SGML 초안</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-1980 topic-1980">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1980">1980s</p>
-							<h3 class="timeline-group__topic" id="topic-1980">표준을 챙긴 뒤 링크를 심다</h3>
-							<p class="timeline-group__summary">SGML이 국제표준이 되자 CERN 연구원들은 이를 간단한 HTML 메모로 줄여 링크가 걸린 문서를 공유했습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1986-sgml">
-								<span class="timeline-event__year">1986</span>
-								<span class="timeline-event__label">ISO 8879:1986</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1989-html-memo">
-								<span class="timeline-event__year">1989</span>
-								<span class="timeline-event__label">HTML 개념 메모</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1990">1990s</p>
-							<h3 class="timeline-group__topic" id="topic-1990">“같이 읽자”는 약속과 DOM 실험</h3>
-							<p class="timeline-group__summary">IETF와 W3C가 HTML, XML, DOM 규칙을 잇달아 발표하며 브라우저마다 같은 구조를 유지하자고 약속했습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1995-html2">
-								<span class="timeline-event__year">1995</span>
-								<span class="timeline-event__label">HTML 2.0 RFC</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-xml10">
-								<span class="timeline-event__year">1997</span>
-								<span class="timeline-event__label">XML 1.0 권고</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1998-dom1">
-								<span class="timeline-event__year">1998</span>
-								<span class="timeline-event__label">DOM Level 1</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2000">2000s</p>
-							<h3 class="timeline-group__topic" id="topic-2000">웹 문서를 앱답게 만들자</h3>
-							<p class="timeline-group__summary">브라우저 팀이 폼과 입력 요소를 확장하고, 커뮤니티는 마이크로포맷으로 일정과 연락처를 꺼냈습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2004-whatwg">
-								<span class="timeline-event__year">2004</span>
-								<span class="timeline-event__label">WHATWG 폼</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-microformats">
-								<span class="timeline-event__year">2005</span>
-								<span class="timeline-event__label">마이크로포맷 커뮤니티</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2010">2010s</p>
-							<h3 class="timeline-group__topic" id="topic-2010">시맨틱과 접근성의 동거</h3>
-							<p class="timeline-group__summary">HTML5 권고와 WAI-ARIA 가이드가 함께 등장하며 구조와 역할을 명확히 적자는 원칙이 자리 잡았습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2011-schema-org">
-								<span class="timeline-event__year">2011</span>
-								<span class="timeline-event__label">schema.org 연합</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-html5">
-								<span class="timeline-event__year">2014</span>
-								<span class="timeline-event__label">HTML5 권고</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2017-aria11">
-								<span class="timeline-event__year">2017</span>
-								<span class="timeline-event__label">ARIA 1.1 패턴</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2020">2020s</p>
-							<h3 class="timeline-group__topic" id="topic-2020">디자인 시스템으로 구조를 배포하다</h3>
-							<p class="timeline-group__summary">커스텀 엘리먼트와 공개 가이드가 등장해 구조를 코드와 문서로 동시에 배포하는 흐름이 자리 잡았습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2020-custom-elements">
-								<span class="timeline-event__year">2020</span>
-								<span class="timeline-event__label">커스텀 엘리먼트 v1</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2022-design-systems">
-								<span class="timeline-event__year">2022</span>
-								<span class="timeline-event__label">디자인 시스템 가이드</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-design-tokens">
-								<span class="timeline-event__year">2023</span>
-								<span class="timeline-event__label">Design Tokens 초안</span>
-							</button>
-						</div>
-					</section>
-				</section>
-
-				<section class="sources" id="sources" aria-labelledby="sources-title">
-					<div class="section__head">
-						<h2 id="sources-title">더 깊이 읽을 거리</h2>
-						<p>아래 문서는 SGML, HTML, 접근성 안내를 차근차근 설명합니다. 원문을 따라 읽으며 구조가 어떻게 커졌는지 살펴보세요.</p>
-					</div>
-					<ul class="source-list">
-						<li><a href="https://www.iso.org/standard/16387.html" target="_blank" rel="noopener">ISO · ISO 8879:1986 SGML</a></li>
-						<li><a href="https://www.w3.org/MarkUp/html-spec/" target="_blank" rel="noopener">W3C · HTML 2.0 Specification</a></li>
-						<li><a href="https://dom.spec.whatwg.org/" target="_blank" rel="noopener">WHATWG · DOM Living Standard</a></li>
-						<li><a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener">WHATWG · HTML Standard</a></li>
-						<li><a href="https://www.w3.org/WAI/ARIA/apg/" target="_blank" rel="noopener">W3C · WAI-ARIA Authoring Practices</a></li>
-						<li><a href="https://web.dev/design-systems/" target="_blank" rel="noopener">web.dev · Design Systems Guide</a></li>
-					</ul>
-				</section>
-			</main>
-
-			<footer class="page__footer" role="contentinfo">
-				<p>© 2025 ArcherLab · Stories on web document structure.</p>
-				<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
-			</footer>
-		</div>
-
-		<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
-			<div class="modal__overlay" data-modal-close></div>
-			<div class="modal__window" role="document" tabindex="-1">
-				<button class="modal__close" type="button" aria-label="레이어 닫기" data-modal-close>&times;</button>
-				<div class="modal__content"></div>
-			</div>
-		</div>
-
-		<template id="event-1967-runoff">
-			<article class="event-detail" aria-labelledby="event-1967-runoff-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1967</p>
-					<h2 id="event-1967-runoff-title">RUNOFF, 문장을 코드로 조판하다</h2>
-					<p class="event-detail__summary">MIT 대학원생은 “각주 맞추다 밤을 샌다”며 문서를 대신 정리해 줄 RUNOFF 프로그램을 만들었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>MIT 지하 기계실에서 그는 펀치카드 묶음을 들고 RUNOFF를 실행했습니다. 프린터에서는 제목과 본문이 가지런한 용지가 쏟아졌고, 옆자리 연구자는 “명령 몇 줄만 적었는데 각주가 제자리로 갔네요!”라며 환호했습니다.</p>
-						<p>학생은 동료들에게 `#CENTER` 같은 간단한 지시어 목록을 적어 돌렸습니다. 지도교수는 출력물을 살펴보고 “보고서 모양이 한결 읽기 좋아졌다”며 다음 과제에도 활용하자고 제안했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>RUNOFF는 문장 사이에 지시문을 섞어 두면 컴퓨터가 줄바꿈과 각주를 대신 계산해 주는 초기 조판 도구였습니다. 사람 대신 기계가 문서 구조를 정리할 수 있다는 아이디어가 확인되면서, 이후 태그를 적어 놓는 마크업 언어의 씨앗이 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1969-gml">
-			<article class="event-detail" aria-labelledby="event-1969-gml-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1969</p>
-					<h2 id="event-1969-gml-title">IBM GML, 태그로 의미를 붙이다</h2>
-					<p class="event-detail__summary">IBM 연구진은 “제목만 바꿔도 문서가 엉킨다”는 동료를 위해, 의미를 적어 두는 태그 언어 GML을 만들었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>뉴욕주 요크타운 연구소에서 찰스 골드파브와 동료들은 칠판에 “제목, 문단, 참고자료” 같은 문서 뼈대를 적었습니다. 그리고 `:TITLE`처럼 읽기 쉬운 기호를 붙여 “이 부분이 제목이에요”라고 기계에 알려 주기로 했습니다.</p>
-						<p>시범 문서가 프린터에서 나오자 품질 담당자는 “태그만 고쳤는데 페이지 전체가 다시 정렬됐네요.”라며 놀랐습니다. 시연을 본 고객사는 보고서 편집 시간을 크게 줄일 수 있다며 도입 검토에 들어갔습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>GML은 “이 문장은 제목, 저 문장은 본문”처럼 의미를 알려 주는 태그 모음입니다. 글 내용과 모양을 따로 관리할 수 있게 되면서 문서를 쉽게 재사용할 수 있다는 사실이 드러났고, 이 생각은 SGML과 HTML 태그 체계로 이어졌습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1973-scribe">
-			<article class="event-detail" aria-labelledby="event-1973-scribe-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1973</p>
-					<h2 id="event-1973-scribe-title">Scribe, 포터블 문서를 꿈꾸다</h2>
-					<p class="event-detail__summary">카네기멜런의 브라이언 리드는 “컴퓨터가 달라도 같은 모양이 나오면 좋겠다”라며 어디서나 읽히는 Scribe 언어를 만들었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>연구실 학생들은 다른 학교 컴퓨터로 파일을 보내면 글꼴과 여백이 망가지는 일에 지쳤습니다. 리드는 `@Heading`처럼 번역하기 쉬운 기호를 만들어 “어디서 읽든 이건 제목”이라고 알리기로 했습니다.</p>
-						<p>다른 캠퍼스 메인프레임에서 출력해 본 동료는 “구조가 그대로 살아 있잖아!”라며 고개를 끄덕였습니다. 곧 학회는 논문 양식으로 Scribe를 채택했고, 문서 담당자는 “기계가 달라도 제목과 본문이 엉키지 않습니다.”라고 보고했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Scribe는 “문서 구조”와 “보여 주는 방식”을 따로 적어 두는 언어였습니다. 덕분에 같은 내용을 책으로 인쇄하든 다른 화면에 띄우든 비슷한 모양을 유지할 수 있었고, 이 방식은 SGML과 HTML에서도 계속 참고되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1978-sgml-draft">
-			<article class="event-detail" aria-labelledby="event-1978-sgml-draft-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1978</p>
-					<h2 id="event-1978-sgml-draft-title">ISO, SGML 초안을 공개하다</h2>
-					<p class="event-detail__summary">유럽 표준 회의에선 “나라마다 태그가 달라서 서로 읽지 못한다”는 불만을 풀기 위해 SGML 초안이 나왔습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>제네바 회의실에서 ISO 위원들은 항공 매뉴얼, 법령 문서를 차례로 펼쳤습니다. 영국 대표는 “같은 구조인데 태그 이름이 조금씩 달라서 서로 못 읽습니다”라고 토로했습니다.</p>
-						<p>위원회는 태그 목록을 미리 약속해 두는 “문서 선언서(DTD)” 개념을 담은 초안을 내놓고 각국 기관에 시범 사용을 부탁했습니다. 공공 기록 보관소 담당자는 “이제 문서 구조를 먼저 알리고 주고받을 수 있겠네요.”라며 안도의 한숨을 쉬었습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>SGML 초안은 “이 문서에서 쓸 태그 목록과 사용법을 먼저 선언하자”는 방법을 제시했습니다. 구조 약속을 미리 공유하면 다른 조직도 같은 방식으로 문서를 읽을 수 있다는 사실이 인정되었고, 1986년 정식 표준을 준비하는 발판이 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1986-sgml">
-			<article class="event-detail" aria-labelledby="event-1986-sgml-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1986</p>
-					<h2 id="event-1986-sgml-title">ISO 8879, SGML이 공식 언어가 되다</h2>
-					<p class="event-detail__summary">SGML이 국제표준으로 승인되자 기술 문서 업계는 “이제 기계가 문서를 제대로 읽을 수 있다”고 반겼습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>ISO 총회에서 승인 소식이 나오자 항공 매뉴얼 담당자는 문서 시스템을 업데이트했습니다. 그는 “태그 규칙을 표준으로 등록하면 부품 카탈로그가 자동으로 맞춰져요”라고 동료에게 설명했습니다.</p>
-						<p>전문 출판사는 SGML을 읽을 수 있는 프로그램을 도입해 수백 페이지 매뉴얼을 인쇄물과 데이터 파일로 동시에 뽑는 시범을 진행했습니다. 고객은 “같은 내용을 책으로도, 데이터베이스에서도 바로 받을 수 있네요”라고 답했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>ISO 8879:1986은 “태그를 어떻게 적을지, 프로그램은 어떻게 읽을지”를 자세히 적어 둔 규칙입니다. 덕분에 서로 다른 회사도 같은 문서를 주고받을 수 있게 됐고, SGML을 간단히 줄인 HTML이 등장하는 기반이 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1989-html-memo">
-			<article class="event-detail" aria-labelledby="event-1989-html-memo-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1989</p>
-					<h2 id="event-1989-html-memo-title">웹을 위한 HTML 개념 메모</h2>
-					<p class="event-detail__summary">팀 버너스-리는 “연구 문서를 쉽게 연결하려면 가벼운 태그 모음이 필요하다”며 HTML을 제안했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>CERN 사무실에서 버너스-리는 SGML을 단순하게 줄이고 링크를 붙인 초안을 동료에게 건넸습니다. 동료는 `<a>` 태그로 메모를 오가는 모습을 보고 “이 정도면 누구나 문서를 만들 수 있겠어요”라고 답했습니다.</p>
-						<p>연구자들은 곧 HTML 태그 목록을 실험하며 링크, 제목, 목록을 테스트했습니다. “무거운 부분은 빼고, 필요한 것만 남겼다”는 반응이 이어졌습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>HTML은 SGML에서 꼭 필요한 태그만 남기고 링크를 가장 중요한 기능으로 삼은 언어입니다. 덕분에 브라우저가 문서를 읽고 서로 연결된 페이지를 보여 줄 수 있었고, 이후 웹 문서 구조 이야기는 이 메모에서 시작되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1995-html2">
-			<article class="event-detail" aria-labelledby="event-1995-html2-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1995</p>
-					<h2 id="event-1995-html2-title">HTML 2.0, 웹의 공통 언어를 확정하다</h2>
-					<p class="event-detail__summary">IETF가 첫 공식 HTML 설명서를 발표하자 브라우저 개발사는 “이제 같은 문서를 같이 해석할 수 있다”고 안도했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>IETF 회의에서 HTML 워킹그룹은 폼, 이미지, 링크를 어떻게 작성할지 정리한 문서를 배포했습니다. 넷스케이프 엔지니어는 “이제 폼 제출과 표 구조를 같은 방식으로 구현하겠네요”라고 말했고, 마이크로소프트 팀도 곧바로 적용 계획을 세웠습니다.</p>
-						<p>RFC 1866이 공개되자 인터넷 업체의 기술지원팀은 “브라우저마다 결과가 다르다”는 문의가 조금씩 줄고 있다고 보고했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>HTML 2.0 설명서는 “이 태그는 무엇을 뜻하고, 브라우저는 어떻게 처리해야 하는가”를 적어 둔 첫 공식 문서입니다. 공통 약속이 생기면서 도구가 웹 문서를 믿고 읽을 수 있게 되었고, 이후 더 많은 의미 태그를 추가할 토대가 마련됐습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1997-xml10">
-			<article class="event-detail" aria-labelledby="event-1997-xml10-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1997</p>
-					<h2 id="event-1997-xml10-title">XML 1.0 권고, 데이터와 문서를 잇다</h2>
-					<p class="event-detail__summary">W3C가 XML 1.0을 발표하자 개발자들은 “같은 태그로 문서도, 데이터도 보내자”라며 구조 실험을 가속했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>1997년 12월 W3C 기술 브리핑에서 팀 브레이는 “SGML은 무겁지만 XML은 가볍습니다. 서버, 브라우저, 휴대기기 모두 같은 구조를 이해하게 만들 수 있어요”라고 설명했습니다. 참석자는 주문 목록을 XML로 바꿔 보여 주며 “별도 프로그램 없이도 구조가 공유되네요”라고 놀랐습니다.</p>
-						<p>신문사는 기사 목록을 XML로 배포하기 시작했고, 기업용 소프트웨어 업체는 회사끼리 정보를 주고받으려고 규칙 파일(DTD)과 이름 구역(네임스페이스)을 작성했습니다. “문서처럼 읽고, 데이터처럼 처리한다”는 시도가 현실이 되었습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>XML 1.0은 “태그 이름은 이렇게 쓰고, 속성은 이렇게 표시한다”는 규칙을 담았습니다. 덕분에 서로 다른 프로그램도 같은 구조를 이해할 수 있었고, SVG·RSS 같은 웹 기술과 기업 간 데이터 교환 모두 XML을 바탕으로 자리를 잡았습니다. 훗날 JSON이 인기를 얻어도 “먼저 구조를 정의하자”는 생각은 계속 이어졌습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1998-dom1">
-			<article class="event-detail" aria-labelledby="event-1998-dom1-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1998</p>
-					<h2 id="event-1998-dom1-title">DOM Level 1, 문서를 객체로 다루다</h2>
-					<p class="event-detail__summary">브라우저 회사들은 “스크립트가 문서를 안전하게 다룰 규칙이 필요하다”며 DOM Level 1을 만들었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>W3C 회의에서 브라우저 엔지니어들은 “문서를 트리처럼 보고, 필요한 부분을 찾아 바꾸자”는 데 뜻을 모았습니다. 넷스케이프와 IE 대표는 `document.getElementById` 예시를 함께 살펴보며 같은 방식으로 구현하겠다고 약속했습니다.</p>
-						<p>웹 개발자 라셸은 테스트 페이지에서 버튼을 누르면 새 문단이 생기는 코드를 작성했습니다. 그는 “이제 문서를 데이터처럼 다룰 수 있어요”라며 블로그에 경험담을 남겼습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>DOM Level 1은 문서를 “부모와 자식이 있는 나무 구조”로 바라보고, 필요한 부분을 찾거나 새로 만드는 표준 메서드를 정리했습니다. 이 덕분에 스크립트가 HTML 구조를 믿고 다룰 수 있게 되었고, 동적인 웹앱의 기본 문이 열렸습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2004-whatwg">
-			<article class="event-detail" aria-labelledby="event-2004-whatwg-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2004</p>
-					<h2 id="event-2004-whatwg-title">WHATWG, 웹 애플리케이션을 위한 HTML</h2>
-					<p class="event-detail__summary">애플·모질라·오페라는 “폼과 상호작용을 더 잘 다룰 HTML이 필요하다”며 WHATWG를 결성했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>산호세에서 열린 브라우저 회의에서 이안 힉슨은 `canvas`, `input type="email"` 같은 새 요소를 소개하며 “웹도 앱처럼 일하게 만들자”고 강조했습니다. 참석한 엔지니어들은 메모를 나눠 들고 곧바로 구현 계획을 세웠습니다.</p>
-						<p>회의가 끝나자 WHATWG 메일링 리스트에는 “동영상 태그도 필요해요”, “폼 검증을 자동으로 하고 싶어요” 같은 요청이 쏟아졌고, 초안은 커뮤니티 피드백으로 빠르게 다듬어졌습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>WHATWG는 “필요한 기능을 먼저 만들고, 문서를 모두가 볼 수 있게 공유하자”는 모임입니다. 이곳에서 HTML5 초안이 꾸준히 업데이트되면서, 구조와 의미를 코드로 따져 보는 문화가 더욱 활발해졌습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2005-microformats">
-			<article class="event-detail" aria-labelledby="event-2005-microformats-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2005</p>
-					<h2 id="event-2005-microformats-title">마이크로포맷, 의미 있는 클래스 이름</h2>
-					<p class="event-detail__summary">웹 커뮤니티는 “지금 있는 HTML만으로 일정과 연락처를 표시할 수 없을까?”라며 클래스 이름 약속을 만들었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>BarCamp 행사에서 개발자들은 명함을 자동으로 정리하고 싶다며 `hCard` 예제를 돌려봤습니다. 한 참석자는 블로그 글에 `class="fn org"`를 붙인 뒤 “주소록 앱이 이름과 회사를 자동으로 읽어 가네요!”라고 소개했습니다.</p>
-						<p>microformats.org에는 금세 사용 사례가 쌓였고, 검색 엔진 팀은 “이 구조라면 일정과 리뷰를 바로 꺼낼 수 있다”며 실험을 시작했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>마이크로포맷은 “새 태그를 만들지 말고, 클래스 이름으로 의미를 알려 주자”는 간단한 약속입니다. 덕분에 웹페이지에 있는 일정, 주소, 리뷰 정보를 기계가 쉽게 모을 수 있게 되었고, 나중에 schema.org 같은 구조화 데이터 표준으로 이어졌습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2011-schema-org">
-			<article class="event-detail" aria-labelledby="event-2011-schema-org-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2011</p>
-					<h2 id="event-2011-schema-org-title">schema.org, 검색엔진이 손잡고 구조를 정의하다</h2>
-					<p class="event-detail__summary">구글·빙·야후가 “같은 마크업이면 서로 이해하자.”며 schema.org를 발표하자, 제작자들은 구조화 데이터를 본격 채택했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>2011년 SMX 컨퍼런스에서 구글과 빙의 검색팀 담당자가 함께 무대에 섰습니다. “이제 <code>itemscope</code>와 <code>itemprop</code>만 맞추면 검색 결과에 리뷰 별점과 행사 일정이 바로 뜹니다.” 발표 후 한 마케팅 팀장은 “우리 레시피에도 별점이 나오게 할래요!”라며 개발자에게 구조화 마크업을 요청했습니다.</p>
-						<p>이듬해 전자상거래 사이트가 상품, 가격, 재고 정보를 schema.org 어휘로 노출하면서, 크롬과 파이어폭스 개발자 도구에는 구조화 데이터 점검 기능이 추가됐습니다. “구조가 곧 검색 트래픽”이라는 말이 현실이 되었습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>schema.org는 검색엔진이 공동으로 유지하는 어휘집입니다. HTML과 JSON-LD 어디에서든 사용할 수 있어 구조를 표시하는 방식이 통일되었고, 접근성 도구와 음성 비서가 같은 구조를 재사용할 수 있게 했습니다. 프론트엔드는 구조화된 정보를 시각적으로 드러내고, 백엔드는 정해진 스키마에 따라 데이터를 제공하며 협업 범위를 넓혔습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2014-html5">
-			<article class="event-detail" aria-labelledby="event-2014-html5-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2014</p>
-					<h2 id="event-2014-html5-title">HTML5, 시맨틱 요소가 정착하다</h2>
-					<p class="event-detail__summary">W3C가 HTML5 권고를 발표하자 팀 리더는 “div 대신 main으로 갈아타자”라며 템플릿을 갈아엎고 시맨틱 요소를 받아들였습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>웹팀 리더 하나는 문서 템플릿에서 `<div id="content">`를 `<main>`으로 교체하고, 스크린 리더 테스트를 진행했습니다. 결과를 확인한 QA 담당자는 “landmark가 분명해져서 내비게이션이 쉬워졌어요.”라고 보고했습니다.</p>
-						<p>블로거들은 `section`과 `aside` 사용법을 공유하며, 디자인 시스템에 시맨틱 규칙을 추가했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>HTML5는 시맨틱 요소와 문서 구조 알고리즘을 제공해, 레이아웃이 아닌 의미 중심 마크업을 권장했습니다. 표준이 확정되면서 접근성 도구와 검색 엔진이 구조를 활용하기 쉬워졌습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2017-aria11">
-			<article class="event-detail" aria-labelledby="event-2017-aria11-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2017</p>
-					<h2 id="event-2017-aria11-title">ARIA 1.1, 패턴 가이드로 구조를 설명하다</h2>
-					<p class="event-detail__summary">W3C는 WAI-ARIA 1.1 패턴을 공개하며 “구성요소마다 역할과 상태를 명확히 알려 주세요.”라고 권장했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>캘리포니아의 한 뮤지엄 웹팀은 탭 컴포넌트를 테스트하면서 ARIA 역할을 적용했습니다. 스크린 리더 사용자 테스터가 “이제 탭 제목과 현재 위치를 정확히 들을 수 있어요.”라고 피드백했습니다.</p>
-						<p>패턴 가이드는 열린 상태, 키보드 포커스 이동 순서를 표로 정리해, 프론트엔드 팀이 구조를 설계할 때 참고서가 되었습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>ARIA 1.1은 역할, 상태, 속성을 통해 문서 구조가 보조기술에 전달되도록 보완했습니다. 시맨틱 태그만으로 표현하기 어려운 패턴을 보완해, 구조 정보를 더 정밀하게 전할 수 있게 했습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2020-custom-elements">
-			<article class="event-detail" aria-labelledby="event-2020-custom-elements-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2020</p>
-					<h2 id="event-2020-custom-elements-title">커스텀 엘리먼트, 구조를 재사용하다</h2>
-					<p class="event-detail__summary">브라우저 지원이 안정되자 디자인 시스템 팀은 “`<gov-card>` 한 번 쓰면 구조 끝!”이라며 컴포넌트를 코드로 배포했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>한 공공기관 팀은 `<gov-card>` 컴포넌트를 정의해 콘텐츠를 배포했습니다. 콘텐츠 편집자는 마크다운에 해당 태그만 추가하면 일관된 구조가 생성되는 모습을 보고 만족했습니다.</p>
-						<p>접근성 엔지니어는 커스텀 엘리먼트 내부에 시맨틱 요소를 유지하도록 리뷰했고, 배포 후 사용자 설문에서는 “페이지마다 같은 패턴을 쉽게 인식할 수 있다.”는 응답이 늘었습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Custom Elements v1은 표준 클래스 확장을 통해 재사용 가능한 구조를 만들 수 있게 했습니다. 컴포넌트가 자신만의 템플릿과 접근성 속성을 포함하면, 디자인 시스템이 구조를 자동으로 보급할 수 있다는 사실이 확인되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2023-design-tokens">
-			<article class="event-detail" aria-labelledby="event-2022-design-systems-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2022</p>
-					<h2 id="event-2022-design-systems-title">디자인 시스템 가이드, 구조 규칙을 공유하다</h2>
-					<p class="event-detail__summary">대규모 서비스는 “디자인뿐 아니라 문서 구조 규칙도 손에 잡히게 정리하자.”며 퍼블릭 가이드를 발행했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>2023년 W3C 커뮤니티 그룹은 Design Tokens Working Draft를 발표하며 <code>&quot;color.background.surface&quot;</code> 같은 이름 규칙을 소개했습니다. 한 디자이너는 “이제 이 파일만 공유하면 앱과 웹이 동시에 색이 바뀐다”고 설명했고, 프론트엔드 리드는 토큰 JSON을 불러와 즉시 테마를 교체했습니다.</p>
-						<p>회사 내부 오피스 아워에서는 개발자와 디자이너가 함께 구조 규칙을 검토하며, 문서 구조를 테스트하는 자동화 스크립트를 공유했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>디자인 시스템은 구성요소뿐 아니라 문서 구조, 접근성 체크리스트를 포함하기 시작했습니다. 구조 규칙을 문서화하면 새 페이지도 같은 의미 체계를 따르게 되고, 콘텐츠 품질이 일정하게 유지된다는 장점이 확인되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2023-design-tokens">
-			<article class="event-detail" aria-labelledby="event-2023-design-tokens-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2023</p>
-					<h2 id="event-2023-design-tokens-title">Design Tokens 초안, 구조와 스타일을 함께 배포하다</h2>
-					<p class="event-detail__summary">W3C Design Tokens 초안이 “색과 컴포넌트 속성을 한 구조에 담자.”고 제안하자, 제품팀은 구조와 스타일 자산을 한 번에 배포하기 시작했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>2023년 W3C 커뮤니티 그룹은 Design Tokens Working Draft를 공개하며 `"color.background.surface"` 같은 키 구조를 소개했습니다. 한 피그마 디자이너는 “이제 변수 이름만 공유하면 앱과 웹이 동시에 업데이트돼요.”라고 말했고, 프론트엔드 리드는 토큰 JSON을 라이브러리에 가져와 즉시 테마를 교체했습니다.</p>
-						<p>컨퍼런스에서는 “토큰이 곧 구조다”라는 말이 따라붙었습니다. 토큰 파일에 역할, 계층, 접근성 대비 정보까지 적어 두며 구조와 스타일 정의가 하나의 출처에서 관리되기 시작했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Design Tokens 규격은 색상, 간격, 타입 스케일 같은 시각 속성을 키-값 구조로 정의하고, 플랫폼별 빌더가 이를 변환하도록 합니다. 프론트엔드는 토큰을 읽어 컴포넌트 구조를 일관되게 렌더링하고, 백엔드는 같은 토큰을 이메일, PDF 템플릿에도 적용하면서 “구조와 스타일의 단일 진실”을 유지할 수 있게 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<button type="button" class="scroll-top" data-scroll-top aria-label="맨 위로 이동" hidden>↑</button>
-
-		<script src="assets/js/main.js" defer></script>
-		<script type="text/javascript" src="https://wcs.pstatic.net/wcslog.js"></script>
-		<script type="text/javascript">
-			if (!window.wcs_add) window.wcs_add = {};
-			window.wcs_add["wa"] = "134f4c428765360";
-			if (window.location.protocol !== 'file:' && window.wcs) {
-				wcs_do();
+	<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@graph": [
+					{
+						"@type": "BreadcrumbList",
+						"@id": "https://itstory.archerlab.dev/web-structure.html#breadcrumb",
+						"itemListElement": [
+							{
+								"@type": "ListItem",
+								"position": 1,
+								"name": "IT Story",
+								"item": "https://itstory.archerlab.dev/"
+							},
+							{
+								"@type": "ListItem",
+								"position": 2,
+								"name": "웹 제작 연대기",
+								"item": "https://itstory.archerlab.dev/web.html"
+							},
+							{
+								"@type": "ListItem",
+								"position": 3,
+								"name": "웹 문서 설계 연대기",
+								"item": "https://itstory.archerlab.dev/web-structure.html"
+							}
+						]
+					},
+					{
+						"@type": "CreativeWorkSeries",
+						"@id": "https://itstory.archerlab.dev/web-structure.html#series",
+						"name": "웹 문서 설계 연대기",
+						"url": "https://itstory.archerlab.dev/web-structure.html",
+						"inLanguage": "ko-KR",
+						"description": "SGML부터 HTML5, 웹 컴포넌트까지 웹 문서 구조가 발전해 온 흐름을 정리했습니다.",
+						"publisher": {
+							"@type": "Organization",
+							"name": "ArcherLab",
+							"logo": {
+								"@type": "ImageObject",
+								"url": "https://itstory.archerlab.dev/assets/images/archerlab_mini_logo.png"
+							}
+						},
+						"isPartOf": {
+							"@id": "https://itstory.archerlab.dev/#website"
+						}
+					}
+				]
 			}
 		</script>
-	</body>
+</head>
+
+<body data-page="web-structure">
+	<div class="page">
+		<header class="page__header" role="banner">
+			<div class="page__header-left">
+				<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
+					<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo"
+						loading="lazy">
+					<span class="page__brand-label">ArcherLab Chronicle</span>
+				</a>
+				<nav class="page__topic-nav" aria-label="주제 전환">
+					<a href="index.html">홈 허브</a>
+					<a href="computers.html">컴퓨터 연대기</a>
+					<a href="networks.html">네트워크 연대기</a>
+					<a href="databases.html">데이터베이스 연대기</a>
+					<a href="os.html">운영체제 연대기</a>
+					<div class="page__topic-nav-group" role="group" aria-label="웹 제작 연대기">
+						<span class="page__topic-nav-label">웹 제작 연대기</span>
+						<a href="web.html" data-topic-role="parent">웹 제작 연대기 허브</a>
+						<a href="web-structure.html" class="is-current" data-topic-role="child">웹 문서 설계 연대기</a>
+						<a href="web-styling.html" data-topic-role="child">스타일링 진화 연대기</a>
+						<a href="web-interaction.html" data-topic-role="child">브라우저 인터랙션 연대기</a>
+						<a href="web-tools.html" data-topic-role="child">웹 제작 도구 연대기</a>
+					</div>
+					<a href="was.html">웹 서버 연대기</a>
+				</nav>
+			</div>
+			<nav class="page__nav" aria-label="섹션 탐색">
+				<a href="#timeline">연도 보기</a>
+				<a href="#sources">참고</a>
+				<div class="language-switch">
+					<label class="sr-only" for="language-select-web-structure">언어 선택</label>
+					<select id="language-select-web-structure" data-language-switch>
+						<option value="web-structure.html" data-language-code="ko" selected>한국어</option>
+						<option value="web-structure-en.html" data-language-code="en">English</option>
+					</select>
+				</div>
+			</nav>
+		</header>
+
+		<main class="page__main" id="main" role="main">
+			<section class="timeline-hero" aria-labelledby="timeline-title">
+				<div class="timeline-hero__head">
+					<p class="hero__eyebrow">Structure Story for Makers</p>
+					<h1 class="timeline-hero__title" id="timeline-title">펀치카드 들고 내려간 지하실에서 디자인 시스템 회의실까지, 문서 구조를 다듬어 온
+						사람들</h1>
+					<p class="timeline-hero__lede">
+						1960년대 MIT 지하 연구실에서는 각주와 제목을 매번 손으로 맞추느라 새벽까지 남는 일이 잦았습니다. 연구자들은 메인프레임에 RUNOFF 같은 조판 프로그램과 GML
+						태그 세트를 가르쳐 “지시만 하면 문서가 정리되게 하자”고 실험했습니다.
+					</p>
+					<p class="timeline-hero__lede">
+						몇 년 뒤 ISO 대표단은 같은 보고서를 서로 다른 마크업으로 나눠 읽다가 “규칙을 하나로 묶어야 한다”며 SGML을 만들었습니다. CERN 연구원은 이 규칙을 HTML로
+						다듬어 링크를 붙였고, 브라우저 팀은 DOM과 함께 움직이도록 표준을 정비했습니다.
+					</p>
+					<p class="timeline-hero__lede">
+						오늘날 디자인 시스템 팀은 “이 컴포넌트를 쓰면 구조와 접근성 표기도 따라옵니다”라며 템플릿을 배포합니다. 연도 버튼을 눌러 사람들이 어떤 고민을 했고 어떤 습관을 남겼는지
+						살펴보세요.
+					</p>
+					<aside class="timeline-hero__note" role="note" aria-label="schema.org 설명">
+						<h2 class="timeline-hero__note-title">schema.org란?</h2>
+						<p>schema.org는 구글·마이크로소프트·야후가 2011년에 공동으로 발표하고 이후 얀덱스가 합류한 구조화 데이터 어휘집입니다. 검색엔진이 같은 방식으로 정보를 읽을
+							수 있도록 항목별 속성과 예시를 정리했습니다.</p>
+						<p>행사, 레시피, 상품처럼 자주 쓰이는 정보를 HTML 마이크로데이터나 JSON-LD로 기록할 수 있게 해 주며, 음성 비서와 SNS 카드까지 같은 규칙으로 구조를
+							해석합니다. 제작자는 백엔드와 SEO 팀과 동일한 단어를 쓰면서 정보를 설계할 수 있습니다.</p>
+					</aside>
+				</div>
+			</section>
+
+			<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title"
+				aria-describedby="timeline-instructions">
+				<p class="timeline-grid__instructions sr-only" id="timeline-instructions">연도 버튼을 누르면 같은 화면에서 자세한 이야기를 읽을
+					수 있는 대화 상자가 열립니다.</p>
+				<section class="timeline-group" aria-labelledby="decade-1960 topic-1960">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-1960">1960s</p>
+						<h3 class="timeline-group__topic" id="topic-1960">야근을 줄이려던 지하실 실험</h3>
+						<p class="timeline-group__summary">각주와 제목을 손으로 맞추느라 지친 연구자들이 RUNOFF 조판 프로그램과 GML 태그 언어를 실험하며 문서를
+							기계에 맡기자는 발상을 확인했습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1967-runoff">
+							<span class="timeline-event__year">1967</span>
+							<span class="timeline-event__label">RUNOFF 조판 프로그램</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1969-gml">
+							<span class="timeline-event__year">1969</span>
+							<span class="timeline-event__label">IBM GML 태그 세트</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-1970 topic-1970">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-1970">1970s</p>
+						<h3 class="timeline-group__topic" id="topic-1970">“같은 문서인데 태그가 달라요”</h3>
+						<p class="timeline-group__summary">학회와 공공기관이 휴대 가능한 마크업을 연구하며 Scribe와 SGML 초안을 통해 구조 규칙을
+							문서화했습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1973-scribe">
+							<span class="timeline-event__year">1973</span>
+							<span class="timeline-event__label">Scribe 문서 언어</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1978-sgml-draft">
+							<span class="timeline-event__year">1978</span>
+							<span class="timeline-event__label">ISO SGML 초안</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-1980 topic-1980">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-1980">1980s</p>
+						<h3 class="timeline-group__topic" id="topic-1980">표준을 챙긴 뒤 링크를 심다</h3>
+						<p class="timeline-group__summary">SGML이 국제표준이 되자 CERN 연구원들은 이를 간단한 HTML 메모로 줄여 링크가 걸린 문서를
+							공유했습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1986-sgml">
+							<span class="timeline-event__year">1986</span>
+							<span class="timeline-event__label">ISO 8879:1986</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1989-html-memo">
+							<span class="timeline-event__year">1989</span>
+							<span class="timeline-event__label">HTML 개념 메모</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-1990">1990s</p>
+						<h3 class="timeline-group__topic" id="topic-1990">“같이 읽자”는 약속과 DOM 실험</h3>
+						<p class="timeline-group__summary">IETF와 W3C가 HTML, XML, DOM 규칙을 잇달아 발표하며 브라우저마다 같은 구조를 유지하자고
+							약속했습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1995-html2">
+							<span class="timeline-event__year">1995</span>
+							<span class="timeline-event__label">HTML 2.0 RFC</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1997-xml10">
+							<span class="timeline-event__year">1997</span>
+							<span class="timeline-event__label">XML 1.0 권고</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1998-dom1">
+							<span class="timeline-event__year">1998</span>
+							<span class="timeline-event__label">DOM Level 1</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-2000">2000s</p>
+						<h3 class="timeline-group__topic" id="topic-2000">웹 문서를 앱답게 만들자</h3>
+						<p class="timeline-group__summary">브라우저 팀이 폼과 입력 요소를 확장하고, 커뮤니티는 마이크로포맷으로 일정과 연락처를 꺼냈습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2004-whatwg">
+							<span class="timeline-event__year">2004</span>
+							<span class="timeline-event__label">WHATWG 폼</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2005-microformats">
+							<span class="timeline-event__year">2005</span>
+							<span class="timeline-event__label">마이크로포맷 커뮤니티</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-2010">2010s</p>
+						<h3 class="timeline-group__topic" id="topic-2010">시맨틱과 접근성의 동거</h3>
+						<p class="timeline-group__summary">HTML5 권고와 WAI-ARIA 가이드가 함께 등장하며 구조와 역할을 명확히 적자는 원칙이 자리 잡았습니다.
+						</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2011-schema-org">
+							<span class="timeline-event__year">2011</span>
+							<span class="timeline-event__label">schema.org 연합</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2014-html5">
+							<span class="timeline-event__year">2014</span>
+							<span class="timeline-event__label">HTML5 권고</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2017-aria11">
+							<span class="timeline-event__year">2017</span>
+							<span class="timeline-event__label">ARIA 1.1 패턴</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-2020">2020s</p>
+						<h3 class="timeline-group__topic" id="topic-2020">디자인 시스템으로 구조를 배포하다</h3>
+						<p class="timeline-group__summary">커스텀 엘리먼트와 공개 가이드가 등장해 구조를 코드와 문서로 동시에 배포하는 흐름이 자리 잡았습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem"
+							data-event-id="2020-custom-elements">
+							<span class="timeline-event__year">2020</span>
+							<span class="timeline-event__label">커스텀 엘리먼트 v1</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem"
+							data-event-id="2022-design-systems">
+							<span class="timeline-event__year">2022</span>
+							<span class="timeline-event__label">디자인 시스템 가이드</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2023-design-tokens">
+							<span class="timeline-event__year">2023</span>
+							<span class="timeline-event__label">Design Tokens 초안</span>
+						</button>
+					</div>
+				</section>
+			</section>
+
+			<section class="sources" id="sources" aria-labelledby="sources-title">
+				<div class="section__head">
+					<h2 id="sources-title">더 깊이 읽을 거리</h2>
+					<p>아래 문서는 SGML, HTML, 접근성 안내를 차근차근 설명합니다. 원문을 따라 읽으며 구조가 어떻게 커졌는지 살펴보세요.</p>
+				</div>
+				<ul class="source-list">
+					<li><a href="https://www.iso.org/standard/16387.html" target="_blank" rel="noopener">ISO · ISO
+							8879:1986 SGML</a></li>
+					<li><a href="https://www.w3.org/MarkUp/html-spec/" target="_blank" rel="noopener">W3C · HTML 2.0
+							Specification</a></li>
+					<li><a href="https://dom.spec.whatwg.org/" target="_blank" rel="noopener">WHATWG · DOM Living
+							Standard</a></li>
+					<li><a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener">WHATWG · HTML
+							Standard</a></li>
+					<li><a href="https://www.w3.org/WAI/ARIA/apg/" target="_blank" rel="noopener">W3C · WAI-ARIA
+							Authoring Practices</a></li>
+					<li><a href="https://web.dev/design-systems/" target="_blank" rel="noopener">web.dev · Design
+							Systems Guide</a></li>
+				</ul>
+			</section>
+		</main>
+
+		<footer class="page__footer" role="contentinfo">
+			<p>© 2025 ArcherLab · Stories on web document structure.</p>
+			<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
+		</footer>
+	</div>
+
+	<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
+		<div class="modal__overlay" data-modal-close></div>
+		<div class="modal__window" role="document" tabindex="-1">
+			<button class="modal__close" type="button" aria-label="레이어 닫기" data-modal-close>&times;</button>
+			<div class="modal__content"></div>
+		</div>
+	</div>
+
+	<template id="event-1967-runoff">
+		<article class="event-detail" aria-labelledby="event-1967-runoff-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1967</p>
+				<h2 id="event-1967-runoff-title">RUNOFF, 문장을 코드로 조판하다</h2>
+				<p class="event-detail__summary">MIT 대학원생은 “각주 맞추다 밤을 샌다”며 문서를 대신 정리해 줄 RUNOFF 프로그램을 만들었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>MIT 지하 기계실에서 그는 펀치카드 묶음을 들고 RUNOFF를 실행했습니다. 프린터에서는 제목과 본문이 가지런한 용지가 쏟아졌고, 옆자리 연구자는 “명령 몇 줄만 적었는데
+						각주가 제자리로 갔네요!”라며 환호했습니다.</p>
+					<p>학생은 동료들에게 `#CENTER` 같은 간단한 지시어 목록을 적어 돌렸습니다. 지도교수는 출력물을 살펴보고 “보고서 모양이 한결 읽기 좋아졌다”며 다음 과제에도 활용하자고
+						제안했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>RUNOFF는 문장 사이에 지시문을 섞어 두면 컴퓨터가 줄바꿈과 각주를 대신 계산해 주는 초기 조판 도구였습니다. 사람 대신 기계가 문서 구조를 정리할 수 있다는 아이디어가
+						확인되면서, 이후 태그를 적어 놓는 마크업 언어의 씨앗이 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1969-gml">
+		<article class="event-detail" aria-labelledby="event-1969-gml-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1969</p>
+				<h2 id="event-1969-gml-title">IBM GML, 태그로 의미를 붙이다</h2>
+				<p class="event-detail__summary">IBM 연구진은 “제목만 바꿔도 문서가 엉킨다”는 동료를 위해, 의미를 적어 두는 태그 언어 GML을 만들었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>뉴욕주 요크타운 연구소에서 찰스 골드파브와 동료들은 칠판에 “제목, 문단, 참고자료” 같은 문서 뼈대를 적었습니다. 그리고 `:TITLE`처럼 읽기 쉬운 기호를 붙여 “이
+						부분이 제목이에요”라고 기계에 알려 주기로 했습니다.</p>
+					<p>시범 문서가 프린터에서 나오자 품질 담당자는 “태그만 고쳤는데 페이지 전체가 다시 정렬됐네요.”라며 놀랐습니다. 시연을 본 고객사는 보고서 편집 시간을 크게 줄일 수 있다며
+						도입 검토에 들어갔습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>GML은 “이 문장은 제목, 저 문장은 본문”처럼 의미를 알려 주는 태그 모음입니다. 글 내용과 모양을 따로 관리할 수 있게 되면서 문서를 쉽게 재사용할 수 있다는 사실이
+						드러났고, 이 생각은 SGML과 HTML 태그 체계로 이어졌습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1973-scribe">
+		<article class="event-detail" aria-labelledby="event-1973-scribe-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1973</p>
+				<h2 id="event-1973-scribe-title">Scribe, 포터블 문서를 꿈꾸다</h2>
+				<p class="event-detail__summary">카네기멜런의 브라이언 리드는 “컴퓨터가 달라도 같은 모양이 나오면 좋겠다”라며 어디서나 읽히는 Scribe 언어를 만들었습니다.
+				</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>연구실 학생들은 다른 학교 컴퓨터로 파일을 보내면 글꼴과 여백이 망가지는 일에 지쳤습니다. 리드는 `@Heading`처럼 번역하기 쉬운 기호를 만들어 “어디서 읽든 이건
+						제목”이라고 알리기로 했습니다.</p>
+					<p>다른 캠퍼스 메인프레임에서 출력해 본 동료는 “구조가 그대로 살아 있잖아!”라며 고개를 끄덕였습니다. 곧 학회는 논문 양식으로 Scribe를 채택했고, 문서 담당자는 “기계가
+						달라도 제목과 본문이 엉키지 않습니다.”라고 보고했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Scribe는 “문서 구조”와 “보여 주는 방식”을 따로 적어 두는 언어였습니다. 덕분에 같은 내용을 책으로 인쇄하든 다른 화면에 띄우든 비슷한 모양을 유지할 수 있었고, 이
+						방식은 SGML과 HTML에서도 계속 참고되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1978-sgml-draft">
+		<article class="event-detail" aria-labelledby="event-1978-sgml-draft-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1978</p>
+				<h2 id="event-1978-sgml-draft-title">ISO, SGML 초안을 공개하다</h2>
+				<p class="event-detail__summary">유럽 표준 회의에선 “나라마다 태그가 달라서 서로 읽지 못한다”는 불만을 풀기 위해 SGML 초안이 나왔습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>제네바 회의실에서 ISO 위원들은 항공 매뉴얼, 법령 문서를 차례로 펼쳤습니다. 영국 대표는 “같은 구조인데 태그 이름이 조금씩 달라서 서로 못 읽습니다”라고 토로했습니다.
+					</p>
+					<p>위원회는 태그 목록을 미리 약속해 두는 “문서 선언서(DTD)” 개념을 담은 초안을 내놓고 각국 기관에 시범 사용을 부탁했습니다. 공공 기록 보관소 담당자는 “이제 문서
+						구조를 먼저 알리고 주고받을 수 있겠네요.”라며 안도의 한숨을 쉬었습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>SGML 초안은 “이 문서에서 쓸 태그 목록과 사용법을 먼저 선언하자”는 방법을 제시했습니다. 구조 약속을 미리 공유하면 다른 조직도 같은 방식으로 문서를 읽을 수 있다는
+						사실이 인정되었고, 1986년 정식 표준을 준비하는 발판이 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1986-sgml">
+		<article class="event-detail" aria-labelledby="event-1986-sgml-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1986</p>
+				<h2 id="event-1986-sgml-title">ISO 8879, SGML이 공식 언어가 되다</h2>
+				<p class="event-detail__summary">SGML이 국제표준으로 승인되자 기술 문서 업계는 “이제 기계가 문서를 제대로 읽을 수 있다”고 반겼습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>ISO 총회에서 승인 소식이 나오자 항공 매뉴얼 담당자는 문서 시스템을 업데이트했습니다. 그는 “태그 규칙을 표준으로 등록하면 부품 카탈로그가 자동으로 맞춰져요”라고 동료에게
+						설명했습니다.</p>
+					<p>전문 출판사는 SGML을 읽을 수 있는 프로그램을 도입해 수백 페이지 매뉴얼을 인쇄물과 데이터 파일로 동시에 뽑는 시범을 진행했습니다. 고객은 “같은 내용을 책으로도,
+						데이터베이스에서도 바로 받을 수 있네요”라고 답했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>ISO 8879:1986은 “태그를 어떻게 적을지, 프로그램은 어떻게 읽을지”를 자세히 적어 둔 규칙입니다. 덕분에 서로 다른 회사도 같은 문서를 주고받을 수 있게 됐고,
+						SGML을 간단히 줄인 HTML이 등장하는 기반이 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1989-html-memo">
+		<article class="event-detail" aria-labelledby="event-1989-html-memo-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1989</p>
+				<h2 id="event-1989-html-memo-title">웹을 위한 HTML 개념 메모</h2>
+				<p class="event-detail__summary">팀 버너스-리는 “연구 문서를 쉽게 연결하려면 가벼운 태그 모음이 필요하다”며 HTML을 제안했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>CERN 사무실에서 버너스-리는 SGML을 단순하게 줄이고 링크를 붙인 초안을 동료에게 건넸습니다. 동료는 `<a>` 태그로 메모를 오가는 모습을 보고 “이 정도면 누구나
+							문서를 만들 수 있겠어요”라고 답했습니다.</p>
+					<p>연구자들은 곧 HTML 태그 목록을 실험하며 링크, 제목, 목록을 테스트했습니다. “무거운 부분은 빼고, 필요한 것만 남겼다”는 반응이 이어졌습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>HTML은 SGML에서 꼭 필요한 태그만 남기고 링크를 가장 중요한 기능으로 삼은 언어입니다. 덕분에 브라우저가 문서를 읽고 서로 연결된 페이지를 보여 줄 수 있었고, 이후
+						웹 문서 구조 이야기는 이 메모에서 시작되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1995-html2">
+		<article class="event-detail" aria-labelledby="event-1995-html2-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1995</p>
+				<h2 id="event-1995-html2-title">HTML 2.0, 웹의 공통 언어를 확정하다</h2>
+				<p class="event-detail__summary">IETF가 첫 공식 HTML 설명서를 발표하자 브라우저 개발사는 “이제 같은 문서를 같이 해석할 수 있다”고 안도했습니다.
+				</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>IETF 회의에서 HTML 워킹그룹은 폼, 이미지, 링크를 어떻게 작성할지 정리한 문서를 배포했습니다. 넷스케이프 엔지니어는 “이제 폼 제출과 표 구조를 같은 방식으로
+						구현하겠네요”라고 말했고, 마이크로소프트 팀도 곧바로 적용 계획을 세웠습니다.</p>
+					<p>RFC 1866이 공개되자 인터넷 업체의 기술지원팀은 “브라우저마다 결과가 다르다”는 문의가 조금씩 줄고 있다고 보고했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>HTML 2.0 설명서는 “이 태그는 무엇을 뜻하고, 브라우저는 어떻게 처리해야 하는가”를 적어 둔 첫 공식 문서입니다. 공통 약속이 생기면서 도구가 웹 문서를 믿고 읽을 수
+						있게 되었고, 이후 더 많은 의미 태그를 추가할 토대가 마련됐습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1997-xml10">
+		<article class="event-detail" aria-labelledby="event-1997-xml10-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1997</p>
+				<h2 id="event-1997-xml10-title">XML 1.0 권고, 데이터와 문서를 잇다</h2>
+				<p class="event-detail__summary">W3C가 XML 1.0을 발표하자 개발자들은 “같은 태그로 문서도, 데이터도 보내자”라며 구조 실험을 가속했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>1997년 12월 W3C 기술 브리핑에서 팀 브레이는 “SGML은 무겁지만 XML은 가볍습니다. 서버, 브라우저, 휴대기기 모두 같은 구조를 이해하게 만들 수 있어요”라고
+						설명했습니다. 참석자는 주문 목록을 XML로 바꿔 보여 주며 “별도 프로그램 없이도 구조가 공유되네요”라고 놀랐습니다.</p>
+					<p>신문사는 기사 목록을 XML로 배포하기 시작했고, 기업용 소프트웨어 업체는 회사끼리 정보를 주고받으려고 규칙 파일(DTD)과 이름 구역(네임스페이스)을 작성했습니다.
+						“문서처럼 읽고, 데이터처럼 처리한다”는 시도가 현실이 되었습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>XML 1.0은 “태그 이름은 이렇게 쓰고, 속성은 이렇게 표시한다”는 규칙을 담았습니다. 덕분에 서로 다른 프로그램도 같은 구조를 이해할 수 있었고, SVG·RSS 같은 웹
+						기술과 기업 간 데이터 교환 모두 XML을 바탕으로 자리를 잡았습니다. 훗날 JSON이 인기를 얻어도 “먼저 구조를 정의하자”는 생각은 계속 이어졌습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1998-dom1">
+		<article class="event-detail" aria-labelledby="event-1998-dom1-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1998</p>
+				<h2 id="event-1998-dom1-title">DOM Level 1, 문서를 객체로 다루다</h2>
+				<p class="event-detail__summary">브라우저 회사들은 “스크립트가 문서를 안전하게 다룰 규칙이 필요하다”며 DOM Level 1을 만들었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>W3C 회의에서 브라우저 엔지니어들은 “문서를 트리처럼 보고, 필요한 부분을 찾아 바꾸자”는 데 뜻을 모았습니다. 넷스케이프와 IE 대표는
+						`document.getElementById` 예시를 함께 살펴보며 같은 방식으로 구현하겠다고 약속했습니다.</p>
+					<p>웹 개발자 라셸은 테스트 페이지에서 버튼을 누르면 새 문단이 생기는 코드를 작성했습니다. 그는 “이제 문서를 데이터처럼 다룰 수 있어요”라며 블로그에 경험담을 남겼습니다.
+					</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>DOM Level 1은 문서를 “부모와 자식이 있는 나무 구조”로 바라보고, 필요한 부분을 찾거나 새로 만드는 표준 메서드를 정리했습니다. 이 덕분에 스크립트가 HTML
+						구조를 믿고 다룰 수 있게 되었고, 동적인 웹앱의 기본 문이 열렸습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2004-whatwg">
+		<article class="event-detail" aria-labelledby="event-2004-whatwg-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2004</p>
+				<h2 id="event-2004-whatwg-title">WHATWG, 웹 애플리케이션을 위한 HTML</h2>
+				<p class="event-detail__summary">애플·모질라·오페라는 “폼과 상호작용을 더 잘 다룰 HTML이 필요하다”며 WHATWG를 결성했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>산호세에서 열린 브라우저 회의에서 이안 힉슨은 `canvas`, `input type="email"` 같은 새 요소를 소개하며 “웹도 앱처럼 일하게 만들자”고 강조했습니다.
+						참석한 엔지니어들은 메모를 나눠 들고 곧바로 구현 계획을 세웠습니다.</p>
+					<p>회의가 끝나자 WHATWG 메일링 리스트에는 “동영상 태그도 필요해요”, “폼 검증을 자동으로 하고 싶어요” 같은 요청이 쏟아졌고, 초안은 커뮤니티 피드백으로 빠르게
+						다듬어졌습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>WHATWG는 “필요한 기능을 먼저 만들고, 문서를 모두가 볼 수 있게 공유하자”는 모임입니다. 이곳에서 HTML5 초안이 꾸준히 업데이트되면서, 구조와 의미를 코드로 따져
+						보는 문화가 더욱 활발해졌습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2005-microformats">
+		<article class="event-detail" aria-labelledby="event-2005-microformats-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2005</p>
+				<h2 id="event-2005-microformats-title">마이크로포맷, 의미 있는 클래스 이름</h2>
+				<p class="event-detail__summary">웹 커뮤니티는 “지금 있는 HTML만으로 일정과 연락처를 표시할 수 없을까?”라며 클래스 이름 약속을 만들었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>BarCamp 행사에서 개발자들은 명함을 자동으로 정리하고 싶다며 `hCard` 예제를 돌려봤습니다. 한 참석자는 블로그 글에 `class="fn org"`를 붙인 뒤
+						“주소록 앱이 이름과 회사를 자동으로 읽어 가네요!”라고 소개했습니다.</p>
+					<p>microformats.org에는 금세 사용 사례가 쌓였고, 검색 엔진 팀은 “이 구조라면 일정과 리뷰를 바로 꺼낼 수 있다”며 실험을 시작했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>마이크로포맷은 “새 태그를 만들지 말고, 클래스 이름으로 의미를 알려 주자”는 간단한 약속입니다. 덕분에 웹페이지에 있는 일정, 주소, 리뷰 정보를 기계가 쉽게 모을 수 있게
+						되었고, 나중에 schema.org 같은 구조화 데이터 표준으로 이어졌습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2011-schema-org">
+		<article class="event-detail" aria-labelledby="event-2011-schema-org-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2011</p>
+				<h2 id="event-2011-schema-org-title">schema.org, 검색엔진이 손잡고 구조를 정의하다</h2>
+				<p class="event-detail__summary">구글·빙·야후가 “같은 마크업이면 서로 이해하자.”며 schema.org를 발표하자, 제작자들은 구조화 데이터를 본격
+					채택했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>2011년 SMX 컨퍼런스에서 구글과 빙의 검색팀 담당자가 함께 무대에 섰습니다. “이제 <code>itemscope</code>와 <code>itemprop</code>만
+						맞추면 검색 결과에 리뷰 별점과 행사 일정이 바로 뜹니다.” 발표 후 한 마케팅 팀장은 “우리 레시피에도 별점이 나오게 할래요!”라며 개발자에게 구조화 마크업을
+						요청했습니다.</p>
+					<p>이듬해 전자상거래 사이트가 상품, 가격, 재고 정보를 schema.org 어휘로 노출하면서, 크롬과 파이어폭스 개발자 도구에는 구조화 데이터 점검 기능이 추가됐습니다.
+						“구조가 곧 검색 트래픽”이라는 말이 현실이 되었습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>schema.org는 검색엔진이 공동으로 유지하는 어휘집입니다. HTML과 JSON-LD 어디에서든 사용할 수 있어 구조를 표시하는 방식이 통일되었고, 접근성 도구와 음성
+						비서가 같은 구조를 재사용할 수 있게 했습니다. 프론트엔드는 구조화된 정보를 시각적으로 드러내고, 백엔드는 정해진 스키마에 따라 데이터를 제공하며 협업 범위를 넓혔습니다.
+					</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2014-html5">
+		<article class="event-detail" aria-labelledby="event-2014-html5-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2014</p>
+				<h2 id="event-2014-html5-title">HTML5, 시맨틱 요소가 정착하다</h2>
+				<p class="event-detail__summary">W3C가 HTML5 권고를 발표하자 팀 리더는 “div 대신 main으로 갈아타자”라며 템플릿을 갈아엎고 시맨틱 요소를
+					받아들였습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>웹팀 리더 하나는 문서 템플릿에서 `
+					<div id="content">`를 `<main>`으로 교체하고, 스크린 리더 테스트를 진행했습니다. 결과를 확인한 QA 담당자는 “landmark가 분명해져서 내비게이션이
+							쉬워졌어요.”라고 보고했습니다.</p>
+							<p>블로거들은 `section`과 `aside` 사용법을 공유하며, 디자인 시스템에 시맨틱 규칙을 추가했습니다.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>HTML5는 시맨틱 요소와 문서 구조 알고리즘을 제공해, 레이아웃이 아닌 의미 중심 마크업을 권장했습니다. 표준이 확정되면서 접근성 도구와 검색 엔진이 구조를 활용하기
+							쉬워졌습니다.</p>
+					</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2017-aria11">
+		<article class="event-detail" aria-labelledby="event-2017-aria11-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2017</p>
+				<h2 id="event-2017-aria11-title">ARIA 1.1, 패턴 가이드로 구조를 설명하다</h2>
+				<p class="event-detail__summary">W3C는 WAI-ARIA 1.1 패턴을 공개하며 “구성요소마다 역할과 상태를 명확히 알려 주세요.”라고 권장했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>캘리포니아의 한 뮤지엄 웹팀은 탭 컴포넌트를 테스트하면서 ARIA 역할을 적용했습니다. 스크린 리더 사용자 테스터가 “이제 탭 제목과 현재 위치를 정확히 들을 수
+						있어요.”라고 피드백했습니다.</p>
+					<p>패턴 가이드는 열린 상태, 키보드 포커스 이동 순서를 표로 정리해, 프론트엔드 팀이 구조를 설계할 때 참고서가 되었습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>ARIA 1.1은 역할, 상태, 속성을 통해 문서 구조가 보조기술에 전달되도록 보완했습니다. 시맨틱 태그만으로 표현하기 어려운 패턴을 보완해, 구조 정보를 더 정밀하게 전할
+						수 있게 했습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2020-custom-elements">
+		<article class="event-detail" aria-labelledby="event-2020-custom-elements-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2020</p>
+				<h2 id="event-2020-custom-elements-title">커스텀 엘리먼트, 구조를 재사용하다</h2>
+				<p class="event-detail__summary">브라우저 지원이 안정되자 디자인 시스템 팀은 “`<gov-card>` 한 번 쓰면 구조 끝!”이라며 컴포넌트를 코드로
+						배포했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>한 공공기관 팀은 `<gov-card>` 컴포넌트를 정의해 콘텐츠를 배포했습니다. 콘텐츠 편집자는 마크다운에 해당 태그만 추가하면 일관된 구조가 생성되는 모습을 보고
+							만족했습니다.</p>
+					<p>접근성 엔지니어는 커스텀 엘리먼트 내부에 시맨틱 요소를 유지하도록 리뷰했고, 배포 후 사용자 설문에서는 “페이지마다 같은 패턴을 쉽게 인식할 수 있다.”는 응답이 늘었습니다.
+					</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Custom Elements v1은 표준 클래스 확장을 통해 재사용 가능한 구조를 만들 수 있게 했습니다. 컴포넌트가 자신만의 템플릿과 접근성 속성을 포함하면, 디자인
+						시스템이 구조를 자동으로 보급할 수 있다는 사실이 확인되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2023-design-tokens">
+		<article class="event-detail" aria-labelledby="event-2022-design-systems-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2022</p>
+				<h2 id="event-2022-design-systems-title">디자인 시스템 가이드, 구조 규칙을 공유하다</h2>
+				<p class="event-detail__summary">대규모 서비스는 “디자인뿐 아니라 문서 구조 규칙도 손에 잡히게 정리하자.”며 퍼블릭 가이드를 발행했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>2023년 W3C 커뮤니티 그룹은 Design Tokens Working Draft를 발표하며
+						<code>&quot;color.background.surface&quot;</code> 같은 이름 규칙을 소개했습니다. 한 디자이너는 “이제 이 파일만 공유하면 앱과 웹이
+						동시에 색이 바뀐다”고 설명했고, 프론트엔드 리드는 토큰 JSON을 불러와 즉시 테마를 교체했습니다.</p>
+					<p>회사 내부 오피스 아워에서는 개발자와 디자이너가 함께 구조 규칙을 검토하며, 문서 구조를 테스트하는 자동화 스크립트를 공유했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>디자인 시스템은 구성요소뿐 아니라 문서 구조, 접근성 체크리스트를 포함하기 시작했습니다. 구조 규칙을 문서화하면 새 페이지도 같은 의미 체계를 따르게 되고, 콘텐츠 품질이
+						일정하게 유지된다는 장점이 확인되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2023-design-tokens">
+		<article class="event-detail" aria-labelledby="event-2023-design-tokens-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2023</p>
+				<h2 id="event-2023-design-tokens-title">Design Tokens 초안, 구조와 스타일을 함께 배포하다</h2>
+				<p class="event-detail__summary">W3C Design Tokens 초안이 “색과 컴포넌트 속성을 한 구조에 담자.”고 제안하자, 제품팀은 구조와 스타일 자산을 한
+					번에 배포하기 시작했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>2023년 W3C 커뮤니티 그룹은 Design Tokens Working Draft를 공개하며 `"color.background.surface"` 같은 키 구조를
+						소개했습니다. 한 피그마 디자이너는 “이제 변수 이름만 공유하면 앱과 웹이 동시에 업데이트돼요.”라고 말했고, 프론트엔드 리드는 토큰 JSON을 라이브러리에 가져와 즉시
+						테마를 교체했습니다.</p>
+					<p>컨퍼런스에서는 “토큰이 곧 구조다”라는 말이 따라붙었습니다. 토큰 파일에 역할, 계층, 접근성 대비 정보까지 적어 두며 구조와 스타일 정의가 하나의 출처에서 관리되기
+						시작했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Design Tokens 규격은 색상, 간격, 타입 스케일 같은 시각 속성을 키-값 구조로 정의하고, 플랫폼별 빌더가 이를 변환하도록 합니다. 프론트엔드는 토큰을 읽어
+						컴포넌트 구조를 일관되게 렌더링하고, 백엔드는 같은 토큰을 이메일, PDF 템플릿에도 적용하면서 “구조와 스타일의 단일 진실”을 유지할 수 있게 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<button type="button" class="scroll-top" data-scroll-top aria-label="맨 위로 이동" hidden>↑</button>
+
+	<script src="assets/js/main.js" defer></script>
+	<script type="text/javascript" src="https://wcs.pstatic.net/wcslog.js"></script>
+	<script type="text/javascript">
+		if (!window.wcs_add) window.wcs_add = {};
+		window.wcs_add["wa"] = "134f4c428765360";
+		if (window.location.protocol !== 'file:' && window.wcs) {
+			wcs_do();
+		}
+	</script>
+</body>
+
 </html>

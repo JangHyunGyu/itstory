@@ -1,482 +1,595 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>ArcherLab IT Story · 브라우저 인터랙션 연대기</title>
-		<meta name="description" content="JavaScript부터 WebGPU까지 브라우저 상호작용 기술이 어떻게 진화했는지 살펴봅니다." />
-		<meta property="og:title" content="ArcherLab IT Story · Web Interaction Timeline" />
-		<meta property="og:description" content="웹이 문서에서 애플리케이션으로 바뀌어 온 주요 사건을 모았습니다." />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-		<link rel="stylesheet" href="assets/css/style.css">
-		<link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-interaction.html" />
-		<link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-interaction-en.html" />
-		<link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-interaction-en.html" />
-		<link rel="canonical" href="https://itstory.archerlab.dev/web-interaction.html" />
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
-		<script defer src="assets/js/ga.js"></script>
-	</head>
-	<body>
-		<div class="page">
-			<header class="page__header" role="banner">
-				<div class="page__header-left">
-					<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
-						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
-						<span class="page__brand-label">ArcherLab Chronicle</span>
-					</a>
-					<nav class="page__topic-nav" aria-label="주제 전환">
-						<a href="index.html">홈 허브</a>
-						<a href="computers.html">컴퓨터 연대기</a>
-						<a href="networks.html">네트워크 연대기</a>
-						<a href="databases.html">데이터베이스 연대기</a>
-						<a href="os.html">운영체제 연대기</a>
-						<div class="page__topic-nav-group" role="group" aria-label="웹 제작 연대기">
-							<span class="page__topic-nav-label">웹 제작 연대기</span>
-							<a href="web.html" data-topic-role="parent">웹 제작 연대기 허브</a>
-							<a href="web-structure.html" data-topic-role="child">웹 문서 설계 연대기</a>
-							<a href="web-styling.html" data-topic-role="child">스타일링 진화 연대기</a>
-							<a href="web-interaction.html" class="is-current" data-topic-role="child">브라우저 인터랙션 연대기</a>
-							<a href="web-tools.html" data-topic-role="child">웹 제작 도구 연대기</a>
-						</div>
-						<a href="was.html">웹 서버 연대기</a>
-					</nav>
-				</div>
-				<nav class="page__nav" aria-label="섹션 탐색">
-					<a href="#timeline">연도 보기</a>
-					<a href="#sources">참고</a>
-					<div class="language-switch">
-						<label class="sr-only" for="language-select-web-interaction">언어 선택</label>
-						<select id="language-select-web-interaction" data-language-switch>
-							<option value="web-interaction.html" data-language-code="ko" selected>한국어</option>
-							<option value="web-interaction-en.html" data-language-code="en">English</option>
-						</select>
-					</div>
-				</nav>
-			</header>
 
-			<main class="page__main" id="main" role="main">
-				<section class="timeline-hero" aria-labelledby="timeline-title">
-					<div class="timeline-hero__head">
-						<p class="hero__eyebrow">Interaction Story for Makers</p>
-						<h1 class="timeline-hero__title" id="timeline-title">“브라우저에서 얼마나 멀리 갈 수 있을까?”를 묻던 사람들</h1>
-						<p class="timeline-hero__lede">
-							1995년 넷스케이프 회의실에서 버튼을 누른 동료가 외쳤습니다. “잠깐만, 경고창이 바로 뜨네?” 그렇게 JavaScript가 문서를 살아 움직이게 했습니다. 몇 년 뒤 Outlook Web Access를 만들던 팀은 “새로고침 없이 메일을 보여주자”라며 XMLHttpRequest를 감쌌죠.
-						</p>
-						<p class="timeline-hero__lede">
-							2005년엔 제품 매니저들이 회의실에서 구글 지도를 돌려보며 “이게 진짜 웹이야?” 하고 놀랐고, Node.js를 본 개발자들은 “이제 서버도 같은 언어로 짤 수 있겠다”고 밤새 데모를 만들어 올렸습니다. React와 Service Worker는 “컴포넌트로 조립하고, 인터넷이 끊겨도 동작하게 하자”는 새로운 습관을 남겼습니다.
-						</p>
-						<p class="timeline-hero__lede">
-							오늘날 WebAssembly와 WebGPU 팀은 “설치 없이 게임과 AI를 돌릴 수 있다”고 자신 있게 말합니다. 아래 연대를 눌러 당시 엔지니어가 어떤 문제를 붙잡고 있었는지, 그리고 어떤 말로 서로를 설득했는지 가볍게 들어보세요.
-						</p>
-					</div>
-				</section>
-
-				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
-					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">연대기 버튼을 누르면 같은 화면에서 자세한 이야기를 읽을 수 있습니다.</p>
-					<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1990">1990s</p>
-							<h3 class="timeline-group__topic" id="topic-1990">“새로고침 없이 움직이게 해보자”</h3>
-							<p class="timeline-group__summary">브라우저에 JavaScript가 들어오고 XMLHttpRequest가 더해지자, 개발자들은 폼 검증과 데이터 갱신을 즉시 처리하는 실험에 뛰어들었습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1995-javascript">
-								<span class="timeline-event__year">1995</span>
-								<span class="timeline-event__label">JavaScript 발표</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1996-flash">
-								<span class="timeline-event__year">1996</span>
-								<span class="timeline-event__label">Macromedia Flash 1.0</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1999-xmlhttprequest">
-								<span class="timeline-event__year">1999</span>
-								<span class="timeline-event__label">XMLHttpRequest 도입</span>
-							</button>
-						</div>
-					</section>
-					<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2000">2000s</p>
-							<h3 class="timeline-group__topic" id="topic-2000">“웹앱”이라는 이름이 붙다</h3>
-							<p class="timeline-group__summary">Ajax 열풍이 일어나고 Node.js가 등장하면서 “브라우저와 서버를 같은 언어로 돌리자”는 목소리가 커졌습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-ajax">
-								<span class="timeline-event__year">2005</span>
-								<span class="timeline-event__label">Ajax 아티클</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2006-jquery">
-								<span class="timeline-event__year">2006</span>
-								<span class="timeline-event__label">jQuery 1.0</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2009-nodejs">
-								<span class="timeline-event__year">2009</span>
-								<span class="timeline-event__label">Node.js 공개</span>
-							</button>
-						</div>
-					</section>
-					<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2010">2010s</p>
-							<h3 class="timeline-group__topic" id="topic-2010">“컴포넌트로 조립하고, 끊겨도 버티자”</h3>
-							<p class="timeline-group__summary">React가 상태 중심 UI를 보여주고 Service Worker가 오프라인 경험을 가능하게 하며, 웹앱이 네이티브 앱과 맞붙기 시작했습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2011-websocket">
-								<span class="timeline-event__year">2011</span>
-								<span class="timeline-event__label">WebSocket 표준</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2013-react">
-								<span class="timeline-event__year">2013</span>
-								<span class="timeline-event__label">React 공개</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-service-worker">
-								<span class="timeline-event__year">2014</span>
-								<span class="timeline-event__label">Service Worker 초안</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2015-flash-zero-day">
-								<span class="timeline-event__year">2015</span>
-								<span class="timeline-event__label">Flash 제로데이 긴급 패치</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2017-cloudbleed">
-								<span class="timeline-event__year">2017</span>
-								<span class="timeline-event__label">Cloudflare “Cloudbleed”</span>
-							</button>
-						</div>
-					</section>
-					<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2020">2020s</p>
-							<h3 class="timeline-group__topic" id="topic-2020">“설치 없이도 고성능으로”</h3>
-							<p class="timeline-group__summary">WebAssembly와 WebGPU가 안정화되자, 팀들은 “브라우저만 열면 게임과 AI가 돌아간다”고 실시간 협업 도구를 데모하기 시작했습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2020-wasm">
-								<span class="timeline-event__year">2020</span>
-								<span class="timeline-event__label">WebAssembly 1.0 채택</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2021-webcodecs">
-								<span class="timeline-event__year">2021</span>
-								<span class="timeline-event__label">WebCodecs API</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-webgpu">
-								<span class="timeline-event__year">2023</span>
-								<span class="timeline-event__label">WebGPU 안정 출시</span>
-							</button>
-						</div>
-					</section>
-				</section>
-
-				<section class="sources" id="sources" aria-labelledby="sources-title">
-					<div class="section__head">
-						<h2 id="sources-title">더 깊이 읽을 거리</h2>
-						<p>JavaScript, SPA, WebAssembly를 다룬 대표 문서입니다. 기술 변화가 사용자 경험을 어떻게 바꿨는지 비교해 보세요.</p>
-					</div>
-					<ul class="source-list">
-						<li><a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank" rel="noopener">MDN · JavaScript 가이드</a></li>
-						<li><a href="https://ajaxpatterns.org/" target="_blank" rel="noopener">Ajax Patterns</a></li>
-						<li><a href="https://react.dev/blog/2013/07/17/react-v0-3-0" target="_blank" rel="noopener">React 팀 블로그</a></li>
-						<li><a href="https://w3c.github.io/ServiceWorker/" target="_blank" rel="noopener">W3C · Service Worker</a></li>
-						<li><a href="https://webassembly.org/roadmap/" target="_blank" rel="noopener">WebAssembly.org · Roadmap</a></li>
-						<li><a href="https://developer.chrome.com/docs/web-platform/webgpu" target="_blank" rel="noopener">Chrome Developers · WebGPU</a></li>
-					</ul>
-				</section>
-			</main>
-
-			<footer class="page__footer" role="contentinfo">
-				<p>© 2025 ArcherLab · Stories on browser interaction.</p>
-				<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
-			</footer>
-		</div>
-
-		<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
-			<div class="modal__overlay" data-modal-close></div>
-			<div class="modal__window" role="document" tabindex="-1">
-				<button class="modal__close" type="button" aria-label="레이어 닫기" data-modal-close>&times;</button>
-				<div class="modal__content"></div>
-			</div>
-		</div>
-
-		<template id="event-1995-javascript">
-			<article class="event-detail" aria-labelledby="event-1995-javascript-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1995</p>
-					<h2 id="event-1995-javascript-title">JavaScript, 브라우저에 생기를 불어넣다</h2>
-					<p class="event-detail__summary">“브라우저가 입력을 바로 처리하네?” 넷스케이프에 스크립트 언어가 들어오면서 폼 검증과 인터랙션이 즉시 가능해졌습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>넷스케이프 사무실에서 브렌던 아이크는 10일 만에 Mocha 프로토타입을 완성했습니다. 내부 데모에서 버튼을 클릭하자 경고창이 뜨는 모습을 본 동료는 “브라우저가 사용자 입력을 바로 처리하네!”라고 놀랐습니다.</p>
-						<p>곧 출시된 Navigator 2.0에서 폼 유효성 검사가 동작하자, 웹 마스터들은 “서버까지 가지 않아도 즉시 메시지를 보여줄 수 있다.”며 가능성을 탐색했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>JavaScript는 동적으로 DOM을 조작하고, 이벤트 루프로 사용자 입력을 처리하는 언어로 자리 잡았습니다. 이 사건 이후 브라우저는 단순한 문서 뷰어를 넘어 상호작용 플랫폼이 되기 시작했습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1996-flash">
-			<article class="event-detail" aria-labelledby="event-1996-flash-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1996</p>
-					<h2 id="event-1996-flash-title">Macromedia Flash 1.0, 애니메이션과 인터랙션의 돌풍</h2>
-					<p class="event-detail__summary">“버튼이 춤을 추네!” Flash 플레이어가 배포되자 웹사이트는 음악과 모션으로 사용자 시선을 붙잡았습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>1996년 Macromedia는 FutureSplash를 인수해 Flash 1.0을 공개했습니다. 한 에이전시 디자이너는 마우스를 올리면 반응하는 네비게이션을 만들어 보여 주며 “GIF로는 못 하던 일이 가능해졌어요.”라고 말했습니다.</p>
-						<p>브랜드 사이트와 뮤직비디오 프로모션이 Flash를 채택했고, 방송국은 “로딩 바가 끝나면 풀 화면 애니메이션이 펼쳐진다”고 홍보했습니다. 사용자들은 처음으로 브라우저에서 풀 모션 인터랙션을 경험했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Flash는 벡터 그래픽, 타임라인 애니메이션, ActionScript 스크립트를 제공하면서 웹 인터랙션을 시각적으로 표현할 수 있게 했습니다. 표준 기반이 아니었지만 “브라우저 안에서 앱처럼 움직인다”는 기대를 키워, 이후 캔버스, SVG, WebGL 같은 표준 기술 개발에 자극을 주었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1999-xmlhttprequest">
-			<article class="event-detail" aria-labelledby="event-1999-xmlhttprequest-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1999</p>
-					<h2 id="event-1999-xmlhttprequest-title">XMLHttpRequest, 페이지 새로고침 없이 데이터 주고받기</h2>
-					<p class="event-detail__summary">Outlook Web Access 팀이 “리로드 없이 메일을 갱신하자”라며 붙인 XMLHttpRequest가 비동기 웹의 문을 열었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>IE 팀은 Outlook Web Access에 빠른 메일 목록을 제공하기 위해 ActiveX 기반 XMLHttpRequest를 도입했습니다. 기업 고객이 “새로고침 없이 메일이 도착하네!”라고 반응하자, 개발 문서가 급히 배포됐습니다.</p>
-						<p>모질라와 Safari도 비슷한 기능을 구현하며 API를 정비했고, 이 기능이 표준 논의로 이어졌습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>XMLHttpRequest는 비동기 네트워크 요청을 가능하게 해 SPA의 전조가 되었습니다. 이후 Fetch API로 확장되며 브라우저가 서버와 실시간 대화하는 기반이 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2005-ajax">
-			<article class="event-detail" aria-labelledby="event-2005-ajax-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2005</p>
-					<h2 id="event-2005-ajax-title">Ajax, 웹앱이라는 이름이 탄생하다</h2>
-					<p class="event-detail__summary">“이제 웹도 앱이다.” Ajax라는 이름이 붙자 구글 지도와 지메일이 웹앱의 상징이 되었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>A List Apart의 글이 공개되자, 제품 매니저들은 회의실에서 구글 지도를 돌려 보였습니다. 지도 화면이 부드럽게 이동하는 모습을 본 임원은 “웹에서도 데스크톱 앱 같은 경험이 가능하군.”이라고 감탄했습니다.</p>
-						<p>스타트업 팀은 즉시 Ajax 프레임워크를 찾아보고, 개발자 모임에서는 비동기 요청과 DOM 업데이트 패턴이 활발히 공유되었습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Ajax는 비동기 요청, DOM 조작, JSON 데이터 교환을 한 묶음으로 소개했습니다. 이 용어 덕분에 경영진과 개발자가 같은 언어로 미래 웹앱을 논의할 수 있게 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2006-jquery">
-			<article class="event-detail" aria-labelledby="event-2006-jquery-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2006</p>
-					<h2 id="event-2006-jquery-title">jQuery 1.0, DOM 제어를 한 줄로</h2>
-					<p class="event-detail__summary">존 레식은 “한 줄이면 됩니다.”라고 말하며 <code>$("#menu li")</code> 데모를 선보였고, 전 세계 개발자가 같은 API를 쓰기 시작했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>2006년 BarCamp에서 레식은 슬라이드 대신 브라우저 콘솔을 열어 `$("#todo li").addClass("done")`를 실행했습니다. 관객은 “브라우저마다 다르게 동작하던 작업이 한 번에 끝나네!”라며 환호했습니다.</p>
-						<p>곧이어 플러그인 생태계가 폭발하며 슬라이더, 모달, Ajax 래퍼가 공유되었습니다. 디자이너와 개발자는 같은 API로 이벤트와 애니메이션을 다뤘습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>jQuery는 CSS 선택자 기반 DOM 조작, 체이닝, Ajax 헬퍼를 제공해 브라우저 호환성을 숨겼습니다. 프론트엔드는 인터랙션 구현 속도를 크게 높였고, 백엔드는 REST/JSON 응답으로 데이터를 제공하며 협업 구조를 단순화했습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2009-nodejs">
-			<article class="event-detail" aria-labelledby="event-2009-nodejs-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2009</p>
-					<h2 id="event-2009-nodejs-title">Node.js, 자바스크립트가 서버로 확장되다</h2>
-					<p class="event-detail__summary">“서버도 자바스크립트로 돌릴 수 있네.” Node.js 발표가 이벤트 루프 기반 서버 열풍을 불러왔습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>JSConf에서 달은 실시간 채팅 데모를 보여주며 “동시 연결을 수만 개까지 처리할 수 있다.”고 설명했습니다. 발표 후 개발자들은 노트북을 펼쳐 `npm install`을 입력했고, 즉시 헬로월드 서버가 실행되는 것을 보고 환호했습니다.</p>
-						<p>몇 달 뒤 GitHub에 수많은 웹소켓 예제가 올라오며, 스타트업이 실시간 앱을 Node.js로 구축하기 시작했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Node.js는 V8 엔진과 이벤트 루프를 재사용해 서버에서도 JavaScript를 활용하도록 했습니다. 프런트와 백엔드 로직을 하나의 언어로 다루게 되면서, 인터랙션 개발 사이클이 빨라졌습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2011-websocket">
-			<article class="event-detail" aria-labelledby="event-2011-websocket-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2011</p>
-					<h2 id="event-2011-websocket-title">WebSocket 표준, 실시간 대화의 시작</h2>
-					<p class="event-detail__summary">IETF가 WebSocket을 승인하자 제품팀은 “폴링 없이 채팅이 된다!”며 대화형 서비스를 본격화했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>2011년, HTML5 표준화 회의장에서 이안 히콘은 브라우저-서버 간 양방향 소켓 데모를 보여주었습니다. 콘솔에 “Hello”를 치자 서버가 즉시 답했고, 참석자들은 “이제 롱 폴링을 버려도 되겠네요.”라고 말했다.</p>
-						<p>트레이딩, 게임, 고객 지원 챗봇이 WebSocket으로 실시간 알림을 구현했고, 기업용 메신저는 기존 폴링 코드에서 벗어나 서버 부하를 크게 줄였습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>WebSocket은 하나의 TCP 연결에서 양방향 메시지를 주고받아 지연을 줄였습니다. 프론트엔드는 이벤트 기반 상태 업데이트를 구현하고, 백엔드는 메시지 브로커와 연계해 실시간 시스템을 구축했습니다. 이는 이후 GraphQL Subscriptions, WebRTC 같은 스트리밍 기술의 토대를 닦았습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2013-react">
-			<article class="event-detail" aria-labelledby="event-2013-react-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2013</p>
-					<h2 id="event-2013-react-title">React, 컴포넌트로 UI를 조립하다</h2>
-					<p class="event-detail__summary">“UI를 함수처럼 생각해 보자.” React가 컴포넌트와 가상 DOM 개념을 대중화했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>JSConf EU 발표에서 조던 워클르는 “UI를 함수처럼 생각해 보세요.”라고 소개했습니다. 데모에서 버튼을 눌러도 DOM을 직접 건드리지 않고 화면이 갱신되자, 관중석에서 “와!” 하는 탄성이 나왔습니다.</p>
-						<p>곧바로 GitHub에 React 저장소가 올라오고, 초기 사용자는 TodoMVC를 구현해 블로그에 공유했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>React는 Virtual DOM과 단방향 데이터 흐름을 기반으로 컴포넌트 패턴을 정착시켰습니다. UI를 상태 기반으로 관리하면서 대형 인터랙션을 유지하기 쉬워졌고, 이후 수많은 프레임워크가 비슷한 철학을 채택했습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2014-service-worker">
-			<article class="event-detail" aria-labelledby="event-2014-service-worker-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2014</p>
-					<h2 id="event-2014-service-worker-title">Service Worker, 오프라인 웹앱의 핵심</h2>
-					<p class="event-detail__summary">“브라우저를 꺼도 알림이 온다.” Service Worker 초안이 오프라인 웹앱의 핵심으로 떠올랐습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>크롬 개발자 서밋에서 팀은 푸시 알림을 시연했습니다. 브라우저를 닫아도 알림이 도착하자 관객들은 박수를 쳤습니다. PWA라는 개념이 곧 등장했고, 개발자들은 매니페스트와 캐시 전략을 학습하기 시작했습니다.</p>
-						<p>신문사 웹팀은 지하철에서 기사 읽기를 돕기 위해 오프라인 캐시를 도입했습니다. 독자는 “기사가 로딩되지 않아 답답했던 일이 줄었어요.”라고 피드백했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Service Worker는 백그라운드에서 네트워크 요청을 가로채고 캐시를 제어할 수 있게 했습니다. 네이티브 앱에서만 가능했던 오프라인과 푸시 경험이 웹으로 들어오며, 브라우저 상호작용의 범위가 크게 넓어졌습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2015-flash-zero-day">
-			<article class="event-detail" aria-labelledby="event-2015-flash-zero-day-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2015</p>
-					<h2 id="event-2015-flash-zero-day-title">Flash 제로데이, 일제히 차단 명령</h2>
-					<p class="event-detail__summary">Hacking Team 유출로 드러난 Flash 취약점(CVE-2015-5119)이 전 세계 브라우저를 멈춰 세웠습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>2015년 7월, 이탈리아 보안업체 Hacking Team 내부 자료가 공개되자 “여기에 제로데이가 있다”는 보고가 트위터로 번졌습니다. 다음 날 아침, 한 브라우저 엔지니어는 긴급 화상회의에서 “Adobe가 오늘 안에 패치를 낸다고 확인했어요. 우리도 기본 설정에서 Flash를 막읍시다.”라고 제안했습니다.</p>
-						<p>Mozilla는 그날 Firefox의 모든 버전에서 Flash를 블록리스트에 올렸고, Facebook 보안 책임자 알렉스 스타모스도 “Flash 퇴출 시계를 맞춰야 한다.”고 공개적으로 압박했습니다. 국내 포털 운영팀도 오후 배포에서 “업무용 포털이 멈췄다”는 고객센터 연락을 받고 대체 콘텐츠를 긴급 적용했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Adobe는 APSB15-16 패치를 배포하며 CVE-2015-5119와 CVE-2015-5122 등 중대 취약점을 수정했습니다. 이 사고는 Flash 의존 서비스를 NPAPI·ActiveX 기반에서 JavaScript와 HTML5로 전환하게 만든 전환점이었고, 주요 브라우저가 기본적으로 Flash를 비활성화하도록 정책을 바꾸는 계기가 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2017-cloudbleed">
-			<article class="event-detail" aria-labelledby="event-2017-cloudbleed-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2017</p>
-					<h2 id="event-2017-cloudbleed-title">Cloudflare “Cloudbleed”, 프록시가 흘린 비밀</h2>
-					<p class="event-detail__summary">HTML 파서 버그가 Cloudflare 캐시에서 세션 토큰과 요청 데이터가 새어 나가게 만든 사고였습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>2017년 2월, 구글의 프로젝트 제로 연구원 타비스 오만디는 새벽 0시에 Cloudflare에 전화를 걸어 “랜덤 사이트에서 다른 사용자의 쿠키가 보여요.”라고 알렸습니다. 몇 분 뒤 Cloudflare SRE 팀 채널이 붉은색 경고로 가득 찼고, 한 SRE 엔지니어는 “HTML 리라이터 모듈을 끄고 전 세계 캐시를 비워야 합니다.”라고 외쳤습니다.</p>
-						<p>블로그 공지가 올라오자, 팀은 고객사 목록을 훑으며 “로그아웃 처리와 토큰 교체를 안내합시다.”라고 협의했습니다. 국내 스타트업 CTO도 “Cloudflare를 통과하는 로그인 트래픽은 모두 세션 무효화하라.”는 메시지를 사내 슬랙에 올렸습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Cloudflare는 버그가 HTML 파서의 경계 조건 오류에서 비롯됐다고 설명하며, 2017년 2월 13일부터 18일까지 누수가 있었다고 공식 발표했습니다. 이 사고는 리버스 프록시와 CDN 단계에서도 보안 사고 대응 체계가 필요하다는 사실을 일깨웠고, 주요 서비스가 자동 세션 무효화와 보안 모니터링을 강화하는 계기가 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2020-wasm">
-			<article class="event-detail" aria-labelledby="event-2020-wasm-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2020</p>
-					<h2 id="event-2020-wasm-title">WebAssembly 1.0, 브라우저가 범용 런타임이 되다</h2>
-					<p class="event-detail__summary">“설치 없이 3D 모델링이 돼?” WebAssembly 1.0 권고가 나오자 고성능 앱이 웹으로 옮겨오기 시작했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>오토데스크 엔지니어는 C++ 코드베이스를 WebAssembly로 컴파일하고, 브라우저에서 3D 모델링을 시연했습니다. 관객은 “로컬 앱과 차이가 없어요.”라며 놀랐습니다.</p>
-						<p>교육 스타트업은 피아노 튜터 앱을 WebAssembly로 옮겨, 저사양 기기에서도 음성 분석을 수행하게 했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>WebAssembly는 빠른 로딩과 네이티브에 가까운 성능을 제공해, 브라우저가 고성능 애플리케이션 플랫폼으로 도약하는 기반이 되었습니다. 다양한 언어가 웹 런타임을 목표로 삼게 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2021-webcodecs">
-			<article class="event-detail" aria-labelledby="event-2021-webcodecs-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2021</p>
-					<h2 id="event-2021-webcodecs-title">WebCodecs API, 딜레이 없는 영상 처리</h2>
-					<p class="event-detail__summary">Chrome 94가 WebCodecs를 도입하자 “브라우저에서 직접 인코더를 돌리자”는 실시간 미디어 실험이 폭발했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>2021년 Google I/O 세션에서 발표를 맡은 엔지니어는 WebCodecs로 웹캠 피드를 8ms 안에 처리하는 데모를 보여주었습니다. 참가자들은 “이제 스트리밍 앱이 데스크톱 앱과 같은 속도를 내네!”라고 놀랐습니다.</p>
-						<p>협업 화이트보드, 클라우드 게임, 비디오 편집 SaaS가 WebCodecs를 도입해 저지연 영상 전송과 AR 필터를 구현했습니다. 기존 WebRTC 파이프라인에 새로운 가속 옵션이 더해졌습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>WebCodecs는 디코더·인코더에 직접 접근하게 해 GPU 가속과 하드웨어 코덱을 활용할 수 있게 했습니다. 프론트엔드는 영상·음성 처리 지연을 줄였고, 백엔드는 가벼운 바이트스트림을 제공하며 협업 도구와 미디어 서비스의 품질을 높였습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2023-webgpu">
-			<article class="event-detail" aria-labelledby="event-2023-webgpu-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2023</p>
-					<h2 id="event-2023-webgpu-title">WebGPU, 브라우저에서 직접 GPU를 다루다</h2>
-					<p class="event-detail__summary">“드라이버 설치 없이 120fps가 나오네.” 안정화된 WebGPU가 웹에서 게임과 AI를 실행하는 길을 열었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>게임 스튜디오 실험실에서 개발자들은 WebGPU 데모를 실행하고, 3D 장면이 초당 120프레임으로 돌아가는 것을 확인했습니다. “드라이버 설치 없이도 이 정도면 충분하네요.”라는 말이 나왔습니다.</p>
-						<p>AI 스타트업은 브라우저에서 직접 모델을 실행해, 사용자가 파일을 업로드하지 않아도 실시간 추론 결과를 볼 수 있게 했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>WebGPU는 낮은 수준의 GPU API를 제공해 웹에서도 고성능 그래픽과 병렬 계산을 가능하게 했습니다. 이는 브라우저 상호작용을 새로운 층위로 끌어올리며, 실시간 협업과 시뮬레이션 서비스에 큰 변화를 주고 있습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<button type="button" class="scroll-top" data-scroll-top aria-label="맨 위로 이동" hidden>↑</button>
-
-		<script src="assets/js/main.js" defer></script>
-		<script type="text/javascript" src="https://wcs.pstatic.net/wcslog.js"></script>
-		<script type="text/javascript">
-			if (!window.wcs_add) window.wcs_add = {};
-			window.wcs_add["wa"] = "134f4c428765360";
-			if (window.location.protocol !== 'file:' && window.wcs) {
-				wcs_do();
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArcherLab IT Story · 브라우저 인터랙션 연대기</title>
+	<meta name="description" content="JavaScript부터 WebGPU까지 브라우저 상호작용 기술이 어떻게 진화했는지 살펴봅니다." />
+	<meta name="keywords"
+		content="웹 인터랙션 역사, JavaScript, Ajax, jQuery, React, Service Worker, WebAssembly, WebGPU, ArcherLab" />
+	<meta property="og:title" content="ArcherLab IT Story · Web Interaction Timeline" />
+	<meta property="og:description" content="웹이 문서에서 애플리케이션으로 바뀌어 온 주요 사건을 모았습니다." />
+	<meta property="og:image" content="https://itstory.archerlab.dev/assets/images/archerlab_logo.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-interaction.html" />
+	<link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-interaction-en.html" />
+	<link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-interaction-en.html" />
+	<link rel="canonical" href="https://itstory.archerlab.dev/web-interaction.html" />
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
+	<script defer src="assets/js/ga.js"></script>
+	<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@graph": [
+					{
+						"@type": "BreadcrumbList",
+						"@id": "https://itstory.archerlab.dev/web-interaction.html#breadcrumb",
+						"itemListElement": [
+							{
+								"@type": "ListItem",
+								"position": 1,
+								"name": "IT Story",
+								"item": "https://itstory.archerlab.dev/"
+							},
+							{
+								"@type": "ListItem",
+								"position": 2,
+								"name": "웹 제작 연대기",
+								"item": "https://itstory.archerlab.dev/web.html"
+							},
+							{
+								"@type": "ListItem",
+								"position": 3,
+								"name": "브라우저 인터랙션 연대기",
+								"item": "https://itstory.archerlab.dev/web-interaction.html"
+							}
+						]
+					},
+					{
+						"@type": "CreativeWorkSeries",
+						"@id": "https://itstory.archerlab.dev/web-interaction.html#series",
+						"name": "브라우저 인터랙션 연대기",
+						"url": "https://itstory.archerlab.dev/web-interaction.html",
+						"inLanguage": "ko-KR",
+						"description": "JavaScript부터 WebGPU까지 브라우저 상호작용 기술이 어떻게 진화했는지 살펴봅니다.",
+						"publisher": {
+							"@type": "Organization",
+							"name": "ArcherLab",
+							"logo": {
+								"@type": "ImageObject",
+								"url": "https://itstory.archerlab.dev/assets/images/archerlab_mini_logo.png"
+							}
+						},
+						"isPartOf": {
+							"@id": "https://itstory.archerlab.dev/#website"
+						}
+					}
+				]
 			}
 		</script>
-	</body>
+</head>
+
+<body>
+	<div class="page">
+		<header class="page__header" role="banner">
+			<div class="page__header-left">
+				<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
+					<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo"
+						loading="lazy">
+					<span class="page__brand-label">ArcherLab Chronicle</span>
+				</a>
+				<nav class="page__topic-nav" aria-label="주제 전환">
+					<a href="index.html">홈 허브</a>
+					<a href="computers.html">컴퓨터 연대기</a>
+					<a href="networks.html">네트워크 연대기</a>
+					<a href="databases.html">데이터베이스 연대기</a>
+					<a href="os.html">운영체제 연대기</a>
+					<div class="page__topic-nav-group" role="group" aria-label="웹 제작 연대기">
+						<span class="page__topic-nav-label">웹 제작 연대기</span>
+						<a href="web.html" data-topic-role="parent">웹 제작 연대기 허브</a>
+						<a href="web-structure.html" data-topic-role="child">웹 문서 설계 연대기</a>
+						<a href="web-styling.html" data-topic-role="child">스타일링 진화 연대기</a>
+						<a href="web-interaction.html" class="is-current" data-topic-role="child">브라우저 인터랙션 연대기</a>
+						<a href="web-tools.html" data-topic-role="child">웹 제작 도구 연대기</a>
+					</div>
+					<a href="was.html">웹 서버 연대기</a>
+				</nav>
+			</div>
+			<nav class="page__nav" aria-label="섹션 탐색">
+				<a href="#timeline">연도 보기</a>
+				<a href="#sources">참고</a>
+				<div class="language-switch">
+					<label class="sr-only" for="language-select-web-interaction">언어 선택</label>
+					<select id="language-select-web-interaction" data-language-switch>
+						<option value="web-interaction.html" data-language-code="ko" selected>한국어</option>
+						<option value="web-interaction-en.html" data-language-code="en">English</option>
+					</select>
+				</div>
+			</nav>
+		</header>
+
+		<main class="page__main" id="main" role="main">
+			<section class="timeline-hero" aria-labelledby="timeline-title">
+				<div class="timeline-hero__head">
+					<p class="hero__eyebrow">Interaction Story for Makers</p>
+					<h1 class="timeline-hero__title" id="timeline-title">“브라우저에서 얼마나 멀리 갈 수 있을까?”를 묻던 사람들</h1>
+					<p class="timeline-hero__lede">
+						1995년 넷스케이프 회의실에서 버튼을 누른 동료가 외쳤습니다. “잠깐만, 경고창이 바로 뜨네?” 그렇게 JavaScript가 문서를 살아 움직이게 했습니다. 몇 년 뒤
+						Outlook Web Access를 만들던 팀은 “새로고침 없이 메일을 보여주자”라며 XMLHttpRequest를 감쌌죠.
+					</p>
+					<p class="timeline-hero__lede">
+						2005년엔 제품 매니저들이 회의실에서 구글 지도를 돌려보며 “이게 진짜 웹이야?” 하고 놀랐고, Node.js를 본 개발자들은 “이제 서버도 같은 언어로 짤 수 있겠다”고
+						밤새 데모를 만들어 올렸습니다. React와 Service Worker는 “컴포넌트로 조립하고, 인터넷이 끊겨도 동작하게 하자”는 새로운 습관을 남겼습니다.
+					</p>
+					<p class="timeline-hero__lede">
+						오늘날 WebAssembly와 WebGPU 팀은 “설치 없이 게임과 AI를 돌릴 수 있다”고 자신 있게 말합니다. 아래 연대를 눌러 당시 엔지니어가 어떤 문제를 붙잡고
+						있었는지, 그리고 어떤 말로 서로를 설득했는지 가볍게 들어보세요.
+					</p>
+				</div>
+			</section>
+
+			<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title"
+				aria-describedby="timeline-instructions">
+				<p class="timeline-grid__instructions sr-only" id="timeline-instructions">연대기 버튼을 누르면 같은 화면에서 자세한 이야기를
+					읽을 수 있습니다.</p>
+				<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-1990">1990s</p>
+						<h3 class="timeline-group__topic" id="topic-1990">“새로고침 없이 움직이게 해보자”</h3>
+						<p class="timeline-group__summary">브라우저에 JavaScript가 들어오고 XMLHttpRequest가 더해지자, 개발자들은 폼 검증과 데이터
+							갱신을 즉시 처리하는 실험에 뛰어들었습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1995-javascript">
+							<span class="timeline-event__year">1995</span>
+							<span class="timeline-event__label">JavaScript 발표</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1996-flash">
+							<span class="timeline-event__year">1996</span>
+							<span class="timeline-event__label">Macromedia Flash 1.0</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem"
+							data-event-id="1999-xmlhttprequest">
+							<span class="timeline-event__year">1999</span>
+							<span class="timeline-event__label">XMLHttpRequest 도입</span>
+						</button>
+					</div>
+				</section>
+				<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-2000">2000s</p>
+						<h3 class="timeline-group__topic" id="topic-2000">“웹앱”이라는 이름이 붙다</h3>
+						<p class="timeline-group__summary">Ajax 열풍이 일어나고 Node.js가 등장하면서 “브라우저와 서버를 같은 언어로 돌리자”는 목소리가
+							커졌습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2005-ajax">
+							<span class="timeline-event__year">2005</span>
+							<span class="timeline-event__label">Ajax 아티클</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2006-jquery">
+							<span class="timeline-event__year">2006</span>
+							<span class="timeline-event__label">jQuery 1.0</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2009-nodejs">
+							<span class="timeline-event__year">2009</span>
+							<span class="timeline-event__label">Node.js 공개</span>
+						</button>
+					</div>
+				</section>
+				<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-2010">2010s</p>
+						<h3 class="timeline-group__topic" id="topic-2010">“컴포넌트로 조립하고, 끊겨도 버티자”</h3>
+						<p class="timeline-group__summary">React가 상태 중심 UI를 보여주고 Service Worker가 오프라인 경험을 가능하게 하며, 웹앱이
+							네이티브 앱과 맞붙기 시작했습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2011-websocket">
+							<span class="timeline-event__year">2011</span>
+							<span class="timeline-event__label">WebSocket 표준</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2013-react">
+							<span class="timeline-event__year">2013</span>
+							<span class="timeline-event__label">React 공개</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem"
+							data-event-id="2014-service-worker">
+							<span class="timeline-event__year">2014</span>
+							<span class="timeline-event__label">Service Worker 초안</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem"
+							data-event-id="2015-flash-zero-day">
+							<span class="timeline-event__year">2015</span>
+							<span class="timeline-event__label">Flash 제로데이 긴급 패치</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2017-cloudbleed">
+							<span class="timeline-event__year">2017</span>
+							<span class="timeline-event__label">Cloudflare “Cloudbleed”</span>
+						</button>
+					</div>
+				</section>
+				<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-2020">2020s</p>
+						<h3 class="timeline-group__topic" id="topic-2020">“설치 없이도 고성능으로”</h3>
+						<p class="timeline-group__summary">WebAssembly와 WebGPU가 안정화되자, 팀들은 “브라우저만 열면 게임과 AI가 돌아간다”고 실시간
+							협업 도구를 데모하기 시작했습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2020-wasm">
+							<span class="timeline-event__year">2020</span>
+							<span class="timeline-event__label">WebAssembly 1.0 채택</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2021-webcodecs">
+							<span class="timeline-event__year">2021</span>
+							<span class="timeline-event__label">WebCodecs API</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2023-webgpu">
+							<span class="timeline-event__year">2023</span>
+							<span class="timeline-event__label">WebGPU 안정 출시</span>
+						</button>
+					</div>
+				</section>
+			</section>
+
+			<section class="sources" id="sources" aria-labelledby="sources-title">
+				<div class="section__head">
+					<h2 id="sources-title">더 깊이 읽을 거리</h2>
+					<p>JavaScript, SPA, WebAssembly를 다룬 대표 문서입니다. 기술 변화가 사용자 경험을 어떻게 바꿨는지 비교해 보세요.</p>
+				</div>
+				<ul class="source-list">
+					<li><a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank" rel="noopener">MDN ·
+							JavaScript 가이드</a></li>
+					<li><a href="https://ajaxpatterns.org/" target="_blank" rel="noopener">Ajax Patterns</a></li>
+					<li><a href="https://react.dev/blog/2013/07/17/react-v0-3-0" target="_blank" rel="noopener">React 팀
+							블로그</a></li>
+					<li><a href="https://w3c.github.io/ServiceWorker/" target="_blank" rel="noopener">W3C · Service
+							Worker</a></li>
+					<li><a href="https://webassembly.org/roadmap/" target="_blank" rel="noopener">WebAssembly.org ·
+							Roadmap</a></li>
+					<li><a href="https://developer.chrome.com/docs/web-platform/webgpu" target="_blank"
+							rel="noopener">Chrome Developers · WebGPU</a></li>
+				</ul>
+			</section>
+		</main>
+
+		<footer class="page__footer" role="contentinfo">
+			<p>© 2025 ArcherLab · Stories on browser interaction.</p>
+			<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
+		</footer>
+	</div>
+
+	<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
+		<div class="modal__overlay" data-modal-close></div>
+		<div class="modal__window" role="document" tabindex="-1">
+			<button class="modal__close" type="button" aria-label="레이어 닫기" data-modal-close>&times;</button>
+			<div class="modal__content"></div>
+		</div>
+	</div>
+
+	<template id="event-1995-javascript">
+		<article class="event-detail" aria-labelledby="event-1995-javascript-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1995</p>
+				<h2 id="event-1995-javascript-title">JavaScript, 브라우저에 생기를 불어넣다</h2>
+				<p class="event-detail__summary">“브라우저가 입력을 바로 처리하네?” 넷스케이프에 스크립트 언어가 들어오면서 폼 검증과 인터랙션이 즉시 가능해졌습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>넷스케이프 사무실에서 브렌던 아이크는 10일 만에 Mocha 프로토타입을 완성했습니다. 내부 데모에서 버튼을 클릭하자 경고창이 뜨는 모습을 본 동료는 “브라우저가 사용자
+						입력을 바로 처리하네!”라고 놀랐습니다.</p>
+					<p>곧 출시된 Navigator 2.0에서 폼 유효성 검사가 동작하자, 웹 마스터들은 “서버까지 가지 않아도 즉시 메시지를 보여줄 수 있다.”며 가능성을 탐색했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>JavaScript는 동적으로 DOM을 조작하고, 이벤트 루프로 사용자 입력을 처리하는 언어로 자리 잡았습니다. 이 사건 이후 브라우저는 단순한 문서 뷰어를 넘어 상호작용
+						플랫폼이 되기 시작했습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1996-flash">
+		<article class="event-detail" aria-labelledby="event-1996-flash-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1996</p>
+				<h2 id="event-1996-flash-title">Macromedia Flash 1.0, 애니메이션과 인터랙션의 돌풍</h2>
+				<p class="event-detail__summary">“버튼이 춤을 추네!” Flash 플레이어가 배포되자 웹사이트는 음악과 모션으로 사용자 시선을 붙잡았습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>1996년 Macromedia는 FutureSplash를 인수해 Flash 1.0을 공개했습니다. 한 에이전시 디자이너는 마우스를 올리면 반응하는 네비게이션을 만들어 보여
+						주며 “GIF로는 못 하던 일이 가능해졌어요.”라고 말했습니다.</p>
+					<p>브랜드 사이트와 뮤직비디오 프로모션이 Flash를 채택했고, 방송국은 “로딩 바가 끝나면 풀 화면 애니메이션이 펼쳐진다”고 홍보했습니다. 사용자들은 처음으로 브라우저에서 풀
+						모션 인터랙션을 경험했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Flash는 벡터 그래픽, 타임라인 애니메이션, ActionScript 스크립트를 제공하면서 웹 인터랙션을 시각적으로 표현할 수 있게 했습니다. 표준 기반이 아니었지만
+						“브라우저 안에서 앱처럼 움직인다”는 기대를 키워, 이후 캔버스, SVG, WebGL 같은 표준 기술 개발에 자극을 주었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1999-xmlhttprequest">
+		<article class="event-detail" aria-labelledby="event-1999-xmlhttprequest-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1999</p>
+				<h2 id="event-1999-xmlhttprequest-title">XMLHttpRequest, 페이지 새로고침 없이 데이터 주고받기</h2>
+				<p class="event-detail__summary">Outlook Web Access 팀이 “리로드 없이 메일을 갱신하자”라며 붙인 XMLHttpRequest가 비동기 웹의 문을
+					열었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>IE 팀은 Outlook Web Access에 빠른 메일 목록을 제공하기 위해 ActiveX 기반 XMLHttpRequest를 도입했습니다. 기업 고객이 “새로고침 없이
+						메일이 도착하네!”라고 반응하자, 개발 문서가 급히 배포됐습니다.</p>
+					<p>모질라와 Safari도 비슷한 기능을 구현하며 API를 정비했고, 이 기능이 표준 논의로 이어졌습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>XMLHttpRequest는 비동기 네트워크 요청을 가능하게 해 SPA의 전조가 되었습니다. 이후 Fetch API로 확장되며 브라우저가 서버와 실시간 대화하는 기반이
+						되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2005-ajax">
+		<article class="event-detail" aria-labelledby="event-2005-ajax-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2005</p>
+				<h2 id="event-2005-ajax-title">Ajax, 웹앱이라는 이름이 탄생하다</h2>
+				<p class="event-detail__summary">“이제 웹도 앱이다.” Ajax라는 이름이 붙자 구글 지도와 지메일이 웹앱의 상징이 되었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>A List Apart의 글이 공개되자, 제품 매니저들은 회의실에서 구글 지도를 돌려 보였습니다. 지도 화면이 부드럽게 이동하는 모습을 본 임원은 “웹에서도 데스크톱 앱 같은
+						경험이 가능하군.”이라고 감탄했습니다.</p>
+					<p>스타트업 팀은 즉시 Ajax 프레임워크를 찾아보고, 개발자 모임에서는 비동기 요청과 DOM 업데이트 패턴이 활발히 공유되었습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Ajax는 비동기 요청, DOM 조작, JSON 데이터 교환을 한 묶음으로 소개했습니다. 이 용어 덕분에 경영진과 개발자가 같은 언어로 미래 웹앱을 논의할 수 있게
+						되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2006-jquery">
+		<article class="event-detail" aria-labelledby="event-2006-jquery-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2006</p>
+				<h2 id="event-2006-jquery-title">jQuery 1.0, DOM 제어를 한 줄로</h2>
+				<p class="event-detail__summary">존 레식은 “한 줄이면 됩니다.”라고 말하며 <code>$("#menu li")</code> 데모를 선보였고, 전 세계 개발자가
+					같은 API를 쓰기 시작했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>2006년 BarCamp에서 레식은 슬라이드 대신 브라우저 콘솔을 열어 `$("#todo li").addClass("done")`를 실행했습니다. 관객은 “브라우저마다 다르게
+						동작하던 작업이 한 번에 끝나네!”라며 환호했습니다.</p>
+					<p>곧이어 플러그인 생태계가 폭발하며 슬라이더, 모달, Ajax 래퍼가 공유되었습니다. 디자이너와 개발자는 같은 API로 이벤트와 애니메이션을 다뤘습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>jQuery는 CSS 선택자 기반 DOM 조작, 체이닝, Ajax 헬퍼를 제공해 브라우저 호환성을 숨겼습니다. 프론트엔드는 인터랙션 구현 속도를 크게 높였고, 백엔드는
+						REST/JSON 응답으로 데이터를 제공하며 협업 구조를 단순화했습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2009-nodejs">
+		<article class="event-detail" aria-labelledby="event-2009-nodejs-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2009</p>
+				<h2 id="event-2009-nodejs-title">Node.js, 자바스크립트가 서버로 확장되다</h2>
+				<p class="event-detail__summary">“서버도 자바스크립트로 돌릴 수 있네.” Node.js 발표가 이벤트 루프 기반 서버 열풍을 불러왔습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>JSConf에서 달은 실시간 채팅 데모를 보여주며 “동시 연결을 수만 개까지 처리할 수 있다.”고 설명했습니다. 발표 후 개발자들은 노트북을 펼쳐 `npm install`을
+						입력했고, 즉시 헬로월드 서버가 실행되는 것을 보고 환호했습니다.</p>
+					<p>몇 달 뒤 GitHub에 수많은 웹소켓 예제가 올라오며, 스타트업이 실시간 앱을 Node.js로 구축하기 시작했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Node.js는 V8 엔진과 이벤트 루프를 재사용해 서버에서도 JavaScript를 활용하도록 했습니다. 프런트와 백엔드 로직을 하나의 언어로 다루게 되면서, 인터랙션 개발
+						사이클이 빨라졌습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2011-websocket">
+		<article class="event-detail" aria-labelledby="event-2011-websocket-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2011</p>
+				<h2 id="event-2011-websocket-title">WebSocket 표준, 실시간 대화의 시작</h2>
+				<p class="event-detail__summary">IETF가 WebSocket을 승인하자 제품팀은 “폴링 없이 채팅이 된다!”며 대화형 서비스를 본격화했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>2011년, HTML5 표준화 회의장에서 이안 히콘은 브라우저-서버 간 양방향 소켓 데모를 보여주었습니다. 콘솔에 “Hello”를 치자 서버가 즉시 답했고, 참석자들은 “이제
+						롱 폴링을 버려도 되겠네요.”라고 말했다.</p>
+					<p>트레이딩, 게임, 고객 지원 챗봇이 WebSocket으로 실시간 알림을 구현했고, 기업용 메신저는 기존 폴링 코드에서 벗어나 서버 부하를 크게 줄였습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>WebSocket은 하나의 TCP 연결에서 양방향 메시지를 주고받아 지연을 줄였습니다. 프론트엔드는 이벤트 기반 상태 업데이트를 구현하고, 백엔드는 메시지 브로커와 연계해
+						실시간 시스템을 구축했습니다. 이는 이후 GraphQL Subscriptions, WebRTC 같은 스트리밍 기술의 토대를 닦았습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2013-react">
+		<article class="event-detail" aria-labelledby="event-2013-react-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2013</p>
+				<h2 id="event-2013-react-title">React, 컴포넌트로 UI를 조립하다</h2>
+				<p class="event-detail__summary">“UI를 함수처럼 생각해 보자.” React가 컴포넌트와 가상 DOM 개념을 대중화했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>JSConf EU 발표에서 조던 워클르는 “UI를 함수처럼 생각해 보세요.”라고 소개했습니다. 데모에서 버튼을 눌러도 DOM을 직접 건드리지 않고 화면이 갱신되자, 관중석에서
+						“와!” 하는 탄성이 나왔습니다.</p>
+					<p>곧바로 GitHub에 React 저장소가 올라오고, 초기 사용자는 TodoMVC를 구현해 블로그에 공유했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>React는 Virtual DOM과 단방향 데이터 흐름을 기반으로 컴포넌트 패턴을 정착시켰습니다. UI를 상태 기반으로 관리하면서 대형 인터랙션을 유지하기 쉬워졌고, 이후
+						수많은 프레임워크가 비슷한 철학을 채택했습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2014-service-worker">
+		<article class="event-detail" aria-labelledby="event-2014-service-worker-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2014</p>
+				<h2 id="event-2014-service-worker-title">Service Worker, 오프라인 웹앱의 핵심</h2>
+				<p class="event-detail__summary">“브라우저를 꺼도 알림이 온다.” Service Worker 초안이 오프라인 웹앱의 핵심으로 떠올랐습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>크롬 개발자 서밋에서 팀은 푸시 알림을 시연했습니다. 브라우저를 닫아도 알림이 도착하자 관객들은 박수를 쳤습니다. PWA라는 개념이 곧 등장했고, 개발자들은 매니페스트와 캐시
+						전략을 학습하기 시작했습니다.</p>
+					<p>신문사 웹팀은 지하철에서 기사 읽기를 돕기 위해 오프라인 캐시를 도입했습니다. 독자는 “기사가 로딩되지 않아 답답했던 일이 줄었어요.”라고 피드백했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Service Worker는 백그라운드에서 네트워크 요청을 가로채고 캐시를 제어할 수 있게 했습니다. 네이티브 앱에서만 가능했던 오프라인과 푸시 경험이 웹으로 들어오며,
+						브라우저 상호작용의 범위가 크게 넓어졌습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2015-flash-zero-day">
+		<article class="event-detail" aria-labelledby="event-2015-flash-zero-day-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2015</p>
+				<h2 id="event-2015-flash-zero-day-title">Flash 제로데이, 일제히 차단 명령</h2>
+				<p class="event-detail__summary">Hacking Team 유출로 드러난 Flash 취약점(CVE-2015-5119)이 전 세계 브라우저를 멈춰 세웠습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>2015년 7월, 이탈리아 보안업체 Hacking Team 내부 자료가 공개되자 “여기에 제로데이가 있다”는 보고가 트위터로 번졌습니다. 다음 날 아침, 한 브라우저
+						엔지니어는 긴급 화상회의에서 “Adobe가 오늘 안에 패치를 낸다고 확인했어요. 우리도 기본 설정에서 Flash를 막읍시다.”라고 제안했습니다.</p>
+					<p>Mozilla는 그날 Firefox의 모든 버전에서 Flash를 블록리스트에 올렸고, Facebook 보안 책임자 알렉스 스타모스도 “Flash 퇴출 시계를 맞춰야 한다.”고
+						공개적으로 압박했습니다. 국내 포털 운영팀도 오후 배포에서 “업무용 포털이 멈췄다”는 고객센터 연락을 받고 대체 콘텐츠를 긴급 적용했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Adobe는 APSB15-16 패치를 배포하며 CVE-2015-5119와 CVE-2015-5122 등 중대 취약점을 수정했습니다. 이 사고는 Flash 의존 서비스를
+						NPAPI·ActiveX 기반에서 JavaScript와 HTML5로 전환하게 만든 전환점이었고, 주요 브라우저가 기본적으로 Flash를 비활성화하도록 정책을 바꾸는 계기가
+						되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2017-cloudbleed">
+		<article class="event-detail" aria-labelledby="event-2017-cloudbleed-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2017</p>
+				<h2 id="event-2017-cloudbleed-title">Cloudflare “Cloudbleed”, 프록시가 흘린 비밀</h2>
+				<p class="event-detail__summary">HTML 파서 버그가 Cloudflare 캐시에서 세션 토큰과 요청 데이터가 새어 나가게 만든 사고였습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>2017년 2월, 구글의 프로젝트 제로 연구원 타비스 오만디는 새벽 0시에 Cloudflare에 전화를 걸어 “랜덤 사이트에서 다른 사용자의 쿠키가 보여요.”라고 알렸습니다.
+						몇 분 뒤 Cloudflare SRE 팀 채널이 붉은색 경고로 가득 찼고, 한 SRE 엔지니어는 “HTML 리라이터 모듈을 끄고 전 세계 캐시를 비워야 합니다.”라고
+						외쳤습니다.</p>
+					<p>블로그 공지가 올라오자, 팀은 고객사 목록을 훑으며 “로그아웃 처리와 토큰 교체를 안내합시다.”라고 협의했습니다. 국내 스타트업 CTO도 “Cloudflare를 통과하는
+						로그인 트래픽은 모두 세션 무효화하라.”는 메시지를 사내 슬랙에 올렸습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Cloudflare는 버그가 HTML 파서의 경계 조건 오류에서 비롯됐다고 설명하며, 2017년 2월 13일부터 18일까지 누수가 있었다고 공식 발표했습니다. 이 사고는
+						리버스 프록시와 CDN 단계에서도 보안 사고 대응 체계가 필요하다는 사실을 일깨웠고, 주요 서비스가 자동 세션 무효화와 보안 모니터링을 강화하는 계기가 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2020-wasm">
+		<article class="event-detail" aria-labelledby="event-2020-wasm-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2020</p>
+				<h2 id="event-2020-wasm-title">WebAssembly 1.0, 브라우저가 범용 런타임이 되다</h2>
+				<p class="event-detail__summary">“설치 없이 3D 모델링이 돼?” WebAssembly 1.0 권고가 나오자 고성능 앱이 웹으로 옮겨오기 시작했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>오토데스크 엔지니어는 C++ 코드베이스를 WebAssembly로 컴파일하고, 브라우저에서 3D 모델링을 시연했습니다. 관객은 “로컬 앱과 차이가 없어요.”라며 놀랐습니다.
+					</p>
+					<p>교육 스타트업은 피아노 튜터 앱을 WebAssembly로 옮겨, 저사양 기기에서도 음성 분석을 수행하게 했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>WebAssembly는 빠른 로딩과 네이티브에 가까운 성능을 제공해, 브라우저가 고성능 애플리케이션 플랫폼으로 도약하는 기반이 되었습니다. 다양한 언어가 웹 런타임을 목표로
+						삼게 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2021-webcodecs">
+		<article class="event-detail" aria-labelledby="event-2021-webcodecs-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2021</p>
+				<h2 id="event-2021-webcodecs-title">WebCodecs API, 딜레이 없는 영상 처리</h2>
+				<p class="event-detail__summary">Chrome 94가 WebCodecs를 도입하자 “브라우저에서 직접 인코더를 돌리자”는 실시간 미디어 실험이 폭발했습니다.
+				</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>2021년 Google I/O 세션에서 발표를 맡은 엔지니어는 WebCodecs로 웹캠 피드를 8ms 안에 처리하는 데모를 보여주었습니다. 참가자들은 “이제 스트리밍 앱이
+						데스크톱 앱과 같은 속도를 내네!”라고 놀랐습니다.</p>
+					<p>협업 화이트보드, 클라우드 게임, 비디오 편집 SaaS가 WebCodecs를 도입해 저지연 영상 전송과 AR 필터를 구현했습니다. 기존 WebRTC 파이프라인에 새로운 가속
+						옵션이 더해졌습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>WebCodecs는 디코더·인코더에 직접 접근하게 해 GPU 가속과 하드웨어 코덱을 활용할 수 있게 했습니다. 프론트엔드는 영상·음성 처리 지연을 줄였고, 백엔드는 가벼운
+						바이트스트림을 제공하며 협업 도구와 미디어 서비스의 품질을 높였습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2023-webgpu">
+		<article class="event-detail" aria-labelledby="event-2023-webgpu-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2023</p>
+				<h2 id="event-2023-webgpu-title">WebGPU, 브라우저에서 직접 GPU를 다루다</h2>
+				<p class="event-detail__summary">“드라이버 설치 없이 120fps가 나오네.” 안정화된 WebGPU가 웹에서 게임과 AI를 실행하는 길을 열었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>게임 스튜디오 실험실에서 개발자들은 WebGPU 데모를 실행하고, 3D 장면이 초당 120프레임으로 돌아가는 것을 확인했습니다. “드라이버 설치 없이도 이 정도면
+						충분하네요.”라는 말이 나왔습니다.</p>
+					<p>AI 스타트업은 브라우저에서 직접 모델을 실행해, 사용자가 파일을 업로드하지 않아도 실시간 추론 결과를 볼 수 있게 했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>WebGPU는 낮은 수준의 GPU API를 제공해 웹에서도 고성능 그래픽과 병렬 계산을 가능하게 했습니다. 이는 브라우저 상호작용을 새로운 층위로 끌어올리며, 실시간 협업과
+						시뮬레이션 서비스에 큰 변화를 주고 있습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<button type="button" class="scroll-top" data-scroll-top aria-label="맨 위로 이동" hidden>↑</button>
+
+	<script src="assets/js/main.js" defer></script>
+	<script type="text/javascript" src="https://wcs.pstatic.net/wcslog.js"></script>
+	<script type="text/javascript">
+		if (!window.wcs_add) window.wcs_add = {};
+		window.wcs_add["wa"] = "134f4c428765360";
+		if (window.location.protocol !== 'file:' && window.wcs) {
+			wcs_do();
+		}
+	</script>
+</body>
+
 </html>

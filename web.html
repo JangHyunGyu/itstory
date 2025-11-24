@@ -1,154 +1,242 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>ArcherLab IT Story · 웹 제작 연대기 허브</title>
-		<meta name="description" content="웹 제작의 구조, 스타일, 인터랙션, 제작 도구를 한눈에 살펴보고 세부 타임라인으로 이동할 수 있는 허브입니다." />
-		<meta property="og:title" content="ArcherLab IT Story · Web Making Hub" />
-		<meta property="og:description" content="HTML 구조에서 디자인 시스템, 인터랙션, 제작 도구까지 웹 제작 연대기를 네 가지 시리즈로 정리했습니다." />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-		<link rel="stylesheet" href="assets/css/style.css">
-		<link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web.html" />
-		<link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-en.html" />
-		<link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-en.html" />
-		<link rel="canonical" href="https://itstory.archerlab.dev/web.html" />
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
-		<script defer src="assets/js/ga.js"></script>
-	</head>
-	<body>
-		<div class="page">
-			<header class="page__header" role="banner">
-				<div class="page__header-left">
-					<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
-						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
-						<span class="page__brand-label">ArcherLab Chronicle</span>
-					</a>
-					<nav class="page__topic-nav" aria-label="주제 전환">
-						<a href="index.html">홈 허브</a>
-						<a href="computers.html">컴퓨터 연대기</a>
-						<a href="networks.html">네트워크 연대기</a>
-						<a href="databases.html">데이터베이스 연대기</a>
-						<a href="os.html">운영체제 연대기</a>
-						<div class="page__topic-nav-group" role="group" aria-label="웹 제작 연대기">
-							<span class="page__topic-nav-label">웹 제작 연대기</span>
-							<a href="web.html" class="is-current" data-topic-role="parent">웹 제작 연대기 허브</a>
-							<a href="web-structure.html" data-topic-role="child">웹 문서 설계 연대기</a>
-							<a href="web-styling.html" data-topic-role="child">스타일링 진화 연대기</a>
-							<a href="web-interaction.html" data-topic-role="child">브라우저 인터랙션 연대기</a>
-							<a href="web-tools.html" data-topic-role="child">웹 제작 도구 연대기</a>
-						</div>
-						<a href="was.html">웹 서버 연대기</a>
-					</nav>
-				</div>
-				<nav class="page__nav" aria-label="섹션 탐색">
-					<a href="#overview">개요</a>
-					<a href="#series">시리즈 안내</a>
-					<a href="#sources">참고</a>
-					<div class="language-switch">
-						<label class="sr-only" for="language-select-web">언어 선택</label>
-						<select id="language-select-web" data-language-switch>
-							<option value="web.html" data-language-code="ko" selected>한국어</option>
-							<option value="web-en.html" data-language-code="en">English</option>
-						</select>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArcherLab IT Story · 웹 제작 연대기</title>
+	<meta name="description" content="정적 웹에서 서버리스까지, 프론트엔드와 백엔드 협업 역사를 다룬 웹 제작 타임라인." />
+	<meta name="naver-site-verification" content="a8b6da0fcb9b4c6d88596211d3de215801535558" />
+	<meta name="keywords" content="웹 역사, 프론트엔드, 백엔드, 서버리스, ArcherLab" />
+	<meta property="og:title" content="ArcherLab IT Story · Web Chronicle" />
+	<meta property="og:description" content="정적 웹에서 서버리스까지, 프론트엔드와 백엔드 협업 역사를 다룬 웹 제작 타임라인." />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="icon" type="image/svg+xml" href="assets/images/archerlab_logo.svg">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/archerlab_mini_logo.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/archerlab_mini_logo.png">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web.html" />
+	<link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-en.html" />
+	<link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-en.html" />
+	<link rel="canonical" href="https://itstory.archerlab.dev/web.html" />
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
+	<script defer src="assets/js/ga.js"></script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "Organization",
+					"@id": "https://itstory.archerlab.dev/#organization",
+					"name": "ArcherLab",
+					"url": "https://itstory.archerlab.dev/",
+					"logo": {
+						"@type": "ImageObject",
+						"url": "https://itstory.archerlab.dev/assets/images/archerlab_mini_logo.png",
+						"width": 512,
+						"height": 512
+					},
+					"sameAs": [
+						"https://archerlab.dev/",
+						"https://walkwithme.archerlab.dev/",
+						"https://github.com/JangHyunGyu"
+					]
+				},
+				{
+					"@type": "WebSite",
+					"@id": "https://itstory.archerlab.dev/#website",
+					"url": "https://itstory.archerlab.dev/",
+					"name": "ArcherLab IT Story",
+					"inLanguage": "ko-KR",
+					"description": "네트워크, 컴퓨터, 운영체제, 웹, 웹 서버, 데이터베이스 타임라인을 한 번에 탐색하는 ArcherLab IT Story 허브입니다.",
+					"publisher": {
+						"@id": "https://itstory.archerlab.dev/#organization"
+					}
+				},
+				{
+					"@type": "WebPage",
+					"@id": "https://itstory.archerlab.dev/web.html",
+					"url": "https://itstory.archerlab.dev/web.html",
+					"name": "ArcherLab IT Story · 웹 제작 연대기",
+					"inLanguage": "ko-KR",
+					"description": "정적 웹에서 서버리스까지, 프론트엔드와 백엔드 협업 역사를 다룬 웹 제작 타임라인.",
+					"isPartOf": {
+						"@id": "https://itstory.archerlab.dev/#website"
+					},
+					"publisher": {
+						"@id": "https://itstory.archerlab.dev/#organization"
+					},
+					"breadcrumb": {
+						"@id": "https://itstory.archerlab.dev/web.html#breadcrumb"
+					}
+				},
+				{
+					"@type": "BreadcrumbList",
+					"@id": "https://itstory.archerlab.dev/web.html#breadcrumb",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"name": "IT Story",
+							"item": "https://itstory.archerlab.dev/"
+						},
+						{
+							"@type": "ListItem",
+							"position": 2,
+							"name": "웹 제작 연대기",
+							"item": "https://itstory.archerlab.dev/web.html"
+						}
+					]
+				}
+			]
+		}
+	</script>
+</head>
+
+<body>
+	<div class="page">
+		<header class="page__header" role="banner">
+			<div class="page__header-left">
+				<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
+					<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo"
+						loading="lazy">
+					<span class="page__brand-label">ArcherLab Chronicle</span>
+				</a>
+				<nav class="page__topic-nav" aria-label="주제 전환">
+					<a href="index.html">홈 허브</a>
+					<a href="computers.html">컴퓨터 연대기</a>
+					<a href="networks.html">네트워크 연대기</a>
+					<a href="databases.html">데이터베이스 연대기</a>
+					<a href="os.html">운영체제 연대기</a>
+					<div class="page__topic-nav-group" role="group" aria-label="웹 제작 연대기">
+						<span class="page__topic-nav-label">웹 제작 연대기</span>
+						<a href="web.html" class="is-current" data-topic-role="parent">웹 제작 연대기 허브</a>
+						<a href="web-structure.html" data-topic-role="child">웹 문서 설계 연대기</a>
+						<a href="web-styling.html" data-topic-role="child">스타일링 진화 연대기</a>
+						<a href="web-interaction.html" data-topic-role="child">브라우저 인터랙션 연대기</a>
+						<a href="web-tools.html" data-topic-role="child">웹 제작 도구 연대기</a>
 					</div>
+					<a href="was.html">웹 서버 연대기</a>
 				</nav>
-			</header>
+			</div>
+			<nav class="page__nav" aria-label="섹션 탐색">
+				<a href="#overview">개요</a>
+				<a href="#series">시리즈 안내</a>
+				<a href="#sources">참고</a>
+				<div class="language-switch">
+					<label class="sr-only" for="language-select-web">언어 선택</label>
+					<select id="language-select-web" data-language-switch>
+						<option value="web.html" data-language-code="ko" selected>한국어</option>
+						<option value="web-en.html" data-language-code="en">English</option>
+					</select>
+				</div>
+			</nav>
+		</header>
 
-			<main class="page__main" id="main" role="main">
-				<section class="timeline-hero" id="overview" aria-labelledby="timeline-title">
-					<div class="timeline-hero__head">
-						<p class="hero__eyebrow">Web Story for Makers</p>
-						<h1 class="timeline-hero__title" id="timeline-title">웹을 짓는 네 가지 모험, 어디부터 떠날까요?</h1>
-						<p class="timeline-hero__lede">
-							정적 문서를 엮던 시절부터 컴포넌트, 디자인 시스템, Jamstack, AI 도구까지. 웹을 만드는 일은 계속 영역을 넓혀 왔습니다.
-							이 허브에서는 “구조 · 스타일 · 인터랙션 · 제작 도구”라는 네 갈래를 소개하고, 세부 타임라인으로 안내합니다.
-						</p>
-						<p class="timeline-hero__lede">
-							각 시리즈는 불편(Problem) → 필요(Need) → 해결(Fix) 순서로 이야기를 풀어, 초보자도 큰 흐름을 따라갈 수 있도록 구성했습니다.
-						</p>
-						<p class="timeline-hero__lede">
-							먼저 전체 발자국을 훑고 싶다면 아래 카드에서 대략의 내용을 읽고, 관심 있는 타임라인으로 들어가 더 깊은 사건과 모달 이야기를 펼쳐 보세요.
-						</p>
-					</div>
-				</section>
+		<main class="page__main" id="main" role="main">
+			<section class="timeline-hero" id="overview" aria-labelledby="timeline-title">
+				<div class="timeline-hero__head">
+					<p class="hero__eyebrow">Web Story for Makers</p>
+					<h1 class="timeline-hero__title" id="timeline-title">웹을 짓는 네 가지 모험, 어디부터 떠날까요?</h1>
+					<p class="timeline-hero__lede">
+						정적 문서를 엮던 시절부터 컴포넌트, 디자인 시스템, Jamstack, AI 도구까지. 웹을 만드는 일은 계속 영역을 넓혀 왔습니다.
+						이 허브에서는 “구조 · 스타일 · 인터랙션 · 제작 도구”라는 네 갈래를 소개하고, 세부 타임라인으로 안내합니다.
+					</p>
+					<p class="timeline-hero__lede">
+						각 시리즈는 불편(Problem) → 필요(Need) → 해결(Fix) 순서로 이야기를 풀어, 초보자도 큰 흐름을 따라갈 수 있도록 구성했습니다.
+					</p>
+					<p class="timeline-hero__lede">
+						먼저 전체 발자국을 훑고 싶다면 아래 카드에서 대략의 내용을 읽고, 관심 있는 타임라인으로 들어가 더 깊은 사건과 모달 이야기를 펼쳐 보세요.
+					</p>
+				</div>
+			</section>
 
-				<section class="home-topics" id="series" aria-labelledby="series-title">
-					<div class="section__head">
-						<h2 id="series-title">네 가지 웹 제작 연대기</h2>
-						<p>
-							웹을 만든 사람들은 같은 시대에 서로 다른 질문을 던졌습니다. 구조는 어떻게 정리할지, 화면은 어떻게 꾸밀지, 움직임은 어떻게 자연스럽게 할지,
-							도구는 어떻게 협업을 도울지. 각 카테고리는 그 질문에 대한 연대기입니다.
-						</p>
-					</div>
-					<div class="home-topics__grid">
-						<article class="topic-card" aria-labelledby="topic-structure-title">
-							<h3 class="topic-card__title" id="topic-structure-title">웹 문서 설계 연대기</h3>
-							<p class="topic-card__summary">HTML 태그의 탄생부터 반응형 레이아웃, 웹 컴포넌트까지. “문서를 어떻게 구조화할까?”라는 고민을 시대별로 정리했습니다.</p>
-							<a class="topic-card__link" href="web-structure.html">연대기 읽기</a>
-						</article>
-						<article class="topic-card" aria-labelledby="topic-styling-title">
-							<h3 class="topic-card__title" id="topic-styling-title">스타일링 진화 연대기</h3>
-							<p class="topic-card__summary">CSS, Flexbox, Grid, 디자인 시스템, 컨테이너 쿼리까지. 화면을 더 읽기 좋게 만들려는 실험을 모았습니다.</p>
-							<a class="topic-card__link" href="web-styling.html">연대기 읽기</a>
-						</article>
-						<article class="topic-card" aria-labelledby="topic-interaction-title">
-							<h3 class="topic-card__title" id="topic-interaction-title">브라우저 인터랙션 연대기</h3>
-							<p class="topic-card__summary">JavaScript, Ajax, SPA, Service Worker, WebAssembly, WebGPU까지. 웹이 앱처럼 반응해 온 순간을 따라갑니다.</p>
-							<a class="topic-card__link" href="web-interaction.html">연대기 읽기</a>
-						</article>
-						<article class="topic-card" aria-labelledby="topic-tools-title">
-							<h3 class="topic-card__title" id="topic-tools-title">웹 제작 도구 연대기</h3>
-							<p class="topic-card__summary">Dreamweaver와 FTP에서 npm, Webpack, Vite, AI 도구까지. “더 빠르게 만들고 배포하려면?”이라는 질문의 답을 모았습니다.</p>
-							<a class="topic-card__link" href="web-tools.html">연대기 읽기</a>
-						</article>
-					</div>
-				</section>
+			<section class="home-topics" id="series" aria-labelledby="series-title">
+				<div class="section__head">
+					<h2 id="series-title">네 가지 웹 제작 연대기</h2>
+					<p>
+						웹을 만든 사람들은 같은 시대에 서로 다른 질문을 던졌습니다. 구조는 어떻게 정리할지, 화면은 어떻게 꾸밀지, 움직임은 어떻게 자연스럽게 할지,
+						도구는 어떻게 협업을 도울지. 각 카테고리는 그 질문에 대한 연대기입니다.
+					</p>
+				</div>
+				<div class="home-topics__grid">
+					<article class="topic-card" aria-labelledby="topic-structure-title">
+						<h3 class="topic-card__title" id="topic-structure-title">웹 문서 설계 연대기</h3>
+						<p class="topic-card__summary">HTML 태그의 탄생부터 반응형 레이아웃, 웹 컴포넌트까지. “문서를 어떻게 구조화할까?”라는 고민을 시대별로
+							정리했습니다.</p>
+						<a class="topic-card__link" href="web-structure.html">연대기 읽기</a>
+					</article>
+					<article class="topic-card" aria-labelledby="topic-styling-title">
+						<h3 class="topic-card__title" id="topic-styling-title">스타일링 진화 연대기</h3>
+						<p class="topic-card__summary">CSS, Flexbox, Grid, 디자인 시스템, 컨테이너 쿼리까지. 화면을 더 읽기 좋게 만들려는 실험을
+							모았습니다.</p>
+						<a class="topic-card__link" href="web-styling.html">연대기 읽기</a>
+					</article>
+					<article class="topic-card" aria-labelledby="topic-interaction-title">
+						<h3 class="topic-card__title" id="topic-interaction-title">브라우저 인터랙션 연대기</h3>
+						<p class="topic-card__summary">JavaScript, Ajax, SPA, Service Worker, WebAssembly, WebGPU까지. 웹이
+							앱처럼 반응해
+							온 순간을 따라갑니다.</p>
+						<a class="topic-card__link" href="web-interaction.html">연대기 읽기</a>
+					</article>
+					<article class="topic-card" aria-labelledby="topic-tools-title">
+						<h3 class="topic-card__title" id="topic-tools-title">웹 제작 도구 연대기</h3>
+						<p class="topic-card__summary">Dreamweaver와 FTP에서 npm, Webpack, Vite, AI 도구까지. “더 빠르게 만들고
+							배포하려면?”이라는 질문의
+							답을 모았습니다.</p>
+						<a class="topic-card__link" href="web-tools.html">연대기 읽기</a>
+					</article>
+				</div>
+			</section>
 
-				<section class="story-outro" aria-labelledby="story-outro-title">
-					<div class="section__head">
-						<h2 id="story-outro-title">어떤 기술도 혼자 자라지 않았어요</h2>
-						<p>
-							구조를 정돈한 사람이 있었기에 스타일링이 단단해졌고, 훌륭한 인터랙션이 나오자 제작 도구가 생겨났습니다. 네 갈래 중 어디서부터 읽어도,
-							다음 걸음은 다른 연대기가 알려 줄 거예요. 필요하다면 언제든 허브로 돌아와 새로운 길을 골라 보세요.
-						</p>
-					</div>
-				</section>
+			<section class="story-outro" aria-labelledby="story-outro-title">
+				<div class="section__head">
+					<h2 id="story-outro-title">어떤 기술도 혼자 자라지 않았어요</h2>
+					<p>
+						구조를 정돈한 사람이 있었기에 스타일링이 단단해졌고, 훌륭한 인터랙션이 나오자 제작 도구가 생겨났습니다. 네 갈래 중 어디서부터 읽어도,
+						다음 걸음은 다른 연대기가 알려 줄 거예요. 필요하다면 언제든 허브로 돌아와 새로운 길을 골라 보세요.
+					</p>
+				</div>
+			</section>
 
-				<section class="sources" id="sources" aria-labelledby="sources-title">
-					<div class="section__head">
-						<h2 id="sources-title">더 깊이 읽을 거리</h2>
-						<p>아래 자료는 네 가지 연대기를 설계할 때 참고한 대표 아카이브입니다.</p>
-					</div>
-					<ul class="source-list">
-						<li><a href="https://www.w3.org/History.html" target="_blank" rel="noopener">W3C · 웹 역사 연대표</a></li>
-						<li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
-						<li><a href="https://web.dev/" target="_blank" rel="noopener">web.dev · 모던 웹 가이드</a></li>
-						<li><a href="https://www.chromium.org/blink/" target="_blank" rel="noopener">Chromium Projects · Blink 업데이트</a></li>
-					</ul>
-				</section>
-			</main>
+			<section class="sources" id="sources" aria-labelledby="sources-title">
+				<div class="section__head">
+					<h2 id="sources-title">더 깊이 읽을 거리</h2>
+					<p>아래 자료는 네 가지 연대기를 설계할 때 참고한 대표 아카이브입니다.</p>
+				</div>
+				<ul class="source-list">
+					<li><a href="https://www.w3.org/History.html" target="_blank" rel="noopener">W3C · 웹 역사 연대표</a></li>
+					<li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+					<li><a href="https://web.dev/" target="_blank" rel="noopener">web.dev · 모던 웹 가이드</a></li>
+					<li><a href="https://www.chromium.org/blink/" target="_blank" rel="noopener">Chromium Projects ·
+							Blink
+							업데이트</a></li>
+				</ul>
+			</section>
+		</main>
 
-			<footer class="page__footer" role="contentinfo">
-				<p>© 2025 ArcherLab · Stories designed by ArcherLab.</p>
-				<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
-			</footer>
-		</div>
+		<footer class="page__footer" role="contentinfo">
+			<p>© 2025 ArcherLab · Stories designed by ArcherLab.</p>
+			<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
+		</footer>
+	</div>
 
-		<button type="button" class="scroll-top" data-scroll-top aria-label="맨 위로 이동" hidden>↑</button>
+	<button type="button" class="scroll-top" data-scroll-top aria-label="맨 위로 이동" hidden>↑</button>
 
-		<script src="assets/js/main.js" defer></script>
-		<script type="text/javascript" src="https://wcs.pstatic.net/wcslog.js"></script>
-		<script type="text/javascript">
-			if (!window.wcs_add) window.wcs_add = {};
-			window.wcs_add["wa"] = "134f4c428765360";
-			if (window.location.protocol !== 'file:' && window.wcs) {
-				wcs_do();
-			}
-		</script>
-	</body>
+	<script src="assets/js/main.js" defer></script>
+	<script type="text/javascript" src="https://wcs.pstatic.net/wcslog.js"></script>
+	<script type="text/javascript">
+		if (!window.wcs_add) window.wcs_add = {};
+		window.wcs_add["wa"] = "134f4c428765360";
+		if (window.location.protocol !== 'file:' && window.wcs) {
+			wcs_do();
+		}
+	</script>
+</body>
+
 </html>

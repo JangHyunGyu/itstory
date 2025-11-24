@@ -1,654 +1,769 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>ArcherLab IT Story · 운영체제 연대기</title>
-		<meta name="description" content="배치 모니터에서 모바일·클라우드 런타임까지 운영체제가 하드웨어와 사용자를 어떻게 연결해 왔는지 살펴봅니다." />
-		<meta property="og:title" content="ArcherLab IT Story · Operating Systems Timeline" />
-		<meta property="og:description" content="하드웨어를 배분하고 사용자 경험을 바꾼 운영체제의 결정적 장면을 연대순으로 정리했습니다." />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
-		<link rel="stylesheet" href="assets/css/style.css">
-		<link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/os.html" />
-		<link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/os-en.html" />
-		<link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/os-en.html" />
-		<link rel="canonical" href="https://itstory.archerlab.dev/os.html" />
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
-		<script defer src="assets/js/ga.js"></script>
-	</head>
-	<body>
-		<div class="page">
-			<header class="page__header" role="banner">
-				<div class="page__header-left">
-					<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
-						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
-						<span class="page__brand-label">ArcherLab Chronicle</span>
-					</a>
-					<nav class="page__topic-nav" aria-label="주제 전환">
-						<a href="index.html">홈 허브</a>
-						<a href="computers.html">컴퓨터 연대기</a>
-						<a href="networks.html">네트워크 연대기</a>
-						<a href="databases.html">데이터베이스 연대기</a>
-						<a href="os.html" class="is-current">운영체제 연대기</a>
-						<div class="page__topic-nav-group" role="group" aria-label="웹 제작 연대기">
-							<span class="page__topic-nav-label">웹 제작 연대기</span>
-							<a href="web.html" data-topic-role="parent">웹 제작 연대기 허브</a>
-							<a href="web-structure.html" data-topic-role="child">웹 문서 설계 연대기</a>
-							<a href="web-styling.html" data-topic-role="child">스타일링 진화 연대기</a>
-							<a href="web-interaction.html" data-topic-role="child">브라우저 인터랙션 연대기</a>
-							<a href="web-tools.html" data-topic-role="child">웹 제작 도구 연대기</a>
-						</div>
-						<a href="was.html">웹 서버 연대기</a>
-					</nav>
-				</div>
-				<nav class="page__nav" aria-label="섹션 탐색">
-					<a href="#timeline">연도 보기</a>
-					<a href="#sources">참고</a>
-					<div class="language-switch">
-						<label class="sr-only" for="language-select-os">언어 선택</label>
-						<select id="language-select-os" data-language-switch>
-							<option value="os.html" data-language-code="ko" selected>한국어</option>
-							<option value="os-en.html" data-language-code="en">English</option>
-						</select>
-					</div>
-				</nav>
-			</header>
 
-			<main class="page__main" id="main" role="main">
-				<section class="timeline-hero" aria-labelledby="timeline-title">
-					<div class="timeline-hero__head">
-						<p class="hero__eyebrow">Operating System Story for Builders</p>
-						<h1 class="timeline-hero__title" id="timeline-title">배치 모니터에서 주머니 속 운영체제까지, 사람이 원하는 경험을 지켜 온 이야기</h1>
-						<p class="timeline-hero__lede">
-							맨체스터 연구실의 야간 근무자는 Baby 시험기 앞에서 “부트스트랩 몇 줄만 올리면 알아서 돌아갈까요?”라고 중얼거렸고, 디트로이트 GM 밤조는 “테이프만 갈다 보면 해 뜨겠다”며 모니터 프로그램을 꿈꿨습니다. NASA와 대학 연구실은 한 대의 기계를 여러 사람이 나눠 쓰는 타임셰어링을 시험하며 “순서를 공평하게 돌릴 방법”을 찾고 있었습니다.
-						</p>
-						<p class="timeline-hero__lede">
-							이후 IBM은 System/360을 내놓으며 “기종이 달라도 같은 OS를 쓰게 해 드립니다”라고 약속했고, 벨 연구소 연구원들은 UNIX를 만들며 “작은 도구를 이어 붙이면 복잡한 일도 풀립니다”라고 설득했습니다. MS-DOS와 Macintosh, Windows 95는 집과 사무실을 같은 UI로 엮었고, 리눅스 커뮤니티는 “커널은 같이 고치는 것”이라는 문화를 세웠습니다. 2000년대 이후 Mac OS X, iPhone OS, Android, Docker, Kubernetes는 손안과 클라우드에서 같은 경험을 요구하며 운영체제의 영역을 계속 넓혔습니다.
-						</p>
-						<p class="timeline-hero__lede">
-							아래 연표를 누르면 그 시절 운영체제가 무엇을 걱정했고 어떤 해법을 내놓았는지 이야기로 살펴볼 수 있습니다. 낯선 용어가 나와도 괜찮아요. 각 모달이 사람과 상황, 남은 교훈을 차근차근 풀어 줍니다.
-						</p>
-					</div>
-				</section>
-
-				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
-					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">버튼을 선택하면 같은 화면에서 자세한 이야기를 읽을 수 있습니다.</p>
-
-					<section class="timeline-group" aria-labelledby="decade-1940 topic-1940">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1940">1940s</p>
-							<h3 class="timeline-group__topic" id="topic-1940">저장 프로그램 시대를 여는 첫 부트스트랩</h3>
-							<p class="timeline-group__summary">릴레이 배선 대신 짧은 초기 명령을 메모리에 실어 올려, 전자식 컴퓨터가 스스로 프로그램을 불러오고 반복 실행할 수 있는 기반을 만들었습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1948-manchester">
-								<span class="timeline-event__year">1948</span>
-								<span class="timeline-event__label">Manchester Baby 부트스트랩</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1949-edsac">
-								<span class="timeline-event__year">1949</span>
-								<span class="timeline-event__label">EDSAC 초기 명령</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-1950 topic-1950">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1950">1950s</p>
-							<h3 class="timeline-group__topic" id="topic-1950">야간 조를 도운 배치 모니터</h3>
-							<p class="timeline-group__summary">메인프레임 운영자들은 테이프를 갈아 끼우지 않아도 되도록 작업을 자동으로 줄 세우고, 공통 절차를 모니터 프로그램에 담았습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1956-gmnaa">
-								<span class="timeline-event__year">1956</span>
-								<span class="timeline-event__label">GM-NAA I/O 모니터</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1959-fms">
-								<span class="timeline-event__year">1959</span>
-								<span class="timeline-event__label">Fortran Monitor System</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-1960 topic-1960">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1960">1960s</p>
-							<h3 class="timeline-group__topic" id="topic-1960">타임셰어링과 이식성 실험</h3>
-							<p class="timeline-group__summary">System/360은 “하드웨어가 달라도 같은 OS”를 약속했고, UNIX는 작은 도구를 조합하며 이식성이 있는 커널을 선보였습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1964-os360">
-								<span class="timeline-event__year">1964</span>
-								<span class="timeline-event__label">IBM OS/360 발표</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1969-unix">
-								<span class="timeline-event__year">1969</span>
-								<span class="timeline-event__label">UNIX 커널 공개</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-1970 topic-1970">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1970">1970s</p>
-							<h3 class="timeline-group__topic" id="topic-1970">마이크로컴퓨터와 가상 메모리 확장</h3>
-							<p class="timeline-group__summary">작은 컴퓨터도 디스크와 여러 작업을 다룰 수 있게 CP/M과 VMS가 공통 인터페이스와 가상 메모리를 보급했습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1974-cpm">
-								<span class="timeline-event__year">1974</span>
-								<span class="timeline-event__label">CP/M 확산</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1978-vms">
-								<span class="timeline-event__year">1978</span>
-								<span class="timeline-event__label">VAX/VMS 출시</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-1980 topic-1980">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1980">1980s</p>
-							<h3 class="timeline-group__topic" id="topic-1980">PC 보급과 그래픽 데스크톱</h3>
-							<p class="timeline-group__summary">MS-DOS가 공통 규칙을 세우고, 매킨토시가 아이콘과 마우스를 대중화하며 PC가 일상 도구가 되었습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1981-msdos">
-								<span class="timeline-event__year">1981</span>
-								<span class="timeline-event__label">MS-DOS 1.0</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1984-system1">
-								<span class="timeline-event__year">1984</span>
-								<span class="timeline-event__label">맥킨토시 System 1</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1990">1990s</p>
-							<h3 class="timeline-group__topic" id="topic-1990">오픈소스와 일상형 OS</h3>
-							<p class="timeline-group__summary">리눅스 커뮤니티가 커널을 함께 고쳤고, Windows 95는 스타트 버튼으로 가정과 사무실 모두를 겨냥했습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1991-linux">
-								<span class="timeline-event__year">1991</span>
-								<span class="timeline-event__label">리눅스 커널 발표</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1995-win95">
-								<span class="timeline-event__year">1995</span>
-								<span class="timeline-event__label">Windows 95 출시</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2000">2000s</p>
-							<h3 class="timeline-group__topic" id="topic-2000">UNIX 감성과 모바일 도약</h3>
-							<p class="timeline-group__summary">Mac OS X는 UNIX와 디자인을 묶었고, iPhone OS와 Android는 터치와 앱 생태계를 운영체제 수준에서 설계했습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2001-macosx">
-								<span class="timeline-event__year">2001</span>
-								<span class="timeline-event__label">Mac OS X 출시</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2007-ios">
-								<span class="timeline-event__year">2007</span>
-								<span class="timeline-event__label">iPhone OS 1 공개</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2008-android">
-								<span class="timeline-event__year">2008</span>
-								<span class="timeline-event__label">Android 1.0 공개</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2010">2010s</p>
-							<h3 class="timeline-group__topic" id="topic-2010">컨테이너와 클러스터 운영</h3>
-							<p class="timeline-group__summary">Docker와 Kubernetes가 “이미지를 묶어 옮기고, 원하는 상태를 선언하면 제어 루프가 맞춰 준다”는 발상을 일상 도구로 만들었습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2013-docker">
-								<span class="timeline-event__year">2013</span>
-								<span class="timeline-event__label">Docker 오픈소스화</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2015-kubernetes">
-								<span class="timeline-event__year">2015</span>
-								<span class="timeline-event__label">Kubernetes 1.0</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2020">2020s</p>
-							<h3 class="timeline-group__topic" id="topic-2020">실리콘 전환과 하이브리드 경험</h3>
-							<p class="timeline-group__summary">맞춤형 칩, 가상 데스크톱, 클라우드 PC를 한 화면에서 조율하며 “어디에서 실행돼도 같은 느낌”을 주려는 운영체제가 등장했습니다.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2020-big-sur">
-								<span class="timeline-event__year">2020</span>
-								<span class="timeline-event__label">Apple Silicon과 macOS Big Sur</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2021-windows11">
-								<span class="timeline-event__year">2021</span>
-								<span class="timeline-event__label">Windows 11 출시</span>
-							</button>
-						</div>
-					</section>
-				</section>
-
-				<section class="sources" id="sources" aria-labelledby="sources-title">
-					<div class="section__head">
-						<h2 id="sources-title">더 깊이 읽을 거리</h2>
-						<p>운영체제가 배치 작업, 타임셰어링, 모바일과 클라우드를 품어 가는 과정을 기록한 1차 자료와 회고를 모았습니다.</p>
-					</div>
-					<ul class="source-list">
-						<li><a href="https://www.cs.manchester.ac.uk/about-us/history/baby/" target="_blank" rel="noopener">University of Manchester · Baby SSEM</a></li>
-						<li><a href="https://www.cl.cam.ac.uk/conference/edsac50/" target="_blank" rel="noopener">University of Cambridge · EDSAC Initial Orders</a></li>
-						<li><a href="https://www.computerhistory.org/revolution/mainframe-computers/7/169" target="_blank" rel="noopener">Computer History Museum · GM-NAA I/O</a></li>
-						<li><a href="https://www.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP105.html" target="_blank" rel="noopener">IBM Archives · System/360</a></li>
-						<li><a href="https://www.bell-labs.com/usr/dmr/www/hist.html" target="_blank" rel="noopener">Bell Labs · UNIX History</a></li>
-						<li><a href="https://computerhistory.org/blog/the-rise-and-fall-of-digital-research/" target="_blank" rel="noopener">Computer History Museum · CP/M Story</a></li>
-						<li><a href="https://android-developers.googleblog.com/2008/09/android-10-launched.html" target="_blank" rel="noopener">Android Developers Blog · Android 1.0</a></li>
-						<li><a href="https://www.apple.com/kr/newsroom/2020/11/apple-unleashes-m1/" target="_blank" rel="noopener">Apple Newsroom · Apple Silicon</a></li>
-					</ul>
-				</section>
-			</main>
-
-			<footer class="page__footer" role="contentinfo">
-				<p>© 2025 ArcherLab · 운영체제를 기록합니다.</p>
-				<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
-			</footer>
-		</div>
-
-		<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
-			<div class="modal__overlay" data-modal-close></div>
-			<div class="modal__window" role="document" tabindex="-1">
-				<button class="modal__close" type="button" aria-label="레이어 닫기" data-modal-close>&times;</button>
-				<div class="modal__content"></div>
-			</div>
-		</div>
-
-		<template id="event-1948-manchester">
-			<article class="event-detail" aria-labelledby="event-1948-manchester-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1948</p>
-					<h2 id="event-1948-manchester-title">Manchester Baby, 저장 프로그램 부트스트랩을 증명하다</h2>
-					<p class="event-detail__summary">맨체스터 연구진은 “초기 명령 몇 줄이면 충분하다”는 믿음을 Baby 실험으로 증명했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>1948년 6월 21일 새벽, 프레더릭 윌리엄스와 톰 킬번은 Williams-Kilburn 관 앞에서 토글 스위치를 하나씩 내리며 “이제 부트스트랩을 올려 볼까요?”라고 속삭였습니다. 길지 않은 초기 명령이 메모리에 올라가자 Baby는 스스로 다음 코드 조각을 불러오기 시작했습니다.</p>
-						<p>기계가 가장 큰 약수를 계산하는 동안 연구 어시스턴트는 노트에 “기계가 자기 프로그램을 읽어 들인 첫날”이라고 적었습니다. 전선을 갈아끼우던 시대가 끝났다는 사실을 모두가 체감한 순간이었습니다.</p>
-						<p>Baby는 단순한 데모였지만, 전자식 컴퓨터가 "데이터와 명령을 같은 저장장치에 둔다"는 폰 노이만 구조를 실전에서 증명했습니다. 연구자들은 이제 새로운 알고리즘을 배선 대신 소프트웨어로 교체할 수 있다는 확신을 얻었습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Baby가 보여 준 짧은 초기 로더 → 본 프로그램 순서는 훗날 모든 컴퓨터가 따르는 초기 프로그램 적재(IPL) 관행으로 굳었고, 운영체제는 그 습관 위에서 성장했습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1949-edsac">
-			<article class="event-detail" aria-labelledby="event-1949-edsac-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1949</p>
-					<h2 id="event-1949-edsac-title">EDSAC Initial Orders, 표준 부트스트랩과 루틴을 묶다</h2>
-					<p class="event-detail__summary">케임브리지 팀은 31줄짜리 Initial Orders로 “테이프만 넣으면 됩니다”라는 약속을 지켰습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>케임브리지 EDSAC 실험실에서 운영자는 전원을 켠 뒤 스위치를 차례대로 내리고 “Initial Orders, 준비 완료”라고 외쳤습니다. 연구자가 종이테이프 뭉치를 건네면 기계는 곧바로 프로그램을 메모리에 복사했습니다.</p>
-						<p>제곱근, 로그 같은 서브루틴이 담긴 라이브러리 테이프를 꺼낼 때면 모두가 한숨 돌렸습니다. 필요한 계산을 골라 넣기만 하면 결과가 나왔고, 실행 순서와 출력 형식은 항상 일정했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Initial Orders와 라이브러리 조합은 “작은 모니터 → 로더 → 공용 루틴”이라는 흐름을 정착시켜 이후 모니터 프로그램과 운영체제의 기본 구조가 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1956-gmnaa">
-			<article class="event-detail" aria-labelledby="event-1956-gmnaa-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1956</p>
-					<h2 id="event-1956-gmnaa-title">GM-NAA I/O, 배치 작업을 자동으로 넘기다</h2>
-					<p class="event-detail__summary">GM과 NAA 야간조는 GM-NAA I/O 덕에 “테이프만 갈다 날 새네”라는 하소연을 접을 수 있었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>디트로이트 연구소의 야간조 운영자는 카드 덱을 의자에 쌓아 두고 “이번에는 모니터가 알아서 넘겨줄까?”라며 GM-NAA I/O를 로드했습니다. 작업이 끝날 때마다 모니터가 테이프를 갈아 끼우고 다음 덱을 불러오자 밤새 토글을 누를 일이 줄었습니다.</p>
-						<p>공장과 연구소에서 보내 온 작업 카드에는 “프린터 A에 출력” 같은 지시가 적혀 있었고, 모니터는 그 순서를 그대로 실행했습니다. 운영자는 오류 카드만 모아두면 됐고, 계산은 끊김 없이 이어졌습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>GM-NAA I/O가 남긴 작업 제어 카드와 자동 장치 초기화 개념은 이후 배치 운영체제와 오늘날 배치 스케줄러 설계의 출발점이 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1959-fms">
-			<article class="event-detail" aria-labelledby="event-1959-fms-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1959</p>
-					<h2 id="event-1959-fms-title">Fortran Monitor System, 코드 재사용을 지원하다</h2>
-					<p class="event-detail__summary">FMS는 “컴파일부터 출력까지 한 번에 돌려 드려요”라며 공유 매크로를 키트처럼 묶었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>SHARE 회원들은 서로 주고받던 매크로 카드 묶음을 IBM 본사 회의실 책상 위에 올려놓고 “한 패키지로 묶어 주세요”라고 부탁했습니다. 그렇게 만들어진 FMS는 카드 앞부분에 제어문을 붙이면 컴파일, 링크, 실행, 출력까지 자동으로 이어주었습니다.</p>
-						<p>야간조 운영자는 “이번엔 과학 계산 묶음이네”라며 제어문을 확인하고 모니터를 시작하기만 하면 됐습니다. 자주 쓰는 라이브러리는 공용 테이프에 등록되어 어느 팀이든 동일한 결과를 받을 수 있었습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>FMS가 보여 준 장치 독립 입출력 개념은 OS/360의 JCL과 오늘날 드라이버 계층 설계로 이어졌습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1964-os360">
-			<article class="event-detail" aria-labelledby="event-1964-os360-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1964</p>
-					<h2 id="event-1964-os360-title">System/360, 하나의 OS로 가족 제품을 지원하다</h2>
-					<p class="event-detail__summary">System/360은 “기계를 바꿔도 다시 코딩하지 마세요”라는 약속으로 호환성의 무게를 보여 줬습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>OS/360 브리핑에서 IBM 영업 담당자는 고객에게 “기종 번호가 달라도 같은 API를 보장합니다”라고 장담했습니다. 개발팀은 커널과 I/O 제어, 장치 드라이버를 층처럼 나눠 어디서든 같은 호출 규칙을 제공했습니다.</p>
-						<p>초기 도입 기업은 예산 회의에서 “올해는 40번대, 내년엔 60번대로 올리자”라며 유지보수 계획을 세웠습니다. 프로그램을 다시 작성할 필요가 없다는 사실이 구매 결정을 바꿨습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>OS/360이 세운 안정적 시스템 호출 계약은 이후 메인프레임뿐 아니라 POSIX, 클라우드 인스턴스 호환 전략의 뿌리가 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1969-unix">
-			<article class="event-detail" aria-labelledby="event-1969-unix-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1969</p>
-					<h2 id="event-1969-unix-title">UNIX, 작은 도구를 조합하는 철학을 심다</h2>
-					<p class="event-detail__summary">UNIX는 “작은 도구를 이어 붙이면 된다”는 철학으로 파일처럼 다루는 세상을 열었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>벨 연구소 지하실에서 켄 톰프슨과 데니스 리치는 터미널 옆 커피잔을 옮기며 “모든 것을 파일처럼 다룹시다”라고 의견을 모았습니다. 파이프가 연결되자 간단한 명령 두세 개만으로도 긴 작업을 처리할 수 있게 되었습니다.</p>
-						<p>코드가 대학으로 퍼지자 학생들은 “우린 PDP-11이라 조금 다르지만, C로 고치면 되겠지?”라며 직접 포팅을 시도했습니다. 서로가 보낸 패치가 커널을 빠르게 진화시켰고, 작은 도구를 조합하는 습관이 문화로 굳었습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>“모든 것은 파일”과 작은 명령의 조합이라는 원칙은 오늘날 쉘, POSIX, 컨테이너 이미지까지 이어지는 운영체제 사고방식의 기본값이 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1974-cpm">
-			<article class="event-detail" aria-labelledby="event-1974-cpm-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1974</p>
-					<h2 id="event-1974-cpm-title">CP/M, 마이크로컴퓨터용 표준 OS</h2>
-					<p class="event-detail__summary">CP/M은 “BIOS만 맞추면 앱이 돌아요”라며 마이크로컴퓨터에 공동 언어를 줬습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>게리 킬달은 제조사 대표들과 만나 “여러분 기계마다 디스크 호출이 다르잖아요. 이 밑단만 맞춰 주세요.”라고 설득했습니다. CP/M은 공통 부분인 BDOS와 기기별 BIOS를 분리해 누구나 자신의 하드웨어를 빠르게 붙일 수 있게 했습니다.</p>
-						<p>워드스타를 들고 방문한 영업사원은 “이 플로피만 꽂으면 됩니다”라며 여러 회사 사무실을 돌았습니다. 같은 소프트웨어가 서로 다른 기기에서 같은 화면을 보여 주자 기업은 자신 있게 주문서를 썼습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>BDOS/BIOS 분리 구조는 이후 PC BIOS, HAL, 현대 운영체제의 드라이버 계층에 그대로 살아남았습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1978-vms">
-			<article class="event-detail" aria-labelledby="event-1978-vms-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1978</p>
-					<h2 id="event-1978-vms-title">VAX/VMS, 가상 메모리와 클러스터를 대중화</h2>
-					<p class="event-detail__summary">VAX/VMS는 “중형 컴퓨터도 24시간 버틸 수 있다”는 자신감을 주며 가상 메모리와 클러스터를 확산시켰습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>DEC 엔지니어는 시연장에서 VAX 콘솔을 가리키며 “지금 이 프로그램은 실제 메모리보다 더 큰 데이터를 쓰고 있습니다”라고 설명했습니다. VMS는 페이지를 디스크로 넘겨 프로그램이 물리 메모리 한계를 의식하지 않게 했습니다.</p>
-						<p>야간 병원 전산실에서는 VMScluster를 테스트하며 “한 대가 내려가면 다른 장비가 이어받습니다”라는 알림음을 들었습니다. 운영팀은 메인프레임 없이도 24시간 서비스를 유지할 수 있다는 사실에 안도했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>VMS의 보호 링, 레코드 관리, 클러스터 API는 이후 Windows NT와 하이퍼바이저 설계의 교과서가 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1981-msdos">
-			<article class="event-detail" aria-labelledby="event-1981-msdos-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1981</p>
-					<h2 id="event-1981-msdos-title">MS-DOS, IBM PC 생태계를 단단히 묶다</h2>
-					<p class="event-detail__summary">MS-DOS는 “명령은 같고 부품만 바뀝니다”라며 IBM PC 호환 생태계를 묶었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>마이크로소프트는 IBM과의 회의에서 “표준 BIOS 호출을 문서로 박아 두면 제조사들이 따라올 겁니다”라고 제안했습니다. 곧 OEM들은 자신만의 하드웨어를 달면서도 MS-DOS 명령과 API를 그대로 유지했습니다.</p>
-						<p>사용자는 <code>DIR</code>과 <code>COPY</code>만 익히면 어떤 호환 기종에서도 같은 방식으로 파일을 관리할 수 있었습니다. 회사와 가정 모두 “DOS면 된다”는 인식을 공유하기 시작했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>MS-DOS가 남긴 BIOS 인터럽트 규칙과 .EXE 포맷은 이후 Windows 전환기의 하위호환 전략을 지탱했습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1984-system1">
-			<article class="event-detail" aria-labelledby="event-1984-system1-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1984</p>
-					<h2 id="event-1984-system1-title">맥킨토시 System 1, 그래픽 UI 대중화</h2>
-					<p class="event-detail__summary">맥킨토시 System 1은 “아이콘을 옮기면 돼요”라는 말로 그래픽 인터페이스를 일상어로 만들었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>1984년 데모장에서 애플 직원은 쓰레기통 아이콘을 가리키며 “필요 없으면 여기로 드래그하세요”라고 안내했습니다. 참가자들은 마우스를 처음 잡았지만 금세 폴더를 열고 메뉴를 눌렀습니다.</p>
-						<p>애플이 배포한 휴먼 인터페이스 가이드라인 덕분에 외부 개발자도 같은 메뉴, 같은 알림창을 사용했습니다. 사용자는 낯선 프로그램을 켜도 길 잃을 걱정이 줄었습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>System 1의 이벤트 루프, QuickDraw, 리소스 매니저 구조는 이후 데스크톱 UI 프레임워크 설계의 기본 문법이 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1991-linux">
-			<article class="event-detail" aria-labelledby="event-1991-linux-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1991</p>
-					<h2 id="event-1991-linux-title">리눅스, 누구나 커널에 기여하는 시대</h2>
-					<p class="event-detail__summary">리눅스는 “취미로 시작했는데 같이 해요?”라는 글 하나로 커널 개발을 공동 작업으로 바꿨습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>리누스 토르발스는 컴퓨터 게시판에 “386용 커널을 취미로 만들고 있는데, 아이디어 있나요?”라는 글을 올렸습니다. 며칠 만에 디스크 드라이버, 스케줄러 패치, 파일시스템 제안이 메일함으로 쏟아졌습니다.</p>
-						<p>자유롭게 배포된 소스코드는 누구나 읽고 고친 뒤 다시 공유할 수 있었습니다. 대학 서버실, 통신사, 취미 동호회가 같은 커널을 함께 다듬으며 전 세계가 한 팀처럼 움직였습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>GPL 라이선스와 메일링 리스트 리뷰 문화는 오늘날까지 이어지는 오픈소스 운영체제 개발 방식의 골격을 만들었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-1995-win95">
-			<article class="event-detail" aria-labelledby="event-1995-win95-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1995</p>
-					<h2 id="event-1995-win95-title">Windows 95, 시작 버튼으로 생활을 묶다</h2>
-					<p class="event-detail__summary">Windows 95는 “시작 버튼만 누르면 됩니다”라는 안내로 집과 사무실을 같은 OS로 엮었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>Windows 95 발표회에서 스티브 발머는 초록색 시작 버튼을 눌러 보이며 “여기만 누르면 필요한 게 다 나옵니다”라고 웃었습니다. 플러그앤플레이가 새 하드웨어를 찾아 드라이버를 깔아 주자 사용자들은 겁낼 일이 줄었습니다.</p>
-						<p>회사에서는 네트워크 드라이브를 열고, 집에서는 사진 정리와 게임을 같은 화면에서 즐겼습니다. 하나의 데스크톱 언어가 업무와 생활을 모두 연결한 순간이었습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>시작 메뉴, 작업 표시줄, Win32 API는 이후 Windows NT 계열과 현대 데스크톱 UX의 기본 패턴으로 남았습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2001-macosx">
-			<article class="event-detail" aria-labelledby="event-2001-macosx-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2001</p>
-					<h2 id="event-2001-macosx-title">Mac OS X, UNIX 안정성과 디자인 결합</h2>
-					<p class="event-detail__summary">Mac OS X는 “UNIX 뼈대에 디자인을 더했습니다”라며 안정성과 감성을 동시에 붙잡았습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>WWDC 무대에서 애플은 반짝이는 Aqua 창을 띄우면서도 터미널을 열어 <code>ls</code>를 실행해 보였습니다. 디자이너와 개발자가 같은 OS에서 각자 원하는 장점을 확인한 순간이었습니다.</p>
-						<p>Carbon과 Cocoa가 함께 제공되면서 기존 Mac 앱은 천천히 이전하고 새 앱은 현대적인 API를 채택했습니다. 사용자는 시스템이 멈추지 않는다는 사실에 안심했고, 개발자는 POSIX 도구를 마음껏 활용했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Mac OS X는 “GUI 위의 UNIX” 모델을 대중화해 이후 iOS, watchOS까지 이어지는 애플 운영체제 가족의 공통 기반이 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2007-ios">
-			<article class="event-detail" aria-labelledby="event-2007-ios-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2007</p>
-					<h2 id="event-2007-ios-title">iPhone OS 1, 터치 퍼스트 인터페이스</h2>
-					<p class="event-detail__summary">iPhone OS 1은 “손가락만으로 다 할 수 있어요”라는 약속으로 터치 퍼스트 시대를 열었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>스티브 잡스는 무대에서 “스타일러스 필요 없습니다. 우리가 이미 10개나 갖고 있죠.”라며 손가락을 펼쳐 보였습니다. 홈 화면 아이콘과 멀티터치 제스처는 자연스러운 사용법을 스스로 설명했습니다.</p>
-						<p>소프트 키보드가 문장을 자동 완성하고, 스와이프가 화면을 넘겼습니다. 당시 스마트폰을 쓰던 사람들은 “버튼 없이도 되네?”라며 새로운 입력 방식을 금세 받아들였습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>멀티터치 UI와 샌드박스 구조는 모바일 OS 보안과 UX의 기본 공식을 만들었고, 이후 App Store 생태계가 자라날 발판이 되었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2008-android">
-			<article class="event-detail" aria-labelledby="event-2008-android-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2008</p>
-					<h2 id="event-2008-android-title">Android 1.0, 오픈 모바일 플랫폼</h2>
-					<p class="event-detail__summary">Android 1.0은 “누구나 같은 SDK로 폰을 만들 수 있다”며 오픈 플랫폼을 현실로 만들었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>구글은 오픈 핸드셋 얼라이언스 회의에서 “이 SDK와 API 문서만 따르면 누구나 Android 폰을 출시할 수 있습니다”라고 선언했습니다. 제조사와 통신사는 각자 원하는 스킨을 얹으면서도 공통 프레임워크를 공유했습니다.</p>
-						<p>초기 개발자는 Dalvik VM 위에서 돌아가는 앱을 마켓에 올려 시험했습니다. 알 수 없는 출처 설치 옵션은 실험가들에게 열린 놀이터를 제공했습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Android가 도입한 인텐트, APK 패키징, 권한 모델은 다양한 제조사와 서비스가 공존하는 모바일 생태계의 표준을 세웠습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2013-docker">
-			<article class="event-detail" aria-labelledby="event-2013-docker-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2013</p>
-					<h2 id="event-2013-docker-title">Docker, 컨테이너를 일상 도구로</h2>
-					<p class="event-detail__summary">Docker는 “이미지 한 통으로 환경을 옮기세요”라는 구호로 컨테이너를 일상 도구로 바꿨습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>dotCloud 시연에서 개발자는 <code>docker run</code> 명령을 입력하며 “이제 배포 체크리스트 대신 이미지를 공유하세요”라고 설명했습니다. 코드와 라이브러리가 하나의 패키지로 묶이자 “내 컴퓨터에서는 되는데”라는 말이 줄었습니다.</p>
-						<p>운영팀은 테스트에서 성공한 이미지를 그대로 프로덕션에 띄웠고, 클라우드 업체는 곧 관리형 컨테이너 서비스를 내놓았습니다. 운영체제는 격리와 실행에 집중하고, 환경은 이미지가 책임지는 시대가 열렸습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>레이어드 이미지, 레지스트리, Compose 워크플로는 DevOps 문화와 플랫폼 엔지니어링 도구의 핵심 구성 요소로 자리잡았습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2015-kubernetes">
-			<article class="event-detail" aria-labelledby="event-2015-kubernetes-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2015</p>
-					<h2 id="event-2015-kubernetes-title">Kubernetes 1.0, 선언형 클러스터 운영</h2>
-					<p class="event-detail__summary">Kubernetes 1.0은 “원하는 상태만 적어 주세요”라며 클러스터 운영을 선언형으로 바꿨습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>구글·레드햇·CoreOS는 CNCF 행사에서 “이 YAML만 적으면 제어 루프가 나머지를 맞춥니다”라고 시연했습니다. ReplicaSet과 서비스가 스스로 상태를 조정하자 운영자는 서버 한 대 한 대를 돌보지 않아도 됐습니다.</p>
-						<p>기업은 쿠버네티스를 클러스터 공용 언어로 받아들였고, 클라우드 제공자는 관리형 서비스를 앞다퉈 출시했습니다. 운영체제의 역할이 단일 노드를 넘어서 플릿 전체를 조율하는 일로 확장되었습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>선언형 상태와 재조정 루프라는 개념은 오늘날 인프라스트럭처 코드와 서비스 메시 등 클라우드 네이티브 스택 전반에 스며들었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2020-big-sur">
-			<article class="event-detail" aria-labelledby="event-2020-big-sur-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2020</p>
-					<h2 id="event-2020-big-sur-title">macOS Big Sur, Apple Silicon 전환의 교두보</h2>
-					<p class="event-detail__summary">macOS Big Sur는 “칩이 바뀌어도 앱은 그대로”라는 전환 매뉴얼로 Apple Silicon 시대를 열었습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>애플은 온라인 이벤트에서 M1 맥북을 열어 기존 인텔용 앱을 실행하며 “Rosetta 2가 실시간으로 번역합니다”라고 설명했습니다. 사용자는 업데이트 없이도 익숙한 도구를 계속 쓸 수 있었습니다.</p>
-						<p>Xcode는 유니버설 바이너리를 기본으로 지원해 개발자가 한 번 빌드로 두 아키텍처를 동시에 준비했습니다. 배터리 수명과 즉시 깨우기 경험은 하드웨어와 OS를 동시에 설계할 때 얻는 장점을 보여 줬습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>리소스티어 보안, 유니버설 바이너리, 실시간 번역 조합은 대규모 아키텍처 전환 전략의 교본이 되었고 다른 플랫폼 설계에도 영감을 주었습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<template id="event-2021-windows11">
-			<article class="event-detail" aria-labelledby="event-2021-windows11-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2021</p>
-					<h2 id="event-2021-windows11-title">Windows 11, 로컬과 클라우드를 잇는 데스크톱</h2>
-					<p class="event-detail__summary">Windows 11은 “내 PC든 클라우드든 익숙하게 쓰세요”라며 하이브리드 업무의 운영체제 틀을 제시했습니다.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<p>Windows 11 출시 행사에서 마이크로소프트는 가운데 정렬된 시작 메뉴를 보여 주며 “터치든 마우스든 같은 감각으로 쓰실 수 있습니다”라고 설명했습니다. TPM과 보안 부팅이 기본값이 되자 IT 부서는 배포 계획을 자신 있게 세울 수 있었습니다.</p>
-						<p>WSLg는 리눅스 GUI 앱을 윈도우 창 옆에 띄웠고, Windows 365는 회사가 클라우드 PC를 배포하게 했습니다. 사용자에게는 집과 사무실, 원격 환경이 하나의 데스크톱처럼 이어졌습니다.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>하드웨어 기반 보안과 하이브리드 관리 기능은 운영체제가 로컬 장치와 원격 리소스를 동시에 조율해야 한다는 새로운 기본을 세웠습니다.</p>
-					</div>
-				</section>
-			</article>
-		</template>
-
-		<button type="button" class="scroll-top" data-scroll-top aria-label="맨 위로" hidden>↑</button>
-
-		<script src="assets/js/main.js" defer></script>
-		<script type="text/javascript" src="https://wcs.pstatic.net/wcslog.js"></script>
-		<script type="text/javascript">
-			if (!window.wcs_add) window.wcs_add = {};
-			window.wcs_add["wa"] = "134f4c428765360";
-			if (window.location.protocol !== 'file:' && window.wcs) {
-				wcs_do();
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ArcherLab IT Story · 운영체제 연대기</title>
+	<meta name="description" content="배치 모니터에서 모바일·클라우드 런타임까지 운영체제가 하드웨어와 사용자를 어떻게 연결해 왔는지 살펴봅니다." />
+	<meta name="keywords"
+		content="운영체제 역사, 배치 시스템, 타임셰어링, UNIX, Linux, Windows, macOS, iOS, Android, Docker, Kubernetes, ArcherLab" />
+	<meta property="og:title" content="ArcherLab IT Story · Operating Systems Timeline" />
+	<meta property="og:description" content="하드웨어를 배분하고 사용자 경험을 바꾼 운영체제의 결정적 장면을 연대순으로 정리했습니다." />
+	<meta property="og:image" content="https://itstory.archerlab.dev/assets/images/archerlab_logo.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/os.html" />
+	<link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/os-en.html" />
+	<link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/os-en.html" />
+	<link rel="canonical" href="https://itstory.archerlab.dev/os.html" />
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
+	<script defer src="assets/js/ga.js"></script>
+	<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@graph": [
+					{
+						"@type": "BreadcrumbList",
+						"@id": "https://itstory.archerlab.dev/os.html#breadcrumb",
+						"itemListElement": [
+							{
+								"@type": "ListItem",
+								"position": 1,
+								"name": "IT Story",
+								"item": "https://itstory.archerlab.dev/"
+							},
+							{
+								"@type": "ListItem",
+								"position": 2,
+								"name": "운영체제 연대기",
+								"item": "https://itstory.archerlab.dev/os.html"
+							}
+						]
+					},
+					{
+						"@type": "CreativeWorkSeries",
+						"@id": "https://itstory.archerlab.dev/os.html#series",
+						"name": "운영체제 연대기",
+						"url": "https://itstory.archerlab.dev/os.html",
+						"inLanguage": "ko-KR",
+						"description": "배치 모니터에서 모바일·클라우드 런타임까지 운영체제가 하드웨어와 사용자를 어떻게 연결해 왔는지 살펴봅니다.",
+						"publisher": {
+							"@type": "Organization",
+							"name": "ArcherLab",
+							"logo": {
+								"@type": "ImageObject",
+								"url": "https://itstory.archerlab.dev/assets/images/archerlab_mini_logo.png"
+							}
+						},
+						"isPartOf": {
+							"@id": "https://itstory.archerlab.dev/#website"
+						}
+					}
+				]
 			}
 		</script>
-	</body>
+</head>
+
+<body>
+	<div class="page">
+		<header class="page__header" role="banner">
+			<div class="page__header-left">
+				<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
+					<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo"
+						loading="lazy">
+					<span class="page__brand-label">ArcherLab Chronicle</span>
+				</a>
+				<nav class="page__topic-nav" aria-label="주제 전환">
+					<a href="index.html">홈 허브</a>
+					<a href="computers.html">컴퓨터 연대기</a>
+					<a href="networks.html">네트워크 연대기</a>
+					<a href="databases.html">데이터베이스 연대기</a>
+					<a href="os.html" class="is-current">운영체제 연대기</a>
+					<div class="page__topic-nav-group" role="group" aria-label="웹 제작 연대기">
+						<span class="page__topic-nav-label">웹 제작 연대기</span>
+						<a href="web.html" data-topic-role="parent">웹 제작 연대기 허브</a>
+						<a href="web-structure.html" data-topic-role="child">웹 문서 설계 연대기</a>
+						<a href="web-styling.html" data-topic-role="child">스타일링 진화 연대기</a>
+						<a href="web-interaction.html" data-topic-role="child">브라우저 인터랙션 연대기</a>
+						<a href="web-tools.html" data-topic-role="child">웹 제작 도구 연대기</a>
+					</div>
+					<a href="was.html">웹 서버 연대기</a>
+				</nav>
+			</div>
+			<nav class="page__nav" aria-label="섹션 탐색">
+				<a href="#timeline">연도 보기</a>
+				<a href="#sources">참고</a>
+				<div class="language-switch">
+					<label class="sr-only" for="language-select-os">언어 선택</label>
+					<select id="language-select-os" data-language-switch>
+						<option value="os.html" data-language-code="ko" selected>한국어</option>
+						<option value="os-en.html" data-language-code="en">English</option>
+					</select>
+				</div>
+			</nav>
+		</header>
+
+		<main class="page__main" id="main" role="main">
+			<section class="timeline-hero" aria-labelledby="timeline-title">
+				<div class="timeline-hero__head">
+					<p class="hero__eyebrow">Operating System Story for Builders</p>
+					<h1 class="timeline-hero__title" id="timeline-title">배치 모니터에서 주머니 속 운영체제까지, 사람이 원하는 경험을 지켜 온 이야기
+					</h1>
+					<p class="timeline-hero__lede">
+						맨체스터 연구실의 야간 근무자는 Baby 시험기 앞에서 “부트스트랩 몇 줄만 올리면 알아서 돌아갈까요?”라고 중얼거렸고, 디트로이트 GM 밤조는 “테이프만 갈다 보면 해
+						뜨겠다”며 모니터 프로그램을 꿈꿨습니다. NASA와 대학 연구실은 한 대의 기계를 여러 사람이 나눠 쓰는 타임셰어링을 시험하며 “순서를 공평하게 돌릴 방법”을 찾고
+						있었습니다.
+					</p>
+					<p class="timeline-hero__lede">
+						이후 IBM은 System/360을 내놓으며 “기종이 달라도 같은 OS를 쓰게 해 드립니다”라고 약속했고, 벨 연구소 연구원들은 UNIX를 만들며 “작은 도구를 이어 붙이면
+						복잡한 일도 풀립니다”라고 설득했습니다. MS-DOS와 Macintosh, Windows 95는 집과 사무실을 같은 UI로 엮었고, 리눅스 커뮤니티는 “커널은 같이 고치는
+						것”이라는 문화를 세웠습니다. 2000년대 이후 Mac OS X, iPhone OS, Android, Docker, Kubernetes는 손안과 클라우드에서 같은 경험을
+						요구하며 운영체제의 영역을 계속 넓혔습니다.
+					</p>
+					<p class="timeline-hero__lede">
+						아래 연표를 누르면 그 시절 운영체제가 무엇을 걱정했고 어떤 해법을 내놓았는지 이야기로 살펴볼 수 있습니다. 낯선 용어가 나와도 괜찮아요. 각 모달이 사람과 상황, 남은
+						교훈을 차근차근 풀어 줍니다.
+					</p>
+				</div>
+			</section>
+
+			<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title"
+				aria-describedby="timeline-instructions">
+				<p class="timeline-grid__instructions sr-only" id="timeline-instructions">버튼을 선택하면 같은 화면에서 자세한 이야기를 읽을 수
+					있습니다.</p>
+
+				<section class="timeline-group" aria-labelledby="decade-1940 topic-1940">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-1940">1940s</p>
+						<h3 class="timeline-group__topic" id="topic-1940">저장 프로그램 시대를 여는 첫 부트스트랩</h3>
+						<p class="timeline-group__summary">릴레이 배선 대신 짧은 초기 명령을 메모리에 실어 올려, 전자식 컴퓨터가 스스로 프로그램을 불러오고 반복
+							실행할 수 있는 기반을 만들었습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1948-manchester">
+							<span class="timeline-event__year">1948</span>
+							<span class="timeline-event__label">Manchester Baby 부트스트랩</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1949-edsac">
+							<span class="timeline-event__year">1949</span>
+							<span class="timeline-event__label">EDSAC 초기 명령</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-1950 topic-1950">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-1950">1950s</p>
+						<h3 class="timeline-group__topic" id="topic-1950">야간 조를 도운 배치 모니터</h3>
+						<p class="timeline-group__summary">메인프레임 운영자들은 테이프를 갈아 끼우지 않아도 되도록 작업을 자동으로 줄 세우고, 공통 절차를 모니터
+							프로그램에 담았습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1956-gmnaa">
+							<span class="timeline-event__year">1956</span>
+							<span class="timeline-event__label">GM-NAA I/O 모니터</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1959-fms">
+							<span class="timeline-event__year">1959</span>
+							<span class="timeline-event__label">Fortran Monitor System</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-1960 topic-1960">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-1960">1960s</p>
+						<h3 class="timeline-group__topic" id="topic-1960">타임셰어링과 이식성 실험</h3>
+						<p class="timeline-group__summary">System/360은 “하드웨어가 달라도 같은 OS”를 약속했고, UNIX는 작은 도구를 조합하며 이식성이
+							있는 커널을 선보였습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1964-os360">
+							<span class="timeline-event__year">1964</span>
+							<span class="timeline-event__label">IBM OS/360 발표</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1969-unix">
+							<span class="timeline-event__year">1969</span>
+							<span class="timeline-event__label">UNIX 커널 공개</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-1970 topic-1970">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-1970">1970s</p>
+						<h3 class="timeline-group__topic" id="topic-1970">마이크로컴퓨터와 가상 메모리 확장</h3>
+						<p class="timeline-group__summary">작은 컴퓨터도 디스크와 여러 작업을 다룰 수 있게 CP/M과 VMS가 공통 인터페이스와 가상 메모리를
+							보급했습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1974-cpm">
+							<span class="timeline-event__year">1974</span>
+							<span class="timeline-event__label">CP/M 확산</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1978-vms">
+							<span class="timeline-event__year">1978</span>
+							<span class="timeline-event__label">VAX/VMS 출시</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-1980 topic-1980">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-1980">1980s</p>
+						<h3 class="timeline-group__topic" id="topic-1980">PC 보급과 그래픽 데스크톱</h3>
+						<p class="timeline-group__summary">MS-DOS가 공통 규칙을 세우고, 매킨토시가 아이콘과 마우스를 대중화하며 PC가 일상 도구가 되었습니다.
+						</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1981-msdos">
+							<span class="timeline-event__year">1981</span>
+							<span class="timeline-event__label">MS-DOS 1.0</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1984-system1">
+							<span class="timeline-event__year">1984</span>
+							<span class="timeline-event__label">맥킨토시 System 1</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-1990">1990s</p>
+						<h3 class="timeline-group__topic" id="topic-1990">오픈소스와 일상형 OS</h3>
+						<p class="timeline-group__summary">리눅스 커뮤니티가 커널을 함께 고쳤고, Windows 95는 스타트 버튼으로 가정과 사무실 모두를
+							겨냥했습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1991-linux">
+							<span class="timeline-event__year">1991</span>
+							<span class="timeline-event__label">리눅스 커널 발표</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1995-win95">
+							<span class="timeline-event__year">1995</span>
+							<span class="timeline-event__label">Windows 95 출시</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-2000">2000s</p>
+						<h3 class="timeline-group__topic" id="topic-2000">UNIX 감성과 모바일 도약</h3>
+						<p class="timeline-group__summary">Mac OS X는 UNIX와 디자인을 묶었고, iPhone OS와 Android는 터치와 앱 생태계를 운영체제
+							수준에서 설계했습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2001-macosx">
+							<span class="timeline-event__year">2001</span>
+							<span class="timeline-event__label">Mac OS X 출시</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2007-ios">
+							<span class="timeline-event__year">2007</span>
+							<span class="timeline-event__label">iPhone OS 1 공개</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2008-android">
+							<span class="timeline-event__year">2008</span>
+							<span class="timeline-event__label">Android 1.0 공개</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-2010">2010s</p>
+						<h3 class="timeline-group__topic" id="topic-2010">컨테이너와 클러스터 운영</h3>
+						<p class="timeline-group__summary">Docker와 Kubernetes가 “이미지를 묶어 옮기고, 원하는 상태를 선언하면 제어 루프가 맞춰 준다”는
+							발상을 일상 도구로 만들었습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2013-docker">
+							<span class="timeline-event__year">2013</span>
+							<span class="timeline-event__label">Docker 오픈소스화</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2015-kubernetes">
+							<span class="timeline-event__year">2015</span>
+							<span class="timeline-event__label">Kubernetes 1.0</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-2020">2020s</p>
+						<h3 class="timeline-group__topic" id="topic-2020">실리콘 전환과 하이브리드 경험</h3>
+						<p class="timeline-group__summary">맞춤형 칩, 가상 데스크톱, 클라우드 PC를 한 화면에서 조율하며 “어디에서 실행돼도 같은 느낌”을 주려는
+							운영체제가 등장했습니다.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2020-big-sur">
+							<span class="timeline-event__year">2020</span>
+							<span class="timeline-event__label">Apple Silicon과 macOS Big Sur</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2021-windows11">
+							<span class="timeline-event__year">2021</span>
+							<span class="timeline-event__label">Windows 11 출시</span>
+						</button>
+					</div>
+				</section>
+			</section>
+
+			<section class="sources" id="sources" aria-labelledby="sources-title">
+				<div class="section__head">
+					<h2 id="sources-title">더 깊이 읽을 거리</h2>
+					<p>운영체제가 배치 작업, 타임셰어링, 모바일과 클라우드를 품어 가는 과정을 기록한 1차 자료와 회고를 모았습니다.</p>
+				</div>
+				<ul class="source-list">
+					<li><a href="https://www.cs.manchester.ac.uk/about-us/history/baby/" target="_blank"
+							rel="noopener">University of Manchester · Baby SSEM</a></li>
+					<li><a href="https://www.cl.cam.ac.uk/conference/edsac50/" target="_blank" rel="noopener">University
+							of Cambridge · EDSAC Initial Orders</a></li>
+					<li><a href="https://www.computerhistory.org/revolution/mainframe-computers/7/169" target="_blank"
+							rel="noopener">Computer History Museum · GM-NAA I/O</a></li>
+					<li><a href="https://www.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP105.html"
+							target="_blank" rel="noopener">IBM Archives · System/360</a></li>
+					<li><a href="https://www.bell-labs.com/usr/dmr/www/hist.html" target="_blank" rel="noopener">Bell
+							Labs · UNIX History</a></li>
+					<li><a href="https://computerhistory.org/blog/the-rise-and-fall-of-digital-research/"
+							target="_blank" rel="noopener">Computer History Museum · CP/M Story</a></li>
+					<li><a href="https://android-developers.googleblog.com/2008/09/android-10-launched.html"
+							target="_blank" rel="noopener">Android Developers Blog · Android 1.0</a></li>
+					<li><a href="https://www.apple.com/kr/newsroom/2020/11/apple-unleashes-m1/" target="_blank"
+							rel="noopener">Apple Newsroom · Apple Silicon</a></li>
+				</ul>
+			</section>
+		</main>
+
+		<footer class="page__footer" role="contentinfo">
+			<p>© 2025 ArcherLab · 운영체제를 기록합니다.</p>
+			<a class="page__footer-link" href="https://archerlab.dev" target="_blank" rel="noopener">archerlab.dev</a>
+		</footer>
+	</div>
+
+	<div class="modal" id="event-modal" role="dialog" aria-modal="true" hidden>
+		<div class="modal__overlay" data-modal-close></div>
+		<div class="modal__window" role="document" tabindex="-1">
+			<button class="modal__close" type="button" aria-label="레이어 닫기" data-modal-close>&times;</button>
+			<div class="modal__content"></div>
+		</div>
+	</div>
+
+	<template id="event-1948-manchester">
+		<article class="event-detail" aria-labelledby="event-1948-manchester-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1948</p>
+				<h2 id="event-1948-manchester-title">Manchester Baby, 저장 프로그램 부트스트랩을 증명하다</h2>
+				<p class="event-detail__summary">맨체스터 연구진은 “초기 명령 몇 줄이면 충분하다”는 믿음을 Baby 실험으로 증명했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>1948년 6월 21일 새벽, 프레더릭 윌리엄스와 톰 킬번은 Williams-Kilburn 관 앞에서 토글 스위치를 하나씩 내리며 “이제 부트스트랩을 올려 볼까요?”라고
+						속삭였습니다. 길지 않은 초기 명령이 메모리에 올라가자 Baby는 스스로 다음 코드 조각을 불러오기 시작했습니다.</p>
+					<p>기계가 가장 큰 약수를 계산하는 동안 연구 어시스턴트는 노트에 “기계가 자기 프로그램을 읽어 들인 첫날”이라고 적었습니다. 전선을 갈아끼우던 시대가 끝났다는 사실을 모두가
+						체감한 순간이었습니다.</p>
+					<p>Baby는 단순한 데모였지만, 전자식 컴퓨터가 "데이터와 명령을 같은 저장장치에 둔다"는 폰 노이만 구조를 실전에서 증명했습니다. 연구자들은 이제 새로운 알고리즘을 배선 대신
+						소프트웨어로 교체할 수 있다는 확신을 얻었습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Baby가 보여 준 짧은 초기 로더 → 본 프로그램 순서는 훗날 모든 컴퓨터가 따르는 초기 프로그램 적재(IPL) 관행으로 굳었고, 운영체제는 그 습관 위에서 성장했습니다.
+					</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1949-edsac">
+		<article class="event-detail" aria-labelledby="event-1949-edsac-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1949</p>
+				<h2 id="event-1949-edsac-title">EDSAC Initial Orders, 표준 부트스트랩과 루틴을 묶다</h2>
+				<p class="event-detail__summary">케임브리지 팀은 31줄짜리 Initial Orders로 “테이프만 넣으면 됩니다”라는 약속을 지켰습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>케임브리지 EDSAC 실험실에서 운영자는 전원을 켠 뒤 스위치를 차례대로 내리고 “Initial Orders, 준비 완료”라고 외쳤습니다. 연구자가 종이테이프 뭉치를 건네면
+						기계는 곧바로 프로그램을 메모리에 복사했습니다.</p>
+					<p>제곱근, 로그 같은 서브루틴이 담긴 라이브러리 테이프를 꺼낼 때면 모두가 한숨 돌렸습니다. 필요한 계산을 골라 넣기만 하면 결과가 나왔고, 실행 순서와 출력 형식은 항상
+						일정했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Initial Orders와 라이브러리 조합은 “작은 모니터 → 로더 → 공용 루틴”이라는 흐름을 정착시켜 이후 모니터 프로그램과 운영체제의 기본 구조가 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1956-gmnaa">
+		<article class="event-detail" aria-labelledby="event-1956-gmnaa-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1956</p>
+				<h2 id="event-1956-gmnaa-title">GM-NAA I/O, 배치 작업을 자동으로 넘기다</h2>
+				<p class="event-detail__summary">GM과 NAA 야간조는 GM-NAA I/O 덕에 “테이프만 갈다 날 새네”라는 하소연을 접을 수 있었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>디트로이트 연구소의 야간조 운영자는 카드 덱을 의자에 쌓아 두고 “이번에는 모니터가 알아서 넘겨줄까?”라며 GM-NAA I/O를 로드했습니다. 작업이 끝날 때마다 모니터가
+						테이프를 갈아 끼우고 다음 덱을 불러오자 밤새 토글을 누를 일이 줄었습니다.</p>
+					<p>공장과 연구소에서 보내 온 작업 카드에는 “프린터 A에 출력” 같은 지시가 적혀 있었고, 모니터는 그 순서를 그대로 실행했습니다. 운영자는 오류 카드만 모아두면 됐고, 계산은
+						끊김 없이 이어졌습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>GM-NAA I/O가 남긴 작업 제어 카드와 자동 장치 초기화 개념은 이후 배치 운영체제와 오늘날 배치 스케줄러 설계의 출발점이 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1959-fms">
+		<article class="event-detail" aria-labelledby="event-1959-fms-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1959</p>
+				<h2 id="event-1959-fms-title">Fortran Monitor System, 코드 재사용을 지원하다</h2>
+				<p class="event-detail__summary">FMS는 “컴파일부터 출력까지 한 번에 돌려 드려요”라며 공유 매크로를 키트처럼 묶었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>SHARE 회원들은 서로 주고받던 매크로 카드 묶음을 IBM 본사 회의실 책상 위에 올려놓고 “한 패키지로 묶어 주세요”라고 부탁했습니다. 그렇게 만들어진 FMS는 카드
+						앞부분에 제어문을 붙이면 컴파일, 링크, 실행, 출력까지 자동으로 이어주었습니다.</p>
+					<p>야간조 운영자는 “이번엔 과학 계산 묶음이네”라며 제어문을 확인하고 모니터를 시작하기만 하면 됐습니다. 자주 쓰는 라이브러리는 공용 테이프에 등록되어 어느 팀이든 동일한
+						결과를 받을 수 있었습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>FMS가 보여 준 장치 독립 입출력 개념은 OS/360의 JCL과 오늘날 드라이버 계층 설계로 이어졌습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1964-os360">
+		<article class="event-detail" aria-labelledby="event-1964-os360-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1964</p>
+				<h2 id="event-1964-os360-title">System/360, 하나의 OS로 가족 제품을 지원하다</h2>
+				<p class="event-detail__summary">System/360은 “기계를 바꿔도 다시 코딩하지 마세요”라는 약속으로 호환성의 무게를 보여 줬습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>OS/360 브리핑에서 IBM 영업 담당자는 고객에게 “기종 번호가 달라도 같은 API를 보장합니다”라고 장담했습니다. 개발팀은 커널과 I/O 제어, 장치 드라이버를 층처럼
+						나눠 어디서든 같은 호출 규칙을 제공했습니다.</p>
+					<p>초기 도입 기업은 예산 회의에서 “올해는 40번대, 내년엔 60번대로 올리자”라며 유지보수 계획을 세웠습니다. 프로그램을 다시 작성할 필요가 없다는 사실이 구매 결정을
+						바꿨습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>OS/360이 세운 안정적 시스템 호출 계약은 이후 메인프레임뿐 아니라 POSIX, 클라우드 인스턴스 호환 전략의 뿌리가 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1969-unix">
+		<article class="event-detail" aria-labelledby="event-1969-unix-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1969</p>
+				<h2 id="event-1969-unix-title">UNIX, 작은 도구를 조합하는 철학을 심다</h2>
+				<p class="event-detail__summary">UNIX는 “작은 도구를 이어 붙이면 된다”는 철학으로 파일처럼 다루는 세상을 열었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>벨 연구소 지하실에서 켄 톰프슨과 데니스 리치는 터미널 옆 커피잔을 옮기며 “모든 것을 파일처럼 다룹시다”라고 의견을 모았습니다. 파이프가 연결되자 간단한 명령 두세
+						개만으로도 긴 작업을 처리할 수 있게 되었습니다.</p>
+					<p>코드가 대학으로 퍼지자 학생들은 “우린 PDP-11이라 조금 다르지만, C로 고치면 되겠지?”라며 직접 포팅을 시도했습니다. 서로가 보낸 패치가 커널을 빠르게 진화시켰고,
+						작은 도구를 조합하는 습관이 문화로 굳었습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>“모든 것은 파일”과 작은 명령의 조합이라는 원칙은 오늘날 쉘, POSIX, 컨테이너 이미지까지 이어지는 운영체제 사고방식의 기본값이 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1974-cpm">
+		<article class="event-detail" aria-labelledby="event-1974-cpm-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1974</p>
+				<h2 id="event-1974-cpm-title">CP/M, 마이크로컴퓨터용 표준 OS</h2>
+				<p class="event-detail__summary">CP/M은 “BIOS만 맞추면 앱이 돌아요”라며 마이크로컴퓨터에 공동 언어를 줬습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>게리 킬달은 제조사 대표들과 만나 “여러분 기계마다 디스크 호출이 다르잖아요. 이 밑단만 맞춰 주세요.”라고 설득했습니다. CP/M은 공통 부분인 BDOS와 기기별 BIOS를
+						분리해 누구나 자신의 하드웨어를 빠르게 붙일 수 있게 했습니다.</p>
+					<p>워드스타를 들고 방문한 영업사원은 “이 플로피만 꽂으면 됩니다”라며 여러 회사 사무실을 돌았습니다. 같은 소프트웨어가 서로 다른 기기에서 같은 화면을 보여 주자 기업은 자신
+						있게 주문서를 썼습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>BDOS/BIOS 분리 구조는 이후 PC BIOS, HAL, 현대 운영체제의 드라이버 계층에 그대로 살아남았습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1978-vms">
+		<article class="event-detail" aria-labelledby="event-1978-vms-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1978</p>
+				<h2 id="event-1978-vms-title">VAX/VMS, 가상 메모리와 클러스터를 대중화</h2>
+				<p class="event-detail__summary">VAX/VMS는 “중형 컴퓨터도 24시간 버틸 수 있다”는 자신감을 주며 가상 메모리와 클러스터를 확산시켰습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>DEC 엔지니어는 시연장에서 VAX 콘솔을 가리키며 “지금 이 프로그램은 실제 메모리보다 더 큰 데이터를 쓰고 있습니다”라고 설명했습니다. VMS는 페이지를 디스크로 넘겨
+						프로그램이 물리 메모리 한계를 의식하지 않게 했습니다.</p>
+					<p>야간 병원 전산실에서는 VMScluster를 테스트하며 “한 대가 내려가면 다른 장비가 이어받습니다”라는 알림음을 들었습니다. 운영팀은 메인프레임 없이도 24시간 서비스를
+						유지할 수 있다는 사실에 안도했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>VMS의 보호 링, 레코드 관리, 클러스터 API는 이후 Windows NT와 하이퍼바이저 설계의 교과서가 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1981-msdos">
+		<article class="event-detail" aria-labelledby="event-1981-msdos-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1981</p>
+				<h2 id="event-1981-msdos-title">MS-DOS, IBM PC 생태계를 단단히 묶다</h2>
+				<p class="event-detail__summary">MS-DOS는 “명령은 같고 부품만 바뀝니다”라며 IBM PC 호환 생태계를 묶었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>마이크로소프트는 IBM과의 회의에서 “표준 BIOS 호출을 문서로 박아 두면 제조사들이 따라올 겁니다”라고 제안했습니다. 곧 OEM들은 자신만의 하드웨어를 달면서도
+						MS-DOS 명령과 API를 그대로 유지했습니다.</p>
+					<p>사용자는 <code>DIR</code>과 <code>COPY</code>만 익히면 어떤 호환 기종에서도 같은 방식으로 파일을 관리할 수 있었습니다. 회사와 가정 모두
+						“DOS면 된다”는 인식을 공유하기 시작했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>MS-DOS가 남긴 BIOS 인터럽트 규칙과 .EXE 포맷은 이후 Windows 전환기의 하위호환 전략을 지탱했습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1984-system1">
+		<article class="event-detail" aria-labelledby="event-1984-system1-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1984</p>
+				<h2 id="event-1984-system1-title">맥킨토시 System 1, 그래픽 UI 대중화</h2>
+				<p class="event-detail__summary">맥킨토시 System 1은 “아이콘을 옮기면 돼요”라는 말로 그래픽 인터페이스를 일상어로 만들었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>1984년 데모장에서 애플 직원은 쓰레기통 아이콘을 가리키며 “필요 없으면 여기로 드래그하세요”라고 안내했습니다. 참가자들은 마우스를 처음 잡았지만 금세 폴더를 열고 메뉴를
+						눌렀습니다.</p>
+					<p>애플이 배포한 휴먼 인터페이스 가이드라인 덕분에 외부 개발자도 같은 메뉴, 같은 알림창을 사용했습니다. 사용자는 낯선 프로그램을 켜도 길 잃을 걱정이 줄었습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>System 1의 이벤트 루프, QuickDraw, 리소스 매니저 구조는 이후 데스크톱 UI 프레임워크 설계의 기본 문법이 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1991-linux">
+		<article class="event-detail" aria-labelledby="event-1991-linux-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1991</p>
+				<h2 id="event-1991-linux-title">리눅스, 누구나 커널에 기여하는 시대</h2>
+				<p class="event-detail__summary">리눅스는 “취미로 시작했는데 같이 해요?”라는 글 하나로 커널 개발을 공동 작업으로 바꿨습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>리누스 토르발스는 컴퓨터 게시판에 “386용 커널을 취미로 만들고 있는데, 아이디어 있나요?”라는 글을 올렸습니다. 며칠 만에 디스크 드라이버, 스케줄러 패치, 파일시스템
+						제안이 메일함으로 쏟아졌습니다.</p>
+					<p>자유롭게 배포된 소스코드는 누구나 읽고 고친 뒤 다시 공유할 수 있었습니다. 대학 서버실, 통신사, 취미 동호회가 같은 커널을 함께 다듬으며 전 세계가 한 팀처럼
+						움직였습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>GPL 라이선스와 메일링 리스트 리뷰 문화는 오늘날까지 이어지는 오픈소스 운영체제 개발 방식의 골격을 만들었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-1995-win95">
+		<article class="event-detail" aria-labelledby="event-1995-win95-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1995</p>
+				<h2 id="event-1995-win95-title">Windows 95, 시작 버튼으로 생활을 묶다</h2>
+				<p class="event-detail__summary">Windows 95는 “시작 버튼만 누르면 됩니다”라는 안내로 집과 사무실을 같은 OS로 엮었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>Windows 95 발표회에서 스티브 발머는 초록색 시작 버튼을 눌러 보이며 “여기만 누르면 필요한 게 다 나옵니다”라고 웃었습니다. 플러그앤플레이가 새 하드웨어를 찾아
+						드라이버를 깔아 주자 사용자들은 겁낼 일이 줄었습니다.</p>
+					<p>회사에서는 네트워크 드라이브를 열고, 집에서는 사진 정리와 게임을 같은 화면에서 즐겼습니다. 하나의 데스크톱 언어가 업무와 생활을 모두 연결한 순간이었습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>시작 메뉴, 작업 표시줄, Win32 API는 이후 Windows NT 계열과 현대 데스크톱 UX의 기본 패턴으로 남았습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2001-macosx">
+		<article class="event-detail" aria-labelledby="event-2001-macosx-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2001</p>
+				<h2 id="event-2001-macosx-title">Mac OS X, UNIX 안정성과 디자인 결합</h2>
+				<p class="event-detail__summary">Mac OS X는 “UNIX 뼈대에 디자인을 더했습니다”라며 안정성과 감성을 동시에 붙잡았습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>WWDC 무대에서 애플은 반짝이는 Aqua 창을 띄우면서도 터미널을 열어 <code>ls</code>를 실행해 보였습니다. 디자이너와 개발자가 같은 OS에서 각자 원하는
+						장점을 확인한 순간이었습니다.</p>
+					<p>Carbon과 Cocoa가 함께 제공되면서 기존 Mac 앱은 천천히 이전하고 새 앱은 현대적인 API를 채택했습니다. 사용자는 시스템이 멈추지 않는다는 사실에 안심했고,
+						개발자는 POSIX 도구를 마음껏 활용했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Mac OS X는 “GUI 위의 UNIX” 모델을 대중화해 이후 iOS, watchOS까지 이어지는 애플 운영체제 가족의 공통 기반이 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2007-ios">
+		<article class="event-detail" aria-labelledby="event-2007-ios-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2007</p>
+				<h2 id="event-2007-ios-title">iPhone OS 1, 터치 퍼스트 인터페이스</h2>
+				<p class="event-detail__summary">iPhone OS 1은 “손가락만으로 다 할 수 있어요”라는 약속으로 터치 퍼스트 시대를 열었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>스티브 잡스는 무대에서 “스타일러스 필요 없습니다. 우리가 이미 10개나 갖고 있죠.”라며 손가락을 펼쳐 보였습니다. 홈 화면 아이콘과 멀티터치 제스처는 자연스러운 사용법을
+						스스로 설명했습니다.</p>
+					<p>소프트 키보드가 문장을 자동 완성하고, 스와이프가 화면을 넘겼습니다. 당시 스마트폰을 쓰던 사람들은 “버튼 없이도 되네?”라며 새로운 입력 방식을 금세 받아들였습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>멀티터치 UI와 샌드박스 구조는 모바일 OS 보안과 UX의 기본 공식을 만들었고, 이후 App Store 생태계가 자라날 발판이 되었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2008-android">
+		<article class="event-detail" aria-labelledby="event-2008-android-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2008</p>
+				<h2 id="event-2008-android-title">Android 1.0, 오픈 모바일 플랫폼</h2>
+				<p class="event-detail__summary">Android 1.0은 “누구나 같은 SDK로 폰을 만들 수 있다”며 오픈 플랫폼을 현실로 만들었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>구글은 오픈 핸드셋 얼라이언스 회의에서 “이 SDK와 API 문서만 따르면 누구나 Android 폰을 출시할 수 있습니다”라고 선언했습니다. 제조사와 통신사는 각자 원하는
+						스킨을 얹으면서도 공통 프레임워크를 공유했습니다.</p>
+					<p>초기 개발자는 Dalvik VM 위에서 돌아가는 앱을 마켓에 올려 시험했습니다. 알 수 없는 출처 설치 옵션은 실험가들에게 열린 놀이터를 제공했습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Android가 도입한 인텐트, APK 패키징, 권한 모델은 다양한 제조사와 서비스가 공존하는 모바일 생태계의 표준을 세웠습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2013-docker">
+		<article class="event-detail" aria-labelledby="event-2013-docker-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2013</p>
+				<h2 id="event-2013-docker-title">Docker, 컨테이너를 일상 도구로</h2>
+				<p class="event-detail__summary">Docker는 “이미지 한 통으로 환경을 옮기세요”라는 구호로 컨테이너를 일상 도구로 바꿨습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>dotCloud 시연에서 개발자는 <code>docker run</code> 명령을 입력하며 “이제 배포 체크리스트 대신 이미지를 공유하세요”라고 설명했습니다. 코드와
+						라이브러리가 하나의 패키지로 묶이자 “내 컴퓨터에서는 되는데”라는 말이 줄었습니다.</p>
+					<p>운영팀은 테스트에서 성공한 이미지를 그대로 프로덕션에 띄웠고, 클라우드 업체는 곧 관리형 컨테이너 서비스를 내놓았습니다. 운영체제는 격리와 실행에 집중하고, 환경은 이미지가
+						책임지는 시대가 열렸습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>레이어드 이미지, 레지스트리, Compose 워크플로는 DevOps 문화와 플랫폼 엔지니어링 도구의 핵심 구성 요소로 자리잡았습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2015-kubernetes">
+		<article class="event-detail" aria-labelledby="event-2015-kubernetes-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2015</p>
+				<h2 id="event-2015-kubernetes-title">Kubernetes 1.0, 선언형 클러스터 운영</h2>
+				<p class="event-detail__summary">Kubernetes 1.0은 “원하는 상태만 적어 주세요”라며 클러스터 운영을 선언형으로 바꿨습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>구글·레드햇·CoreOS는 CNCF 행사에서 “이 YAML만 적으면 제어 루프가 나머지를 맞춥니다”라고 시연했습니다. ReplicaSet과 서비스가 스스로 상태를 조정하자
+						운영자는 서버 한 대 한 대를 돌보지 않아도 됐습니다.</p>
+					<p>기업은 쿠버네티스를 클러스터 공용 언어로 받아들였고, 클라우드 제공자는 관리형 서비스를 앞다퉈 출시했습니다. 운영체제의 역할이 단일 노드를 넘어서 플릿 전체를 조율하는 일로
+						확장되었습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>선언형 상태와 재조정 루프라는 개념은 오늘날 인프라스트럭처 코드와 서비스 메시 등 클라우드 네이티브 스택 전반에 스며들었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2020-big-sur">
+		<article class="event-detail" aria-labelledby="event-2020-big-sur-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2020</p>
+				<h2 id="event-2020-big-sur-title">macOS Big Sur, Apple Silicon 전환의 교두보</h2>
+				<p class="event-detail__summary">macOS Big Sur는 “칩이 바뀌어도 앱은 그대로”라는 전환 매뉴얼로 Apple Silicon 시대를 열었습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>애플은 온라인 이벤트에서 M1 맥북을 열어 기존 인텔용 앱을 실행하며 “Rosetta 2가 실시간으로 번역합니다”라고 설명했습니다. 사용자는 업데이트 없이도 익숙한 도구를
+						계속 쓸 수 있었습니다.</p>
+					<p>Xcode는 유니버설 바이너리를 기본으로 지원해 개발자가 한 번 빌드로 두 아키텍처를 동시에 준비했습니다. 배터리 수명과 즉시 깨우기 경험은 하드웨어와 OS를 동시에 설계할
+						때 얻는 장점을 보여 줬습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>리소스티어 보안, 유니버설 바이너리, 실시간 번역 조합은 대규모 아키텍처 전환 전략의 교본이 되었고 다른 플랫폼 설계에도 영감을 주었습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2021-windows11">
+		<article class="event-detail" aria-labelledby="event-2021-windows11-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2021</p>
+				<h2 id="event-2021-windows11-title">Windows 11, 로컬과 클라우드를 잇는 데스크톱</h2>
+				<p class="event-detail__summary">Windows 11은 “내 PC든 클라우드든 익숙하게 쓰세요”라며 하이브리드 업무의 운영체제 틀을 제시했습니다.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<p>Windows 11 출시 행사에서 마이크로소프트는 가운데 정렬된 시작 메뉴를 보여 주며 “터치든 마우스든 같은 감각으로 쓰실 수 있습니다”라고 설명했습니다. TPM과 보안
+						부팅이 기본값이 되자 IT 부서는 배포 계획을 자신 있게 세울 수 있었습니다.</p>
+					<p>WSLg는 리눅스 GUI 앱을 윈도우 창 옆에 띄웠고, Windows 365는 회사가 클라우드 PC를 배포하게 했습니다. 사용자에게는 집과 사무실, 원격 환경이 하나의
+						데스크톱처럼 이어졌습니다.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>하드웨어 기반 보안과 하이브리드 관리 기능은 운영체제가 로컬 장치와 원격 리소스를 동시에 조율해야 한다는 새로운 기본을 세웠습니다.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<button type="button" class="scroll-top" data-scroll-top aria-label="맨 위로" hidden>↑</button>
+
+	<script src="assets/js/main.js" defer></script>
+	<script type="text/javascript" src="https://wcs.pstatic.net/wcslog.js"></script>
+	<script type="text/javascript">
+		if (!window.wcs_add) window.wcs_add = {};
+		window.wcs_add["wa"] = "134f4c428765360";
+		if (window.location.protocol !== 'file:' && window.wcs) {
+			wcs_do();
+		}
+	</script>
+</body>
+
 </html>
