@@ -117,17 +117,16 @@
 		}
 	});
 
-	if (shouldAttemptRedirect) {
+	if (!storedLanguage && browserLanguage && currentDocumentLanguage && browserLanguage !== currentDocumentLanguage) {
 		const redirectSelect = languageSelects[0] || null;
-		const redirectOption = findOptionByLanguage(redirectSelect, preferredLanguage);
+		const redirectOption = findOptionByLanguage(redirectSelect, browserLanguage);
 		if (redirectOption) {
-			setStoredLanguage(preferredLanguage);
 			window.location.replace(redirectOption.value);
 			return;
 		}
 	}
 
-	if (!storedLanguage && currentDocumentLanguage) {
+	if (currentDocumentLanguage) {
 		setStoredLanguage(currentDocumentLanguage);
 	}
 
@@ -292,7 +291,7 @@
 	let modalScrollTicking = false;
 	// 타임라인 페이지에서 내비게이션, 모달, 용어집 툴팁을 제어하는 즉시 실행 함수입니다.
 	let firstFocusable = null;
-		// 헤더 내비게이션 링크 목록과 각 섹션을 매핑합니다.
+	// 헤더 내비게이션 링크 목록과 각 섹션을 매핑합니다.
 	let lastFocusable = null;
 
 	if (!modal || !modalWindow || !modalContent) {
@@ -450,7 +449,7 @@
 		lastFocusable = focusableElements[focusableElements.length - 1] || modalWindow;
 	};
 
-		// 모달 구조와 버튼 등 재사용할 DOM 요소를 미리 찾아 둡니다.
+	// 모달 구조와 버튼 등 재사용할 DOM 요소를 미리 찾아 둡니다.
 	const trapFocusInsideModal = (event) => {
 		if (event.key !== 'Tab') {
 			return;
@@ -463,7 +462,7 @@
 		const activeElement = document.activeElement;
 		if (event.shiftKey) {
 			if (activeElement === firstFocusable) {
-		// 모달 구성이 정상적이지 않다면 즉시 종료해 불필요한 에러를 막습니다.
+				// 모달 구성이 정상적이지 않다면 즉시 종료해 불필요한 에러를 막습니다.
 				event.preventDefault();
 				lastFocusable.focus();
 			}
@@ -474,7 +473,7 @@
 			firstFocusable.focus();
 		}
 	};
-		// 모달 닫기 공통 로직: 내용 정리, 포커스 복귀, 이벤트 정리 등을 한 번에 처리합니다.
+	// 모달 닫기 공통 로직: 내용 정리, 포커스 복귀, 이벤트 정리 등을 한 번에 처리합니다.
 
 	const openModal = (button) => {
 		const eventId = button?.dataset?.eventId;
@@ -687,51 +686,51 @@
 	});
 })();
 
-	(() => {
-		const scrollTopButtons = Array.from(document.querySelectorAll('[data-scroll-top]'));
-		if (!scrollTopButtons.length) {
+(() => {
+	const scrollTopButtons = Array.from(document.querySelectorAll('[data-scroll-top]'));
+	if (!scrollTopButtons.length) {
+		return;
+	}
+
+	const hideAll = () => {
+		scrollTopButtons.forEach((button) => button.setAttribute('hidden', ''));
+	};
+
+	const showAll = () => {
+		scrollTopButtons.forEach((button) => button.removeAttribute('hidden'));
+	};
+
+	const toggleScrollTop = () => {
+		if (document.body.classList.contains('is-modal-open')) {
+			hideAll();
 			return;
 		}
+		const shouldShow = window.scrollY > 320;
+		if (shouldShow) {
+			showAll();
+		} else {
+			hideAll();
+		}
+	};
 
-		const hideAll = () => {
-			scrollTopButtons.forEach((button) => button.setAttribute('hidden', ''));
-		};
-
-		const showAll = () => {
-			scrollTopButtons.forEach((button) => button.removeAttribute('hidden'));
-		};
-
-		const toggleScrollTop = () => {
-			if (document.body.classList.contains('is-modal-open')) {
-				hideAll();
-				return;
-			}
-			const shouldShow = window.scrollY > 320;
-			if (shouldShow) {
-				showAll();
-			} else {
-				hideAll();
-			}
-		};
-
-		let ticking = false;
-		const onScroll = () => {
-			if (ticking) {
-				return;
-			}
-			ticking = true;
-			requestAnimationFrame(() => {
-				toggleScrollTop();
-				ticking = false;
-			});
-		};
-
-		toggleScrollTop();
-		window.addEventListener('scroll', onScroll, { passive: true });
-		scrollTopButtons.forEach((button) => {
-			button.addEventListener('click', (event) => {
-				event.preventDefault();
-				window.scrollTo({ top: 0, behavior: 'smooth' });
-			});
+	let ticking = false;
+	const onScroll = () => {
+		if (ticking) {
+			return;
+		}
+		ticking = true;
+		requestAnimationFrame(() => {
+			toggleScrollTop();
+			ticking = false;
 		});
-	})();
+	};
+
+	toggleScrollTop();
+	window.addEventListener('scroll', onScroll, { passive: true });
+	scrollTopButtons.forEach((button) => {
+		button.addEventListener('click', (event) => {
+			event.preventDefault();
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		});
+	});
+})();
