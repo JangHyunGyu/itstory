@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://itstory.archerlab.dev/</loc>
-  <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/" />
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://itstory.archerlab.dev/index-en.html</loc>
-  <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/" />
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://itstory.archerlab.dev/computers.html</loc>
-  <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/computers.html" />
@@ -29,7 +29,7 @@
   </url>
   <url>
     <loc>https://itstory.archerlab.dev/computers-en.html</loc>
-  <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/computers.html" />
@@ -37,26 +37,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/computers-en.html" />
   </url>
   <url>
-    <loc>https://itstory.archerlab.dev/os.html</loc>
-  <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/os.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/os-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/os-en.html" />
-  </url>
-  <url>
-    <loc>https://itstory.archerlab.dev/os-en.html</loc>
-  <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/os.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/os-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/os-en.html" />
-  </url>
-  <url>
     <loc>https://itstory.archerlab.dev/databases.html</loc>
-  <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/databases.html" />
@@ -65,7 +47,7 @@
   </url>
   <url>
     <loc>https://itstory.archerlab.dev/databases-en.html</loc>
-  <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/databases.html" />
@@ -74,7 +56,7 @@
   </url>
   <url>
     <loc>https://itstory.archerlab.dev/networks.html</loc>
-  <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/networks.html" />
@@ -83,7 +65,7 @@
   </url>
   <url>
     <loc>https://itstory.archerlab.dev/networks-en.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/networks.html" />
@@ -91,8 +73,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/networks-en.html" />
   </url>
   <url>
+    <loc>https://itstory.archerlab.dev/os.html</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/os.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/os-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/os-en.html" />
+  </url>
+  <url>
+    <loc>https://itstory.archerlab.dev/os-en.html</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/os.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/os-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/os-en.html" />
+  </url>
+  <url>
     <loc>https://itstory.archerlab.dev/was.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/was.html" />
@@ -101,7 +101,7 @@
   </url>
   <url>
     <loc>https://itstory.archerlab.dev/was-en.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/was.html" />
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://itstory.archerlab.dev/web.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web.html" />
@@ -119,7 +119,7 @@
   </url>
   <url>
     <loc>https://itstory.archerlab.dev/web-en.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web.html" />
@@ -127,75 +127,75 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-en.html" />
   </url>
   <url>
-    <loc>https://itstory.archerlab.dev/web-structure.html</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-structure.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-structure-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-structure-en.html" />
-  </url>
-  <url>
-    <loc>https://itstory.archerlab.dev/web-structure-en.html</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-structure.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-structure-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-structure-en.html" />
-  </url>
-  <url>
-    <loc>https://itstory.archerlab.dev/web-styling.html</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-styling.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-styling-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-styling-en.html" />
-  </url>
-  <url>
-    <loc>https://itstory.archerlab.dev/web-styling-en.html</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-styling.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-styling-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-styling-en.html" />
-  </url>
-  <url>
-    <loc>https://itstory.archerlab.dev/web-tools.html</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-tools.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-tools-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-tools-en.html" />
-  </url>
-  <url>
-    <loc>https://itstory.archerlab.dev/web-tools-en.html</loc>
-    <lastmod>2025-11-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-tools.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-tools-en.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-tools-en.html" />
-  </url>
-  <url>
     <loc>https://itstory.archerlab.dev/web-interaction.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-interaction.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-interaction-en.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-interaction-en.html" />
   </url>
   <url>
     <loc>https://itstory.archerlab.dev/web-interaction-en.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-interaction.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-interaction-en.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-interaction-en.html" />
+  </url>
+  <url>
+    <loc>https://itstory.archerlab.dev/web-structure.html</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-structure.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-structure-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-structure-en.html" />
+  </url>
+  <url>
+    <loc>https://itstory.archerlab.dev/web-structure-en.html</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-structure.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-structure-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-structure-en.html" />
+  </url>
+  <url>
+    <loc>https://itstory.archerlab.dev/web-styling.html</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-styling.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-styling-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-styling-en.html" />
+  </url>
+  <url>
+    <loc>https://itstory.archerlab.dev/web-styling-en.html</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-styling.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-styling-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-styling-en.html" />
+  </url>
+  <url>
+    <loc>https://itstory.archerlab.dev/web-tools.html</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-tools.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-tools-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-tools-en.html" />
+  </url>
+  <url>
+    <loc>https://itstory.archerlab.dev/web-tools-en.html</loc>
+    <lastmod>2025-12-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-tools.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-tools-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-tools-en.html" />
   </url>
 </urlset>
