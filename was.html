@@ -5,14 +5,27 @@
 	<meta charset="utf-8">
 	<script src="assets/js/browser-check.js" defer></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>ArcherLab IT Story · 웹 서버 연대기</title>
-	<meta name="description"
-		content="CERN httpd부터 Nginx, Spring Boot, Lambda까지, 웹 서버가 요청과 세션을 다루는 방식을 바꾼 사건을 타임라인으로 살펴봅니다." />
-	<meta name="keywords"
-		content="웹 서버 역사, CERN httpd, Apache, Nginx, Tomcat, Spring Boot, AWS Lambda, Kubernetes Ingress, ArcherLab" />
+	<title>웹 서버 역사 타임라인: Apache에서 서버리스·K8s까지 | IT Story</title>
+	<meta name="description" content="웹 서버 30년 역사를 타임라인으로! CERN httpd, Apache, SSL, Tomcat, Spring, Nginx, Spring Boot, AWS Lambda, Kubernetes Ingress까지 웹 서버 발전 과정을 연대순으로 총정리했습니다." />
+	<meta name="keywords" content="웹 서버 역사, WAS 역사, Apache 역사, Nginx, Tomcat, Spring Boot, AWS Lambda, Kubernetes, 서블릿, 서버리스, 웹 서버 연대기, 백엔드 기술, WAS 발전 과정" />
 	<meta property="og:title" content="ArcherLab IT Story · Web Server Timeline" />
 	<meta property="og:description" content="첫 웹 서버부터 SSL, 서블릿, 오픈소스 WAS, 서버리스, Ingress까지 백엔드 요청 흐름을 바꾼 순간을 따라가 보세요." />
 	<meta property="og:image" content="https://itstory.archerlab.dev/assets/images/archerlab_logo.png" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://itstory.archerlab.dev/was.html" />
+	<meta property="og:locale" content="ko_KR" />
+	<meta property="og:locale:alternate" content="en_US" />
+	<meta property="og:site_name" content="ArcherLab IT Story" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="웹 서버 역사 타임라인: Apache에서 서버리스·K8s까지" />
+	<meta name="twitter:description" content="CERN httpd부터 AWS Lambda, K8s Ingress까지 웹 서버 30년 발전사를 연대순으로 정리했습니다." />
+	<meta name="twitter:image" content="https://itstory.archerlab.dev/assets/images/archerlab_logo.png" />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="author" content="ArcherLab" />
+	<link rel="icon" type="image/svg+xml" href="assets/images/archerlab_logo.svg">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/archerlab_mini_logo.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/archerlab_mini_logo.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
@@ -70,6 +83,39 @@
 				]
 			}
 		</script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			"inLanguage": "ko",
+			"mainEntity": [
+				{
+					"@type": "Question",
+					"name": "Apache와 Nginx의 차이점은 무엇인가요?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Apache(1995)는 프로세스/스레드 기반으로 요청을 처리하며 .htaccess 등 유연한 설정이 장점입니다. Nginx(2004)는 이벤트 드리븐 아키텍처로 동시 접속 처리에 뛰어나며, 리버스 프록시와 로드 밸런싱에 강점이 있습니다."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "서버리스(AWS Lambda)는 웹 서버를 대체하나요?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "2014년 등장한 AWS Lambda는 서버 관리 없이 코드를 실행하는 서버리스 패러다임을 열었습니다. 전통 웹 서버를 완전히 대체하진 않지만, 이벤트 기반 백엔드에서 중요한 선택지가 되고 있습니다."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Spring Boot가 웹 서버 역사에서 갖는 의미는?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "2014년 출시된 Spring Boot는 내장 톰캣으로 별도 WAS 설정 없이 실행할 수 있게 하여, Java 웹 개발의 설정 복잡성을 획기적으로 줄였습니다."
+					}
+				}
+			]
+		}
+	</script>
 </head>
 
 <body>
