@@ -4,8 +4,7 @@
    ArcherLab IT Story - Ancient Parchment Chronicle
    =================================================== */
 
-/* Serif fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+KR:wght@400;500;600;700&display=swap');
+/* Serif fonts – loaded asynchronously via <link> in each HTML file */
 
 /* -- 1. Design Tokens -- */
 html {

@@ -10,9 +10,10 @@
 		<meta property="og:description" content="Follow the breakthroughs that moved the browser from document viewer to rich, real-time runtime." />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+KR:wght@400;500;600;700&display=swap"></noscript>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css"></noscript>
+		<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css"></noscript>
 		<link rel="stylesheet" href="assets/css/style.css">
 		<link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/web-interaction.html" />
 		<link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-interaction-en.html" />
@@ -51,7 +52,7 @@
 			<header class="page__header" role="banner">
 				<div class="page__header-left">
 					<a class="page__brand" href="https://archerlab.dev" target="_blank" rel="noopener">
-						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" loading="lazy">
+						<img src="assets/images/archerlab_mini_logo.png" alt="ArcherLab" class="page__brand-logo" width="32" height="32" fetchpriority="high">
 						<span class="page__brand-label">ArcherLab Chronicle</span>
 					</a>
 					<nav class="page__topic-nav" aria-label="Switch topic">
@@ -479,12 +480,14 @@
 		<button type="button" class="scroll-top" data-scroll-top aria-label="Back to top" hidden>↑</button>
 
 		<script src="assets/js/main.js" defer></script>
-		<script type="text/javascript" src="https://wcs.pstatic.net/wcslog.js"></script>
-		<script type="text/javascript">
+		<script async src="https://wcs.pstatic.net/wcslog.js"></script>
+		<script>
 			if (!window.wcs_add) window.wcs_add = {};
 		window.wcs_add["wa"] = "134f4c428765360";
-			if (window.location.protocol !== 'file:' && window.wcs) {
-				wcs_do();
+			if (window.location.protocol !== 'file:') {
+				window.addEventListener('load', function() {
+					if (window.wcs) wcs_do();
+				});
 			}
 		</script>
 	</body>
