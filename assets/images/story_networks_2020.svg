@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Remote learning COVID-19 - online class scene -->
+  <rect width="800" height="450" fill="#e8edf0"/>
+  <!-- Home/bedroom background for student -->
+  <rect x="0" y="380" width="800" height="70" fill="#d0d8e0"/>
+  <rect x="0" y="0" width="400" height="385" fill="#eef2f8"/>
+  <rect x="400" y="0" width="400" height="385" fill="#f0ede8"/>
+  <!-- Divider line (screen split) -->
+  <line x1="400" y1="0" x2="400" y2="385" stroke="#c0c8d0" stroke-width="2"/>
+  <!-- Left side: Student at home -->
+  <text x="200" y="30" font-family="sans-serif" font-size="9" fill="#4a6080" text-anchor="middle">Student's Home · 2020</text>
+  <!-- Bookshelf background -->
+  <rect x="20" y="50" width="80" height="160" fill="#d8c8a8" rx="2" stroke="#b8a880" stroke-width="1"/>
+  <g fill="#a88030">
+    <rect x="25" y="55" width="12" height="40" rx="1"/>
+    <rect x="40" y="60" width="10" height="35" rx="1"/>
+    <rect x="53" y="55" width="14" height="40" rx="1"/>
+    <rect x="70" y="62" width="10" height="33" rx="1"/>
+    <rect x="25" y="100" width="15" height="35" rx="1"/>
+    <rect x="43" y="105" width="12" height="30" rx="1"/>
+    <rect x="58" y="100" width="16" height="35" rx="1"/>
+  </g>
+  <!-- Student's laptop -->
+  <g transform="translate(200, 260)">
+    <!-- Laptop base -->
+    <rect x="-100" y="20" width="200" height="12" fill="#8a6030" rx="2"/>
+    <!-- Laptop screen (showing teacher video call) -->
+    <rect x="-80" y="-120" width="160" height="140" fill="#2a2a2a" rx="4" stroke="#1a1a1a" stroke-width="2"/>
+    <rect x="-74" y="-114" width="148" height="128" fill="#1a1a2a" rx="2"/>
+    <!-- Video call grid showing class -->
+    <!-- Teacher large -->
+    <rect x="-70" y="-110" width="100" height="75" fill="#1a2a3a" rx="2"/>
+    <ellipse cx="-20" cy="-80" rx="18" ry="18" fill="#d4a870"/>
+    <rect x="-35" y="-63" width="30" height="25" fill="#1a3a5a" rx="2"/>
+    <text x="-20" y="-34" font-family="sans-serif" font-size="5" fill="#80c0ff" text-anchor="middle">Teacher</text>
+    <!-- Small thumbnails of classmates -->
+    <rect x="34" y="-110" width="38" height="30" fill="#2a1a3a" rx="1"/>
+    <rect x="34" y="-76" width="38" height="30" fill="#1a3a2a" rx="1"/>
+    <rect x="34" y="-42" width="38" height="30" fill="#2a2a1a" rx="1"/>
+    <!-- Classmate faces -->
+    <ellipse cx="53" cy="-97" rx="8" ry="8" fill="#c8956a"/>
+    <ellipse cx="53" cy="-63" rx="8" ry="8" fill="#b87858"/>
+    <ellipse cx="53" cy="-29" rx="8" ry="8" fill="#d4a870"/>
+    <!-- Status bar at bottom of video call -->
+    <rect x="-70" y="-10" width="148" height="18" fill="#111120" rx="2"/>
+    <text x="-65" y="2" font-family="monospace" font-size="5" fill="#40c0ff">🎤 ●  📷 ●  👤 28 students</text>
+    <!-- Laptop keyboard -->
+    <rect x="-72" y="6" width="144" height="12" fill="#2a2a2a" rx="1"/>
+    <!-- Student face peeking from behind screen -->
+    <ellipse cx="-20" cy="-150" rx="22" ry="22" fill="#d4a870"/>
+    <rect x="-32" y="-130" width="28" height="35" fill="#2a4a6a" rx="3"/>
+    <!-- Mask on face -->
+    <rect x="-35" y="-135" width="30" height="15" fill="#a0c0e0" rx="4"/>
+    <text x="0" y="55" font-family="serif" font-size="8" fill="#4a5060" text-anchor="middle">학생 (Student at home)</text>
+  </g>
+  <!-- Right side: Teacher at home -->
+  <text x="600" y="30" font-family="sans-serif" font-size="9" fill="#6a4030" text-anchor="middle">Teacher's Home · 2020</text>
+  <!-- Bookshelf behind teacher -->
+  <rect x="700" y="50" width="80" height="200" fill="#e0d0b0" rx="2" stroke="#c0a870" stroke-width="1"/>
+  <g fill="#c08030">
+    <rect x="705" y="58" width="12" height="45" rx="1"/>
+    <rect x="720" y="63" width="10" height="40" rx="1"/>
+    <rect x="733" y="58" width="14" height="45" rx="1"/>
+    <rect x="750" y="65" width="10" height="38" rx="1"/>
+  </g>
+  <!-- Teacher's setup -->
+  <g transform="translate(570, 240)">
+    <!-- Teacher at laptop showing their face to camera -->
+    <rect x="-80" y="-110" width="160" height="115" fill="#2a2a2a" rx="4"/>
+    <rect x="-73" y="-103" width="146" height="100" fill="#1a2030" rx="2"/>
+    <!-- Teacher's video showing on student screen (video call view from teacher's side) -->
+    <text x="0" y="-65" font-family="sans-serif" font-size="8" fill="#80c0ff" text-anchor="middle">ONLINE CLASS MEETING</text>
+    <!-- Student grid (what teacher sees) -->
+    <g fill="#2a3040">
+      <rect x="-68" y="-96" width="35" height="24" rx="1"/>
+      <rect x="-28" y="-96" width="35" height="24" rx="1"/>
+      <rect x="12" y="-96" width="35" height="24" rx="1"/>
+      <rect x="52" y="-96" width="15" height="24" rx="1"/>
+      <rect x="-68" y="-68" width="35" height="24" rx="1"/>
+      <rect x="-28" y="-68" width="35" height="24" rx="1"/>
+      <rect x="12" y="-68" width="35" height="24" rx="1"/>
+      <rect x="52" y="-68" width="15" height="24" rx="1"/>
+    </g>
+    <!-- Student face dots -->
+    <g fill="#c8956a">
+      <ellipse cx="-50" cy="-84" rx="7" ry="7"/>
+      <ellipse cx="-10" cy="-84" rx="7" ry="7"/>
+      <ellipse cx="30" cy="-84" rx="7" ry="7"/>
+      <ellipse cx="-50" cy="-56" rx="7" ry="7"/>
+      <ellipse cx="-10" cy="-56" rx="7" ry="7"/>
+    </g>
+    <rect x="-73" y="-37" width="146" height="28" fill="#111120" rx="2"/>
+    <text x="0" y="-18" font-family="monospace" font-size="7" fill="#40c0ff" text-anchor="middle">Zoom/Meet · 28 students connected</text>
+    <!-- Laptop keyboard -->
+    <rect x="-73" y="5" width="146" height="12" fill="#2a2a2a" rx="1"/>
+    <!-- Teacher -->
+    <ellipse cx="0" cy="-150" rx="22" ry="22" fill="#d4a870"/>
+    <rect x="-16" y="-130" width="32" height="35" fill="#3a2a5a" rx="3"/>
+    <!-- Ring light (teacher setup) -->
+    <circle cx="0" cy="-150" r="35" fill="none" stroke="#f0e080" stroke-width="3" opacity="0.3"/>
+    <text x="0" y="46" font-family="serif" font-size="8" fill="#5a4050" text-anchor="middle">교사 (Teacher at home)</text>
+    <text x="0" y="58" font-family="serif" font-size="7" fill="#6a5060" text-anchor="middle">"내일 화면 속 교실에서 만나요"</text>
+  </g>
+  <!-- COVID context note at bottom -->
+  <rect x="30" y="310" width="740" height="55" fill="#f0e8e4" rx="5" stroke="#c09080" stroke-width="1.5"/>
+  <text x="400" y="330" font-family="sans-serif" font-size="10" font-weight="bold" fill="#6a3020" text-anchor="middle">COVID-19 · SCHOOLS CLOSE · INTERNET = LIFELINE · 2020</text>
+  <text x="400" y="348" font-family="serif" font-size="8" fill="#7a4030" text-anchor="middle">Zoom: 10M → 300M daily users in 3 months · Network traffic surged 70% globally</text>
+  <text x="400" y="362" font-family="serif" font-size="8" fill="#7a4030" text-anchor="middle">Home broadband, Wi-Fi, cloud platforms all tested to the limit</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#3a1a1a" rx="6" opacity="0.8"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#ff8080" text-anchor="middle">2020</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a0a1a" opacity="0.8"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">Remote Learning · COVID-19 · Classrooms Move Online · Zoom + Teams + Meet · 300M Users</text>
+</svg>

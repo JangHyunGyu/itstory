@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: Cambridge lab, warm cream/sepia tone -->
+  <rect width="800" height="450" fill="#2b1f0e"/>
+  <rect x="0" y="320" width="800" height="130" fill="#1e1508"/>
+
+  <!-- Floor line -->
+  <line x1="0" y1="320" x2="800" y2="320" stroke="#3a2a10" stroke-width="2"/>
+
+  <!-- EDSAC machine: large rack cabinets -->
+  <!-- Left rack -->
+  <rect x="40" y="80" width="120" height="230" rx="4" fill="#1a140a" stroke="#4a3a20" stroke-width="2"/>
+  <text x="100" y="74" text-anchor="middle" font-family="monospace" font-size="10" fill="#aa8844">EDSAC RACK A</text>
+  <!-- Mercury delay lines -->
+  <g fill="#2a2010" stroke="#6a5030" stroke-width="1">
+    <rect x="55" y="95" width="90" height="20" rx="2"/>
+    <rect x="55" y="122" width="90" height="20" rx="2"/>
+    <rect x="55" y="149" width="90" height="20" rx="2"/>
+    <rect x="55" y="176" width="90" height="20" rx="2"/>
+    <rect x="55" y="203" width="90" height="20" rx="2"/>
+    <rect x="55" y="230" width="90" height="20" rx="2"/>
+    <rect x="55" y="257" width="90" height="20" rx="2"/>
+  </g>
+  <!-- Labels on delay lines -->
+  <g font-family="monospace" font-size="8" fill="#aa8840" text-anchor="middle">
+    <text x="100" y="109">MERCURY DELAY — M0</text>
+    <text x="100" y="136">MERCURY DELAY — M1</text>
+    <text x="100" y="163">MERCURY DELAY — M2</text>
+    <text x="100" y="190">MERCURY DELAY — M3</text>
+    <text x="100" y="217">MERCURY DELAY — M4</text>
+    <text x="100" y="244">MERCURY DELAY — M5</text>
+    <text x="100" y="271">MERCURY DELAY — M6</text>
+  </g>
+
+  <!-- Center rack -->
+  <rect x="180" y="80" width="120" height="230" rx="4" fill="#1a140a" stroke="#4a3a20" stroke-width="2"/>
+  <text x="240" y="74" text-anchor="middle" font-family="monospace" font-size="10" fill="#aa8844">EDSAC RACK B</text>
+  <!-- Valve tubes in center rack -->
+  <g fill="#221a08" stroke="#5a4820" stroke-width="1">
+    <ellipse cx="210" cy="120" rx="10" ry="18"/>
+    <ellipse cx="240" cy="120" rx="10" ry="18"/>
+    <ellipse cx="270" cy="120" rx="10" ry="18"/>
+    <ellipse cx="210" cy="165" rx="10" ry="18"/>
+    <ellipse cx="240" cy="165" rx="10" ry="18"/>
+    <ellipse cx="270" cy="165" rx="10" ry="18"/>
+    <ellipse cx="210" cy="210" rx="10" ry="18"/>
+    <ellipse cx="240" cy="210" rx="10" ry="18"/>
+    <ellipse cx="270" cy="210" rx="10" ry="18"/>
+    <ellipse cx="210" cy="255" rx="10" ry="18"/>
+    <ellipse cx="240" cy="255" rx="10" ry="18"/>
+    <ellipse cx="270" cy="255" rx="10" ry="18"/>
+  </g>
+  <g stroke="#dd9922" stroke-width="1" opacity="0.5" fill="none">
+    <line x1="210" y1="108" x2="210" y2="132"/>
+    <line x1="240" y1="108" x2="240" y2="132"/>
+    <line x1="270" y1="108" x2="270" y2="132"/>
+    <line x1="210" y1="153" x2="210" y2="177"/>
+    <line x1="240" y1="153" x2="240" y2="177"/>
+    <line x1="270" y1="153" x2="270" y2="177"/>
+  </g>
+
+  <!-- Paper tape reader -->
+  <rect x="330" y="150" width="150" height="90" rx="6" fill="#1a140a" stroke="#5a4420" stroke-width="2"/>
+  <text x="405" y="144" text-anchor="middle" font-family="monospace" font-size="11" fill="#cc9944">TAPE READER</text>
+  <!-- Tape spools -->
+  <circle cx="370" cy="195" r="34" fill="#2a1e08" stroke="#7a5a28" stroke-width="2"/>
+  <circle cx="370" cy="195" r="20" fill="#1a1008" stroke="#5a4020" stroke-width="1"/>
+  <circle cx="370" cy="195" r="6" fill="#5a4020"/>
+  <!-- Tape holes -->
+  <g fill="#7a5a28">
+    <circle cx="390" cy="175" r="2"/>
+    <circle cx="396" cy="182" r="2"/>
+    <circle cx="400" cy="190" r="2"/>
+    <circle cx="400" cy="198" r="2"/>
+    <circle cx="396" cy="208" r="2"/>
+    <circle cx="390" cy="215" r="2"/>
+  </g>
+  <!-- Second spool -->
+  <circle cx="450" cy="195" r="25" fill="#2a1e08" stroke="#7a5a28" stroke-width="2"/>
+  <circle cx="450" cy="195" r="12" fill="#1a1008" stroke="#5a4020" stroke-width="1"/>
+  <circle cx="450" cy="195" r="5" fill="#5a4020"/>
+  <!-- Tape strip between spools -->
+  <path d="M 404 190 Q 427 185 445 190" fill="none" stroke="#c8a860" stroke-width="4"/>
+
+  <!-- Tape labels on the right -->
+  <!-- Library tapes -->
+  <rect x="520" y="100" width="80" height="24" rx="3" fill="#2a200c" stroke="#7a6030" stroke-width="1.5"/>
+  <text x="560" y="116" text-anchor="middle" font-family="monospace" font-size="10" fill="#ccaa44">SQRT ROUTINE</text>
+  <rect x="520" y="132" width="80" height="24" rx="3" fill="#2a200c" stroke="#7a6030" stroke-width="1.5"/>
+  <text x="560" y="148" text-anchor="middle" font-family="monospace" font-size="10" fill="#ccaa44">MULT ROUTINE</text>
+  <rect x="520" y="164" width="80" height="24" rx="3" fill="#2a200c" stroke="#7a6030" stroke-width="1.5"/>
+  <text x="560" y="180" text-anchor="middle" font-family="monospace" font-size="10" fill="#ccaa44">PRINT ROUTINE</text>
+  <rect x="520" y="196" width="80" height="24" rx="3" fill="#1e3a1e" stroke="#3a7a3a" stroke-width="1.5"/>
+  <text x="560" y="212" text-anchor="middle" font-family="monospace" font-size="10" fill="#66cc66">INITIAL ORDERS</text>
+  <rect x="520" y="228" width="80" height="24" rx="3" fill="#1e3a1e" stroke="#3a7a3a" stroke-width="1.5"/>
+  <text x="560" y="244" text-anchor="middle" font-family="monospace" font-size="10" fill="#66cc66">31 INSTRUCTIONS</text>
+
+  <text x="560" y="88" text-anchor="middle" font-family="monospace" font-size="11" fill="#aa8844">TAPE LIBRARY</text>
+  <!-- Bracket -->
+  <line x1="514" y1="96" x2="514" y2="256" stroke="#5a4820" stroke-width="1.5"/>
+  <line x1="514" y1="96" x2="520" y2="96" stroke="#5a4820" stroke-width="1.5"/>
+  <line x1="514" y1="256" x2="520" y2="256" stroke="#5a4820" stroke-width="1.5"/>
+
+  <!-- Initial Orders flowchart -->
+  <rect x="640" y="90" width="130" height="220" rx="6" fill="#0e1a0e" stroke="#2a5a2a" stroke-width="1.5"/>
+  <text x="705" y="108" text-anchor="middle" font-family="monospace" font-size="10" fill="#44cc44">BOOT SEQUENCE</text>
+  <!-- Flow steps -->
+  <rect x="658" y="118" width="94" height="22" rx="3" fill="#1a3a1a" stroke="#3a7a3a" stroke-width="1"/>
+  <text x="705" y="133" text-anchor="middle" font-family="monospace" font-size="9" fill="#66cc66">POWER ON</text>
+  <line x1="705" y1="140" x2="705" y2="150" stroke="#44aa44" stroke-width="1.5" marker-end="url(#garr)"/>
+  <rect x="658" y="150" width="94" height="22" rx="3" fill="#1a3a1a" stroke="#3a7a3a" stroke-width="1"/>
+  <text x="705" y="165" text-anchor="middle" font-family="monospace" font-size="9" fill="#66cc66">INSERT TAPE</text>
+  <line x1="705" y1="172" x2="705" y2="182" stroke="#44aa44" stroke-width="1.5" marker-end="url(#garr)"/>
+  <rect x="658" y="182" width="94" height="22" rx="3" fill="#1a3a1a" stroke="#3a7a3a" stroke-width="1"/>
+  <text x="705" y="197" text-anchor="middle" font-family="monospace" font-size="9" fill="#66cc66">LOAD 31 INSTR</text>
+  <line x1="705" y1="204" x2="705" y2="214" stroke="#44aa44" stroke-width="1.5" marker-end="url(#garr)"/>
+  <rect x="658" y="214" width="94" height="22" rx="3" fill="#1a3a1a" stroke="#3a7a3a" stroke-width="1"/>
+  <text x="705" y="229" text-anchor="middle" font-family="monospace" font-size="9" fill="#66cc66">READ PROGRAM</text>
+  <line x1="705" y1="236" x2="705" y2="246" stroke="#44aa44" stroke-width="1.5" marker-end="url(#garr)"/>
+  <rect x="658" y="246" width="94" height="22" rx="3" fill="#0e3a0e" stroke="#44aa44" stroke-width="1.5"/>
+  <text x="705" y="261" text-anchor="middle" font-family="monospace" font-size="9" fill="#88ff88">EXECUTE ▶</text>
+  <defs>
+    <marker id="garr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#44aa44"/>
+    </marker>
+  </defs>
+
+  <!-- Title strip -->
+  <rect x="0" y="410" width="800" height="40" fill="#1e1508" opacity="0.95"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#ccaa66" font-weight="bold">EDSAC Initial Orders — 테이프만 넣으면 자동 부트스트랩 · 1949</text>
+</svg>

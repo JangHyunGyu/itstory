@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: industrial data center, 1950s -->
+  <rect width="800" height="450" fill="#1c1410"/>
+  <rect x="0" y="330" width="800" height="120" fill="#150f0a"/>
+  <line x1="0" y1="330" x2="800" y2="330" stroke="#3a2a18" stroke-width="2"/>
+
+  <!-- IBM 704 mainframe body -->
+  <rect x="30" y="100" width="340" height="220" rx="6" fill="#1e1a10" stroke="#5a4a30" stroke-width="2.5"/>
+  <text x="200" y="92" text-anchor="middle" font-family="monospace" font-size="12" fill="#cc9944" font-weight="bold">IBM 704 MAINFRAME</text>
+
+  <!-- Front panel with lights and switches -->
+  <rect x="50" y="115" width="300" height="60" rx="3" fill="#181210" stroke="#4a3a22" stroke-width="1.5"/>
+  <!-- Indicator lights grid -->
+  <g>
+    <!-- Row of red/orange indicator lamps -->
+    <circle cx="75" cy="145" r="7" fill="#cc3300" opacity="0.9"/>
+    <circle cx="75" cy="145" r="4" fill="#ff6633"/>
+    <circle cx="100" cy="145" r="7" fill="#cc3300" opacity="0.9"/>
+    <circle cx="100" cy="145" r="4" fill="#ff6633"/>
+    <circle cx="125" cy="145" r="7" fill="#884400" opacity="0.6"/>
+    <circle cx="125" cy="145" r="3" fill="#cc6600"/>
+    <circle cx="150" cy="145" r="7" fill="#cc3300" opacity="0.9"/>
+    <circle cx="150" cy="145" r="4" fill="#ff6633"/>
+    <circle cx="175" cy="145" r="7" fill="#884400" opacity="0.6"/>
+    <circle cx="200" cy="145" r="7" fill="#cc3300" opacity="0.9"/>
+    <circle cx="200" cy="145" r="4" fill="#ff6633"/>
+    <circle cx="225" cy="145" r="7" fill="#884400" opacity="0.6"/>
+    <circle cx="250" cy="145" r="7" fill="#cc3300" opacity="0.9"/>
+    <circle cx="250" cy="145" r="4" fill="#ff6633"/>
+    <circle cx="275" cy="145" r="7" fill="#cc3300" opacity="0.9"/>
+    <circle cx="275" cy="145" r="4" fill="#ff6633"/>
+    <circle cx="300" cy="145" r="7" fill="#884400" opacity="0.6"/>
+    <circle cx="325" cy="145" r="7" fill="#cc3300" opacity="0.9"/>
+    <circle cx="325" cy="145" r="4" fill="#ff6633"/>
+  </g>
+
+  <!-- Tape drives -->
+  <rect x="50" y="188" width="100" height="120" rx="3" fill="#181210" stroke="#4a3a22" stroke-width="1"/>
+  <circle cx="100" cy="230" r="36" fill="#1a1408" stroke="#6a5030" stroke-width="2"/>
+  <circle cx="100" cy="230" r="24" fill="#120e06" stroke="#4a3818" stroke-width="1"/>
+  <circle cx="100" cy="230" r="8" fill="#3a2a10"/>
+  <!-- Tape holes -->
+  <g fill="#5a4820" opacity="0.8">
+    <circle cx="100" cy="198" r="3"/>
+    <circle cx="124" cy="206" r="3"/>
+    <circle cx="134" cy="230" r="3"/>
+    <circle cx="124" cy="254" r="3"/>
+    <circle cx="100" cy="262" r="3"/>
+    <circle cx="76" cy="254" r="3"/>
+    <circle cx="66" cy="230" r="3"/>
+    <circle cx="76" cy="206" r="3"/>
+  </g>
+
+  <rect x="168" y="188" width="100" height="120" rx="3" fill="#181210" stroke="#4a3a22" stroke-width="1"/>
+  <circle cx="218" cy="230" r="36" fill="#1a1408" stroke="#6a5030" stroke-width="2"/>
+  <circle cx="218" cy="230" r="24" fill="#120e06" stroke="#4a3818" stroke-width="1"/>
+  <circle cx="218" cy="230" r="8" fill="#3a2a10"/>
+
+  <!-- GM-NAA I/O monitor program visual in center -->
+  <rect x="390" y="80" width="200" height="260" rx="6" fill="#0e1a0e" stroke="#2a5a2a" stroke-width="2"/>
+  <text x="490" y="72" text-anchor="middle" font-family="monospace" font-size="11" fill="#44cc44" font-weight="bold">GM-NAA I/O MONITOR</text>
+
+  <!-- Job queue visualization -->
+  <text x="490" y="102" text-anchor="middle" font-family="monospace" font-size="10" fill="#888" >JOB QUEUE</text>
+  <!-- Job cards stacked -->
+  <rect x="410" y="108" width="160" height="28" rx="3" fill="#2a1e0a" stroke="#8a6a30" stroke-width="1.5"/>
+  <text x="490" y="127" text-anchor="middle" font-family="monospace" font-size="10" fill="#ccaa44">JOB #001 — GM PAYROLL</text>
+  <rect x="410" y="140" width="160" height="28" rx="3" fill="#2a1e0a" stroke="#8a6a30" stroke-width="1.5"/>
+  <text x="490" y="159" text-anchor="middle" font-family="monospace" font-size="10" fill="#ccaa44">JOB #002 — NAA STRESS</text>
+  <rect x="410" y="172" width="160" height="28" rx="3" fill="#2a1e0a" stroke="#8a6a30" stroke-width="1.5"/>
+  <text x="490" y="191" text-anchor="middle" font-family="monospace" font-size="10" fill="#ccaa44">JOB #003 — INVENTORY</text>
+  <rect x="410" y="204" width="160" height="28" rx="3" fill="#1a2e1a" stroke="#44aa44" stroke-width="2"/>
+  <text x="490" y="223" text-anchor="middle" font-family="monospace" font-size="10" fill="#66ff66">JOB #004 — RUNNING ▶</text>
+  <rect x="410" y="236" width="160" height="28" rx="3" fill="#1e1a10" stroke="#5a4a20" stroke-width="1" opacity="0.5"/>
+  <text x="490" y="255" text-anchor="middle" font-family="monospace" font-size="10" fill="#888">JOB #005 — WAITING</text>
+  <rect x="410" y="268" width="160" height="28" rx="3" fill="#1e1a10" stroke="#5a4a20" stroke-width="1" opacity="0.5"/>
+  <text x="490" y="287" text-anchor="middle" font-family="monospace" font-size="10" fill="#888">JOB #006 — WAITING</text>
+  <!-- Separator -->
+  <line x1="405" y1="305" x2="575" y2="305" stroke="#2a5a2a" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="490" y="322" text-anchor="middle" font-family="monospace" font-size="10" fill="#44cc44">AUTO-TRANSITION</text>
+  <text x="490" y="336" text-anchor="middle" font-family="monospace" font-size="9" fill="#2a8a2a">NO OPERATOR NEEDED</text>
+
+  <!-- Arrow from tape to monitor -->
+  <defs>
+    <marker id="oa" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ccaa44"/>
+    </marker>
+    <marker id="ga" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#44cc44"/>
+    </marker>
+  </defs>
+  <path d="M 370 230 L 390 230" fill="none" stroke="#44cc44" stroke-width="2" marker-end="url(#ga)"/>
+
+  <!-- Operator figure (night shift) -->
+  <ellipse cx="660" cy="180" rx="22" ry="22" fill="#2a2010"/>
+  <rect x="638" y="202" width="44" height="80" rx="5" fill="#1e1810"/>
+  <!-- Cup of coffee -->
+  <rect x="622" y="250" width="16" height="20" rx="3" fill="#1e1810" stroke="#4a3820" stroke-width="1"/>
+  <path d="M638 255 Q645 250 645 265" fill="none" stroke="#4a3820" stroke-width="1.5"/>
+  <!-- Steam from coffee -->
+  <path d="M628 248 Q631 242 628 236" fill="none" stroke="#888" stroke-width="1" opacity="0.6"/>
+  <path d="M634 246 Q637 240 634 234" fill="none" stroke="#888" stroke-width="1" opacity="0.6"/>
+
+  <!-- Clock showing night time -->
+  <circle cx="700" cy="130" r="30" fill="#1a1408" stroke="#5a4820" stroke-width="2"/>
+  <circle cx="700" cy="130" r="24" fill="#100e06" stroke="#3a2810" stroke-width="1"/>
+  <!-- Clock hands (2:30 AM) -->
+  <line x1="700" y1="130" x2="700" y2="112" stroke="#ccaa44" stroke-width="2"/>
+  <line x1="700" y1="130" x2="718" y2="142" stroke="#ccaa44" stroke-width="1.5"/>
+  <circle cx="700" cy="130" r="3" fill="#ccaa44"/>
+  <text x="700" y="170" text-anchor="middle" font-family="monospace" font-size="10" fill="#888">NIGHT SHIFT</text>
+
+  <!-- "No manual tape change needed" note -->
+  <rect x="540" y="350" width="230" height="50" rx="5" fill="#0e1a0e" stroke="#2a5a2a" stroke-width="1.5"/>
+  <text x="655" y="370" text-anchor="middle" font-family="monospace" font-size="10" fill="#44cc44">BATCH PROCESSING</text>
+  <text x="655" y="385" text-anchor="middle" font-family="monospace" font-size="9" fill="#228822">자동 순차 처리 — 테이프 교체 불필요</text>
+
+  <!-- Title -->
+  <rect x="0" y="410" width="800" height="40" fill="#150f0a" opacity="0.95"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cc9944" font-weight="bold">GM-NAA I/O Monitor — 배치 자동 전환 · 1956</text>
+</svg>

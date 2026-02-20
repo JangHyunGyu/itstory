@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f0f4ff"/>
+
+  <!-- Title banner -->
+  <rect x="0" y="0" width="800" height="60" fill="#1a237e" opacity="0.95"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">NewSQL · 확장성과 ACID의 결합 · 2012</text>
+
+  <!-- Venn Diagram -->
+  <g transform="translate(80, 75)">
+    <!-- Left circle: SQL/ACID -->
+    <circle cx="160" cy="160" r="130" fill="#1565c0" opacity="0.35"/>
+    <!-- Right circle: NoSQL/Scale -->
+    <circle cx="330" cy="160" r="130" fill="#4caf50" opacity="0.35"/>
+    <!-- Overlap: NewSQL -->
+    <path d="M 245,60 A 130,130 0 0,1 245,260 A 130,130 0 0,1 245,60 Z" fill="#7b1fa2" opacity="0.5"/>
+    <!-- More precise overlap -->
+    <ellipse cx="245" cy="160" rx="65" ry="100" fill="#7b1fa2" opacity="0.35"/>
+
+    <!-- Left circle label -->
+    <text x="120" y="115" font-family="Arial, sans-serif" font-size="14" fill="#0d47a1" text-anchor="middle" font-weight="bold">SQL</text>
+    <text x="120" y="135" font-family="Arial, sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">ACID</text>
+
+    <!-- ACID properties -->
+    <g font-family="Arial, sans-serif" font-size="10" fill="#1565c0">
+      <text x="80" y="165">Atomicity</text>
+      <text x="80" y="183">Consistency</text>
+      <text x="80" y="201">Isolation</text>
+      <text x="80" y="219">Durability</text>
+      <text x="80" y="237">Transactions</text>
+    </g>
+
+    <!-- Center: NewSQL -->
+    <text x="245" y="145" font-family="Arial, sans-serif" font-size="15" fill="#4a148c" text-anchor="middle" font-weight="bold">New</text>
+    <text x="245" y="165" font-family="Arial, sans-serif" font-size="15" fill="#4a148c" text-anchor="middle" font-weight="bold">SQL</text>
+    <text x="245" y="190" font-family="Arial, sans-serif" font-size="9" fill="#6a1b9a" text-anchor="middle">Best of</text>
+    <text x="245" y="204" font-family="Arial, sans-serif" font-size="9" fill="#6a1b9a" text-anchor="middle">both worlds</text>
+
+    <!-- Right circle label -->
+    <text x="375" y="115" font-family="Arial, sans-serif" font-size="14" fill="#1b5e20" text-anchor="middle" font-weight="bold">NoSQL</text>
+    <text x="375" y="135" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32" text-anchor="middle">Scale</text>
+
+    <!-- NoSQL properties -->
+    <g font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">
+      <text x="315" y="165">Horizontal</text>
+      <text x="315" y="183">Scaling</text>
+      <text x="315" y="201">Distributed</text>
+      <text x="315" y="219">High Avail.</text>
+      <text x="315" y="237">Geo-distrib.</text>
+    </g>
+  </g>
+
+  <!-- Google Spanner global map visualization -->
+  <g transform="translate(490, 75)">
+    <rect x="0" y="0" width="290" height="200" rx="8" fill="#e8eaf6" stroke="#3949ab" stroke-width="2"/>
+    <text x="145" y="22" font-family="Arial, sans-serif" font-size="12" fill="#283593" text-anchor="middle" font-weight="bold">Google Spanner</text>
+    <text x="145" y="38" font-family="Arial, sans-serif" font-size="10" fill="#3949ab" text-anchor="middle">Globally Distributed</text>
+
+    <!-- Simplified world map outline -->
+    <ellipse cx="145" cy="120" rx="135" ry="80" fill="#c5cae9" opacity="0.5"/>
+    <!-- Continents simplified -->
+    <path d="M 20,100 Q 50,85 80,90 Q 100,88 110,100 Q 95,120 80,125 Q 55,128 30,115 Z" fill="#7986cb" opacity="0.7"/>
+    <path d="M 120,85 Q 150,75 185,80 Q 200,85 205,100 Q 195,120 175,128 Q 155,133 130,125 Q 115,115 120,85 Z" fill="#7986cb" opacity="0.7"/>
+    <path d="M 200,88 Q 230,80 260,85 Q 270,95 265,110 Q 248,125 230,128 Q 210,125 205,110 Z" fill="#7986cb" opacity="0.7"/>
+    <path d="M 80,130 Q 100,125 115,135 Q 112,158 100,165 Q 85,160 80,145 Z" fill="#7986cb" opacity="0.5"/>
+
+    <!-- Data center nodes -->
+    <circle cx="60" cy="105" r="8" fill="#f44336"/>
+    <circle cx="155" cy="90" r="8" fill="#f44336"/>
+    <circle cx="225" cy="95" r="8" fill="#f44336"/>
+    <circle cx="95" cy="145" r="8" fill="#f44336"/>
+    <circle cx="240" cy="130" r="6" fill="#f44336"/>
+
+    <!-- Connection lines -->
+    <line x1="60" y1="105" x2="155" y2="90" stroke="#ff5722" stroke-width="1.5" opacity="0.7"/>
+    <line x1="155" y1="90" x2="225" y2="95" stroke="#ff5722" stroke-width="1.5" opacity="0.7"/>
+    <line x1="60" y1="105" x2="95" y2="145" stroke="#ff5722" stroke-width="1.5" opacity="0.7"/>
+    <line x1="225" y1="95" x2="240" y2="130" stroke="#ff5722" stroke-width="1.5" opacity="0.7"/>
+    <line x1="95" y1="145" x2="240" y2="130" stroke="#ff5722" stroke-width="1.2" opacity="0.5"/>
+    <line x1="155" y1="90" x2="95" y2="145" stroke="#ff5722" stroke-width="1" opacity="0.4"/>
+
+    <!-- Latency labels -->
+    <text x="107" y="88" font-family="monospace" font-size="7" fill="#1565c0">< 5ms</text>
+    <text x="188" y="88" font-family="monospace" font-size="7" fill="#1565c0">< 8ms</text>
+    <text x="145" y="175" font-family="Arial, sans-serif" font-size="9" fill="#283593" text-anchor="middle">Global, consistent, ACID</text>
+  </g>
+
+  <!-- NewSQL Examples -->
+  <g transform="translate(490, 295)">
+    <rect x="0" y="0" width="290" height="80" rx="8" fill="white" stroke="#3949ab" stroke-width="2"/>
+    <text x="145" y="20" font-family="Arial, sans-serif" font-size="12" fill="#283593" text-anchor="middle" font-weight="bold">NewSQL Systems</text>
+    <g font-family="Arial, sans-serif" font-size="10">
+      <circle cx="20" cy="38" r="6" fill="#4285f4"/>
+      <text x="32" y="42" fill="#263238">Google Spanner (2012)</text>
+      <circle cx="160" cy="38" r="6" fill="#f57f17"/>
+      <text x="172" y="42" fill="#263238">CockroachDB</text>
+      <circle cx="20" cy="58" r="6" fill="#1565c0"/>
+      <text x="32" y="62" fill="#263238">TiDB · VoltDB</text>
+      <circle cx="160" cy="58" r="6" fill="#2e7d32"/>
+      <text x="172" y="62" fill="#263238">NuoDB · Spanner</text>
+    </g>
+  </g>
+
+  <!-- Key insight -->
+  <rect x="30" y="335" width="445" height="45" rx="6" fill="#e8eaf6" stroke="#3949ab" stroke-width="2"/>
+  <text x="237" y="355" font-family="Arial, sans-serif" font-size="12" fill="#1a237e" text-anchor="middle" font-weight="bold">SQL ACID + NoSQL 수평 확장 = NewSQL</text>
+  <text x="237" y="372" font-family="Arial, sans-serif" font-size="10" fill="#3949ab" text-anchor="middle">Distributed ACID Transactions at Web Scale</text>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#1a237e" opacity="0.9"/>
+  <text x="400" y="415" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">ACID 일관성과 NoSQL의 확장성을 동시에 달성</text>
+  <text x="400" y="438" font-family="Arial, sans-serif" font-size="11" fill="#9fa8da" text-anchor="middle">Google Spanner · 2012 · 전 세계 분산 ACID 트랜잭션</text>
+</svg>

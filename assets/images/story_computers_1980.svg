@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg1980" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d15"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </linearGradient>
+    <linearGradient id="ibmBlue1980" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#003399"/>
+      <stop offset="100%" stop-color="#001a66"/>
+    </linearGradient>
+    <linearGradient id="monitorGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#001a00"/>
+      <stop offset="100%" stop-color="#002a00"/>
+    </linearGradient>
+    <linearGradient id="pcBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b8b090"/>
+      <stop offset="100%" stop-color="#a09880"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg1980)"/>
+
+  <!-- IBM Stripes logo top center -->
+  <g transform="translate(290, 15)">
+    <rect x="0" y="0" width="220" height="50" fill="#003399" rx="5"/>
+    <!-- IBM text with stripe effect -->
+    <text x="110" y="37" fill="white" font-size="38" font-family="sans-serif" text-anchor="middle" font-weight="900" letter-spacing="4">IBM</text>
+    <!-- Horizontal stripe pattern (IBM stripes) -->
+    <g fill="#003399" opacity="0.35">
+      <rect x="5" y="10" width="210" height="4"/>
+      <rect x="5" y="18" width="210" height="4"/>
+      <rect x="5" y="26" width="210" height="4"/>
+      <rect x="5" y="34" width="210" height="4"/>
+      <rect x="5" y="42" width="210" height="4"/>
+    </g>
+  </g>
+
+  <text x="400" y="80" fill="#4466cc" font-size="14" font-family="sans-serif" text-anchor="middle">IBM PC Development · Open Architecture · 1980</text>
+
+  <!-- IBM PC unit (large, center-left) -->
+  <g transform="translate(80, 100)">
+    <!-- System unit (tower, older style - horizontal) -->
+    <rect x="0" y="0" width="320" height="145" fill="url(#pcBody)" rx="6"/>
+    <rect x="8" y="8" width="304" height="129" fill="#a09070" rx="4"/>
+
+    <!-- Floppy drive bays -->
+    <rect x="18" y="18" width="80" height="30" fill="#888060" rx="3"/>
+    <rect x="22" y="21" width="72" height="24" fill="#404030" rx="2"/>
+    <rect x="26" y="24" width="64" height="18" fill="#302820" rx="1"/>
+    <text x="58" y="37" fill="#606050" font-size="9" font-family="monospace" text-anchor="middle">5.25" Drive</text>
+
+    <rect x="18" y="55" width="80" height="30" fill="#888060" rx="3"/>
+    <rect x="22" y="58" width="72" height="24" fill="#404030" rx="2"/>
+    <rect x="26" y="61" width="64" height="18" fill="#302820" rx="1"/>
+    <text x="58" y="74" fill="#606050" font-size="9" font-family="monospace" text-anchor="middle">5.25" Drive</text>
+
+    <!-- Power LED -->
+    <circle cx="35" cy="100" r="5" fill="#44ff44" opacity="0.85"/>
+    <text x="50" y="103" fill="#606050" font-size="8" font-family="monospace">POWER</text>
+    <circle cx="35" cy="116" r="5" fill="#ff8800" opacity="0.7"/>
+    <text x="50" y="119" fill="#606050" font-size="8" font-family="monospace">TURBO</text>
+
+    <!-- Expansion slots in back panel illustration -->
+    <g fill="#808060" opacity="0.7">
+      <rect x="115" y="18" width="14" height="105" rx="1"/>
+      <rect x="133" y="18" width="14" height="105" rx="1"/>
+      <rect x="151" y="18" width="14" height="105" rx="1"/>
+      <rect x="169" y="18" width="14" height="105" rx="1"/>
+      <rect x="187" y="18" width="14" height="105" rx="1"/>
+      <rect x="205" y="18" width="14" height="105" rx="1"/>
+      <rect x="223" y="18" width="14" height="105" rx="1"/>
+      <rect x="241" y="18" width="14" height="105" rx="1"/>
+    </g>
+    <text x="200" y="133" fill="#606050" font-size="9" font-family="monospace" text-anchor="middle">Open Expansion Slots</text>
+
+    <!-- IBM badge -->
+    <rect x="270" y="115" width="40" height="22" fill="#003399" rx="3"/>
+    <text x="290" y="130" fill="white" font-size="12" font-family="sans-serif" text-anchor="middle" font-weight="bold">IBM</text>
+
+    <!-- Keyboard -->
+    <rect x="0" y="155" width="320" height="65" fill="url(#pcBody)" rx="5"/>
+    <rect x="8" y="162" width="304" height="52" fill="#a09070" rx="3"/>
+    <!-- Key rows -->
+    <g fill="#888060" stroke="#707050" stroke-width="0.5">
+      <rect x="14" y="167" width="14" height="12" rx="2"/>
+      <rect x="32" y="167" width="14" height="12" rx="2"/>
+      <rect x="50" y="167" width="14" height="12" rx="2"/>
+      <rect x="68" y="167" width="14" height="12" rx="2"/>
+      <rect x="86" y="167" width="14" height="12" rx="2"/>
+      <rect x="104" y="167" width="14" height="12" rx="2"/>
+      <rect x="122" y="167" width="14" height="12" rx="2"/>
+      <rect x="140" y="167" width="14" height="12" rx="2"/>
+      <rect x="158" y="167" width="14" height="12" rx="2"/>
+      <rect x="176" y="167" width="14" height="12" rx="2"/>
+      <rect x="194" y="167" width="14" height="12" rx="2"/>
+      <rect x="212" y="167" width="14" height="12" rx="2"/>
+      <rect x="230" y="167" width="14" height="12" rx="2"/>
+      <rect x="248" y="167" width="20" height="12" rx="2"/>
+      <rect x="272" y="167" width="14" height="12" rx="2"/>
+      <rect x="290" y="167" width="14" height="12" rx="2"/>
+      <!-- QWERTY row -->
+      <rect x="20" y="183" width="14" height="12" rx="2"/>
+      <rect x="38" y="183" width="14" height="12" rx="2"/>
+      <rect x="56" y="183" width="14" height="12" rx="2"/>
+      <rect x="74" y="183" width="14" height="12" rx="2"/>
+      <rect x="92" y="183" width="14" height="12" rx="2"/>
+      <rect x="110" y="183" width="14" height="12" rx="2"/>
+      <rect x="128" y="183" width="14" height="12" rx="2"/>
+      <rect x="146" y="183" width="14" height="12" rx="2"/>
+      <rect x="164" y="183" width="14" height="12" rx="2"/>
+      <rect x="182" y="183" width="14" height="12" rx="2"/>
+      <rect x="200" y="183" width="14" height="12" rx="2"/>
+      <rect x="218" y="183" width="14" height="12" rx="2"/>
+      <rect x="236" y="183" width="22" height="12" rx="2"/>
+      <!-- Space bar -->
+      <rect x="70" y="199" width="170" height="12" rx="2"/>
+    </g>
+  </g>
+
+  <!-- Green phosphor monitor (right of keyboard) -->
+  <g transform="translate(430, 80)">
+    <!-- Monitor body -->
+    <rect x="0" y="0" width="220" height="175" fill="#2a2a1a" rx="8"/>
+    <!-- Screen bezel -->
+    <rect x="12" y="12" width="196" height="138" fill="#1a1a0a" rx="5"/>
+    <!-- CRT screen (green phosphor) -->
+    <rect x="18" y="18" width="184" height="126" fill="url(#monitorGreen)" rx="3"/>
+
+    <!-- MS-DOS command prompt -->
+    <text x="24" y="38" fill="#00bb00" font-size="11" font-family="monospace">C:\&gt; dir</text>
+    <text x="24" y="54" fill="#009900" font-size="10" font-family="monospace"> Volume in drive C</text>
+    <text x="24" y="68" fill="#009900" font-size="10" font-family="monospace"> Directory of C:\</text>
+    <text x="24" y="84" fill="#009900" font-size="10" font-family="monospace">COMMAND  COM  25307</text>
+    <text x="24" y="98" fill="#009900" font-size="10" font-family="monospace">CONFIG   SYS    128</text>
+    <text x="24" y="112" fill="#009900" font-size="10" font-family="monospace">AUTOEXEC BAT    256</text>
+    <text x="24" y="126" fill="#00bb00" font-size="11" font-family="monospace">C:\&gt; _</text>
+
+    <!-- Monitor controls -->
+    <circle cx="185" cy="160" r="7" fill="#2a2a1a" stroke="#3a3a2a" stroke-width="1"/>
+    <!-- Monitor base/stand -->
+    <rect x="75" y="175" width="70" height="12" fill="#1a1a0a" rx="2"/>
+    <rect x="60" y="185" width="100" height="8" fill="#1a1a0a" rx="2"/>
+  </g>
+
+  <!-- Intel 8088 chip illustration -->
+  <g transform="translate(430, 280)">
+    <rect x="0" y="0" width="220" height="120" fill="#050810" rx="5" stroke="#1a3a5a" stroke-width="1.5"/>
+    <text x="110" y="20" fill="#4466cc" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">Intel 8088 CPU</text>
+
+    <!-- Chip DIP package -->
+    <rect x="60" y="32" width="100" height="45" fill="#1a1a0a" rx="3"/>
+    <rect x="65" y="35" width="90" height="39" fill="#2a2a18" rx="2"/>
+    <text x="110" y="56" fill="#aa8840" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">Intel</text>
+    <text x="110" y="68" fill="#aa8840" font-size="9" font-family="monospace" text-anchor="middle">8088</text>
+
+    <!-- Pins top -->
+    <g fill="#888860">
+      <rect x="67" y="24" width="5" height="10" rx="1"/><rect x="76" y="24" width="5" height="10" rx="1"/>
+      <rect x="85" y="24" width="5" height="10" rx="1"/><rect x="94" y="24" width="5" height="10" rx="1"/>
+      <rect x="103" y="24" width="5" height="10" rx="1"/><rect x="112" y="24" width="5" height="10" rx="1"/>
+      <rect x="121" y="24" width="5" height="10" rx="1"/><rect x="130" y="24" width="5" height="10" rx="1"/>
+      <rect x="139" y="24" width="5" height="10" rx="1"/><rect x="148" y="24" width="5" height="10" rx="1"/>
+    </g>
+    <!-- Pins bottom -->
+    <g fill="#888860">
+      <rect x="67" y="75" width="5" height="10" rx="1"/><rect x="76" y="75" width="5" height="10" rx="1"/>
+      <rect x="85" y="75" width="5" height="10" rx="1"/><rect x="94" y="75" width="5" height="10" rx="1"/>
+      <rect x="103" y="75" width="5" height="10" rx="1"/><rect x="112" y="75" width="5" height="10" rx="1"/>
+      <rect x="121" y="75" width="5" height="10" rx="1"/><rect x="130" y="75" width="5" height="10" rx="1"/>
+      <rect x="139" y="75" width="5" height="10" rx="1"/><rect x="148" y="75" width="5" height="10" rx="1"/>
+    </g>
+
+    <text x="110" y="100" fill="#2a5a8a" font-size="9" font-family="monospace" text-anchor="middle">16-bit · 4.77 MHz · 8-bit bus</text>
+    <text x="110" y="114" fill="#1a4a7a" font-size="9" font-family="monospace" text-anchor="middle">MS-DOS · 640KB RAM</text>
+  </g>
+
+  <!-- Open Architecture diagram -->
+  <g transform="translate(50, 300)">
+    <rect x="0" y="0" width="360" height="120" fill="#050810" rx="5" stroke="#1a3a5a" stroke-width="1.5"/>
+    <text x="180" y="20" fill="#4466cc" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">Open Architecture = Clone Industry</text>
+
+    <rect x="15" y="30" width="80" height="30" fill="#003399" rx="4"/>
+    <text x="55" y="50" fill="white" font-size="10" font-family="monospace" text-anchor="middle">IBM PC</text>
+
+    <line x1="95" y1="45" x2="120" y2="45" stroke="#ffd700" stroke-width="2"/>
+    <polygon points="120,45 113,40 113,50" fill="#ffd700"/>
+
+    <rect x="120" y="30" width="220" height="30" fill="#0d1a0d" rx="4" stroke="#44cc44" stroke-width="1"/>
+    <text x="230" y="50" fill="#44cc44" font-size="10" font-family="monospace" text-anchor="middle">Open specs → Compaq, Dell, HP...</text>
+
+    <!-- Clone names -->
+    <g font-size="9" font-family="monospace">
+      <rect x="15" y="70" width="55" height="18" fill="#1a2a1a" rx="2" stroke="#226622" stroke-width="1"/>
+      <text x="43" y="82" fill="#44aa44" text-anchor="middle">Compaq</text>
+      <rect x="80" y="70" width="55" height="18" fill="#1a2a1a" rx="2" stroke="#226622" stroke-width="1"/>
+      <text x="108" y="82" fill="#44aa44" text-anchor="middle">Dell</text>
+      <rect x="145" y="70" width="55" height="18" fill="#1a2a1a" rx="2" stroke="#226622" stroke-width="1"/>
+      <text x="173" y="82" fill="#44aa44" text-anchor="middle">HP</text>
+      <rect x="210" y="70" width="55" height="18" fill="#1a2a1a" rx="2" stroke="#226622" stroke-width="1"/>
+      <text x="238" y="82" fill="#44aa44" text-anchor="middle">NEC</text>
+      <rect x="275" y="70" width="70" height="18" fill="#1a2a1a" rx="2" stroke="#226622" stroke-width="1"/>
+      <text x="310" y="82" fill="#44aa44" text-anchor="middle">100+ more</text>
+    </g>
+    <text x="180" y="112" fill="#1a4a1a" font-size="9" font-family="monospace" text-anchor="middle">IBM's open hardware spec revolutionized the industry</text>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="0" y="395" width="800" height="55" fill="#050810" opacity="0.97"/>
+  <text x="400" y="418" fill="#4466cc" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">IBM PC 개발 · 오픈 아키텍처</text>
+  <text x="400" y="440" fill="#224488" font-size="12" font-family="Georgia, serif" text-anchor="middle">IBM PC · Intel 8088 · MS-DOS · Open architecture enables clone industry · 1980</text>
+</svg>

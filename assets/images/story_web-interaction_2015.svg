@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg15" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a"/>
+      <stop offset="100%" style="stop-color:#2d1010"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg15)"/>
+
+  <!-- Alert/warning symbol (Flash zero-day) -->
+  <polygon points="400,30 490,180 310,180" fill="#cc0000" opacity="0.3" stroke="#ff4444" stroke-width="3"/>
+  <text x="400" y="160" font-family="sans-serif" font-size="60" fill="#ff4444" text-anchor="middle" opacity="0.6">!</text>
+
+  <!-- CVE Badge -->
+  <rect x="290" y="190" width="220" height="50" rx="8" fill="#cc0000"/>
+  <text x="400" y="210" font-family="monospace" font-size="13" fill="white" text-anchor="middle" font-weight="bold">CVE-2015-5119</text>
+  <text x="400" y="228" font-family="sans-serif" font-size="11" fill="#ffcccc" text-anchor="middle">Critical · CVSS 10.0</text>
+
+  <!-- Left: Timeline of events -->
+  <rect x="30" y="30" width="240" height="380" rx="6" fill="#1a0a0a" stroke="#cc3333" stroke-width="1"/>
+  <text x="150" y="56" font-family="sans-serif" font-size="13" fill="#ff6644" text-anchor="middle" font-weight="bold">July 2015 Timeline</text>
+
+  <!-- Timeline events -->
+  <circle cx="60" cy="80" r="8" fill="#cc0000"/>
+  <line x1="60" y1="88" x2="60" y2="118" stroke="#cc3333" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="76" y="78" font-family="sans-serif" font-size="11" fill="#ff8866">July 5</text>
+  <text x="76" y="94" font-family="sans-serif" font-size="10" fill="#888">Hacking Team leaked</text>
+  <text x="76" y="108" font-family="sans-serif" font-size="10" fill="#888">400GB data dump</text>
+
+  <circle cx="60" cy="130" r="8" fill="#cc0000"/>
+  <line x1="60" y1="138" x2="60" y2="168" stroke="#cc3333" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="76" y="128" font-family="sans-serif" font-size="11" fill="#ff8866">July 7</text>
+  <text x="76" y="144" font-family="sans-serif" font-size="10" fill="#888">0-day found in dump</text>
+  <text x="76" y="158" font-family="sans-serif" font-size="10" fill="#888">Flash exploit code</text>
+
+  <circle cx="60" cy="180" r="8" fill="#ff4444"/>
+  <line x1="60" y1="188" x2="60" y2="218" stroke="#cc3333" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="76" y="178" font-family="sans-serif" font-size="11" fill="#ff8866">July 8</text>
+  <text x="76" y="194" font-family="sans-serif" font-size="10" fill="#888">Mozilla blocks Flash</text>
+  <text x="76" y="208" font-family="sans-serif" font-size="10" fill="#ff4444">ALL versions blocked</text>
+
+  <circle cx="60" cy="230" r="8" fill="#ffaa00"/>
+  <line x1="60" y1="238" x2="60" y2="268" stroke="#cc3333" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="76" y="228" font-family="sans-serif" font-size="11" fill="#ff8866">July 10</text>
+  <text x="76" y="244" font-family="sans-serif" font-size="10" fill="#888">Adobe APSB15-16</text>
+  <text x="76" y="258" font-family="sans-serif" font-size="10" fill="#888">emergency patch</text>
+
+  <circle cx="60" cy="280" r="8" fill="#44cc44"/>
+  <line x1="60" y1="288" x2="60" y2="318" stroke="#cc3333" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="76" y="278" font-family="sans-serif" font-size="11" fill="#ff8866">July 12</text>
+  <text x="76" y="294" font-family="sans-serif" font-size="10" fill="#888">Stamos: "Set end-of-</text>
+  <text x="76" y="308" font-family="sans-serif" font-size="10" fill="#888">life date for Flash"</text>
+
+  <circle cx="60" cy="330" r="8" fill="#4488ff"/>
+  <text x="76" y="328" font-family="sans-serif" font-size="11" fill="#ff8866">Post 2015</text>
+  <text x="76" y="344" font-family="sans-serif" font-size="10" fill="#888">HTML5 replaces Flash</text>
+  <text x="76" y="358" font-family="sans-serif" font-size="10" fill="#888">on all major sites</text>
+
+  <!-- Right: Impact + Flash end of life -->
+  <rect x="540" y="30" width="230" height="200" rx="6" fill="#1a0a0a" stroke="#cc3333" stroke-width="1"/>
+  <text x="655" y="56" font-family="sans-serif" font-size="13" fill="#ff6644" text-anchor="middle" font-weight="bold">Impact</text>
+  <text x="555" y="78" font-family="sans-serif" font-size="11" fill="#ccc">• Firefox blocked</text>
+  <text x="555" y="96" font-family="sans-serif" font-size="11" fill="#ccc">  all Flash versions</text>
+  <text x="555" y="114" font-family="sans-serif" font-size="11" fill="#ccc">• IE Click-to-play</text>
+  <text x="555" y="132" font-family="sans-serif" font-size="11" fill="#ccc">  enforced</text>
+  <text x="555" y="150" font-family="sans-serif" font-size="11" fill="#ccc">• Chrome disabled</text>
+  <text x="555" y="168" font-family="sans-serif" font-size="11" fill="#ccc">  by default</text>
+  <text x="555" y="186" font-family="sans-serif" font-size="11" fill="#ccc">• Alex Stamos calls</text>
+  <text x="555" y="204" font-family="sans-serif" font-size="11" fill="#ccc">  for Flash end-of-life</text>
+  <text x="555" y="222" font-family="sans-serif" font-size="11" fill="#ccc">  (Facebook CSO)</text>
+
+  <!-- Flash declining timeline graph -->
+  <rect x="540" y="252" width="230" height="120" rx="6" fill="#1a0a0a" stroke="#555" stroke-width="1"/>
+  <text x="655" y="272" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">Flash Market Share</text>
+  <!-- Chart area -->
+  <rect x="558" y="278" width="194" height="68" fill="#111"/>
+  <!-- Declining line chart -->
+  <polyline points="558,284 580,290 600,306 620,318 640,330 660,336 680,340 700,342 720,344 752,346" fill="none" stroke="#cc3333" stroke-width="2"/>
+  <text x="558" y="360" font-family="sans-serif" font-size="9" fill="#888">2010</text>
+  <text x="700" y="360" font-family="sans-serif" font-size="9" fill="#888">2020</text>
+  <text x="554" y="286" font-family="sans-serif" font-size="9" fill="#888">80%</text>
+  <text x="554" y="348" font-family="sans-serif" font-size="9" fill="#888">0%</text>
+  <!-- 2015 marker -->
+  <line x1="640" y1="278" x2="640" y2="346" stroke="#ff4444" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="640" y="374" font-family="sans-serif" font-size="9" fill="#ff4444" text-anchor="middle">2015</text>
+
+  <!-- Center bottom: HTML5 replaces Flash -->
+  <rect x="280" y="256" width="240" height="60" rx="6" fill="#0a1628" stroke="#4488ff" stroke-width="1.5"/>
+  <text x="400" y="278" font-family="sans-serif" font-size="12" fill="#88bbff" text-anchor="middle">HTML5 takes over</text>
+  <text x="400" y="296" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">Canvas · WebGL · Video tag</text>
+  <text x="400" y="310" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">Web Audio · Pointer Events</text>
+
+  <!-- Year badge -->
+  <rect x="320" y="330" width="160" height="36" rx="18" fill="#cc0000"/>
+  <text x="400" y="354" font-family="sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Flash 2015</text>
+
+  <!-- Bottom caption -->
+  <text x="400" y="408" font-family="sans-serif" font-size="14" fill="#ff6644" text-anchor="middle" font-weight="bold">Flash Zero-Day — The Beginning of the End</text>
+  <text x="400" y="428" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">CVE-2015-5119 · Hacking Team leak · Adobe APSB15-16 · 2015</text>
+</svg>

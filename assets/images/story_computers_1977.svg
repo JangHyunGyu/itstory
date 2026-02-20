@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg1977" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a1a0d"/>
+      <stop offset="100%" stop-color="#1a100a"/>
+    </linearGradient>
+    <linearGradient id="homeWall" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c8a870"/>
+      <stop offset="100%" stop-color="#b89860"/>
+    </linearGradient>
+    <linearGradient id="appleBeige" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d4c8a0"/>
+      <stop offset="100%" stop-color="#c0b490"/>
+    </linearGradient>
+    <linearGradient id="crtScreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#001000"/>
+      <stop offset="100%" stop-color="#002000"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background - home setting 1977 -->
+  <rect width="800" height="450" fill="url(#bg1977)"/>
+
+  <!-- Room wall (retro 70s color) -->
+  <rect x="0" y="0" width="800" height="360" fill="#c8a060" opacity="0.3"/>
+  <!-- Wallpaper pattern (70s style) -->
+  <g opacity="0.12" fill="#8B6020">
+    <ellipse cx="50" cy="50" rx="20" ry="30"/>
+    <ellipse cx="150" cy="30" rx="20" ry="30"/>
+    <ellipse cx="250" cy="50" rx="20" ry="30"/>
+    <ellipse cx="350" cy="30" rx="20" ry="30"/>
+    <ellipse cx="450" cy="50" rx="20" ry="30"/>
+    <ellipse cx="550" cy="30" rx="20" ry="30"/>
+    <ellipse cx="650" cy="50" rx="20" ry="30"/>
+    <ellipse cx="750" cy="30" rx="20" ry="30"/>
+    <ellipse cx="100" cy="110" rx="20" ry="30"/>
+    <ellipse cx="200" cy="90" rx="20" ry="30"/>
+    <ellipse cx="300" cy="110" rx="20" ry="30"/>
+    <ellipse cx="400" cy="90" rx="20" ry="30"/>
+    <ellipse cx="500" cy="110" rx="20" ry="30"/>
+    <ellipse cx="600" cy="90" rx="20" ry="30"/>
+    <ellipse cx="700" cy="110" rx="20" ry="30"/>
+    <ellipse cx="800" cy="90" rx="20" ry="30"/>
+  </g>
+
+  <!-- Floor -->
+  <rect x="0" y="350" width="800" height="100" fill="#3a2a10"/>
+  <!-- Floor boards -->
+  <g stroke="#2a1a08" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="360" x2="800" y2="360"/>
+    <line x1="0" y1="375" x2="800" y2="375"/>
+    <line x1="0" y1="390" x2="800" y2="390"/>
+    <line x1="0" y1="405" x2="800" y2="405"/>
+  </g>
+
+  <!-- Desk/table -->
+  <rect x="100" y="310" width="600" height="20" fill="#5a3a15" rx="3"/>
+  <rect x="110" y="330" width="580" height="25" fill="#4a2a10"/>
+  <!-- Desk legs -->
+  <rect x="120" y="355" width="15" height="40" fill="#3a2008" rx="2"/>
+  <rect x="665" y="355" width="15" height="40" fill="#3a2008" rx="2"/>
+
+  <!-- Apple II computer (center) -->
+  <g transform="translate(220, 145)">
+    <!-- Main unit (beige Apple II body) -->
+    <rect x="0" y="0" width="280" height="140" fill="url(#appleBeige)" rx="8"/>
+
+    <!-- Keyboard area (lower half) -->
+    <rect x="8" y="70" width="264" height="65" fill="#c0b088" rx="4"/>
+
+    <!-- Keys -->
+    <g fill="#a09060" stroke="#888040" stroke-width="0.5">
+      <!-- Number row -->
+      <rect x="14" y="75" width="16" height="14" rx="2"/>
+      <rect x="33" y="75" width="16" height="14" rx="2"/>
+      <rect x="52" y="75" width="16" height="14" rx="2"/>
+      <rect x="71" y="75" width="16" height="14" rx="2"/>
+      <rect x="90" y="75" width="16" height="14" rx="2"/>
+      <rect x="109" y="75" width="16" height="14" rx="2"/>
+      <rect x="128" y="75" width="16" height="14" rx="2"/>
+      <rect x="147" y="75" width="16" height="14" rx="2"/>
+      <rect x="166" y="75" width="16" height="14" rx="2"/>
+      <rect x="185" y="75" width="16" height="14" rx="2"/>
+      <rect x="204" y="75" width="16" height="14" rx="2"/>
+      <rect x="223" y="75" width="16" height="14" rx="2"/>
+      <rect x="242" y="75" width="26" height="14" rx="2"/>
+      <!-- QWERTY row -->
+      <rect x="20" y="93" width="16" height="14" rx="2"/>
+      <rect x="39" y="93" width="16" height="14" rx="2"/>
+      <rect x="58" y="93" width="16" height="14" rx="2"/>
+      <rect x="77" y="93" width="16" height="14" rx="2"/>
+      <rect x="96" y="93" width="16" height="14" rx="2"/>
+      <rect x="115" y="93" width="16" height="14" rx="2"/>
+      <rect x="134" y="93" width="16" height="14" rx="2"/>
+      <rect x="153" y="93" width="16" height="14" rx="2"/>
+      <rect x="172" y="93" width="16" height="14" rx="2"/>
+      <rect x="191" y="93" width="16" height="14" rx="2"/>
+      <rect x="210" y="93" width="16" height="14" rx="2"/>
+      <rect x="229" y="93" width="36" height="14" rx="2"/>
+      <!-- ASDF row -->
+      <rect x="22" y="111" width="16" height="14" rx="2"/>
+      <rect x="41" y="111" width="16" height="14" rx="2"/>
+      <rect x="60" y="111" width="16" height="14" rx="2"/>
+      <rect x="79" y="111" width="16" height="14" rx="2"/>
+      <rect x="98" y="111" width="16" height="14" rx="2"/>
+      <rect x="117" y="111" width="16" height="14" rx="2"/>
+      <rect x="136" y="111" width="16" height="14" rx="2"/>
+      <rect x="155" y="111" width="16" height="14" rx="2"/>
+      <rect x="174" y="111" width="16" height="14" rx="2"/>
+      <rect x="193" y="111" width="16" height="14" rx="2"/>
+      <rect x="212" y="111" width="52" height="14" rx="2"/>
+      <!-- Space bar row -->
+      <rect x="20" y="127" width="22" height="10" rx="2"/>
+      <rect x="45" y="127" width="22" height="10" rx="2"/>
+      <rect x="80" y="127" width="140" height="10" rx="2"/>
+      <rect x="223" y="127" width="22" height="10" rx="2"/>
+      <rect x="248" y="127" width="22" height="10" rx="2"/>
+    </g>
+
+    <!-- Top of machine - disk slots and ventilation -->
+    <rect x="8" y="8" width="264" height="58" fill="#c8bc90" rx="4"/>
+    <!-- Ventilation slots -->
+    <g fill="#a09870" opacity="0.5">
+      <rect x="14" y="15" width="120" height="3" rx="1"/>
+      <rect x="14" y="21" width="120" height="3" rx="1"/>
+      <rect x="14" y="27" width="120" height="3" rx="1"/>
+      <rect x="14" y="33" width="120" height="3" rx="1"/>
+      <rect x="14" y="39" width="120" height="3" rx="1"/>
+    </g>
+    <!-- Disk drive slots -->
+    <rect x="150" y="14" width="110" height="22" fill="#8a8060" rx="3"/>
+    <text x="205" y="29" fill="#6a6040" font-size="9" font-family="monospace" text-anchor="middle">DISK II</text>
+
+    <!-- Power LED -->
+    <circle cx="260" cy="50" r="5" fill="#44ff44" opacity="0.9"/>
+
+    <!-- Apple logo (rainbow) -->
+    <g transform="translate(275, 8)">
+      <!-- Apple silhouette with rainbow colors -->
+      <path d="M 0 15 Q -5 5 0 0 Q 5 -5 8 3 Q 12 -3 15 3 Q 18 -5 22 3 Q 25 -3 28 5 Q 32 15 28 22 Q 22 28 14 28 Q 6 28 0 22 Z" fill="#888"/>
+      <!-- Rainbow stripes -->
+      <path d="M 0 15 Q -5 5 0 0 Q 5 -5 8 3 Q 12 -3 15 3 Q 18 -5 22 3 Q 25 -3 28 5 L 28 10 Q 25 8 22 8 Q 18 8 15 8 Q 12 8 8 8 Q 5 8 0 8 Z" fill="#cc0000"/>
+      <path d="M 0 8 Q 5 8 8 8 Q 12 8 15 8 Q 18 8 22 8 Q 25 8 28 10 L 28 14 L 0 14 Z" fill="#ff8800"/>
+      <path d="M 0 14 L 28 14 L 28 18 L 0 18 Z" fill="#ffff00"/>
+      <path d="M 0 18 L 28 18 L 28 22 L 2 22 Z" fill="#44aa00"/>
+      <path d="M 2 22 L 28 22 Q 28 26 24 28 L 6 28 Q 2 26 2 22 Z" fill="#4488cc"/>
+      <path d="M 8 24 Q 10 28 14 28 L 6 28 Q 6 26 8 24 Z" fill="#8844cc"/>
+    </g>
+  </g>
+
+  <!-- CRT Monitor (green screen) -->
+  <g transform="translate(120, 60)">
+    <!-- TV-style monitor body -->
+    <rect x="0" y="0" width="200" height="175" fill="#2a2a1a" rx="8"/>
+    <!-- Screen bezel -->
+    <rect x="10" y="10" width="180" height="140" fill="#1a1a0a" rx="5"/>
+    <!-- CRT green screen -->
+    <rect x="15" y="14" width="170" height="132" fill="url(#crtScreen)" rx="3"/>
+
+    <!-- Screen content -->
+    <text x="20" y="35" fill="#00ff00" font-size="10" font-family="monospace">]PRINT "HELLO WORLD"</text>
+    <text x="20" y="50" fill="#00cc00" font-size="10" font-family="monospace">HELLO WORLD</text>
+    <text x="20" y="65" fill="#00ff00" font-size="10" font-family="monospace">]10 FOR I=1 TO 5</text>
+    <text x="20" y="80" fill="#00ff00" font-size="10" font-family="monospace">]20 PRINT I</text>
+    <text x="20" y="95" fill="#00ff00" font-size="10" font-family="monospace">]30 NEXT I</text>
+    <text x="20" y="110" fill="#00ff00" font-size="10" font-family="monospace">]RUN</text>
+    <text x="20" y="125" fill="#00cc00" font-size="10" font-family="monospace">1 2 3 4 5</text>
+    <text x="20" y="138" fill="#00ff00" font-size="10" font-family="monospace">]_</text>
+
+    <!-- Monitor controls -->
+    <circle cx="170" cy="162" r="7" fill="#3a3a20"/>
+    <circle cx="185" cy="162" r="7" fill="#3a3a20"/>
+    <!-- Monitor base -->
+    <rect x="70" y="175" width="60" height="12" fill="#1a1a0a" rx="2"/>
+  </g>
+
+  <!-- Person at computer (70s style) -->
+  <g transform="translate(540, 150)">
+    <!-- 70s style clothing (bell bottoms) -->
+    <!-- Body -->
+    <rect x="-18" y="35" width="36" height="55" fill="#8B3A60" rx="2"/>
+    <!-- Bell bottom pants -->
+    <polygon points="-18,90 -25,145 -5,145 0,95" fill="#3a5a8B"/>
+    <polygon points="18,90 25,145 5,145 0,95" fill="#3a5a8B"/>
+    <!-- Collar/shirt -->
+    <rect x="-12" y="32" width="24" height="10" fill="#e8c860"/>
+    <!-- Head -->
+    <ellipse cx="0" cy="20" rx="16" ry="18" fill="#c49060"/>
+    <!-- Big 70s hair -->
+    <ellipse cx="0" cy="5" rx="20" ry="15" fill="#4a2a08"/>
+    <ellipse cx="-15" cy="10" rx="8" ry="18" fill="#4a2a08"/>
+    <ellipse cx="15" cy="10" rx="8" ry="18" fill="#4a2a08"/>
+    <!-- Sideburns -->
+    <rect x="-18" y="12" width="6" height="15" fill="#4a2a08" rx="2"/>
+    <rect x="12" y="12" width="6" height="15" fill="#4a2a08" rx="2"/>
+    <!-- Eyes -->
+    <circle cx="-5" cy="20" r="2.5" fill="#1a1000"/>
+    <circle cx="5" cy="20" r="2.5" fill="#1a1000"/>
+    <!-- Big glasses (70s) -->
+    <rect x="-12" y="15" width="10" height="8" fill="none" stroke="#c8a030" stroke-width="1.5" rx="3"/>
+    <rect x="2" y="15" width="10" height="8" fill="none" stroke="#c8a030" stroke-width="1.5" rx="3"/>
+    <line x1="-2" y1="19" x2="2" y2="19" stroke="#c8a030" stroke-width="1"/>
+    <!-- Arm typing -->
+    <line x1="-18" y1="58" x2="-50" y2="75" stroke="#c49060" stroke-width="6" stroke-linecap="round"/>
+    <line x1="18" y1="58" x2="50" y2="60" stroke="#c49060" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Rainbow Apple logo (large, top right) -->
+  <g transform="translate(620, 30)" opacity="0.9">
+    <!-- Large decorative rainbow apple -->
+    <path d="M 50 0 Q 40 -10 50 -20 Q 65 -30 70 -10 Q 80 -25 90 -10 Q 100 -25 110 -10 Q 115 -25 125 -5 Q 135 20 120 45 Q 105 65 85 65 Q 65 65 50 45 Q 35 20 50 0 Z" fill="#888"/>
+    <!-- Rainbow stripes -->
+    <path d="M 50 0 Q 40 -10 50 -20 Q 65 -30 70 -10 Q 80 -25 90 -10 Q 100 -25 110 -10 Q 115 -25 125 -5 L 125 5 L 50 5 Q 45 2 50 0 Z" fill="#cc0000"/>
+    <path d="M 50 5 L 125 5 L 125 15 L 50 15 Z" fill="#ff8800"/>
+    <path d="M 50 15 L 125 15 L 125 25 L 50 25 Z" fill="#ffdd00"/>
+    <path d="M 50 25 L 125 25 L 125 35 L 50 35 Z" fill="#44bb00"/>
+    <path d="M 50 35 L 125 35 L 125 45 L 52 45 Z" fill="#1166cc"/>
+    <path d="M 52 45 L 125 45 Q 120 58 108 65 L 62 65 Q 50 58 48 45 Z" fill="#8844bb"/>
+    <!-- Leaf -->
+    <ellipse cx="75" cy="-25" rx="12" ry="8" fill="#44aa00" transform="rotate(-20, 75, -25)"/>
+  </g>
+
+  <!-- Apple II release info -->
+  <g transform="translate(610, 120)">
+    <rect x="0" y="0" width="170" height="120" fill="#1a1005" opacity="0.85" rx="5"/>
+    <text x="85" y="18" fill="#cc9900" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">Apple II</text>
+    <text x="85" y="33" fill="#8B6000" font-size="10" font-family="monospace" text-anchor="middle">Released: 1977</text>
+    <text x="85" y="50" fill="#cc7700" font-size="9" font-family="monospace" text-anchor="middle">MOS 6502 @ 1MHz</text>
+    <text x="85" y="65" fill="#cc7700" font-size="9" font-family="monospace" text-anchor="middle">4KB–48KB RAM</text>
+    <text x="85" y="80" fill="#cc7700" font-size="9" font-family="monospace" text-anchor="middle">BASIC included</text>
+    <text x="85" y="95" fill="#cc7700" font-size="9" font-family="monospace" text-anchor="middle">Color graphics!</text>
+    <text x="85" y="112" fill="#8B4400" font-size="9" font-family="monospace" text-anchor="middle">Jobs + Wozniak</text>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="0" y="395" width="800" height="55" fill="#1a0d05" opacity="0.97"/>
+  <text x="400" y="420" fill="#cc9900" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">Apple II · 개인용 컴퓨터 시대</text>
+  <text x="400" y="442" fill="#8B5A00" font-size="12" font-family="Georgia, serif" text-anchor="middle">Apple II · 1977 · Steve Jobs &amp; Steve Wozniak · Personal Computer Revolution</text>
+</svg>

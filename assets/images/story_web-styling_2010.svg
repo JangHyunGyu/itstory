@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="shadow10" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000030"/>
+    </filter>
+  </defs>
+
+  <!-- Background: clean light -->
+  <rect width="800" height="450" fill="#f0f4f8"/>
+  <!-- Header bar -->
+  <rect x="0" y="0" width="800" height="50" fill="#1a5276"/>
+
+  <!-- Year label -->
+  <rect x="16" y="14" width="60" height="24" rx="4" fill="#fff" opacity="0.2"/>
+  <text x="46" y="30" font-family="monospace" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">2010</text>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="sans-serif" font-size="14" fill="#aec6d8" text-anchor="middle" font-weight="bold">Responsive Web Design — Ethan Marcotte</text>
+
+  <!-- Three devices showing same content adapting -->
+
+  <!-- DESKTOP MONITOR -->
+  <g transform="translate(30, 70)">
+    <!-- Monitor -->
+    <rect x="0" y="0" width="320" height="210" rx="8" fill="#333" filter="url(#shadow10)"/>
+    <rect x="8" y="8" width="304" height="190" rx="4" fill="#1a1a2e"/>
+    <!-- Screen content - full desktop layout -->
+    <rect x="10" y="10" width="300" height="186" fill="#fff" rx="2"/>
+
+    <!-- Nav bar -->
+    <rect x="10" y="10" width="300" height="28" fill="#1a5276"/>
+    <text x="22" y="27" font-family="sans-serif" font-size="9" fill="#fff" font-weight="bold">My Site</text>
+    <rect x="200" y="15" width="40" height="12" rx="3" fill="#ffffff33"/>
+    <rect x="246" y="15" width="40" height="12" rx="3" fill="#ffffff33"/>
+    <rect x="292" y="15" width="15" height="12" rx="3" fill="#ffffff33"/>
+
+    <!-- Hero (full width) -->
+    <rect x="10" y="38" width="300" height="55" fill="#d4e8f4"/>
+    <text x="22" y="58" font-family="sans-serif" font-size="11" fill="#1a5276" font-weight="bold">Welcome to My Website</text>
+    <rect x="22" y="63" width="180" height="4" rx="1" fill="#aac"/>
+    <rect x="22" y="70" width="160" height="4" rx="1" fill="#aac"/>
+    <rect x="22" y="77" width="60" height="14" rx="4" fill="#1a5276"/>
+
+    <!-- 3-column layout -->
+    <rect x="10" y="97" width="90" height="95" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+    <rect x="16" y="103" width="78" height="30" rx="2" fill="#ddd"/>
+    <rect x="16" y="136" width="78" height="4" rx="1" fill="#eee"/>
+    <rect x="16" y="143" width="65" height="4" rx="1" fill="#eee"/>
+    <rect x="16" y="150" width="70" height="4" rx="1" fill="#eee"/>
+
+    <rect x="105" y="97" width="90" height="95" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+    <rect x="111" y="103" width="78" height="30" rx="2" fill="#c8e8d0"/>
+    <rect x="111" y="136" width="78" height="4" rx="1" fill="#eee"/>
+    <rect x="111" y="143" width="65" height="4" rx="1" fill="#eee"/>
+    <rect x="111" y="150" width="70" height="4" rx="1" fill="#eee"/>
+
+    <rect x="200" y="97" width="110" height="95" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+    <rect x="206" y="103" width="98" height="50" rx="2" fill="#e8d0d0"/>
+    <rect x="206" y="156" width="98" height="4" rx="1" fill="#eee"/>
+    <rect x="206" y="163" width="85" height="4" rx="1" fill="#eee"/>
+    <rect x="206" y="170" width="90" height="4" rx="1" fill="#eee"/>
+    <rect x="206" y="180" width="50" height="12" rx="4" fill="#1a5276" opacity="0.7"/>
+
+    <!-- @media label -->
+    <rect x="60" y="222" width="200" height="16" rx="3" fill="#1a5276" opacity="0.1"/>
+    <text x="160" y="233" font-family="monospace" font-size="8" fill="#1a5276" text-anchor="middle">@media (min-width: 1024px)</text>
+    <!-- Monitor stand -->
+    <rect x="140" y="212" width="40" height="12" rx="3" fill="#555"/>
+    <rect x="120" y="222" width="80" height="6" rx="3" fill="#444"/>
+    <!-- Desktop label -->
+    <text x="160" y="255" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle" font-weight="bold">Desktop</text>
+    <text x="160" y="268" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">1200px wide</text>
+  </g>
+
+  <!-- TABLET -->
+  <g transform="translate(380, 90)">
+    <!-- Tablet frame -->
+    <rect x="0" y="0" width="180" height="240" rx="14" fill="#333" filter="url(#shadow10)"/>
+    <!-- Screen -->
+    <rect x="10" y="16" width="160" height="206" rx="4" fill="#1a1a2e"/>
+    <rect x="12" y="18" width="156" height="202" fill="#fff" rx="2"/>
+
+    <!-- Nav bar - condensed -->
+    <rect x="12" y="18" width="156" height="24" fill="#1a5276"/>
+    <text x="22" y="33" font-family="sans-serif" font-size="8" fill="#fff" font-weight="bold">My Site</text>
+    <!-- Hamburger menu -->
+    <rect x="148" y="22" width="16" height="2" rx="1" fill="#fff"/>
+    <rect x="148" y="27" width="16" height="2" rx="1" fill="#fff"/>
+    <rect x="148" y="32" width="16" height="2" rx="1" fill="#fff"/>
+
+    <!-- Hero - still full width but smaller -->
+    <rect x="12" y="42" width="156" height="40" fill="#d4e8f4"/>
+    <text x="20" y="58" font-family="sans-serif" font-size="9" fill="#1a5276" font-weight="bold">Welcome</text>
+    <rect x="20" y="62" width="100" height="3" rx="1" fill="#aac"/>
+    <rect x="20" y="68" width="60" height="10" rx="3" fill="#1a5276" opacity="0.7"/>
+
+    <!-- 2-column layout (adapted) -->
+    <rect x="12" y="86" width="74" height="65" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+    <rect x="17" y="91" width="64" height="24" rx="2" fill="#ddd"/>
+    <rect x="17" y="118" width="64" height="3" rx="1" fill="#eee"/>
+    <rect x="17" y="124" width="55" height="3" rx="1" fill="#eee"/>
+    <rect x="17" y="130" width="60" height="3" rx="1" fill="#eee"/>
+    <rect x="17" y="136" width="45" height="3" rx="1" fill="#eee"/>
+    <rect x="17" y="142" width="30" height="8" rx="2" fill="#1a5276" opacity="0.6"/>
+
+    <rect x="90" y="86" width="78" height="65" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+    <rect x="95" y="91" width="68" height="24" rx="2" fill="#c8e8d0"/>
+    <rect x="95" y="118" width="68" height="3" rx="1" fill="#eee"/>
+    <rect x="95" y="124" width="55" height="3" rx="1" fill="#eee"/>
+    <rect x="95" y="130" width="62" height="3" rx="1" fill="#eee"/>
+    <rect x="95" y="136" width="50" height="3" rx="1" fill="#eee"/>
+    <rect x="95" y="142" width="30" height="8" rx="2" fill="#1a5276" opacity="0.6"/>
+
+    <!-- 3rd card full width below -->
+    <rect x="12" y="155" width="156" height="57" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+    <rect x="17" y="160" width="80" height="36" rx="2" fill="#e8d0d0"/>
+    <rect x="101" y="165" width="62" height="3" rx="1" fill="#eee"/>
+    <rect x="101" y="172" width="55" height="3" rx="1" fill="#eee"/>
+    <rect x="101" y="179" width="62" height="3" rx="1" fill="#eee"/>
+    <rect x="101" y="186" width="40" height="8" rx="2" fill="#1a5276" opacity="0.6"/>
+
+    <!-- @media label -->
+    <text x="90" y="222" font-family="monospace" font-size="7" fill="#aaa" text-anchor="middle">@media (min-width: 768px)</text>
+
+    <!-- Home button -->
+    <circle cx="90" cy="234" r="8" fill="none" stroke="#555" stroke-width="1.5"/>
+    <rect x="85" y="229" width="10" height="10" rx="2" fill="none" stroke="#555" stroke-width="1"/>
+
+    <!-- Tablet label -->
+    <text x="90" y="262" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle" font-weight="bold">Tablet</text>
+    <text x="90" y="275" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">768px wide</text>
+  </g>
+
+  <!-- MOBILE PHONE -->
+  <g transform="translate(610, 105)">
+    <!-- Phone frame -->
+    <rect x="0" y="0" width="110" height="220" rx="18" fill="#333" filter="url(#shadow10)"/>
+    <!-- Screen -->
+    <rect x="8" y="16" width="94" height="186" rx="6" fill="#1a1a2e"/>
+    <rect x="10" y="18" width="90" height="182" fill="#fff" rx="4"/>
+    <!-- Speaker -->
+    <rect x="38" y="7" width="34" height="5" rx="3" fill="#555"/>
+    <!-- Home button -->
+    <circle cx="55" cy="209" r="7" fill="none" stroke="#555" stroke-width="1.5"/>
+
+    <!-- Nav: just logo and hamburger -->
+    <rect x="10" y="18" width="90" height="22" fill="#1a5276"/>
+    <text x="18" y="32" font-family="sans-serif" font-size="7" fill="#fff" font-weight="bold">My Site</text>
+    <rect x="80" y="22" width="12" height="1.5" rx="1" fill="#fff"/>
+    <rect x="80" y="26" width="12" height="1.5" rx="1" fill="#fff"/>
+    <rect x="80" y="30" width="12" height="1.5" rx="1" fill="#fff"/>
+
+    <!-- Hero: stacked, full width -->
+    <rect x="10" y="40" width="90" height="40" fill="#d4e8f4"/>
+    <text x="16" y="55" font-family="sans-serif" font-size="7" fill="#1a5276" font-weight="bold">Welcome</text>
+    <rect x="16" y="59" width="70" height="3" rx="1" fill="#aac"/>
+    <rect x="16" y="65" width="50" height="8" rx="3" fill="#1a5276" opacity="0.7"/>
+
+    <!-- Single column layout -->
+    <rect x="10" y="84" width="90" height="50" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+    <rect x="14" y="88" width="82" height="24" rx="2" fill="#ddd"/>
+    <rect x="14" y="115" width="82" height="3" rx="1" fill="#eee"/>
+    <rect x="14" y="121" width="70" height="3" rx="1" fill="#eee"/>
+    <rect x="14" y="127" width="40" height="8" rx="2" fill="#1a5276" opacity="0.6"/>
+
+    <rect x="10" y="138" width="90" height="45" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+    <rect x="14" y="142" width="82" height="18" rx="2" fill="#c8e8d0"/>
+    <rect x="14" y="163" width="82" height="3" rx="1" fill="#eee"/>
+    <rect x="14" y="170" width="70" height="3" rx="1" fill="#eee"/>
+
+    <rect x="10" y="187" width="90" height="13" fill="#f8f8f8" stroke="#eee" stroke-width="1"/>
+    <rect x="14" y="190" width="82" height="3" rx="1" fill="#eee"/>
+    <rect x="14" y="196" width="70" height="3" rx="1" fill="#eee"/>
+
+    <!-- @media label -->
+    <text x="55" y="207" font-family="monospace" font-size="6" fill="#aaa" text-anchor="middle">@media (max-width: 480px)</text>
+
+    <!-- Phone label -->
+    <text x="55" y="244" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle" font-weight="bold">Mobile</text>
+    <text x="55" y="257" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">320px wide</text>
+  </g>
+
+  <!-- Bottom: Media queries code snippet -->
+  <g transform="translate(30, 360)">
+    <rect x="0" y="0" width="740" height="75" rx="8" fill="#1e1e2e" filter="url(#shadow10)"/>
+    <text x="16" y="18" font-family="monospace" font-size="10" fill="#888">/* Fluid Grid + Flexible Images + Media Queries */</text>
+    <text x="16" y="34" font-family="monospace" font-size="10" fill="#88ff88">.grid &#123; </text>
+    <text x="88" y="34" font-family="monospace" font-size="10" fill="#ccc">width: 100%; max-width: 1200px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); </text>
+    <text x="686" y="34" font-family="monospace" font-size="10" fill="#88ff88">&#125;</text>
+    <text x="16" y="50" font-family="monospace" font-size="10" fill="#ff8855">@media</text>
+    <text x="64" y="50" font-family="monospace" font-size="10" fill="#ccc">(max-width: </text>
+    <text x="145" y="50" font-family="monospace" font-size="10" fill="#ffcc66">768px</text>
+    <text x="186" y="50" font-family="monospace" font-size="10" fill="#ccc">) &#123; </text>
+    <text x="222" y="50" font-family="monospace" font-size="10" fill="#88ff88">.nav &#123;</text>
+    <text x="274" y="50" font-family="monospace" font-size="10" fill="#ccc">display: none; </text>
+    <text x="387" y="50" font-family="monospace" font-size="10" fill="#88ff88">&#125; .hamburger &#123;</text>
+    <text x="490" y="50" font-family="monospace" font-size="10" fill="#ccc">display: block; </text>
+    <text x="600" y="50" font-family="monospace" font-size="10" fill="#88ff88">&#125; &#125;</text>
+    <text x="16" y="66" font-family="monospace" font-size="10" fill="#888">img &#123; max-width: 100%; height: auto; &#125;  /* flexible images */</text>
+  </g>
+
+  <!-- Ethan Marcotte mention -->
+  <rect x="30" y="330" width="200" height="24" rx="4" fill="#1a5276" opacity="0.15"/>
+  <text x="130" y="345" font-family="sans-serif" font-size="10" fill="#1a5276" text-anchor="middle">A List Apart · May 2010 · Ethan Marcotte</text>
+</svg>

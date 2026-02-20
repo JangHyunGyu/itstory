@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: dark DevOps/cloud era -->
+  <defs>
+    <linearGradient id="dkBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1428"/>
+      <stop offset="100%" stop-color="#060e1c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#dkBg)"/>
+
+  <!-- Docker whale logo (simplified) -->
+  <!-- Ocean wave -->
+  <ellipse cx="120" cy="330" rx="100" ry="30" fill="#2288cc" opacity="0.3"/>
+  <!-- Whale body -->
+  <ellipse cx="120" cy="290" rx="80" ry="50" fill="#2288cc"/>
+  <!-- Whale tail -->
+  <path d="M 40 310 Q 20 280 40 260 Q 50 290 40 310 Z" fill="#2288cc"/>
+  <path d="M 40 260 Q 20 240 50 250 Z" fill="#1a78bc"/>
+  <!-- Containers on whale's back -->
+  <rect x="60" y="238" width="36" height="28" rx="3" fill="#22aaee" stroke="#4accff" stroke-width="1.5"/>
+  <rect x="100" y="238" width="36" height="28" rx="3" fill="#22aaee" stroke="#4accff" stroke-width="1.5"/>
+  <rect x="140" y="238" width="36" height="28" rx="3" fill="#22aaee" stroke="#4accff" stroke-width="1.5"/>
+  <!-- Container stack 2 -->
+  <rect x="80" y="212" width="36" height="28" rx="3" fill="#1a99dd" stroke="#3abaff" stroke-width="1.5"/>
+  <rect x="120" y="212" width="36" height="28" rx="3" fill="#1a99dd" stroke="#3abaff" stroke-width="1.5"/>
+  <!-- Whale eye -->
+  <circle cx="150" cy="282" r="8" fill="white"/>
+  <circle cx="152" cy="284" r="5" fill="#0a1428"/>
+  <!-- Water spout -->
+  <path d="M 150 240 Q 155 220 150 200 Q 145 220 150 240" fill="#2288cc" opacity="0.6"/>
+  <text x="120" y="380" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#2288cc">Docker</text>
+
+  <!-- Container concept diagram -->
+  <rect x="260" y="40" width="510" height="350" rx="8" fill="#0a1020" stroke="#1a3060" stroke-width="2"/>
+  <text x="515" y="28" text-anchor="middle" font-family="monospace" font-size="12" fill="#2288cc" font-weight="bold">컨테이너 vs 가상 머신</text>
+
+  <!-- Traditional VM column -->
+  <rect x="278" y="56" width="220" height="320" rx="5" fill="#0a1828" stroke="#1a3860" stroke-width="1.5"/>
+  <text x="388" y="78" text-anchor="middle" font-family="monospace" font-size="11" fill="#6688aa">가상 머신 (VM)</text>
+
+  <rect x="290" y="86" width="196" height="28" rx="3" fill="#1a2840" stroke="#2a4870" stroke-width="1"/>
+  <text x="388" y="104" text-anchor="middle" font-family="monospace" font-size="9" fill="#8899bb">App A</text>
+  <rect x="290" y="118" width="196" height="28" rx="3" fill="#1a2840" stroke="#2a4870" stroke-width="1"/>
+  <text x="388" y="136" text-anchor="middle" font-family="monospace" font-size="9" fill="#8899bb">App B</text>
+  <rect x="290" y="150" width="196" height="28" rx="3" fill="#1a2840" stroke="#2a4870" stroke-width="1"/>
+  <text x="388" y="168" text-anchor="middle" font-family="monospace" font-size="9" fill="#8899bb">Guest OS A</text>
+  <rect x="290" y="182" width="196" height="28" rx="3" fill="#1a2840" stroke="#2a4870" stroke-width="1"/>
+  <text x="388" y="200" text-anchor="middle" font-family="monospace" font-size="9" fill="#8899bb">Guest OS B</text>
+  <rect x="290" y="214" width="196" height="28" rx="3" fill="#162038" stroke="#2a3a60" stroke-width="1"/>
+  <text x="388" y="232" text-anchor="middle" font-family="monospace" font-size="9" fill="#6688aa">Hypervisor</text>
+  <rect x="290" y="246" width="196" height="28" rx="3" fill="#0e1830" stroke="#1a2a50" stroke-width="1"/>
+  <text x="388" y="264" text-anchor="middle" font-family="monospace" font-size="9" fill="#4466aa">Host OS</text>
+  <rect x="290" y="278" width="196" height="28" rx="3" fill="#0a1428" stroke="#141e40" stroke-width="1"/>
+  <text x="388" y="296" text-anchor="middle" font-family="monospace" font-size="9" fill="#335599">Infrastructure</text>
+  <!-- VM size indicator -->
+  <rect x="290" y="316" width="196" height="30" rx="3" fill="#1a1a30" stroke="#303060" stroke-width="1"/>
+  <text x="388" y="333" text-anchor="middle" font-family="monospace" font-size="9" fill="#cc6644">용량: 수 GB · 부팅: 분 단위</text>
+
+  <!-- Docker column -->
+  <rect x="532" y="56" width="220" height="320" rx="5" fill="#081820" stroke="#1a4060" stroke-width="2"/>
+  <text x="642" y="78" text-anchor="middle" font-family="monospace" font-size="11" fill="#22aadd">도커 컨테이너</text>
+
+  <!-- Container boxes (nicely stacked) -->
+  <rect x="545" y="86" width="90" height="70" rx="4" fill="#0e2a40" stroke="#2288cc" stroke-width="1.5"/>
+  <text x="590" y="108" text-anchor="middle" font-family="monospace" font-size="8" fill="#44aadd">App A</text>
+  <text x="590" y="122" text-anchor="middle" font-family="monospace" font-size="7" fill="#2288cc">Libs · Config</text>
+  <text x="590" y="136" text-anchor="middle" font-family="monospace" font-size="7" fill="#2288cc">Bin · Deps</text>
+  <text x="590" y="148" text-anchor="middle" font-family="monospace" font-size="7" fill="#1a6699">Container</text>
+
+  <rect x="647" y="86" width="90" height="70" rx="4" fill="#0e2a40" stroke="#2288cc" stroke-width="1.5"/>
+  <text x="692" y="108" text-anchor="middle" font-family="monospace" font-size="8" fill="#44aadd">App B</text>
+  <text x="692" y="122" text-anchor="middle" font-family="monospace" font-size="7" fill="#2288cc">Libs · Config</text>
+  <text x="692" y="136" text-anchor="middle" font-family="monospace" font-size="7" fill="#2288cc">Bin · Deps</text>
+  <text x="692" y="148" text-anchor="middle" font-family="monospace" font-size="7" fill="#1a6699">Container</text>
+
+  <rect x="545" y="162" width="192" height="28" rx="3" fill="#0e2838" stroke="#1a4860" stroke-width="1.5"/>
+  <text x="641" y="180" text-anchor="middle" font-family="monospace" font-size="9" fill="#2288cc">Docker Engine</text>
+  <rect x="545" y="194" width="192" height="28" rx="3" fill="#0a2030" stroke="#1a3850" stroke-width="1"/>
+  <text x="641" y="212" text-anchor="middle" font-family="monospace" font-size="9" fill="#1a77bb">Host OS (Linux)</text>
+  <rect x="545" y="226" width="192" height="28" rx="3" fill="#061828" stroke="#0e2840" stroke-width="1"/>
+  <text x="641" y="244" text-anchor="middle" font-family="monospace" font-size="9" fill="#1366aa">Infrastructure</text>
+
+  <!-- Docker Dockerfile snippet -->
+  <rect x="545" y="262" width="192" height="90" rx="3" fill="#040e18" stroke="#0e2040" stroke-width="1"/>
+  <g font-family="monospace" font-size="8" fill="#2288cc">
+    <text x="554" y="278">FROM ubuntu:22.04</text>
+    <text x="554" y="291">RUN apt-get update</text>
+    <text x="554" y="304">COPY . /app</text>
+    <text x="554" y="317">WORKDIR /app</text>
+    <text x="554" y="330">RUN pip install -r req.txt</text>
+    <text x="554" y="343" fill="#44ccee">CMD ["python","app.py"]</text>
+  </g>
+
+  <!-- Size indicator for containers -->
+  <rect x="545" y="360" width="192" height="16" rx="3" fill="#1a3a10" stroke="#2a6a20" stroke-width="1"/>
+  <text x="641" y="373" text-anchor="middle" font-family="monospace" font-size="8" fill="#44cc44">용량: MB · 시작: 초 이내</text>
+
+  <!-- Title -->
+  <rect x="0" y="410" width="800" height="40" fill="#060e1c" opacity="0.95"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#2288cc" font-weight="bold">Docker — 컨테이너를 일상 도구로 · 2013</text>
+</svg>

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: data center, dark blue-gray -->
+  <rect width="800" height="450" fill="#0e1a28"/>
+
+  <!-- Floor grid -->
+  <pattern id="grid98" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#182838" stroke-width="0.8"/>
+  </pattern>
+  <rect x="0" y="300" width="800" height="150" fill="url(#grid98)"/>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="sans-serif" font-size="15" font-weight="bold" fill="#4499cc" text-anchor="middle">Linux Virtual Server — 1998</text>
+  <text x="400" y="54" font-family="sans-serif" font-size="11" fill="#668aaa" text-anchor="middle">Kernel-level load balancing · High availability · Scale-out architecture</text>
+
+  <!-- Internet cloud shape -->
+  <ellipse cx="80" cy="190" rx="64" ry="44" fill="#1a3050"/>
+  <ellipse cx="60" cy="208" rx="44" ry="34" fill="#1a3050"/>
+  <ellipse cx="110" cy="214" rx="44" ry="34" fill="#1a3050"/>
+  <text x="80" y="192" font-family="sans-serif" font-size="11" fill="#4499cc" text-anchor="middle">Internet</text>
+  <text x="80" y="210" font-family="sans-serif" font-size="9" fill="#2a6a9a" text-anchor="middle">Traffic</text>
+
+  <!-- Arrow from internet to LVS director -->
+  <line x1="148" y1="200" x2="218" y2="200" stroke="#4499cc" stroke-width="3"/>
+  <polygon points="218,194 234,200 218,206" fill="#4499cc"/>
+
+  <!-- LVS Director (the load balancer) -->
+  <rect x="234" y="148" width="180" height="108" rx="12" fill="#1a4a7a"/>
+  <rect x="244" y="158" width="160" height="88" rx="8" fill="#1e5a8a"/>
+  <!-- Linux penguin suggestion -->
+  <ellipse cx="290" cy="198" rx="22" ry="28" fill="#fff" opacity="0.9"/>
+  <ellipse cx="290" cy="188" rx="14" ry="16" fill="#333"/>
+  <circle cx="285" cy="184" r="3" fill="white"/>
+  <circle cx="295" cy="184" r="3" fill="white"/>
+  <circle cx="285" cy="184" r="1.5" fill="#333"/>
+  <circle cx="295" cy="184" r="1.5" fill="#333"/>
+  <ellipse cx="290" cy="194" rx="10" ry="8" fill="#f0c040"/>
+  <polygon points="290,188 286,196 294,196" fill="#e0a000"/>
+
+  <text x="340" y="182" font-family="sans-serif" font-size="11" font-weight="bold" fill="white">LVS</text>
+  <text x="340" y="196" font-family="sans-serif" font-size="9" fill="#aac8ee">Director</text>
+  <text x="340" y="212" font-family="monospace" font-size="8" fill="#88aacc">ipvsadm</text>
+  <text x="340" y="226" font-family="monospace" font-size="8" fill="#88aacc">NAT / DR mode</text>
+  <text x="314" y="268" font-family="sans-serif" font-size="9" fill="#4499cc" text-anchor="middle">Kernel Load Balancer</text>
+
+  <!-- Load balancing arrows to real servers -->
+  <!-- Arrow 1 (top) -->
+  <line x1="414" y1="175" x2="490" y2="140" stroke="#44aaff" stroke-width="2.5"/>
+  <polygon points="486,132 502,140 488,148" fill="#44aaff"/>
+  <!-- Arrow 2 (middle) -->
+  <line x1="414" y1="200" x2="490" y2="200" stroke="#44aaff" stroke-width="2.5"/>
+  <polygon points="490,194 506,200 490,206" fill="#44aaff"/>
+  <!-- Arrow 3 (bottom) -->
+  <line x1="414" y1="225" x2="490" y2="262" stroke="#44aaff" stroke-width="2.5"/>
+  <polygon points="488,254 504,266 490,270" fill="#44aaff"/>
+
+  <!-- Real Server 1 -->
+  <rect x="502" y="100" width="140" height="80" rx="8" fill="#1a3a1a"/>
+  <rect x="512" y="108" width="120" height="12" rx="3" fill="#2a5a2a"/>
+  <!-- Server rack strips -->
+  <rect x="512" y="122" width="120" height="4" rx="1" fill="#1a4a1a"/>
+  <rect x="512" y="128" width="120" height="4" rx="1" fill="#1a4a1a"/>
+  <circle cx="620" cy="118" r="5" fill="#00cc44"/>
+  <text x="562" y="152" font-family="sans-serif" font-size="10" fill="#aaffaa" text-anchor="middle">Real Server 1</text>
+  <text x="562" y="166" font-family="monospace" font-size="8" fill="#44aa44" text-anchor="middle">192.168.1.10</text>
+  <text x="562" y="178" font-family="monospace" font-size="8" fill="#44aa44" text-anchor="middle">Linux + httpd</text>
+
+  <!-- Real Server 2 -->
+  <rect x="502" y="160" width="140" height="80" rx="8" fill="#1a3a1a"/>
+  <rect x="512" y="168" width="120" height="12" rx="3" fill="#2a5a2a"/>
+  <rect x="512" y="182" width="120" height="4" rx="1" fill="#1a4a1a"/>
+  <rect x="512" y="188" width="120" height="4" rx="1" fill="#1a4a1a"/>
+  <circle cx="620" cy="178" r="5" fill="#00cc44"/>
+  <text x="562" y="212" font-family="sans-serif" font-size="10" fill="#aaffaa" text-anchor="middle">Real Server 2</text>
+  <text x="562" y="226" font-family="monospace" font-size="8" fill="#44aa44" text-anchor="middle">192.168.1.11</text>
+  <text x="562" y="238" font-family="monospace" font-size="8" fill="#44aa44" text-anchor="middle">Linux + httpd</text>
+
+  <!-- Real Server 3 -->
+  <rect x="502" y="222" width="140" height="80" rx="8" fill="#1a3a1a"/>
+  <rect x="512" y="230" width="120" height="12" rx="3" fill="#2a5a2a"/>
+  <rect x="512" y="244" width="120" height="4" rx="1" fill="#1a4a1a"/>
+  <rect x="512" y="250" width="120" height="4" rx="1" fill="#1a4a1a"/>
+  <circle cx="620" cy="240" r="5" fill="#00cc44"/>
+  <text x="562" y="272" font-family="sans-serif" font-size="10" fill="#aaffaa" text-anchor="middle">Real Server 3</text>
+  <text x="562" y="286" font-family="monospace" font-size="8" fill="#44aa44" text-anchor="middle">192.168.1.12</text>
+  <text x="562" y="298" font-family="monospace" font-size="8" fill="#44aa44" text-anchor="middle">Linux + httpd</text>
+
+  <!-- Shared storage -->
+  <ellipse cx="690" cy="340" rx="70" ry="22" fill="#3a2a1a"/>
+  <rect x="620" y="340" width="140" height="44" fill="#4a3a28"/>
+  <ellipse cx="690" cy="384" rx="70" ry="22" fill="#3a2a1a"/>
+  <text x="690" y="368" font-family="sans-serif" font-size="9" fill="#e8c880" text-anchor="middle">Shared Storage</text>
+
+  <!-- Connections from servers to storage -->
+  <line x1="642" y1="302" x2="660" y2="340" stroke="#8a6a38" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="692" y1="302" x2="692" y2="340" stroke="#8a6a38" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="642" y1="240" x2="680" y2="340" stroke="#8a6a38" stroke-width="1" stroke-dasharray="5,4" opacity="0.6"/>
+
+  <!-- Stats panel -->
+  <rect x="30" y="310" width="190" height="120" rx="8" fill="#182838" stroke="#2a4a6a" stroke-width="1"/>
+  <text x="125" y="332" font-family="sans-serif" font-size="10" font-weight="bold" fill="#4499cc" text-anchor="middle">LVS Stats</text>
+  <text x="44" y="352" font-family="monospace" font-size="8" fill="#88aacc">Active conns:  12,847</text>
+  <text x="44" y="366" font-family="monospace" font-size="8" fill="#88aacc">Inbound pkts:  4.2 Gbps</text>
+  <text x="44" y="380" font-family="monospace" font-size="8" fill="#88aacc">Server 1 load: 38%</text>
+  <text x="44" y="394" font-family="monospace" font-size="8" fill="#88aacc">Server 2 load: 32%</text>
+  <text x="44" y="408" font-family="monospace" font-size="8" fill="#88aacc">Server 3 load: 30%</text>
+  <circle cx="214" cy="348" r="6" fill="#00cc44"/>
+  <text x="214" y="380" font-family="sans-serif" font-size="8" fill="#00cc44" text-anchor="middle">HA</text>
+
+  <!-- ipvsadm command suggestion -->
+  <rect x="30" y="248" width="190" height="56" rx="6" fill="#0a1a2a"/>
+  <text x="40" y="266" font-family="monospace" font-size="8" fill="#4499cc"># ipvsadm -L -n</text>
+  <text x="40" y="279" font-family="monospace" font-size="7" fill="#44aa44">TCP 203.0.113.1:80 rr</text>
+  <text x="40" y="291" font-family="monospace" font-size="7" fill="#44aa44">  -> 192.168.1.10:80</text>
+  <text x="40" y="303" font-family="monospace" font-size="7" fill="#44aa44">  -> 192.168.1.11:80</text>
+</svg>

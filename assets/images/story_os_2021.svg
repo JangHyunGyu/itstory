@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: Windows 11 blue/purple modern look -->
+  <defs>
+    <linearGradient id="w11Bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1428"/>
+      <stop offset="100%" stop-color="#1a0a2a"/>
+    </linearGradient>
+    <linearGradient id="w11Desktop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2a4a"/>
+      <stop offset="100%" stop-color="#2a1a4a"/>
+    </linearGradient>
+    <linearGradient id="taskbarGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff18"/>
+      <stop offset="100%" stop-color="#ffffff08"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#w11Bg)"/>
+
+  <!-- Windows 11 Desktop (left side) -->
+  <rect x="30" y="40" width="420" height="310" rx="8" fill="url(#w11Desktop)" stroke="#4a5a8a" stroke-width="1.5"/>
+
+  <!-- Desktop wallpaper elements (Windows 11 bloom) -->
+  <!-- Bloom light effect -->
+  <ellipse cx="240" cy="195" rx="200" ry="140" fill="#3a2a6a" opacity="0.3"/>
+  <ellipse cx="200" cy="220" rx="100" ry="70" fill="#4a3a8a" opacity="0.2"/>
+  <ellipse cx="300" cy="170" rx="80" ry="50" fill="#5a4aaa" opacity="0.2"/>
+
+  <!-- Windows 11 window (rounded corners, acrylic) -->
+  <rect x="50" y="65" width="260" height="180" rx="10" fill="#1a1a2aaa" stroke="#4a4a7a" stroke-width="1"/>
+  <!-- Title bar -->
+  <rect x="50" y="65" width="260" height="34" rx="10" fill="#2a2a4a" opacity="0.9"/>
+  <rect x="50" y="85" width="260" height="14" fill="#2a2a4a" opacity="0.9"/>
+  <!-- Traffic light (Win 11 style) -->
+  <circle cx="290" cy="82" r="6" fill="#cc3333"/>
+  <circle cx="278" cy="82" r="6" fill="#aaaaaa" opacity="0.5"/>
+  <circle cx="266" cy="82" r="6" fill="#aaaaaa" opacity="0.5"/>
+  <text x="130" y="87" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ccc">파일 탐색기</text>
+
+  <!-- Sidebar in window -->
+  <rect x="50" y="99" width="60" height="146" fill="#1a1a38" opacity="0.8"/>
+  <g font-family="sans-serif" font-size="8" fill="#aab">
+    <text x="80" y="116">🏠홈</text>
+    <text x="80" y="132">📌고정됨</text>
+    <text x="80" y="148">💾이 PC</text>
+    <text x="80" y="164">🌐네트워크</text>
+  </g>
+  <!-- Files in window -->
+  <rect x="118" y="100" width="186" height="144" fill="#12122a" opacity="0.7"/>
+  <g font-family="sans-serif" font-size="9" fill="#ccc">
+    <text x="130" y="120">📁 문서</text>
+    <text x="130" y="138">📁 다운로드</text>
+    <text x="130" y="156">📁 바탕화면</text>
+    <text x="130" y="174">📁 사진</text>
+    <text x="130" y="192">📁 비디오</text>
+    <text x="130" y="210">📁 음악</text>
+    <text x="130" y="228">📁 OneDrive</text>
+  </g>
+
+  <!-- Windows 11 Taskbar (centered) -->
+  <rect x="30" y="330" width="420" height="48" rx="0" fill="url(#taskbarGrad)" stroke="#3a3a5a" stroke-width="1"/>
+  <!-- Taskbar blur effect -->
+  <rect x="30" y="330" width="420" height="48" rx="0" fill="#0a0a1a" opacity="0.7"/>
+
+  <!-- Windows logo (center of taskbar) -->
+  <rect x="185" y="340" width="28" height="28" rx="5" fill="none"/>
+  <rect x="185" y="340" width="12" height="12" fill="#00a4ef"/>
+  <rect x="199" y="340" width="12" height="12" fill="#f25022"/>
+  <rect x="185" y="354" width="12" height="12" fill="#00b04f"/>
+  <rect x="199" y="354" width="12" height="12" fill="#ffb900"/>
+
+  <!-- Other taskbar icons (centered) -->
+  <rect x="220" y="340" width="28" height="28" rx="5" fill="#ffffff11"/>
+  <text x="234" y="359" text-anchor="middle" font-family="sans-serif" font-size="14">🔍</text>
+  <rect x="252" y="340" width="28" height="28" rx="5" fill="#ffffff11"/>
+  <text x="266" y="359" text-anchor="middle" font-family="sans-serif" font-size="14">💬</text>
+  <rect x="284" y="340" width="28" height="28" rx="5" fill="#ffffff11"/>
+  <text x="298" y="359" text-anchor="middle" font-family="sans-serif" font-size="14">📁</text>
+  <rect x="316" y="340" width="28" height="28" rx="5" fill="#ffffff11"/>
+  <text x="330" y="359" text-anchor="middle" font-family="sans-serif" font-size="14">🌐</text>
+
+  <!-- System tray (right) -->
+  <text x="390" y="359" text-anchor="end" font-family="sans-serif" font-size="9" fill="#ccc">오후 3:45</text>
+
+  <!-- Desktop label -->
+  <text x="240" y="32" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#8899cc">Windows 11 Desktop</text>
+
+  <!-- Feature highlights (right panel) -->
+  <rect x="480" y="40" width="290" height="350" rx="8" fill="#0a0a18" stroke="#2a2a44" stroke-width="2"/>
+  <text x="625" y="30" text-anchor="middle" font-family="monospace" font-size="12" fill="#7799dd" font-weight="bold">Windows 11 핵심 변화</text>
+
+  <!-- Feature 1: Centered Start -->
+  <rect x="496" y="58" width="258" height="58" rx="6" fill="#12122a" stroke="#2a2a50" stroke-width="1.5"/>
+  <text x="625" y="78" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#99aadd">중앙 정렬 시작 메뉴</text>
+  <text x="625" y="96" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6677aa">태블릿/터치 경험 반영 · 앱 추천</text>
+  <text x="625" y="110" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5566aa">둥근 모서리 · Fluent Design</text>
+
+  <!-- Feature 2: Android apps -->
+  <rect x="496" y="124" width="258" height="58" rx="6" fill="#12122a" stroke="#2a2a50" stroke-width="1.5"/>
+  <text x="625" y="144" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#99aadd">Android 앱 지원</text>
+  <text x="625" y="162" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6677aa">WSA (Windows Subsystem for Android)</text>
+  <text x="625" y="176" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5566aa">PC에서 모바일 앱 실행</text>
+
+  <!-- Feature 3: Cloud PC / Hybrid -->
+  <rect x="496" y="190" width="258" height="58" rx="6" fill="#12122a" stroke="#2a2a50" stroke-width="1.5"/>
+  <text x="625" y="210" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#99aadd">클라우드 PC / 하이브리드</text>
+  <text x="625" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6677aa">Windows 365 · Azure Virtual Desktop</text>
+  <text x="625" y="242" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5566aa">어디서나 Windows 경험</text>
+
+  <!-- Feature 4: Security (TPM 2.0) -->
+  <rect x="496" y="256" width="258" height="58" rx="6" fill="#12122a" stroke="#2a2a50" stroke-width="1.5"/>
+  <text x="625" y="276" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#99aadd">강화된 보안 요구사항</text>
+  <text x="625" y="294" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6677aa">TPM 2.0 · Secure Boot 필수</text>
+  <text x="625" y="308" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5566aa">VBS · HVCI · Windows Hello</text>
+
+  <!-- Feature 5: Teams / Widget integration -->
+  <rect x="496" y="322" width="258" height="58" rx="6" fill="#12122a" stroke="#2a2a50" stroke-width="1.5"/>
+  <text x="625" y="342" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#99aadd">Teams 통합 · 위젯</text>
+  <text x="625" y="360" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6677aa">하이브리드 근무 설계</text>
+  <text x="625" y="374" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#5566aa">Snap Layout · Snap Groups</text>
+
+  <!-- Title -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a0810" opacity="0.95"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#8899cc" font-weight="bold">Windows 11 — 로컬과 클라우드를 잇는 하이브리드 데스크톱 · 2021</text>
+</svg>

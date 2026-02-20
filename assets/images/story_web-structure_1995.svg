@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg95s" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f20"/>
+      <stop offset="100%" style="stop-color:#152040"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg95s)"/>
+
+  <!-- RFC 1866 document -->
+  <rect x="30" y="30" width="340" height="360" rx="6" fill="#f5f0e8" stroke="#4488ff" stroke-width="2"/>
+  <rect x="30" y="30" width="340" height="50" rx="6" fill="#003399"/>
+  <rect x="30" y="60" width="340" height="20" fill="#003399"/>
+  <text x="200" y="52" font-family="monospace" font-size="12" fill="white" text-anchor="middle">Network Working Group</text>
+  <text x="200" y="66" font-family="monospace" font-size="11" fill="#aaccff" text-anchor="middle">Request for Comments: 1866</text>
+  <text x="200" y="80" font-family="monospace" font-size="10" fill="#aaccff" text-anchor="middle">November 1995 · T. Berners-Lee, D. Connolly</text>
+
+  <!-- RFC body -->
+  <text x="46" y="104" font-family="serif" font-size="12" fill="#333" font-weight="bold">HTML 2.0 Specification</text>
+  <line x1="46" y1="110" x2="354" y2="110" stroke="#ccc" stroke-width="0.5"/>
+
+  <!-- Form tags example -->
+  <text x="46" y="128" font-family="monospace" font-size="10" fill="#555">2.1 Forms</text>
+  <rect x="46" y="134" width="308" height="100" rx="3" fill="#ede8d8"/>
+  <text x="58" y="152" font-family="monospace" font-size="10" fill="#003399">&lt;FORM METHOD="POST" ACTION="/login"&gt;</text>
+  <text x="58" y="168" font-family="monospace" font-size="10" fill="#003399">  &lt;INPUT TYPE="text" NAME="user"&gt;</text>
+  <text x="58" y="184" font-family="monospace" font-size="10" fill="#003399">  &lt;INPUT TYPE="password"&gt;</text>
+  <text x="58" y="200" font-family="monospace" font-size="10" fill="#003399">  &lt;INPUT TYPE="submit"&gt;</text>
+  <text x="58" y="216" font-family="monospace" font-size="10" fill="#003399">&lt;/FORM&gt;</text>
+
+  <!-- Image tag -->
+  <text x="46" y="242" font-family="monospace" font-size="10" fill="#555">2.2 Images</text>
+  <rect x="46" y="248" width="308" height="36" rx="3" fill="#ede8d8"/>
+  <text x="58" y="266" font-family="monospace" font-size="10" fill="#003399">&lt;IMG SRC="photo.gif" ALT="Photo"&gt;</text>
+  <text x="58" y="278" font-family="monospace" font-size="10" fill="#888">Width, height, alt text defined</text>
+
+  <!-- Table tag -->
+  <text x="46" y="298" font-family="monospace" font-size="10" fill="#555">2.3 Tables (Netscape extension)</text>
+  <rect x="46" y="304" width="308" height="60" rx="3" fill="#ede8d8"/>
+  <text x="58" y="322" font-family="monospace" font-size="10" fill="#003399">&lt;TABLE BORDER="1"&gt;</text>
+  <text x="58" y="338" font-family="monospace" font-size="10" fill="#003399">  &lt;TR&gt;&lt;TH&gt;Name&lt;/TH&gt;&lt;TD&gt;Tim&lt;/TD&gt;&lt;/TR&gt;</text>
+  <text x="58" y="354" font-family="monospace" font-size="10" fill="#003399">&lt;/TABLE&gt;</text>
+
+  <text x="200" y="384" font-family="sans-serif" font-size="10" fill="#555" text-anchor="middle">RFC 1866 · IETF · November 1995</text>
+
+  <!-- Right: Browser wars & extensions -->
+  <rect x="390" y="30" width="380" height="380" rx="6" fill="#0d1620" stroke="#4488ff" stroke-width="1"/>
+  <text x="580" y="54" font-family="sans-serif" font-size="13" fill="#88bbff" text-anchor="middle" font-weight="bold">The Browser Wars · 1995</text>
+
+  <!-- Netscape extensions -->
+  <rect x="406" y="66" width="160" height="130" rx="4" fill="#1a2a3a" stroke="#4488ff" stroke-width="1.5"/>
+  <text x="486" y="86" font-family="sans-serif" font-size="11" fill="#88bbff" text-anchor="middle">Netscape 2.0</text>
+  <text x="416" y="104" font-family="monospace" font-size="9" fill="#aaa">&lt;BLINK&gt;</text>
+  <text x="416" y="118" font-family="monospace" font-size="9" fill="#aaa">&lt;MARQUEE&gt;</text>
+  <text x="416" y="132" font-family="monospace" font-size="9" fill="#aaa">&lt;CENTER&gt;</text>
+  <text x="416" y="146" font-family="monospace" font-size="9" fill="#aaa">&lt;FONT COLOR&gt;</text>
+  <text x="416" y="160" font-family="monospace" font-size="9" fill="#aaa">&lt;FRAMESET&gt;</text>
+  <text x="416" y="178" font-family="sans-serif" font-size="9" fill="#888" font-style="italic">Non-standard!</text>
+
+  <!-- IE extensions -->
+  <rect x="576" y="66" width="180" height="130" rx="4" fill="#1a2040" stroke="#0055cc" stroke-width="1.5"/>
+  <text x="666" y="86" font-family="sans-serif" font-size="11" fill="#4488ff" text-anchor="middle">Internet Explorer 2</text>
+  <text x="586" y="104" font-family="monospace" font-size="9" fill="#aaa">&lt;MARQUEE&gt;</text>
+  <text x="586" y="118" font-family="monospace" font-size="9" fill="#aaa">&lt;BGCOLOR&gt;</text>
+  <text x="586" y="132" font-family="monospace" font-size="9" fill="#aaa">&lt;BGSOUND&gt;</text>
+  <text x="586" y="146" font-family="monospace" font-size="9" fill="#aaa">&lt;OBJECT&gt;</text>
+  <text x="586" y="160" font-family="monospace" font-size="9" fill="#aaa">&lt;IFRAME&gt;</text>
+  <text x="586" y="178" font-family="sans-serif" font-size="9" fill="#888" font-style="italic">Different non-standard!</text>
+
+  <!-- HTML 2.0 resolves -->
+  <rect x="406" y="210" width="350" height="60" rx="4" fill="#0a2040" stroke="#88bbff" stroke-width="1.5"/>
+  <text x="581" y="232" font-family="sans-serif" font-size="12" fill="#88bbff" text-anchor="middle">HTML 2.0 RFC 1866 — Common Ground</text>
+  <text x="581" y="252" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">Forms · Images · Links · Tables · Entities defined</text>
+
+  <!-- Impact arrows from browsers to standard -->
+  <line x1="486" y1="196" x2="486" y2="210" stroke="#4488ff" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="666" y1="196" x2="666" y2="210" stroke="#4488ff" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Standards elements -->
+  <rect x="406" y="284" width="350" height="120" rx="4" fill="#0d1a0d" stroke="#44cc44" stroke-width="1"/>
+  <text x="581" y="304" font-family="sans-serif" font-size="12" fill="#44cc44" text-anchor="middle">Standardized HTML 2.0 Elements</text>
+
+  <text x="420" y="324" font-family="monospace" font-size="10" fill="#aaa">&lt;a&gt;  &lt;h1&gt;-&lt;h6&gt;  &lt;p&gt;  &lt;br&gt;  &lt;hr&gt;</text>
+  <text x="420" y="340" font-family="monospace" font-size="10" fill="#aaa">&lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</text>
+  <text x="420" y="356" font-family="monospace" font-size="10" fill="#aaa">&lt;form&gt; &lt;input&gt; &lt;textarea&gt; &lt;select&gt;</text>
+  <text x="420" y="372" font-family="monospace" font-size="10" fill="#aaa">&lt;img&gt; &lt;table&gt; &lt;blockquote&gt;</text>
+  <text x="420" y="388" font-family="monospace" font-size="10" fill="#aaa">&lt;em&gt; &lt;strong&gt; &lt;code&gt; &lt;pre&gt;</text>
+
+  <!-- Year badge -->
+  <rect x="280" y="420" width="240" height="26" rx="13" fill="#003399"/>
+  <text x="400" y="438" font-family="sans-serif" font-size="15" font-weight="bold" fill="white" text-anchor="middle">HTML 2.0 RFC 1866 · 1995</text>
+</svg>

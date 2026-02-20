@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: dark cloud/k8s theme -->
+  <rect width="800" height="450" fill="#0a1428"/>
+
+  <!-- Subtle dots pattern -->
+  <pattern id="dots15" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="1" fill="#1a2a3a" opacity="0.8"/>
+  </pattern>
+  <rect width="800" height="450" fill="url(#dots15)"/>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="sans-serif" font-size="15" font-weight="bold" fill="#326ce5" text-anchor="middle">Kubernetes Ingress — 2015</text>
+  <text x="400" y="54" font-family="sans-serif" font-size="11" fill="#5a7aaa" text-anchor="middle">L7 routing · TLS termination · YAML-declared traffic rules</text>
+
+  <!-- Kubernetes logo (wheel) -->
+  <circle cx="400" cy="130" r="52" fill="#326ce5"/>
+  <!-- Wheel spokes -->
+  <line x1="400" y1="78" x2="400" y2="182" stroke="white" stroke-width="4" opacity="0.3"/>
+  <line x1="355" y1="104" x2="445" y2="156" stroke="white" stroke-width="4" opacity="0.3"/>
+  <line x1="355" y1="156" x2="445" y2="104" stroke="white" stroke-width="4" opacity="0.3"/>
+  <!-- Hub -->
+  <circle cx="400" cy="130" r="28" fill="#1a3a8a"/>
+  <!-- Helm / rudder icon in hub -->
+  <text x="400" y="140" font-family="serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">⎈</text>
+  <!-- Outer label -->
+  <text x="400" y="200" font-family="sans-serif" font-size="10" fill="#4488cc" text-anchor="middle">Kubernetes</text>
+
+  <!-- === YAML Ingress resource === -->
+  <rect x="30" y="90" width="250" height="280" rx="8" fill="#0e1e2e" stroke="#326ce5" stroke-width="1.5"/>
+  <text x="155" y="112" font-family="sans-serif" font-size="10" font-weight="bold" fill="#326ce5" text-anchor="middle">ingress.yaml</text>
+  <text x="40" y="130" font-family="monospace" font-size="7.5" fill="#88aadd">apiVersion: networking.k8s.io/v1</text>
+  <text x="40" y="143" font-family="monospace" font-size="7.5" fill="#88aadd">kind: Ingress</text>
+  <text x="40" y="156" font-family="monospace" font-size="7.5" fill="#88aadd">metadata:</text>
+  <text x="48" y="169" font-family="monospace" font-size="7.5" fill="#aac8ff">  name: my-ingress</text>
+  <text x="40" y="182" font-family="monospace" font-size="7.5" fill="#88aadd">spec:</text>
+  <text x="48" y="195" font-family="monospace" font-size="7.5" fill="#aac8ff">  tls:</text>
+  <text x="56" y="208" font-family="monospace" font-size="7.5" fill="#44cc44">  - secretName: tls-cert</text>
+  <text x="48" y="221" font-family="monospace" font-size="7.5" fill="#aac8ff">  rules:</text>
+  <text x="56" y="234" font-family="monospace" font-size="7.5" fill="#ffcc44">  - host: api.example.com</text>
+  <text x="64" y="247" font-family="monospace" font-size="7.5" fill="#aac8ff">    http:</text>
+  <text x="72" y="260" font-family="monospace" font-size="7.5" fill="#aac8ff">      paths:</text>
+  <text x="80" y="273" font-family="monospace" font-size="7.5" fill="#88cc88">      - path: /api</text>
+  <text x="88" y="286" font-family="monospace" font-size="7.5" fill="#88cc88">        backend:</text>
+  <text x="96" y="299" font-family="monospace" font-size="7.5" fill="#88cc88">          service:</text>
+  <text x="104" y="312" font-family="monospace" font-size="7.5" fill="#88cc88">            name: api-svc</text>
+  <text x="104" y="325" font-family="monospace" font-size="7.5" fill="#88cc88">            port: 8080</text>
+  <text x="80" y="338" font-family="monospace" font-size="7.5" fill="#88aa88">      - path: /web</text>
+  <text x="88" y="351" font-family="monospace" font-size="7.5" fill="#88aa88">        backend:</text>
+  <text x="96" y="364" font-family="monospace" font-size="7.5" fill="#88aa88">          service:</text>
+  <text x="104" y="377" font-family="monospace" font-size="7.5" fill="#88aa88">            name: web-svc</text>
+
+  <!-- === Ingress Controller === -->
+  <rect x="480" y="76" width="288" height="100" rx="8" fill="#1a2a4a" stroke="#326ce5" stroke-width="1.5"/>
+  <text x="624" y="100" font-family="sans-serif" font-size="11" font-weight="bold" fill="#4488ff" text-anchor="middle">Ingress Controller</text>
+  <text x="624" y="116" font-family="sans-serif" font-size="9" fill="#6688cc" text-anchor="middle">(Nginx / Traefik / HAProxy)</text>
+  <text x="494" y="136" font-family="monospace" font-size="8" fill="#88aadd">• Reads Ingress resources</text>
+  <text x="494" y="150" font-family="monospace" font-size="8" fill="#88aadd">• Configures proxy rules</text>
+  <text x="494" y="164" font-family="monospace" font-size="8" fill="#88aadd">• Terminates TLS (HTTPS)</text>
+
+  <!-- External traffic arrow -->
+  <rect x="480" y="196" width="100" height="40" rx="6" fill="#2a4a6a"/>
+  <text x="530" y="212" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">Internet</text>
+  <text x="530" y="227" font-family="sans-serif" font-size="8" fill="#aac8ff" text-anchor="middle">HTTPS :443</text>
+
+  <!-- Arrows from traffic to ingress -->
+  <line x1="580" y1="216" x2="620" y2="216" stroke="#4488ff" stroke-width="2.5"/>
+  <polygon points="618,210 634,216 618,222" fill="#4488ff"/>
+
+  <!-- Ingress to services routing arrows -->
+  <!-- Service 1: API -->
+  <rect x="660" y="196" width="108" height="44" rx="6" fill="#1a4a2a"/>
+  <text x="714" y="214" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">api-service</text>
+  <text x="714" y="228" font-family="monospace" font-size="7" fill="#aaffaa" text-anchor="middle">3 pods</text>
+
+  <line x1="634" y1="210" x2="660" y2="210" stroke="#44cc44" stroke-width="2"/>
+  <polygon points="658,204 672,210 658,216" fill="#44cc44"/>
+
+  <!-- Service 2: Web -->
+  <rect x="660" y="252" width="108" height="44" rx="6" fill="#1a2a4a"/>
+  <text x="714" y="270" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">web-service</text>
+  <text x="714" y="284" font-family="monospace" font-size="7" fill="#aac8ff" text-anchor="middle">2 pods</text>
+
+  <line x1="634" y1="224" x2="680" y2="274" stroke="#4488ff" stroke-width="2"/>
+  <polygon points="678,266 692,276 680,284" fill="#4488ff"/>
+
+  <!-- Service 3: Static -->
+  <rect x="660" y="308" width="108" height="44" rx="6" fill="#3a2a4a"/>
+  <text x="714" y="326" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">static-service</text>
+  <text x="714" y="340" font-family="monospace" font-size="7" fill="#ccaaff" text-anchor="middle">CDN</text>
+
+  <!-- Pods underneath services -->
+  <!-- api pods -->
+  <circle cx="676" cy="370" r="10" fill="#1a4a2a" stroke="#44cc44" stroke-width="1.5"/>
+  <text x="676" y="374" font-family="monospace" font-size="6" fill="#aaffaa" text-anchor="middle">pod</text>
+  <circle cx="696" cy="370" r="10" fill="#1a4a2a" stroke="#44cc44" stroke-width="1.5"/>
+  <text x="696" y="374" font-family="monospace" font-size="6" fill="#aaffaa" text-anchor="middle">pod</text>
+  <circle cx="716" cy="370" r="10" fill="#1a4a2a" stroke="#44cc44" stroke-width="1.5"/>
+  <text x="716" y="374" font-family="monospace" font-size="6" fill="#aaffaa" text-anchor="middle">pod</text>
+
+  <!-- web pods -->
+  <circle cx="740" cy="370" r="10" fill="#1a2a4a" stroke="#4488ff" stroke-width="1.5"/>
+  <text x="740" y="374" font-family="monospace" font-size="6" fill="#aac8ff" text-anchor="middle">pod</text>
+  <circle cx="758" cy="370" r="10" fill="#1a2a4a" stroke="#4488ff" stroke-width="1.5"/>
+  <text x="758" y="374" font-family="monospace" font-size="6" fill="#aac8ff" text-anchor="middle">pod</text>
+
+  <!-- kubectl apply badge -->
+  <rect x="30" y="388" width="220" height="48" rx="6" fill="#0e1e0e"/>
+  <text x="40" y="406" font-family="monospace" font-size="8" fill="#44cc44">$ kubectl apply -f ingress.yaml</text>
+  <text x="40" y="420" font-family="monospace" font-size="8" fill="#88aadd">ingress.networking.k8s.io/my-ingress created</text>
+
+  <!-- TLS badge -->
+  <rect x="480" y="368" width="108" height="48" rx="6" fill="#1a2a1a" stroke="#44cc44" stroke-width="1"/>
+  <text x="534" y="386" font-family="sans-serif" font-size="9" fill="#44cc44" text-anchor="middle">TLS Terminated</text>
+  <text x="534" y="400" font-family="monospace" font-size="7" fill="#88aa88" text-anchor="middle">Let's Encrypt</text>
+  <text x="534" y="413" font-family="monospace" font-size="7" fill="#44cc44" text-anchor="middle">🔒 HTTPS only</text>
+</svg>

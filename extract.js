@@ -1,0 +1,1 @@
+const fs = require('fs'); const text = fs.readFileSync('networks.html', 'utf-8'); const stories = text.match(/<div class="event-detail__story">([\s\S]*?)<\/div>/g); const notes = text.match(/<div class="event-detail__notes">([\s\S]*?)<\/div>/g); fs.writeFileSync('extracted.json', JSON.stringify({stories, notes}, null, 2));

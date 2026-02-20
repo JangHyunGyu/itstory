@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#e8eef5"/>
+
+  <!-- Title banner -->
+  <rect x="0" y="0" width="800" height="60" fill="#003087" opacity="0.95"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">IBM 305 RAMAC · 자기 디스크 도입 · 1956</text>
+
+  <!-- RAMAC Machine body -->
+  <rect x="60" y="90" width="280" height="290" rx="6" fill="#b0bec5" stroke="#546e7a" stroke-width="3"/>
+  <rect x="75" y="105" width="250" height="200" rx="4" fill="#78909c"/>
+
+  <!-- Spinning disk platters (visible side view) -->
+  <g transform="translate(200, 205)">
+    <!-- Disk stack -->
+    <ellipse cx="0" cy="60" rx="90" ry="18" fill="#546e7a" stroke="#37474f" stroke-width="2"/>
+    <ellipse cx="0" cy="44" rx="90" ry="18" fill="#607d8b" stroke="#37474f" stroke-width="2"/>
+    <ellipse cx="0" cy="28" rx="90" ry="18" fill="#546e7a" stroke="#37474f" stroke-width="2"/>
+    <ellipse cx="0" cy="12" rx="90" ry="18" fill="#607d8b" stroke="#37474f" stroke-width="2"/>
+    <ellipse cx="0" cy="-4" rx="90" ry="18" fill="#546e7a" stroke="#37474f" stroke-width="2"/>
+    <ellipse cx="0" cy="-20" rx="90" ry="18" fill="#607d8b" stroke="#37474f" stroke-width="2"/>
+    <ellipse cx="0" cy="-36" rx="90" ry="18" fill="#546e7a" stroke="#37474f" stroke-width="2"/>
+    <!-- Spindle -->
+    <rect x="-4" y="-55" width="8" height="135" fill="#263238"/>
+    <!-- Tracks on top disk -->
+    <ellipse cx="0" cy="-36" rx="75" ry="12" fill="none" stroke="#90a4ae" stroke-width="1" opacity="0.5"/>
+    <ellipse cx="0" cy="-36" rx="55" ry="8" fill="none" stroke="#90a4ae" stroke-width="1" opacity="0.5"/>
+    <ellipse cx="0" cy="-36" rx="35" ry="5" fill="none" stroke="#90a4ae" stroke-width="1" opacity="0.5"/>
+    <!-- Rotation indicator arrow -->
+    <path d="M 80,-36 A 80,14 0 0 1 60,-48" stroke="#4fc3f7" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+  </g>
+
+  <!-- Read arm -->
+  <rect x="285" y="150" width="50" height="5" rx="2" fill="#ff6f00"/>
+  <circle cx="280" cy="152" r="4" fill="#ff6f00"/>
+  <text x="310" y="143" font-family="Arial, sans-serif" font-size="9" fill="#ff6f00">read arm</text>
+
+  <!-- Control panel -->
+  <rect x="80" y="320" width="240" height="45" rx="4" fill="#546e7a"/>
+  <circle cx="115" cy="343" r="8" fill="#f44336"/>
+  <circle cx="145" cy="343" r="8" fill="#4caf50"/>
+  <circle cx="175" cy="343" r="8" fill="#ff9800"/>
+  <rect x="200" y="332" width="60" height="20" rx="2" fill="#263238"/>
+  <text x="230" y="346" font-family="monospace" font-size="9" fill="#4fc3f7" text-anchor="middle">READY</text>
+  <!-- IBM label -->
+  <rect x="100" y="375" width="170" height="0" fill="none"/>
+  <text x="200" y="395" font-family="Arial, sans-serif" font-size="18" fill="#003087" text-anchor="middle" font-weight="bold">IBM 305 RAMAC</text>
+
+  <!-- Bank counter scene on right -->
+  <rect x="460" y="90" width="320" height="290" rx="6" fill="#fff8f0"/>
+  <!-- Counter -->
+  <rect x="475" y="250" width="290" height="15" fill="#8d6e63"/>
+  <rect x="475" y="265" width="290" height="60" fill="#a1887f"/>
+  <!-- Teller -->
+  <circle cx="540" cy="220" r="22" fill="#ffcc80"/>
+  <rect x="520" y="242" width="40" height="50" rx="5" fill="#1565c0"/>
+  <!-- Customer -->
+  <circle cx="680" cy="220" r="22" fill="#ffe0b2"/>
+  <rect x="660" y="242" width="40" height="50" rx="5" fill="#558b2f"/>
+  <!-- Speech/data display -->
+  <rect x="540" y="130" width="200" height="90" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="640" y="153" font-family="monospace" font-size="10" fill="#003087" text-anchor="middle">ACCOUNT #47291</text>
+  <line x1="550" y1="162" x2="730" y2="162" stroke="#90caf9" stroke-width="1"/>
+  <text x="560" y="177" font-family="monospace" font-size="9" fill="#1565c0">Name: J. Smith</text>
+  <text x="560" y="191" font-family="monospace" font-size="9" fill="#1565c0">Balance: $2,450.00</text>
+  <text x="560" y="205" font-family="monospace" font-size="9" fill="#1565c0">Last TX: 12/03/1956</text>
+  <!-- Arrow from machine to bank -->
+  <path d="M 340,230 Q 400,230 460,200" stroke="#003087" stroke-width="2.5" fill="none" stroke-dasharray="6,4"/>
+  <polygon points="458,194 462,205 470,198" fill="#003087"/>
+  <!-- Data label -->
+  <text x="400" y="222" font-family="Arial, sans-serif" font-size="10" fill="#003087" text-anchor="middle">instant access</text>
+
+  <!-- Random access vs Sequential label -->
+  <rect x="460" y="340" width="310" height="35" rx="4" fill="#e8f5e9"/>
+  <text x="615" y="355" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32" text-anchor="middle" font-weight="bold">Random Access</text>
+  <text x="615" y="369" font-family="Arial, sans-serif" font-size="9" fill="#388e3c" text-anchor="middle">vs Sequential Tape — 직접 접근 가능!</text>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#003087" opacity="0.9"/>
+  <text x="400" y="415" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">최초의 하드 디스크 드라이브 · 5MB 용량 · 50개 자기 디스크</text>
+  <text x="400" y="438" font-family="Arial, sans-serif" font-size="11" fill="#90caf9" text-anchor="middle">IBM · 1956 · 임의 접근(Random Access) 시대의 시작</text>
+</svg>

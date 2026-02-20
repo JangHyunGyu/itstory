@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="shadow96" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow96" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4488cc"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f0f4f8"/>
+
+  <!-- Year label -->
+  <rect x="16" y="14" width="60" height="24" rx="4" fill="#003399" opacity="0.9"/>
+  <text x="46" y="30" font-family="monospace" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">1996</text>
+
+  <!-- W3C CSS1 Badge center top -->
+  <g transform="translate(330, 18)">
+    <rect x="0" y="0" width="140" height="50" rx="8" fill="#003399" filter="url(#shadow96)"/>
+    <text x="70" y="22" font-family="sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">W3C CSS1</text>
+    <text x="70" y="38" font-family="sans-serif" font-size="9" fill="#aaccff" text-anchor="middle">Recommendation · Dec 1996</text>
+  </g>
+
+  <!-- Central CSS file document -->
+  <g transform="translate(320, 140)">
+    <rect x="0" y="0" width="160" height="200" rx="6" fill="#fff" filter="url(#shadow96)" stroke="#003399" stroke-width="2"/>
+    <!-- Header -->
+    <rect x="0" y="0" width="160" height="28" rx="6" fill="#003399"/>
+    <rect x="0" y="18" width="160" height="10" fill="#003399"/>
+    <text x="80" y="18" font-family="monospace" font-size="9" fill="#aaccff" text-anchor="middle">styles.css</text>
+    <!-- CSS rules -->
+    <text x="10" y="46" font-family="monospace" font-size="8" fill="#006633">body &#123;</text>
+    <text x="10" y="58" font-family="monospace" font-size="8" fill="#333">  font: 14px serif;</text>
+    <text x="10" y="70" font-family="monospace" font-size="8" fill="#333">  color: #222;</text>
+    <text x="10" y="82" font-family="monospace" font-size="8" fill="#006633">&#125;</text>
+    <text x="10" y="96" font-family="monospace" font-size="8" fill="#006633">h1 &#123;</text>
+    <text x="10" y="108" font-family="monospace" font-size="8" fill="#333">  color: #003399;</text>
+    <text x="10" y="120" font-family="monospace" font-size="8" fill="#333">  margin: 0 0 1em;</text>
+    <text x="10" y="132" font-family="monospace" font-size="8" fill="#006633">&#125;</text>
+    <text x="10" y="146" font-family="monospace" font-size="8" fill="#006633">a &#123;</text>
+    <text x="10" y="158" font-family="monospace" font-size="8" fill="#333">  color: #0000ee;</text>
+    <text x="10" y="170" font-family="monospace" font-size="8" fill="#006633">&#125;</text>
+    <!-- CSS file label -->
+    <rect x="0" y="180" width="160" height="20" rx="4" fill="#e8f0ff"/>
+    <text x="80" y="194" font-family="sans-serif" font-size="9" fill="#003399" text-anchor="middle" font-weight="bold">One CSS file</text>
+  </g>
+
+  <!-- IE Browser window - top left -->
+  <g transform="translate(40, 100)">
+    <rect x="0" y="0" width="210" height="160" rx="8" fill="#fff" filter="url(#shadow96)" stroke="#ccc" stroke-width="1"/>
+    <!-- Title bar -->
+    <rect x="0" y="0" width="210" height="28" rx="8" fill="#0055aa"/>
+    <rect x="0" y="18" width="210" height="10" fill="#0055aa"/>
+    <!-- IE logo -->
+    <text x="14" y="19" font-family="sans-serif" font-size="12" fill="#fff" font-weight="bold">e</text>
+    <text x="28" y="19" font-family="monospace" font-size="9" fill="#aaccff">Internet Explorer 3</text>
+    <!-- Browser chrome -->
+    <rect x="8" y="32" width="194" height="14" rx="3" fill="#eee"/>
+    <text x="14" y="43" font-family="monospace" font-size="7" fill="#888">http://example.com</text>
+    <!-- Page content -->
+    <rect x="8" y="50" width="194" height="102" rx="2" fill="#fff"/>
+    <text x="14" y="68" font-family="sans-serif" font-size="10" fill="#003399" font-weight="bold">My Website</text>
+    <rect x="14" y="73" width="120" height="3" rx="1" fill="#ddd"/>
+    <rect x="14" y="79" width="140" height="3" rx="1" fill="#ddd"/>
+    <rect x="14" y="85" width="110" height="3" rx="1" fill="#ddd"/>
+    <rect x="14" y="91" width="130" height="3" rx="1" fill="#ddd"/>
+    <!-- Blue link -->
+    <text x="14" y="112" font-family="sans-serif" font-size="8" fill="#0000ee" text-decoration="underline">Read more</text>
+    <!-- CSS link icon -->
+    <text x="110" y="140" font-family="monospace" font-size="7" fill="#888" text-anchor="middle">&lt;link rel="stylesheet"&gt;</text>
+  </g>
+
+  <!-- Netscape Browser window - top right -->
+  <g transform="translate(550, 100)">
+    <rect x="0" y="0" width="210" height="160" rx="8" fill="#fff" filter="url(#shadow96)" stroke="#ccc" stroke-width="1"/>
+    <!-- Title bar -->
+    <rect x="0" y="0" width="210" height="28" rx="8" fill="#cc6600"/>
+    <rect x="0" y="18" width="210" height="10" fill="#cc6600"/>
+    <!-- Netscape N logo -->
+    <text x="10" y="20" font-family="sans-serif" font-size="13" fill="#fff" font-weight="bold">N</text>
+    <text x="26" y="19" font-family="monospace" font-size="9" fill="#ffe0aa">Netscape Navigator</text>
+    <!-- Browser chrome -->
+    <rect x="8" y="32" width="194" height="14" rx="3" fill="#eee"/>
+    <text x="14" y="43" font-family="monospace" font-size="7" fill="#888">http://example.com</text>
+    <!-- Page content - same styles applied -->
+    <rect x="8" y="50" width="194" height="102" rx="2" fill="#fff"/>
+    <text x="14" y="68" font-family="sans-serif" font-size="10" fill="#003399" font-weight="bold">My Website</text>
+    <rect x="14" y="73" width="120" height="3" rx="1" fill="#ddd"/>
+    <rect x="14" y="79" width="140" height="3" rx="1" fill="#ddd"/>
+    <rect x="14" y="85" width="110" height="3" rx="1" fill="#ddd"/>
+    <rect x="14" y="91" width="130" height="3" rx="1" fill="#ddd"/>
+    <!-- Blue link -->
+    <text x="14" y="112" font-family="sans-serif" font-size="8" fill="#0000ee" text-decoration="underline">Read more</text>
+    <text x="110" y="140" font-family="monospace" font-size="7" fill="#888" text-anchor="middle">&lt;link rel="stylesheet"&gt;</text>
+  </g>
+
+  <!-- Arrows from CSS file to browsers -->
+  <!-- Left arrow to IE -->
+  <line x1="318" y1="220" x2="252" y2="200" stroke="#4488cc" stroke-width="2" marker-end="url(#arrow96)" stroke-dasharray="6,3"/>
+  <!-- Right arrow to Netscape -->
+  <line x1="482" y1="220" x2="550" y2="200" stroke="#4488cc" stroke-width="2" marker-end="url(#arrow96)" stroke-dasharray="6,3"/>
+
+  <!-- Old font tags crossed out section -->
+  <g transform="translate(40, 310)">
+    <rect x="0" y="0" width="210" height="80" rx="6" fill="#fff5f5" stroke="#ffaaaa" stroke-width="1" filter="url(#shadow96)"/>
+    <text x="105" y="18" font-family="sans-serif" font-size="9" fill="#cc3333" text-anchor="middle" font-weight="bold">Before CSS1</text>
+    <text x="10" y="36" font-family="monospace" font-size="8" fill="#cc6600">&lt;font color="red" size="4"&gt;</text>
+    <text x="10" y="50" font-family="monospace" font-size="8" fill="#cc6600">  &lt;b&gt;Hello&lt;/b&gt;</text>
+    <text x="10" y="64" font-family="monospace" font-size="8" fill="#cc6600">&lt;/font&gt;</text>
+    <!-- Red X cross over it -->
+    <line x1="0" y1="28" x2="210" y2="80" stroke="#ff3333" stroke-width="3" opacity="0.5"/>
+    <line x1="210" y1="28" x2="0" y2="80" stroke="#ff3333" stroke-width="3" opacity="0.5"/>
+  </g>
+
+  <!-- Arrow from before to after -->
+  <line x1="255" y1="355" x2="316" y2="330" stroke="#44aa44" stroke-width="2" marker-end="url(#arrow96)"/>
+
+  <!-- After CSS1 section -->
+  <g transform="translate(550, 310)">
+    <rect x="0" y="0" width="210" height="80" rx="6" fill="#f0fff4" stroke="#88ccaa" stroke-width="1" filter="url(#shadow96)"/>
+    <text x="105" y="18" font-family="sans-serif" font-size="9" fill="#006633" text-anchor="middle" font-weight="bold">With CSS1</text>
+    <text x="10" y="36" font-family="monospace" font-size="8" fill="#006633">h1 &#123; color: red; &#125;</text>
+    <text x="10" y="50" font-family="monospace" font-size="8" fill="#333">/* change once,</text>
+    <text x="10" y="64" font-family="monospace" font-size="8" fill="#333">   update everywhere */</text>
+  </g>
+
+  <!-- Designer Amy quote at bottom center -->
+  <g transform="translate(230, 390)">
+    <rect x="0" y="0" width="340" height="48" rx="8" fill="#fffde8" stroke="#ddd" stroke-width="1"/>
+    <text x="18" y="16" font-family="sans-serif" font-size="9" fill="#666" font-style="italic">"이제 페이지마다 색을 바꾸려면</text>
+    <text x="18" y="30" font-family="sans-serif" font-size="9" fill="#666" font-style="italic">파일 하나만 수정하면 돼요." — Amy, web designer</text>
+    <text x="18" y="44" font-family="monospace" font-size="8" fill="#aaa">CSS Zen: selectors · inheritance · box model</text>
+  </g>
+</svg>

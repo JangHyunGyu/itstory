@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg1981" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050810"/>
+      <stop offset="100%" stop-color="#020508"/>
+    </linearGradient>
+    <linearGradient id="pc5150body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c0b898"/>
+      <stop offset="100%" stop-color="#b0a888"/>
+    </linearGradient>
+    <linearGradient id="ibmBlue1981" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0044bb"/>
+      <stop offset="100%" stop-color="#002288"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg1981)"/>
+
+  <!-- IBM 5150 PC (left, prominent) -->
+  <g transform="translate(50, 50)">
+    <!-- Monitor -->
+    <rect x="0" y="0" width="260" height="200" fill="#282820" rx="8"/>
+    <rect x="12" y="12" width="236" height="158" fill="#181808" rx="5"/>
+    <!-- Green monochrome screen -->
+    <rect x="18" y="18" width="224" height="146" fill="#001800" rx="3"/>
+
+    <!-- MS-DOS prompt content -->
+    <text x="24" y="40" fill="#00cc00" font-size="12" font-family="monospace">IBM Personal Computer DOS</text>
+    <text x="24" y="56" fill="#009900" font-size="10" font-family="monospace">Version 1.0  (C) 1981</text>
+    <text x="24" y="72" fill="#009900" font-size="10" font-family="monospace">IBM Corporation</text>
+    <text x="24" y="94" fill="#00cc00" font-size="12" font-family="monospace">A&gt;dir</text>
+    <text x="24" y="112" fill="#009900" font-size="10" font-family="monospace">COMMAND  COM</text>
+    <text x="24" y="126" fill="#009900" font-size="10" font-family="monospace">DEBUG    COM</text>
+    <text x="24" y="140" fill="#009900" font-size="10" font-family="monospace">FORMAT   COM</text>
+    <text x="24" y="154" fill="#00cc00" font-size="12" font-family="monospace">A&gt;_</text>
+
+    <!-- Monitor bezel controls -->
+    <circle cx="230" cy="184" r="8" fill="#383830" stroke="#484840" stroke-width="1"/>
+    <rect x="12" y="180" width="80" height="8" fill="#202018" rx="1"/>
+
+    <!-- Monitor stand/base -->
+    <rect x="90" y="198" width="80" height="12" fill="#202018" rx="2"/>
+    <rect x="75" y="208" width="110" height="8" fill="#181810" rx="2"/>
+
+    <!-- IBM badge on monitor -->
+    <rect x="108" y="182" width="40" height="15" fill="#0044bb" rx="2"/>
+    <text x="128" y="193" fill="white" font-size="10" font-family="sans-serif" text-anchor="middle" font-weight="bold">IBM</text>
+
+    <!-- IBM PC 5150 System Unit -->
+    <rect x="0" y="225" width="260" height="100" fill="url(#pc5150body)" rx="6"/>
+    <rect x="8" y="232" width="244" height="86" fill="#b0a880" rx="4"/>
+
+    <!-- Floppy drive bays -->
+    <rect x="18" y="242" width="75" height="28" fill="#808060" rx="3"/>
+    <rect x="22" y="246" width="67" height="20" fill="#303020" rx="2"/>
+    <rect x="24" y="248" width="63" height="16" fill="#201808" rx="1"/>
+    <text x="56" y="260" fill="#505040" font-size="8" font-family="monospace" text-anchor="middle">5.25" Floppy</text>
+
+    <rect x="18" y="276" width="75" height="28" fill="#808060" rx="3"/>
+    <rect x="22" y="280" width="67" height="20" fill="#303020" rx="2"/>
+    <rect x="24" y="282" width="63" height="16" fill="#201808" rx="1"/>
+    <text x="56" y="294" fill="#505040" font-size="8" font-family="monospace" text-anchor="middle">5.25" Floppy</text>
+
+    <!-- Expansion slots (back panel area) -->
+    <g fill="#a09870">
+      <rect x="105" y="242" width="12" height="72" rx="1"/>
+      <rect x="121" y="242" width="12" height="72" rx="1"/>
+      <rect x="137" y="242" width="12" height="72" rx="1"/>
+      <rect x="153" y="242" width="12" height="72" rx="1"/>
+      <rect x="169" y="242" width="12" height="72" rx="1"/>
+    </g>
+
+    <!-- IBM badge and power LED -->
+    <rect x="200" y="295" width="45" height="20" fill="#0044bb" rx="3"/>
+    <text x="222" y="308" fill="white" font-size="12" font-family="sans-serif" text-anchor="middle" font-weight="bold">IBM</text>
+    <circle cx="36" cy="312" r="5" fill="#44ff44" opacity="0.9"/>
+    <text x="48" y="315" fill="#707050" font-size="8" font-family="monospace">POWER</text>
+
+    <!-- Keyboard -->
+    <rect x="0" y="335" width="260" height="60" fill="url(#pc5150body)" rx="5"/>
+    <rect x="8" y="341" width="244" height="48" fill="#b0a880" rx="3"/>
+    <g fill="#909070" stroke="#787858" stroke-width="0.5">
+      <rect x="14" y="346" width="12" height="10" rx="1"/><rect x="29" y="346" width="12" height="10" rx="1"/>
+      <rect x="44" y="346" width="12" height="10" rx="1"/><rect x="59" y="346" width="12" height="10" rx="1"/>
+      <rect x="74" y="346" width="12" height="10" rx="1"/><rect x="89" y="346" width="12" height="10" rx="1"/>
+      <rect x="104" y="346" width="12" height="10" rx="1"/><rect x="119" y="346" width="12" height="10" rx="1"/>
+      <rect x="134" y="346" width="12" height="10" rx="1"/><rect x="149" y="346" width="12" height="10" rx="1"/>
+      <rect x="164" y="346" width="12" height="10" rx="1"/><rect x="179" y="346" width="12" height="10" rx="1"/>
+      <rect x="194" y="346" width="12" height="10" rx="1"/><rect x="209" y="346" width="12" height="10" rx="1"/>
+      <rect x="14" y="360" width="12" height="10" rx="1"/><rect x="29" y="360" width="12" height="10" rx="1"/>
+      <rect x="44" y="360" width="12" height="10" rx="1"/><rect x="59" y="360" width="12" height="10" rx="1"/>
+      <rect x="74" y="360" width="12" height="10" rx="1"/><rect x="89" y="360" width="12" height="10" rx="1"/>
+      <rect x="104" y="360" width="12" height="10" rx="1"/><rect x="119" y="360" width="12" height="10" rx="1"/>
+      <rect x="134" y="360" width="12" height="10" rx="1"/><rect x="149" y="360" width="12" height="10" rx="1"/>
+      <rect x="164" y="360" width="12" height="10" rx="1"/>
+      <rect x="60" y="374" width="130" height="10" rx="1"/>
+    </g>
+
+    <!-- 5150 label -->
+    <text x="130" y="405" fill="#606040" font-size="10" font-family="monospace" text-anchor="middle">IBM 5150</text>
+  </g>
+
+  <!-- Bill Gates / Microsoft era (right side) -->
+  <g transform="translate(360, 50)">
+    <!-- Microsoft logo area -->
+    <rect x="0" y="0" width="390" height="55" fill="#0a0d18" rx="5"/>
+    <text x="30" y="28" fill="#ff6600" font-size="26" font-family="sans-serif" font-weight="bold">micro</text>
+    <text x="142" y="28" fill="#ff6600" font-size="26" font-family="sans-serif" font-weight="bold">soft</text>
+    <text x="195" y="42" fill="#cc4400" font-size="10" font-family="sans-serif">Personal Computer Software</text>
+
+    <!-- MS-DOS box -->
+    <rect x="0" y="70" width="390" height="100" fill="#050810" rx="5" stroke="#0044bb" stroke-width="1.5"/>
+    <text x="195" y="92" fill="#4488cc" font-size="13" font-family="monospace" text-anchor="middle" font-weight="bold">MS-DOS 1.0 · August 1981</text>
+    <line x1="10" y1="98" x2="380" y2="98" stroke="#0a2a4a" stroke-width="0.5"/>
+    <text x="20" y="116" fill="#2266aa" font-size="10" font-family="monospace">Microsoft Disk Operating System</text>
+    <text x="20" y="132" fill="#2266aa" font-size="10" font-family="monospace">8086/8088 Architecture · 640KB limit</text>
+    <text x="20" y="148" fill="#2266aa" font-size="10" font-family="monospace">Price: $40 OEM · Billions later...</text>
+    <text x="20" y="164" fill="#1a4a8a" font-size="10" font-family="monospace">Purchased QDOS from Seattle Computer</text>
+
+    <!-- Bill Gates figure -->
+    <g transform="translate(280, 70)">
+      <!-- Suit -->
+      <rect x="-18" y="35" width="36" height="60" fill="#1a2a3a" rx="2"/>
+      <rect x="-12" y="32" width="24" height="15" fill="#c8c0a0"/>
+      <!-- Tie -->
+      <polygon points="0,32 -4,42 0,50 4,42" fill="#cc4400"/>
+      <!-- Head -->
+      <ellipse cx="0" cy="22" rx="16" ry="18" fill="#d4b880"/>
+      <!-- Hair (80s style) -->
+      <ellipse cx="0" cy="8" rx="16" ry="10" fill="#6a5a38"/>
+      <ellipse cx="-12" cy="12" rx="6" ry="10" fill="#6a5a38"/>
+      <!-- Glasses (Gates style) -->
+      <rect x="-12" y="17" width="10" height="8" fill="none" stroke="#8a8870" stroke-width="1.5" rx="2"/>
+      <rect x="2" y="17" width="10" height="8" fill="none" stroke="#8a8870" stroke-width="1.5" rx="2"/>
+      <line x1="-2" y1="21" x2="2" y2="21" stroke="#8a8870" stroke-width="1"/>
+      <circle cx="-7" cy="21" r="2" fill="#1a1800"/>
+      <circle cx="7" cy="21" r="2" fill="#1a1800"/>
+      <!-- Smile -->
+      <path d="M -5 28 Q 0 32 5 28" fill="none" stroke="#8a6a40" stroke-width="1.5"/>
+      <text x="0" y="110" fill="#4488cc" font-size="9" font-family="monospace" text-anchor="middle">Bill Gates</text>
+      <text x="0" y="124" fill="#2266aa" font-size="9" font-family="monospace" text-anchor="middle">CEO, Microsoft</text>
+    </g>
+
+    <!-- IBM PC 5150 advertisement style -->
+    <rect x="0" y="185" width="390" height="180" fill="#0a0d18" rx="5" stroke="#0044bb" stroke-width="1"/>
+    <text x="195" y="208" fill="#4488cc" font-size="13" font-family="monospace" text-anchor="middle" font-weight="bold">IBM PC 5150 · Launch Specs</text>
+    <line x1="10" y1="215" x2="380" y2="215" stroke="#0a2a4a" stroke-width="0.5"/>
+
+    <!-- Spec list -->
+    <g font-size="11" font-family="monospace">
+      <text x="30" y="235" fill="#4488cc">CPU:</text>
+      <text x="130" y="235" fill="#2266aa">Intel 8088 @ 4.77 MHz</text>
+      <text x="30" y="254" fill="#4488cc">RAM:</text>
+      <text x="130" y="254" fill="#2266aa">16KB (expandable to 640KB)</text>
+      <text x="30" y="273" fill="#4488cc">OS:</text>
+      <text x="130" y="273" fill="#2266aa">MS-DOS 1.0 / PC-DOS</text>
+      <text x="30" y="292" fill="#4488cc">Storage:</text>
+      <text x="130" y="292" fill="#2266aa">5.25" floppy drives</text>
+      <text x="30" y="311" fill="#4488cc">Display:</text>
+      <text x="130" y="311" fill="#2266aa">Monochrome / CGA color</text>
+      <text x="30" y="330" fill="#4488cc">Price:</text>
+      <text x="130" y="330" fill="#2266aa">$1,565 base (≈$5,000 today)</text>
+      <text x="30" y="349" fill="#4488cc">Date:</text>
+      <text x="130" y="349" fill="#2266aa">August 12, 1981</text>
+    </g>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="0" y="400" width="800" height="50" fill="#020508" opacity="0.97"/>
+  <text x="400" y="422" fill="#4488cc" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">IBM PC 출시 · DOS 시대 개막</text>
+  <text x="400" y="442" fill="#224488" font-size="12" font-family="Georgia, serif" text-anchor="middle">IBM PC 5150 · MS-DOS · August 12, 1981 · Business Computing Era Begins</text>
+</svg>

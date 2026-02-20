@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- 10BASE-T and office hubs - star topology office network -->
+  <rect width="800" height="450" fill="#e8e4de"/>
+  <!-- Office floor -->
+  <rect x="0" y="380" width="800" height="70" fill="#d0c8b8"/>
+  <!-- Office walls -->
+  <rect x="0" y="0" width="800" height="385" fill="#eceae6"/>
+  <!-- Drop ceiling tiles -->
+  <g fill="none" stroke="#d0cec8" stroke-width="0.5">
+    <line x1="0" y1="40" x2="800" y2="40"/>
+    <line x1="0" y1="80" x2="800" y2="80"/>
+    <line x1="200" y1="0" x2="200" y2="85"/>
+    <line x1="400" y1="0" x2="400" y2="85"/>
+    <line x1="600" y1="0" x2="600" y2="85"/>
+  </g>
+  <!-- Central Hub (star center) -->
+  <g transform="translate(400, 230)">
+    <rect x="-70" y="-30" width="140" height="60" fill="#2a5a9a" rx="6" stroke="#1a4a8a" stroke-width="2"/>
+    <text x="0" y="-8" font-family="sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">10BASE-T HUB</text>
+    <text x="0" y="8" font-family="sans-serif" font-size="8" fill="#b0d0ff" text-anchor="middle">IEEE 802.3i · 10 Mbps</text>
+    <!-- Hub lights/ports -->
+    <g fill="#00ff80">
+      <circle cx="-55" cy="22" r="4"/><circle cx="-40" cy="22" r="4"/>
+      <circle cx="-25" cy="22" r="4"/><circle cx="-10" cy="22" r="4"/>
+      <circle cx="5" cy="22" r="4"/><circle cx="20" cy="22" r="4"/>
+      <circle cx="35" cy="22" r="4"/><circle cx="50" cy="22" r="4"/>
+    </g>
+  </g>
+  <!-- Twisted pair cables from hub to workstations (star topology) -->
+  <g stroke="#f0a020" stroke-width="3" opacity="0.8">
+    <!-- To top-left desk -->
+    <line x1="345" y1="215" x2="145" y2="110"/>
+    <!-- To top desk -->
+    <line x1="390" y1="200" x2="330" y2="110"/>
+    <!-- To top-right desk -->
+    <line x1="410" y1="200" x2="490" y2="110"/>
+    <!-- To right desk -->
+    <line x1="470" y1="230" x2="640" y2="200"/>
+    <!-- To bottom-right desk -->
+    <line x1="455" y1="255" x2="620" y2="325"/>
+    <!-- To bottom-left desk -->
+    <line x1="345" y1="255" x2="175" y2="330"/>
+  </g>
+  <!-- Workstation desks in star pattern -->
+  <!-- Top-left workstation -->
+  <g transform="translate(120, 110)">
+    <rect x="-55" y="-10" width="110" height="10" fill="#8a6030" rx="1"/>
+    <!-- PC monitor -->
+    <rect x="-38" y="-80" width="70" height="55" fill="#2a2a2a" rx="3"/>
+    <rect x="-31" y="-73" width="56" height="42" fill="#1a2a3a" rx="1"/>
+    <text x="-3" y="-55" font-family="monospace" font-size="6" fill="#80c0ff">C:\> netstat</text>
+    <text x="-3" y="-43" font-family="monospace" font-size="6" fill="#60a0e0">Connected!</text>
+    <!-- Person -->
+    <ellipse cx="0" cy="-115" rx="14" ry="14" fill="#d4a870"/>
+    <rect x="-10" y="-102" width="20" height="25" fill="#2a4a6a" rx="2"/>
+    <text x="0" y="18" font-family="serif" font-size="7" fill="#5a5a5a" text-anchor="middle">Alice</text>
+  </g>
+  <!-- Top-center workstation -->
+  <g transform="translate(310, 105)">
+    <rect x="-55" y="-10" width="110" height="10" fill="#8a6030" rx="1"/>
+    <rect x="-38" y="-80" width="70" height="55" fill="#2a2a2a" rx="3"/>
+    <rect x="-31" y="-73" width="56" height="42" fill="#1a2a3a" rx="1"/>
+    <text x="-3" y="-55" font-family="monospace" font-size="6" fill="#80c0ff">\\server\share</text>
+    <text x="-3" y="-43" font-family="monospace" font-size="6" fill="#60a0e0">Transfer OK</text>
+    <ellipse cx="0" cy="-115" rx="14" ry="14" fill="#c8956a"/>
+    <rect x="-10" y="-102" width="20" height="25" fill="#3a2a5a" rx="2"/>
+    <text x="0" y="18" font-family="serif" font-size="7" fill="#5a5a5a" text-anchor="middle">Bob</text>
+  </g>
+  <!-- Top-right workstation -->
+  <g transform="translate(500, 110)">
+    <rect x="-55" y="-10" width="110" height="10" fill="#8a6030" rx="1"/>
+    <rect x="-38" y="-80" width="70" height="55" fill="#2a2a2a" rx="3"/>
+    <rect x="-31" y="-73" width="56" height="42" fill="#1a2a3a" rx="1"/>
+    <text x="-3" y="-55" font-family="monospace" font-size="6" fill="#80c0ff">ping server</text>
+    <text x="-3" y="-43" font-family="monospace" font-size="6" fill="#60a0e0">reply 2ms</text>
+    <ellipse cx="0" cy="-115" rx="14" ry="14" fill="#b87858"/>
+    <rect x="-10" y="-102" width="20" height="25" fill="#2a4a2a" rx="2"/>
+    <text x="0" y="18" font-family="serif" font-size="7" fill="#5a5a5a" text-anchor="middle">Carol</text>
+  </g>
+  <!-- Right workstation -->
+  <g transform="translate(650, 205)">
+    <rect x="-55" y="-10" width="110" height="10" fill="#8a6030" rx="1"/>
+    <rect x="-38" y="-80" width="70" height="55" fill="#2a2a2a" rx="3"/>
+    <rect x="-31" y="-73" width="56" height="42" fill="#1a2a3a" rx="1"/>
+    <text x="-3" y="-55" font-family="monospace" font-size="6" fill="#80c0ff">Email client</text>
+    <text x="-3" y="-43" font-family="monospace" font-size="6" fill="#60a0e0">3 messages</text>
+    <ellipse cx="0" cy="-115" rx="14" ry="14" fill="#d4a870"/>
+    <rect x="-10" y="-102" width="20" height="25" fill="#4a2a1a" rx="2"/>
+    <text x="0" y="18" font-family="serif" font-size="7" fill="#5a5a5a" text-anchor="middle">Dave</text>
+  </g>
+  <!-- Bottom-right workstation -->
+  <g transform="translate(620, 330)">
+    <rect x="-55" y="-10" width="110" height="10" fill="#8a6030" rx="1"/>
+    <rect x="-38" y="-80" width="70" height="55" fill="#2a2a2a" rx="3"/>
+    <rect x="-31" y="-73" width="56" height="42" fill="#1a2a3a" rx="1"/>
+    <text x="-3" y="-55" font-family="monospace" font-size="6" fill="#80c0ff">Lotus Notes</text>
+    <text x="-3" y="-43" font-family="monospace" font-size="6" fill="#60a0e0">Syncing...</text>
+  </g>
+  <!-- Bottom-left workstation -->
+  <g transform="translate(155, 338)">
+    <rect x="-55" y="-10" width="110" height="10" fill="#8a6030" rx="1"/>
+    <rect x="-38" y="-80" width="70" height="55" fill="#2a2a2a" rx="3"/>
+    <rect x="-31" y="-73" width="56" height="42" fill="#1a2a3a" rx="1"/>
+    <text x="-3" y="-55" font-family="monospace" font-size="6" fill="#80c0ff">10BASE-T!</text>
+    <text x="-3" y="-43" font-family="monospace" font-size="6" fill="#60a0e0">No more BNC</text>
+  </g>
+  <!-- Info box -->
+  <rect x="490" y="280" width="160" height="90" fill="#e8f0f8" rx="5" stroke="#4a6a9a" stroke-width="1.5"/>
+  <text x="570" y="300" font-family="sans-serif" font-size="9" font-weight="bold" fill="#1a3a6a" text-anchor="middle">10BASE-T ADVANTAGES</text>
+  <text x="500" y="316" font-family="serif" font-size="8" fill="#2a3a5a">Thin RJ-45 twisted pair</text>
+  <text x="500" y="329" font-family="serif" font-size="8" fill="#2a3a5a">No vampire taps needed</text>
+  <text x="500" y="342" font-family="serif" font-size="8" fill="#2a3a5a">Star topology: easy repair</text>
+  <text x="500" y="355" font-family="serif" font-size="8" fill="#c82020">10 Mbps per device</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#1a2a5a" rx="6" opacity="0.8"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#80c0ff" text-anchor="middle">1990</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a0a1a" opacity="0.8"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">10BASE-T Ethernet · Star Topology · RJ-45 Cable · Office Networks for Everyone</text>
+</svg>

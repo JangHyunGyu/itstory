@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: cloud infrastructure, dark blue -->
+  <defs>
+    <linearGradient id="k8sBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e20"/>
+      <stop offset="100%" stop-color="#060a18"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#k8sBg)"/>
+
+  <!-- Kubernetes logo (steering wheel / helm) -->
+  <!-- Outer circle -->
+  <circle cx="120" cy="220" r="80" fill="none" stroke="#326ce5" stroke-width="4"/>
+  <!-- Inner circle -->
+  <circle cx="120" cy="220" r="30" fill="#326ce5"/>
+  <!-- Spokes of the helm (7 spokes = K8s trademark) -->
+  <g stroke="#326ce5" stroke-width="8" stroke-linecap="round">
+    <!-- Top -->
+    <line x1="120" y1="145" x2="120" y2="165"/>
+    <!-- Top-right -->
+    <line x1="167" y1="162" x2="151" y2="176"/>
+    <!-- Bottom-right -->
+    <line x1="182" y1="214" x2="162" y2="217"/>
+    <!-- Bottom -->
+    <line x1="148" y1="268" x2="136" y2="252"/>
+    <!-- Bottom-left -->
+    <line x1="82" y1="265" x2="96" y2="250"/>
+    <!-- Left -->
+    <line x1="57" y1="214" x2="77" y2="217"/>
+    <!-- Top-left -->
+    <line x1="72" y1="162" x2="88" y2="176"/>
+  </g>
+  <!-- Circle outline -->
+  <circle cx="120" cy="220" r="80" fill="none" stroke="#326ce5" stroke-width="3"/>
+  <circle cx="120" cy="220" r="14" fill="white"/>
+  <text x="120" y="340" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#326ce5">Kubernetes</text>
+  <text x="120" y="355" text-anchor="middle" font-family="monospace" font-size="9" fill="#2255bb">K8s · v1.0 · 2015</text>
+
+  <!-- Cluster diagram -->
+  <rect x="240" y="30" width="530" height="380" rx="8" fill="#080e1c" stroke="#1a2860" stroke-width="2"/>
+  <text x="505" y="20" text-anchor="middle" font-family="monospace" font-size="12" fill="#326ce5" font-weight="bold">Kubernetes Cluster</text>
+
+  <!-- Control Plane (master node) -->
+  <rect x="258" y="48" width="494" height="110" rx="6" fill="#0a1a38" stroke="#1e3a80" stroke-width="2"/>
+  <text x="505" y="68" text-anchor="middle" font-family="monospace" font-size="11" fill="#5588ee">CONTROL PLANE (Master)</text>
+  <!-- Control plane components -->
+  <rect x="272" y="78" width="110" height="64" rx="4" fill="#0e2050" stroke="#2244aa" stroke-width="1.5"/>
+  <text x="327" y="98" text-anchor="middle" font-family="monospace" font-size="8" fill="#6688cc">API Server</text>
+  <text x="327" y="112" text-anchor="middle" font-family="monospace" font-size="7" fill="#4466aa">REST · kubectl</text>
+  <text x="327" y="126" text-anchor="middle" font-family="monospace" font-size="7" fill="#4466aa">인증 · 검증</text>
+  <rect x="392" y="78" width="100" height="64" rx="4" fill="#0e2050" stroke="#2244aa" stroke-width="1.5"/>
+  <text x="442" y="98" text-anchor="middle" font-family="monospace" font-size="8" fill="#6688cc">Scheduler</text>
+  <text x="442" y="112" text-anchor="middle" font-family="monospace" font-size="7" fill="#4466aa">파드 배치</text>
+  <text x="442" y="126" text-anchor="middle" font-family="monospace" font-size="7" fill="#4466aa">노드 선택</text>
+  <rect x="502" y="78" width="110" height="64" rx="4" fill="#0e2050" stroke="#2244aa" stroke-width="1.5"/>
+  <text x="557" y="98" text-anchor="middle" font-family="monospace" font-size="8" fill="#6688cc">Controller Mgr</text>
+  <text x="557" y="112" text-anchor="middle" font-family="monospace" font-size="7" fill="#4466aa">제어 루프</text>
+  <text x="557" y="126" text-anchor="middle" font-family="monospace" font-size="7" fill="#4466aa">상태 관리</text>
+  <rect x="622" y="78" width="110" height="64" rx="4" fill="#0e2050" stroke="#2244aa" stroke-width="1.5"/>
+  <text x="677" y="98" text-anchor="middle" font-family="monospace" font-size="8" fill="#6688cc">etcd</text>
+  <text x="677" y="112" text-anchor="middle" font-family="monospace" font-size="7" fill="#4466aa">클러스터 상태</text>
+  <text x="677" y="126" text-anchor="middle" font-family="monospace" font-size="7" fill="#4466aa">키-값 저장소</text>
+
+  <!-- Worker Nodes -->
+  <!-- Node 1 -->
+  <rect x="258" y="176" width="152" height="220" rx="6" fill="#080e20" stroke="#1a2860" stroke-width="1.5"/>
+  <text x="334" y="196" text-anchor="middle" font-family="monospace" font-size="10" fill="#4466cc">Worker Node 1</text>
+  <!-- Pods in node 1 -->
+  <rect x="270" y="204" width="128" height="46" rx="4" fill="#0e1a40" stroke="#1e3a80" stroke-width="1"/>
+  <text x="334" y="222" text-anchor="middle" font-family="monospace" font-size="8" fill="#5577bb">Pod: web-app</text>
+  <rect x="278" y="226" width="52" height="18" rx="2" fill="#2244aa" opacity="0.6"/>
+  <text x="304" y="239" text-anchor="middle" font-family="monospace" font-size="7" fill="#88aadd">container</text>
+  <rect x="336" y="226" width="52" height="18" rx="2" fill="#2244aa" opacity="0.6"/>
+  <text x="362" y="239" text-anchor="middle" font-family="monospace" font-size="7" fill="#88aadd">sidecar</text>
+
+  <rect x="270" y="256" width="128" height="46" rx="4" fill="#0e1a40" stroke="#1e3a80" stroke-width="1"/>
+  <text x="334" y="274" text-anchor="middle" font-family="monospace" font-size="8" fill="#5577bb">Pod: db-cache</text>
+  <rect x="278" y="276" width="52" height="18" rx="2" fill="#2244aa" opacity="0.6"/>
+  <text x="304" y="289" text-anchor="middle" font-family="monospace" font-size="7" fill="#88aadd">redis</text>
+
+  <rect x="270" y="308" width="128" height="30" rx="3" fill="#061028" stroke="#101830" stroke-width="1"/>
+  <text x="334" y="327" text-anchor="middle" font-family="monospace" font-size="8" fill="#3355aa">kubelet · kube-proxy</text>
+  <rect x="270" y="344" width="128" height="24" rx="3" fill="#040c20" stroke="#0c1828" stroke-width="1"/>
+  <text x="334" y="360" text-anchor="middle" font-family="monospace" font-size="8" fill="#2244aa">Container Runtime</text>
+  <rect x="270" y="374" width="128" height="18" rx="3" fill="#02060e" stroke="#060e18" stroke-width="1"/>
+  <text x="334" y="386" text-anchor="middle" font-family="monospace" font-size="7" fill="#1a3388">Linux Kernel</text>
+
+  <!-- Node 2 -->
+  <rect x="422" y="176" width="152" height="220" rx="6" fill="#080e20" stroke="#1a2860" stroke-width="1.5"/>
+  <text x="498" y="196" text-anchor="middle" font-family="monospace" font-size="10" fill="#4466cc">Worker Node 2</text>
+  <rect x="434" y="204" width="128" height="46" rx="4" fill="#0e1a40" stroke="#1e3a80" stroke-width="1"/>
+  <text x="498" y="222" text-anchor="middle" font-family="monospace" font-size="8" fill="#5577bb">Pod: api-server</text>
+  <rect x="442" y="226" width="112" height="18" rx="2" fill="#2244aa" opacity="0.6"/>
+  <text x="498" y="239" text-anchor="middle" font-family="monospace" font-size="7" fill="#88aadd">go-service container</text>
+  <rect x="434" y="256" width="128" height="46" rx="4" fill="#1a2a08" stroke="#2a5a10" stroke-width="1.5"/>
+  <text x="498" y="274" text-anchor="middle" font-family="monospace" font-size="8" fill="#55aa33">Pod: worker ▶ RUNNING</text>
+  <rect x="442" y="276" width="112" height="18" rx="2" fill="#2a5a10" opacity="0.7"/>
+  <text x="498" y="289" text-anchor="middle" font-family="monospace" font-size="7" fill="#88dd44">python-worker</text>
+  <rect x="434" y="308" width="128" height="30" rx="3" fill="#061028" stroke="#101830" stroke-width="1"/>
+  <text x="498" y="327" text-anchor="middle" font-family="monospace" font-size="8" fill="#3355aa">kubelet · kube-proxy</text>
+  <rect x="434" y="344" width="128" height="24" rx="3" fill="#040c20" stroke="#0c1828" stroke-width="1"/>
+  <text x="498" y="360" text-anchor="middle" font-family="monospace" font-size="8" fill="#2244aa">Container Runtime</text>
+  <rect x="434" y="374" width="128" height="18" rx="3" fill="#02060e" stroke="#060e18" stroke-width="1"/>
+  <text x="498" y="386" text-anchor="middle" font-family="monospace" font-size="7" fill="#1a3388">Linux Kernel</text>
+
+  <!-- Node 3 -->
+  <rect x="586" y="176" width="152" height="220" rx="6" fill="#080e20" stroke="#1a2860" stroke-width="1.5"/>
+  <text x="662" y="196" text-anchor="middle" font-family="monospace" font-size="10" fill="#4466cc">Worker Node 3</text>
+  <rect x="598" y="204" width="128" height="30" rx="4" fill="#2a0a08" stroke="#7a1a10" stroke-width="1.5"/>
+  <text x="662" y="223" text-anchor="middle" font-family="monospace" font-size="8" fill="#dd4433">Pod: FAILED ✗</text>
+  <!-- Auto-healing arrow -->
+  <path d="M 740 222 Q 770 200 770 240 Q 770 270 740 256" fill="none" stroke="#326ce5" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#k8a)"/>
+  <text x="772" y="245" font-family="monospace" font-size="8" fill="#326ce5">재시작</text>
+  <defs>
+    <marker id="k8a" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#326ce5"/>
+    </marker>
+  </defs>
+  <rect x="598" y="240" width="128" height="46" rx="4" fill="#0e1a40" stroke="#1e3a80" stroke-width="1"/>
+  <text x="662" y="258" text-anchor="middle" font-family="monospace" font-size="8" fill="#5577bb">Pod: monitoring</text>
+  <rect x="606" y="260" width="112" height="18" rx="2" fill="#2244aa" opacity="0.6"/>
+  <text x="662" y="273" text-anchor="middle" font-family="monospace" font-size="7" fill="#88aadd">prometheus</text>
+  <rect x="598" y="292" width="128" height="30" rx="3" fill="#061028" stroke="#101830" stroke-width="1"/>
+  <text x="662" y="311" text-anchor="middle" font-family="monospace" font-size="8" fill="#3355aa">kubelet · kube-proxy</text>
+  <rect x="598" y="328" width="128" height="24" rx="3" fill="#040c20" stroke="#0c1828" stroke-width="1"/>
+  <text x="662" y="344" text-anchor="middle" font-family="monospace" font-size="8" fill="#2244aa">Container Runtime</text>
+  <rect x="598" y="358" width="128" height="18" rx="3" fill="#02060e" stroke="#060e18" stroke-width="1"/>
+  <text x="662" y="370" text-anchor="middle" font-family="monospace" font-size="7" fill="#1a3388">Linux Kernel</text>
+
+  <!-- Key concept -->
+  <rect x="598" y="382" width="128" height="18" rx="3" fill="#0a1a38" stroke="#1a3a80" stroke-width="1"/>
+  <text x="662" y="395" text-anchor="middle" font-family="monospace" font-size="8" fill="#326ce5">선언형 → 자동 복구</text>
+
+  <!-- Title -->
+  <rect x="0" y="410" width="800" height="40" fill="#060a18" opacity="0.95"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#326ce5" font-weight="bold">Kubernetes 1.0 — 선언형 클러스터 오케스트레이션 · 2015</text>
+</svg>

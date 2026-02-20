@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f0f4f8"/>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1a3a6a" text-anchor="middle">Apache mod_proxy — 1996</text>
+  <text x="400" y="54" font-family="sans-serif" font-size="11" fill="#6a7a8a" text-anchor="middle">Reverse proxy · Traffic routing · Frontend / Backend separation</text>
+
+  <!-- === INTERNET (left) === -->
+  <circle cx="90" cy="230" r="64" fill="#1a3a5c" opacity="0.9"/>
+  <ellipse cx="90" cy="230" rx="25" ry="64" fill="none" stroke="#4499cc" stroke-width="1.5" opacity="0.6"/>
+  <line x1="26" y1="230" x2="154" y2="230" stroke="#4499cc" stroke-width="1.2" opacity="0.6"/>
+  <ellipse cx="90" cy="230" rx="64" ry="22" fill="none" stroke="#4499cc" stroke-width="1.2" opacity="0.5"/>
+  <ellipse cx="76" cy="212" rx="14" ry="9" fill="#2d6e2a" opacity="0.9"/>
+  <ellipse cx="100" cy="240" rx="12" ry="7" fill="#2d6e2a" opacity="0.9"/>
+  <text x="90" y="312" font-family="sans-serif" font-size="11" fill="#4499cc" text-anchor="middle">Internet</text>
+  <text x="90" y="328" font-family="sans-serif" font-size="9" fill="#668aaa" text-anchor="middle">Users / Clients</text>
+
+  <!-- Request arrows from internet -->
+  <line x1="156" y1="215" x2="220" y2="215" stroke="#4499cc" stroke-width="2.5"/>
+  <polygon points="220,210 232,215 220,220" fill="#4499cc"/>
+  <line x1="156" y1="230" x2="220" y2="230" stroke="#4499cc" stroke-width="2" opacity="0.7"/>
+  <polygon points="220,225 232,230 220,235" fill="#4499cc" opacity="0.7"/>
+  <line x1="156" y1="245" x2="220" y2="245" stroke="#4499cc" stroke-width="1.5" opacity="0.5"/>
+  <polygon points="220,240 232,245 220,250" fill="#4499cc" opacity="0.5"/>
+
+  <!-- === APACHE FRONTEND (center) === -->
+  <rect x="232" y="140" width="180" height="180" rx="12" fill="#cc2222"/>
+  <rect x="244" y="152" width="156" height="156" rx="8" fill="#dd3333"/>
+
+  <!-- Apache feather icon -->
+  <path d="M 322 170 Q 340 182 348 218 Q 336 212 324 228 Q 312 212 300 228 Q 292 200 322 170 Z" fill="#fff" opacity="0.7"/>
+  <path d="M 322 170 L 330 228" stroke="#cc2222" stroke-width="1.5" opacity="0.6"/>
+
+  <text x="322" y="246" font-family="sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Apache</text>
+  <text x="322" y="260" font-family="monospace" font-size="9" fill="#ffa0a0" text-anchor="middle">mod_proxy</text>
+
+  <!-- Config lines on Apache box -->
+  <text x="252" y="278" font-family="monospace" font-size="7" fill="#ffcccc">ProxyPass /api</text>
+  <text x="252" y="290" font-family="monospace" font-size="7" fill="#ffcccc">  http://backend:8080</text>
+  <text x="252" y="302" font-family="monospace" font-size="7" fill="#ffaaaa">ProxyPassReverse /</text>
+
+  <!-- Routing arrows from Apache to backends -->
+  <!-- Static content — down arrow to cache box -->
+  <text x="322" y="336" font-family="sans-serif" font-size="9" fill="#555" text-anchor="middle">static files →</text>
+  <line x1="322" y1="320" x2="322" y2="360" stroke="#2a6a2a" stroke-width="2"/>
+  <polygon points="317,360 322,374 327,360" fill="#2a6a2a"/>
+
+  <!-- Arrows to backend servers (right) -->
+  <line x1="412" y1="200" x2="490" y2="170" stroke="#1a3a8a" stroke-width="2.5"/>
+  <polygon points="486,162 502,170 486,178" fill="#1a3a8a"/>
+  <line x1="412" y1="230" x2="490" y2="230" stroke="#1a3a8a" stroke-width="2.5"/>
+  <polygon points="490,225 504,230 490,235" fill="#1a3a8a"/>
+  <line x1="412" y1="260" x2="490" y2="292" stroke="#1a3a8a" stroke-width="2.5"/>
+  <polygon points="486,286 502,296 488,302" fill="#1a3a8a"/>
+
+  <!-- === BACKEND SERVERS (right) === -->
+  <!-- Backend 1 -->
+  <rect x="502" y="140" width="130" height="62" rx="8" fill="#1a3a8a"/>
+  <text x="567" y="162" font-family="sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">App Server 1</text>
+  <text x="567" y="178" font-family="monospace" font-size="8" fill="#aac8ff" text-anchor="middle">:8080</text>
+  <text x="567" y="192" font-family="monospace" font-size="7" fill="#88aaee" text-anchor="middle">CGI / Perl / PHP</text>
+
+  <!-- Backend 2 -->
+  <rect x="502" y="212" width="130" height="62" rx="8" fill="#1a3a8a"/>
+  <text x="567" y="234" font-family="sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">App Server 2</text>
+  <text x="567" y="250" font-family="monospace" font-size="8" fill="#aac8ff" text-anchor="middle">:8081</text>
+  <text x="567" y="264" font-family="monospace" font-size="7" fill="#88aaee" text-anchor="middle">CGI / Perl / PHP</text>
+
+  <!-- Backend 3 -->
+  <rect x="502" y="284" width="130" height="62" rx="8" fill="#1a3a8a"/>
+  <text x="567" y="306" font-family="sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">App Server 3</text>
+  <text x="567" y="322" font-family="monospace" font-size="8" fill="#aac8ff" text-anchor="middle">:8082</text>
+  <text x="567" y="336" font-family="monospace" font-size="7" fill="#88aaee" text-anchor="middle">CGI / Perl / PHP</text>
+
+  <!-- Database -->
+  <ellipse cx="690" cy="240" rx="60" ry="20" fill="#4a3a28"/>
+  <rect x="630" y="240" width="120" height="60" fill="#5a4a38"/>
+  <ellipse cx="690" cy="300" rx="60" ry="20" fill="#4a3a28"/>
+  <text x="690" y="276" font-family="sans-serif" font-size="9" fill="#e8d0a0" text-anchor="middle">Database</text>
+  <!-- DB connection lines -->
+  <line x1="632" y1="250" x2="632" y2="250" stroke="#8a6a38" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="632" y1="245" x2="630" y2="245" stroke="#8a6a38" stroke-width="1"/>
+
+  <!-- Cache box (below Apache) -->
+  <rect x="245" y="374" width="154" height="52" rx="8" fill="#2a6a2a"/>
+  <text x="322" y="395" font-family="sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">File Cache</text>
+  <text x="322" y="412" font-family="monospace" font-size="8" fill="#aaffaa" text-anchor="middle">HTML · CSS · Images</text>
+
+  <!-- Labels: separation concept -->
+  <text x="322" y="130" font-family="sans-serif" font-size="10" fill="#cc2222" font-weight="bold" text-anchor="middle">FRONTEND</text>
+  <text x="567" y="130" font-family="sans-serif" font-size="10" fill="#1a3a8a" font-weight="bold" text-anchor="middle">BACKEND</text>
+  <!-- Divider line -->
+  <line x1="480" y1="115" x2="480" y2="370" stroke="#ccc" stroke-width="1.5" stroke-dasharray="6,4"/>
+</svg>

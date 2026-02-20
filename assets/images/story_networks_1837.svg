@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="sky1837" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#2d3561"/>
+    </linearGradient>
+    <linearGradient id="rain1837" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0%" stop-color="#4a7fa5" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4a7fa5" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Night sky background -->
+  <rect width="800" height="450" fill="url(#sky1837)"/>
+  <!-- Rain streaks -->
+  <g opacity="0.4" stroke="#a0c8e0" stroke-width="1">
+    <line x1="50" y1="0" x2="30" y2="80"/>
+    <line x1="120" y1="0" x2="100" y2="100"/>
+    <line x1="200" y1="20" x2="180" y2="120"/>
+    <line x1="300" y1="0" x2="280" y2="90"/>
+    <line x1="400" y1="10" x2="380" y2="110"/>
+    <line x1="500" y1="0" x2="480" y2="100"/>
+    <line x1="600" y1="20" x2="580" y2="120"/>
+    <line x1="700" y1="0" x2="680" y2="90"/>
+    <line x1="750" y1="30" x2="730" y2="130"/>
+    <line x1="160" y1="80" x2="140" y2="180"/>
+    <line x1="260" y1="60" x2="240" y2="160"/>
+    <line x1="350" y1="40" x2="330" y2="140"/>
+    <line x1="450" y1="50" x2="430" y2="150"/>
+    <line x1="550" y1="30" x2="530" y2="130"/>
+    <line x1="650" y1="60" x2="630" y2="160"/>
+  </g>
+  <!-- Ground / platform -->
+  <rect x="0" y="340" width="800" height="110" fill="#1c2a1c"/>
+  <rect x="0" y="335" width="800" height="10" fill="#2a3d2a"/>
+  <!-- Railway tracks -->
+  <rect x="0" y="360" width="800" height="6" fill="#4a3b2a" rx="2"/>
+  <rect x="0" y="380" width="800" height="6" fill="#4a3b2a" rx="2"/>
+  <!-- Track ties -->
+  <g fill="#3a2a1a">
+    <rect x="20" y="358" width="8" height="30" rx="1"/>
+    <rect x="60" y="358" width="8" height="30" rx="1"/>
+    <rect x="100" y="358" width="8" height="30" rx="1"/>
+    <rect x="140" y="358" width="8" height="30" rx="1"/>
+    <rect x="180" y="358" width="8" height="30" rx="1"/>
+    <rect x="220" y="358" width="8" height="30" rx="1"/>
+    <rect x="260" y="358" width="8" height="30" rx="1"/>
+    <rect x="300" y="358" width="8" height="30" rx="1"/>
+    <rect x="340" y="358" width="8" height="30" rx="1"/>
+    <rect x="380" y="358" width="8" height="30" rx="1"/>
+    <rect x="420" y="358" width="8" height="30" rx="1"/>
+    <rect x="460" y="358" width="8" height="30" rx="1"/>
+    <rect x="500" y="358" width="8" height="30" rx="1"/>
+    <rect x="540" y="358" width="8" height="30" rx="1"/>
+    <rect x="580" y="358" width="8" height="30" rx="1"/>
+    <rect x="620" y="358" width="8" height="30" rx="1"/>
+    <rect x="660" y="358" width="8" height="30" rx="1"/>
+    <rect x="700" y="358" width="8" height="30" rx="1"/>
+    <rect x="740" y="358" width="8" height="30" rx="1"/>
+    <rect x="780" y="358" width="8" height="30" rx="1"/>
+  </g>
+  <!-- Telegraph poles -->
+  <g fill="#5c3d1e" stroke="#3a2a0e" stroke-width="1">
+    <rect x="148" y="180" width="8" height="165" rx="2"/>
+    <rect x="400" y="160" width="8" height="185" rx="2"/>
+    <rect x="650" y="170" width="8" height="175" rx="2"/>
+  </g>
+  <!-- Cross arms -->
+  <g fill="#6b4a25" stroke="#3a2a0e" stroke-width="1">
+    <rect x="128" y="192" width="48" height="5" rx="1"/>
+    <rect x="128" y="205" width="48" height="5" rx="1"/>
+    <rect x="380" y="172" width="48" height="5" rx="1"/>
+    <rect x="380" y="185" width="48" height="5" rx="1"/>
+    <rect x="630" y="182" width="48" height="5" rx="1"/>
+    <rect x="630" y="195" width="48" height="5" rx="1"/>
+  </g>
+  <!-- Telegraph wire -->
+  <path d="M 136 194 Q 280 188 404 174 Q 540 166 634 184" stroke="#c8a060" stroke-width="2" fill="none" opacity="0.8"/>
+  <path d="M 136 207 Q 280 201 404 187 Q 540 179 634 197" stroke="#c8a060" stroke-width="2" fill="none" opacity="0.8"/>
+  <!-- Station building -->
+  <rect x="500" y="240" width="200" height="110" fill="#3a2e1e" rx="4"/>
+  <rect x="490" y="230" width="220" height="20" fill="#4a3a26" rx="3"/>
+  <!-- Roof -->
+  <polygon points="480,230 700,230 600,185" fill="#5a3d22"/>
+  <!-- Station windows -->
+  <rect x="525" y="260" width="35" height="30" fill="#e8d870" rx="2" opacity="0.85"/>
+  <rect x="580" y="260" width="35" height="30" fill="#e8d870" rx="2" opacity="0.85"/>
+  <rect x="635" y="260" width="35" height="30" fill="#e8d870" rx="2" opacity="0.85"/>
+  <!-- Station door -->
+  <rect x="570" y="300" width="30" height="50" fill="#2a1e0e" rx="3"/>
+  <!-- Station name sign -->
+  <rect x="530" y="238" width="140" height="16" fill="#2a1a0a" rx="2"/>
+  <text x="600" y="250" font-family="serif" font-size="10" fill="#c8a060" text-anchor="middle">RAILWAY STATION</text>
+  <!-- Telegraph operator hut -->
+  <rect x="80" y="270" width="120" height="80" fill="#2e2218" rx="3"/>
+  <rect x="70" y="260" width="140" height="18" fill="#3d2e1e" rx="2"/>
+  <polygon points="60,260 210,260 135,225" fill="#4a3222"/>
+  <!-- Hut window with warm glow -->
+  <rect x="100" y="285" width="40" height="30" fill="#f0e080" rx="2" opacity="0.9"/>
+  <rect x="155" y="285" width="30" height="30" fill="#f0e080" rx="2" opacity="0.9"/>
+  <!-- Needle telegraph device on table inside window -->
+  <rect x="108" y="295" width="24" height="15" fill="#8b6914" rx="1"/>
+  <line x1="120" y1="295" x2="120" y2="290" stroke="#c8a060" stroke-width="2"/>
+  <line x1="112" y1="292" x2="128" y2="296" stroke="#e04040" stroke-width="2"/>
+  <!-- Person silhouette at window -->
+  <ellipse cx="165" cy="285" rx="8" ry="8" fill="#1a1208"/>
+  <rect x="160" y="293" width="10" height="20" fill="#1a1208" rx="2"/>
+  <!-- Electric signal arcs from telegraph -->
+  <g opacity="0.7">
+    <path d="M 124 292 Q 130 284 136 292" stroke="#60d0ff" stroke-width="2" fill="none"/>
+    <path d="M 126 289 Q 134 278 142 289" stroke="#60d0ff" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </g>
+  <!-- Locomotive in distance -->
+  <g transform="translate(600, 310)">
+    <!-- Engine body -->
+    <rect x="-120" y="-30" width="100" height="35" fill="#2a2a2a" rx="4"/>
+    <rect x="-110" y="-45" width="60" height="18" fill="#3a3a3a" rx="3"/>
+    <!-- Smokestack -->
+    <rect x="-90" y="-65" width="14" height="22" fill="#333" rx="2"/>
+    <ellipse cx="-83" cy="-65" rx="10" ry="4" fill="#444"/>
+    <!-- Smoke -->
+    <ellipse cx="-83" cy="-78" rx="12" ry="8" fill="#888" opacity="0.6"/>
+    <ellipse cx="-76" cy="-92" rx="9" ry="7" fill="#999" opacity="0.4"/>
+    <ellipse cx="-68" cy="-104" rx="11" ry="9" fill="#aaa" opacity="0.3"/>
+    <!-- Wheels -->
+    <circle cx="-95" cy="8" r="12" fill="#222" stroke="#555" stroke-width="2"/>
+    <circle cx="-60" cy="8" r="10" fill="#222" stroke="#555" stroke-width="2"/>
+    <circle cx="-28" cy="8" r="10" fill="#222" stroke="#555" stroke-width="2"/>
+    <!-- Headlamp -->
+    <circle cx="-20" cy="-15" r="6" fill="#f5d060" opacity="0.9"/>
+    <path d="M -14 -15 L 20 -5 L 20 -25 Z" fill="#f5d060" opacity="0.4"/>
+  </g>
+  <!-- Lightning/Storm effect -->
+  <path d="M 720 60 L 705 100 L 715 100 L 695 145" stroke="#ffe070" stroke-width="2" fill="none" opacity="0.7"/>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#0a0a1a" rx="6" opacity="0.7"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#c8a060" text-anchor="middle">1837</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a0a1a" opacity="0.65"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">Cooke &amp; Wheatstone Needle Telegraph · Railway Safety Signal</text>
+</svg>

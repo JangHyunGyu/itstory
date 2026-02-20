@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: warm studio/design agency feel -->
+  <rect width="800" height="450" fill="#f5f0ea"/>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="sans-serif" font-size="15" font-weight="bold" fill="#0050a0" text-anchor="middle">Dreamweaver 1.0 — 1997</text>
+  <text x="400" y="54" font-family="sans-serif" font-size="11" fill="#7a7a8a" text-anchor="middle">WYSIWYG web editor · Design + Code view · Visual HTML authoring</text>
+
+  <!-- Dreamweaver window frame -->
+  <rect x="40" y="70" width="720" height="360" rx="8" fill="#c8c0b8" stroke="#888" stroke-width="2"/>
+  <!-- Title bar -->
+  <rect x="40" y="70" width="720" height="28" rx="8" fill="#6688aa"/>
+  <rect x="40" y="84" width="720" height="14" fill="#6688aa"/>
+  <!-- Window control dots -->
+  <circle cx="58" cy="84" r="6" fill="#ff5f5a"/>
+  <circle cx="76" cy="84" r="6" fill="#ffbd44"/>
+  <circle cx="94" cy="84" r="6" fill="#28c840"/>
+  <!-- Title text -->
+  <text x="400" y="89" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle">Dreamweaver 1.0 — index.html</text>
+
+  <!-- Menu bar -->
+  <rect x="40" y="98" width="720" height="22" fill="#ddd8d0"/>
+  <text x="54" y="113" font-family="sans-serif" font-size="9" fill="#333">File</text>
+  <text x="80" y="113" font-family="sans-serif" font-size="9" fill="#333">Edit</text>
+  <text x="108" y="113" font-family="sans-serif" font-size="9" fill="#333">View</text>
+  <text x="138" y="113" font-family="sans-serif" font-size="9" fill="#333">Insert</text>
+  <text x="172" y="113" font-family="sans-serif" font-size="9" fill="#333">Modify</text>
+  <text x="214" y="113" font-family="sans-serif" font-size="9" fill="#333">Text</text>
+  <text x="242" y="113" font-family="sans-serif" font-size="9" fill="#333">Commands</text>
+  <text x="308" y="113" font-family="sans-serif" font-size="9" fill="#333">Site</text>
+  <text x="334" y="113" font-family="sans-serif" font-size="9" fill="#333">Window</text>
+  <text x="386" y="113" font-family="sans-serif" font-size="9" fill="#333">Help</text>
+
+  <!-- Toolbar -->
+  <rect x="40" y="120" width="720" height="24" fill="#e8e0d8"/>
+  <!-- Toolbar buttons (simplified) -->
+  <rect x="48" y="124" width="22" height="16" rx="2" fill="#c8c0b8" stroke="#aaa" stroke-width="1"/>
+  <text x="59" y="136" font-family="sans-serif" font-size="8" fill="#333" text-anchor="middle">⬅</text>
+  <rect x="74" y="124" width="22" height="16" rx="2" fill="#c8c0b8" stroke="#aaa" stroke-width="1"/>
+  <text x="85" y="136" font-family="sans-serif" font-size="8" fill="#333" text-anchor="middle">⬇</text>
+  <rect x="102" y="124" width="60" height="16" rx="2" fill="white" stroke="#aaa" stroke-width="1"/>
+  <text x="132" y="135" font-family="monospace" font-size="7" fill="#333" text-anchor="middle">index.html</text>
+
+  <!-- Split view tabs -->
+  <rect x="40" y="144" width="720" height="20" fill="#d8d0c8"/>
+  <rect x="40" y="144" width="140" height="20" rx="4" fill="#f5f0ea" stroke="#aaa" stroke-width="1"/>
+  <text x="110" y="158" font-family="sans-serif" font-size="9" fill="#0050a0" text-anchor="middle">Design View</text>
+  <rect x="180" y="144" width="130" height="20" rx="4" fill="#ddd8d0" stroke="#aaa" stroke-width="1"/>
+  <text x="245" y="158" font-family="sans-serif" font-size="9" fill="#666" text-anchor="middle">Code View</text>
+
+  <!-- === DESIGN VIEW (left half) === -->
+  <rect x="40" y="164" width="380" height="266" fill="#ffffff"/>
+  <!-- Simulated webpage inside design view -->
+  <rect x="50" y="174" width="360" height="40" fill="#0050a0"/>
+  <text x="90" y="198" font-family="sans-serif" font-size="14" font-weight="bold" fill="white">My Company Website</text>
+  <!-- Nav bar -->
+  <rect x="50" y="214" width="360" height="24" fill="#e8e8e8"/>
+  <text x="68" y="231" font-family="sans-serif" font-size="9" fill="#0050a0">Home</text>
+  <text x="108" y="231" font-family="sans-serif" font-size="9" fill="#0050a0">About</text>
+  <text x="152" y="231" font-family="sans-serif" font-size="9" fill="#0050a0">Products</text>
+  <text x="204" y="231" font-family="sans-serif" font-size="9" fill="#0050a0">Contact</text>
+  <!-- Image placeholder being dragged -->
+  <rect x="58" y="248" width="160" height="100" rx="4" fill="#e8f0f8" stroke="#0050a0" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="138" y="302" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">[Image: 160×100]</text>
+  <!-- Text content -->
+  <text x="232" y="268" font-family="sans-serif" font-size="8" fill="#333">Welcome to our site!</text>
+  <text x="232" y="282" font-family="sans-serif" font-size="8" fill="#555">Our products are the best</text>
+  <text x="232" y="296" font-family="sans-serif" font-size="8" fill="#555">in the industry. We offer</text>
+  <text x="232" y="310" font-family="sans-serif" font-size="8" fill="#555">quality and reliability.</text>
+  <!-- CTA button -->
+  <rect x="232" y="320" width="80" height="20" rx="4" fill="#0050a0"/>
+  <text x="272" y="334" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">Learn More</text>
+  <!-- Footer -->
+  <rect x="50" y="362" width="360" height="20" fill="#333"/>
+  <text x="230" y="376" font-family="sans-serif" font-size="8" fill="#aaa" text-anchor="middle">© 1997 My Company</text>
+  <!-- Selection handles on image -->
+  <rect x="56" y="246" width="8" height="8" fill="#0050a0"/>
+  <rect x="214" y="246" width="8" height="8" fill="#0050a0"/>
+  <rect x="56" y="346" width="8" height="8" fill="#0050a0"/>
+  <rect x="214" y="346" width="8" height="8" fill="#0050a0"/>
+
+  <!-- Design view label -->
+  <text x="230" y="424" font-family="sans-serif" font-size="9" fill="#0050a0" text-anchor="middle">WYSIWYG — drag &amp; drop</text>
+
+  <!-- === CODE VIEW (right half) === -->
+  <rect x="420" y="164" width="340" height="266" fill="#1a1a1a"/>
+  <!-- Code line numbers -->
+  <rect x="420" y="164" width="28" height="266" fill="#222"/>
+  <!-- Auto-generated HTML -->
+  <text x="456" y="182" font-family="monospace" font-size="8" fill="#6688aa">&lt;html&gt;</text>
+  <text x="456" y="195" font-family="monospace" font-size="8" fill="#6688aa">&lt;head&gt;</text>
+  <text x="464" y="208" font-family="monospace" font-size="8" fill="#88aacc">&lt;title&gt;</text><text x="510" y="208" font-family="monospace" font-size="8" fill="#aaffaa">My Company</text><text x="570" y="208" font-family="monospace" font-size="8" fill="#88aacc">&lt;/title&gt;</text>
+  <text x="456" y="221" font-family="monospace" font-size="8" fill="#6688aa">&lt;/head&gt;</text>
+  <text x="456" y="234" font-family="monospace" font-size="8" fill="#6688aa">&lt;body&gt;</text>
+  <text x="464" y="247" font-family="monospace" font-size="8" fill="#88aacc">&lt;table</text><text x="498" y="247" font-family="monospace" font-size="8" fill="#ffcc44"> width=</text><text x="537" y="247" font-family="monospace" font-size="8" fill="#aaffaa">"100%"</text><text x="579" y="247" font-family="monospace" font-size="8" fill="#88aacc">&gt;</text>
+  <text x="472" y="260" font-family="monospace" font-size="8" fill="#88aacc">&lt;tr&gt;&lt;td</text><text x="530" y="260" font-family="monospace" font-size="8" fill="#ffcc44"> bgcolor=</text><text x="583" y="260" font-family="monospace" font-size="8" fill="#aaffaa">"#0050a0"</text>
+  <text x="472" y="273" font-family="monospace" font-size="8" fill="#88aacc">colspan=</text><text x="521" y="273" font-family="monospace" font-size="8" fill="#aaffaa">"3"</text><text x="537" y="273" font-family="monospace" font-size="8" fill="#88aacc">&gt;</text>
+  <text x="480" y="286" font-family="monospace" font-size="8" fill="#88ccff">&lt;font</text><text x="510" y="286" font-family="monospace" font-size="8" fill="#ffcc44"> size=</text><text x="545" y="286" font-family="monospace" font-size="8" fill="#aaffaa">"6"</text>
+  <text x="488" y="299" font-family="monospace" font-size="8" fill="#ffcc44"> color=</text><text x="530" y="299" font-family="monospace" font-size="8" fill="#aaffaa">"white"</text><text x="572" y="299" font-family="monospace" font-size="8" fill="#88aacc">&gt;</text>
+  <text x="496" y="312" font-family="monospace" font-size="8" fill="#eee">My Company Website</text>
+  <text x="488" y="325" font-family="monospace" font-size="8" fill="#88ccff">&lt;/font&gt;</text>
+  <text x="480" y="338" font-family="monospace" font-size="8" fill="#88aacc">&lt;/td&gt;&lt;/tr&gt;</text>
+  <text x="472" y="351" font-family="monospace" font-size="8" fill="#88aacc">&lt;tr&gt;</text>
+  <text x="480" y="364" font-family="monospace" font-size="8" fill="#88aacc">&lt;td&gt;</text>
+  <text x="488" y="377" font-family="monospace" font-size="8" fill="#88ccff">&lt;img</text><text x="515" y="377" font-family="monospace" font-size="8" fill="#ffcc44"> src=</text><text x="546" y="377" font-family="monospace" font-size="8" fill="#aaffaa">"logo.gif"</text>
+  <text x="456" y="390" font-family="monospace" font-size="8" fill="#888">// ← auto-generated by DW</text>
+  <text x="456" y="403" font-family="monospace" font-size="8" fill="#888">// drag-drop → HTML code</text>
+
+  <!-- Line numbers -->
+  <text x="428" y="182" font-family="monospace" font-size="7" fill="#555">1</text>
+  <text x="428" y="195" font-family="monospace" font-size="7" fill="#555">2</text>
+  <text x="428" y="208" font-family="monospace" font-size="7" fill="#555">3</text>
+  <text x="428" y="221" font-family="monospace" font-size="7" fill="#555">4</text>
+  <text x="428" y="234" font-family="monospace" font-size="7" fill="#555">5</text>
+  <text x="428" y="247" font-family="monospace" font-size="7" fill="#555">6</text>
+  <text x="428" y="260" font-family="monospace" font-size="7" fill="#555">7</text>
+  <text x="428" y="273" font-family="monospace" font-size="7" fill="#555">8</text>
+  <text x="428" y="286" font-family="monospace" font-size="7" fill="#555">9</text>
+  <text x="424" y="299" font-family="monospace" font-size="7" fill="#555">10</text>
+  <text x="424" y="312" font-family="monospace" font-size="7" fill="#555">11</text>
+
+  <!-- Code view label -->
+  <text x="590" y="424" font-family="sans-serif" font-size="9" fill="#88aacc" text-anchor="middle">HTML auto-generated from design</text>
+
+  <!-- Sync arrow between views -->
+  <text x="400" y="300" font-family="sans-serif" font-size="18" fill="#0050a0" text-anchor="middle">⟺</text>
+  <text x="400" y="316" font-family="sans-serif" font-size="8" fill="#6688aa" text-anchor="middle">live sync</text>
+
+  <!-- Properties panel at bottom -->
+  <rect x="40" y="430" width="720" height="10" fill="#e8e0d8" stroke="#aaa" stroke-width="0.5"/>
+  <text x="60" y="439" font-family="monospace" font-size="7" fill="#555">Format: None | Style: None | Size: — | Color: #000000</text>
+</svg>

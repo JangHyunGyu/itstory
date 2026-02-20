@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg1885" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f0f8"/>
+      <stop offset="100%" stop-color="#c8d8e8"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky background -->
+  <rect width="800" height="450" fill="url(#bg1885)"/>
+  <!-- US Map outline (simplified) -->
+  <g fill="#d4e8c0" stroke="#8a9a70" stroke-width="1.5" opacity="0.8">
+    <path d="M 80 150 Q 100 140 200 145 Q 300 148 380 142 Q 450 138 520 145 Q 600 152 680 148 Q 740 145 760 155 L 760 320 Q 740 340 700 345 Q 640 350 580 342 Q 520 335 460 340 Q 400 345 340 338 Q 270 332 200 340 Q 140 348 100 340 Q 70 332 80 310 Z"/>
+  </g>
+  <!-- Terrain shading - eastern mountains -->
+  <g fill="#b8c8a0" opacity="0.4">
+    <ellipse cx="720" cy="240" rx="40" ry="80"/>
+    <ellipse cx="700" cy="210" rx="30" ry="60"/>
+  </g>
+  <!-- Cities as dots -->
+  <g fill="#c82020" stroke="white" stroke-width="1">
+    <circle cx="715" cy="205" r="7"/> <!-- Boston/New York -->
+    <circle cx="680" cy="230" r="6"/>
+    <circle cx="635" cy="250" r="5"/>
+    <circle cx="540" cy="260" r="6"/> <!-- Chicago area -->
+    <circle cx="350" cy="270" r="5"/>
+    <circle cx="200" cy="295" r="5"/>
+    <circle cx="140" cy="300" r="7"/> <!-- San Francisco area -->
+  </g>
+  <!-- AT&T telephone lines on map -->
+  <g stroke="#2a4a9a" stroke-width="3" fill="none" opacity="0.8">
+    <!-- Eastern corridor -->
+    <path d="M 715 205 Q 700 218 680 230 Q 660 242 635 250"/>
+    <!-- Chicago to East -->
+    <path d="M 540 260 Q 590 255 635 250"/>
+    <!-- Planned westward expansion (dashed) -->
+    <path d="M 540 260 Q 460 263 350 270 Q 260 278 200 295 Q 165 308 140 300" stroke-dasharray="10,6" opacity="0.5"/>
+  </g>
+  <!-- Relay stations along line -->
+  <g fill="#f0d060" stroke="#8a6020" stroke-width="1">
+    <rect x="690" y="218" width="12" height="10" rx="1"/>
+    <rect x="612" y="244" width="12" height="10" rx="1"/>
+    <rect x="572" y="255" width="12" height="10" rx="1"/>
+    <!-- Planned -->
+    <rect x="480" y="258" width="12" height="10" rx="1" fill="#f0d060" opacity="0.5"/>
+    <rect x="370" y="264" width="12" height="10" rx="1" fill="#f0d060" opacity="0.5"/>
+  </g>
+  <!-- AT&T Company Meeting Room - overlay on map -->
+  <rect x="160" y="60" width="480" height="240" fill="white" rx="8" opacity="0.92" stroke="#2a4a9a" stroke-width="2"/>
+  <!-- Room interior elements -->
+  <!-- Long conference table -->
+  <rect x="195" y="150" width="410" height="15" fill="#8a6030" rx="2"/>
+  <rect x="205" y="162" width="8" height="60" fill="#6a4820"/>
+  <rect x="588" y="162" width="8" height="60" fill="#6a4820"/>
+  <rect x="360" y="162" width="8" height="60" fill="#6a4820"/>
+  <!-- Map on wall inside room -->
+  <rect x="200" y="80" width="400" height="60" fill="#f0e8d0" stroke="#8a6a30" stroke-width="1" rx="2"/>
+  <text x="400" y="98" font-family="serif" font-size="10" font-weight="bold" fill="#2a1a0a" text-anchor="middle">AMERICAN TELEPHONE &amp; TELEGRAPH CO.</text>
+  <text x="400" y="112" font-family="serif" font-size="9" fill="#4a3010" text-anchor="middle">Long Distance Plan · Boston to San Francisco</text>
+  <!-- Drawn map of US on wall -->
+  <g fill="#d4e8c0" stroke="#8a9a70" stroke-width="0.5" opacity="0.7">
+    <path d="M 218 132 Q 240 128 300 130 Q 360 131 420 128 Q 480 126 540 130 Q 580 133 592 138 L 592 148 Q 560 152 500 150 Q 440 148 380 150 Q 320 153 260 150 Q 230 148 218 145 Z"/>
+  </g>
+  <!-- Planned long-distance route line on room map -->
+  <path d="M 228 139 Q 320 136 405 136 Q 480 136 582 139" stroke="#c82020" stroke-width="2" stroke-dasharray="6,4"/>
+  <circle cx="575" cy="138" r="3" fill="#2040a0"/>
+  <circle cx="235" cy="139" r="3" fill="#c82020"/>
+  <!-- People at table -->
+  <g fill="#d4a870">
+    <ellipse cx="240" cy="148" rx="14" ry="14"/>
+    <ellipse cx="320" cy="145" rx="14" ry="14"/>
+    <ellipse cx="400" cy="143" rx="14" ry="14"/>
+    <ellipse cx="480" cy="145" rx="14" ry="14"/>
+    <ellipse cx="560" cy="148" rx="14" ry="14"/>
+  </g>
+  <!-- Suits -->
+  <g fill="#1a2a3a">
+    <rect x="228" y="160" width="24" height="28" rx="3"/>
+    <rect x="308" y="157" width="24" height="28" rx="3"/>
+    <rect x="388" y="155" width="24" height="28" rx="3"/>
+    <rect x="468" y="157" width="24" height="28" rx="3"/>
+    <rect x="548" y="160" width="24" height="28" rx="3"/>
+  </g>
+  <!-- Chief engineer pointing at map -->
+  <line x1="413" y1="155" x2="350" y2="132" stroke="#d4a870" stroke-width="4" stroke-linecap="round"/>
+  <!-- Amplifier/relay diagram on paper -->
+  <rect x="215" y="195" width="140" height="70" fill="#f5ead0" rx="2" stroke="#8a6a30" stroke-width="1"/>
+  <text x="285" y="213" font-family="serif" font-size="8" font-weight="bold" fill="#2a1a0a" text-anchor="middle">Relay Station Plan</text>
+  <!-- Relay diagram -->
+  <g stroke="#2a4a9a" stroke-width="1.5" fill="none">
+    <line x1="225" y1="230" x2="255" y2="230"/>
+    <rect x="255" y="222" width="20" height="16" rx="2"/>
+    <line x1="275" y1="230" x2="305" y2="230"/>
+    <rect x="305" y="222" width="20" height="16" rx="2"/>
+    <line x1="325" y1="230" x2="345" y2="230"/>
+  </g>
+  <!-- Amplifier symbol -->
+  <g fill="#f0e8c0" stroke="#4a3010" stroke-width="0.8">
+    <polygon points="260,225 260,237 270,231"/>
+    <polygon points="310,225 310,237 320,231"/>
+  </g>
+  <text x="285" y="252" font-family="serif" font-size="7" fill="#4a3010" text-anchor="middle">Signal → Amplify → Repeat</text>
+  <!-- Budget calculations -->
+  <rect x="445" y="195" width="150" height="70" fill="#f5ead0" rx="2" stroke="#8a6a30" stroke-width="1"/>
+  <text x="520" y="213" font-family="serif" font-size="8" font-weight="bold" fill="#2a1a0a" text-anchor="middle">Cost Estimate</text>
+  <text x="520" y="228" font-family="monospace" font-size="8" fill="#2a1a0a" text-anchor="middle">4 relay stations:</text>
+  <text x="520" y="240" font-family="monospace" font-size="8" fill="#2a1a0a" text-anchor="middle">$2,400 each</text>
+  <text x="520" y="252" font-family="monospace" font-size="8" fill="#c82020" text-anchor="middle">Total: $9,600</text>
+  <!-- AT&T Logo area -->
+  <rect x="345" y="195" width="90" height="60" fill="#2a4a9a" rx="4"/>
+  <text x="390" y="218" font-family="serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">AT&amp;T</text>
+  <text x="390" y="233" font-family="serif" font-size="7" fill="#c8d8f0" text-anchor="middle">Incorporated</text>
+  <text x="390" y="244" font-family="serif" font-size="7" fill="#c8d8f0" text-anchor="middle">1885</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#1a3a8a" rx="6" opacity="0.8"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#f0d080" text-anchor="middle">1885</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a1a4a" opacity="0.8"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">AT&amp;T Formed · Long-Distance Telephone Plans Coast to Coast</text>
+</svg>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#e8f5e9"/>
+
+  <!-- Title banner -->
+  <rect x="0" y="0" width="800" height="60" fill="#1b5e20" opacity="0.95"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">MySQL 출시 · 오픈소스 DB 시대 · 1995</text>
+
+  <!-- MySQL Dolphin logo (stylized) -->
+  <g transform="translate(50, 80)">
+    <!-- Dolphin body -->
+    <ellipse cx="100" cy="130" rx="70" ry="45" fill="#00758f" transform="rotate(-20, 100, 130)"/>
+    <!-- Dolphin head -->
+    <ellipse cx="145" cy="95" rx="35" ry="25" fill="#00758f" transform="rotate(-30, 145, 95)"/>
+    <!-- Beak/snout -->
+    <ellipse cx="168" cy="82" rx="22" ry="12" fill="#00758f" transform="rotate(-20, 168, 82)"/>
+    <!-- Eye -->
+    <circle cx="158" cy="80" r="5" fill="white"/>
+    <circle cx="159" cy="80" r="3" fill="#003a4f"/>
+    <!-- Dorsal fin -->
+    <polygon points="100,90 80,50 70,100" fill="#00758f"/>
+    <!-- Tail -->
+    <polygon points="40,155 15,140 10,170 40,175" fill="#00758f"/>
+    <polygon points="40,155 20,180 45,185" fill="#00758f"/>
+    <!-- MySQL text -->
+    <text x="100" y="220" font-family="Arial, sans-serif" font-size="26" fill="#00758f" text-anchor="middle" font-weight="bold">MySQL</text>
+    <text x="100" y="243" font-family="Arial, sans-serif" font-size="11" fill="#555" text-anchor="middle">Open Source · 1995</text>
+    <text x="100" y="260" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32" text-anchor="middle">Michael Widenius</text>
+  </g>
+
+  <!-- LAMP Stack visualization -->
+  <g transform="translate(270, 85)">
+    <text x="100" y="20" font-family="Arial, sans-serif" font-size="14" fill="#1b5e20" text-anchor="middle" font-weight="bold">LAMP Stack</text>
+    <!-- L - Linux -->
+    <rect x="10" y="35" width="80" height="55" rx="6" fill="#f57f17"/>
+    <text x="50" y="58" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">L</text>
+    <text x="50" y="76" font-family="Arial, sans-serif" font-size="10" fill="#fff9c4" text-anchor="middle">Linux</text>
+    <text x="50" y="89" font-family="Arial, sans-serif" font-size="8" fill="#fff9c4" text-anchor="middle">OS</text>
+    <!-- A - Apache -->
+    <rect x="10" y="100" width="80" height="55" rx="6" fill="#c62828"/>
+    <text x="50" y="123" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">A</text>
+    <text x="50" y="141" font-family="Arial, sans-serif" font-size="10" fill="#ffcdd2" text-anchor="middle">Apache</text>
+    <text x="50" y="154" font-family="Arial, sans-serif" font-size="8" fill="#ffcdd2" text-anchor="middle">Web Server</text>
+    <!-- M - MySQL -->
+    <rect x="110" y="35" width="80" height="55" rx="6" fill="#00758f"/>
+    <text x="150" y="58" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">M</text>
+    <text x="150" y="76" font-family="Arial, sans-serif" font-size="10" fill="#b2ebf2" text-anchor="middle">MySQL</text>
+    <text x="150" y="89" font-family="Arial, sans-serif" font-size="8" fill="#b2ebf2" text-anchor="middle">Database</text>
+    <!-- P - PHP -->
+    <rect x="110" y="100" width="80" height="55" rx="6" fill="#4a148c"/>
+    <text x="150" y="123" font-family="Arial, sans-serif" font-size="20" fill="white" text-anchor="middle" font-weight="bold">P</text>
+    <text x="150" y="141" font-family="Arial, sans-serif" font-size="10" fill="#e1bee7" text-anchor="middle">PHP</text>
+    <text x="150" y="154" font-family="Arial, sans-serif" font-size="8" fill="#e1bee7" text-anchor="middle">Scripting</text>
+    <!-- Combine arrow -->
+    <polygon points="100,82 110,72 110,92" fill="#333"/>
+  </g>
+
+  <!-- PHP + MySQL code snippet -->
+  <rect x="270" y="260" width="250" height="115" rx="6" fill="#1e1e1e" stroke="#00758f" stroke-width="2"/>
+  <g font-family="monospace" font-size="9">
+    <text x="285" y="280" fill="#569cd6">&lt;?php</text>
+    <text x="285" y="296" fill="#4ec9b0">$conn</text><text x="320" y="296" fill="white"> = </text><text x="334" y="296" fill="#dcdcaa">mysqli_connect</text><text x="424" y="296" fill="white">(</text>
+    <text x="285" y="312" fill="#ce9178">  "localhost", "root",</text>
+    <text x="285" y="328" fill="#ce9178">  "pass", "mydb"</text>
+    <text x="285" y="344" fill="white">);</text>
+    <text x="285" y="360" fill="#4ec9b0">$result</text><text x="330" y="360" fill="white"> = </text><text x="344" y="360" fill="#dcdcaa">mysqli_query</text><text x="420" y="360" fill="white">(</text>
+    <text x="285" y="371" fill="#ce9178">  $conn, "SELECT *</text>
+    <text x="285" y="371" fill="white">  </text>
+  </g>
+
+  <!-- Web developer laptop -->
+  <g transform="translate(540, 100)">
+    <!-- Laptop screen -->
+    <rect x="0" y="0" width="220" height="150" rx="6" fill="#263238" stroke="#37474f" stroke-width="3"/>
+    <rect x="10" y="10" width="200" height="130" rx="3" fill="#1e272c"/>
+    <!-- Browser header -->
+    <rect x="10" y="10" width="200" height="22" rx="3" fill="#37474f"/>
+    <circle cx="22" cy="21" r="5" fill="#f44336"/>
+    <circle cx="36" cy="21" r="5" fill="#ff9800"/>
+    <circle cx="50" cy="21" r="5" fill="#4caf50"/>
+    <rect x="70" y="15" width="130" height="12" rx="3" fill="#546e7a"/>
+    <text x="135" y="25" font-family="monospace" font-size="8" fill="#b0bec5" text-anchor="middle">www.mysite.com</text>
+    <!-- Website content -->
+    <rect x="20" y="40" width="180" height="8" rx="2" fill="#546e7a"/>
+    <rect x="20" y="55" width="130" height="6" rx="2" fill="#37474f"/>
+    <rect x="20" y="67" width="150" height="6" rx="2" fill="#37474f"/>
+    <rect x="20" y="79" width="100" height="50" rx="3" fill="#1565c0" opacity="0.5"/>
+    <rect x="130" y="79" width="70" height="50" rx="3" fill="#2e7d32" opacity="0.5"/>
+    <text x="50" y="109" font-family="Arial, sans-serif" font-size="10" fill="#4fc3f7" text-anchor="middle">PHP+MySQL</text>
+    <text x="50" y="123" font-family="Arial, sans-serif" font-size="8" fill="#4fc3f7" text-anchor="middle">Website</text>
+    <!-- Laptop keyboard -->
+    <rect x="-10" y="150" width="240" height="25" rx="3" fill="#37474f" stroke="#263238" stroke-width="2"/>
+    <rect x="70" y="158" width="100" height="10" rx="2" fill="#455a64"/>
+  </g>
+
+  <!-- Cost comparison -->
+  <rect x="540" y="270" width="230" height="75" rx="6" fill="#e8f5e9" stroke="#1b5e20" stroke-width="2"/>
+  <text x="655" y="292" font-family="Arial, sans-serif" font-size="11" fill="#1b5e20" text-anchor="middle" font-weight="bold">무료 오픈소스 DB!</text>
+  <text x="655" y="308" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32" text-anchor="middle">Oracle: $50,000+/year</text>
+  <text x="655" y="324" font-family="Arial, sans-serif" font-size="11" fill="#1b5e20" text-anchor="middle" font-weight="bold">MySQL: FREE</text>
+  <text x="655" y="340" font-family="Arial, sans-serif" font-size="9" fill="#388e3c" text-anchor="middle">웹 개발 혁명의 시작</text>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#1b5e20" opacity="0.9"/>
+  <text x="400" y="415" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">오픈소스 MySQL과 PHP의 결합으로 웹 개발 혁명</text>
+  <text x="400" y="438" font-family="Arial, sans-serif" font-size="11" fill="#a5d6a7" text-anchor="middle">Michael Widenius · David Axmark · MySQL AB · 1995 · LAMP Stack</text>
+</svg>

@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg1951" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1505"/>
+      <stop offset="100%" stop-color="#0d0a02"/>
+    </linearGradient>
+    <linearGradient id="tvScreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c8d0e0"/>
+      <stop offset="100%" stop-color="#a0a8b8"/>
+    </linearGradient>
+    <radialGradient id="tvGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#d0ddf0"/>
+      <stop offset="100%" stop-color="#8090a8"/>
+    </radialGradient>
+    <linearGradient id="tvBodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a3a20"/>
+      <stop offset="100%" stop-color="#2a2010"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background - election night atmosphere -->
+  <rect width="800" height="450" fill="url(#bg1951)"/>
+
+  <!-- Stage/studio backdrop -->
+  <rect x="0" y="0" width="800" height="360" fill="#1a1a28" opacity="0.8"/>
+
+  <!-- Spotlight effects -->
+  <ellipse cx="250" cy="0" rx="150" ry="200" fill="#fffacc" opacity="0.04"/>
+  <ellipse cx="550" cy="0" rx="150" ry="200" fill="#fffacc" opacity="0.04"/>
+
+  <!-- Studio background banner -->
+  <rect x="0" y="0" width="800" height="80" fill="#0a0a18"/>
+  <text x="400" y="30" fill="#ffffff" font-size="22" font-family="sans-serif" text-anchor="middle" font-weight="bold" letter-spacing="8">CBS ELECTION NIGHT</text>
+  <text x="400" y="55" fill="#cc0000" font-size="14" font-family="sans-serif" text-anchor="middle" letter-spacing="4">UNIVAC PREDICTS · NOVEMBER 1952</text>
+  <rect x="0" y="65" width="800" height="3" fill="#cc0000"/>
+
+  <!-- Large TV set (center-left) -->
+  <g transform="translate(80, 100)">
+    <!-- TV cabinet - wooden -->
+    <rect x="0" y="0" width="300" height="260" fill="url(#tvBodyGrad)" rx="10"/>
+    <!-- Screen bezel -->
+    <rect x="20" y="20" width="260" height="190" fill="#1a1a1a" rx="8"/>
+    <!-- CRT Screen -->
+    <rect x="28" y="28" width="244" height="174" fill="url(#tvGlow)" rx="5"/>
+    <!-- Screen content - CBS broadcast -->
+    <rect x="28" y="28" width="244" height="174" fill="#c8d8f0" rx="5"/>
+
+    <!-- News graphic on screen -->
+    <rect x="35" y="35" width="230" height="22" fill="#000080"/>
+    <text x="150" y="50" fill="white" font-size="11" font-family="sans-serif" text-anchor="middle" font-weight="bold">CBS NEWS SPECIAL REPORT</text>
+
+    <!-- UNIVAC prediction display -->
+    <rect x="35" y="62" width="230" height="55" fill="#001040"/>
+    <text x="150" y="80" fill="#ffff00" font-size="13" font-family="monospace" text-anchor="middle" font-weight="bold">UNIVAC PREDICTS:</text>
+    <text x="150" y="100" fill="#ff4444" font-size="18" font-family="sans-serif" text-anchor="middle" font-weight="bold">EISENHOWER</text>
+    <text x="150" y="114" fill="#4488ff" font-size="10" font-family="monospace" text-anchor="middle">438 electoral votes (est.)</text>
+
+    <!-- Bar chart -->
+    <rect x="45" y="122" width="95" height="22" fill="#cc0000" rx="2"/>
+    <text x="92" y="137" fill="white" font-size="9" font-family="sans-serif" text-anchor="middle">EISENHOWER 83%</text>
+    <rect x="45" y="148" width="30" height="16" fill="#0044cc" rx="2"/>
+    <text x="100" y="160" fill="#aaaaff" font-size="9" font-family="sans-serif">STEVENSON 17%</text>
+
+    <!-- TV news anchor silhouette on screen -->
+    <rect x="170" y="122" width="85" height="80" fill="#1a2040"/>
+    <!-- Anchor figure -->
+    <rect x="195" y="155" width="30" height="40" fill="#2a3a5a"/>
+    <ellipse cx="210" cy="148" rx="12" ry="14" fill="#c4906a"/>
+    <ellipse cx="210" cy="138" rx="10" ry="6" fill="#3a2a10"/>
+    <rect x="200" y="182" width="20" height="4" fill="#e0d0a0" rx="1"/>
+
+    <!-- CBS eye logo area -->
+    <ellipse cx="150" cy="183" rx="18" ry="12" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <ellipse cx="150" cy="183" rx="8" ry="8" fill="white"/>
+    <circle cx="150" cy="183" r="5" fill="#1a1a1a"/>
+    <circle cx="150" cy="183" r="2" fill="white"/>
+
+    <!-- TV knobs and dials -->
+    <circle cx="40" cy="235" r="12" fill="#2a1a00" stroke="#4a3a10" stroke-width="1.5"/>
+    <circle cx="40" cy="235" r="5" fill="#3a2a10"/>
+    <line x1="40" y1="225" x2="40" y2="232" stroke="#6a5a20" stroke-width="2"/>
+
+    <circle cx="80" cy="235" r="12" fill="#2a1a00" stroke="#4a3a10" stroke-width="1.5"/>
+    <circle cx="80" cy="235" r="5" fill="#3a2a10"/>
+    <line x1="74" y1="232" x2="80" y2="235" stroke="#6a5a20" stroke-width="2"/>
+
+    <rect x="105" y="225" width="3" height="22" fill="#1a1a1a" rx="1"/>
+    <rect x="115" y="225" width="3" height="22" fill="#1a1a1a" rx="1"/>
+    <rect x="125" y="225" width="3" height="22" fill="#1a1a1a" rx="1"/>
+
+    <!-- Speaker grille -->
+    <rect x="200" y="222" width="90" height="25" fill="#1a1200" rx="3"/>
+    <g fill="none" stroke="#3a2a00" stroke-width="1">
+      <line x1="205" y1="226" x2="285" y2="226"/>
+      <line x1="205" y1="232" x2="285" y2="232"/>
+      <line x1="205" y1="238" x2="285" y2="238"/>
+      <line x1="205" y1="244" x2="285" y2="244"/>
+    </g>
+
+    <!-- TV legs -->
+    <rect x="40" y="258" width="12" height="25" fill="#3a2a10" rx="2"/>
+    <rect x="248" y="258" width="12" height="25" fill="#3a2a10" rx="2"/>
+  </g>
+
+  <!-- UNIVAC computer (right side) -->
+  <g transform="translate(430, 90)">
+    <text x="170" y="20" fill="#cc9900" font-size="14" font-family="sans-serif" text-anchor="middle" font-weight="bold">UNIVAC I</text>
+
+    <!-- Main cabinet -->
+    <rect x="60" y="30" width="220" height="220" fill="#2a3a4a" rx="5"/>
+    <rect x="65" y="35" width="210" height="210" fill="#1a2a3a" rx="3"/>
+
+    <!-- Control panel area -->
+    <rect x="75" y="45" width="190" height="80" fill="#0d1a28" rx="3"/>
+
+    <!-- Lights/indicators -->
+    <g filter="url(#glow1951)">
+      <circle cx="90" cy="65" r="6" fill="#ff4444"/><circle cx="110" cy="65" r="6" fill="#44ff44"/>
+      <circle cx="130" cy="65" r="6" fill="#ff8800"/><circle cx="150" cy="65" r="6" fill="#ff4444"/>
+      <circle cx="170" cy="65" r="6" fill="#44ff44"/><circle cx="190" cy="65" r="6" fill="#ff8800"/>
+      <circle cx="210" cy="65" r="6" fill="#ff4444"/><circle cx="230" cy="65" r="6" fill="#44ff44"/>
+      <circle cx="250" cy="65" r="6" fill="#ff8800"/>
+      <circle cx="90" cy="85" r="6" fill="#44ff44"/><circle cx="110" cy="85" r="6" fill="#ff4444"/>
+      <circle cx="130" cy="85" r="6" fill="#44ff44"/><circle cx="150" cy="85" r="6" fill="#ff8800"/>
+      <circle cx="170" cy="85" r="6" fill="#ff4444"/><circle cx="190" cy="85" r="6" fill="#44ff44"/>
+      <circle cx="210" cy="85" r="6" fill="#ff8800"/><circle cx="230" cy="85" r="6" fill="#ff4444"/>
+      <circle cx="250" cy="85" r="6" fill="#44ff44"/>
+    </g>
+
+    <!-- Switches row -->
+    <g fill="#4a3a18">
+      <rect x="80" y="100" width="8" height="18" rx="2"/>
+      <rect x="95" y="100" width="8" height="18" rx="2"/>
+      <rect x="110" y="100" width="8" height="18" rx="2"/>
+      <rect x="125" y="100" width="8" height="18" rx="2"/>
+      <rect x="140" y="100" width="8" height="18" rx="2"/>
+      <rect x="155" y="100" width="8" height="18" rx="2"/>
+      <rect x="170" y="100" width="8" height="18" rx="2"/>
+      <rect x="185" y="100" width="8" height="18" rx="2"/>
+    </g>
+
+    <!-- UNIVAC name plate -->
+    <rect x="85" y="128" width="170" height="22" fill="#0a1520"/>
+    <text x="170" y="143" fill="#cc9900" font-size="12" font-family="sans-serif" text-anchor="middle" font-weight="bold">UNIVAC I</text>
+
+    <!-- Tape drives -->
+    <g transform="translate(75, 160)">
+      <rect x="0" y="0" width="60" height="60" fill="#0d1a2a" rx="3" stroke="#2a4a6a" stroke-width="1"/>
+      <circle cx="30" cy="30" r="22" fill="#1a2a3a" stroke="#3a5a7a" stroke-width="2"/>
+      <circle cx="30" cy="30" r="15" fill="#0d1820"/>
+      <circle cx="30" cy="30" r="5" fill="#3a5a7a"/>
+      <circle cx="30" cy="10" r="3" fill="#4a7aaa"/>
+    </g>
+    <g transform="translate(150, 160)">
+      <rect x="0" y="0" width="60" height="60" fill="#0d1a2a" rx="3" stroke="#2a4a6a" stroke-width="1"/>
+      <circle cx="30" cy="30" r="22" fill="#1a2a3a" stroke="#3a5a7a" stroke-width="2"/>
+      <circle cx="30" cy="30" r="15" fill="#0d1820"/>
+      <circle cx="30" cy="30" r="5" fill="#3a5a7a"/>
+      <circle cx="30" cy="10" r="3" fill="#4a7aaa"/>
+    </g>
+
+    <!-- Specs text -->
+    <text x="170" y="242" fill="#4a7aaa" font-size="9" font-family="monospace" text-anchor="middle">Remington Rand Corporation</text>
+    <text x="170" y="256" fill="#3a5a8a" font-size="9" font-family="monospace" text-anchor="middle">First US commercial computer</text>
+  </g>
+
+  <!-- Connecting wire between TV and UNIVAC -->
+  <path d="M 380 240 Q 415 240 430 210" fill="none" stroke="#4a3a20" stroke-width="3"/>
+
+  <!-- Newspaper-style ticker below -->
+  <rect x="0" y="360" width="800" height="30" fill="#cc0000"/>
+  <text x="400" y="380" fill="white" font-size="13" font-family="sans-serif" text-anchor="middle" font-weight="bold">UNIVAC CORRECTLY PREDICTED EISENHOWER WIN WITH 100:1 ODDS — CBS DELAYED BROADCAST</text>
+
+  <!-- Title bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#0a0a18" opacity="0.95"/>
+  <text x="400" y="415" fill="#cc9900" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">UNIVAC · 상업용 컴퓨터 납품</text>
+  <text x="400" y="438" fill="#7a5a00" font-size="13" font-family="Georgia, serif" text-anchor="middle">Universal Automatic Computer · 1951 · CBS Election Night 1952</text>
+</svg>

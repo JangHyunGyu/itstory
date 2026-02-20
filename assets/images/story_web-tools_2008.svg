@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: dark social coding feel -->
+  <rect width="800" height="450" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="sans-serif" font-size="15" font-weight="bold" fill="#f0f6fc" text-anchor="middle">GitHub — 2008</text>
+  <text x="400" y="54" font-family="sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Social coding · Pull Requests · Code review in the browser</text>
+
+  <!-- GitHub Octocat (simplified silhouette) -->
+  <!-- Body -->
+  <circle cx="400" cy="130" r="52" fill="#f0f6fc"/>
+  <!-- Cat ears -->
+  <polygon points="368,88 354,58 388,84" fill="#f0f6fc"/>
+  <polygon points="432,88 446,58 412,84" fill="#f0f6fc"/>
+  <!-- Face features -->
+  <circle cx="383" cy="122" r="8" fill="#0d1117"/>
+  <circle cx="417" cy="122" r="8" fill="#0d1117"/>
+  <circle cx="384" cy="120" r="3" fill="white"/>
+  <circle cx="418" cy="120" r="3" fill="white"/>
+  <!-- Nose -->
+  <ellipse cx="400" cy="136" rx="5" ry="4" fill="#0d1117"/>
+  <!-- Smile -->
+  <path d="M 392 142 Q 400 150 408 142" fill="none" stroke="#0d1117" stroke-width="2"/>
+  <!-- Tentacles/arms suggestion -->
+  <path d="M 352 140 Q 320 160 310 185" fill="none" stroke="#f0f6fc" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 448 140 Q 480 160 490 185" fill="none" stroke="#f0f6fc" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Pull Request UI (main feature) -->
+  <rect x="30" y="195" width="440" height="240" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- PR header -->
+  <rect x="30" y="195" width="440" height="44" rx="8" fill="#161b22"/>
+  <rect x="30" y="224" width="440" height="15" fill="#161b22"/>
+  <circle cx="56" cy="220" r="14" fill="#1a4a2a"/>
+  <text x="56" y="224" font-family="monospace" font-size="8" fill="#44cc44" text-anchor="middle">PR</text>
+  <text x="80" y="213" font-family="sans-serif" font-size="11" font-weight="bold" fill="#f0f6fc">Add user authentication feature</text>
+  <text x="80" y="228" font-family="sans-serif" font-size="8" fill="#8b949e">alice wants to merge 3 commits into main from feature/auth</text>
+
+  <!-- PR merge status bar -->
+  <rect x="40" y="247" width="420" height="30" rx="4" fill="#1a2a1a" stroke="#2a4a2a" stroke-width="1"/>
+  <circle cx="56" cy="262" r="8" fill="#44cc44"/>
+  <text x="71" y="266" font-family="sans-serif" font-size="9" fill="#44cc44">✓ Able to merge · No conflicts</text>
+  <text x="380" y="266" font-family="sans-serif" font-size="9" fill="#44cc44">2 / 2 checks passed</text>
+
+  <!-- Diff view -->
+  <rect x="40" y="285" width="420" height="140" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="50" y="300" font-family="monospace" font-size="8" fill="#8b949e">auth.js</text>
+  <!-- Diff lines -->
+  <rect x="40" y="306" width="420" height="14" fill="#1a2a1a"/>
+  <text x="50" y="317" font-family="monospace" font-size="8" fill="#8b949e">@@ -12,6 +12,18 @@ function login(user) {</text>
+  <rect x="40" y="320" width="420" height="14" fill="#0d1117"/>
+  <text x="50" y="331" font-family="monospace" font-size="8" fill="#8b949e">   const hash = md5(password);</text>
+  <rect x="40" y="334" width="420" height="14" fill="#0d2a0d"/>
+  <text x="50" y="345" font-family="monospace" font-size="8" fill="#56d364">+  const salt = crypto.randomBytes(16);</text>
+  <rect x="40" y="348" width="420" height="14" fill="#0d2a0d"/>
+  <text x="50" y="359" font-family="monospace" font-size="8" fill="#56d364">+  const hash = argon2(password, salt);</text>
+  <rect x="40" y="362" width="420" height="14" fill="#0d2a0d"/>
+  <text x="50" y="373" font-family="monospace" font-size="8" fill="#56d364">+  await db.save({ user, hash, salt });</text>
+  <rect x="40" y="376" width="420" height="14" fill="#2a0d0d"/>
+  <text x="50" y="387" font-family="monospace" font-size="8" fill="#f85149">-  return hash === stored;</text>
+  <rect x="40" y="390" width="420" height="14" fill="#0d2a0d"/>
+  <text x="50" y="401" font-family="monospace" font-size="8" fill="#56d364">+  return await argon2.verify(stored, password);</text>
+  <rect x="40" y="404" width="420" height="14" fill="#0d1117"/>
+  <text x="50" y="415" font-family="monospace" font-size="8" fill="#8b949e">   return result;</text>
+
+  <!-- Review comment panel (right side) -->
+  <rect x="488" y="195" width="282" height="240" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="629" y="218" font-family="sans-serif" font-size="10" font-weight="bold" fill="#f0f6fc" text-anchor="middle">Reviewers</text>
+
+  <!-- Reviewer 1 -->
+  <circle cx="508" cy="244" r="16" fill="#1a2a4a"/>
+  <text x="508" y="249" font-family="sans-serif" font-size="8" fill="#4488ff" text-anchor="middle">B</text>
+  <text x="530" y="238" font-family="sans-serif" font-size="9" fill="#f0f6fc">bob</text>
+  <text x="530" y="252" font-family="sans-serif" font-size="8" fill="#44cc44">✓ Approved</text>
+
+  <!-- Reviewer 2 -->
+  <circle cx="508" cy="282" r="16" fill="#2a1a2a"/>
+  <text x="508" y="287" font-family="sans-serif" font-size="8" fill="#cc66ff" text-anchor="middle">C</text>
+  <text x="530" y="276" font-family="sans-serif" font-size="9" fill="#f0f6fc">carol</text>
+  <text x="530" y="290" font-family="sans-serif" font-size="8" fill="#ff8c00">⚠ Changes requested</text>
+
+  <!-- Comment -->
+  <rect x="498" y="306" width="262" height="70" rx="4" fill="#1a1f24" stroke="#30363d" stroke-width="1"/>
+  <text x="508" y="320" font-family="sans-serif" font-size="8" fill="#f0f6fc">carol commented:</text>
+  <text x="508" y="335" font-family="sans-serif" font-size="8" fill="#8b949e">"Consider using bcrypt instead</text>
+  <text x="508" y="348" font-family="sans-serif" font-size="8" fill="#8b949e"> of argon2 for wider support."</text>
+  <text x="508" y="363" font-family="sans-serif" font-size="7" fill="#6e7681">2 hours ago</text>
+
+  <!-- Merge button -->
+  <rect x="498" y="388" width="162" height="36" rx="6" fill="#1a4a2a" stroke="#44cc44" stroke-width="1.5"/>
+  <text x="579" y="411" font-family="sans-serif" font-size="11" font-weight="bold" fill="#aaffaa" text-anchor="middle">Merge pull request</text>
+
+  <!-- Issue tracker note -->
+  <rect x="490" y="88" width="270" height="50" rx="6" fill="#1a1a2a" stroke="#30363d" stroke-width="1"/>
+  <text x="625" y="106" font-family="sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">"이제 메일 첨부 없이도</text>
+  <text x="625" y="120" font-family="sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">리뷰가 되네요." — colleague, 2008</text>
+
+  <!-- Stars count -->
+  <text x="625" y="160" font-family="sans-serif" font-size="11" fill="#f0f6fc" text-anchor="middle">★ Social Coding Platform</text>
+  <text x="625" y="178" font-family="sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">Fork · Star · Watch · Issue · Wiki</text>
+</svg>

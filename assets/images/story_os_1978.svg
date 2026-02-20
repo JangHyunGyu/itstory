@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: corporate data center, late 70s -->
+  <rect width="800" height="450" fill="#141824"/>
+  <rect x="0" y="340" width="800" height="110" fill="#0e1218"/>
+  <line x1="0" y1="340" x2="800" y2="340" stroke="#1a2a3a" stroke-width="2"/>
+
+  <!-- DEC VAX 11/780 hardware -->
+  <rect x="30" y="80" width="200" height="250" rx="5" fill="#0e1520" stroke="#1e3a5a" stroke-width="2.5"/>
+  <text x="130" y="72" text-anchor="middle" font-family="monospace" font-size="11" fill="#4488bb">VAX 11/780</text>
+  <text x="130" y="86" text-anchor="middle" font-family="monospace" font-size="9" fill="#336699">Digital Equipment Corp.</text>
+  <!-- Front panel -->
+  <rect x="50" y="98" width="160" height="80" rx="3" fill="#0a1018" stroke="#1a3050" stroke-width="1"/>
+  <!-- Console lights -->
+  <g fill="#cc3300">
+    <circle cx="72" cy="116" r="5"/>
+    <circle cx="92" cy="116" r="5"/>
+  </g>
+  <g fill="#00cc44">
+    <circle cx="112" cy="116" r="5"/>
+    <circle cx="132" cy="116" r="5"/>
+    <circle cx="152" cy="116" r="5"/>
+  </g>
+  <g fill="#ffaa00">
+    <circle cx="172" cy="116" r="5"/>
+    <circle cx="192" cy="116" r="5"/>
+  </g>
+  <!-- Row 2 -->
+  <g fill="#0055cc">
+    <circle cx="72" cy="136" r="5"/>
+    <circle cx="92" cy="136" r="5"/>
+    <circle cx="112" cy="136" r="5"/>
+    <circle cx="132" cy="136" r="5"/>
+  </g>
+  <g fill="#cc3300">
+    <circle cx="152" cy="136" r="5"/>
+    <circle cx="172" cy="136" r="5"/>
+  </g>
+  <g fill="#00cc44">
+    <circle cx="192" cy="136" r="5"/>
+  </g>
+  <!-- Status display -->
+  <rect x="58" y="154" width="144" height="18" rx="2" fill="#001828" stroke="#005080" stroke-width="1"/>
+  <text x="130" y="167" text-anchor="middle" font-family="monospace" font-size="9" fill="#00aacc">SYSTEM RUNNING · VMS 1.0</text>
+  <!-- Disk drives -->
+  <rect x="50" y="184" width="70" height="90" rx="3" fill="#0a1018" stroke="#1a3050" stroke-width="1"/>
+  <circle cx="85" cy="229" r="28" fill="#0e1528" stroke="#2a4a80" stroke-width="2"/>
+  <circle cx="85" cy="229" r="16" fill="#080f1e"/>
+  <circle cx="85" cy="229" r="6" fill="#2a4a80"/>
+  <rect x="130" y="184" width="70" height="90" rx="3" fill="#0a1018" stroke="#1a3050" stroke-width="1"/>
+  <circle cx="165" cy="229" r="28" fill="#0e1528" stroke="#2a4a80" stroke-width="2"/>
+  <circle cx="165" cy="229" r="16" fill="#080f1e"/>
+  <circle cx="165" cy="229" r="6" fill="#2a4a80"/>
+
+  <!-- Virtual Memory diagram -->
+  <rect x="270" y="80" width="270" height="240" rx="6" fill="#0a1420" stroke="#1a3460" stroke-width="2"/>
+  <text x="405" y="70" text-anchor="middle" font-family="monospace" font-size="12" fill="#4488cc" font-weight="bold">가상 메모리 (Virtual Memory)</text>
+
+  <!-- Program view (large virtual space) -->
+  <text x="340" y="102" text-anchor="middle" font-family="monospace" font-size="10" fill="#6699cc">프로그램 관점</text>
+  <rect x="290" y="108" width="100" height="180" rx="3" fill="#061022" stroke="#1a3060" stroke-width="1"/>
+  <!-- Virtual pages -->
+  <rect x="295" y="113" width="90" height="20" rx="2" fill="#1a3050" stroke="#2a5090" stroke-width="1"/>
+  <text x="340" y="127" text-anchor="middle" font-family="monospace" font-size="8" fill="#88aadd">PAGE 0</text>
+  <rect x="295" y="137" width="90" height="20" rx="2" fill="#1a3050" stroke="#2a5090" stroke-width="1"/>
+  <text x="340" y="151" text-anchor="middle" font-family="monospace" font-size="8" fill="#88aadd">PAGE 1</text>
+  <rect x="295" y="161" width="90" height="20" rx="2" fill="#1a3050" stroke="#2a5090" stroke-width="1"/>
+  <text x="340" y="175" text-anchor="middle" font-family="monospace" font-size="8" fill="#88aadd">PAGE 2</text>
+  <rect x="295" y="185" width="90" height="20" rx="2" fill="#0a3a10" stroke="#1a6a2a" stroke-width="1.5"/>
+  <text x="340" y="199" text-anchor="middle" font-family="monospace" font-size="8" fill="#44cc66">PAGE 3 ← IN USE</text>
+  <rect x="295" y="209" width="90" height="20" rx="2" fill="#1a3050" stroke="#2a5090" stroke-width="1"/>
+  <text x="340" y="223" text-anchor="middle" font-family="monospace" font-size="8" fill="#88aadd">PAGE 4</text>
+  <rect x="295" y="233" width="90" height="20" rx="2" fill="#1a3050" stroke="#2a5090" stroke-width="1"/>
+  <text x="340" y="247" text-anchor="middle" font-family="monospace" font-size="8" fill="#88aadd">PAGE 5</text>
+  <rect x="295" y="257" width="90" height="20" rx="2" fill="#1a3050" stroke="#2a5090" stroke-width="1"/>
+  <text x="340" y="271" text-anchor="middle" font-family="monospace" font-size="8" fill="#88aadd">PAGE 6</text>
+
+  <!-- Physical memory (smaller) -->
+  <text x="468" y="102" text-anchor="middle" font-family="monospace" font-size="10" fill="#6699cc">실제 메모리</text>
+  <rect x="420" y="108" width="100" height="80" rx="3" fill="#061022" stroke="#1a3060" stroke-width="1"/>
+  <rect x="425" y="113" width="90" height="20" rx="2" fill="#0a3a10" stroke="#1a6a2a" stroke-width="1.5"/>
+  <text x="470" y="127" text-anchor="middle" font-family="monospace" font-size="8" fill="#44cc66">PAGE 3</text>
+  <rect x="425" y="137" width="90" height="20" rx="2" fill="#1a3050" stroke="#2a5090" stroke-width="1"/>
+  <text x="470" y="151" text-anchor="middle" font-family="monospace" font-size="8" fill="#88aadd">PAGE 1</text>
+  <rect x="425" y="161" width="90" height="20" rx="2" fill="#1a3050" stroke="#2a5090" stroke-width="1"/>
+  <text x="470" y="175" text-anchor="middle" font-family="monospace" font-size="8" fill="#88aadd">FREE</text>
+
+  <!-- Disk swap area -->
+  <text x="468" y="202" text-anchor="middle" font-family="monospace" font-size="10" fill="#aa8833">디스크 스왑</text>
+  <rect x="420" y="208" width="100" height="80" rx="3" fill="#1a1008" stroke="#5a4010" stroke-width="1"/>
+  <rect x="425" y="213" width="90" height="16" rx="2" fill="#2a1a08" stroke="#6a5020" stroke-width="1"/>
+  <text x="470" y="225" text-anchor="middle" font-family="monospace" font-size="8" fill="#ccaa44">PAGE 0 (swapped)</text>
+  <rect x="425" y="233" width="90" height="16" rx="2" fill="#2a1a08" stroke="#6a5020" stroke-width="1"/>
+  <text x="470" y="245" text-anchor="middle" font-family="monospace" font-size="8" fill="#ccaa44">PAGE 2 (swapped)</text>
+  <rect x="425" y="253" width="90" height="16" rx="2" fill="#2a1a08" stroke="#6a5020" stroke-width="1"/>
+  <text x="470" y="265" text-anchor="middle" font-family="monospace" font-size="8" fill="#ccaa44">PAGE 4 (swapped)</text>
+  <rect x="425" y="273" width="90" height="16" rx="2" fill="#2a1a08" stroke="#6a5020" stroke-width="1"/>
+  <text x="470" y="285" text-anchor="middle" font-family="monospace" font-size="8" fill="#ccaa44">PAGE 5 (swapped)</text>
+
+  <!-- Swap arrows -->
+  <defs>
+    <marker id="va" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#4488cc"/>
+    </marker>
+    <marker id="da" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#ccaa44"/>
+    </marker>
+  </defs>
+  <path d="M 385 199 Q 403 199 420 165" fill="none" stroke="#4488cc" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#va)"/>
+  <path d="M 420 245 Q 400 245 385 220" fill="none" stroke="#ccaa44" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#da)"/>
+
+  <!-- Cluster diagram -->
+  <rect x="570" y="80" width="200" height="180" rx="6" fill="#0a1020" stroke="#1a3050" stroke-width="2"/>
+  <text x="670" y="70" text-anchor="middle" font-family="monospace" font-size="11" fill="#4488cc">VAXcluster</text>
+  <!-- Node circles -->
+  <circle cx="620" cy="140" r="30" fill="#0e1830" stroke="#2a4a80" stroke-width="2"/>
+  <text x="620" y="136" text-anchor="middle" font-family="monospace" font-size="8" fill="#6699cc">NODE</text>
+  <text x="620" y="148" text-anchor="middle" font-family="monospace" font-size="8" fill="#6699cc">A</text>
+  <circle cx="720" cy="140" r="30" fill="#0e1830" stroke="#2a4a80" stroke-width="2"/>
+  <text x="720" y="136" text-anchor="middle" font-family="monospace" font-size="8" fill="#6699cc">NODE</text>
+  <text x="720" y="148" text-anchor="middle" font-family="monospace" font-size="8" fill="#6699cc">B</text>
+  <circle cx="670" cy="220" r="30" fill="#0e1830" stroke="#2a4a80" stroke-width="2"/>
+  <text x="670" y="216" text-anchor="middle" font-family="monospace" font-size="8" fill="#6699cc">NODE</text>
+  <text x="670" y="228" text-anchor="middle" font-family="monospace" font-size="8" fill="#6699cc">C</text>
+  <!-- Connecting lines between nodes -->
+  <line x1="648" y1="156" x2="692" y2="156" stroke="#3a6aaa" stroke-width="2"/>
+  <line x1="636" y1="168" x2="648" y2="194" stroke="#3a6aaa" stroke-width="2"/>
+  <line x1="704" y1="168" x2="692" y2="194" stroke="#3a6aaa" stroke-width="2"/>
+
+  <text x="670" y="270" text-anchor="middle" font-family="monospace" font-size="9" fill="#4488cc">고가용성 · 24시간</text>
+
+  <!-- Title -->
+  <rect x="0" y="410" width="800" height="40" fill="#0e1218" opacity="0.95"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#5599cc" font-weight="bold">VAX/VMS — 가상 메모리와 클러스터 대중화 · 1978</text>
+</svg>

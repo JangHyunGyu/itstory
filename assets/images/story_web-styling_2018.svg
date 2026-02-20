@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="shadow18" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000030"/>
+    </filter>
+  </defs>
+
+  <!-- Light mode background -->
+  <rect width="800" height="450" fill="#f8f9fa" id="bg18"/>
+
+  <!-- Year label -->
+  <rect x="16" y="14" width="60" height="24" rx="4" fill="#6c3bbb" opacity="0.9"/>
+  <text x="46" y="30" font-family="monospace" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">2018</text>
+
+  <!-- :root custom properties block (center left) -->
+  <g transform="translate(30, 55)">
+    <rect x="0" y="0" width="310" height="280" rx="8" fill="#1e1e2e" filter="url(#shadow18)"/>
+    <!-- Tab bar -->
+    <rect x="0" y="0" width="310" height="28" rx="8" fill="#161628"/>
+    <rect x="0" y="18" width="310" height="10" fill="#161628"/>
+    <text x="155" y="18" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">tokens.css</text>
+    <circle cx="14" cy="14" r="5" fill="#ff5f57"/>
+    <circle cx="28" cy="14" r="5" fill="#febc2e"/>
+    <circle cx="42" cy="14" r="5" fill="#28c840"/>
+
+    <!-- :root block -->
+    <text x="14" y="48" font-family="monospace" font-size="11" fill="#cc44aa">:root</text>
+    <text x="62" y="48" font-family="monospace" font-size="11" fill="#ccc">&#123;</text>
+
+    <!-- Brand color variable -->
+    <text x="26" y="65" font-family="monospace" font-size="10" fill="#88ccff">--brand-color</text>
+    <text x="143" y="65" font-family="monospace" font-size="10" fill="#ccc">:</text>
+    <rect x="152" y="55" width="14" height="14" rx="2" fill="#6c3bbb" stroke="#888" stroke-width="0.5"/>
+    <text x="170" y="65" font-family="monospace" font-size="10" fill="#ffcc66">#6c3bbb</text>
+    <text x="225" y="65" font-family="monospace" font-size="10" fill="#ccc">;</text>
+
+    <!-- Text color variable -->
+    <text x="26" y="82" font-family="monospace" font-size="10" fill="#88ccff">--text-color</text>
+    <text x="133" y="82" font-family="monospace" font-size="10" fill="#ccc">:</text>
+    <rect x="142" y="72" width="14" height="14" rx="2" fill="#111" stroke="#888" stroke-width="0.5"/>
+    <text x="160" y="82" font-family="monospace" font-size="10" fill="#ffcc66">#111111</text>
+    <text x="215" y="82" font-family="monospace" font-size="10" fill="#ccc">;</text>
+
+    <!-- BG color variable -->
+    <text x="26" y="99" font-family="monospace" font-size="10" fill="#88ccff">--bg-color</text>
+    <text x="117" y="99" font-family="monospace" font-size="10" fill="#ccc">:</text>
+    <rect x="126" y="89" width="14" height="14" rx="2" fill="#f8f9fa" stroke="#888" stroke-width="0.5"/>
+    <text x="144" y="99" font-family="monospace" font-size="10" fill="#ffcc66">#f8f9fa</text>
+    <text x="199" y="99" font-family="monospace" font-size="10" fill="#ccc">;</text>
+
+    <!-- Spacing variable -->
+    <text x="26" y="116" font-family="monospace" font-size="10" fill="#88ccff">--spacing-md</text>
+    <text x="143" y="116" font-family="monospace" font-size="10" fill="#ccc">:</text>
+    <text x="152" y="116" font-family="monospace" font-size="10" fill="#ffcc66">1.5rem</text>
+    <text x="199" y="116" font-family="monospace" font-size="10" fill="#ccc">;</text>
+
+    <!-- Border radius variable -->
+    <text x="26" y="133" font-family="monospace" font-size="10" fill="#88ccff">--radius</text>
+    <text x="96" y="133" font-family="monospace" font-size="10" fill="#ccc">:</text>
+    <text x="105" y="133" font-family="monospace" font-size="10" fill="#ffcc66">8px</text>
+    <text x="126" y="133" font-family="monospace" font-size="10" fill="#ccc">;</text>
+
+    <!-- Font size variable -->
+    <text x="26" y="150" font-family="monospace" font-size="10" fill="#88ccff">--font-size-lg</text>
+    <text x="160" y="150" font-family="monospace" font-size="10" fill="#ccc">:</text>
+    <text x="169" y="150" font-family="monospace" font-size="10" fill="#ffcc66">1.25rem</text>
+    <text x="220" y="150" font-family="monospace" font-size="10" fill="#ccc">;</text>
+
+    <text x="14" y="167" font-family="monospace" font-size="11" fill="#ccc">&#125;</text>
+
+    <!-- Dark mode override -->
+    <text x="14" y="192" font-family="monospace" font-size="10" fill="#888">/* Dark mode override */</text>
+    <text x="14" y="209" font-family="monospace" font-size="11" fill="#ff8855">@media</text>
+    <text x="70" y="209" font-family="monospace" font-size="10" fill="#ccc">(prefers-color-scheme:</text>
+    <text x="233" y="209" font-family="monospace" font-size="10" fill="#ffcc66">dark</text>
+    <text x="261" y="209" font-family="monospace" font-size="10" fill="#ccc">)</text>
+    <text x="14" y="225" font-family="monospace" font-size="11" fill="#cc44aa">:root</text>
+    <text x="62" y="225" font-family="monospace" font-size="11" fill="#ccc">&#123;</text>
+    <text x="26" y="241" font-family="monospace" font-size="10" fill="#88ccff">--text-color</text>
+    <text x="133" y="241" font-family="monospace" font-size="10" fill="#ccc">:</text>
+    <rect x="142" y="231" width="14" height="14" rx="2" fill="#f0f0f0" stroke="#888" stroke-width="0.5"/>
+    <text x="160" y="241" font-family="monospace" font-size="10" fill="#ffcc66">#f0f0f0</text>
+    <text x="215" y="241" font-family="monospace" font-size="10" fill="#ccc">;</text>
+    <text x="26" y="257" font-family="monospace" font-size="10" fill="#88ccff">--bg-color</text>
+    <text x="117" y="257" font-family="monospace" font-size="10" fill="#ccc">:</text>
+    <rect x="126" y="247" width="14" height="14" rx="2" fill="#111" stroke="#888" stroke-width="0.5"/>
+    <text x="144" y="257" font-family="monospace" font-size="10" fill="#ffcc66">#111111</text>
+    <text x="199" y="257" font-family="monospace" font-size="10" fill="#ccc">;</text>
+    <text x="14" y="273" font-family="monospace" font-size="11" fill="#ccc">&#125;</text>
+  </g>
+
+  <!-- Components referencing the same variables -->
+
+  <!-- Button component -->
+  <g transform="translate(360, 55)">
+    <rect x="0" y="0" width="200" height="130" rx="8" fill="#1e1e2e" filter="url(#shadow18)"/>
+    <text x="10" y="20" font-family="monospace" font-size="9" fill="#888">button.css</text>
+    <text x="10" y="38" font-family="monospace" font-size="9" fill="#88ff88">.btn &#123;</text>
+    <text x="10" y="52" font-family="monospace" font-size="9" fill="#ccc">  background:</text>
+    <text x="10" y="66" font-family="monospace" font-size="9" fill="#88ccff">  var(--brand-color)</text>
+    <text x="149" y="66" font-family="monospace" font-size="9" fill="#ccc">;</text>
+    <text x="10" y="80" font-family="monospace" font-size="9" fill="#ccc">  color: #fff;</text>
+    <text x="10" y="94" font-family="monospace" font-size="9" fill="#ccc">  padding:</text>
+    <text x="10" y="108" font-family="monospace" font-size="9" fill="#88ccff">  var(--spacing-md)</text>
+    <text x="143" y="108" font-family="monospace" font-size="9" fill="#ccc">;</text>
+    <text x="10" y="122" font-family="monospace" font-size="9" fill="#88ff88">&#125;</text>
+  </g>
+
+  <!-- Nav component -->
+  <g transform="translate(578, 55)">
+    <rect x="0" y="0" width="200" height="130" rx="8" fill="#1e1e2e" filter="url(#shadow18)"/>
+    <text x="10" y="20" font-family="monospace" font-size="9" fill="#888">nav.css</text>
+    <text x="10" y="38" font-family="monospace" font-size="9" fill="#88ff88">.nav &#123;</text>
+    <text x="10" y="52" font-family="monospace" font-size="9" fill="#ccc">  background:</text>
+    <text x="10" y="66" font-family="monospace" font-size="9" fill="#88ccff">  var(--bg-color)</text>
+    <text x="140" y="66" font-family="monospace" font-size="9" fill="#ccc">;</text>
+    <text x="10" y="80" font-family="monospace" font-size="9" fill="#ccc">  color:</text>
+    <text x="10" y="94" font-family="monospace" font-size="9" fill="#88ccff">  var(--text-color)</text>
+    <text x="145" y="94" font-family="monospace" font-size="9" fill="#ccc">;</text>
+    <text x="10" y="108" font-family="monospace" font-size="9" fill="#ccc">  padding:</text>
+    <text x="10" y="122" font-family="monospace" font-size="9" fill="#88ccff">  var(--spacing-md)</text>
+    <text x="143" y="122" font-family="monospace" font-size="9" fill="#ccc">;</text>
+  </g>
+
+  <!-- Card component -->
+  <g transform="translate(360, 205)">
+    <rect x="0" y="0" width="200" height="130" rx="8" fill="#1e1e2e" filter="url(#shadow18)"/>
+    <text x="10" y="20" font-family="monospace" font-size="9" fill="#888">card.css</text>
+    <text x="10" y="38" font-family="monospace" font-size="9" fill="#88ff88">.card &#123;</text>
+    <text x="10" y="52" font-family="monospace" font-size="9" fill="#ccc">  background:</text>
+    <text x="10" y="66" font-family="monospace" font-size="9" fill="#88ccff">  var(--bg-color)</text>
+    <text x="140" y="66" font-family="monospace" font-size="9" fill="#ccc">;</text>
+    <text x="10" y="80" font-family="monospace" font-size="9" fill="#ccc">  border-radius:</text>
+    <text x="10" y="94" font-family="monospace" font-size="9" fill="#88ccff">  var(--radius)</text>
+    <text x="122" y="94" font-family="monospace" font-size="9" fill="#ccc">;</text>
+    <text x="10" y="108" font-family="monospace" font-size="9" fill="#ccc">  padding:</text>
+    <text x="10" y="122" font-family="monospace" font-size="9" fill="#88ccff">  var(--spacing-md)</text>
+    <text x="143" y="122" font-family="monospace" font-size="9" fill="#ccc">;</text>
+  </g>
+
+  <!-- Heading component -->
+  <g transform="translate(578, 205)">
+    <rect x="0" y="0" width="200" height="130" rx="8" fill="#1e1e2e" filter="url(#shadow18)"/>
+    <text x="10" y="20" font-family="monospace" font-size="9" fill="#888">typography.css</text>
+    <text x="10" y="38" font-family="monospace" font-size="9" fill="#88ff88">h1, h2 &#123;</text>
+    <text x="10" y="52" font-family="monospace" font-size="9" fill="#ccc">  color:</text>
+    <text x="10" y="66" font-family="monospace" font-size="9" fill="#88ccff">  var(--text-color)</text>
+    <text x="145" y="66" font-family="monospace" font-size="9" fill="#ccc">;</text>
+    <text x="10" y="80" font-family="monospace" font-size="9" fill="#ccc">  font-size:</text>
+    <text x="10" y="94" font-family="monospace" font-size="9" fill="#88ccff">  var(--font-size-lg)</text>
+    <text x="152" y="94" font-family="monospace" font-size="9" fill="#ccc">;</text>
+    <text x="10" y="108" font-family="monospace" font-size="9" fill="#ccc">  margin-bottom:</text>
+    <text x="10" y="122" font-family="monospace" font-size="9" fill="#88ccff">  var(--spacing-md)</text>
+    <text x="143" y="122" font-family="monospace" font-size="9" fill="#ccc">;</text>
+  </g>
+
+  <!-- Arrows from :root to each component (dashed lines) -->
+  <line x1="340" y1="100" x2="358" y2="100" stroke="#6c3bbb" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.8"/>
+  <line x1="340" y1="100" x2="340" y2="210" stroke="#6c3bbb" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="340" y1="210" x2="358" y2="230" stroke="#6c3bbb" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="340" y1="100" x2="340" y2="120" stroke="#6c3bbb" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.3"/>
+  <line x1="340" y1="120" x2="576" y2="120" stroke="#6c3bbb" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.3"/>
+  <line x1="576" y1="120" x2="576" y2="240" stroke="#6c3bbb" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.3"/>
+
+  <!-- Light/Dark mode toggle UI illustration -->
+  <g transform="translate(30, 360)">
+    <!-- Light mode card -->
+    <rect x="0" y="0" width="160" height="65" rx="8" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow18)"/>
+    <text x="14" y="20" font-family="sans-serif" font-size="10" fill="#111" font-weight="bold">Light Mode</text>
+    <rect x="14" y="28" width="100" height="5" rx="2" fill="#6c3bbb"/>
+    <rect x="14" y="36" width="130" height="4" rx="1" fill="#888"/>
+    <rect x="14" y="43" width="120" height="4" rx="1" fill="#888"/>
+    <rect x="14" y="50" width="50" height="10" rx="4" fill="#6c3bbb"/>
+
+    <!-- Toggle switch -->
+    <rect x="172" y="24" width="50" height="22" rx="11" fill="#ccc"/>
+    <circle cx="184" cy="35" r="9" fill="#fff" filter="url(#shadow18)"/>
+    <text x="197" y="45" font-family="monospace" font-size="8" fill="#888">light</text>
+
+    <!-- Dark mode card -->
+    <rect x="240" y="0" width="160" height="65" rx="8" fill="#111" stroke="#333" stroke-width="1.5" filter="url(#shadow18)"/>
+    <text x="254" y="20" font-family="sans-serif" font-size="10" fill="#f0f0f0" font-weight="bold">Dark Mode</text>
+    <rect x="254" y="28" width="100" height="5" rx="2" fill="#9a6bff"/>
+    <rect x="254" y="36" width="130" height="4" rx="1" fill="#666"/>
+    <rect x="254" y="43" width="120" height="4" rx="1" fill="#666"/>
+    <rect x="254" y="50" width="50" height="10" rx="4" fill="#9a6bff"/>
+
+    <!-- Toggle switch (active) -->
+    <rect x="412" y="24" width="50" height="22" rx="11" fill="#6c3bbb"/>
+    <circle cx="451" cy="35" r="9" fill="#fff" filter="url(#shadow18)"/>
+    <text x="418" y="45" font-family="monospace" font-size="8" fill="#fff">dark</text>
+
+    <!-- Label -->
+    <text x="230" y="82" font-family="sans-serif" font-size="9" fill="#6c3bbb" text-anchor="middle" font-weight="bold">-- one variable change, entire theme switches --</text>
+  </g>
+
+  <!-- CSS Custom Properties badge -->
+  <rect x="580" y="370" width="200" height="55" rx="8" fill="#6c3bbb" filter="url(#shadow18)"/>
+  <text x="680" y="393" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">CSS Custom Properties</text>
+  <text x="680" y="411" font-family="monospace" font-size="9" fill="#ccaaff" text-anchor="middle">var(--property-name)</text>
+  <text x="680" y="423" font-family="monospace" font-size="8" fill="#aa88cc" text-anchor="middle">Runtime · Inherited · All major browsers 2018</text>
+</svg>

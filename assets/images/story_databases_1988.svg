@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#eff3f7"/>
+
+  <!-- Title banner -->
+  <rect x="0" y="0" width="800" height="60" fill="#1a237e" opacity="0.95"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">데이터 웨어하우스 개념 · Barry Devlin · 1988</text>
+
+  <!-- Operational DB Building (left) -->
+  <g transform="translate(30, 80)">
+    <!-- Building -->
+    <rect x="0" y="30" width="200" height="230" fill="#c62828"/>
+    <rect x="0" y="10" width="200" height="30" fill="#b71c1c"/>
+    <!-- Roof/Triangle top -->
+    <polygon points="-10,20 100,0 210,20" fill="#d32f2f"/>
+    <!-- Windows - busy/active -->
+    <rect x="20" y="50" width="35" height="30" rx="2" fill="#fff176"/>
+    <rect x="75" y="50" width="35" height="30" rx="2" fill="#fff176"/>
+    <rect x="130" y="50" width="35" height="30" rx="2" fill="#ffee58"/>
+    <rect x="20" y="100" width="35" height="30" rx="2" fill="#ffee58"/>
+    <rect x="75" y="100" width="35" height="30" rx="2" fill="#fff176"/>
+    <rect x="130" y="100" width="35" height="30" rx="2" fill="#fff176"/>
+    <rect x="20" y="150" width="35" height="30" rx="2" fill="#fff176"/>
+    <rect x="75" y="150" width="35" height="30" rx="2" fill="#ffee58"/>
+    <rect x="130" y="150" width="35" height="30" rx="2" fill="#fff176"/>
+    <!-- Activity indicators -->
+    <g font-family="monospace" font-size="7" fill="white">
+      <text x="22" y="70">TXN</text>
+      <text x="77" y="70">INS</text>
+      <text x="132" y="70">UPD</text>
+      <text x="22" y="120">DEL</text>
+      <text x="77" y="120">TXN</text>
+      <text x="132" y="120">INS</text>
+      <text x="22" y="170">UPD</text>
+      <text x="77" y="170">TXN</text>
+      <text x="132" y="170">INS</text>
+    </g>
+    <!-- Door -->
+    <rect x="75" y="210" width="50" height="50" rx="2" fill="#b71c1c"/>
+    <!-- Label -->
+    <text x="100" y="275" font-family="Arial, sans-serif" font-size="12" fill="#c62828" text-anchor="middle" font-weight="bold">Operational DB</text>
+    <text x="100" y="292" font-family="Arial, sans-serif" font-size="9" fill="#555" text-anchor="middle">OLTP · 운영 데이터베이스</text>
+    <text x="100" y="307" font-family="Arial, sans-serif" font-size="9" fill="#555" text-anchor="middle">INSERT/UPDATE/DELETE</text>
+  </g>
+
+  <!-- ETL Pipeline (center) -->
+  <g transform="translate(265, 155)">
+    <!-- ETL box -->
+    <rect x="0" y="0" width="110" height="110" rx="8" fill="#f57f17"/>
+    <rect x="8" y="8" width="94" height="94" rx="5" fill="#ff8f00"/>
+    <text x="55" y="45" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">ETL</text>
+    <text x="55" y="63" font-family="Arial, sans-serif" font-size="8" fill="#fff9c4" text-anchor="middle">Extract</text>
+    <text x="55" y="76" font-family="Arial, sans-serif" font-size="8" fill="#fff9c4" text-anchor="middle">Transform</text>
+    <text x="55" y="89" font-family="Arial, sans-serif" font-size="8" fill="#fff9c4" text-anchor="middle">Load</text>
+
+    <!-- Arrow left (from Operational) -->
+    <polygon points="-25,55 0,40 0,70" fill="#f57f17"/>
+    <rect x="-55" y="47" width="32" height="18" rx="3" fill="#f57f17"/>
+
+    <!-- Arrow right (to Warehouse) -->
+    <polygon points="135,55 110,40 110,70" fill="#f57f17"/>
+    <rect x="113" y="47" width="32" height="18" rx="3" fill="#f57f17"/>
+  </g>
+
+  <!-- Data Warehouse Building (right) -->
+  <g transform="translate(435, 80)">
+    <!-- Building - bigger, more imposing -->
+    <rect x="0" y="10" width="220" height="250" fill="#1565c0"/>
+    <!-- Columns -->
+    <rect x="20" y="10" width="15" height="250" fill="#0d47a1"/>
+    <rect x="95" y="10" width="15" height="250" fill="#0d47a1"/>
+    <rect x="170" y="10" width="15" height="250" fill="#0d47a1"/>
+    <!-- Roof -->
+    <polygon points="-10,15 110,0 230,15" fill="#0d47a1"/>
+    <!-- Windows with analytical charts -->
+    <rect x="40" y="40" width="45" height="35" rx="2" fill="#e3f2fd"/>
+    <!-- Mini bar chart -->
+    <rect x="45" y="60" width="8" height="10" fill="#42a5f5"/>
+    <rect x="56" y="50" width="8" height="20" fill="#1976d2"/>
+    <rect x="67" y="54" width="8" height="16" fill="#42a5f5"/>
+    <rect x="78" y="44" width="5" height="26" fill="#1565c0"/>
+
+    <rect x="120" y="40" width="45" height="35" rx="2" fill="#e3f2fd"/>
+    <!-- Mini pie chart -->
+    <circle cx="142" cy="57" r="14" fill="#1976d2"/>
+    <path d="M142,57 L142,43 A14,14 0 0,1 156,57 Z" fill="#42a5f5"/>
+    <path d="M142,57 L156,57 A14,14 0 0,1 135,70 Z" fill="#64b5f6"/>
+
+    <rect x="40" y="95" width="45" height="35" rx="2" fill="#e3f2fd"/>
+    <!-- Line trend chart -->
+    <polyline points="45,125 52,110 60,118 70,105 78,108 83,100" fill="none" stroke="#1565c0" stroke-width="2"/>
+
+    <rect x="120" y="95" width="45" height="35" rx="2" fill="#e3f2fd"/>
+    <!-- Data table -->
+    <line x1="124" y1="106" x2="161" y2="106" stroke="#90caf9" stroke-width="1"/>
+    <line x1="124" y1="114" x2="161" y2="114" stroke="#90caf9" stroke-width="1"/>
+    <line x1="124" y1="122" x2="161" y2="122" stroke="#90caf9" stroke-width="1"/>
+    <line x1="138" y1="98" x2="138" y2="130" stroke="#90caf9" stroke-width="1"/>
+
+    <!-- Door -->
+    <rect x="87" y="210" width="50" height="50" rx="2" fill="#0d47a1"/>
+    <!-- Label -->
+    <text x="110" y="278" font-family="Arial, sans-serif" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="bold">Data Warehouse</text>
+    <text x="110" y="295" font-family="Arial, sans-serif" font-size="9" fill="#555" text-anchor="middle">OLAP · 분석용 창고</text>
+    <text x="110" y="310" font-family="Arial, sans-serif" font-size="9" fill="#555" text-anchor="middle">SELECT · 비즈니스 인텔리전스</text>
+  </g>
+
+  <!-- Quote box -->
+  <rect x="30" y="380" width="470" height="0" fill="none"/>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#1a237e" opacity="0.9"/>
+  <text x="400" y="415" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">운영 DB와 분석 DB를 분리 · 비즈니스 인텔리전스의 시작</text>
+  <text x="400" y="438" font-family="Arial, sans-serif" font-size="11" fill="#9fa8da" text-anchor="middle">Barry Devlin · IBM · 1988 · "Data Warehouse" 용어 최초 사용</text>
+</svg>

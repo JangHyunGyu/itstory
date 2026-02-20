@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg2012" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1a0a"/>
+      <stop offset="100%" stop-color="#050d05"/>
+    </linearGradient>
+    <linearGradient id="pcbGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a4a1a"/>
+      <stop offset="100%" stop-color="#0d3a0d"/>
+    </linearGradient>
+    <filter id="ledGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg2012)"/>
+
+  <!-- Raspberry Pi title -->
+  <g transform="translate(220, 10)">
+    <rect x="0" y="0" width="360" height="45" fill="#cc0033" rx="6"/>
+    <!-- Raspberry Pi logo area -->
+    <text x="180" y="30" fill="white" font-size="22" font-family="sans-serif" text-anchor="middle" font-weight="bold">Raspberry Pi</text>
+    <!-- Pi symbol -->
+    <text x="330" y="32" fill="white" font-size="20" font-family="sans-serif">π</text>
+  </g>
+  <text x="400" y="68" fill="#cc5566" font-size="13" font-family="monospace" text-anchor="middle">Credit-Card Sized Computer · £35 · 2012</text>
+
+  <!-- Raspberry Pi board (large, center-left) -->
+  <g transform="translate(30, 80)">
+    <!-- PCB board -->
+    <rect x="0" y="0" width="340" height="240" fill="url(#pcbGreen)" rx="8"/>
+    <rect x="3" y="3" width="334" height="234" fill="#1a5a1a" rx="6" stroke="#2a8a2a" stroke-width="1"/>
+
+    <!-- PCB traces (yellow/gold lines) -->
+    <g stroke="#aa8800" stroke-width="1.5" fill="none" opacity="0.6">
+      <polyline points="30,120 80,120 80,60 140,60"/>
+      <polyline points="140,60 140,30 200,30"/>
+      <polyline points="30,150 60,150 60,200 120,200"/>
+      <polyline points="200,30 250,30 250,80 300,80"/>
+      <polyline points="120,200 180,200 180,160 250,160"/>
+      <polyline points="300,80 320,80 320,150 290,150"/>
+    </g>
+
+    <!-- Raspberry Pi logo on board -->
+    <g transform="translate(140, 85)">
+      <!-- Simplified Pi raspberry logo -->
+      <ellipse cx="30" cy="30" rx="28" ry="28" fill="#cc0033" opacity="0.7"/>
+      <text x="30" y="38" fill="white" font-size="24" font-family="sans-serif" text-anchor="middle" font-weight="bold">π</text>
+    </g>
+
+    <!-- ARM CPU chip -->
+    <rect x="105" y="90" width="80" height="80" fill="#2a2a1a" rx="4" stroke="#aa8800" stroke-width="1.5"/>
+    <text x="145" y="128" fill="#cc9900" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">Broadcom</text>
+    <text x="145" y="142" fill="#cc9900" font-size="9" font-family="monospace" text-anchor="middle">BCM2835</text>
+    <text x="145" y="155" fill="#8a6600" font-size="8" font-family="monospace" text-anchor="middle">ARM11 700MHz</text>
+
+    <!-- RAM chip -->
+    <rect x="200" y="90" width="55" height="35" fill="#1a1a2a" rx="3" stroke="#4488cc" stroke-width="1"/>
+    <text x="227" y="105" fill="#4488cc" font-size="8" font-family="monospace" text-anchor="middle">512MB</text>
+    <text x="227" y="118" fill="#2266aa" font-size="8" font-family="monospace" text-anchor="middle">SDRAM</text>
+
+    <!-- GPIO pins (header row) -->
+    <g transform="translate(20, 20)">
+      <g fill="#cc9900">
+        <rect x="0" y="0" width="5" height="10" rx="1"/>
+        <rect x="8" y="0" width="5" height="10" rx="1"/>
+        <rect x="16" y="0" width="5" height="10" rx="1"/>
+        <rect x="24" y="0" width="5" height="10" rx="1"/>
+        <rect x="32" y="0" width="5" height="10" rx="1"/>
+        <rect x="40" y="0" width="5" height="10" rx="1"/>
+        <rect x="48" y="0" width="5" height="10" rx="1"/>
+        <rect x="56" y="0" width="5" height="10" rx="1"/>
+        <rect x="64" y="0" width="5" height="10" rx="1"/>
+        <rect x="72" y="0" width="5" height="10" rx="1"/>
+        <rect x="80" y="0" width="5" height="10" rx="1"/>
+        <rect x="88" y="0" width="5" height="10" rx="1"/>
+        <rect x="96" y="0" width="5" height="10" rx="1"/>
+        <rect x="104" y="0" width="5" height="10" rx="1"/>
+        <rect x="0" y="13" width="5" height="10" rx="1"/>
+        <rect x="8" y="13" width="5" height="10" rx="1"/>
+        <rect x="16" y="13" width="5" height="10" rx="1"/>
+        <rect x="24" y="13" width="5" height="10" rx="1"/>
+        <rect x="32" y="13" width="5" height="10" rx="1"/>
+        <rect x="40" y="13" width="5" height="10" rx="1"/>
+        <rect x="48" y="13" width="5" height="10" rx="1"/>
+        <rect x="56" y="13" width="5" height="10" rx="1"/>
+        <rect x="64" y="13" width="5" height="10" rx="1"/>
+        <rect x="72" y="13" width="5" height="10" rx="1"/>
+        <rect x="80" y="13" width="5" height="10" rx="1"/>
+        <rect x="88" y="13" width="5" height="10" rx="1"/>
+        <rect x="96" y="13" width="5" height="10" rx="1"/>
+        <rect x="104" y="13" width="5" height="10" rx="1"/>
+      </g>
+      <text x="55" y="37" fill="#cc9900" font-size="8" font-family="monospace" text-anchor="middle">26-pin GPIO Header</text>
+    </g>
+
+    <!-- USB ports -->
+    <g transform="translate(265, 135)">
+      <rect x="0" y="0" width="65" height="22" fill="#2a2a3a" rx="2" stroke="#4488cc" stroke-width="1"/>
+      <rect x="2" y="2" width="28" height="18" fill="#1a1a28" rx="1"/>
+      <rect x="35" y="2" width="28" height="18" fill="#1a1a28" rx="1"/>
+      <text x="32" y="34" fill="#4488cc" font-size="8" font-family="monospace" text-anchor="middle">2x USB</text>
+    </g>
+
+    <!-- Ethernet port -->
+    <g transform="translate(265, 170)">
+      <rect x="0" y="0" width="65" height="28" fill="#2a2a3a" rx="2" stroke="#4488cc" stroke-width="1"/>
+      <!-- RJ45 contacts -->
+      <g fill="#cc9900">
+        <rect x="5" y="5" width="5" height="18" rx="1"/>
+        <rect x="13" y="5" width="5" height="18" rx="1"/>
+        <rect x="21" y="5" width="5" height="18" rx="1"/>
+        <rect x="29" y="5" width="5" height="18" rx="1"/>
+        <rect x="37" y="5" width="5" height="18" rx="1"/>
+        <rect x="45" y="5" width="5" height="18" rx="1"/>
+        <rect x="53" y="5" width="5" height="18" rx="1"/>
+      </g>
+      <text x="32" y="40" fill="#4488cc" font-size="8" font-family="monospace" text-anchor="middle">Ethernet</text>
+    </g>
+
+    <!-- HDMI port -->
+    <g transform="translate(20" y="200)">
+      <rect x="20" y="200" width="50" height="18" fill="#2a2a3a" rx="2" stroke="#cc9900" stroke-width="1"/>
+      <text x="45" y="213" fill="#cc9900" font-size="8" font-family="monospace" text-anchor="middle">HDMI</text>
+    </g>
+
+    <!-- LED indicators -->
+    <circle cx="270" cy="50" r="5" fill="#44ff44" opacity="0.9" filter="url(#ledGlow)"/>
+    <circle cx="285" cy="50" r="5" fill="#ff4444" opacity="0.9" filter="url(#ledGlow)"/>
+    <circle cx="300" cy="50" r="5" fill="#ffaa00" opacity="0.7" filter="url(#ledGlow)"/>
+    <text x="285" y="65" fill="#2a8a2a" font-size="8" font-family="monospace" text-anchor="middle">PWR ACT</text>
+
+    <!-- MicroSD card slot -->
+    <g transform="translate(150, 225)">
+      <rect x="0" y="0" width="60" height="12" fill="#3a2a1a" rx="1" stroke="#cc9900" stroke-width="1"/>
+      <text x="30" y="10" fill="#8a5a00" font-size="7" font-family="monospace" text-anchor="middle">microSD</text>
+    </g>
+
+    <!-- Board label -->
+    <text x="170" y="258" fill="#2a8a2a" font-size="10" font-family="monospace" text-anchor="middle">Raspberry Pi Model B · 2012</text>
+  </g>
+
+  <!-- Children learning (right side) -->
+  <g transform="translate(400, 75)">
+    <text x="190" y="20" fill="#44cc44" font-size="13" font-family="monospace" text-anchor="middle" font-weight="bold">Education · Maker Movement</text>
+
+    <!-- Teacher/child at desk with Pi -->
+    <!-- Desk -->
+    <rect x="20" y="170" width="340" height="12" fill="#3a2a10" rx="2"/>
+
+    <!-- Monitor showing Scratch/Python -->
+    <rect x="40" y="80" width="160" height="100" fill="#1a1a1a" rx="6"/>
+    <rect x="46" y="86" width="148" height="80" fill="#001040" rx="3"/>
+    <!-- Python code on screen -->
+    <text x="51" y="103" fill="#00ff44" font-size="8" font-family="monospace">&gt;&gt;&gt; print("Hello!")</text>
+    <text x="51" y="118" fill="#88ccff" font-size="8" font-family="monospace">Hello!</text>
+    <text x="51" y="133" fill="#00ff44" font-size="8" font-family="monospace">&gt;&gt;&gt; for i in range(5):</text>
+    <text x="51" y="148" fill="#00ff44" font-size="8" font-family="monospace">...   print(i)</text>
+    <text x="51" y="163" fill="#88ccff" font-size="8" font-family="monospace">0 1 2 3 4</text>
+
+    <!-- Child 1 (larger, pointing at screen) -->
+    <g transform="translate(45, 30)">
+      <ellipse cx="0" cy="90" rx="18" ry="35" fill="#cc5533"/>
+      <rect x="-18" y="63" width="36" height="30" fill="#cc5533"/>
+      <ellipse cx="0" cy="50" rx="16" ry="18" fill="#d4a870"/>
+      <ellipse cx="0" cy="37" rx="16" ry="10" fill="#3a2010"/>
+      <circle cx="-5" cy="50" r="2" fill="#1a1000"/>
+      <circle cx="5" cy="50" r="2" fill="#1a1000"/>
+      <!-- Smile -->
+      <path d="M -5 57 Q 0 62 5 57" fill="none" stroke="#a06030" stroke-width="1.5"/>
+      <!-- Arm pointing at screen -->
+      <line x1="18" y1="72" x2="55" y2="65" stroke="#d4a870" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Child 2 -->
+    <g transform="translate(155, 45)">
+      <ellipse cx="0" cy="80" rx="17" ry="32" fill="#3355aa"/>
+      <rect x="-17" y="56" width="34" height="26" fill="#3355aa"/>
+      <ellipse cx="0" cy="44" rx="15" ry="17" fill="#c89060"/>
+      <ellipse cx="0" cy="32" rx="15" ry="9" fill="#5a4030"/>
+      <circle cx="-5" cy="44" r="2" fill="#1a1000"/>
+      <circle cx="5" cy="44" r="2" fill="#1a1000"/>
+      <path d="M -4 51 Q 0 55 4 51" fill="none" stroke="#8a5030" stroke-width="1.5"/>
+    </g>
+
+    <!-- LED project connected to Pi (right) -->
+    <g transform="translate(215, 85)">
+      <text x="75" y="0" fill="#44cc44" font-size="10" font-family="monospace" text-anchor="middle">GPIO Project</text>
+      <!-- Breadboard -->
+      <rect x="0" y="8" width="150" height="80" fill="#f5f0e0" rx="4"/>
+      <rect x="5" y="12" width="140" height="72" fill="#e8e0c8" rx="2"/>
+      <!-- Breadboard holes grid -->
+      <g fill="#aaaaaa">
+        <circle cx="15" cy="22" r="2"/><circle cx="25" cy="22" r="2"/><circle cx="35" cy="22" r="2"/>
+        <circle cx="45" cy="22" r="2"/><circle cx="55" cy="22" r="2"/><circle cx="65" cy="22" r="2"/>
+        <circle cx="75" cy="22" r="2"/><circle cx="85" cy="22" r="2"/><circle cx="95" cy="22" r="2"/>
+        <circle cx="105" cy="22" r="2"/><circle cx="115" cy="22" r="2"/><circle cx="125" cy="22" r="2"/>
+        <circle cx="135" cy="22" r="2"/>
+
+        <circle cx="15" cy="35" r="2"/><circle cx="25" cy="35" r="2"/><circle cx="35" cy="35" r="2"/>
+        <circle cx="45" cy="35" r="2"/><circle cx="55" cy="35" r="2"/><circle cx="65" cy="35" r="2"/>
+        <circle cx="75" cy="35" r="2"/><circle cx="85" cy="35" r="2"/>
+        <circle cx="15" cy="48" r="2"/><circle cx="25" cy="48" r="2"/><circle cx="35" cy="48" r="2"/>
+        <circle cx="45" cy="48" r="2"/>
+      </g>
+
+      <!-- LEDs on breadboard (glowing) -->
+      <circle cx="65" cy="55" r="6" fill="#ff4444" opacity="0.9" filter="url(#ledGlow)"/>
+      <circle cx="90" cy="55" r="6" fill="#44ff44" opacity="0.9" filter="url(#ledGlow)"/>
+      <circle cx="115" cy="55" r="6" fill="#4444ff" opacity="0.9" filter="url(#ledGlow)"/>
+
+      <!-- Wires -->
+      <line x1="65" y1="49" x2="65" y2="35" stroke="#ff4444" stroke-width="1.5"/>
+      <line x1="90" y1="49" x2="90" y2="35" stroke="#44ff44" stroke-width="1.5"/>
+      <line x1="115" y1="49" x2="115" y2="35" stroke="#4444ff" stroke-width="1.5"/>
+      <line x1="65" y1="61" x2="65" y2="75" stroke="#888888" stroke-width="1"/>
+      <line x1="90" y1="61" x2="90" y2="75" stroke="#888888" stroke-width="1"/>
+      <line x1="115" y1="61" x2="115" y2="75" stroke="#888888" stroke-width="1"/>
+      <line x1="60" y1="75" x2="120" y2="75" stroke="#888888" stroke-width="1"/>
+    </g>
+
+    <!-- Stats box -->
+    <rect x="20" y="200" width="340" height="130" fill="#050d05" rx="5" stroke="#1a4a1a" stroke-width="1"/>
+    <text x="190" y="218" fill="#44cc44" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">Raspberry Pi Impact</text>
+    <text x="30" y="238" fill="#2eaa2e" font-size="10" font-family="monospace">Price: £35 / $35</text>
+    <text x="30" y="255" fill="#2eaa2e" font-size="10" font-family="monospace">Size: credit card (85×56mm)</text>
+    <text x="30" y="272" fill="#2eaa2e" font-size="10" font-family="monospace">Purpose: education &amp; hobbyists</text>
+    <text x="30" y="289" fill="#2eaa2e" font-size="10" font-family="monospace">Sold: 50+ million units by 2023</text>
+    <text x="30" y="306" fill="#2eaa2e" font-size="10" font-family="monospace">Maker movement, IoT, robotics</text>
+    <text x="30" y="323" fill="#1a8a1a" font-size="10" font-family="monospace">Linux · Python · GPIO · Camera</text>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="0" y="398" width="800" height="52" fill="#050d05" opacity="0.97"/>
+  <text x="400" y="420" fill="#44cc44" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">라즈베리 파이 · 교육용 초소형 컴퓨터</text>
+  <text x="400" y="442" fill="#1a8a1a" font-size="12" font-family="Georgia, serif" text-anchor="middle">Raspberry Pi · 2012 · £35 · ARM · Education · Maker Movement · IoT</text>
+</svg>

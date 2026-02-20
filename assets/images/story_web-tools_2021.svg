@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: split - GitHub Codespaces blue left, Codecov alert red right -->
+  <rect x="0" y="0" width="400" height="450" fill="#0d1117"/>
+  <rect x="400" y="0" width="400" height="450" fill="#1a0808"/>
+
+  <!-- Divider -->
+  <line x1="400" y1="0" x2="400" y2="450" stroke="#333" stroke-width="2"/>
+
+  <!-- Left: GitHub Codespaces -->
+  <text x="200" y="34" font-family="sans-serif" font-size="12" font-weight="bold" fill="#f0f6fc" text-anchor="middle">GitHub Codespaces GA</text>
+  <text x="200" y="52" font-family="sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">2021 · Browser-based VS Code · Cloud dev env</text>
+
+  <!-- Browser window with VS Code inside -->
+  <rect x="24" y="66" width="350" height="260" rx="8" fill="#1e1e1e" stroke="#30363d" stroke-width="2"/>
+  <!-- Browser chrome -->
+  <rect x="24" y="66" width="350" height="28" rx="8" fill="#2d2d2d"/>
+  <rect x="24" y="80" width="350" height="14" fill="#2d2d2d"/>
+  <!-- Browser dots -->
+  <circle cx="40" cy="80" r="5" fill="#ff5f5a"/>
+  <circle cx="54" cy="80" r="5" fill="#ffbd44"/>
+  <circle cx="68" cy="80" r="5" fill="#28c840"/>
+  <!-- URL bar -->
+  <rect x="88" y="73" width="240" height="16" rx="4" fill="#1a1a1a"/>
+  <text x="208" y="85" font-family="monospace" font-size="7" fill="#8b949e" text-anchor="middle">codespaces.new/myrepo → VS Code loads</text>
+
+  <!-- VS Code interface inside browser -->
+  <!-- Activity bar -->
+  <rect x="24" y="94" width="30" height="232" fill="#333333"/>
+  <!-- Activity bar icons -->
+  <rect x="30" y="104" width="18" height="18" rx="2" fill="#4488cc" opacity="0.8"/>
+  <rect x="30" y="130" width="18" height="18" rx="2" fill="#555" opacity="0.6"/>
+  <rect x="30" y="156" width="18" height="18" rx="2" fill="#555" opacity="0.6"/>
+  <rect x="30" y="182" width="18" height="18" rx="2" fill="#555" opacity="0.6"/>
+
+  <!-- Sidebar (file explorer) -->
+  <rect x="54" y="94" width="90" height="232" fill="#252526"/>
+  <text x="62" y="112" font-family="monospace" font-size="7" fill="#cccccc">EXPLORER</text>
+  <text x="62" y="128" font-family="monospace" font-size="7" fill="#cccccc">📁 src/</text>
+  <text x="70" y="142" font-family="monospace" font-size="7" fill="#9cdcfe"> App.tsx</text>
+  <text x="70" y="156" font-family="monospace" font-size="7" fill="#9cdcfe"> index.ts</text>
+  <text x="62" y="170" font-family="monospace" font-size="7" fill="#cccccc">📁 tests/</text>
+  <text x="70" y="184" font-family="monospace" font-size="7" fill="#9cdcfe"> App.test.ts</text>
+  <text x="62" y="198" font-family="monospace" font-size="7" fill="#cccccc"> package.json</text>
+  <text x="62" y="212" font-family="monospace" font-size="7" fill="#cccccc"> tsconfig.json</text>
+  <!-- Container running indicator -->
+  <rect x="54" y="280" width="90" height="46" fill="#1a2a1a"/>
+  <text x="99" y="294" font-family="monospace" font-size="6" fill="#44cc44" text-anchor="middle">Container: ready</text>
+  <text x="99" y="306" font-family="monospace" font-size="6" fill="#44cc44" text-anchor="middle">Node 18 · npm i done</text>
+  <text x="99" y="318" font-family="monospace" font-size="6" fill="#aaffaa" text-anchor="middle">Port 3000 forwarded</text>
+
+  <!-- Editor area -->
+  <rect x="144" y="94" width="230" height="180" fill="#1e1e1e"/>
+  <!-- Code lines -->
+  <text x="152" y="112" font-family="monospace" font-size="7" fill="#569cd6">import</text><text x="184" y="112" font-family="monospace" font-size="7" fill="#d4d4d4"> React </text><text x="214" y="112" font-family="monospace" font-size="7" fill="#569cd6">from</text><text x="236" y="112" font-family="monospace" font-size="7" fill="#ce9178"> 'react'</text>
+  <text x="152" y="126" font-family="monospace" font-size="7" fill="#569cd6">export function</text><text x="228" y="126" font-family="monospace" font-size="7" fill="#dcdcaa"> App</text><text x="244" y="126" font-family="monospace" font-size="7" fill="#d4d4d4">() {</text>
+  <text x="160" y="140" font-family="monospace" font-size="7" fill="#569cd6">  return</text><text x="196" y="140" font-family="monospace" font-size="7" fill="#d4d4d4"> (</text>
+  <text x="168" y="154" font-family="monospace" font-size="7" fill="#4ec9b0">    &lt;div</text><text x="200" y="154" font-family="monospace" font-size="7" fill="#9cdcfe"> className=</text><text x="252" y="154" font-family="monospace" font-size="7" fill="#ce9178">"app"</text><text x="280" y="154" font-family="monospace" font-size="7" fill="#4ec9b0">&gt;</text>
+  <text x="168" y="168" font-family="monospace" font-size="7" fill="#4ec9b0">      &lt;h1&gt;</text><text x="210" y="168" font-family="monospace" font-size="7" fill="#d4d4d4">Hello</text><text x="234" y="168" font-family="monospace" font-size="7" fill="#4ec9b0">&lt;/h1&gt;</text>
+  <text x="168" y="182" font-family="monospace" font-size="7" fill="#4ec9b0">    &lt;/div&gt;</text>
+  <text x="160" y="196" font-family="monospace" font-size="7" fill="#d4d4d4">  );</text>
+  <text x="152" y="210" font-family="monospace" font-size="7" fill="#d4d4d4">}</text>
+
+  <!-- Terminal at bottom of editor -->
+  <rect x="144" y="274" width="230" height="52" fill="#0c0c0c"/>
+  <text x="152" y="290" font-family="monospace" font-size="7" fill="#44cc44">$ npm test</text>
+  <text x="152" y="304" font-family="monospace" font-size="7" fill="#888">PASS src/App.test.ts</text>
+  <text x="152" y="318" font-family="monospace" font-size="7" fill="#44cc44">Tests: 8 passed (8 total)</text>
+
+  <!-- Status bar -->
+  <rect x="24" y="326" width="350" height="14" fill="#007acc"/>
+  <text x="60" y="337" font-family="monospace" font-size="7" fill="white">⎔ Codespaces: myrepo</text>
+  <text x="280" y="337" font-family="monospace" font-size="7" fill="white">main · TypeScript</text>
+
+  <!-- Quote -->
+  <rect x="24" y="350" width="350" height="54" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="199" y="368" font-family="sans-serif" font-size="9" fill="#8b949e" text-anchor="middle">"브라우저만 열면 VS Code가 뜬다"</text>
+  <text x="199" y="384" font-family="sans-serif" font-size="8" fill="#8b949e" text-anchor="middle">환경 맞추는 시간을 하루 이상 줄였어요.</text>
+  <text x="199" y="398" font-family="sans-serif" font-size="8" fill="#6e7681" text-anchor="middle">— Lead developer, Day 1 onboarding</text>
+
+  <!-- === RIGHT: Codecov supply chain attack === -->
+  <text x="600" y="34" font-family="sans-serif" font-size="12" font-weight="bold" fill="#ff4444" text-anchor="middle">Codecov Supply Chain Attack</text>
+  <text x="600" y="52" font-family="sans-serif" font-size="9" fill="#884444" text-anchor="middle">April 2021 · CI script tampered · Secrets exposed</text>
+
+  <!-- Alert / warning visual -->
+  <polygon points="600,68 550,155 650,155" fill="#ff4444" opacity="0.15"/>
+  <polygon points="600,68 550,155 650,155" fill="none" stroke="#ff4444" stroke-width="3"/>
+  <text x="600" y="128" font-family="sans-serif" font-size="30" fill="#ff4444" text-anchor="middle">!</text>
+
+  <!-- Attack chain diagram -->
+  <rect x="420" y="172" width="340" height="210" rx="8" fill="#1a0a0a" stroke="#cc4444" stroke-width="1.5"/>
+
+  <!-- Step 1: Attacker tampers Bash Uploader -->
+  <rect x="432" y="184" width="316" height="34" rx="4" fill="#3a0a0a"/>
+  <text x="590" y="198" font-family="monospace" font-size="8" fill="#ff6666" text-anchor="middle">1. Attacker modifies Bash Uploader script</text>
+  <text x="590" y="210" font-family="monospace" font-size="7" fill="#cc4444" text-anchor="middle">codecov.io/bash (Jan 31 – Apr 1, 2021)</text>
+
+  <!-- Arrow -->
+  <line x1="590" y1="218" x2="590" y2="228" stroke="#ff4444" stroke-width="1.5"/>
+
+  <!-- Step 2: CI pulls script -->
+  <rect x="432" y="228" width="316" height="34" rx="4" fill="#2a0a0a"/>
+  <text x="590" y="242" font-family="monospace" font-size="8" fill="#ff8888" text-anchor="middle">2. Teams run: bash &lt;(curl -s uploader.sh)</text>
+  <text x="590" y="254" font-family="monospace" font-size="7" fill="#cc8888" text-anchor="middle">Malicious code runs in CI environment</text>
+
+  <!-- Arrow -->
+  <line x1="590" y1="262" x2="590" y2="272" stroke="#ff4444" stroke-width="1.5"/>
+
+  <!-- Step 3: Exfiltration -->
+  <rect x="432" y="272" width="316" height="34" rx="4" fill="#2a0808"/>
+  <text x="590" y="286" font-family="monospace" font-size="8" fill="#ff8888" text-anchor="middle">3. CI env vars (tokens, keys) exfiltrated</text>
+  <text x="590" y="298" font-family="monospace" font-size="7" fill="#cc8888" text-anchor="middle">GIT_CREDENTIALS leaked to attacker</text>
+
+  <!-- Arrow -->
+  <line x1="590" y1="306" x2="590" y2="316" stroke="#ff4444" stroke-width="1.5"/>
+
+  <!-- Step 4: Response -->
+  <rect x="432" y="316" width="316" height="58" rx="4" fill="#1a1a1a"/>
+  <text x="590" y="332" font-family="monospace" font-size="8" fill="#ffaaaa" text-anchor="middle">4. Codecov notifies April 15, 2021</text>
+  <text x="440" y="348" font-family="monospace" font-size="7" fill="#ff8888">• Rotate ALL secrets immediately</text>
+  <text x="440" y="360" font-family="monospace" font-size="7" fill="#ff8888">• Verify CI script hashes</text>
+  <text x="440" y="372" font-family="monospace" font-size="7" fill="#ff8888">• Audit access logs</text>
+
+  <!-- Lesson learned -->
+  <rect x="420" y="394" width="340" height="46" rx="6" fill="#2a1a0a" stroke="#ff9900" stroke-width="1.5"/>
+  <text x="590" y="412" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ff9900" text-anchor="middle">Supply Chain Security Lessons</text>
+  <text x="590" y="428" font-family="sans-serif" font-size="8" fill="#cc8844" text-anchor="middle">Pin deps · Verify signatures · Least-privilege secrets</text>
+
+  <!-- Codecov logo area -->
+  <rect x="420" y="162" width="158" height="8" rx="4" fill="#cc4444" opacity="0.5"/>
+  <text x="499" y="169" font-family="monospace" font-size="7" fill="#ff8888" text-anchor="middle">codecov bash uploader compromised</text>
+</svg>

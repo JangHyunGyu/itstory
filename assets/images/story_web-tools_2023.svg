@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: dark futuristic, AI glow -->
+  <rect width="800" height="450" fill="#0a0a14"/>
+
+  <!-- Ambient gradient glow -->
+  <radialGradient id="aiGlow" cx="50%" cy="40%" r="50%">
+    <stop offset="0%" stop-color="#6644cc" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#0a0a14" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="800" height="450" fill="url(#aiGlow)"/>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="sans-serif" font-size="15" font-weight="bold" fill="#cc99ff" text-anchor="middle">AI Code Assistants — 2023</text>
+  <text x="400" y="54" font-family="sans-serif" font-size="11" fill="#8866aa" text-anchor="middle">GitHub Copilot · ChatGPT · AI pair programming · Code generation</text>
+
+  <!-- VS Code editor with AI suggestion -->
+  <rect x="30" y="70" width="440" height="340" rx="10" fill="#1e1e1e" stroke="#6644cc" stroke-width="2"/>
+
+  <!-- VS Code title bar -->
+  <rect x="30" y="70" width="440" height="26" rx="10" fill="#323233"/>
+  <rect x="30" y="82" width="440" height="14" fill="#323233"/>
+  <circle cx="46" cy="83" r="5" fill="#ff5f5a"/>
+  <circle cx="60" cy="83" r="5" fill="#ffbd44"/>
+  <circle cx="74" cy="83" r="5" fill="#28c840"/>
+  <text x="250" y="88" font-family="sans-serif" font-size="9" fill="#8b8b9a" text-anchor="middle">app.ts — My Project</text>
+
+  <!-- Status bar -->
+  <rect x="30" y="385" width="440" height="25" rx="10" fill="#007acc"/>
+  <rect x="30" y="372" width="440" height="14" fill="#007acc"/>
+  <text x="50" y="393" font-family="monospace" font-size="7" fill="white">⚡ Copilot: Active</text>
+  <text x="300" y="393" font-family="monospace" font-size="7" fill="white">TypeScript · UTF-8 · main</text>
+
+  <!-- Activity bar -->
+  <rect x="30" y="96" width="28" height="276" fill="#333333"/>
+
+  <!-- Code editor -->
+  <rect x="58" y="96" width="412" height="276" fill="#1e1e1e"/>
+
+  <!-- Line numbers -->
+  <rect x="58" y="96" width="32" height="276" fill="#1e1e1e"/>
+
+  <!-- Developer types a function comment -->
+  <text x="68" y="116" font-family="monospace" font-size="7" fill="#555">1</text>
+  <text x="68" y="130" font-family="monospace" font-size="7" fill="#555">2</text>
+  <text x="68" y="144" font-family="monospace" font-size="7" fill="#555">3</text>
+  <text x="68" y="158" font-family="monospace" font-size="7" fill="#555">4</text>
+  <text x="68" y="172" font-family="monospace" font-size="7" fill="#555">5</text>
+  <text x="68" y="186" font-family="monospace" font-size="7" fill="#555">6</text>
+  <text x="68" y="200" font-family="monospace" font-size="7" fill="#555">7</text>
+  <text x="68" y="214" font-family="monospace" font-size="7" fill="#555">8</text>
+  <text x="68" y="228" font-family="monospace" font-size="7" fill="#555">9</text>
+  <text x="64" y="242" font-family="monospace" font-size="7" fill="#555">10</text>
+  <text x="64" y="256" font-family="monospace" font-size="7" fill="#555">11</text>
+  <text x="64" y="270" font-family="monospace" font-size="7" fill="#555">12</text>
+  <text x="64" y="284" font-family="monospace" font-size="7" fill="#555">13</text>
+  <text x="64" y="298" font-family="monospace" font-size="7" fill="#555">14</text>
+  <text x="64" y="312" font-family="monospace" font-size="7" fill="#555">15</text>
+  <text x="64" y="326" font-family="monospace" font-size="7" fill="#555">16</text>
+  <text x="64" y="340" font-family="monospace" font-size="7" fill="#555">17</text>
+  <text x="64" y="354" font-family="monospace" font-size="7" fill="#555">18</text>
+
+  <!-- Developer's code (what human typed) -->
+  <text x="98" y="116" font-family="monospace" font-size="8" fill="#6a9955">// Validate email address and return</text>
+  <text x="98" y="130" font-family="monospace" font-size="8" fill="#6a9955">// normalized form or throw error</text>
+  <text x="98" y="144" font-family="monospace" font-size="8" fill="#569cd6">function</text><text x="140" y="144" font-family="monospace" font-size="8" fill="#dcdcaa"> validateEmail</text><text x="216" y="144" font-family="monospace" font-size="8" fill="#d4d4d4">(email: </text><text x="254" y="144" font-family="monospace" font-size="8" fill="#4ec9b0">string</text><text x="286" y="144" font-family="monospace" font-size="8" fill="#d4d4d4">) {</text>
+  <!-- Cursor blinking at line 4 -->
+  <rect x="98" y="152" width="6" height="12" fill="#cc99ff" opacity="0.9"/>
+
+  <!-- AI suggestion (ghost text, lighter) -->
+  <rect x="98" y="152" width="362" height="164" rx="4" fill="#6644cc" opacity="0.08"/>
+  <rect x="98" y="152" width="4" height="164" fill="#6644cc" opacity="0.5"/>
+  <text x="108" y="164" font-family="monospace" font-size="8" fill="#9977cc">  const emailRegex =</text>
+  <text x="108" y="178" font-family="monospace" font-size="8" fill="#9977cc">    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;</text>
+  <text x="108" y="192" font-family="monospace" font-size="8" fill="#9977cc">  </text>
+  <text x="108" y="206" font-family="monospace" font-size="8" fill="#9977cc">  if (!emailRegex.test(email)) {</text>
+  <text x="108" y="220" font-family="monospace" font-size="8" fill="#9977cc">    throw new Error(</text>
+  <text x="108" y="234" font-family="monospace" font-size="8" fill="#9977cc">      `Invalid email: ${email}`);</text>
+  <text x="108" y="248" font-family="monospace" font-size="8" fill="#9977cc">  }</text>
+  <text x="108" y="262" font-family="monospace" font-size="8" fill="#9977cc">  </text>
+  <text x="108" y="276" font-family="monospace" font-size="8" fill="#9977cc">  return email.toLowerCase().trim();</text>
+  <text x="108" y="290" font-family="monospace" font-size="8" fill="#9977cc">}</text>
+
+  <!-- Copilot badge -->
+  <rect x="260" y="296" width="196" height="24" rx="4" fill="#333"/>
+  <circle cx="275" cy="308" r="7" fill="#6644cc"/>
+  <text x="275" y="312" font-family="sans-serif" font-size="7" fill="white" text-anchor="middle">⚡</text>
+  <text x="340" y="312" font-family="monospace" font-size="8" fill="#cc99ff" text-anchor="middle">GitHub Copilot suggestion</text>
+  <text x="444" y="312" font-family="monospace" font-size="8" fill="#8866aa">Tab to accept</text>
+
+  <!-- Test generation line -->
+  <text x="108" y="326" font-family="monospace" font-size="8" fill="#6a9955">// Tests auto-generated by AI:</text>
+  <text x="108" y="340" font-family="monospace" font-size="8" fill="#9977cc">describe('validateEmail', () => {</text>
+  <text x="108" y="354" font-family="monospace" font-size="8" fill="#9977cc">  it('validates correctly', ...)</text>
+
+  <!-- === RIGHT panel: AI tools ecosystem === -->
+  <rect x="488" y="70" width="282" height="340" rx="10" fill="#0e0e18" stroke="#6644cc" stroke-width="1.5"/>
+  <text x="629" y="94" font-family="sans-serif" font-size="11" font-weight="bold" fill="#cc99ff" text-anchor="middle">AI Coding Tools · 2023</text>
+
+  <!-- Tool cards -->
+  <!-- GitHub Copilot -->
+  <rect x="500" y="104" width="258" height="50" rx="6" fill="#1a1a2a" stroke="#6644cc" stroke-width="1"/>
+  <circle cx="520" cy="129" r="14" fill="#1a1030"/>
+  <text x="520" y="134" font-family="sans-serif" font-size="10" fill="#cc99ff" text-anchor="middle">⚡</text>
+  <text x="542" y="122" font-family="sans-serif" font-size="9" font-weight="bold" fill="#cc99ff">GitHub Copilot</text>
+  <text x="542" y="136" font-family="sans-serif" font-size="7" fill="#8866aa">IDE inline code completion</text>
+  <text x="542" y="148" font-family="sans-serif" font-size="7" fill="#6644aa">1M+ developers (2023)</text>
+
+  <!-- ChatGPT -->
+  <rect x="500" y="162" width="258" height="50" rx="6" fill="#1a2a1a" stroke="#44cc88" stroke-width="1"/>
+  <circle cx="520" cy="187" r="14" fill="#0a1a0a"/>
+  <text x="520" y="192" font-family="sans-serif" font-size="10" fill="#44cc88" text-anchor="middle">🤖</text>
+  <text x="542" y="180" font-family="sans-serif" font-size="9" font-weight="bold" fill="#44cc88">ChatGPT / GPT-4</text>
+  <text x="542" y="194" font-family="sans-serif" font-size="7" fill="#448866">Code explanation &amp; generation</text>
+  <text x="542" y="206" font-family="sans-serif" font-size="7" fill="#336644">OpenAI · Nov 2022 → mass adoption</text>
+
+  <!-- Cursor -->
+  <rect x="500" y="220" width="258" height="50" rx="6" fill="#2a1a2a" stroke="#cc44cc" stroke-width="1"/>
+  <circle cx="520" cy="245" r="14" fill="#1a0a1a"/>
+  <text x="520" y="250" font-family="sans-serif" font-size="10" fill="#cc44cc" text-anchor="middle">◎</text>
+  <text x="542" y="238" font-family="sans-serif" font-size="9" font-weight="bold" fill="#cc44cc">Cursor AI Editor</text>
+  <text x="542" y="252" font-family="sans-serif" font-size="7" fill="#aa44aa">GPT-4 native · Codebase chat</text>
+  <text x="542" y="264" font-family="sans-serif" font-size="7" fill="#884488">Multi-file edits · Context aware</text>
+
+  <!-- Tabnine -->
+  <rect x="500" y="278" width="258" height="50" rx="6" fill="#1a2a2a" stroke="#44aacc" stroke-width="1"/>
+  <circle cx="520" cy="303" r="14" fill="#0a1a1a"/>
+  <text x="520" y="308" font-family="sans-serif" font-size="9" fill="#44aacc" text-anchor="middle">T</text>
+  <text x="542" y="296" font-family="sans-serif" font-size="9" font-weight="bold" fill="#44aacc">Tabnine / Codeium</text>
+  <text x="542" y="310" font-family="sans-serif" font-size="7" fill="#3a8aaa">Privacy-first on-prem options</text>
+  <text x="542" y="322" font-family="sans-serif" font-size="7" fill="#2a6a88">Supports 70+ languages</text>
+
+  <!-- Impact stats bar -->
+  <rect x="500" y="338" width="258" height="62" rx="6" fill="#111118" stroke="#6644cc" stroke-width="1"/>
+  <text x="629" y="356" font-family="sans-serif" font-size="9" font-weight="bold" fill="#cc99ff" text-anchor="middle">Productivity Impact</text>
+  <!-- Bar: 55% faster -->
+  <rect x="510" y="364" width="238" height="10" rx="5" fill="#333"/>
+  <rect x="510" y="364" width="131" height="10" rx="5" fill="#6644cc"/>
+  <text x="646" y="373" font-family="monospace" font-size="7" fill="#cc99ff">55% faster</text>
+  <!-- Bar: 46% more code -->
+  <rect x="510" y="380" width="238" height="10" rx="5" fill="#333"/>
+  <rect x="510" y="380" width="110" height="10" rx="5" fill="#44cc88"/>
+  <text x="625" y="389" font-family="monospace" font-size="7" fill="#44cc88">46% more code</text>
+
+  <!-- Quote at bottom -->
+  <rect x="30" y="420" width="440" height="22" rx="6" fill="#1a1028"/>
+  <text x="250" y="435" font-family="sans-serif" font-size="9" fill="#cc99ff" text-anchor="middle">"함수 설명만 했는데 테스트가 짜였어!" — Junior developer, 2023</text>
+</svg>

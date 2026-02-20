@@ -1,0 +1,1 @@
+const fs = require('fs'); const data = JSON.parse(fs.readFileSync('c:/workspace/itstory/extracted.json', 'utf8')); console.log(data.filter(d => d.tag === '<div class=\"event-detail__story\">').slice(0, 2).map(d => d.text).join('\n\n'));

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: dark navy, secure/corporate feel -->
+  <rect width="800" height="450" fill="#0a1628"/>
+
+  <!-- Subtle grid pattern -->
+  <pattern id="grid94" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a2a3a" stroke-width="0.5"/>
+  </pattern>
+  <rect width="800" height="450" fill="url(#grid94)"/>
+
+  <!-- Large padlock in center-left -->
+  <!-- Lock body -->
+  <rect x="120" y="180" width="160" height="140" rx="16" fill="#c8960a"/>
+  <rect x="128" y="188" width="144" height="124" rx="12" fill="#e0aa10"/>
+  <!-- Lock shackle (arch) -->
+  <path d="M 160 180 Q 160 100 200 100 Q 240 100 240 180" fill="none" stroke="#c8960a" stroke-width="28" stroke-linecap="round"/>
+  <path d="M 160 180 Q 160 100 200 100 Q 240 100 240 180" fill="none" stroke="#e0aa10" stroke-width="18" stroke-linecap="round"/>
+  <!-- Keyhole -->
+  <circle cx="200" cy="248" r="18" fill="#0a1628"/>
+  <rect x="194" y="248" width="12" height="28" rx="4" fill="#0a1628"/>
+
+  <!-- HTTPS shield on right -->
+  <path d="M 480 140 L 620 140 L 620 290 Q 620 340 550 370 Q 480 340 480 290 Z" fill="#1a3a6a"/>
+  <path d="M 492 152 L 608 152 L 608 288 Q 608 330 550 356 Q 492 330 492 288 Z" fill="#1e4a8a"/>
+  <!-- S in shield -->
+  <text x="550" y="280" font-family="serif" font-size="90" font-weight="bold" fill="#4488ff" text-anchor="middle" opacity="0.9">S</text>
+
+  <!-- SSL certificate visual -->
+  <rect x="80" y="360" width="200" height="70" rx="8" fill="#fffde7" stroke="#c8960a" stroke-width="2"/>
+  <text x="90" y="380" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333">SSL Certificate</text>
+  <text x="90" y="395" font-family="monospace" font-size="8" fill="#555">Issuer: Netscape CA</text>
+  <text x="90" y="408" font-family="monospace" font-size="8" fill="#555">Subject: www.netscape.com</text>
+  <text x="90" y="421" font-family="monospace" font-size="8" fill="#28a745">Valid ✓</text>
+
+  <!-- Browser address bar -->
+  <rect x="200" y="90" width="440" height="44" rx="8" fill="#1a2a3a" stroke="#2a4a6a" stroke-width="1.5"/>
+  <rect x="210" y="98" width="28" height="28" rx="6" fill="#1a3a6a"/>
+  <!-- Padlock icon in address bar -->
+  <rect x="216" y="108" width="16" height="12" rx="2" fill="#4488ff"/>
+  <path d="M 219 108 Q 219 102 224 102 Q 229 102 229 108" fill="none" stroke="#4488ff" stroke-width="3" stroke-linecap="round"/>
+  <!-- HTTPS URL -->
+  <text x="248" y="118" font-family="monospace" font-size="14" fill="#28a745">https://</text>
+  <text x="338" y="118" font-family="monospace" font-size="14" fill="#aac8e8">www.netscape.com/shop/</text>
+
+  <!-- Data encryption visualization: packets transforming -->
+  <!-- Plaintext -->
+  <rect x="310" y="165" width="90" height="36" rx="6" fill="#2a4a2a"/>
+  <text x="355" y="186" font-family="monospace" font-size="9" fill="#88cc88" text-anchor="middle">PLAINTEXT</text>
+  <!-- Arrow -->
+  <polygon points="410,183 426,178 426,188" fill="#4488ff"/>
+  <line x1="400" y1="183" x2="426" y2="183" stroke="#4488ff" stroke-width="2"/>
+  <!-- SSL layer -->
+  <rect x="430" y="158" width="70" height="48" rx="6" fill="#1a3a6a"/>
+  <text x="465" y="178" font-family="monospace" font-size="8" fill="#4488ff" text-anchor="middle">SSL</text>
+  <text x="465" y="192" font-family="monospace" font-size="8" fill="#4488ff" text-anchor="middle">Layer</text>
+  <!-- Arrow -->
+  <polygon points="510,183 526,178 526,188" fill="#c8960a"/>
+  <line x1="500" y1="183" x2="526" y2="183" stroke="#c8960a" stroke-width="2"/>
+  <!-- Ciphertext -->
+  <rect x="530" y="165" width="100" height="36" rx="6" fill="#3a2a0a"/>
+  <text x="580" y="182" font-family="monospace" font-size="7" fill="#e0aa10" text-anchor="middle">a3f9bc12...</text>
+  <text x="580" y="194" font-family="monospace" font-size="7" fill="#e0aa10" text-anchor="middle">ENCRYPTED</text>
+
+  <!-- Netscape logo area -->
+  <circle cx="680" cy="200" r="55" fill="#1a3a6a" opacity="0.6"/>
+  <text x="680" y="190" font-family="serif" font-size="20" font-weight="bold" fill="#4488ff" text-anchor="middle">N</text>
+  <text x="680" y="215" font-family="sans-serif" font-size="11" fill="#aac8e8" text-anchor="middle">Netscape</text>
+  <text x="680" y="232" font-family="sans-serif" font-size="9" fill="#6a9abf" text-anchor="middle">Navigator</text>
+
+  <!-- Labels -->
+  <text x="400" y="46" font-family="sans-serif" font-size="15" font-weight="bold" fill="#4488ff" text-anchor="middle">Netscape SSL 2.0 — 1994</text>
+  <text x="400" y="68" font-family="sans-serif" font-size="11" fill="#6a8aaa" text-anchor="middle">HTTPS encryption · Secure online commerce · Digital certificates</text>
+
+  <!-- Credit card suggestion -->
+  <rect x="390" y="320" width="130" height="80" rx="10" fill="#1a2a4a" stroke="#4488ff" stroke-width="1.5"/>
+  <rect x="390" y="340" width="130" height="20" fill="#2a3a5a"/>
+  <text x="455" y="356" font-family="sans-serif" font-size="8" fill="#aac8e8" text-anchor="middle">CREDIT CARD</text>
+  <text x="402" y="380" font-family="monospace" font-size="9" fill="#4488ff">**** **** **** 1234</text>
+  <text x="402" y="394" font-family="sans-serif" font-size="7" fill="#6a9abf">Secure via SSL</text>
+</svg>

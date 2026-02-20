@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: deep night blue of a CERN lab -->
+  <rect width="800" height="450" fill="#0d1b2a"/>
+
+  <!-- Ceiling lights -->
+  <rect x="60" y="0" width="120" height="8" rx="4" fill="#fffbe6" opacity="0.9"/>
+  <rect x="620" y="0" width="120" height="8" rx="4" fill="#fffbe6" opacity="0.9"/>
+  <line x1="120" y1="8" x2="120" y2="40" stroke="#fffbe6" stroke-width="2" opacity="0.6"/>
+  <circle cx="120" cy="44" r="12" fill="#fff9c4" opacity="0.95"/>
+  <circle cx="120" cy="44" r="20" fill="#fff9c4" opacity="0.2"/>
+  <line x1="680" y1="8" x2="680" y2="40" stroke="#fffbe6" stroke-width="2" opacity="0.6"/>
+  <circle cx="680" cy="44" r="12" fill="#fff9c4" opacity="0.95"/>
+  <circle cx="680" cy="44" r="20" fill="#fff9c4" opacity="0.2"/>
+
+  <!-- Floor -->
+  <rect x="0" y="390" width="800" height="60" fill="#1a1a2e"/>
+
+  <!-- Desk -->
+  <rect x="200" y="310" width="400" height="18" rx="4" fill="#4a3728"/>
+  <rect x="220" y="328" width="20" height="62" fill="#3a2a1e"/>
+  <rect x="560" y="328" width="20" height="62" fill="#3a2a1e"/>
+
+  <!-- NeXT Computer (black cube shape) -->
+  <!-- Monitor -->
+  <rect x="290" y="170" width="180" height="140" rx="6" fill="#1a1a1a"/>
+  <rect x="298" y="178" width="164" height="120" rx="3" fill="#0a2a0a"/>
+  <!-- Screen glow -->
+  <rect x="302" y="182" width="156" height="112" rx="2" fill="#001400"/>
+  <!-- Terminal text lines on screen -->
+  <text x="310" y="200" font-family="monospace" font-size="9" fill="#00cc44">$ httpd -f /cern/httpd.conf</text>
+  <text x="310" y="214" font-family="monospace" font-size="9" fill="#00cc44">Starting CERN httpd...</text>
+  <text x="310" y="228" font-family="monospace" font-size="9" fill="#00cc44">Listening on port 80</text>
+  <text x="310" y="242" font-family="monospace" font-size="9" fill="#00aa33">GET /hypertext/WWW/ HTTP/0.9</text>
+  <text x="310" y="256" font-family="monospace" font-size="9" fill="#00cc44">200 OK — 2.3 KB sent</text>
+  <text x="310" y="270" font-family="monospace" font-size="9" fill="#00ff55">_<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></text>
+
+  <!-- Monitor stand -->
+  <rect x="365" y="310" width="30" height="12" rx="2" fill="#1a1a1a"/>
+  <rect x="348" y="318" width="64" height="6" rx="3" fill="#1a1a1a"/>
+
+  <!-- NeXT cube (the actual computer) -->
+  <rect x="310" y="240" width="80" height="68" rx="4" fill="#111111"/>
+  <rect x="316" y="246" width="68" height="8" rx="2" fill="#1e1e1e"/>
+  <!-- Disk slot -->
+  <rect x="320" y="260" width="60" height="4" rx="2" fill="#0a0a0a"/>
+  <!-- NeXT logo suggestion -->
+  <text x="330" y="285" font-family="serif" font-size="14" font-weight="bold" fill="#555">NeXT</text>
+
+  <!-- WWW document / papers on desk -->
+  <rect x="490" y="280" width="70" height="30" rx="2" fill="#fffde7" transform="rotate(-5 525 295)"/>
+  <line x1="498" y1="290" x2="548" y2="288" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="498" y1="297" x2="548" y2="295" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="498" y1="304" x2="530" y2="302" stroke="#bbb" stroke-width="1.5"/>
+  <text x="494" y="278" font-family="sans-serif" font-size="8" fill="#888">WorldWideWeb</text>
+
+  <!-- Keyboard -->
+  <rect x="295" y="300" width="160" height="14" rx="3" fill="#222"/>
+  <rect x="299" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="309" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="319" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="329" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="339" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="349" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="359" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="369" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="379" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="389" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="399" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="409" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="419" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="429" y="303" width="6" height="6" rx="1" fill="#333"/>
+  <rect x="439" y="303" width="6" height="6" rx="1" fill="#333"/>
+
+  <!-- Network cable connecting to the world -->
+  <path d="M 380 254 Q 600 240 680 180" stroke="#00cc44" stroke-width="2" fill="none" stroke-dasharray="6,4" opacity="0.7"/>
+  <!-- Globe icon (Earth) -->
+  <circle cx="700" cy="160" r="50" fill="#1a3a5c" stroke="#2a7a3a" stroke-width="2"/>
+  <ellipse cx="700" cy="160" rx="20" ry="50" fill="none" stroke="#2a7a3a" stroke-width="1.5" opacity="0.7"/>
+  <line x1="650" y1="160" x2="750" y2="160" stroke="#2a7a3a" stroke-width="1.5" opacity="0.7"/>
+  <ellipse cx="700" cy="160" rx="50" ry="18" fill="none" stroke="#2a7a3a" stroke-width="1.5" opacity="0.5"/>
+  <!-- Continents suggestion -->
+  <ellipse cx="688" cy="145" rx="12" ry="8" fill="#2d5a27" opacity="0.8"/>
+  <ellipse cx="715" cy="170" rx="10" ry="6" fill="#2d5a27" opacity="0.8"/>
+  <ellipse cx="695" cy="175" rx="7" ry="4" fill="#2d5a27" opacity="0.7"/>
+
+  <!-- Labels -->
+  <text x="400" y="42" font-family="sans-serif" font-size="15" font-weight="bold" fill="#a0c8a0" text-anchor="middle">CERN httpd — 1990</text>
+  <text x="400" y="62" font-family="sans-serif" font-size="11" fill="#607060" text-anchor="middle">Tim Berners-Lee's NeXT workstation · Geneva, Switzerland</text>
+
+  <!-- HTTP arrow label -->
+  <text x="570" y="222" font-family="monospace" font-size="10" fill="#00cc44" opacity="0.8">GET /</text>
+  <text x="570" y="236" font-family="monospace" font-size="10" fill="#00cc44" opacity="0.8">200 OK</text>
+</svg>

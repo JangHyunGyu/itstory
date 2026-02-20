@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="shadow23" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000033"/>
+    </filter>
+    <marker id="arrow23" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <!-- Background: dark code editor -->
+  <rect width="800" height="450" fill="#0d1117"/>
+
+  <!-- Year label -->
+  <rect x="16" y="14" width="60" height="24" rx="4" fill="#3fb950" opacity="0.9"/>
+  <text x="46" y="30" font-family="monospace" font-size="13" fill="#0d1117" text-anchor="middle" font-weight="bold">2023</text>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="800" height="44" fill="#161b22"/>
+  <text x="400" y="27" font-family="sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">Native CSS Nesting — No Build Tool Required</text>
+
+  <!-- Left panel: BEFORE - Sass/SCSS required -->
+  <g transform="translate(20, 58)">
+    <rect x="0" y="0" width="360" height="360" rx="8" fill="#161b22" filter="url(#shadow23)" stroke="#30363d" stroke-width="1"/>
+    <!-- Tab -->
+    <rect x="0" y="0" width="360" height="28" rx="8" fill="#21262d"/>
+    <rect x="0" y="18" width="360" height="10" fill="#21262d"/>
+    <!-- Sass badge on tab -->
+    <rect x="10" y="5" width="80" height="18" rx="4" fill="#cc44aa" opacity="0.2" stroke="#cc44aa" stroke-width="0.5"/>
+    <text x="20" y="17" font-family="monospace" font-size="9" fill="#cc44aa">◆ styles.scss</text>
+    <!-- "Old way" label -->
+    <rect x="240" y="5" width="110" height="18" rx="4" fill="#cc33336a"/>
+    <text x="295" y="17" font-family="monospace" font-size="9" fill="#ff8888" text-anchor="middle">Sass required</text>
+
+    <!-- SCSS code with nesting -->
+    <text x="14" y="50" font-family="monospace" font-size="10" fill="#7ee787">// Sass SCSS nesting</text>
+    <text x="14" y="66" font-family="monospace" font-size="10" fill="#7ee787">.card</text>
+    <text x="53" y="66" font-family="monospace" font-size="10" fill="#e6edf3">&#123;</text>
+    <text x="26" y="82" font-family="monospace" font-size="10" fill="#e6edf3">background: #fff;</text>
+    <text x="26" y="96" font-family="monospace" font-size="10" fill="#e6edf3">padding: 1rem;</text>
+    <text x="26" y="110" font-family="monospace" font-size="10" fill="#e6edf3">border-radius: 8px;</text>
+
+    <text x="26" y="130" font-family="monospace" font-size="10" fill="#79c0ff">  &amp;__title</text>
+    <text x="113" y="130" font-family="monospace" font-size="10" fill="#e6edf3">&#123;</text>
+    <text x="40" y="146" font-family="monospace" font-size="10" fill="#e6edf3">font-size: 1.25rem;</text>
+    <text x="40" y="160" font-family="monospace" font-size="10" fill="#e6edf3">color: #111;</text>
+    <text x="26" y="174" font-family="monospace" font-size="10" fill="#e6edf3">&#125;</text>
+
+    <text x="26" y="192" font-family="monospace" font-size="10" fill="#79c0ff">  &amp;__body</text>
+    <text x="110" y="192" font-family="monospace" font-size="10" fill="#e6edf3">&#123;</text>
+    <text x="40" y="208" font-family="monospace" font-size="10" fill="#e6edf3">line-height: 1.6;</text>
+    <text x="40" y="222" font-family="monospace" font-size="10" fill="#e6edf3">color: #555;</text>
+    <text x="26" y="236" font-family="monospace" font-size="10" fill="#e6edf3">&#125;</text>
+
+    <text x="26" y="254" font-family="monospace" font-size="10" fill="#79c0ff">  &amp;:hover</text>
+    <text x="100" y="254" font-family="monospace" font-size="10" fill="#e6edf3">&#123;</text>
+    <text x="40" y="270" font-family="monospace" font-size="10" fill="#e6edf3">box-shadow: 0 4px 12px</text>
+    <text x="40" y="284" font-family="monospace" font-size="10" fill="#e6edf3">            rgba(0,0,0,0.1);</text>
+    <text x="26" y="298" font-family="monospace" font-size="10" fill="#e6edf3">&#125;</text>
+
+    <text x="14" y="312" font-family="monospace" font-size="10" fill="#7ee787">&#125;</text>
+
+    <!-- Build pipeline indicator -->
+    <rect x="14" y="328" width="332" height="22" rx="4" fill="#1f1f1f"/>
+    <text x="20" y="342" font-family="monospace" font-size="9" fill="#888">styles.scss → </text>
+    <rect x="112" y="328" width="60" height="22" rx="0" fill="#cc44aa" opacity="0.2"/>
+    <text x="142" y="342" font-family="monospace" font-size="9" fill="#cc44aa" text-anchor="middle">sass</text>
+    <text x="175" y="342" font-family="monospace" font-size="9" fill="#888"> → styles.css</text>
+    <text x="290" y="342" font-family="monospace" font-size="9" fill="#888">→ browser</text>
+  </g>
+
+  <!-- Center arrow -->
+  <g transform="translate(384, 225)">
+    <line x1="0" y1="0" x2="28" y2="0" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrow23)"/>
+    <!-- "2023" label on arrow -->
+    <rect x="-10" y="-26" width="50" height="18" rx="4" fill="#3fb950" opacity="0.9"/>
+    <text x="15" y="-12" font-family="monospace" font-size="9" fill="#0d1117" text-anchor="middle" font-weight="bold">Native!</text>
+  </g>
+
+  <!-- Right panel: AFTER - Native CSS nesting -->
+  <g transform="translate(420, 58)">
+    <rect x="0" y="0" width="360" height="360" rx="8" fill="#161b22" filter="url(#shadow23)" stroke="#30363d" stroke-width="1"/>
+    <!-- Tab -->
+    <rect x="0" y="0" width="360" height="28" rx="8" fill="#21262d"/>
+    <rect x="0" y="18" width="360" height="10" fill="#21262d"/>
+    <rect x="10" y="5" width="80" height="18" rx="4" fill="#3fb950" opacity="0.2" stroke="#3fb950" stroke-width="0.5"/>
+    <text x="20" y="17" font-family="monospace" font-size="9" fill="#3fb950">◆ styles.css</text>
+    <!-- "New way" label -->
+    <rect x="230" y="5" width="120" height="18" rx="4" fill="#3fb95033"/>
+    <text x="290" y="17" font-family="monospace" font-size="9" fill="#3fb950" text-anchor="middle">No Sass needed!</text>
+
+    <!-- Native CSS nesting code -->
+    <text x="14" y="50" font-family="monospace" font-size="10" fill="#7ee787">/* Native CSS Nesting */</text>
+    <text x="14" y="66" font-family="monospace" font-size="10" fill="#7ee787">.card</text>
+    <text x="53" y="66" font-family="monospace" font-size="10" fill="#e6edf3">&#123;</text>
+    <text x="26" y="82" font-family="monospace" font-size="10" fill="#e6edf3">background: #fff;</text>
+    <text x="26" y="96" font-family="monospace" font-size="10" fill="#e6edf3">padding: 1rem;</text>
+    <text x="26" y="110" font-family="monospace" font-size="10" fill="#e6edf3">border-radius: 8px;</text>
+
+    <!-- Nested selector with & -->
+    <text x="26" y="130" font-family="monospace" font-size="10" fill="#79c0ff">  &amp; .title</text>
+    <text x="107" y="130" font-family="monospace" font-size="10" fill="#e6edf3">&#123;</text>
+    <text x="40" y="146" font-family="monospace" font-size="10" fill="#e6edf3">font-size: 1.25rem;</text>
+    <text x="40" y="160" font-family="monospace" font-size="10" fill="#e6edf3">color: #111;</text>
+    <text x="26" y="174" font-family="monospace" font-size="10" fill="#e6edf3">&#125;</text>
+
+    <text x="26" y="192" font-family="monospace" font-size="10" fill="#79c0ff">  &amp; .body</text>
+    <text x="100" y="192" font-family="monospace" font-size="10" fill="#e6edf3">&#123;</text>
+    <text x="40" y="208" font-family="monospace" font-size="10" fill="#e6edf3">line-height: 1.6;</text>
+    <text x="40" y="222" font-family="monospace" font-size="10" fill="#e6edf3">color: #555;</text>
+    <text x="26" y="236" font-family="monospace" font-size="10" fill="#e6edf3">&#125;</text>
+
+    <text x="26" y="254" font-family="monospace" font-size="10" fill="#79c0ff">  &amp;:hover</text>
+    <text x="100" y="254" font-family="monospace" font-size="10" fill="#e6edf3">&#123;</text>
+    <text x="40" y="270" font-family="monospace" font-size="10" fill="#e6edf3">box-shadow: 0 4px 12px</text>
+    <text x="40" y="284" font-family="monospace" font-size="10" fill="#e6edf3">            rgba(0,0,0,0.1);</text>
+    <text x="26" y="298" font-family="monospace" font-size="10" fill="#e6edf3">&#125;</text>
+
+    <text x="14" y="312" font-family="monospace" font-size="10" fill="#7ee787">&#125;</text>
+
+    <!-- Simplified pipeline - direct to browser! -->
+    <rect x="14" y="328" width="332" height="22" rx="4" fill="#1f1f1f"/>
+    <text x="20" y="342" font-family="monospace" font-size="9" fill="#888">styles.css</text>
+    <line x1="100" y1="339" x2="250" y2="339" stroke="#3fb950" stroke-width="2" marker-end="url(#arrow23)"/>
+    <text x="260" y="342" font-family="monospace" font-size="9" fill="#3fb950">browser</text>
+    <!-- No build step badge -->
+    <rect x="104" y="329" width="144" height="20" rx="3" fill="#3fb950" opacity="0.15"/>
+    <text x="176" y="342" font-family="monospace" font-size="8" fill="#3fb950" text-anchor="middle">no build step!</text>
+  </g>
+
+  <!-- Bottom comparison bars: CI build time -->
+  <g transform="translate(30, 425)">
+    <text x="0" y="15" font-family="monospace" font-size="9" fill="#8b949e">CSS build time with Sass:</text>
+    <rect x="180" y="5" width="200" height="12" rx="2" fill="#cc44aa" opacity="0.7"/>
+    <text x="386" y="15" font-family="monospace" font-size="9" fill="#888">~3.2s</text>
+
+    <text x="430" y="15" font-family="monospace" font-size="9" fill="#8b949e">Native CSS:</text>
+    <rect x="520" y="5" width="30" height="12" rx="2" fill="#3fb950" opacity="0.7"/>
+    <text x="556" y="15" font-family="monospace" font-size="9" fill="#3fb950">~0.1s</text>
+  </g>
+
+  <!-- Browser support note -->
+  <text x="400" y="422" font-family="monospace" font-size="9" fill="#484f58" text-anchor="middle">Chrome 112 · Firefox 117 · Safari 16.5 — All major browsers 2023</text>
+</svg>

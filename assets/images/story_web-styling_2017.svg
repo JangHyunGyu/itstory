@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="shadow17" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000025"/>
+    </filter>
+  </defs>
+
+  <!-- Background: editorial magazine feel -->
+  <rect width="800" height="450" fill="#1a1a2e"/>
+
+  <!-- Year label -->
+  <rect x="16" y="14" width="60" height="24" rx="4" fill="#ff6b35" opacity="0.9"/>
+  <text x="46" y="30" font-family="monospace" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">2017</text>
+
+  <!-- CSS Grid code (left side) -->
+  <g transform="translate(20, 50)">
+    <rect x="0" y="0" width="300" height="380" rx="8" fill="#252540" filter="url(#shadow17)"/>
+    <!-- Code editor header -->
+    <rect x="0" y="0" width="300" height="28" rx="8" fill="#1e1e3a"/>
+    <rect x="0" y="18" width="300" height="10" fill="#1e1e3a"/>
+    <circle cx="16" cy="14" r="5" fill="#ff5f57"/>
+    <circle cx="30" cy="14" r="5" fill="#febc2e"/>
+    <circle cx="44" cy="14" r="5" fill="#28c840"/>
+    <text x="150" y="18" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">layout.css</text>
+
+    <!-- CSS Grid code -->
+    <text x="14" y="46" font-family="monospace" font-size="10" fill="#888">/* CSS Grid Layout */</text>
+    <text x="14" y="62" font-family="monospace" font-size="10" fill="#88ff88">.magazine &#123;</text>
+    <text x="14" y="76" font-family="monospace" font-size="10" fill="#ccc">  display: </text>
+    <text x="96" y="76" font-family="monospace" font-size="10" fill="#ff6b35">grid</text>
+    <text x="120" y="76" font-family="monospace" font-size="10" fill="#ccc">;</text>
+    <text x="14" y="90" font-family="monospace" font-size="10" fill="#ccc">  grid-template-columns:</text>
+    <text x="14" y="104" font-family="monospace" font-size="10" fill="#ffcc66">    200px 1fr 1fr</text>
+    <text x="130" y="104" font-family="monospace" font-size="10" fill="#ccc">;</text>
+    <text x="14" y="118" font-family="monospace" font-size="10" fill="#ccc">  grid-template-rows:</text>
+    <text x="14" y="132" font-family="monospace" font-size="10" fill="#ffcc66">    80px 1fr 1fr 60px</text>
+    <text x="156" y="132" font-family="monospace" font-size="10" fill="#ccc">;</text>
+    <text x="14" y="146" font-family="monospace" font-size="10" fill="#ccc">  grid-template-areas:</text>
+    <text x="14" y="160" font-family="monospace" font-size="10" fill="#88ccff">    "header  header  header"</text>
+    <text x="14" y="174" font-family="monospace" font-size="10" fill="#88ccff">    "sidebar main    main  "</text>
+    <text x="14" y="188" font-family="monospace" font-size="10" fill="#88ccff">    "sidebar article feature"</text>
+    <text x="14" y="202" font-family="monospace" font-size="10" fill="#88ccff">    "footer  footer  footer"</text>
+    <text x="14" y="216" font-family="monospace" font-size="10" fill="#ccc">  ;</text>
+    <text x="14" y="230" font-family="monospace" font-size="10" fill="#ccc">  gap: </text>
+    <text x="60" y="230" font-family="monospace" font-size="10" fill="#ffcc66">1rem</text>
+    <text x="90" y="230" font-family="monospace" font-size="10" fill="#ccc">;</text>
+    <text x="14" y="244" font-family="monospace" font-size="10" fill="#88ff88">&#125;</text>
+
+    <text x="14" y="266" font-family="monospace" font-size="10" fill="#88ff88">.header &#123;</text>
+    <text x="14" y="280" font-family="monospace" font-size="10" fill="#ccc">  grid-area: </text>
+    <text x="104" y="280" font-family="monospace" font-size="10" fill="#88ccff">header</text>
+    <text x="152" y="280" font-family="monospace" font-size="10" fill="#ccc">;</text>
+    <text x="14" y="294" font-family="monospace" font-size="10" fill="#88ff88">&#125;</text>
+    <text x="14" y="310" font-family="monospace" font-size="10" fill="#88ff88">.sidebar &#123;</text>
+    <text x="14" y="324" font-family="monospace" font-size="10" fill="#ccc">  grid-area: </text>
+    <text x="104" y="324" font-family="monospace" font-size="10" fill="#88ccff">sidebar</text>
+    <text x="158" y="324" font-family="monospace" font-size="10" fill="#ccc">;</text>
+    <text x="14" y="338" font-family="monospace" font-size="10" fill="#88ff88">&#125;</text>
+    <text x="14" y="354" font-family="monospace" font-size="10" fill="#888">/* .main .article .feature .footer */</text>
+    <text x="14" y="370" font-family="monospace" font-size="10" fill="#555">/* ... same pattern */</text>
+  </g>
+
+  <!-- Grid layout visualization (right side) -->
+  <g transform="translate(340, 50)">
+    <rect x="0" y="0" width="440" height="380" rx="8" fill="#fff" filter="url(#shadow17)"/>
+    <!-- Mini browser chrome -->
+    <rect x="0" y="0" width="440" height="28" rx="8" fill="#eee"/>
+    <rect x="0" y="18" width="440" height="10" fill="#eee"/>
+    <circle cx="16" cy="14" r="5" fill="#ddd"/>
+    <circle cx="30" cy="14" r="5" fill="#ddd"/>
+    <circle cx="44" cy="14" r="5" fill="#ddd"/>
+    <text x="220" y="18" font-family="monospace" font-size="8" fill="#aaa" text-anchor="middle">magazine-layout.html</text>
+
+    <!-- The actual grid layout illustration -->
+    <!-- HEADER -->
+    <rect x="10" y="36" width="420" height="60" rx="4" fill="#ff6b35" filter="url(#shadow17)"/>
+    <text x="220" y="60" font-family="sans-serif" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">HEADER</text>
+    <text x="220" y="76" font-family="monospace" font-size="9" fill="#ffccaa" text-anchor="middle">grid-area: header</text>
+
+    <!-- SIDEBAR -->
+    <rect x="10" y="104" width="100" height="180" rx="4" fill="#4488cc" filter="url(#shadow17)"/>
+    <text x="60" y="185" font-family="sans-serif" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold" transform="rotate(-90,60,185)">SIDEBAR</text>
+    <text x="60" y="230" font-family="monospace" font-size="7" fill="#aaccff" text-anchor="middle">grid-area:</text>
+    <text x="60" y="242" font-family="monospace" font-size="7" fill="#aaccff" text-anchor="middle">sidebar</text>
+
+    <!-- MAIN -->
+    <rect x="118" y="104" width="198" height="80" rx="4" fill="#44aa66" filter="url(#shadow17)"/>
+    <text x="217" y="140" font-family="sans-serif" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">MAIN</text>
+    <text x="217" y="156" font-family="monospace" font-size="9" fill="#aaffcc" text-anchor="middle">grid-area: main</text>
+
+    <!-- ARTICLE -->
+    <rect x="118" y="192" width="130" height="92" rx="4" fill="#8866ee" filter="url(#shadow17)"/>
+    <text x="183" y="234" font-family="sans-serif" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">ARTICLE</text>
+    <text x="183" y="250" font-family="monospace" font-size="8" fill="#ccaaff" text-anchor="middle">grid-area: article</text>
+
+    <!-- FEATURE -->
+    <rect x="256" y="192" width="174" height="92" rx="4" fill="#ee6688" filter="url(#shadow17)"/>
+    <text x="343" y="234" font-family="sans-serif" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">FEATURE</text>
+    <text x="343" y="250" font-family="monospace" font-size="8" fill="#ffaabb" text-anchor="middle">grid-area: feature</text>
+
+    <!-- FOOTER -->
+    <rect x="10" y="292" width="420" height="50" rx="4" fill="#555" filter="url(#shadow17)"/>
+    <text x="220" y="314" font-family="sans-serif" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">FOOTER</text>
+    <text x="220" y="330" font-family="monospace" font-size="8" fill="#aaa" text-anchor="middle">grid-area: footer</text>
+
+    <!-- Grid lines overlay -->
+    <!-- Vertical grid lines -->
+    <line x1="110" y1="36" x2="110" y2="342" stroke="#fff" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+    <line x1="316" y1="36" x2="316" y2="342" stroke="#fff" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+    <!-- Horizontal grid lines -->
+    <line x1="10" y1="96" x2="430" y2="96" stroke="#fff" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+    <line x1="10" y1="184" x2="430" y2="184" stroke="#fff" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+    <line x1="10" y1="284" x2="430" y2="284" stroke="#fff" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+
+    <!-- Column width labels -->
+    <text x="60" y="360" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">200px</text>
+    <text x="217" y="360" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">1fr</text>
+    <text x="373" y="360" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">1fr</text>
+
+    <!-- CSS Grid label badge -->
+    <rect x="10" y="356" width="80" height="18" rx="4" fill="#ff6b35" opacity="0.9"/>
+    <text x="50" y="368" font-family="sans-serif" font-size="9" fill="#fff" text-anchor="middle" font-weight="bold">CSS Grid</text>
+  </g>
+
+  <!-- Browser support note at bottom -->
+  <g transform="translate(20, 438)">
+    <text x="0" y="0" font-family="monospace" font-size="9" fill="#888">All major browsers shipped CSS Grid simultaneously in March 2017: Chrome 57 · Firefox 52 · Safari 10.1 · Edge 16</text>
+  </g>
+</svg>

@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg2003" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d1a"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </linearGradient>
+    <linearGradient id="chipGrad2003" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2a"/>
+      <stop offset="100%" stop-color="#0d0d1a"/>
+    </linearGradient>
+    <filter id="cpuGlow2003">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4488ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0044cc" stop-opacity="0.1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg2003)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" fill="#4488ff" font-size="16" font-family="monospace" text-anchor="middle" font-weight="bold">64-bit Computing Era · Multicore Revolution · 2003</text>
+
+  <!-- Large CPU chip illustration (center-left) -->
+  <g transform="translate(50, 65)">
+    <!-- Chip package (large square) -->
+    <rect x="20" y="20" width="280" height="280" fill="url(#chipGrad2003)" rx="8" stroke="#4488ff" stroke-width="2"/>
+    <rect x="28" y="28" width="264" height="264" fill="#0a0a18" rx="5"/>
+
+    <!-- CPU die markings -->
+    <rect x="40" y="40" width="240" height="240" fill="#0d0d20" rx="3"/>
+
+    <!-- 64-bit label (big) -->
+    <text x="160" y="85" fill="#4488ff" font-size="42" font-family="monospace" text-anchor="middle" font-weight="bold" filter="url(#cpuGlow2003)">64</text>
+    <text x="160" y="115" fill="#2266cc" font-size="16" font-family="monospace" text-anchor="middle" font-weight="bold">BIT</text>
+
+    <!-- Architecture diagram inside chip -->
+    <!-- Core blocks -->
+    <rect x="50" y="130" width="80" height="60" fill="#1a2a4a" rx="4" stroke="#4488ff" stroke-width="1.5"/>
+    <text x="90" y="155" fill="#4488ff" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">Core 0</text>
+    <text x="90" y="169" fill="#2266cc" font-size="9" font-family="monospace" text-anchor="middle">ALU · FPU</text>
+    <text x="90" y="183" fill="#2266cc" font-size="9" font-family="monospace" text-anchor="middle">L1/L2 Cache</text>
+
+    <rect x="150" y="130" width="80" height="60" fill="#1a2a4a" rx="4" stroke="#4488ff" stroke-width="1.5"/>
+    <text x="190" y="155" fill="#4488ff" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">Core 1</text>
+    <text x="190" y="169" fill="#2266cc" font-size="9" font-family="monospace" text-anchor="middle">ALU · FPU</text>
+    <text x="190" y="183" fill="#2266cc" font-size="9" font-family="monospace" text-anchor="middle">L1/L2 Cache</text>
+
+    <!-- Shared L3 Cache -->
+    <rect x="50" y="205" width="180" height="30" fill="#1a3a1a" rx="3" stroke="#44cc44" stroke-width="1"/>
+    <text x="140" y="224" fill="#44cc44" font-size="10" font-family="monospace" text-anchor="middle">Shared L3 Cache</text>
+
+    <!-- Memory controller -->
+    <rect x="50" y="248" width="80" height="25" fill="#1a1a3a" rx="3" stroke="#8844cc" stroke-width="1"/>
+    <text x="90" y="264" fill="#8844cc" font-size="9" font-family="monospace" text-anchor="middle">Mem Ctrl</text>
+
+    <!-- HyperTransport/bus -->
+    <rect x="150" y="248" width="80" height="25" fill="#1a3a1a" rx="3" stroke="#44cc88" stroke-width="1"/>
+    <text x="190" y="264" fill="#44cc88" font-size="9" font-family="monospace" text-anchor="middle">HT Bus</text>
+
+    <!-- Glow effects on cores -->
+    <ellipse cx="90" cy="160" rx="40" ry="30" fill="url(#coreGrad)" filter="url(#cpuGlow2003)"/>
+    <ellipse cx="190" cy="160" rx="40" ry="30" fill="url(#coreGrad)" filter="url(#cpuGlow2003)"/>
+
+    <!-- Chip pins (LGA style) on bottom -->
+    <g transform="translate(30, 298)">
+      <g fill="#888860">
+        <circle cx="10" cy="8" r="2.5"/><circle cx="22" cy="8" r="2.5"/><circle cx="34" cy="8" r="2.5"/>
+        <circle cx="46" cy="8" r="2.5"/><circle cx="58" cy="8" r="2.5"/><circle cx="70" cy="8" r="2.5"/>
+        <circle cx="82" cy="8" r="2.5"/><circle cx="94" cy="8" r="2.5"/><circle cx="106" cy="8" r="2.5"/>
+        <circle cx="118" cy="8" r="2.5"/><circle cx="130" cy="8" r="2.5"/><circle cx="142" cy="8" r="2.5"/>
+        <circle cx="154" cy="8" r="2.5"/><circle cx="166" cy="8" r="2.5"/><circle cx="178" cy="8" r="2.5"/>
+        <circle cx="190" cy="8" r="2.5"/><circle cx="202" cy="8" r="2.5"/><circle cx="214" cy="8" r="2.5"/>
+        <circle cx="10" cy="18" r="2.5"/><circle cx="22" cy="18" r="2.5"/><circle cx="34" cy="18" r="2.5"/>
+        <circle cx="46" cy="18" r="2.5"/><circle cx="58" cy="18" r="2.5"/><circle cx="70" cy="18" r="2.5"/>
+        <circle cx="82" cy="18" r="2.5"/><circle cx="94" cy="18" r="2.5"/><circle cx="106" cy="18" r="2.5"/>
+        <circle cx="118" cy="18" r="2.5"/><circle cx="130" cy="18" r="2.5"/><circle cx="142" cy="18" r="2.5"/>
+        <circle cx="154" cy="18" r="2.5"/><circle cx="166" cy="18" r="2.5"/><circle cx="178" cy="18" r="2.5"/>
+        <circle cx="190" cy="18" r="2.5"/><circle cx="202" cy="18" r="2.5"/><circle cx="214" cy="18" r="2.5"/>
+      </g>
+    </g>
+
+    <!-- Labels -->
+    <text x="160" y="360" fill="#4488ff" font-size="12" font-family="monospace" text-anchor="middle">AMD Opteron / Intel EM64T</text>
+    <text x="160" y="377" fill="#2266cc" font-size="11" font-family="monospace" text-anchor="middle">First x86-64 · 2003</text>
+  </g>
+
+  <!-- 64-bit address space visualization (right) -->
+  <g transform="translate(380, 65)">
+    <rect x="0" y="0" width="390" height="175" fill="#050810" rx="5" stroke="#1a3a5a" stroke-width="1.5"/>
+    <text x="195" y="22" fill="#4488ff" font-size="13" font-family="monospace" text-anchor="middle" font-weight="bold">64-bit Address Space</text>
+
+    <!-- Address space comparison bar chart -->
+    <text x="15" y="45" fill="#888888" font-size="10" font-family="monospace">32-bit RAM limit:</text>
+    <rect x="140" y="33" width="50" height="16" fill="#cc4444" rx="2"/>
+    <text x="196" y="45" fill="#cc4444" font-size="10" font-family="monospace">4 GB</text>
+    <text x="240" y="45" fill="#666666" font-size="10" font-family="monospace">(max)</text>
+
+    <text x="15" y="70" fill="#888888" font-size="10" font-family="monospace">64-bit RAM limit:</text>
+    <rect x="140" y="58" width="200" height="16" fill="#4488ff" rx="2"/>
+    <text x="346" y="70" fill="#4488ff" font-size="10" font-family="monospace">16 EB</text>
+    <text x="15" y="86" fill="#4488ff" font-size="10" font-family="monospace">         (16 Exabytes = 17,179,869,184 GB)</text>
+
+    <!-- Binary address example -->
+    <text x="15" y="108" fill="#44aa44" font-size="10" font-family="monospace">64-bit address example:</text>
+    <text x="15" y="125" fill="#2ecc71" font-size="11" font-family="monospace">0xFFFF800000000000</text>
+    <text x="15" y="142" fill="#1a8a1a" font-size="9" font-family="monospace">= 18,446,744,073,709,551,615 addresses</text>
+    <text x="15" y="158" fill="#1a6a1a" font-size="9" font-family="monospace">More than atoms in a human body</text>
+    <text x="15" y="172" fill="#1a4a1a" font-size="9" font-family="monospace">Effectively unlimited for foreseeable future</text>
+  </g>
+
+  <!-- Multicore evolution diagram -->
+  <g transform="translate(380, 255)">
+    <rect x="0" y="0" width="390" height="185" fill="#050810" rx="5" stroke="#1a3a5a" stroke-width="1.5"/>
+    <text x="195" y="22" fill="#4488ff" font-size="13" font-family="monospace" text-anchor="middle" font-weight="bold">Multicore Evolution</text>
+
+    <!-- Timeline -->
+    <line x1="20" y1="120" x2="370" y2="120" stroke="#1a3a5a" stroke-width="1.5"/>
+
+    <!-- Years -->
+    <g font-size="9" font-family="monospace" text-anchor="middle" fill="#4488ff">
+      <text x="50" y="140">2003</text>
+      <text x="120" y="140">2005</text>
+      <text x="200" y="140">2008</text>
+      <text x="290" y="140">2013</text>
+      <text x="360" y="140">2020+</text>
+    </g>
+
+    <!-- Core count bars -->
+    <rect x="35" y="100" width="30" height="20" fill="#cc4444" rx="2"/>
+    <text x="50" y="95" fill="#cc4444" font-size="10" font-family="monospace" text-anchor="middle">1</text>
+    <text x="50" y="158" fill="#888888" font-size="8" font-family="monospace" text-anchor="middle">Single</text>
+
+    <rect x="105" y="85" width="30" height="35" fill="#cc8844" rx="2"/>
+    <text x="120" y="80" fill="#cc8844" font-size="10" font-family="monospace" text-anchor="middle">2</text>
+    <text x="120" y="158" fill="#888888" font-size="8" font-family="monospace" text-anchor="middle">Dual</text>
+
+    <rect x="183" y="60" width="34" height="60" fill="#cccc44" rx="2"/>
+    <text x="200" y="55" fill="#cccc44" font-size="10" font-family="monospace" text-anchor="middle">4-8</text>
+    <text x="200" y="158" fill="#888888" font-size="8" font-family="monospace" text-anchor="middle">Quad</text>
+
+    <rect x="272" y="40" width="36" height="80" fill="#44cc44" rx="2"/>
+    <text x="290" y="35" fill="#44cc44" font-size="10" font-family="monospace" text-anchor="middle">8-16</text>
+    <text x="290" y="158" fill="#888888" font-size="8" font-family="monospace" text-anchor="middle">Many</text>
+
+    <rect x="340" y="20" width="40" height="100" fill="#4488ff" rx="2"/>
+    <text x="360" y="15" fill="#4488ff" font-size="10" font-family="monospace" text-anchor="middle">64+</text>
+    <text x="360" y="158" fill="#888888" font-size="8" font-family="monospace" text-anchor="middle">Many</text>
+
+    <text x="195" y="175" fill="#2266aa" font-size="10" font-family="monospace" text-anchor="middle">Moore's Law drives core count growth</text>
+  </g>
+
+  <!-- AMD vs Intel logos area -->
+  <g transform="translate(50, 400)">
+    <rect x="0" y="0" width="160" height="40" fill="#cc0000" rx="4"/>
+    <text x="80" y="25" fill="white" font-size="16" font-family="sans-serif" text-anchor="middle" font-weight="bold">AMD</text>
+    <text x="80" y="38" fill="#ffaaaa" font-size="9" font-family="sans-serif" text-anchor="middle">Opteron 2003</text>
+  </g>
+  <g transform="translate(230" y="400">
+    <text x="0" y="0" fill="#4488ff" font-size="10" font-family="monospace">+ Intel EM64T (2004)</text>
+    <text x="0" y="18" fill="#2266aa" font-size="10" font-family="monospace">= x86-64 standard</text>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="0" y="400" width="800" height="50" fill="#050810" opacity="0.95"/>
+  <text x="400" y="422" fill="#4488ff" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">64비트 시대 · 멀티코어 전환</text>
+  <text x="400" y="442" fill="#224488" font-size="12" font-family="Georgia, serif" text-anchor="middle">AMD Opteron · First 64-bit x86 · Multicore Era Begins · 2003</text>
+</svg>

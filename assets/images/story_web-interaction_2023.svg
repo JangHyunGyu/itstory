@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg23" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050810"/>
+      <stop offset="100%" style="stop-color:#101828"/>
+    </linearGradient>
+    <linearGradient id="gpuBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6e3af0"/>
+      <stop offset="100%" style="stop-color:#00c4ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg23)"/>
+
+  <!-- GPU grid visualization -->
+  <!-- GPU processing grid (top left) -->
+  <rect x="30" y="30" width="300" height="200" rx="8" fill="#0d1020" stroke="#6e3af0" stroke-width="2"/>
+  <text x="180" y="52" font-family="sans-serif" font-size="12" fill="#9966ff" text-anchor="middle" font-weight="bold">GPU Parallel Processing</text>
+
+  <!-- Grid of shader cores -->
+  <g opacity="0.85">
+    <!-- Row 1 -->
+    <rect x="46" y="62" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="66" y="62" width="16" height="16" rx="2" fill="#5a2ad0"/>
+    <rect x="86" y="62" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="106" y="62" width="16" height="16" rx="2" fill="#7a40f0"/>
+    <rect x="126" y="62" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="146" y="62" width="16" height="16" rx="2" fill="#5a2ad0"/>
+    <rect x="166" y="62" width="16" height="16" rx="2" fill="#00c4ff"/>
+    <rect x="186" y="62" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="206" y="62" width="16" height="16" rx="2" fill="#00c4ff"/>
+    <rect x="226" y="62" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="246" y="62" width="16" height="16" rx="2" fill="#5a2ad0"/>
+    <rect x="266" y="62" width="16" height="16" rx="2" fill="#7a40f0"/>
+    <!-- Row 2 -->
+    <rect x="46" y="82" width="16" height="16" rx="2" fill="#00c4ff"/>
+    <rect x="66" y="82" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="86" y="82" width="16" height="16" rx="2" fill="#5a2ad0"/>
+    <rect x="106" y="82" width="16" height="16" rx="2" fill="#00c4ff"/>
+    <rect x="126" y="82" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="146" y="82" width="16" height="16" rx="2" fill="#7a40f0"/>
+    <rect x="166" y="82" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="186" y="82" width="16" height="16" rx="2" fill="#5a2ad0"/>
+    <rect x="206" y="82" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="226" y="82" width="16" height="16" rx="2" fill="#00c4ff"/>
+    <rect x="246" y="82" width="16" height="16" rx="2" fill="#7a40f0"/>
+    <rect x="266" y="82" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <!-- Row 3 -->
+    <rect x="46" y="102" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="66" y="102" width="16" height="16" rx="2" fill="#00c4ff"/>
+    <rect x="86" y="102" width="16" height="16" rx="2" fill="#7a40f0"/>
+    <rect x="106" y="102" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="126" y="102" width="16" height="16" rx="2" fill="#5a2ad0"/>
+    <rect x="146" y="102" width="16" height="16" rx="2" fill="#00c4ff"/>
+    <rect x="166" y="102" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="186" y="102" width="16" height="16" rx="2" fill="#7a40f0"/>
+    <rect x="206" y="102" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="226" y="102" width="16" height="16" rx="2" fill="#5a2ad0"/>
+    <rect x="246" y="102" width="16" height="16" rx="2" fill="#00c4ff"/>
+    <rect x="266" y="102" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <!-- Row 4 -->
+    <rect x="46" y="122" width="16" height="16" rx="2" fill="#5a2ad0"/>
+    <rect x="66" y="122" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="86" y="122" width="16" height="16" rx="2" fill="#00c4ff"/>
+    <rect x="106" y="122" width="16" height="16" rx="2" fill="#7a40f0"/>
+    <rect x="126" y="122" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="146" y="122" width="16" height="16" rx="2" fill="#5a2ad0"/>
+    <rect x="166" y="122" width="16" height="16" rx="2" fill="#00c4ff"/>
+    <rect x="186" y="122" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="206" y="122" width="16" height="16" rx="2" fill="#7a40f0"/>
+    <rect x="226" y="122" width="16" height="16" rx="2" fill="#6e3af0"/>
+    <rect x="246" y="122" width="16" height="16" rx="2" fill="#5a2ad0"/>
+    <rect x="266" y="122" width="16" height="16" rx="2" fill="#00c4ff"/>
+  </g>
+
+  <text x="180" y="158" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">Thousands of shader cores</text>
+  <text x="180" y="172" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">running in parallel</text>
+
+  <!-- FPS indicator -->
+  <rect x="50" y="185" width="240" height="30" rx="4" fill="#1a0a3a"/>
+  <rect x="50" y="185" width="210" height="30" rx="4" fill="url(#gpuBar)"/>
+  <text x="170" y="204" font-family="sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="bold">120 FPS — No driver install!</text>
+
+  <!-- WebGPU logo/badge -->
+  <rect x="340" y="30" width="140" height="80" rx="8" fill="#1a0a3a" stroke="#6e3af0" stroke-width="2"/>
+  <text x="410" y="65" font-family="sans-serif" font-size="22" fill="#6e3af0" text-anchor="middle" font-weight="bold">WebGPU</text>
+  <text x="410" y="84" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">W3C Spec · Chrome 113</text>
+  <text x="410" y="100" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">May 2023</text>
+
+  <!-- vs WebGL comparison -->
+  <rect x="500" y="30" width="270" height="80" rx="6" fill="#0d1020" stroke="#333" stroke-width="1"/>
+  <text x="635" y="52" font-family="sans-serif" font-size="12" fill="#888" text-anchor="middle">WebGPU vs WebGL</text>
+  <text x="510" y="70" font-family="sans-serif" font-size="10" fill="#888">WebGL: OpenGL ES wrapper</text>
+  <text x="510" y="86" font-family="sans-serif" font-size="10" fill="#6e3af0">WebGPU: Vulkan/Metal/DX12</text>
+  <text x="510" y="100" font-family="sans-serif" font-size="10" fill="#00c4ff">          direct GPU access</text>
+
+  <!-- AI Inference in browser -->
+  <rect x="340" y="124" width="430" height="100" rx="6" fill="#0a1020" stroke="#00c4ff" stroke-width="1.5"/>
+  <text x="555" y="146" font-family="sans-serif" font-size="12" fill="#00c4ff" text-anchor="middle" font-weight="bold">AI in Browser (WebGPU accelerated)</text>
+
+  <!-- LLM inference pipeline -->
+  <rect x="356" y="156" width="80" height="30" rx="4" fill="#1a0a3a" stroke="#6e3af0" stroke-width="1"/>
+  <text x="396" y="175" font-family="sans-serif" font-size="9" fill="#9966ff" text-anchor="middle">User input</text>
+
+  <line x1="436" y1="171" x2="454" y2="171" stroke="#6e3af0" stroke-width="1.5"/>
+  <polygon points="450,167 458,171 450,175" fill="#6e3af0"/>
+
+  <rect x="454" y="156" width="80" height="30" rx="4" fill="#1a1a3a" stroke="#6e3af0" stroke-width="1"/>
+  <text x="494" y="175" font-family="sans-serif" font-size="9" fill="#9966ff" text-anchor="middle">LLM model</text>
+
+  <line x1="534" y1="171" x2="552" y2="171" stroke="#00c4ff" stroke-width="1.5"/>
+  <polygon points="548,167 556,171 548,175" fill="#00c4ff"/>
+
+  <rect x="552" y="156" width="80" height="30" rx="4" fill="#0a2040" stroke="#00c4ff" stroke-width="1"/>
+  <text x="592" y="175" font-family="sans-serif" font-size="9" fill="#00c4ff" text-anchor="middle">GPU compute</text>
+
+  <line x1="632" y1="171" x2="650" y2="171" stroke="#44dd88" stroke-width="1.5"/>
+  <polygon points="646,167 654,171 646,175" fill="#44dd88"/>
+
+  <rect x="650" y="156" width="100" height="30" rx="4" fill="#0a2a10" stroke="#44dd88" stroke-width="1"/>
+  <text x="700" y="175" font-family="sans-serif" font-size="9" fill="#44dd88" text-anchor="middle">Response (local)</text>
+
+  <text x="555" y="210" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">No server needed · Private · No upload</text>
+
+  <!-- Code snippet -->
+  <rect x="30" y="244" width="740" height="110" rx="6" fill="#1e1e1e" stroke="#333" stroke-width="1"/>
+  <text x="46" y="264" font-family="monospace" font-size="11" fill="#6a9955">// WebGPU compute shader for AI matrix ops</text>
+  <text x="46" y="282" font-family="monospace" font-size="11" fill="#569cd6">const</text>
+  <text x="92" y="282" font-family="monospace" font-size="11" fill="#d4d4d4"> adapter = </text>
+  <text x="154" y="282" font-family="monospace" font-size="11" fill="#569cd6">await</text>
+  <text x="190" y="282" font-family="monospace" font-size="11" fill="#d4d4d4"> navigator.</text>
+  <text x="244" y="282" font-family="monospace" font-size="11" fill="#4ec9b0">gpu</text>
+  <text x="268" y="282" font-family="monospace" font-size="11" fill="#d4d4d4">.</text>
+  <text x="274" y="282" font-family="monospace" font-size="11" fill="#dcdcaa">requestAdapter</text>
+  <text x="376" y="282" font-family="monospace" font-size="11" fill="#d4d4d4">();</text>
+  <text x="46" y="300" font-family="monospace" font-size="11" fill="#569cd6">const</text>
+  <text x="92" y="300" font-family="monospace" font-size="11" fill="#d4d4d4"> device = </text>
+  <text x="150" y="300" font-family="monospace" font-size="11" fill="#569cd6">await</text>
+  <text x="186" y="300" font-family="monospace" font-size="11" fill="#9cdcfe">adapter</text>
+  <text x="228" y="300" font-family="monospace" font-size="11" fill="#d4d4d4">.</text>
+  <text x="234" y="300" font-family="monospace" font-size="11" fill="#dcdcaa">requestDevice</text>
+  <text x="332" y="300" font-family="monospace" font-size="11" fill="#d4d4d4">();</text>
+  <text x="46" y="318" font-family="monospace" font-size="11" fill="#6a9955">// Run WGSL compute shaders on GPU cores...</text>
+  <text x="46" y="336" font-family="monospace" font-size="11" fill="#6a9955">// TensorFlow.js, transformers.js — local AI inference!</text>
+  <text x="500" y="300" font-family="monospace" font-size="11" fill="#6a9955">// Chrome 113, May 2023</text>
+  <text x="500" y="318" font-family="monospace" font-size="11" fill="#6a9955">// No plugin · No driver install</text>
+
+  <!-- Year badge -->
+  <rect x="330" y="374" width="140" height="36" rx="18" fill="#6e3af0"/>
+  <text x="400" y="398" font-family="sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">2023</text>
+
+  <!-- Bottom caption -->
+  <text x="400" y="407" font-family="sans-serif" font-size="15" fill="#9966ff" text-anchor="middle" font-weight="bold">WebGPU — GPU in the Browser, AI without servers</text>
+  <text x="400" y="428" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">Chrome 113 · W3C WebGPU Spec · 120FPS 3D · Local AI inference · 2023</text>
+</svg>

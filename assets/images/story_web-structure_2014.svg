@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg14s" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1020"/>
+      <stop offset="100%" style="stop-color:#14202e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg14s)"/>
+
+  <!-- HTML5 logo-inspired shape -->
+  <polygon points="120,30 170,30 155,200 120,210 85,200 70,30" fill="#e44d26" opacity="0.8"/>
+  <polygon points="120,50 154,50 142,180 120,186 98,180" fill="#f16529" opacity="0.9"/>
+  <text x="120" y="140" font-family="sans-serif" font-size="30" fill="white" text-anchor="middle" font-weight="bold">5</text>
+  <text x="120" y="234" font-family="sans-serif" font-size="13" fill="#e44d26" text-anchor="middle" font-weight="bold">HTML5</text>
+  <text x="120" y="252" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">W3C Recommendation</text>
+  <text x="120" y="268" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">October 2014</text>
+
+  <!-- Semantic tags illustration -->
+  <rect x="220" y="30" width="560" height="380" rx="6" fill="#0d1a28" stroke="#e44d26" stroke-width="1.5"/>
+  <text x="500" y="54" font-family="sans-serif" font-size="14" fill="#f16529" text-anchor="middle" font-weight="bold">HTML5 Semantic Document Structure</text>
+
+  <!-- Page layout with semantic elements -->
+  <rect x="240" y="66" width="520" height="330" rx="4" fill="#f5f0e8" stroke="#ccc" stroke-width="1"/>
+
+  <!-- header -->
+  <rect x="240" y="66" width="520" height="50" rx="4" fill="#4a90d9" stroke="none"/>
+  <rect x="240" y="92" width="520" height="24" fill="#4a90d9"/>
+  <text x="500" y="86" font-family="monospace" font-size="12" fill="white" text-anchor="middle">&lt;header&gt;</text>
+  <text x="500" y="102" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle">Site Logo · Navigation · Search</text>
+
+  <!-- nav -->
+  <rect x="240" y="116" width="520" height="24" rx="0" fill="#5aB4e8" stroke="none"/>
+  <text x="500" y="132" font-family="monospace" font-size="10" fill="white" text-anchor="middle">&lt;nav&gt; Home · Articles · About · Contact &lt;/nav&gt;</text>
+
+  <!-- main content area -->
+  <rect x="240" y="140" width="360" height="180" fill="#f0ece0" stroke="none"/>
+  <text x="420" y="158" font-family="monospace" font-size="10" fill="#e44d26" text-anchor="middle">&lt;main&gt;</text>
+  <!-- article inside main -->
+  <rect x="252" y="162" width="336" height="148" rx="3" fill="white" stroke="#ccc" stroke-width="1"/>
+  <text x="262" y="178" font-family="monospace" font-size="9" fill="#e44d26">&lt;article&gt;</text>
+  <text x="262" y="192" font-family="monospace" font-size="9" fill="#e44d26">  &lt;h1&gt;</text>
+  <text x="306" y="192" font-family="sans-serif" font-size="9" fill="#333">HTML5 is Official!</text>
+  <text x="262" y="208" font-family="monospace" font-size="9" fill="#888">  Published: Oct 28, 2014</text>
+  <text x="262" y="224" font-family="sans-serif" font-size="9" fill="#555">  Web pages can now use semantic</text>
+  <text x="262" y="238" font-family="sans-serif" font-size="9" fill="#555">  tags to describe their structure.</text>
+  <text x="262" y="258" font-family="monospace" font-size="9" fill="#e44d26">  &lt;section&gt;</text>
+  <text x="270" y="274" font-family="sans-serif" font-size="9" fill="#555">  History of HTML5...</text>
+  <text x="262" y="290" font-family="monospace" font-size="9" fill="#e44d26">  &lt;/section&gt;</text>
+  <text x="262" y="304" font-family="monospace" font-size="9" fill="#e44d26">&lt;/article&gt;</text>
+
+  <!-- aside -->
+  <rect x="600" y="140" width="160" height="180" fill="#e8f0e0" stroke="none"/>
+  <text x="680" y="158" font-family="monospace" font-size="9" fill="#2a7a2a" text-anchor="middle">&lt;aside&gt;</text>
+  <text x="680" y="176" font-family="sans-serif" font-size="9" fill="#555" text-anchor="middle">Related Links</text>
+  <rect x="612" y="182" width="136" height="14" rx="2" fill="#ccc"/>
+  <rect x="612" y="202" width="136" height="14" rx="2" fill="#ccc"/>
+  <rect x="612" y="222" width="136" height="14" rx="2" fill="#ccc"/>
+  <text x="680" y="298" font-family="monospace" font-size="9" fill="#2a7a2a" text-anchor="middle">&lt;/aside&gt;</text>
+
+  <!-- footer -->
+  <rect x="240" y="320" width="520" height="50" rx="0" fill="#2a3a4a" stroke="none"/>
+  <rect x="240" y="346" width="520" height="24" rx="4" fill="#2a3a4a"/>
+  <text x="500" y="336" font-family="monospace" font-size="10" fill="#aaa" text-anchor="middle">&lt;footer&gt; © 2014 MyWebsite · Privacy · Terms &lt;/footer&gt;</text>
+
+  <!-- Before HTML5 comparison (div soup) -->
+  <rect x="30" y="290" width="180" height="140" rx="6" fill="#1a0a0a" stroke="#cc3333" stroke-width="1"/>
+  <text x="120" y="310" font-family="sans-serif" font-size="11" fill="#cc3333" text-anchor="middle">Before HTML5</text>
+  <text x="120" y="326" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">"div soup"</text>
+  <text x="46" y="344" font-family="monospace" font-size="9" fill="#888">&lt;div id="header"&gt;</text>
+  <text x="46" y="358" font-family="monospace" font-size="9" fill="#888">&lt;div id="nav"&gt;</text>
+  <text x="46" y="372" font-family="monospace" font-size="9" fill="#888">&lt;div id="main"&gt;</text>
+  <text x="46" y="386" font-family="monospace" font-size="9" fill="#888">&lt;div id="sidebar"&gt;</text>
+  <text x="46" y="400" font-family="monospace" font-size="9" fill="#888">&lt;div id="footer"&gt;</text>
+  <text x="120" y="420" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">No semantic meaning!</text>
+
+  <!-- Year badge -->
+  <rect x="290" y="420" width="220" height="24" rx="12" fill="#e44d26"/>
+  <text x="400" y="436" font-family="sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">HTML5 · W3C · October 2014</text>
+</svg>

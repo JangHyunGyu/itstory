@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- 2021: TSN smart factory + QUIC/HTTP3 - dual scene -->
+  <rect width="800" height="450" fill="#0a0f18"/>
+  <!-- Left half: TSN industrial network -->
+  <rect x="0" y="0" width="400" height="450" fill="#0a1210"/>
+  <!-- Right half: QUIC/HTTP3 protocol -->
+  <rect x="400" y="0" width="400" height="450" fill="#100a18"/>
+  <!-- Divider -->
+  <line x1="400" y1="0" x2="400" y2="450" stroke="#2a2a3a" stroke-width="2" stroke-dasharray="8,4"/>
+  <!-- LEFT: TSN Smart Factory -->
+  <text x="200" y="32" font-family="sans-serif" font-size="10" font-weight="bold" fill="#40c060" text-anchor="middle">TSN · TIME-SENSITIVE NETWORKING</text>
+  <!-- Central TSN switch -->
+  <g transform="translate(200, 195)">
+    <rect x="-70" y="-35" width="140" height="70" fill="#0a2a1a" rx="5" stroke="#1a6a2a" stroke-width="2"/>
+    <text x="0" y="-14" font-family="monospace" font-size="9" fill="#40c060" text-anchor="middle">TSN SWITCH</text>
+    <text x="0" y="2" font-family="monospace" font-size="8" fill="#20a040" text-anchor="middle">IEEE 802.1Q</text>
+    <text x="0" y="18" font-family="monospace" font-size="8" fill="#20a040" text-anchor="middle">Time-sync'd</text>
+    <!-- Port indicators -->
+    <g fill="#40ff60">
+      <circle cx="-55" cy="28" r="4"/><circle cx="-38" cy="28" r="4"/>
+      <circle cx="-21" cy="28" r="4"/><circle cx="-4" cy="28" r="4"/>
+      <circle cx="13" cy="28" r="4"/><circle cx="30" cy="28" r="4"/>
+      <circle cx="47" cy="28" r="4"/>
+    </g>
+  </g>
+  <!-- Robot arm 1 -->
+  <g transform="translate(70, 130)">
+    <rect x="-20" y="-60" width="40" height="80" fill="#2a3a2a" rx="4" stroke="#3a5a3a" stroke-width="1.5"/>
+    <line x1="0" y1="-60" x2="-25" y2="-100" stroke="#4a6a4a" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-25" y1="-100" x2="-10" y2="-135" stroke="#4a6a4a" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="-10" cy="-135" r="6" fill="#60a060"/>
+    <text x="0" y="38" font-family="monospace" font-size="6" fill="#40a040" text-anchor="middle">ROBOT ARM 1</text>
+    <text x="0" y="50" font-family="monospace" font-size="6" fill="#20a020" text-anchor="middle">±0.1ms sync</text>
+    <!-- Connection to switch -->
+    <line x1="20" y1="0" x2="130" y2="145" stroke="#1a6a2a" stroke-width="2" stroke-dasharray="5,3"/>
+  </g>
+  <!-- Robot arm 2 -->
+  <g transform="translate(320, 125)">
+    <rect x="-20" y="-60" width="40" height="80" fill="#2a3a2a" rx="4" stroke="#3a5a3a" stroke-width="1.5"/>
+    <line x1="0" y1="-60" x2="25" y2="-100" stroke="#4a6a4a" stroke-width="4" stroke-linecap="round"/>
+    <line x1="25" y1="-100" x2="10" y2="-135" stroke="#4a6a4a" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="10" cy="-135" r="6" fill="#60a060"/>
+    <text x="0" y="38" font-family="monospace" font-size="6" fill="#40a040" text-anchor="middle">ROBOT ARM 2</text>
+    <text x="0" y="50" font-family="monospace" font-size="6" fill="#20a020" text-anchor="middle">±0.1ms sync</text>
+    <line x1="-20" y1="0" x2="-70" y2="145" stroke="#1a6a2a" stroke-width="2" stroke-dasharray="5,3"/>
+  </g>
+  <!-- Precision clock source -->
+  <g transform="translate(200, 310)">
+    <circle cx="0" cy="0" r="30" fill="#0a2010" stroke="#20a030" stroke-width="2"/>
+    <text x="0" y="-8" font-family="monospace" font-size="7" fill="#40c040" text-anchor="middle">IEEE 1588</text>
+    <text x="0" y="6" font-family="monospace" font-size="7" fill="#40c040" text-anchor="middle">PTP Clock</text>
+    <text x="0" y="20" font-family="monospace" font-size="6" fill="#20a020" text-anchor="middle">±1ns accuracy</text>
+    <line x1="0" y1="-30" x2="0" y2="-125" stroke="#20a030" stroke-width="2" stroke-dasharray="4,3"/>
+  </g>
+  <!-- TSN info box -->
+  <rect x="20" y="370" width="360" height="60" fill="#050f0a" rx="4" stroke="#1a5a2a" stroke-width="1"/>
+  <text x="200" y="388" font-family="sans-serif" font-size="8" fill="#40c060" text-anchor="middle">IEEE 802.1Qbv (Time-Aware Shaper) · RFC 9003</text>
+  <text x="30" y="403" font-family="serif" font-size="8" fill="#308050">Deterministic delivery · Guaranteed &lt;1ms latency for critical data</text>
+  <text x="30" y="418" font-family="serif" font-size="8" fill="#308050">Smart factory, automotive, power grid control all use TSN</text>
+  <!-- RIGHT: QUIC/HTTP3 -->
+  <text x="600" y="32" font-family="sans-serif" font-size="10" font-weight="bold" fill="#c060ff" text-anchor="middle">QUIC · HTTP/3 STANDARD · RFC 9000</text>
+  <!-- Protocol stack comparison -->
+  <!-- Old stack (left of right half) -->
+  <rect x="420" y="60" width="130" height="145" fill="#0f0818" rx="4" stroke="#4a2a6a" stroke-width="1.5"/>
+  <text x="485" y="78" font-family="monospace" font-size="8" fill="#9060c0" text-anchor="middle">HTTP/1.1 (old)</text>
+  <g font-family="monospace" font-size="7" text-anchor="middle">
+    <rect x="430" y="85" width="110" height="20" fill="#3a2a4a" rx="2"/>
+    <text x="485" y="99" fill="#8060a0">HTTP/1.1</text>
+    <rect x="430" y="109" width="110" height="20" fill="#2a2040" rx="2"/>
+    <text x="485" y="123" fill="#6050a0">TLS 1.2</text>
+    <rect x="430" y="133" width="110" height="20" fill="#2a1840" rx="2"/>
+    <text x="485" y="147" fill="#5040a0">TCP</text>
+    <rect x="430" y="157" width="110" height="20" fill="#201030" rx="2"/>
+    <text x="485" y="171" fill="#4030a0">IP</text>
+    <rect x="430" y="181" width="110" height="20" fill="#180828" rx="2"/>
+    <text x="485" y="195" fill="#3020a0">Ethernet</text>
+  </g>
+  <!-- Arrow: old to new -->
+  <polygon points="555,135 580,120 580,150" fill="#c060ff" opacity="0.8"/>
+  <!-- New QUIC stack -->
+  <rect x="585" y="60" width="190" height="145" fill="#100818" rx="4" stroke="#6020c0" stroke-width="2"/>
+  <text x="680" y="78" font-family="monospace" font-size="8" fill="#c060ff" text-anchor="middle">HTTP/3 + QUIC (NEW)</text>
+  <g font-family="monospace" font-size="7" text-anchor="middle">
+    <rect x="595" y="85" width="170" height="20" fill="#4a208a" rx="2"/>
+    <text x="680" y="99" fill="#e0a0ff">HTTP/3</text>
+    <rect x="595" y="109" width="170" height="40" fill="#3a1080" rx="2"/>
+    <text x="680" y="123" fill="#c080ff">QUIC (UDP-based)</text>
+    <text x="680" y="138" fill="#a060e0">TLS 1.3 built-in</text>
+    <rect x="595" y="153" width="170" height="20" fill="#200a50" rx="2"/>
+    <text x="680" y="167" fill="#8040c0">UDP</text>
+    <rect x="595" y="177" width="170" height="20" fill="#180828" rx="2"/>
+    <text x="680" y="191" fill="#6030c0">IP / Ethernet</text>
+  </g>
+  <!-- QUIC benefits -->
+  <rect x="420" y="220" width="360" height="125" fill="#0e0818" rx="5" stroke="#4a1a8a" stroke-width="1.5"/>
+  <text x="600" y="240" font-family="sans-serif" font-size="9" font-weight="bold" fill="#c060ff" text-anchor="middle">QUIC ADVANTAGES</text>
+  <text x="430" y="257" font-family="serif" font-size="8" fill="#9050c0">0-RTT connection: faster page loads</text>
+  <text x="430" y="271" font-family="serif" font-size="8" fill="#9050c0">No head-of-line blocking (vs TCP)</text>
+  <text x="430" y="285" font-family="serif" font-size="8" fill="#9050c0">Connection migration (Wi-Fi → 5G seamless)</text>
+  <text x="430" y="299" font-family="serif" font-size="8" fill="#9050c0">Built-in TLS 1.3 encryption</text>
+  <text x="430" y="313" font-family="serif" font-size="8" fill="#c080ff">Google + Cloudflare → IETF RFC 9000 (May 2021)</text>
+  <text x="430" y="327" font-family="serif" font-size="8" fill="#c080ff">HTTP/3 RFC 9114 · ~25% of web traffic in 2023</text>
+  <!-- IETF logo area -->
+  <rect x="420" y="360" width="360" height="50" fill="#080810" rx="4" stroke="#3a1a6a" stroke-width="1"/>
+  <text x="600" y="380" font-family="sans-serif" font-size="9" fill="#a060e0" text-anchor="middle">IETF RFC 9000 · May 2021 · Jim Roskind + IETF QUIC WG</text>
+  <text x="600" y="398" font-family="sans-serif" font-size="8" fill="#7040b0" text-anchor="middle">Transport-layer revolution: first since TCP in 1974</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#0a1a1a" rx="6" opacity="0.9" stroke="#40c0a0" stroke-width="1"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#40c0a0" text-anchor="middle">2021</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#050810" opacity="0.9"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">TSN Smart Factory + QUIC/HTTP3 Standard · Precision Timing + Faster Web Transport</text>
+</svg>

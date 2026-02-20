@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Symbolics.com - first commercial domain registration -->
+  <rect width="800" height="450" fill="#1a1a2a"/>
+  <!-- Office interior - SRI-NIC registration desk -->
+  <rect x="0" y="340" width="800" height="110" fill="#14141e"/>
+  <!-- Back wall -->
+  <rect x="0" y="0" width="800" height="345" fill="#1e1e30"/>
+  <!-- Computer terminal at NIC desk -->
+  <g transform="translate(200, 250)">
+    <!-- Desk -->
+    <rect x="-100" y="0" width="200" height="12" fill="#3a2a18" rx="2"/>
+    <rect x="-80" y="10" width="8" height="55" fill="#2a1a10"/>
+    <rect x="72" y="10" width="8" height="55" fill="#2a1a10"/>
+    <!-- Monitor -->
+    <rect x="-80" y="-130" width="160" height="110" fill="#1a1a1a" rx="4" stroke="#3a3a3a" stroke-width="2"/>
+    <rect x="-72" y="-122" width="144" height="94" fill="#0a0a1a" rx="2"/>
+    <!-- SRI-NIC Terminal screen -->
+    <text x="0" y="-108" font-family="monospace" font-size="7" fill="#40ff80" text-anchor="middle">SRI-NIC DOMAIN REGISTRY</text>
+    <text x="0" y="-94" font-family="monospace" font-size="7" fill="#20c050" text-anchor="middle">────────────────────</text>
+    <text x="0" y="-78" font-family="monospace" font-size="7" fill="#40e060" text-anchor="middle">REGISTERING NEW DOMAIN:</text>
+    <text x="0" y="-62" font-family="monospace" font-size="9" fill="#80ff40" text-anchor="middle" font-weight="bold">SYMBOLICS.COM</text>
+    <text x="0" y="-46" font-family="monospace" font-size="7" fill="#40e060" text-anchor="middle">March 15, 1985</text>
+    <text x="0" y="-30" font-family="monospace" font-size="7" fill="#20c050" text-anchor="middle">STATUS: REGISTERED OK</text>
+    <!-- Keyboard -->
+    <rect x="-70" y="-14" width="140" height="16" fill="#2a2a2a" rx="2"/>
+    <!-- NIC operator figure -->
+    <ellipse cx="0" cy="-178" rx="18" ry="18" fill="#c8956a"/>
+    <rect x="-14" y="-161" width="28" height="35" fill="#2a4a2a" rx="3"/>
+    <text x="0" y="30" font-family="serif" font-size="8" fill="#8090a0" text-anchor="middle">SRI-NIC Operator</text>
+  </g>
+  <!-- Symbolics Inc. side - Boston company -->
+  <g transform="translate(560, 250)">
+    <rect x="-90" y="-140" width="180" height="115" fill="#0a1520" rx="5" stroke="#204060" stroke-width="1.5"/>
+    <text x="0" y="-118" font-family="sans-serif" font-size="10" font-weight="bold" fill="#40a0c0" text-anchor="middle">SYMBOLICS, INC.</text>
+    <text x="0" y="-103" font-family="serif" font-size="8" fill="#6080a0" text-anchor="middle">Cambridge, Massachusetts</text>
+    <!-- Symbolics Lisp Machine -->
+    <rect x="-70" y="-95" width="80" height="60" fill="#2a2a3a" rx="3"/>
+    <rect x="-63" y="-88" width="66" height="45" fill="#1a1a2a" rx="1"/>
+    <text x="-30" y="-70" font-family="monospace" font-size="7" fill="#60a0ff">Genera OS</text>
+    <text x="-30" y="-56" font-family="monospace" font-size="7" fill="#4080e0">Lisp Machine</text>
+    <text x="-30" y="-42" font-family="monospace" font-size="7" fill="#4080e0">symbolics.com</text>
+    <!-- Keyboard under monitor -->
+    <rect x="-63" y="-28" width="66" height="10" fill="#3a3a4a" rx="1"/>
+    <!-- The application document -->
+    <rect x="18" y="-95" width="55" height="70" fill="#f5f0e0" rx="2" stroke="#a0a080" stroke-width="1"/>
+    <text x="45" y="-80" font-family="serif" font-size="6" fill="#2a2a2a" text-anchor="middle">DOMAIN NAME</text>
+    <text x="45" y="-68" font-family="serif" font-size="6" fill="#2a2a2a" text-anchor="middle">REQUEST FORM</text>
+    <text x="45" y="-55" font-family="serif" font-size="5" fill="#4a4a4a" text-anchor="middle">Name: SYMBOLICS.COM</text>
+    <text x="45" y="-43" font-family="serif" font-size="5" fill="#4a4a4a" text-anchor="middle">Type: commercial</text>
+    <text x="45" y="-31" font-family="serif" font-size="5" fill="#4a4a4a" text-anchor="middle">Contact: ...</text>
+    <!-- Symbolics person -->
+    <ellipse cx="0" cy="-180" rx="16" ry="16" fill="#d4a870"/>
+    <rect x="-12" y="-165" width="24" height="30" fill="#3a1a3a" rx="2"/>
+    <text x="0" y="0" font-family="serif" font-size="8" fill="#8090a0" text-anchor="middle">Symbolics Engineer</text>
+  </g>
+  <!-- Central "1st .com domain" display -->
+  <rect x="290" y="65" width="220" height="160" fill="#05101a" rx="8" stroke="#306080" stroke-width="2" opacity="0.95"/>
+  <text x="400" y="93" font-family="monospace" font-size="11" font-weight="bold" fill="#40c0ff" text-anchor="middle">FIRST .COM DOMAIN</text>
+  <text x="400" y="114" font-family="monospace" font-size="16" font-weight="bold" fill="#80ff40" text-anchor="middle">symbolics.com</text>
+  <text x="400" y="133" font-family="serif" font-size="9" fill="#60a0c0" text-anchor="middle">March 15, 1985</text>
+  <line x1="310" y1="143" x2="490" y2="143" stroke="#2a4a6a" stroke-width="1"/>
+  <text x="400" y="160" font-family="serif" font-size="8" fill="#5080a0" text-anchor="middle">Domain #1 of 7 registered in 1985</text>
+  <text x="400" y="175" font-family="serif" font-size="8" fill="#5080a0" text-anchor="middle">.com zone file: 6 entries by year-end</text>
+  <text x="400" y="192" font-family="serif" font-size="8" fill="#5080a0" text-anchor="middle">Today: 350+ million .com domains</text>
+  <!-- Other early domains -->
+  <rect x="28" y="65" width="240" height="140" fill="#05101a" rx="6" stroke="#206040" stroke-width="1.5" opacity="0.9"/>
+  <text x="148" y="88" font-family="sans-serif" font-size="9" font-weight="bold" fill="#40c080" text-anchor="middle">FIRST 6 .COM DOMAINS (1985)</text>
+  <g font-family="monospace" font-size="9" fill="#60e0a0">
+    <text x="40" y="108">1. symbolics.com</text>
+    <text x="40" y="122">2. bbn.com</text>
+    <text x="40" y="136">3. think.com</text>
+    <text x="40" y="150">4. mcc.com</text>
+    <text x="40" y="164">5. dec.com</text>
+    <text x="40" y="178">6. northrop.com</text>
+  </g>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#0a1a3a" rx="6" opacity="0.9" stroke="#40a0ff" stroke-width="1"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#40a0ff" text-anchor="middle">1985</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#050810" opacity="0.9"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">Symbolics.com Registered · First Commercial .COM Domain · Internet Opens for Business</text>
+</svg>

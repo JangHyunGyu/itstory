@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#fff9f0"/>
+
+  <!-- Title banner -->
+  <rect x="0" y="0" width="800" height="60" fill="#e65100" opacity="0.95"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">XML 데이터베이스 · 반정형 데이터 · 1998</text>
+
+  <!-- XML Tree structure (left) -->
+  <g transform="translate(30, 80)">
+    <text x="150" y="20" font-family="Arial, sans-serif" font-size="13" fill="#e65100" text-anchor="middle" font-weight="bold">XML Document</text>
+
+    <!-- XML document -->
+    <rect x="0" y="30" width="300" height="290" rx="6" fill="white" stroke="#e65100" stroke-width="2"/>
+    <g font-family="monospace" font-size="10">
+      <text x="12" y="58" fill="#6a1b9a">&lt;?xml version="1.0"?&gt;</text>
+      <text x="12" y="76" fill="#0d47a1">&lt;catalog&gt;</text>
+      <text x="24" y="94" fill="#0d47a1">  &lt;book id="b1"&gt;</text>
+      <text x="36" y="112" fill="#1b5e20">    &lt;title&gt;</text>
+      <text x="36" y="128" fill="#263238">      Data Systems</text>
+      <text x="36" y="144" fill="#1b5e20">    &lt;/title&gt;</text>
+      <text x="36" y="160" fill="#1b5e20">    &lt;author&gt;</text>
+      <text x="36" y="176" fill="#263238">      E.F. Codd</text>
+      <text x="36" y="192" fill="#1b5e20">    &lt;/author&gt;</text>
+      <text x="36" y="208" fill="#1b5e20">    &lt;year&gt;</text>
+      <text x="36" y="224" fill="#263238">      1970</text>
+      <text x="36" y="240" fill="#1b5e20">    &lt;/year&gt;</text>
+      <text x="24" y="256" fill="#0d47a1">  &lt;/book&gt;</text>
+      <text x="24" y="272" fill="#0d47a1">  &lt;book id="b2"&gt;</text>
+      <text x="24" y="288" fill="#777">    ...</text>
+      <text x="12" y="310" fill="#0d47a1">&lt;/catalog&gt;</text>
+    </g>
+  </g>
+
+  <!-- Middle - Data Flow Arrows -->
+  <g transform="translate(340, 160)">
+    <text x="60" y="0" font-family="Arial, sans-serif" font-size="11" fill="#e65100" text-anchor="middle">Web Services</text>
+    <text x="60" y="18" font-family="Arial, sans-serif" font-size="11" fill="#e65100" text-anchor="middle">데이터 교환</text>
+
+    <!-- Bidirectional arrows -->
+    <defs>
+      <marker id="arrow-xml" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+        <polygon points="0 0, 8 3, 0 6" fill="#e65100"/>
+      </marker>
+      <marker id="arrow-xml-r" markerWidth="8" markerHeight="6" refX="2" refY="3" orient="auto">
+        <polygon points="8 0, 0 3, 8 6" fill="#e65100"/>
+      </marker>
+    </defs>
+    <line x1="0" y1="40" x2="120" y2="40" stroke="#e65100" stroke-width="2.5" marker-end="url(#arrow-xml)"/>
+    <line x1="120" y1="55" x2="0" y2="55" stroke="#e65100" stroke-width="2.5" marker-end="url(#arrow-xml-r)"/>
+    <text x="60" y="75" font-family="Arial, sans-serif" font-size="10" fill="#555" text-anchor="middle">XML over HTTP</text>
+    <text x="60" y="90" font-family="Arial, sans-serif" font-size="10" fill="#555" text-anchor="middle">SOAP / REST</text>
+
+    <!-- XPath/XQuery label -->
+    <rect x="-15" y="110" width="150" height="55" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+    <text x="60" y="130" font-family="monospace" font-size="10" fill="#e65100" text-anchor="middle">XPath:</text>
+    <text x="60" y="146" font-family="monospace" font-size="9" fill="#263238" text-anchor="middle">//book[@id='b1']/</text>
+    <text x="60" y="158" font-family="monospace" font-size="9" fill="#263238" text-anchor="middle">title/text()</text>
+  </g>
+
+  <!-- Right - Relational Table comparison -->
+  <g transform="translate(475, 80)">
+    <text x="145" y="20" font-family="Arial, sans-serif" font-size="13" fill="#1565c0" text-anchor="middle" font-weight="bold">Relational Table</text>
+
+    <!-- Table -->
+    <rect x="0" y="30" width="290" height="200" rx="6" fill="white" stroke="#1565c0" stroke-width="2"/>
+    <!-- Header -->
+    <rect x="0" y="30" width="290" height="28" rx="6" fill="#1565c0"/>
+    <text x="145" y="49" font-family="monospace" font-size="11" fill="white" text-anchor="middle">books</text>
+
+    <!-- Column headers -->
+    <rect x="0" y="58" width="290" height="22" fill="#e3f2fd"/>
+    <text x="20" y="74" font-family="monospace" font-size="9" fill="#1565c0">id</text>
+    <text x="60" y="74" font-family="monospace" font-size="9" fill="#1565c0">title</text>
+    <text x="175" y="74" font-family="monospace" font-size="9" fill="#1565c0">author</text>
+    <text x="250" y="74" font-family="monospace" font-size="9" fill="#1565c0">year</text>
+    <line x1="0" y1="80" x2="290" y2="80" stroke="#90caf9" stroke-width="1"/>
+
+    <!-- Rows -->
+    <g font-family="monospace" font-size="9" fill="#263238">
+      <text x="20" y="96">b1</text>
+      <text x="60" y="96">Data Systems</text>
+      <text x="175" y="96">E.F. Codd</text>
+      <text x="250" y="96">1970</text>
+      <line x1="0" y1="102" x2="290" y2="102" stroke="#e3f2fd" stroke-width="1"/>
+
+      <text x="20" y="118">b2</text>
+      <text x="60" y="118">XML Design</text>
+      <text x="175" y="118">Tim B-L</text>
+      <text x="250" y="118">1998</text>
+      <line x1="0" y1="124" x2="290" y2="124" stroke="#e3f2fd" stroke-width="1"/>
+
+      <text x="20" y="140">b3</text>
+      <text x="60" y="140">Web Dev 101</text>
+      <text x="175" y="140">B. Devlin</text>
+      <text x="250" y="140">1995</text>
+    </g>
+
+    <!-- Rigid structure note -->
+    <rect x="10" y="160" width="270" height="60" rx="4" fill="#fff8e1"/>
+    <text x="145" y="180" font-family="Arial, sans-serif" font-size="10" fill="#f57f17" text-anchor="middle">고정된 스키마 (Rigid Schema)</text>
+    <text x="145" y="196" font-family="Arial, sans-serif" font-size="9" fill="#555" text-anchor="middle">새로운 속성 추가 시</text>
+    <text x="145" y="210" font-family="Arial, sans-serif" font-size="9" fill="#555" text-anchor="middle">테이블 구조 변경 필요</text>
+  </g>
+
+  <!-- Semi-structured data tag cloud -->
+  <rect x="475" y="300" width="290" height="70" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="620" y="320" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32" text-anchor="middle" font-weight="bold">반정형 데이터 (Semi-structured)</text>
+  <text x="620" y="338" font-family="Arial, sans-serif" font-size="10" fill="#388e3c" text-anchor="middle">스키마 없이도 데이터 구조 표현 가능</text>
+  <text x="620" y="355" font-family="Arial, sans-serif" font-size="9" fill="#555" text-anchor="middle">XML · JSON · YAML · HTML</text>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#e65100" opacity="0.9"/>
+  <text x="400" y="415" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">XML 등장으로 반정형 데이터가 웹 서비스 교환 표준으로</text>
+  <text x="400" y="438" font-family="Arial, sans-serif" font-size="11" fill="#ffe0b2" text-anchor="middle">W3C XML 1.0 · 1998 · 관계형 모델에 도전하는 새로운 패러다임</text>
+</svg>

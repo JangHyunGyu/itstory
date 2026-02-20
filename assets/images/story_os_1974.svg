@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: 1970s warm era, early home computing -->
+  <rect width="800" height="450" fill="#1a1608"/>
+  <rect x="0" y="340" width="800" height="110" fill="#141008"/>
+  <line x1="0" y1="340" x2="800" y2="340" stroke="#3a3010" stroke-width="2"/>
+
+  <!-- CP/M title -->
+  <text x="400" y="55" text-anchor="middle" font-family="monospace" font-size="22" fill="#ddaa22" font-weight="bold">CP/M</text>
+  <text x="400" y="76" text-anchor="middle" font-family="monospace" font-size="12" fill="#aa8820">Control Program for Microcomputers</text>
+
+  <!-- BIOS / BDOS architecture diagram -->
+  <!-- Hardware layer -->
+  <rect x="80" y="100" width="640" height="50" rx="5" fill="#1a1008" stroke="#5a4010" stroke-width="2"/>
+  <text x="400" y="130" text-anchor="middle" font-family="monospace" font-size="13" fill="#8a6820">HARDWARE — Altair · IMSAI · Kaypro · North Star</text>
+
+  <!-- BIOS layer -->
+  <rect x="80" y="165" width="300" height="55" rx="5" fill="#2a1a04" stroke="#aa7010" stroke-width="2"/>
+  <text x="230" y="188" text-anchor="middle" font-family="monospace" font-size="12" fill="#ddaa44" font-weight="bold">BIOS</text>
+  <text x="230" y="208" text-anchor="middle" font-family="monospace" font-size="10" fill="#aa8830">Basic I/O System</text>
+  <text x="230" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#886620">제조사가 하드웨어별 구현</text>
+
+  <!-- BDOS layer -->
+  <rect x="420" y="165" width="300" height="55" rx="5" fill="#1a2a04" stroke="#7a9010" stroke-width="2"/>
+  <text x="570" y="188" text-anchor="middle" font-family="monospace" font-size="12" fill="#ccdd44" font-weight="bold">BDOS</text>
+  <text x="570" y="208" text-anchor="middle" font-family="monospace" font-size="10" fill="#aabb30">Basic Disk Operating System</text>
+  <text x="570" y="220" text-anchor="middle" font-family="monospace" font-size="9" fill="#88aa20">공통 파일 시스템 · 표준 API</text>
+
+  <!-- CCP layer -->
+  <rect x="80" y="235" width="640" height="50" rx="5" fill="#0a1a2a" stroke="#2a6090" stroke-width="2"/>
+  <text x="400" y="258" text-anchor="middle" font-family="monospace" font-size="12" fill="#44aadd" font-weight="bold">CCP — Console Command Processor</text>
+  <text x="400" y="275" text-anchor="middle" font-family="monospace" font-size="10" fill="#2a88bb">사용자 명령 처리 · 프로그램 실행</text>
+
+  <!-- Application layer -->
+  <rect x="80" y="298" width="640" height="36" rx="5" fill="#0a0a2a" stroke="#1a1a60" stroke-width="2"/>
+  <text x="400" y="321" text-anchor="middle" font-family="monospace" font-size="11" fill="#7788dd">APPLICATIONS — WordStar · dBASE · VisiCalc · Turbo Pascal</text>
+
+  <!-- Connecting arrows between layers -->
+  <defs>
+    <marker id="cp" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ccaa44"/>
+    </marker>
+    <marker id="cp2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4488cc"/>
+    </marker>
+  </defs>
+  <line x1="230" y1="150" x2="230" y2="165" stroke="#ccaa44" stroke-width="2" marker-end="url(#cp)"/>
+  <line x1="570" y1="150" x2="570" y2="165" stroke="#ccaa44" stroke-width="2" marker-end="url(#cp)"/>
+  <line x1="400" y1="220" x2="400" y2="235" stroke="#4488cc" stroke-width="2" marker-end="url(#cp2)"/>
+  <line x1="400" y1="285" x2="400" y2="298" stroke="#4488cc" stroke-width="2" marker-end="url(#cp2)"/>
+
+  <!-- Separation line label -->
+  <line x1="380" y1="165" x2="420" y2="165" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="400" y="162" text-anchor="middle" font-family="monospace" font-size="8" fill="#666">↑ 하드웨어 종속 ↑</text>
+  <line x1="380" y1="220" x2="420" y2="220" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="400" y="233" text-anchor="middle" font-family="monospace" font-size="8" fill="#666">↓ 하드웨어 독립 ↓</text>
+
+  <!-- Gary Kildall portrait / icon -->
+  <ellipse cx="730" cy="140" rx="26" ry="26" fill="#2a2010"/>
+  <rect x="704" y="166" width="52" height="80" rx="6" fill="#1e180c"/>
+  <text x="730" y="262" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ccaa44">Gary Kildall</text>
+  <text x="730" y="275" text-anchor="middle" font-family="monospace" font-size="9" fill="#aa8830">Digital Research</text>
+
+  <!-- Key insight box -->
+  <rect x="30" y="355" width="740" height="40" rx="5" fill="#1a1a08" stroke="#5a5010" stroke-width="1.5"/>
+  <text x="400" y="372" text-anchor="middle" font-family="monospace" font-size="10" fill="#ddcc44">CP/M 혁신: BIOS(하드웨어별) + BDOS(공통) 분리로 소프트웨어 호환성 달성</text>
+  <text x="400" y="386" text-anchor="middle" font-family="monospace" font-size="9" fill="#aa9930">→ MS-DOS → Windows 드라이버 모델의 뿌리</text>
+
+  <!-- Title -->
+  <rect x="0" y="410" width="800" height="40" fill="#141008" opacity="0.95"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#ddaa44" font-weight="bold">CP/M — 마이크로컴퓨터 표준 OS · BIOS/BDOS 분리 · 1974</text>
+</svg>

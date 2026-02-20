@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: clean white/light gray, modern distributed feel -->
+  <rect width="800" height="450" fill="#f4f6f8"/>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="sans-serif" font-size="15" font-weight="bold" fill="#336699" text-anchor="middle">Memcached — 2005</text>
+  <text x="400" y="54" font-family="sans-serif" font-size="11" fill="#7a8a9a" text-anchor="middle">Distributed memory cache · Session sharing · High-performance data lookup</text>
+
+  <!-- === Multiple App Servers (top row) === -->
+  <!-- App Server 1 -->
+  <rect x="50" y="90" width="140" height="100" rx="8" fill="#1a3a6a"/>
+  <rect x="60" y="100" width="120" height="20" rx="3" fill="#2a4a7a"/>
+  <text x="120" y="115" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">App Server 1</text>
+  <text x="120" y="140" font-family="monospace" font-size="8" fill="#aac8ff" text-anchor="middle">WAS :8080</text>
+  <text x="120" y="155" font-family="monospace" font-size="8" fill="#88aaee" text-anchor="middle">session: ???</text>
+  <text x="120" y="170" font-family="monospace" font-size="7" fill="#ff8888" text-anchor="middle">no shared state!</text>
+
+  <!-- App Server 2 -->
+  <rect x="330" y="90" width="140" height="100" rx="8" fill="#1a3a6a"/>
+  <rect x="340" y="100" width="120" height="20" rx="3" fill="#2a4a7a"/>
+  <text x="400" y="115" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">App Server 2</text>
+  <text x="400" y="140" font-family="monospace" font-size="8" fill="#aac8ff" text-anchor="middle">WAS :8081</text>
+  <text x="400" y="155" font-family="monospace" font-size="8" fill="#88aaee" text-anchor="middle">session: ???</text>
+  <text x="400" y="170" font-family="monospace" font-size="7" fill="#ff8888" text-anchor="middle">no shared state!</text>
+
+  <!-- App Server 3 -->
+  <rect x="610" y="90" width="140" height="100" rx="8" fill="#1a3a6a"/>
+  <rect x="620" y="100" width="120" height="20" rx="3" fill="#2a4a7a"/>
+  <text x="680" y="115" font-family="sans-serif" font-size="9" fill="white" text-anchor="middle">App Server 3</text>
+  <text x="680" y="140" font-family="monospace" font-size="8" fill="#aac8ff" text-anchor="middle">WAS :8082</text>
+  <text x="680" y="155" font-family="monospace" font-size="8" fill="#88aaee" text-anchor="middle">session: ???</text>
+  <text x="680" y="170" font-family="monospace" font-size="7" fill="#ff8888" text-anchor="middle">no shared state!</text>
+
+  <!-- "PROBLEM" label -->
+  <text x="400" y="218" font-family="sans-serif" font-size="13" font-weight="bold" fill="#cc4444" text-anchor="middle">Problem: Where to store shared data?</text>
+
+  <!-- === Down arrow to solution === -->
+  <line x1="400" y1="226" x2="400" y2="250" stroke="#336699" stroke-width="2.5"/>
+  <polygon points="394,250 400,266 406,250" fill="#336699"/>
+
+  <!-- === Memcached pool (center) === -->
+  <!-- Pool label -->
+  <text x="400" y="286" font-family="sans-serif" font-size="12" font-weight="bold" fill="#336699" text-anchor="middle">Memcached Cluster</text>
+
+  <!-- Memcached node 1 -->
+  <rect x="88" y="294" width="120" height="88" rx="8" fill="#336699"/>
+  <rect x="96" y="302" width="104" height="14" rx="3" fill="#4477aa"/>
+  <text x="148" y="314" font-family="monospace" font-size="8" fill="white" text-anchor="middle">memcached-1</text>
+  <text x="148" y="332" font-family="monospace" font-size="7" fill="#aac8ff" text-anchor="middle">:11211</text>
+  <text x="148" y="346" font-family="monospace" font-size="7" fill="#88bbdd" text-anchor="middle">RAM: 1 GB</text>
+  <text x="148" y="360" font-family="monospace" font-size="7" fill="#88bbdd" text-anchor="middle">items: 82,441</text>
+  <text x="148" y="374" font-family="monospace" font-size="7" fill="#aaffaa" text-anchor="middle">hit_ratio: 94%</text>
+
+  <!-- Memcached node 2 -->
+  <rect x="248" y="294" width="120" height="88" rx="8" fill="#336699"/>
+  <rect x="256" y="302" width="104" height="14" rx="3" fill="#4477aa"/>
+  <text x="308" y="314" font-family="monospace" font-size="8" fill="white" text-anchor="middle">memcached-2</text>
+  <text x="308" y="332" font-family="monospace" font-size="7" fill="#aac8ff" text-anchor="middle">:11211</text>
+  <text x="308" y="346" font-family="monospace" font-size="7" fill="#88bbdd" text-anchor="middle">RAM: 1 GB</text>
+  <text x="308" y="360" font-family="monospace" font-size="7" fill="#88bbdd" text-anchor="middle">items: 79,820</text>
+  <text x="308" y="374" font-family="monospace" font-size="7" fill="#aaffaa" text-anchor="middle">hit_ratio: 92%</text>
+
+  <!-- Memcached node 3 -->
+  <rect x="408" y="294" width="120" height="88" rx="8" fill="#336699"/>
+  <rect x="416" y="302" width="104" height="14" rx="3" fill="#4477aa"/>
+  <text x="468" y="314" font-family="monospace" font-size="8" fill="white" text-anchor="middle">memcached-3</text>
+  <text x="468" y="332" font-family="monospace" font-size="7" fill="#aac8ff" text-anchor="middle">:11211</text>
+  <text x="468" y="346" font-family="monospace" font-size="7" fill="#88bbdd" text-anchor="middle">RAM: 1 GB</text>
+  <text x="468" y="360" font-family="monospace" font-size="7" fill="#88bbdd" text-anchor="middle">items: 77,003</text>
+  <text x="468" y="374" font-family="monospace" font-size="7" fill="#aaffaa" text-anchor="middle">hit_ratio: 93%</text>
+
+  <!-- Memcached node 4 -->
+  <rect x="568" y="294" width="120" height="88" rx="8" fill="#336699"/>
+  <rect x="576" y="302" width="104" height="14" rx="3" fill="#4477aa"/>
+  <text x="628" y="314" font-family="monospace" font-size="8" fill="white" text-anchor="middle">memcached-4</text>
+  <text x="628" y="332" font-family="monospace" font-size="7" fill="#aac8ff" text-anchor="middle">:11211</text>
+  <text x="628" y="346" font-family="monospace" font-size="7" fill="#88bbdd" text-anchor="middle">RAM: 1 GB</text>
+  <text x="628" y="360" font-family="monospace" font-size="7" fill="#88bbdd" text-anchor="middle">items: 80,112</text>
+  <text x="628" y="374" font-family="monospace" font-size="7" fill="#aaffaa" text-anchor="middle">hit_ratio: 95%</text>
+
+  <!-- Lines connecting app servers to memcached pool -->
+  <!-- Server 1 to all nodes -->
+  <line x1="120" y1="190" x2="148" y2="294" stroke="#336699" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="120" y1="190" x2="308" y2="294" stroke="#336699" stroke-width="1" stroke-dasharray="5,4" opacity="0.5"/>
+  <!-- Server 2 to all nodes -->
+  <line x1="400" y1="190" x2="148" y2="294" stroke="#336699" stroke-width="1" stroke-dasharray="5,4" opacity="0.5"/>
+  <line x1="400" y1="190" x2="308" y2="294" stroke="#336699" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="400" y1="190" x2="468" y2="294" stroke="#336699" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <!-- Server 3 to all nodes -->
+  <line x1="680" y1="190" x2="468" y2="294" stroke="#336699" stroke-width="1" stroke-dasharray="5,4" opacity="0.5"/>
+  <line x1="680" y1="190" x2="628" y2="294" stroke="#336699" stroke-width="1.5" stroke-dasharray="5,4"/>
+
+  <!-- Key-value diagram -->
+  <rect x="210" y="395" width="380" height="46" rx="8" fill="#e8f0f8" stroke="#336699" stroke-width="1"/>
+  <text x="270" y="413" font-family="monospace" font-size="9" fill="#1a3a6a">set("session:alice", data, ttl=3600)</text>
+  <text x="270" y="431" font-family="monospace" font-size="9" fill="#336699">get("session:alice")  →  {cart, prefs}</text>
+
+  <!-- Dang Hyun-song credit note -->
+  <text x="400" y="80" font-family="sans-serif" font-size="9" fill="#6a8a9a" text-anchor="middle">Originally built for LiveJournal (Brad Fitzpatrick, 2003) · Open-sourced 2004</text>
+</svg>

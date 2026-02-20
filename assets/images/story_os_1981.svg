@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: early 1980s, office/home PC era -->
+  <rect width="800" height="450" fill="#1a1410"/>
+  <rect x="0" y="340" width="800" height="110" fill="#141008"/>
+  <line x1="0" y1="340" x2="800" y2="340" stroke="#3a2a18" stroke-width="2"/>
+
+  <!-- IBM PC 5150 illustration -->
+  <!-- Monitor -->
+  <rect x="80" y="80" width="220" height="170" rx="8" fill="#1e1a14" stroke="#4a3a28" stroke-width="2.5"/>
+  <!-- Screen bezel -->
+  <rect x="96" y="94" width="188" height="140" rx="4" fill="#0a0a08" stroke="#2a2218" stroke-width="1.5"/>
+  <!-- CRT screen green phosphor -->
+  <rect x="104" y="100" width="172" height="128" rx="3" fill="#001a00"/>
+  <!-- MS-DOS prompt on screen -->
+  <g font-family="monospace" font-size="11" fill="#00cc00">
+    <text x="112" y="120">A:\&gt;_</text>
+    <text x="112" y="140">A:\&gt;dir</text>
+    <text x="112" y="156"> Volume in drive A</text>
+    <text x="112" y="171"> has no label</text>
+    <text x="112" y="187">COMMAND  COM  17664</text>
+    <text x="112" y="202"> 1 File(s)</text>
+    <text x="112" y="218">A:\&gt;_</text>
+  </g>
+
+  <!-- IBM PC System Unit -->
+  <rect x="80" y="258" width="220" height="70" rx="5" fill="#1e1a14" stroke="#4a3a28" stroke-width="2"/>
+  <!-- Floppy drives -->
+  <rect x="100" y="270" width="80" height="36" rx="2" fill="#141008" stroke="#3a2a18" stroke-width="1"/>
+  <rect x="108" y="278" width="64" height="16" rx="2" fill="#0a0a08" stroke="#2a1a10" stroke-width="1"/>
+  <rect x="114" y="286" width="18" height="4" rx="1" fill="#1e1a10"/>
+  <!-- Power LED -->
+  <circle cx="248" cy="285" r="5" fill="#00cc00"/>
+  <circle cx="248" cy="285" r="3" fill="#00ff00"/>
+  <!-- IBM logo -->
+  <text x="188" y="298" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#4488cc" font-weight="bold">IBM</text>
+
+  <!-- Keyboard -->
+  <rect x="60" y="332" width="260" height="48" rx="5" fill="#1a1610" stroke="#3a2a18" stroke-width="1.5"/>
+  <g fill="#0e0c08">
+    <rect x="75" y="338" width="12" height="10" rx="1"/>
+    <rect x="92" y="338" width="12" height="10" rx="1"/>
+    <rect x="109" y="338" width="12" height="10" rx="1"/>
+    <rect x="126" y="338" width="12" height="10" rx="1"/>
+    <rect x="143" y="338" width="12" height="10" rx="1"/>
+    <rect x="160" y="338" width="12" height="10" rx="1"/>
+    <rect x="177" y="338" width="12" height="10" rx="1"/>
+    <rect x="194" y="338" width="12" height="10" rx="1"/>
+    <rect x="211" y="338" width="12" height="10" rx="1"/>
+    <rect x="228" y="338" width="12" height="10" rx="1"/>
+    <rect x="245" y="338" width="12" height="10" rx="1"/>
+    <rect x="262" y="338" width="12" height="10" rx="1"/>
+    <rect x="75" y="353" width="14" height="10" rx="1"/>
+    <rect x="94" y="353" width="12" height="10" rx="1"/>
+    <rect x="111" y="353" width="12" height="10" rx="1"/>
+    <rect x="128" y="353" width="12" height="10" rx="1"/>
+    <rect x="145" y="353" width="12" height="10" rx="1"/>
+    <rect x="162" y="353" width="12" height="10" rx="1"/>
+    <rect x="179" y="353" width="12" height="10" rx="1"/>
+    <rect x="196" y="353" width="40" height="10" rx="1"/>
+    <rect x="241" y="353" width="12" height="10" rx="1"/>
+    <rect x="258" y="353" width="16" height="10" rx="1"/>
+  </g>
+
+  <!-- MS-DOS architecture diagram -->
+  <rect x="360" y="80" width="260" height="230" rx="6" fill="#0a1220" stroke="#1a3060" stroke-width="2"/>
+  <text x="490" y="70" text-anchor="middle" font-family="monospace" font-size="12" fill="#4488cc" font-weight="bold">MS-DOS 1.0</text>
+
+  <!-- Layers -->
+  <rect x="378" y="96" width="224" height="36" rx="4" fill="#1a2040" stroke="#2a4080" stroke-width="1.5"/>
+  <text x="490" y="117" text-anchor="middle" font-family="monospace" font-size="11" fill="#7799cc">USER PROGRAMS</text>
+
+  <rect x="378" y="142" width="224" height="36" rx="4" fill="#162038" stroke="#224070" stroke-width="1.5"/>
+  <text x="490" y="163" text-anchor="middle" font-family="monospace" font-size="11" fill="#6688bb">COMMAND.COM</text>
+
+  <rect x="378" y="188" width="224" height="36" rx="4" fill="#122030" stroke="#1a3060" stroke-width="1.5"/>
+  <text x="490" y="209" text-anchor="middle" font-family="monospace" font-size="11" fill="#5577aa">MSDOS.SYS (INT 21h)</text>
+
+  <rect x="378" y="234" width="224" height="36" rx="4" fill="#0e1828" stroke="#162848" stroke-width="1.5"/>
+  <text x="490" y="255" text-anchor="middle" font-family="monospace" font-size="11" fill="#4466aa">IO.SYS (BIOS)</text>
+
+  <rect x="378" y="280" width="224" height="24" rx="4" fill="#0a1020" stroke="#101830" stroke-width="1"/>
+  <text x="490" y="296" text-anchor="middle" font-family="monospace" font-size="10" fill="#3355aa">IBM PC HARDWARE</text>
+
+  <!-- Arrows between layers -->
+  <defs>
+    <marker id="ma" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#4488cc"/>
+    </marker>
+  </defs>
+  <line x1="490" y1="132" x2="490" y2="142" stroke="#4488cc" stroke-width="1.5" marker-end="url(#ma)"/>
+  <line x1="490" y1="178" x2="490" y2="188" stroke="#4488cc" stroke-width="1.5" marker-end="url(#ma)"/>
+  <line x1="490" y1="224" x2="490" y2="234" stroke="#4488cc" stroke-width="1.5" marker-end="url(#ma)"/>
+  <line x1="490" y1="270" x2="490" y2="280" stroke="#4488cc" stroke-width="1.5" marker-end="url(#ma)"/>
+
+  <!-- MS logo / timeline -->
+  <rect x="650" y="80" width="120" height="80" rx="6" fill="#0e1220" stroke="#2a3a60" stroke-width="1.5"/>
+  <text x="710" y="106" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#4488cc" font-weight="bold">MS</text>
+  <text x="710" y="126" text-anchor="middle" font-family="monospace" font-size="9" fill="#3366aa">Microsoft</text>
+  <text x="710" y="142" text-anchor="middle" font-family="monospace" font-size="8" fill="#2255aa">DOS 1.0 · 1981</text>
+
+  <!-- DOS Commands list -->
+  <rect x="645" y="180" width="125" height="140" rx="5" fill="#061018" stroke="#1a2a40" stroke-width="1.5"/>
+  <text x="707" y="198" text-anchor="middle" font-family="monospace" font-size="10" fill="#4488cc">COMMANDS</text>
+  <g font-family="monospace" font-size="9" fill="#5599bb">
+    <text x="657" y="214">DIR</text>
+    <text x="657" y="228">COPY</text>
+    <text x="657" y="242">DEL</text>
+    <text x="657" y="256">TYPE</text>
+    <text x="657" y="270">FORMAT</text>
+    <text x="657" y="284">CHDIR (CD)</text>
+    <text x="657" y="298">MKDIR (MD)</text>
+    <text x="657" y="312">BATCH (.BAT)</text>
+  </g>
+
+  <!-- Title -->
+  <rect x="0" y="410" width="800" height="40" fill="#141008" opacity="0.95"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#5599cc" font-weight="bold">MS-DOS 1.0 — IBM PC 생태계를 단단히 묶다 · 1981</text>
+</svg>

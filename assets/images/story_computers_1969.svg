@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg1969" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050d05"/>
+      <stop offset="100%" stop-color="#020802"/>
+    </linearGradient>
+    <filter id="greenGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background - dark, coding atmosphere -->
+  <rect width="800" height="450" fill="url(#bg1969)"/>
+
+  <!-- Bell Labs building (left side) -->
+  <g transform="translate(20, 30)">
+    <!-- Building -->
+    <rect x="0" y="80" width="200" height="270" fill="#1a1a1a" rx="3"/>
+    <rect x="5" y="85" width="190" height="260" fill="#141414" rx="2"/>
+    <!-- Windows with lights -->
+    <g fill="#cc8800" opacity="0.7">
+      <rect x="15" y="95" width="25" height="18" rx="1"/>
+      <rect x="50" y="95" width="25" height="18" rx="1"/>
+      <rect x="85" y="95" width="25" height="18" rx="1"/>
+      <rect x="120" y="95" width="25" height="18" rx="1"/>
+      <rect x="155" y="95" width="25" height="18" rx="1"/>
+    </g>
+    <g fill="#cc8800" opacity="0.5">
+      <rect x="15" y="125" width="25" height="18" rx="1"/>
+      <rect x="85" y="125" width="25" height="18" rx="1"/>
+      <rect x="120" y="125" width="25" height="18" rx="1"/>
+      <rect x="155" y="125" width="25" height="18" rx="1"/>
+    </g>
+    <g fill="#88cc44" opacity="0.6">
+      <rect x="50" y="125" width="25" height="18" rx="1"/>
+    </g>
+    <g fill="#cc8800" opacity="0.4">
+      <rect x="15" y="155" width="25" height="18" rx="1"/>
+      <rect x="50" y="155" width="25" height="18" rx="1"/>
+      <rect x="85" y="155" width="25" height="18" rx="1"/>
+      <rect x="120" y="155" width="25" height="18" rx="1"/>
+      <rect x="155" y="155" width="25" height="18" rx="1"/>
+      <rect x="15" y="185" width="25" height="18" rx="1"/>
+      <rect x="50" y="185" width="25" height="18" rx="1"/>
+      <rect x="85" y="185" width="25" height="18" rx="1"/>
+      <rect x="120" y="185" width="25" height="18" rx="1"/>
+      <rect x="155" y="185" width="25" height="18" rx="1"/>
+    </g>
+    <!-- Building entrance -->
+    <rect x="80" y="310" width="40" height="40" fill="#0a0a0a"/>
+    <!-- Bell Labs sign -->
+    <rect x="20" y="50" width="160" height="28" fill="#0d0d0d" rx="3"/>
+    <text x="100" y="69" fill="#aaaaaa" font-size="12" font-family="sans-serif" text-anchor="middle" font-weight="bold">BELL LABS</text>
+    <text x="100" y="82" fill="#666666" font-size="9" font-family="sans-serif" text-anchor="middle">Murray Hill, NJ</text>
+  </g>
+
+  <!-- Two developers at terminal (center) -->
+  <!-- Terminal/workstation -->
+  <g transform="translate(260, 170)">
+    <!-- Desk -->
+    <rect x="-20" y="160" width="240" height="15" fill="#2a1a05" rx="2"/>
+    <rect x="-10" y="175" width="220" height="8" fill="#3a2810"/>
+
+    <!-- PDP-7 terminal -->
+    <rect x="10" y="60" width="180" height="110" fill="#1a1a0d" rx="4"/>
+    <rect x="16" y="65" width="168" height="85" fill="#000d00"/>
+    <!-- Terminal screen content -->
+    <text x="22" y="82" fill="#00ff00" font-size="10" font-family="monospace" filter="url(#greenGlow)">$ uname -a</text>
+    <text x="22" y="97" fill="#00cc00" font-size="10" font-family="monospace">Unix V1 PDP-7 1969</text>
+    <text x="22" y="112" fill="#00ff00" font-size="10" font-family="monospace" filter="url(#greenGlow)">$ ls -l</text>
+    <text x="22" y="127" fill="#00cc00" font-size="10" font-family="monospace">bin  dev  etc  tmp</text>
+    <text x="22" y="142" fill="#00ff00" font-size="10" font-family="monospace" filter="url(#greenGlow)">$ cat hello.c</text>
+
+    <!-- Keyboard -->
+    <rect x="20" y="158" width="160" height="20" fill="#1a1a0a" rx="2"/>
+    <g fill="#2a2a1a" stroke="#3a3a2a" stroke-width="0.5">
+      <rect x="25" y="161" width="9" height="7" rx="1"/>
+      <rect x="37" y="161" width="9" height="7" rx="1"/>
+      <rect x="49" y="161" width="9" height="7" rx="1"/>
+      <rect x="61" y="161" width="9" height="7" rx="1"/>
+      <rect x="73" y="161" width="9" height="7" rx="1"/>
+      <rect x="85" y="161" width="9" height="7" rx="1"/>
+      <rect x="97" y="161" width="9" height="7" rx="1"/>
+      <rect x="109" y="161" width="9" height="7" rx="1"/>
+      <rect x="121" y="161" width="9" height="7" rx="1"/>
+      <rect x="133" y="161" width="9" height="7" rx="1"/>
+      <rect x="145" y="161" width="9" height="7" rx="1"/>
+      <rect x="157" y="161" width="9" height="7" rx="1"/>
+    </g>
+  </g>
+
+  <!-- Ken Thompson figure (left of terminal) -->
+  <g transform="translate(295, 80)">
+    <!-- Body -->
+    <rect x="-15" y="35" width="30" height="60" fill="#2a3a2a" rx="2"/>
+    <!-- Head -->
+    <ellipse cx="0" cy="22" rx="15" ry="17" fill="#c49060"/>
+    <!-- Beard (Ken Thompson had a beard) -->
+    <ellipse cx="0" cy="32" rx="11" ry="7" fill="#4a3a28"/>
+    <!-- Hair (dark) -->
+    <ellipse cx="0" cy="9" rx="15" ry="9" fill="#1a1008"/>
+    <circle cx="-5" cy="20" r="2" fill="#1a1000"/>
+    <circle cx="5" cy="20" r="2" fill="#1a1000"/>
+    <!-- Arm pointing at screen -->
+    <line x1="15" y1="55" x2="45" y2="65" stroke="#c49060" stroke-width="5" stroke-linecap="round"/>
+    <!-- Label -->
+    <text x="0" y="108" fill="#44aa44" font-size="10" font-family="monospace" text-anchor="middle">Ken Thompson</text>
+  </g>
+
+  <!-- Dennis Ritchie figure (right of terminal) -->
+  <g transform="translate(490, 85)">
+    <!-- Body -->
+    <rect x="-15" y="35" width="30" height="55" fill="#2a2a3a" rx="2"/>
+    <!-- Head -->
+    <ellipse cx="0" cy="22" rx="14" ry="16" fill="#c8a878"/>
+    <!-- Hair (glasses) -->
+    <ellipse cx="0" cy="10" rx="14" ry="9" fill="#3a2a1a"/>
+    <!-- Glasses -->
+    <rect x="-12" y="18" width="10" height="7" fill="none" stroke="#888888" stroke-width="1.5" rx="2"/>
+    <rect x="2" y="18" width="10" height="7" fill="none" stroke="#888888" stroke-width="1.5" rx="2"/>
+    <line x1="-2" y1="21" x2="2" y2="21" stroke="#888888" stroke-width="1"/>
+    <circle cx="-7" cy="22" r="2" fill="#1a1000"/>
+    <circle cx="7" cy="22" r="2" fill="#1a1000"/>
+    <!-- Arm typing -->
+    <line x1="-15" y1="55" x2="-40" y2="68" stroke="#c8a878" stroke-width="5" stroke-linecap="round"/>
+    <!-- Label -->
+    <text x="0" y="103" fill="#44aa44" font-size="10" font-family="monospace" text-anchor="middle">Dennis Ritchie</text>
+  </g>
+
+  <!-- Unix command line - large display panel (right side) -->
+  <g transform="translate(540, 40)">
+    <rect x="0" y="0" width="245" height="310" fill="#000d00" rx="5" stroke="#1a4a1a" stroke-width="2"/>
+    <text x="122" y="22" fill="#00ff00" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold" filter="url(#greenGlow)">UNIX v1 — 1969</text>
+    <line x1="10" y1="28" x2="235" y2="28" stroke="#1a4a1a" stroke-width="1"/>
+
+    <!-- Unix commands and philosophy -->
+    <text x="12" y="48" fill="#00cc00" font-size="10" font-family="monospace"># Unix Philosophy:</text>
+    <text x="12" y="63" fill="#008800" font-size="10" font-family="monospace">1. Small programs</text>
+    <text x="12" y="78" fill="#008800" font-size="10" font-family="monospace">2. Do one thing well</text>
+    <text x="12" y="93" fill="#008800" font-size="10" font-family="monospace">3. Pipe together</text>
+
+    <line x1="10" y1="100" x2="235" y2="100" stroke="#0a3a0a" stroke-width="0.5"/>
+
+    <!-- Shell session -->
+    <text x="12" y="118" fill="#00ff00" font-size="10" font-family="monospace" filter="url(#greenGlow)">$ whoami</text>
+    <text x="12" y="133" fill="#00cc00" font-size="10" font-family="monospace">ken</text>
+    <text x="12" y="151" fill="#00ff00" font-size="10" font-family="monospace" filter="url(#greenGlow)">$ ps aux</text>
+    <text x="12" y="166" fill="#00cc00" font-size="10" font-family="monospace">  PID CMD</text>
+    <text x="12" y="181" fill="#00cc00" font-size="10" font-family="monospace">    1 init</text>
+    <text x="12" y="196" fill="#00cc00" font-size="10" font-family="monospace">   42 sh</text>
+    <text x="12" y="214" fill="#00ff00" font-size="10" font-family="monospace" filter="url(#greenGlow)">$ cat /etc/passwd</text>
+    <text x="12" y="229" fill="#00cc00" font-size="10" font-family="monospace">root:x:0:0:Root</text>
+    <text x="12" y="244" fill="#00cc00" font-size="10" font-family="monospace">ken:x:1:1:Ken T.</text>
+    <text x="12" y="262" fill="#00ff00" font-size="10" font-family="monospace" filter="url(#greenGlow)">$ ./space-travel</text>
+    <text x="12" y="277" fill="#004400" font-size="10" font-family="monospace">(first Unix game)</text>
+
+    <!-- Blinking cursor -->
+    <rect x="12" y="285" width="8" height="12" fill="#00ff00" opacity="0.9" filter="url(#greenGlow)"/>
+  </g>
+
+  <!-- ARPANET node diagram (bottom center) -->
+  <g transform="translate(230, 360)">
+    <text x="165" y="0" fill="#4488cc" font-size="11" font-family="monospace" text-anchor="middle">ARPANET 1969 · First 4 nodes</text>
+    <circle cx="50" cy="30" r="10" fill="#003366" stroke="#4488cc" stroke-width="1.5"/>
+    <text x="50" y="34" fill="#88aaff" font-size="7" font-family="monospace" text-anchor="middle">UCLA</text>
+    <circle cx="130" cy="20" r="10" fill="#003366" stroke="#4488cc" stroke-width="1.5"/>
+    <text x="130" y="24" fill="#88aaff" font-size="7" font-family="monospace" text-anchor="middle">SRI</text>
+    <circle cx="210" cy="30" r="10" fill="#003366" stroke="#4488cc" stroke-width="1.5"/>
+    <text x="210" y="34" fill="#88aaff" font-size="7" font-family="monospace" text-anchor="middle">UCSB</text>
+    <circle cx="290" cy="15" r="10" fill="#003366" stroke="#4488cc" stroke-width="1.5"/>
+    <text x="290" y="19" fill="#88aaff" font-size="7" font-family="monospace" text-anchor="middle">Utah</text>
+    <line x1="60" y1="30" x2="120" y2="23" stroke="#4488cc" stroke-width="1.5"/>
+    <line x1="140" y1="23" x2="200" y2="28" stroke="#4488cc" stroke-width="1.5"/>
+    <line x1="220" y1="25" x2="280" y2="18" stroke="#4488cc" stroke-width="1.5"/>
+    <line x1="60" y1="25" x2="200" y2="22" stroke="#4488cc" stroke-width="0.8" stroke-dasharray="3,2"/>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="0" y="410" width="800" height="40" fill="#020802" opacity="0.95"/>
+  <text x="400" y="430" fill="#44aa44" font-size="16" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">유닉스 탄생 · 벨 연구소 · Ken Thompson &amp; Dennis Ritchie · 1969</text>
+</svg>

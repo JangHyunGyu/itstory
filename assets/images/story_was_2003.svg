@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: fresh spring green, clean and modern -->
+  <rect width="800" height="450" fill="#f0f8f0"/>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2a6a2a" text-anchor="middle">Spring Framework 1.0 — 2003</text>
+  <text x="400" y="54" font-family="sans-serif" font-size="11" fill="#6a8a6a" text-anchor="middle">Lightweight IoC container · Bye EJB · POJO-based development</text>
+
+  <!-- === LEFT: EJB complexity (the problem) === -->
+  <rect x="30" y="80" width="220" height="310" rx="12" fill="#f8e8e8" stroke="#cc4444" stroke-width="2"/>
+  <text x="140" y="106" font-family="sans-serif" font-size="12" font-weight="bold" fill="#cc4444" text-anchor="middle">EJB (Before)</text>
+  <text x="140" y="122" font-family="sans-serif" font-size="9" fill="#884444" text-anchor="middle">Enterprise Java Beans</text>
+
+  <!-- EJB boxes showing complexity -->
+  <rect x="48" y="134" width="184" height="30" rx="4" fill="#cc4444" opacity="0.7"/>
+  <text x="140" y="154" font-family="monospace" font-size="8" fill="white" text-anchor="middle">EntityBean + HomeInterface</text>
+  <rect x="48" y="170" width="184" height="30" rx="4" fill="#cc4444" opacity="0.6"/>
+  <text x="140" y="190" font-family="monospace" font-size="8" fill="white" text-anchor="middle">RemoteInterface + stub/skeleton</text>
+  <rect x="48" y="206" width="184" height="30" rx="4" fill="#cc4444" opacity="0.5"/>
+  <text x="140" y="226" font-family="monospace" font-size="8" fill="white" text-anchor="middle">ejb-jar.xml deployment descriptor</text>
+  <rect x="48" y="242" width="184" height="30" rx="4" fill="#cc4444" opacity="0.4"/>
+  <text x="140" y="262" font-family="monospace" font-size="8" fill="white" text-anchor="middle">WebLogic-specific vendor XML</text>
+  <rect x="48" y="278" width="184" height="30" rx="4" fill="#cc4444" opacity="0.3"/>
+  <text x="140" y="298" font-family="monospace" font-size="8" fill="#cc4444" text-anchor="middle">CMP entity, BMP entity...</text>
+
+  <!-- Pain points -->
+  <text x="48" y="330" font-family="sans-serif" font-size="8" fill="#884444">• Hard to test without server</text>
+  <text x="48" y="344" font-family="sans-serif" font-size="8" fill="#884444">• Massive XML configuration</text>
+  <text x="48" y="358" font-family="sans-serif" font-size="8" fill="#884444">• Vendor lock-in</text>
+  <text x="48" y="372" font-family="sans-serif" font-size="8" fill="#884444">• Slow deployment cycle</text>
+
+  <!-- Big X over EJB -->
+  <line x1="38" y1="88" x2="242" y2="380" stroke="#cc4444" stroke-width="4" opacity="0.3"/>
+  <line x1="242" y1="88" x2="38" y2="380" stroke="#cc4444" stroke-width="4" opacity="0.3"/>
+
+  <!-- Arrow indicating Spring replaces EJB -->
+  <polygon points="290,220 306,215 306,225" fill="#2a6a2a"/>
+  <line x1="250" y1="220" x2="306" y2="220" stroke="#2a6a2a" stroke-width="3"/>
+  <text x="268" y="214" font-family="sans-serif" font-size="9" fill="#2a6a2a">Replace</text>
+
+  <!-- === CENTER: Spring IoC Container === -->
+  <rect x="310" y="80" width="240" height="310" rx="12" fill="#e8f8e8" stroke="#2a6a2a" stroke-width="2.5"/>
+  <text x="430" y="106" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2a6a2a" text-anchor="middle">Spring IoC</text>
+  <text x="430" y="122" font-family="sans-serif" font-size="9" fill="#4a8a4a" text-anchor="middle">Inversion of Control Container</text>
+
+  <!-- Spring leaf logo (stylized) -->
+  <path d="M 430 138 Q 460 128 470 155 Q 460 170 430 168 Q 400 170 390 155 Q 400 128 430 138 Z" fill="#2a6a2a"/>
+  <path d="M 430 138 Q 450 150 450 160 Q 440 168 430 168" fill="#4a9a4a"/>
+  <path d="M 430 138 L 430 168" stroke="#1a5a1a" stroke-width="1.5"/>
+  <path d="M 430 138 Q 415 145 415 155" stroke="#1a5a1a" stroke-width="1" fill="none"/>
+  <path d="M 430 138 Q 445 145 445 155" stroke="#1a5a1a" stroke-width="1" fill="none"/>
+
+  <!-- IoC concept: DI visualization -->
+  <rect x="328" y="182" width="200" height="60" rx="6" fill="#fff8e8" stroke="#8a6a2a" stroke-width="1"/>
+  <text x="428" y="200" font-family="monospace" font-size="8" fill="#555" text-anchor="middle">@Service</text>
+  <text x="428" y="213" font-family="monospace" font-size="8" fill="#2a6a2a" text-anchor="middle">class OrderService {</text>
+  <text x="336" y="226" font-family="monospace" font-size="8" fill="#555">  @Autowired</text>
+  <text x="336" y="236" font-family="monospace" font-size="8" fill="#2a6a2a">  OrderRepo repo;</text>
+
+  <rect x="328" y="252" width="200" height="50" rx="6" fill="#fff8e8" stroke="#8a6a2a" stroke-width="1"/>
+  <text x="428" y="270" font-family="monospace" font-size="8" fill="#555" text-anchor="middle">applicationContext.xml</text>
+  <text x="336" y="284" font-family="monospace" font-size="7" fill="#2a6a2a">&lt;bean id="orderService"</text>
+  <text x="336" y="296" font-family="monospace" font-size="7" fill="#2a6a2a">  class="com.app.OrderService"/&gt;</text>
+
+  <!-- Spring features list -->
+  <text x="328" y="320" font-family="sans-serif" font-size="8" fill="#2a6a2a">✓ Dependency Injection</text>
+  <text x="328" y="334" font-family="sans-serif" font-size="8" fill="#2a6a2a">✓ AOP (Aspect-Oriented)</text>
+  <text x="328" y="348" font-family="sans-serif" font-size="8" fill="#2a6a2a">✓ Easy unit testing (POJO)</text>
+  <text x="328" y="362" font-family="sans-serif" font-size="8" fill="#2a6a2a">✓ Transaction management</text>
+  <text x="328" y="376" font-family="sans-serif" font-size="8" fill="#2a6a2a">✓ Works with any WAS</text>
+
+  <!-- === RIGHT: Result / Benefits === -->
+  <rect x="568" y="80" width="200" height="310" rx="12" fill="#e8f0ff" stroke="#1a3a8a" stroke-width="1.5"/>
+  <text x="668" y="106" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a3a8a" text-anchor="middle">Clean Architecture</text>
+
+  <!-- Stack layers -->
+  <rect x="586" y="120" width="164" height="34" rx="5" fill="#1a3a8a"/>
+  <text x="668" y="141" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">Controller Layer</text>
+
+  <line x1="668" y1="154" x2="668" y2="164" stroke="#888" stroke-width="2"/>
+
+  <rect x="586" y="164" width="164" height="34" rx="5" fill="#2a5a9a"/>
+  <text x="668" y="185" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">Service Layer</text>
+
+  <line x1="668" y1="198" x2="668" y2="208" stroke="#888" stroke-width="2"/>
+
+  <rect x="586" y="208" width="164" height="34" rx="5" fill="#3a6aaa"/>
+  <text x="668" y="229" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">Repository Layer</text>
+
+  <line x1="668" y1="242" x2="668" y2="252" stroke="#888" stroke-width="2"/>
+
+  <rect x="586" y="252" width="164" height="34" rx="5" fill="#4a7aba"/>
+  <text x="668" y="273" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">Database</text>
+
+  <!-- DI injection arrows -->
+  <path d="M 550 210 Q 564 192 586 192" stroke="#2a6a2a" stroke-width="2" fill="none"/>
+  <polygon points="582,186 596,192 582,198" fill="#2a6a2a"/>
+
+  <!-- Rod Johnson credit -->
+  <rect x="586" y="304" width="164" height="76" rx="6" fill="#fff8e8" stroke="#2a6a2a" stroke-width="1"/>
+  <text x="668" y="322" font-family="sans-serif" font-size="9" fill="#2a6a2a" text-anchor="middle">Rod Johnson</text>
+  <text x="668" y="336" font-family="sans-serif" font-size="8" fill="#555" text-anchor="middle">"Expert One-on-One</text>
+  <text x="668" y="348" font-family="sans-serif" font-size="8" fill="#555" text-anchor="middle">J2EE Design and</text>
+  <text x="668" y="360" font-family="sans-serif" font-size="8" fill="#555" text-anchor="middle">Development"</text>
+  <text x="668" y="374" font-family="sans-serif" font-size="8" fill="#888" text-anchor="middle">Wrox 2002</text>
+</svg>

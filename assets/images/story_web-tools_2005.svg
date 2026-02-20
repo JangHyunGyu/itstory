@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: clean modern dev environment -->
+  <rect width="800" height="450" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="sans-serif" font-size="15" font-weight="bold" fill="#f05033" text-anchor="middle">Git — 2005</text>
+  <text x="400" y="54" font-family="sans-serif" font-size="11" fill="#9a7a6a" text-anchor="middle">Distributed version control · Linus Torvalds · Branching &amp; merging</text>
+
+  <!-- Git logo (diamond) -->
+  <rect x="358" y="68" width="84" height="84" rx="8" fill="#f05033" transform="rotate(45 400 110)"/>
+  <!-- Git fork icon inside -->
+  <circle cx="386" cy="96" r="8" fill="white"/>
+  <circle cx="414" cy="96" r="8" fill="white"/>
+  <circle cx="400" cy="124" r="8" fill="white"/>
+  <line x1="386" y1="104" x2="386" y2="114" stroke="white" stroke-width="3"/>
+  <line x1="386" y1="114" x2="400" y2="116" stroke="white" stroke-width="3"/>
+  <line x1="414" y1="104" x2="414" y2="114" stroke="white" stroke-width="3"/>
+  <line x1="414" y1="114" x2="400" y2="116" stroke="white" stroke-width="3"/>
+  <line x1="400" y1="116" x2="400" y2="116" stroke="white" stroke-width="3"/>
+
+  <!-- Git branch diagram (center visual) -->
+  <!-- Main branch -->
+  <line x1="60" y1="230" x2="740" y2="230" stroke="#4488ff" stroke-width="3"/>
+  <!-- Main branch commits -->
+  <circle cx="100" cy="230" r="12" fill="#4488ff" stroke="white" stroke-width="2"/>
+  <text x="100" y="234" font-family="monospace" font-size="7" fill="white" text-anchor="middle">C1</text>
+  <circle cx="200" cy="230" r="12" fill="#4488ff" stroke="white" stroke-width="2"/>
+  <text x="200" y="234" font-family="monospace" font-size="7" fill="white" text-anchor="middle">C2</text>
+  <circle cx="300" cy="230" r="12" fill="#4488ff" stroke="white" stroke-width="2"/>
+  <text x="300" y="234" font-family="monospace" font-size="7" fill="white" text-anchor="middle">C3</text>
+  <!-- Merge commit -->
+  <circle cx="560" cy="230" r="14" fill="#ff9900" stroke="white" stroke-width="2"/>
+  <text x="560" y="234" font-family="monospace" font-size="7" fill="white" text-anchor="middle">M</text>
+  <circle cx="660" cy="230" r="12" fill="#4488ff" stroke="white" stroke-width="2"/>
+  <text x="660" y="234" font-family="monospace" font-size="7" fill="white" text-anchor="middle">C7</text>
+  <circle cx="720" cy="230" r="12" fill="#4488ff" stroke="white" stroke-width="2"/>
+  <text x="720" y="234" font-family="monospace" font-size="7" fill="white" text-anchor="middle">C8</text>
+
+  <!-- Feature branch (top curve) -->
+  <path d="M 300 230 Q 340 175 380 165" fill="none" stroke="#44cc44" stroke-width="3"/>
+  <line x1="380" y1="165" x2="540" y2="165" stroke="#44cc44" stroke-width="3"/>
+  <path d="M 540 165 Q 555 165 560 230" fill="none" stroke="#44cc44" stroke-width="3"/>
+  <!-- Feature branch commits -->
+  <circle cx="380" cy="165" r="12" fill="#44cc44" stroke="white" stroke-width="2"/>
+  <text x="380" y="169" font-family="monospace" font-size="7" fill="white" text-anchor="middle">C4</text>
+  <circle cx="460" cy="165" r="12" fill="#44cc44" stroke="white" stroke-width="2"/>
+  <text x="460" y="169" font-family="monospace" font-size="7" fill="white" text-anchor="middle">C5</text>
+  <circle cx="540" cy="165" r="12" fill="#44cc44" stroke="white" stroke-width="2"/>
+  <text x="540" y="169" font-family="monospace" font-size="7" fill="white" text-anchor="middle">C6</text>
+
+  <!-- Branch labels -->
+  <rect x="60" y="244" width="50" height="16" rx="3" fill="#1a3a8a"/>
+  <text x="85" y="256" font-family="monospace" font-size="7" fill="#aac8ff" text-anchor="middle">main</text>
+  <rect x="360" y="148" width="80" height="16" rx="3" fill="#1a4a1a"/>
+  <text x="400" y="160" font-family="monospace" font-size="7" fill="#aaffaa" text-anchor="middle">feature/login</text>
+
+  <!-- HEAD pointer -->
+  <polygon points="720,212 726,200 714,200" fill="#ff9900"/>
+  <text x="720" y="198" font-family="monospace" font-size="8" fill="#ff9900" text-anchor="middle">HEAD</text>
+
+  <!-- Local repo -->
+  <rect x="30" y="290" width="220" height="140" rx="8" fill="#1a2a4a" stroke="#4488ff" stroke-width="1.5"/>
+  <text x="140" y="312" font-family="sans-serif" font-size="10" font-weight="bold" fill="#4488ff" text-anchor="middle">Local Repository</text>
+  <text x="46" y="330" font-family="monospace" font-size="8" fill="#88aadd">$ git init</text>
+  <text x="46" y="344" font-family="monospace" font-size="8" fill="#88aadd">$ git add .</text>
+  <text x="46" y="358" font-family="monospace" font-size="8" fill="#88aadd">$ git commit -m "feat: add login"</text>
+  <text x="46" y="372" font-family="monospace" font-size="8" fill="#44cc44">$ git branch feature/login</text>
+  <text x="46" y="386" font-family="monospace" font-size="8" fill="#44cc44">$ git checkout feature/login</text>
+  <text x="46" y="400" font-family="monospace" font-size="8" fill="#ff9900">$ git merge feature/login</text>
+  <text x="46" y="414" font-family="monospace" font-size="8" fill="#aaa">$ git log --oneline --graph</text>
+
+  <!-- Remote repo (right) -->
+  <rect x="550" y="290" width="220" height="140" rx="8" fill="#2a1a1a" stroke="#f05033" stroke-width="1.5"/>
+  <text x="660" y="312" font-family="sans-serif" font-size="10" font-weight="bold" fill="#f05033" text-anchor="middle">Remote Repository</text>
+  <text x="566" y="330" font-family="monospace" font-size="8" fill="#cc8866">(future: GitHub, GitLab)</text>
+  <text x="566" y="350" font-family="monospace" font-size="8" fill="#cc6644">$ git remote add origin</text>
+  <text x="574" y="363" font-family="monospace" font-size="8" fill="#cc6644">  git@server:repo.git</text>
+  <text x="566" y="380" font-family="monospace" font-size="8" fill="#f05033">$ git push origin main</text>
+  <text x="566" y="396" font-family="monospace" font-size="8" fill="#f05033">$ git pull origin main</text>
+  <text x="566" y="415" font-family="monospace" font-size="8" fill="#884444">Full history distributed!</text>
+
+  <!-- Push/Pull arrows -->
+  <line x1="250" y1="340" x2="550" y2="340" stroke="#f05033" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="548,334 562,340 548,346" fill="#f05033"/>
+  <text x="400" y="332" font-family="sans-serif" font-size="9" fill="#f05033" text-anchor="middle">git push / git pull</text>
+  <line x1="550" y1="360" x2="250" y2="360" stroke="#4488ff" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="252,354 238,360 252,366" fill="#4488ff"/>
+
+  <!-- Linux kernel note -->
+  <rect x="280" y="290" width="240" height="50" rx="6" fill="#2a1a0a" stroke="#f05033" stroke-width="1"/>
+  <text x="400" y="308" font-family="sans-serif" font-size="9" fill="#f05033" text-anchor="middle">Linus Torvalds, April 2005</text>
+  <text x="400" y="322" font-family="sans-serif" font-size="8" fill="#cc8844" text-anchor="middle">"I'm an egotistical bastard, and I name</text>
+  <text x="400" y="334" font-family="sans-serif" font-size="8" fill="#cc8844" text-anchor="middle">all my projects after myself." → "git"</text>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#1a0a0a"/>
+
+  <!-- Title banner -->
+  <rect x="0" y="0" width="800" height="60" fill="#b71c1c" opacity="0.95"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">Oracle v2 · 최초의 상업용 SQL DB · 1979</text>
+
+  <!-- Oracle logo style text -->
+  <rect x="50" y="80" width="300" height="100" rx="8" fill="#b71c1c"/>
+  <text x="200" y="155" font-family="Arial, sans-serif" font-size="52" fill="white" text-anchor="middle" font-weight="bold" font-style="italic">ORACLE</text>
+
+  <!-- Subtitle -->
+  <text x="200" y="190" font-family="Arial, sans-serif" font-size="13" fill="#ffcdd2" text-anchor="middle">Relational Software, Inc.</text>
+  <text x="200" y="208" font-family="Arial, sans-serif" font-size="12" fill="#ff8a80" text-anchor="middle">Larry Ellison · 1977</text>
+
+  <!-- Early computer terminal -->
+  <rect x="430" y="80" width="200" height="160" rx="8" fill="#37474f" stroke="#546e7a" stroke-width="3"/>
+  <rect x="445" y="95" width="170" height="110" rx="4" fill="#0d1117"/>
+  <!-- Terminal text -->
+  <g font-family="monospace" font-size="9" fill="#4caf50">
+    <text x="452" y="115">SQL*Plus: Release 2.0</text>
+    <text x="452" y="130">Copyright Oracle Corp.</text>
+    <text x="452" y="148">SQL&gt; SELECT * FROM emp;</text>
+    <text x="452" y="163">EMPNO  ENAME   SAL</text>
+    <text x="452" y="175">-----  ------  -----</text>
+    <text x="452" y="187">7369   SMITH   800</text>
+    <text x="452" y="199">7499   ALLEN   1600</text>
+  </g>
+  <!-- Keyboard -->
+  <rect x="430" y="248" width="200" height="30" rx="4" fill="#263238" stroke="#546e7a" stroke-width="2"/>
+  <g fill="#455a64">
+    <rect x="438" y="255" width="18" height="14" rx="2"/>
+    <rect x="460" y="255" width="18" height="14" rx="2"/>
+    <rect x="482" y="255" width="18" height="14" rx="2"/>
+    <rect x="504" y="255" width="18" height="14" rx="2"/>
+    <rect x="526" y="255" width="18" height="14" rx="2"/>
+    <rect x="548" y="255" width="18" height="14" rx="2"/>
+    <rect x="570" y="255" width="18" height="14" rx="2"/>
+    <rect x="592" y="255" width="28" height="14" rx="2"/>
+  </g>
+
+  <!-- Database cylinder icon -->
+  <g transform="translate(310, 100)">
+    <ellipse cx="60" cy="20" rx="60" ry="18" fill="#b71c1c"/>
+    <rect x="0" y="20" width="120" height="100" fill="#c62828"/>
+    <ellipse cx="60" cy="120" rx="60" ry="18" fill="#b71c1c"/>
+    <ellipse cx="60" cy="20" rx="60" ry="18" fill="#ef5350"/>
+    <!-- Lines on cylinder -->
+    <line x1="0" y1="50" x2="120" y2="50" stroke="#b71c1c" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="80" x2="120" y2="80" stroke="#b71c1c" stroke-width="1" opacity="0.5"/>
+    <line x1="0" y1="110" x2="120" y2="110" stroke="#b71c1c" stroke-width="1" opacity="0.5"/>
+    <text x="60" y="75" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">ORACLE</text>
+    <text x="60" y="92" font-family="Arial, sans-serif" font-size="10" fill="#ffcdd2" text-anchor="middle">Database v2</text>
+  </g>
+
+  <!-- SQL query being typed -->
+  <rect x="50" y="300" width="700" height="70" rx="6" fill="#0d1117" stroke="#b71c1c" stroke-width="2"/>
+  <g font-family="monospace" font-size="11">
+    <text x="70" y="325" fill="#f44336">SELECT</text>
+    <text x="130" y="325" fill="#f5f5f5"> e.name, d.dept_name, e.salary</text>
+    <text x="70" y="343" fill="#f44336">FROM</text>
+    <text x="110" y="343" fill="#f5f5f5"> employees e</text>
+    <text x="70" y="361" fill="#f44336">JOIN</text>
+    <text x="106" y="361" fill="#f5f5f5"> departments d </text>
+    <text x="220" y="361" fill="#f44336">ON</text>
+    <text x="238" y="361" fill="#f5f5f5"> e.dept_id = d.id</text>
+    <text x="70" y="361" fill="#f44336"></text>
+  </g>
+
+  <!-- Business scene - people using computers -->
+  <g transform="translate(640, 90)">
+    <!-- Person -->
+    <circle cx="60" cy="30" r="20" fill="#ffcc80"/>
+    <rect x="42" y="50" width="36" height="50" rx="4" fill="#1565c0"/>
+    <!-- Desk -->
+    <rect x="20" y="100" width="100" height="8" fill="#795548"/>
+    <!-- Papers -->
+    <rect x="30" y="90" width="30" height="10" fill="#fff9c4" transform="rotate(-5,45,95)"/>
+    <rect x="70" y="88" width="30" height="10" fill="#fff9c4" transform="rotate(3,85,93)"/>
+    <text x="60" y="140" font-family="Arial, sans-serif" font-size="9" fill="#ffcdd2" text-anchor="middle">Business</text>
+    <text x="60" y="153" font-family="Arial, sans-serif" font-size="9" fill="#ffcdd2" text-anchor="middle">Application</text>
+  </g>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#7f0000" opacity="0.9"/>
+  <text x="400" y="415" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">세계 최초의 상업용 SQL 데이터베이스 출시</text>
+  <text x="400" y="438" font-family="Arial, sans-serif" font-size="11" fill="#ff8a80" text-anchor="middle">Larry Ellison · Bob Miner · Ed Oates · Relational Software Inc. · 1979</text>
+</svg>

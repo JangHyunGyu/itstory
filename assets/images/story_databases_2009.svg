@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#1a1a2e"/>
+
+  <!-- Title banner -->
+  <rect x="0" y="0" width="800" height="60" fill="#4caf50" opacity="0.9"/>
+  <rect x="0" y="0" width="800" height="60" fill="#1b5e20" opacity="0.7"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">NoSQL 운동 · MongoDB · Cassandra · Redis · 2009</text>
+
+  <!-- NoSQL label -->
+  <rect x="320" y="75" width="160" height="50" rx="8" fill="#4caf50"/>
+  <text x="400" y="98" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" font-weight="bold">NoSQL</text>
+  <text x="400" y="115" font-family="Arial, sans-serif" font-size="10" fill="#c8e6c9" text-anchor="middle">"Not Only SQL"</text>
+
+  <!-- 4 NoSQL types arranged around center -->
+
+  <!-- 1. Document Store (MongoDB) - top left -->
+  <g transform="translate(25, 140)">
+    <rect x="0" y="0" width="180" height="185" rx="8" fill="#1b5e20" stroke="#4caf50" stroke-width="2"/>
+    <text x="90" y="25" font-family="Arial, sans-serif" font-size="12" fill="#4caf50" text-anchor="middle" font-weight="bold">Document Store</text>
+    <rect x="10" y="35" width="50" height="25" rx="3" fill="#4caf50" opacity="0.3"/>
+    <text x="35" y="52" font-family="Arial, sans-serif" font-size="9" fill="#81c784" text-anchor="middle">MongoDB</text>
+    <!-- JSON document -->
+    <rect x="10" y="65" width="160" height="110" rx="4" fill="#0d1117"/>
+    <g font-family="monospace" font-size="8" fill="#4caf50">
+      <text x="18" y="83">{</text>
+      <text x="18" y="97">  "_id": ObjectId(</text>
+      <text x="18" y="111">    "507f191e8..."</text>
+      <text x="18" y="111">  ),</text>
+      <text x="18" y="125">  "name": "Alice",</text>
+      <text x="18" y="139">  "tags": [</text>
+      <text x="18" y="153">    "db","nosql"</text>
+      <text x="18" y="167">  ]</text>
+      <text x="18" y="170">}</text>
+    </g>
+    <!-- MongoDB leaf icon -->
+    <path d="M 140 40 Q 145 25 150 35 Q 155 50 148 55 Q 143 60 138 55 Q 132 48 140 40 Z" fill="#4caf50"/>
+  </g>
+
+  <!-- 2. Key-Value Store (Redis) - top right -->
+  <g transform="translate(595, 140)">
+    <rect x="0" y="0" width="180" height="185" rx="8" fill="#b71c1c" stroke="#f44336" stroke-width="2"/>
+    <text x="90" y="25" font-family="Arial, sans-serif" font-size="12" fill="#f44336" text-anchor="middle" font-weight="bold">Key-Value Store</text>
+    <rect x="10" y="35" width="50" height="25" rx="3" fill="#f44336" opacity="0.3"/>
+    <text x="35" y="52" font-family="Arial, sans-serif" font-size="9" fill="#ef9a9a" text-anchor="middle">Redis</text>
+    <!-- Key-value pairs -->
+    <rect x="10" y="65" width="160" height="110" rx="4" fill="#0d1117"/>
+    <g font-family="monospace" font-size="8">
+      <text x="18" y="83" fill="#f44336">SET user:1</text>
+      <text x="18" y="97" fill="#ff8a80">  "Alice"</text>
+      <line x1="16" y1="103" x2="162" y2="103" stroke="#333" stroke-width="1"/>
+      <text x="18" y="115" fill="#f44336">GET user:1</text>
+      <text x="18" y="129" fill="#ff8a80">  "Alice"</text>
+      <line x1="16" y1="135" x2="162" y2="135" stroke="#333" stroke-width="1"/>
+      <text x="18" y="147" fill="#f44336">EXPIRE user:1</text>
+      <text x="18" y="161" fill="#ff8a80">  3600</text>
+      <text x="18" y="171" fill="#f44336">INCR counter</text>
+    </g>
+  </g>
+
+  <!-- 3. Wide-Column Store (Cassandra) - bottom left -->
+  <g transform="translate(25, 345)">
+    <rect x="0" y="0" width="180" height="90" rx="8" fill="#0d47a1" stroke="#42a5f5" stroke-width="2"/>
+    <text x="90" y="22" font-family="Arial, sans-serif" font-size="12" fill="#42a5f5" text-anchor="middle" font-weight="bold">Wide-Column</text>
+    <text x="90" y="37" font-family="Arial, sans-serif" font-size="9" fill="#90caf9" text-anchor="middle">Cassandra / HBase</text>
+    <!-- Wide column representation -->
+    <rect x="10" y="48" width="35" height="35" rx="2" fill="#1565c0"/>
+    <text x="27" y="65" font-family="monospace" font-size="7" fill="white" text-anchor="middle">Row Key</text>
+    <rect x="48" y="48" width="35" height="35" rx="2" fill="#0d47a1" stroke="#42a5f5" stroke-width="1"/>
+    <text x="65" y="65" font-family="monospace" font-size="7" fill="#90caf9" text-anchor="middle">col1</text>
+    <rect x="86" y="48" width="35" height="35" rx="2" fill="#0d47a1" stroke="#42a5f5" stroke-width="1"/>
+    <text x="103" y="65" font-family="monospace" font-size="7" fill="#90caf9" text-anchor="middle">col2</text>
+    <rect x="124" y="48" width="45" height="35" rx="2" fill="#0d47a1" stroke="#42a5f5" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="146" y="65" font-family="monospace" font-size="7" fill="#546e7a" text-anchor="middle">col N</text>
+  </g>
+
+  <!-- 4. Graph DB (neo4j) - bottom right -->
+  <g transform="translate(595, 345)">
+    <rect x="0" y="0" width="180" height="90" rx="8" fill="#4a148c" stroke="#ce93d8" stroke-width="2"/>
+    <text x="90" y="22" font-family="Arial, sans-serif" font-size="12" fill="#ce93d8" text-anchor="middle" font-weight="bold">Graph DB</text>
+    <text x="90" y="37" font-family="Arial, sans-serif" font-size="9" fill="#e1bee7" text-anchor="middle">Neo4j</text>
+    <!-- Mini graph -->
+    <circle cx="40" cy="65" r="12" fill="#7b1fa2"/>
+    <circle cx="80" cy="52" r="12" fill="#7b1fa2"/>
+    <circle cx="115" cy="70" r="12" fill="#7b1fa2"/>
+    <circle cx="150" cy="55" r="12" fill="#7b1fa2"/>
+    <line x1="52" y1="62" x2="68" y2="55" stroke="#ce93d8" stroke-width="2"/>
+    <line x1="92" y1="57" x2="103" y2="65" stroke="#ce93d8" stroke-width="2"/>
+    <line x1="127" y1="65" x2="138" y2="58" stroke="#ce93d8" stroke-width="2"/>
+    <line x1="55" y1="70" x2="103" y2="70" stroke="#ce93d8" stroke-width="1" stroke-dasharray="3,2"/>
+  </g>
+
+  <!-- Center comparison: Traditional SQL Table -->
+  <g transform="translate(220, 155)">
+    <rect x="0" y="0" width="360" height="175" rx="8" fill="#263238" stroke="#607d8b" stroke-width="2"/>
+    <text x="180" y="22" font-family="Arial, sans-serif" font-size="11" fill="#90a4ae" text-anchor="middle">vs Traditional SQL Table</text>
+    <rect x="10" y="32" width="340" height="22" fill="#37474f"/>
+    <text x="60" y="48" font-family="monospace" font-size="9" fill="#cfd8dc">id</text>
+    <text x="110" y="48" font-family="monospace" font-size="9" fill="#cfd8dc">name</text>
+    <text x="200" y="48" font-family="monospace" font-size="9" fill="#cfd8dc">email</text>
+    <text x="295" y="48" font-family="monospace" font-size="9" fill="#cfd8dc">city</text>
+    <line x1="10" y1="54" x2="350" y2="54" stroke="#546e7a" stroke-width="1"/>
+    <g font-family="monospace" font-size="9" fill="#b0bec5">
+      <text x="60" y="70">1</text><text x="110" y="70">Alice</text><text x="200" y="70">alice@...</text><text x="295" y="70">Seoul</text>
+      <line x1="10" y1="76" x2="350" y2="76" stroke="#37474f" stroke-width="1"/>
+      <text x="60" y="92">2</text><text x="110" y="92">Bob</text><text x="200" y="92">bob@...</text><text x="295" y="92">Busan</text>
+      <line x1="10" y1="98" x2="350" y2="98" stroke="#37474f" stroke-width="1"/>
+      <text x="60" y="114">3</text><text x="110" y="114">Carol</text><text x="200" y="114">carol@...</text><text x="295" y="114">Incheon</text>
+    </g>
+    <!-- Limitation note -->
+    <rect x="10" y="128" width="340" height="38" rx="4" fill="#b71c1c" opacity="0.3"/>
+    <text x="180" y="145" font-family="Arial, sans-serif" font-size="9" fill="#ef9a9a" text-anchor="middle">Fixed Schema · Single server limit</text>
+    <text x="180" y="160" font-family="Arial, sans-serif" font-size="9" fill="#ef9a9a" text-anchor="middle">JOINS비용 · Web-scale에서 한계</text>
+  </g>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#1b5e20" opacity="0.9"/>
+  <text x="400" y="415" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">웹 규모에서 SQL을 넘어선 다양한 NoSQL 패러다임 등장</text>
+  <text x="400" y="438" font-family="Arial, sans-serif" font-size="11" fill="#a5d6a7" text-anchor="middle">MongoDB · Redis · Cassandra · CouchDB · "Not Only SQL" · 2009</text>
+</svg>

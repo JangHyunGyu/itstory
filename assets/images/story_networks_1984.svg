@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- DNS System - hierarchical domain name tree -->
+  <rect width="800" height="450" fill="#0a0f1a"/>
+  <!-- Background grid -->
+  <g stroke="#1a2a3a" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="75" x2="800" y2="75"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="225" x2="800" y2="225"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="375" x2="800" y2="375"/>
+    <line x1="200" y1="0" x2="200" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="600" y1="0" x2="600" y2="450"/>
+  </g>
+  <!-- DNS hierarchy tree -->
+  <!-- Root -->
+  <circle cx="400" cy="90" r="30" fill="#1a3a5a" stroke="#40a0ff" stroke-width="2"/>
+  <text x="400" y="85" font-family="monospace" font-size="10" fill="#80c0ff" text-anchor="middle">ROOT</text>
+  <text x="400" y="99" font-family="monospace" font-size="8" fill="#40a0ff" text-anchor="middle">13 servers</text>
+  <!-- TLD nodes -->
+  <circle cx="140" cy="200" r="28" fill="#1a2a4a" stroke="#4080e0" stroke-width="2"/>
+  <text x="140" y="197" font-family="monospace" font-size="11" fill="#80b0ff" text-anchor="middle">.com</text>
+  <text x="140" y="211" font-family="monospace" font-size="7" fill="#4060b0" text-anchor="middle">commercial</text>
+  <circle cx="280" cy="200" r="28" fill="#1a2a4a" stroke="#4080e0" stroke-width="2"/>
+  <text x="280" y="197" font-family="monospace" font-size="11" fill="#80b0ff" text-anchor="middle">.edu</text>
+  <text x="280" y="211" font-family="monospace" font-size="7" fill="#4060b0" text-anchor="middle">education</text>
+  <circle cx="420" cy="200" r="28" fill="#1a2a4a" stroke="#4080e0" stroke-width="2"/>
+  <text x="420" y="197" font-family="monospace" font-size="11" fill="#80b0ff" text-anchor="middle">.gov</text>
+  <text x="420" y="211" font-family="monospace" font-size="7" fill="#4060b0" text-anchor="middle">government</text>
+  <circle cx="560" cy="200" r="28" fill="#1a2a4a" stroke="#4080e0" stroke-width="2"/>
+  <text x="560" y="197" font-family="monospace" font-size="11" fill="#80b0ff" text-anchor="middle">.org</text>
+  <text x="560" y="211" font-family="monospace" font-size="7" fill="#4060b0" text-anchor="middle">organization</text>
+  <circle cx="690" cy="200" r="28" fill="#1a2a4a" stroke="#4080e0" stroke-width="2"/>
+  <text x="690" y="197" font-family="monospace" font-size="11" fill="#80b0ff" text-anchor="middle">.net</text>
+  <text x="690" y="211" font-family="monospace" font-size="7" fill="#4060b0" text-anchor="middle">network</text>
+  <!-- Lines from root to TLDs -->
+  <g stroke="#2a5a9a" stroke-width="1.5" opacity="0.8">
+    <line x1="375" y1="116" x2="163" y2="176"/>
+    <line x1="385" y1="117" x2="292" y2="175"/>
+    <line x1="400" y1="120" x2="420" y2="172"/>
+    <line x1="415" y1="117" x2="546" y2="175"/>
+    <line x1="425" y1="116" x2="667" y2="176"/>
+  </g>
+  <!-- Second level nodes under .com -->
+  <rect x="60" y="285" width="80" height="28" fill="#0f2040" rx="4" stroke="#3060b0" stroke-width="1.5"/>
+  <text x="100" y="303" font-family="monospace" font-size="9" fill="#60a0e0" text-anchor="middle">mit.edu</text>
+  <rect x="160" y="285" width="80" height="28" fill="#0f2040" rx="4" stroke="#3060b0" stroke-width="1.5"/>
+  <text x="200" y="303" font-family="monospace" font-size="9" fill="#60a0e0" text-anchor="middle">sri.com</text>
+  <rect x="340" y="285" width="80" height="28" fill="#0f2040" rx="4" stroke="#3060b0" stroke-width="1.5"/>
+  <text x="380" y="303" font-family="monospace" font-size="9" fill="#60a0e0" text-anchor="middle">nsf.gov</text>
+  <rect x="530" y="285" width="100" height="28" fill="#0f2040" rx="4" stroke="#3060b0" stroke-width="1.5"/>
+  <text x="580" y="303" font-family="monospace" font-size="9" fill="#60a0e0" text-anchor="middle">arpa.mil</text>
+  <!-- Lines from TLDs to second level -->
+  <g stroke="#2a4a7a" stroke-width="1" opacity="0.7">
+    <line x1="130" y1="228" x2="100" y2="285"/>
+    <line x1="150" y1="228" x2="200" y2="285"/>
+    <line x1="420" y1="228" x2="380" y2="285"/>
+    <line x1="560" y1="228" x2="580" y2="285"/>
+  </g>
+  <!-- Query animation box -->
+  <rect x="25" y="340" width="380" height="80" fill="#050d18" rx="6" stroke="#2060a0" stroke-width="1.5"/>
+  <text x="215" y="360" font-family="monospace" font-size="9" font-weight="bold" fill="#40a0ff" text-anchor="middle">DNS RESOLUTION PROCESS</text>
+  <text x="35" y="378" font-family="monospace" font-size="8" fill="#60c080">1. Query: "what is the IP of mit.edu?"</text>
+  <text x="35" y="393" font-family="monospace" font-size="8" fill="#60c0c0">2. Root → .edu nameserver → mit.edu NS</text>
+  <text x="35" y="408" font-family="monospace" font-size="8" fill="#a0e080">3. Answer: 18.7.21.69 (in milliseconds!)</text>
+  <!-- Paul Mockapetris / USC ISI info -->
+  <rect x="430" y="340" width="345" height="80" fill="#050d18" rx="6" stroke="#2060a0" stroke-width="1.5"/>
+  <text x="603" y="360" font-family="sans-serif" font-size="9" font-weight="bold" fill="#a0c0ff" text-anchor="middle">DNS REPLACES HOSTS.TXT</text>
+  <text x="440" y="378" font-family="serif" font-size="8" fill="#8090a0">Paul Mockapetris · USC ISI · RFC 882/883</text>
+  <text x="440" y="393" font-family="serif" font-size="8" fill="#8090a0">Before: single hosts.txt with ALL known hosts</text>
+  <text x="440" y="408" font-family="serif" font-size="8" fill="#8090a0">After: distributed, delegated, scalable naming</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#0a1a3a" rx="6" opacity="0.9" stroke="#40a0ff" stroke-width="1"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#40a0ff" text-anchor="middle">1984</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#050810" opacity="0.9"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">DNS Born · Domain Name System · Paul Mockapetris · USC ISI</text>
+</svg>

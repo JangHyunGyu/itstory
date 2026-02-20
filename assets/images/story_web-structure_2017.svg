@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg17s" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1020"/>
+      <stop offset="100%" style="stop-color:#12202e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg17s)"/>
+
+  <!-- WAI-ARIA 1.1 title -->
+  <rect x="30" y="30" width="740" height="50" rx="6" fill="#0d2040" stroke="#4488ff" stroke-width="1.5"/>
+  <text x="400" y="52" font-family="sans-serif" font-size="15" fill="#88bbff" text-anchor="middle" font-weight="bold">WAI-ARIA 1.1 — Accessible Rich Internet Applications</text>
+  <text x="400" y="70" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">W3C Recommendation · December 2017 · Web Accessibility Initiative</text>
+
+  <!-- ARIA Roles diagram -->
+  <rect x="30" y="96" width="380" height="300" rx="6" fill="#0d1a28" stroke="#4488ff" stroke-width="1"/>
+  <text x="220" y="116" font-family="sans-serif" font-size="12" fill="#88bbff" text-anchor="middle" font-weight="bold">ARIA Roles, States, Properties</text>
+
+  <!-- Role examples -->
+  <rect x="46" y="126" width="348" height="260" rx="4" fill="#111"/>
+
+  <text x="62" y="144" font-family="monospace" font-size="11" fill="#6a9955">&lt;!-- Tab component with ARIA --&gt;</text>
+  <text x="62" y="162" font-family="monospace" font-size="11" fill="#4ec9b0">&lt;div</text>
+  <text x="90" y="162" font-family="monospace" font-size="11" fill="#9cdcfe"> role</text>
+  <text x="122" y="162" font-family="monospace" font-size="11" fill="#d4d4d4">=</text>
+  <text x="128" y="162" font-family="monospace" font-size="11" fill="#ce9178">"tablist"</text>
+  <text x="182" y="162" font-family="monospace" font-size="11" fill="#9cdcfe"> aria-label</text>
+  <text x="248" y="162" font-family="monospace" font-size="11" fill="#d4d4d4">=</text>
+  <text x="254" y="162" font-family="monospace" font-size="11" fill="#ce9178">"Gallery"</text>
+  <text x="310" y="162" font-family="monospace" font-size="11" fill="#4ec9b0">&gt;</text>
+
+  <text x="62" y="180" font-family="monospace" font-size="11" fill="#4ec9b0">  &lt;button</text>
+  <text x="62" y="196" font-family="monospace" font-size="11" fill="#9cdcfe">    role</text>
+  <text x="100" y="196" font-family="monospace" font-size="11" fill="#d4d4d4">=</text>
+  <text x="106" y="196" font-family="monospace" font-size="11" fill="#ce9178">"tab"</text>
+  <text x="62" y="212" font-family="monospace" font-size="11" fill="#9cdcfe">    aria-selected</text>
+  <text x="170" y="212" font-family="monospace" font-size="11" fill="#d4d4d4">=</text>
+  <text x="176" y="212" font-family="monospace" font-size="11" fill="#ce9178">"true"</text>
+  <text x="62" y="228" font-family="monospace" font-size="11" fill="#9cdcfe">    aria-controls</text>
+  <text x="172" y="228" font-family="monospace" font-size="11" fill="#d4d4d4">=</text>
+  <text x="178" y="228" font-family="monospace" font-size="11" fill="#ce9178">"panel-1"</text>
+  <text x="62" y="244" font-family="monospace" font-size="11" fill="#9cdcfe">    tabindex</text>
+  <text x="124" y="244" font-family="monospace" font-size="11" fill="#d4d4d4">=</text>
+  <text x="130" y="244" font-family="monospace" font-size="11" fill="#ce9178">"0"</text>
+  <text x="62" y="260" font-family="monospace" font-size="11" fill="#4ec9b0">  &gt;</text>
+  <text x="86" y="260" font-family="monospace" font-size="11" fill="#d4d4d4">Tab 1</text>
+  <text x="130" y="260" font-family="monospace" font-size="11" fill="#4ec9b0">&lt;/button&gt;</text>
+
+  <text x="62" y="280" font-family="monospace" font-size="11" fill="#4ec9b0">  &lt;div</text>
+  <text x="96" y="280" font-family="monospace" font-size="11" fill="#9cdcfe"> id</text>
+  <text x="114" y="280" font-family="monospace" font-size="11" fill="#d4d4d4">=</text>
+  <text x="120" y="280" font-family="monospace" font-size="11" fill="#ce9178">"panel-1"</text>
+  <text x="62" y="296" font-family="monospace" font-size="11" fill="#9cdcfe">    role</text>
+  <text x="100" y="296" font-family="monospace" font-size="11" fill="#d4d4d4">=</text>
+  <text x="106" y="296" font-family="monospace" font-size="11" fill="#ce9178">"tabpanel"</text>
+  <text x="62" y="312" font-family="monospace" font-size="11" fill="#9cdcfe">    aria-labelledby</text>
+  <text x="188" y="312" font-family="monospace" font-size="11" fill="#d4d4d4">=</text>
+  <text x="194" y="312" font-family="monospace" font-size="11" fill="#ce9178">"tab-1"</text>
+  <text x="62" y="328" font-family="monospace" font-size="11" fill="#4ec9b0">  &gt;</text>
+  <text x="86" y="328" font-family="monospace" font-size="11" fill="#d4d4d4">Panel content</text>
+  <text x="62" y="348" font-family="monospace" font-size="11" fill="#6a9955">/* Screen readers: "Tab 1, selected" */</text>
+  <text x="62" y="364" font-family="monospace" font-size="11" fill="#6a9955">/* Keyboard: arrow keys navigate tabs */</text>
+
+  <!-- Right: Screen reader demo + patterns -->
+  <rect x="430" y="96" width="340" height="140" rx="6" fill="#0d1a28" stroke="#4488ff" stroke-width="1"/>
+  <text x="600" y="116" font-family="sans-serif" font-size="12" fill="#88bbff" text-anchor="middle" font-weight="bold">Screen Reader Output</text>
+
+  <!-- Fake screen reader output -->
+  <rect x="446" y="124" width="308" height="100" rx="4" fill="#111" stroke="#333" stroke-width="1"/>
+  <text x="462" y="142" font-family="monospace" font-size="10" fill="#44cc44">VoiceOver (macOS):</text>
+  <text x="462" y="158" font-family="monospace" font-size="10" fill="#aaa">"Gallery, tab list"</text>
+  <text x="462" y="172" font-family="monospace" font-size="10" fill="#aaa">"Tab 1, selected, 1 of 3"</text>
+  <text x="462" y="188" font-family="monospace" font-size="10" fill="#aaa">"Tab 2, not selected, 2 of 3"</text>
+  <text x="462" y="204" font-family="monospace" font-size="10" fill="#aaa">"Tab 3, not selected, 3 of 3"</text>
+  <text x="462" y="218" font-family="monospace" font-size="10" fill="#44cc44">"Use arrow keys to navigate"</text>
+
+  <!-- ARIA 1.1 new features -->
+  <rect x="430" y="250" width="340" height="146" rx="6" fill="#0d1a28" stroke="#4488ff" stroke-width="1"/>
+  <text x="600" y="270" font-family="sans-serif" font-size="12" fill="#88bbff" text-anchor="middle" font-weight="bold">ARIA 1.1 Additions</text>
+
+  <text x="446" y="290" font-family="sans-serif" font-size="11" fill="#ccc">aria-modal — dialog blocking</text>
+  <text x="446" y="308" font-family="sans-serif" font-size="11" fill="#ccc">aria-roledescription — custom roles</text>
+  <text x="446" y="326" font-family="sans-serif" font-size="11" fill="#ccc">aria-current — current page/step</text>
+  <text x="446" y="344" font-family="sans-serif" font-size="11" fill="#ccc">aria-placeholder — input hints</text>
+  <text x="446" y="362" font-family="sans-serif" font-size="11" fill="#ccc">aria-errormessage — error link</text>
+  <text x="446" y="380" font-family="sans-serif" font-size="10" fill="#555">APG patterns: accordion, menu, slider...</text>
+
+  <!-- Museum web team story -->
+  <rect x="30" y="408" width="380" height="36" rx="6" fill="#0a2040" stroke="#4488ff" stroke-width="1"/>
+  <text x="220" y="422" font-family="sans-serif" font-size="10" fill="#88bbff" text-anchor="middle">Museum web team: "Screen reader users can now</text>
+  <text x="220" y="436" font-family="sans-serif" font-size="10" fill="#88bbff" text-anchor="middle">navigate our tab interface correctly!"</text>
+
+  <!-- Year badge -->
+  <rect x="440" y="412" width="330" height="32" rx="16" fill="#0050a0"/>
+  <text x="605" y="432" font-family="sans-serif" font-size="16" font-weight="bold" fill="#88bbff" text-anchor="middle">WAI-ARIA 1.1 · W3C · December 2017</text>
+</svg>

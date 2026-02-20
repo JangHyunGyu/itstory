@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- 40/100G Data Center Ethernet - hyperscale DC scene -->
+  <rect width="800" height="450" fill="#08101a"/>
+  <!-- Data center hot aisle/cold aisle -->
+  <!-- Hot aisle indicator -->
+  <rect x="0" y="0" width="800" height="15" fill="#2a0a0a" opacity="0.6"/>
+  <rect x="0" y="415" width="800" height="15" fill="#0a0a2a" opacity="0.6"/>
+  <!-- Server rows -->
+  <!-- Row 1 -->
+  <g transform="translate(0, 0)">
+    <!-- Rack 1 -->
+    <rect x="30" y="55" width="90" height="240" fill="#1a2030" rx="3" stroke="#2a3040" stroke-width="1.5"/>
+    <text x="75" y="75" font-family="monospace" font-size="6" fill="#4060a0" text-anchor="middle">COMPUTE</text>
+    <g fill="#2a3a4a">
+      <rect x="38" y="82" width="74" height="12" rx="1"/><rect x="38" y="98" width="74" height="12" rx="1"/>
+      <rect x="38" y="114" width="74" height="12" rx="1"/><rect x="38" y="130" width="74" height="12" rx="1"/>
+      <rect x="38" y="146" width="74" height="12" rx="1"/><rect x="38" y="162" width="74" height="12" rx="1"/>
+      <rect x="38" y="178" width="74" height="12" rx="1"/><rect x="38" y="194" width="74" height="12" rx="1"/>
+      <rect x="38" y="210" width="74" height="12" rx="1"/><rect x="38" y="226" width="74" height="12" rx="1"/>
+      <rect x="38" y="242" width="74" height="12" rx="1"/>
+    </g>
+    <g fill="#40c0ff" opacity="0.8">
+      <circle cx="44" cy="88" r="2"/><circle cx="52" cy="88" r="2"/><circle cx="44" cy="104" r="2"/>
+      <circle cx="52" cy="104" r="2"/><circle cx="44" cy="120" r="2"/><circle cx="52" cy="120" r="2"/>
+    </g>
+    <!-- Rack 2 -->
+    <rect x="145" y="55" width="90" height="240" fill="#1a2030" rx="3" stroke="#2a3040" stroke-width="1.5"/>
+    <text x="190" y="75" font-family="monospace" font-size="6" fill="#4060a0" text-anchor="middle">STORAGE</text>
+    <g fill="#2a3a4a">
+      <rect x="153" y="82" width="74" height="12" rx="1"/><rect x="153" y="98" width="74" height="12" rx="1"/>
+      <rect x="153" y="114" width="74" height="12" rx="1"/><rect x="153" y="130" width="74" height="12" rx="1"/>
+      <rect x="153" y="146" width="74" height="12" rx="1"/>
+    </g>
+    <g fill="#ff8040" opacity="0.7">
+      <circle cx="159" cy="88" r="2"/><circle cx="167" cy="88" r="2"/>
+    </g>
+  </g>
+  <!-- Central 100G spine switch (big and prominent) -->
+  <g transform="translate(400, 210)">
+    <rect x="-160" y="-70" width="320" height="140" fill="#0a2040" rx="8" stroke="#1060c0" stroke-width="3"/>
+    <text x="0" y="-38" font-family="sans-serif" font-size="14" font-weight="bold" fill="#40a0ff" text-anchor="middle">100 GbE SPINE SWITCH</text>
+    <text x="0" y="-18" font-family="monospace" font-size="10" fill="#2080c0" text-anchor="middle">IEEE 802.3ba · 2010</text>
+    <!-- QSFP+ port lights -->
+    <g fill="#40ffff" opacity="0.9">
+      <rect x="-140" y="5" width="25" height="18" rx="3"/>
+      <rect x="-108" y="5" width="25" height="18" rx="3"/>
+      <rect x="-76" y="5" width="25" height="18" rx="3"/>
+      <rect x="-44" y="5" width="25" height="18" rx="3"/>
+      <rect x="-12" y="5" width="25" height="18" rx="3"/>
+      <rect x="20" y="5" width="25" height="18" rx="3"/>
+      <rect x="52" y="5" width="25" height="18" rx="3"/>
+      <rect x="84" y="5" width="25" height="18" rx="3"/>
+      <rect x="116" y="5" width="25" height="18" rx="3"/>
+    </g>
+    <!-- QSFP labels -->
+    <g font-family="monospace" font-size="6" fill="#0a1a2a" text-anchor="middle">
+      <text x="-128" y="17">100G</text>
+      <text x="-96" y="17">100G</text>
+      <text x="-64" y="17">100G</text>
+      <text x="-32" y="17">100G</text>
+      <text x="0" y="17">100G</text>
+      <text x="32" y="17">100G</text>
+      <text x="64" y="17">100G</text>
+      <text x="96" y="17">100G</text>
+      <text x="128" y="17">100G</text>
+    </g>
+    <!-- Throughput display -->
+    <rect x="-130" y="38" width="260" height="28" fill="#051020" rx="3"/>
+    <text x="0" y="57" font-family="monospace" font-size="12" fill="#80ffff" text-anchor="middle">THROUGHPUT: 3.2 TERABITS/SEC</text>
+  </g>
+  <!-- High-speed cable connections (fiber) -->
+  <g stroke="#40c0ff" stroke-width="2.5" opacity="0.6">
+    <!-- Left racks to spine -->
+    <line x1="250" y1="200" x2="240" y2="200"/>
+    <path d="M 120 175 Q 200 210 240 210"/>
+    <path d="M 235 175 Q 270 210 240 215"/>
+    <!-- Right racks to spine -->
+    <path d="M 680 175 Q 620 210 560 210"/>
+    <path d="M 565 175 Q 530 210 560 215"/>
+  </g>
+  <!-- Right racks -->
+  <g transform="translate(0, 0)">
+    <rect x="580" y="55" width="90" height="240" fill="#1a2030" rx="3" stroke="#2a3040" stroke-width="1.5"/>
+    <text x="625" y="75" font-family="monospace" font-size="6" fill="#4060a0" text-anchor="middle">VM HOST</text>
+    <g fill="#2a3a4a">
+      <rect x="588" y="82" width="74" height="12" rx="1"/><rect x="588" y="98" width="74" height="12" rx="1"/>
+      <rect x="588" y="114" width="74" height="12" rx="1"/><rect x="588" y="130" width="74" height="12" rx="1"/>
+    </g>
+    <rect x="695" y="55" width="90" height="240" fill="#1a2030" rx="3" stroke="#2a3040" stroke-width="1.5"/>
+    <text x="740" y="75" font-family="monospace" font-size="6" fill="#4060a0" text-anchor="middle">NETWORK</text>
+    <g fill="#2a3a4a">
+      <rect x="703" y="82" width="74" height="12" rx="1"/><rect x="703" y="98" width="74" height="12" rx="1"/>
+    </g>
+  </g>
+  <!-- Evolution timeline at bottom -->
+  <rect x="30" y="360" width="740" height="35" fill="#050d15" rx="5" stroke="#103050" stroke-width="1"/>
+  <text x="50" y="373" font-family="monospace" font-size="8" fill="#c06060">10G(2002)</text>
+  <line x1="130" y1="368" x2="180" y2="368" stroke="#4080a0" stroke-width="1" marker-end="url(#arrow)"/>
+  <text x="190" y="373" font-family="monospace" font-size="8" fill="#c0a040">40G(2010)</text>
+  <line x1="270" y1="368" x2="320" y2="368" stroke="#4080a0" stroke-width="1"/>
+  <text x="330" y="373" font-family="monospace" font-size="8" fill="#40c040">100G(2010)</text>
+  <line x1="420" y1="368" x2="470" y2="368" stroke="#4080a0" stroke-width="1"/>
+  <text x="480" y="373" font-family="monospace" font-size="8" fill="#40c0ff">400G(2018)</text>
+  <line x1="570" y1="368" x2="620" y2="368" stroke="#4080a0" stroke-width="1"/>
+  <text x="630" y="373" font-family="monospace" font-size="8" fill="#c040ff">800G→(future)</text>
+  <text x="400" y="388" font-family="serif" font-size="8" fill="#4080a0" text-anchor="middle">802.3ba standard · QSFP+ modules · Cloud hyperscalers demand massive bandwidth</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#0a1a3a" rx="6" opacity="0.9" stroke="#40c0ff" stroke-width="1"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#40c0ff" text-anchor="middle">2010</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#050810" opacity="0.9"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">40/100G Data Center Ethernet · IEEE 802.3ba · Hyperscale Networks · Terabit Backbone</text>
+</svg>

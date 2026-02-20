@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- MIT Computer Center interior -->
+  <rect width="800" height="450" fill="#d8e0e8"/>
+  <!-- Tiled ceiling -->
+  <rect x="0" y="0" width="800" height="40" fill="#c8d0d8"/>
+  <g stroke="#b8c0c8" stroke-width="0.5">
+    <line x1="0" y1="20" x2="800" y2="20"/>
+    <line x1="100" y1="0" x2="100" y2="40"/>
+    <line x1="200" y1="0" x2="200" y2="40"/>
+    <line x1="300" y1="0" x2="300" y2="40"/>
+    <line x1="400" y1="0" x2="400" y2="40"/>
+    <line x1="500" y1="0" x2="500" y2="40"/>
+    <line x1="600" y1="0" x2="600" y2="40"/>
+    <line x1="700" y1="0" x2="700" y2="40"/>
+  </g>
+  <!-- Fluorescent lights -->
+  <g fill="#f0f0e8" opacity="0.8">
+    <rect x="50" y="5" width="150" height="12" rx="3"/>
+    <rect x="300" y="5" width="150" height="12" rx="3"/>
+    <rect x="550" y="5" width="150" height="12" rx="3"/>
+  </g>
+  <!-- Floor -->
+  <rect x="0" y="390" width="800" height="60" fill="#c8c0a8"/>
+  <!-- The IBM 7094 mainframe computer (large room-filling machine) -->
+  <!-- Main CPU cabinet -->
+  <rect x="50" y="80" width="180" height="320" fill="#4a5a6a" rx="4" stroke="#2a3a4a" stroke-width="2"/>
+  <rect x="60" y="90" width="160" height="290" fill="#5a6a7a" rx="2"/>
+  <!-- Control panel dials and lights -->
+  <g fill="#e8e0c8">
+    <rect x="70" y="100" width="140" height="60" fill="#3a4a5a" rx="2"/>
+    <!-- Toggle switches -->
+    <g fill="#8a8a8a">
+      <rect x="75" y="108" width="8" height="16" rx="1"/>
+      <rect x="90" y="108" width="8" height="16" rx="1"/>
+      <rect x="105" y="108" width="8" height="16" rx="1"/>
+      <rect x="120" y="108" width="8" height="16" rx="1"/>
+      <rect x="135" y="108" width="8" height="16" rx="1"/>
+      <rect x="150" y="108" width="8" height="16" rx="1"/>
+      <rect x="165" y="108" width="8" height="16" rx="1"/>
+      <rect x="180" y="108" width="8" height="16" rx="1"/>
+    </g>
+    <!-- Indicator lights -->
+    <circle cx="80" cy="142" r="4" fill="#ff4040"/>
+    <circle cx="95" cy="142" r="4" fill="#40ff40"/>
+    <circle cx="110" cy="142" r="4" fill="#40ff40"/>
+    <circle cx="125" cy="142" r="4" fill="#ffff40"/>
+    <circle cx="140" cy="142" r="4" fill="#ff4040"/>
+    <circle cx="155" cy="142" r="4" fill="#40ff40"/>
+    <circle cx="170" cy="142" r="4" fill="#40ff40"/>
+    <circle cx="185" cy="142" r="4" fill="#40ff40"/>
+    <circle cx="200" cy="142" r="4" fill="#40ff40"/>
+  </g>
+  <!-- Tape drive reels -->
+  <g fill="#6a7a8a" stroke="#3a4a5a" stroke-width="1">
+    <rect x="60" y="175" width="70" height="80" rx="2"/>
+    <rect x="140" y="175" width="70" height="80" rx="2"/>
+  </g>
+  <!-- Reels -->
+  <g fill="#8a9aaa" stroke="#5a6a7a" stroke-width="1">
+    <circle cx="95" cy="215" r="28"/>
+    <circle cx="95" cy="215" r="18" fill="#6a7a8a"/>
+    <circle cx="95" cy="215" r="8" fill="#4a5a6a"/>
+    <circle cx="175" cy="215" r="28"/>
+    <circle cx="175" cy="215" r="18" fill="#6a7a8a"/>
+    <circle cx="175" cy="215" r="8" fill="#4a5a6a"/>
+  </g>
+  <!-- Punch card reader/printer -->
+  <rect x="60" y="265" width="150" height="60" fill="#4a5a6a" rx="2"/>
+  <rect x="65" y="270" width="140" height="10" fill="#3a4a5a" rx="1"/>
+  <!-- Punch cards -->
+  <g fill="#f5ead0" stroke="#8a8a70" stroke-width="0.5">
+    <rect x="70" y="288" width="70" height="30" rx="1"/>
+    <rect x="80" y="291" width="50" height="3"/>
+    <rect x="80" y="297" width="50" height="3"/>
+    <rect x="80" y="303" width="30" height="3"/>
+    <rect x="80" y="309" width="40" height="3"/>
+  </g>
+  <!-- Second cabinet -->
+  <rect x="255" y="100" width="120" height="290" fill="#5a5a6a" rx="4" stroke="#3a3a4a" stroke-width="2"/>
+  <!-- Memory core panels -->
+  <g fill="#4a4a5a">
+    <rect x="265" y="110" width="100" height="80" rx="2"/>
+    <rect x="265" y="200" width="100" height="80" rx="2"/>
+    <rect x="265" y="290" width="100" height="90" rx="2"/>
+  </g>
+  <!-- Core memory dots -->
+  <g fill="#c8c8a0" opacity="0.7">
+    <circle cx="290" cy="130" r="3"/><circle cx="305" cy="130" r="3"/><circle cx="320" cy="130" r="3"/>
+    <circle cx="335" cy="130" r="3"/><circle cx="350" cy="130" r="3"/>
+    <circle cx="290" cy="145" r="3"/><circle cx="305" cy="145" r="3"/><circle cx="320" cy="145" r="3"/>
+    <circle cx="335" cy="145" r="3"/><circle cx="350" cy="145" r="3"/>
+    <circle cx="290" cy="160" r="3"/><circle cx="305" cy="160" r="3"/><circle cx="320" cy="160" r="3"/>
+    <circle cx="335" cy="160" r="3"/><circle cx="350" cy="160" r="3"/>
+  </g>
+  <!-- Multiple teletype terminals (time-sharing concept) -->
+  <!-- Terminal 1 -->
+  <g transform="translate(430, 200)">
+    <!-- Terminal body -->
+    <rect x="-45" y="-30" width="90" height="70" fill="#5a5a5a" rx="3"/>
+    <!-- Screen (green phosphor) -->
+    <rect x="-38" y="-25" width="76" height="45" fill="#0a2a0a" rx="2"/>
+    <!-- Green text on screen -->
+    <text x="-32" y="-12" font-family="monospace" font-size="7" fill="#40e040">$ CTSS login</text>
+    <text x="-32" y="-2" font-family="monospace" font-size="7" fill="#40e040">user: alice</text>
+    <text x="-32" y="8" font-family="monospace" font-size="7" fill="#40e040">loading...</text>
+    <text x="-32" y="18" font-family="monospace" font-size="7" fill="#40e040">_ |</text>
+    <!-- Keyboard -->
+    <rect x="-45" y="45" width="90" height="18" fill="#6a6a6a" rx="2"/>
+    <!-- Student 1 at terminal -->
+    <ellipse cx="0" cy="-55" rx="16" ry="16" fill="#d4a870"/>
+    <rect x="-14" y="-40" width="28" height="35" fill="#3a3a6a" rx="2"/>
+    <text x="0" y="80" font-family="serif" font-size="8" fill="#4a5a6a" text-anchor="middle">Alice</text>
+  </g>
+  <!-- Terminal 2 -->
+  <g transform="translate(560, 200)">
+    <rect x="-45" y="-30" width="90" height="70" fill="#5a5a5a" rx="3"/>
+    <rect x="-38" y="-25" width="76" height="45" fill="#0a2a0a" rx="2"/>
+    <text x="-32" y="-12" font-family="monospace" font-size="7" fill="#40e040">$ CTSS login</text>
+    <text x="-32" y="-2" font-family="monospace" font-size="7" fill="#40e040">user: bob</text>
+    <text x="-32" y="8" font-family="monospace" font-size="7" fill="#40e040">compiling...</text>
+    <text x="-32" y="18" font-family="monospace" font-size="7" fill="#40e040">74% done</text>
+    <rect x="-45" y="45" width="90" height="18" fill="#6a6a6a" rx="2"/>
+    <ellipse cx="0" cy="-55" rx="16" ry="16" fill="#c8956a"/>
+    <rect x="-14" y="-40" width="28" height="35" fill="#1a3a3a" rx="2"/>
+    <text x="0" y="80" font-family="serif" font-size="8" fill="#4a5a6a" text-anchor="middle">Bob</text>
+  </g>
+  <!-- Terminal 3 -->
+  <g transform="translate(690, 200)">
+    <rect x="-45" y="-30" width="90" height="70" fill="#5a5a5a" rx="3"/>
+    <rect x="-38" y="-25" width="76" height="45" fill="#0a2a0a" rx="2"/>
+    <text x="-32" y="-12" font-family="monospace" font-size="7" fill="#40e040">$ CTSS login</text>
+    <text x="-32" y="-2" font-family="monospace" font-size="7" fill="#40e040">user: carol</text>
+    <text x="-32" y="8" font-family="monospace" font-size="7" fill="#40e040">run fortran</text>
+    <text x="-32" y="18" font-family="monospace" font-size="7" fill="#40e040">&gt;_</text>
+    <rect x="-45" y="45" width="90" height="18" fill="#6a6a6a" rx="2"/>
+    <ellipse cx="0" cy="-55" rx="16" ry="16" fill="#b87858"/>
+    <rect x="-14" y="-40" width="28" height="35" fill="#3a1a2a" rx="2"/>
+    <text x="0" y="80" font-family="serif" font-size="8" fill="#4a5a6a" text-anchor="middle">Carol</text>
+  </g>
+  <!-- Lines from computer to terminals (time-sharing connections) -->
+  <g stroke="#6090b0" stroke-width="1.5" stroke-dasharray="8,5" opacity="0.7">
+    <line x1="375" y1="200" x2="430" y2="200"/>
+    <line x1="375" y1="200" x2="560" y2="200"/>
+    <line x1="375" y1="200" x2="690" y2="200"/>
+  </g>
+  <!-- CTSS concept diagram -->
+  <rect x="70" y="380" width="340" height="60" fill="#0a1a2a" rx="5" opacity="0.9"/>
+  <text x="240" y="398" font-family="sans-serif" font-size="10" font-weight="bold" fill="#60c0ff" text-anchor="middle">CTSS · Compatible Time-Sharing System</text>
+  <text x="240" y="413" font-family="serif" font-size="8" fill="#90b0d0" text-anchor="middle">CPU time sliced between users → appears simultaneous</text>
+  <text x="240" y="428" font-family="serif" font-size="8" fill="#6090b0" text-anchor="middle">MIT · Corbató · 1961</text>
+  <!-- MIT logo area -->
+  <rect x="420" y="380" width="130" height="60" fill="#c82020" rx="5" opacity="0.9"/>
+  <text x="485" y="407" font-family="serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">MIT</text>
+  <text x="485" y="422" font-family="serif" font-size="8" fill="#f0d0d0" text-anchor="middle">Computation Center</text>
+  <text x="485" y="434" font-family="serif" font-size="7" fill="#f0d0d0" text-anchor="middle">Cambridge, MA</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#1a2a4a" rx="6" opacity="0.8"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#60c0ff" text-anchor="middle">1961</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a0a1a" opacity="0.8"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">MIT CTSS Time-Sharing System · Multiple Users, One Computer</text>
+</svg>

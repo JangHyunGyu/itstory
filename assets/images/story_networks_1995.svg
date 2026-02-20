@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Fast Ethernet 100Mbps - network upgrade scene in server room -->
+  <rect width="800" height="450" fill="#1a1a22"/>
+  <!-- Server room floor -->
+  <rect x="0" y="380" width="800" height="70" fill="#14141a"/>
+  <!-- Server racks -->
+  <!-- Left rack -->
+  <rect x="40" y="80" width="120" height="280" fill="#2a2a3a" rx="4" stroke="#3a3a5a" stroke-width="2"/>
+  <!-- Old 10Mbps switch -->
+  <rect x="50" y="95" width="100" height="30" fill="#3a2a2a" rx="2"/>
+  <text x="100" y="106" font-family="monospace" font-size="7" fill="#a06060" text-anchor="middle">10BASE-T Hub</text>
+  <text x="100" y="118" font-family="monospace" font-size="7" fill="#806060" text-anchor="middle">10 Mbps (OLD)</text>
+  <!-- Crossed out indicator -->
+  <line x1="52" y1="97" x2="148" y2="123" stroke="#ff4040" stroke-width="2" opacity="0.7"/>
+  <!-- New 100Mbps switch installation -->
+  <rect x="50" y="135" width="100" height="30" fill="#1a3a1a" rx="2" stroke="#40c040" stroke-width="1.5"/>
+  <text x="100" y="146" font-family="monospace" font-size="7" fill="#40ff40" text-anchor="middle">100BASE-TX</text>
+  <text x="100" y="158" font-family="monospace" font-size="7" fill="#20c020" text-anchor="middle">100 Mbps NEW!</text>
+  <!-- Green lights on new switch -->
+  <g fill="#40ff40">
+    <circle cx="58" cy="152" r="3"/><circle cx="68" cy="152" r="3"/>
+    <circle cx="78" cy="152" r="3"/><circle cx="88" cy="152" r="3"/>
+  </g>
+  <!-- More rack equipment -->
+  <rect x="50" y="175" width="100" height="25" fill="#2a3a2a" rx="2"/>
+  <rect x="50" y="208" width="100" height="25" fill="#2a3a2a" rx="2"/>
+  <rect x="50" y="241" width="100" height="25" fill="#2a3a2a" rx="2"/>
+  <!-- Speed comparison diagram -->
+  <rect x="220" y="60" width="360" height="280" fill="#0e1218" rx="8" stroke="#2a4a6a" stroke-width="2"/>
+  <text x="400" y="90" font-family="sans-serif" font-size="14" font-weight="bold" fill="#60a0ff" text-anchor="middle">FAST ETHERNET</text>
+  <text x="400" y="108" font-family="sans-serif" font-size="10" fill="#4080c0" text-anchor="middle">100BASE-TX · IEEE 802.3u · 1995</text>
+  <!-- Speed bars comparison -->
+  <text x="240" y="136" font-family="sans-serif" font-size="9" fill="#8090a0">10 Mbps (old 10BASE-T):</text>
+  <rect x="240" y="143" width="80" height="18" fill="#4a2a2a" rx="2"/>
+  <text x="328" y="155" font-family="monospace" font-size="9" fill="#c06060"> 10 Mbps</text>
+  <text x="240" y="178" font-family="sans-serif" font-size="9" fill="#8090a0">100 Mbps (Fast Ethernet):</text>
+  <rect x="240" y="185" width="230" height="18" fill="#2a4a2a" rx="2"/>
+  <text x="478" y="197" font-family="monospace" font-size="9" fill="#60c060"> 100 Mbps</text>
+  <!-- Arrow with "10x faster" -->
+  <text x="400" y="220" font-family="sans-serif" font-size="16" font-weight="bold" fill="#80ff40" text-anchor="middle">10x FASTER!</text>
+  <!-- Use cases -->
+  <rect x="240" y="232" width="320" height="90" fill="#0a1820" rx="4"/>
+  <text x="400" y="250" font-family="sans-serif" font-size="9" fill="#60a0ff" text-anchor="middle">WHAT CHANGES WITH 100 Mbps?</text>
+  <text x="250" y="267" font-family="serif" font-size="8" fill="#8090b0">Overnight backup: was 8 hrs → now 50 min</text>
+  <text x="250" y="281" font-family="serif" font-size="8" fill="#8090b0">Video conference: smooth, no lag</text>
+  <text x="250" y="295" font-family="serif" font-size="8" fill="#8090b0">File transfer: 50 MB in 4 sec (vs 40 sec)</text>
+  <text x="250" y="309" font-family="serif" font-size="8" fill="#60c060">CAD/CAM large files now feasible!</text>
+  <!-- Right rack - servers -->
+  <rect x="640" y="80" width="120" height="280" fill="#2a2a3a" rx="4" stroke="#3a3a5a" stroke-width="2"/>
+  <g fill="#3a3a4a">
+    <rect x="650" y="95" width="100" height="20" rx="2"/>
+    <rect x="650" y="123" width="100" height="20" rx="2"/>
+    <rect x="650" y="151" width="100" height="20" rx="2"/>
+    <rect x="650" y="179" width="100" height="20" rx="2"/>
+    <rect x="650" y="207" width="100" height="20" rx="2"/>
+  </g>
+  <!-- Green port lights on right rack -->
+  <g fill="#40ff40" opacity="0.8">
+    <circle cx="658" cy="105" r="3"/><circle cx="668" cy="105" r="3"/>
+    <circle cx="658" cy="133" r="3"/><circle cx="668" cy="133" r="3"/>
+    <circle cx="658" cy="161" r="3"/><circle cx="668" cy="161" r="3"/>
+    <circle cx="658" cy="189" r="3"/><circle cx="668" cy="189" r="3"/>
+  </g>
+  <!-- Cables between racks -->
+  <g stroke="#60c040" stroke-width="2.5" opacity="0.7">
+    <path d="M 160 150 Q 190 150 220 180"/>
+    <path d="M 580 200 Q 610 200 640 190"/>
+  </g>
+  <!-- Engineer figure -->
+  <g transform="translate(400, 360)">
+    <ellipse cx="0" cy="-15" rx="15" ry="15" fill="#d4a870"/>
+    <rect x="-12" y="-1" width="24" height="28" fill="#1a3a5a" rx="2"/>
+    <text x="0" y="30" font-family="serif" font-size="8" fill="#8090a0" text-anchor="middle">Network Engineer</text>
+    <text x="0" y="42" font-family="serif" font-size="7" fill="#6080a0" text-anchor="middle">"No more overnight waits!"</text>
+  </g>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#0a1a3a" rx="6" opacity="0.9" stroke="#40a0ff" stroke-width="1"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#40a0ff" text-anchor="middle">1995</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#050810" opacity="0.9"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">Fast Ethernet 100Mbps · IEEE 802.3u · 10x Faster · Backbone Capacity Explosion</text>
+</svg>

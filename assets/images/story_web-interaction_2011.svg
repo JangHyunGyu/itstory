@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg11" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1520"/>
+      <stop offset="100%" style="stop-color:#112233"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg11)"/>
+
+  <!-- WebSocket bidirectional diagram (center) -->
+  <!-- Browser box -->
+  <rect x="50" y="130" width="180" height="100" rx="8" fill="#1a2a3a" stroke="#4488ff" stroke-width="2"/>
+  <rect x="50" y="130" width="180" height="28" rx="8" fill="#223344"/>
+  <rect x="50" y="144" width="180" height="14" fill="#223344"/>
+  <text x="140" y="149" font-family="sans-serif" font-size="12" fill="#88bbff" text-anchor="middle">Browser</text>
+  <!-- Browser chat window -->
+  <rect x="62" y="162" width="156" height="58" rx="4" fill="#0d1a28"/>
+  <text x="70" y="178" font-family="monospace" font-size="9" fill="#44dd88">User: Hello!</text>
+  <text x="70" y="192" font-family="monospace" font-size="9" fill="#aaa">Server: Hi there!</text>
+  <text x="70" y="206" font-family="monospace" font-size="9" fill="#44dd88">User: How are you?</text>
+
+  <!-- Server box -->
+  <rect x="570" y="130" width="180" height="100" rx="8" fill="#1a2a3a" stroke="#ff8844" stroke-width="2"/>
+  <rect x="570" y="130" width="180" height="28" rx="8" fill="#332211"/>
+  <rect x="570" y="144" width="180" height="14" fill="#332211"/>
+  <text x="660" y="149" font-family="sans-serif" font-size="12" fill="#ffbb88" text-anchor="middle">Server</text>
+  <!-- Server logs -->
+  <rect x="582" y="162" width="156" height="58" rx="4" fill="#0d1a28"/>
+  <text x="590" y="178" font-family="monospace" font-size="9" fill="#aaa">recv: "Hello!"</text>
+  <text x="590" y="192" font-family="monospace" font-size="9" fill="#ff8844">send: "Hi there!"</text>
+  <text x="590" y="206" font-family="monospace" font-size="9" fill="#aaa">recv: "How are you?"</text>
+
+  <!-- WebSocket connection line (persistent TCP) -->
+  <line x1="230" y1="180" x2="570" y2="180" stroke="#4488ff" stroke-width="3" stroke-dasharray="0"/>
+  <!-- Bidirectional arrows -->
+  <!-- Forward arrows -->
+  <polygon points="540,172 570,180 540,188" fill="#4488ff"/>
+  <!-- Backward arrows -->
+  <polygon points="260,172 230,180 260,188" fill="#ff8844"/>
+
+  <!-- Labels on the connection -->
+  <rect x="330" y="155" width="140" height="50" rx="4" fill="#0a1828"/>
+  <text x="400" y="172" font-family="sans-serif" font-size="11" fill="#88bbff" text-anchor="middle">WebSocket</text>
+  <text x="400" y="188" font-family="monospace" font-size="10" fill="#44dd88" text-anchor="middle">ws:// persistent</text>
+  <text x="400" y="202" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">Single TCP connection</text>
+
+  <!-- vs Polling comparison -->
+  <rect x="50" y="260" width="700" height="110" rx="6" fill="#0d1820" stroke="#333" stroke-width="1"/>
+  <text x="400" y="280" font-family="sans-serif" font-size="12" fill="#888" text-anchor="middle">Comparison</text>
+
+  <!-- Polling (bad) -->
+  <rect x="70" y="290" width="290" height="68" rx="4" fill="#1a0a0a" stroke="#cc3333" stroke-width="1"/>
+  <text x="215" y="308" font-family="sans-serif" font-size="11" fill="#cc3333" text-anchor="middle">Long Polling (old way)</text>
+  <!-- Polling requests -->
+  <rect x="82" y="316" width="50" height="14" rx="2" fill="#cc3333" opacity="0.7"/>
+  <text x="107" y="327" font-family="monospace" font-size="8" fill="white" text-anchor="middle">req/resp</text>
+  <rect x="140" y="316" width="50" height="14" rx="2" fill="#cc3333" opacity="0.7"/>
+  <text x="165" y="327" font-family="monospace" font-size="8" fill="white" text-anchor="middle">req/resp</text>
+  <rect x="198" y="316" width="50" height="14" rx="2" fill="#cc3333" opacity="0.7"/>
+  <text x="223" y="327" font-family="monospace" font-size="8" fill="white" text-anchor="middle">req/resp</text>
+  <rect x="256" y="316" width="50" height="14" rx="2" fill="#cc3333" opacity="0.7"/>
+  <text x="281" y="327" font-family="monospace" font-size="8" fill="white" text-anchor="middle">req/resp</text>
+  <text x="215" y="350" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">High overhead · Many HTTP requests</text>
+
+  <!-- WebSocket (good) -->
+  <rect x="380" y="290" width="350" height="68" rx="4" fill="#0a1a0a" stroke="#44dd88" stroke-width="1"/>
+  <text x="555" y="308" font-family="sans-serif" font-size="11" fill="#44dd88" text-anchor="middle">WebSocket (new way)</text>
+  <!-- One persistent connection -->
+  <rect x="392" y="316" width="326" height="14" rx="2" fill="#44dd88" opacity="0.25"/>
+  <line x1="392" y1="323" x2="718" y2="323" stroke="#44dd88" stroke-width="2"/>
+  <!-- Messages on it -->
+  <circle cx="430" cy="323" r="4" fill="#44dd88"/>
+  <circle cx="480" cy="323" r="4" fill="#ff8844"/>
+  <circle cx="530" cy="323" r="4" fill="#44dd88"/>
+  <circle cx="580" cy="323" r="4" fill="#ff8844"/>
+  <circle cx="630" cy="323" r="4" fill="#44dd88"/>
+  <circle cx="680" cy="323" r="4" fill="#ff8844"/>
+  <text x="555" y="350" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">Low latency · One connection · Full-duplex</text>
+
+  <!-- JS code snippet -->
+  <rect x="50" y="40" width="700" height="78" rx="6" fill="#1e1e1e" stroke="#333" stroke-width="1"/>
+  <text x="66" y="62" font-family="monospace" font-size="12" fill="#569cd6">const</text>
+  <text x="112" y="62" font-family="monospace" font-size="12" fill="#d4d4d4"> ws = </text>
+  <text x="152" y="62" font-family="monospace" font-size="12" fill="#569cd6">new</text>
+  <text x="180" y="62" font-family="monospace" font-size="12" fill="#4ec9b0"> WebSocket</text>
+  <text x="264" y="62" font-family="monospace" font-size="12" fill="#d4d4d4">(</text>
+  <text x="272" y="62" font-family="monospace" font-size="12" fill="#ce9178">'ws://chat.example.com'</text>
+  <text x="452" y="62" font-family="monospace" font-size="12" fill="#d4d4d4">);</text>
+  <text x="66" y="82" font-family="monospace" font-size="12" fill="#9cdcfe">ws</text>
+  <text x="88" y="82" font-family="monospace" font-size="12" fill="#d4d4d4">.</text>
+  <text x="94" y="82" font-family="monospace" font-size="12" fill="#9cdcfe">onmessage</text>
+  <text x="166" y="82" font-family="monospace" font-size="12" fill="#d4d4d4"> = (</text>
+  <text x="194" y="82" font-family="monospace" font-size="12" fill="#9cdcfe">e</text>
+  <text x="202" y="82" font-family="monospace" font-size="12" fill="#d4d4d4">) => </text>
+  <text x="240" y="82" font-family="monospace" font-size="12" fill="#dcdcaa">console</text>
+  <text x="297" y="82" font-family="monospace" font-size="12" fill="#d4d4d4">.</text>
+  <text x="303" y="82" font-family="monospace" font-size="12" fill="#dcdcaa">log</text>
+  <text x="325" y="82" font-family="monospace" font-size="12" fill="#d4d4d4">(</text>
+  <text x="332" y="82" font-family="monospace" font-size="12" fill="#9cdcfe">e</text>
+  <text x="340" y="82" font-family="monospace" font-size="12" fill="#d4d4d4">.</text>
+  <text x="346" y="82" font-family="monospace" font-size="12" fill="#9cdcfe">data</text>
+  <text x="376" y="82" font-family="monospace" font-size="12" fill="#d4d4d4">);</text>
+  <text x="66" y="102" font-family="monospace" font-size="12" fill="#9cdcfe">ws</text>
+  <text x="88" y="102" font-family="monospace" font-size="12" fill="#d4d4d4">.</text>
+  <text x="94" y="102" font-family="monospace" font-size="12" fill="#dcdcaa">send</text>
+  <text x="124" y="102" font-family="monospace" font-size="12" fill="#d4d4d4">(</text>
+  <text x="132" y="102" font-family="monospace" font-size="12" fill="#ce9178">'Hello Server!'</text>
+  <text x="240" y="102" font-family="monospace" font-size="12" fill="#d4d4d4">);</text>
+  <text x="500" y="80" font-family="monospace" font-size="11" fill="#6a9955">// IETF RFC 6455</text>
+  <text x="500" y="96" font-family="monospace" font-size="11" fill="#6a9955">// HTML5 standard</text>
+
+  <!-- Year badge -->
+  <rect x="340" y="390" width="120" height="36" rx="18" fill="#4488ff"/>
+  <text x="400" y="414" font-family="sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">2011</text>
+
+  <!-- Bottom caption -->
+  <text x="400" y="407" font-family="sans-serif" font-size="14" fill="#88bbff" text-anchor="middle" font-weight="bold" y="406">WebSocket — Real-time bidirectional web</text>
+  <text x="400" y="424" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">IETF RFC 6455 · HTML5 WebSocket API · 2011</text>
+</svg>

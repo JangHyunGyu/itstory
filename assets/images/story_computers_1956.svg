@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg1956" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d1520"/>
+      <stop offset="100%" stop-color="#080d15"/>
+    </linearGradient>
+    <linearGradient id="tubeGlowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff8800"/>
+      <stop offset="100%" stop-color="#ff2200" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow1956">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="transistorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a3a2a"/>
+      <stop offset="100%" stop-color="#1a1a10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg1956)"/>
+
+  <!-- Divider line in center -->
+  <line x1="400" y1="0" x2="400" y2="380" stroke="#2a2a2a" stroke-width="2" stroke-dasharray="10,5"/>
+
+  <!-- LEFT SIDE: Vacuum Tube (OLD) -->
+  <text x="200" y="35" fill="#ff6600" font-size="16" font-family="sans-serif" text-anchor="middle" font-weight="bold">真空管 (VACUUM TUBE)</text>
+  <text x="200" y="55" fill="#8B4400" font-size="11" font-family="sans-serif" text-anchor="middle">Large · Hot · Fragile · Power-hungry</text>
+
+  <!-- Large vacuum tube illustration -->
+  <g transform="translate(140, 70)">
+    <!-- Glass envelope -->
+    <ellipse cx="60" cy="60" rx="55" ry="90" fill="#1a0d05" opacity="0.5" stroke="#5a3a20" stroke-width="2.5"/>
+    <!-- Inner glow -->
+    <ellipse cx="60" cy="60" rx="42" ry="75" fill="#ff8800" opacity="0.15" filter="url(#glow1956)"/>
+    <!-- Electrodes/Filament structure -->
+    <line x1="60" y1="15" x2="60" y2="105" stroke="#ff8800" stroke-width="1.5" opacity="0.4"/>
+    <!-- Cathode (heated filament) -->
+    <path d="M 45 80 Q 60 65 75 80" fill="none" stroke="#ffcc44" stroke-width="2.5" filter="url(#glow1956)"/>
+    <path d="M 45 72 Q 60 57 75 72" fill="none" stroke="#ffaa22" stroke-width="2"/>
+    <!-- Grid wires -->
+    <line x1="38" y1="55" x2="82" y2="55" stroke="#cc6600" stroke-width="1.5" opacity="0.7"/>
+    <line x1="38" y1="48" x2="82" y2="48" stroke="#cc6600" stroke-width="1.5" opacity="0.7"/>
+    <line x1="38" y1="62" x2="82" y2="62" stroke="#cc6600" stroke-width="1.5" opacity="0.7"/>
+    <!-- Plate -->
+    <rect x="35" y="30" width="50" height="5" fill="#aa4400" opacity="0.8"/>
+    <!-- Base pins -->
+    <rect x="28" y="148" width="8" height="22" fill="#4a3010" rx="1"/>
+    <rect x="42" y="148" width="8" height="25" fill="#4a3010" rx="1"/>
+    <rect x="56" y="148" width="8" height="20" fill="#4a3010" rx="1"/>
+    <rect x="70" y="148" width="8" height="23" fill="#4a3010" rx="1"/>
+    <rect x="84" y="148" width="8" height="22" fill="#4a3010" rx="1"/>
+    <!-- Base -->
+    <rect x="20" y="140" width="80" height="12" fill="#3a2010" rx="2"/>
+    <!-- Glass edge highlight -->
+    <ellipse cx="60" cy="60" rx="55" ry="90" fill="none" stroke="#3a2010" stroke-width="1"/>
+    <ellipse cx="30" cy="30" rx="8" ry="20" fill="white" opacity="0.06"/>
+    <!-- Heat glow -->
+    <ellipse cx="60" cy="100" rx="30" ry="20" fill="#ff4400" opacity="0.12" filter="url(#glow1956)"/>
+
+    <!-- Size indicator -->
+    <line x1="-20" y1="0" x2="-20" y2="170" stroke="#ff6600" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="-32" y="87" fill="#ff6600" font-size="11" font-family="sans-serif" text-anchor="middle" transform="rotate(-90,-32,87)">~10 cm</text>
+
+    <!-- Labels -->
+    <text x="60" y="188" fill="#ff6600" font-size="11" font-family="monospace" text-anchor="middle">Triode Vacuum Tube</text>
+    <text x="60" y="202" fill="#8B4400" font-size="10" font-family="monospace" text-anchor="middle">~3 Watts each</text>
+  </g>
+
+  <!-- RIGHT SIDE: Transistor (NEW) -->
+  <text x="600" y="35" fill="#4da6ff" font-size="16" font-family="sans-serif" text-anchor="middle" font-weight="bold">트랜지스터 (TRANSISTOR)</text>
+  <text x="600" y="55" fill="#1e5a8a" font-size="11" font-family="sans-serif" text-anchor="middle">Small · Cool · Reliable · Efficient</text>
+
+  <!-- Small transistor illustration -->
+  <g transform="translate(545, 95)">
+    <!-- Transistor body -->
+    <rect x="25" y="0" width="60" height="70" fill="url(#transistorGrad)" rx="5"/>
+    <!-- Metal dome top -->
+    <ellipse cx="55" cy="0" rx="30" ry="10" fill="#2a2a1a"/>
+    <!-- Leads/pins -->
+    <line x1="20" y1="35" x2="0" y2="35" stroke="#8a8a5a" stroke-width="4"/>
+    <line x1="55" y1="70" x2="55" y2="95" stroke="#8a8a5a" stroke-width="4"/>
+    <line x1="90" y1="35" x2="110" y2="35" stroke="#8a8a5a" stroke-width="4"/>
+    <!-- Pin labels -->
+    <text x="-10" y="48" fill="#4da6ff" font-size="9" font-family="monospace" text-anchor="middle">B</text>
+    <text x="55" y="108" fill="#4da6ff" font-size="9" font-family="monospace" text-anchor="middle">E</text>
+    <text x="120" y="48" fill="#4da6ff" font-size="9" font-family="monospace" text-anchor="middle">C</text>
+    <text x="-22" y="31" fill="#aaaaff" font-size="8" font-family="monospace">Base</text>
+    <text x="28" y="115" fill="#aaaaff" font-size="8" font-family="monospace">Emitter</text>
+    <text x="112" y="31" fill="#aaaaff" font-size="8" font-family="monospace">Collector</text>
+    <!-- Semiconductor junction markings -->
+    <line x1="25" y1="30" x2="85" y2="30" stroke="#4da6ff" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+    <line x1="25" y1="40" x2="85" y2="40" stroke="#4da6ff" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+    <text x="55" y="36" fill="#7acfff" font-size="9" font-family="monospace" text-anchor="middle">N-P-N</text>
+
+    <!-- Size indicator -->
+    <line x1="145" y1="0" x2="145" y2="70" stroke="#4da6ff" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="160" y="38" fill="#4da6ff" font-size="10" font-family="sans-serif" text-anchor="start">~1cm</text>
+
+    <!-- Labels -->
+    <text x="55" y="125" fill="#4da6ff" font-size="11" font-family="monospace" text-anchor="middle">NPN Transistor</text>
+    <text x="55" y="140" fill="#1e5a8a" font-size="10" font-family="monospace" text-anchor="middle">~0.1 Watts</text>
+  </g>
+
+  <!-- VS comparison arrow in center -->
+  <g transform="translate(370, 165)" filter="url(#glow1956)">
+    <text x="30" y="0" fill="#ffd700" font-size="28" font-family="sans-serif" text-anchor="middle" font-weight="bold">VS</text>
+  </g>
+
+  <!-- IBM 704 illustration (bottom) -->
+  <g transform="translate(50, 265)">
+    <rect x="0" y="0" width="300" height="30" fill="#0a1520"/>
+    <text x="150" y="20" fill="#4da6ff" font-size="13" font-family="monospace" text-anchor="middle" font-weight="bold">IBM 704 — 1956</text>
+  </g>
+
+  <!-- Comparison specs table -->
+  <g transform="translate(50, 295)">
+    <rect x="0" y="0" width="700" height="80" fill="#080d15" rx="5" stroke="#1e3a5a" stroke-width="1"/>
+    <!-- Headers -->
+    <text x="175" y="20" fill="#ff6600" font-size="11" font-family="monospace" text-anchor="middle">Vacuum Tube Era</text>
+    <text x="525" y="20" fill="#4da6ff" font-size="11" font-family="monospace" text-anchor="middle">Transistor Era</text>
+    <line x1="350" y1="0" x2="350" y2="80" stroke="#2a2a2a" stroke-width="1"/>
+    <line x1="0" y1="25" x2="700" y2="25" stroke="#1e3a5a" stroke-width="0.5"/>
+
+    <text x="175" y="43" fill="#cc6600" font-size="10" font-family="monospace" text-anchor="middle">Freq: 1 MHz · Size: room-filling</text>
+    <text x="525" y="43" fill="#2288cc" font-size="10" font-family="monospace" text-anchor="middle">Freq: 10+ MHz · Size: cabinet</text>
+    <text x="175" y="59" fill="#cc6600" font-size="10" font-family="monospace" text-anchor="middle">Power: 150 kW · Heat: extreme</text>
+    <text x="525" y="59" fill="#2288cc" font-size="10" font-family="monospace" text-anchor="middle">Power: 10 kW · Reliable: 10x</text>
+    <text x="175" y="75" fill="#cc6600" font-size="10" font-family="monospace" text-anchor="middle">Failure: hourly · Cost: $$$$$</text>
+    <text x="525" y="75" fill="#2288cc" font-size="10" font-family="monospace" text-anchor="middle">Failure: rare · FORTRAN born!</text>
+  </g>
+
+  <!-- FORTRAN code snippet -->
+  <g transform="translate(450, 265)">
+    <rect x="0" y="0" width="300" height="25" fill="#0a1520"/>
+    <text x="150" y="18" fill="#2ecc71" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">FORTRAN — IBM 704 · 1957</text>
+  </g>
+  <g transform="translate(450, 290)">
+    <rect x="0" y="0" width="300" height="80" fill="#030810" rx="3" stroke="#0d3a1a" stroke-width="1"/>
+    <text x="10" y="18" fill="#2ecc71" font-size="10" font-family="monospace">      PROGRAM COMPUTE</text>
+    <text x="10" y="33" fill="#2ecc71" font-size="10" font-family="monospace">      INTEGER N, SUM</text>
+    <text x="10" y="48" fill="#2ecc71" font-size="10" font-family="monospace">      SUM = 0</text>
+    <text x="10" y="63" fill="#2ecc71" font-size="10" font-family="monospace">      DO 10 N=1,100</text>
+    <text x="10" y="78" fill="#2ecc71" font-size="10" font-family="monospace">   10 SUM = SUM + N</text>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#060d15" opacity="0.95"/>
+  <text x="400" y="415" fill="#4da6ff" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">IBM 704 · 트랜지스터 컴퓨터</text>
+  <text x="400" y="438" fill="#1e5a8a" font-size="12" font-family="Georgia, serif" text-anchor="middle">Transistors replace Vacuum Tubes · IBM 704 · FORTRAN · 1956</text>
+</svg>

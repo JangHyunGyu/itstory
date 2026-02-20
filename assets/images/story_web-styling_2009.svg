@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="shadow09" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000033"/>
+    </filter>
+    <marker id="arrow09" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#cc44aa"/>
+    </marker>
+  </defs>
+
+  <!-- Dark editor background -->
+  <rect width="800" height="450" fill="#1e1e2e"/>
+  <!-- Code editor gutter -->
+  <rect x="0" y="0" width="40" height="450" fill="#161626"/>
+
+  <!-- Line numbers gutter -->
+  <text x="20" y="80" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">1</text>
+  <text x="20" y="93" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">2</text>
+  <text x="20" y="106" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">3</text>
+  <text x="20" y="119" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">4</text>
+  <text x="20" y="132" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">5</text>
+  <text x="20" y="145" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">6</text>
+  <text x="20" y="158" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">7</text>
+  <text x="20" y="171" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">8</text>
+  <text x="20" y="184" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">9</text>
+  <text x="20" y="197" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">10</text>
+  <text x="20" y="210" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">11</text>
+  <text x="20" y="223" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">12</text>
+  <text x="20" y="236" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">13</text>
+  <text x="20" y="249" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">14</text>
+  <text x="20" y="262" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">15</text>
+  <text x="20" y="275" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">16</text>
+  <text x="20" y="288" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">17</text>
+  <text x="20" y="301" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">18</text>
+  <text x="20" y="314" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">19</text>
+  <text x="20" y="327" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">20</text>
+  <text x="20" y="340" font-family="monospace" font-size="9" fill="#444" text-anchor="middle">21</text>
+
+  <!-- Year label -->
+  <rect x="50" y="14" width="60" height="24" rx="4" fill="#cc44aa" opacity="0.9"/>
+  <text x="80" y="30" font-family="monospace" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">2009</text>
+
+  <!-- Editor tab bar -->
+  <rect x="40" y="0" width="760" height="36" fill="#252540"/>
+  <!-- Active tab: SCSS file -->
+  <rect x="120" y="4" width="130" height="28" rx="4" fill="#1e1e2e"/>
+  <text x="150" y="20" font-family="monospace" font-size="10" fill="#cc44aa">◆</text>
+  <text x="165" y="20" font-family="monospace" font-size="10" fill="#ddd">styles.scss</text>
+  <!-- Inactive tab: compiled CSS -->
+  <rect x="258" y="4" width="120" height="28" rx="4" fill="#1a1a30"/>
+  <text x="285" y="20" font-family="monospace" font-size="10" fill="#555">styles.css</text>
+
+  <!-- SCSS code - left pane -->
+  <!-- File header comment -->
+  <text x="50" y="62" font-family="monospace" font-size="10" fill="#6a8a6a">// ============ Sass 3.0 SCSS ============</text>
+
+  <!-- Variables section -->
+  <text x="50" y="80" font-family="monospace" font-size="11" fill="#888">// Variables</text>
+  <text x="50" y="93" font-family="monospace" font-size="11" fill="#cc44aa">$brand-color</text>
+  <text x="167" y="93" font-family="monospace" font-size="11" fill="#ccc">: </text>
+  <rect x="182" y="80" width="16" height="16" rx="2" fill="#007bff" stroke="#333" stroke-width="1"/>
+  <text x="200" y="93" font-family="monospace" font-size="11" fill="#88ddff">#007bff</text>
+  <text x="255" y="93" font-family="monospace" font-size="11" fill="#ccc">;</text>
+
+  <text x="50" y="106" font-family="monospace" font-size="11" fill="#cc44aa">$text-dark</text>
+  <text x="139" y="106" font-family="monospace" font-size="11" fill="#ccc">: </text>
+  <rect x="155" y="93" width="16" height="16" rx="2" fill="#333" stroke="#666" stroke-width="1"/>
+  <text x="173" y="106" font-family="monospace" font-size="11" fill="#88ddff">#333333</text>
+  <text x="228" y="106" font-family="monospace" font-size="11" fill="#ccc">;</text>
+
+  <text x="50" y="119" font-family="monospace" font-size="11" fill="#cc44aa">$spacing-base</text>
+  <text x="178" y="119" font-family="monospace" font-size="11" fill="#ccc">: </text>
+  <text x="194" y="119" font-family="monospace" font-size="11" fill="#ffcc66">1rem</text>
+  <text x="228" y="119" font-family="monospace" font-size="11" fill="#ccc">;</text>
+
+  <!-- Mixin section -->
+  <text x="50" y="141" font-family="monospace" font-size="10" fill="#6a8a6a">// Mixin: reusable button styles</text>
+  <text x="50" y="158" font-family="monospace" font-size="11" fill="#ff8855">@mixin</text>
+  <text x="107" y="158" font-family="monospace" font-size="11" fill="#88ff88"> button</text>
+  <text x="160" y="158" font-family="monospace" font-size="11" fill="#ffcc66">(</text>
+  <text x="168" y="158" font-family="monospace" font-size="11" fill="#cc44aa">$color</text>
+  <text x="218" y="158" font-family="monospace" font-size="11" fill="#ccc">: </text>
+  <text x="230" y="158" font-family="monospace" font-size="11" fill="#cc44aa">$brand-color</text>
+  <text x="329" y="158" font-family="monospace" font-size="11" fill="#ffcc66">)</text>
+  <text x="337" y="158" font-family="monospace" font-size="11" fill="#ccc">&#123;</text>
+
+  <text x="68" y="171" font-family="monospace" font-size="11" fill="#ccc">background-color: </text>
+  <text x="220" y="171" font-family="monospace" font-size="11" fill="#cc44aa">$color</text>
+  <text x="262" y="171" font-family="monospace" font-size="11" fill="#ccc">;</text>
+
+  <text x="68" y="184" font-family="monospace" font-size="11" fill="#ccc">padding: </text>
+  <text x="131" y="184" font-family="monospace" font-size="11" fill="#cc44aa">$spacing-base</text>
+  <text x="232" y="184" font-family="monospace" font-size="11" fill="#ccc"> (</text>
+  <text x="248" y="184" font-family="monospace" font-size="11" fill="#cc44aa">$spacing-base</text>
+  <text x="349" y="184" font-family="monospace" font-size="11" fill="#ccc"> * 2);</text>
+
+  <text x="68" y="197" font-family="monospace" font-size="11" fill="#ccc">border-radius: </text>
+  <text x="185" y="197" font-family="monospace" font-size="11" fill="#ffcc66">4px</text>
+  <text x="208" y="197" font-family="monospace" font-size="11" fill="#ccc">;</text>
+
+  <text x="68" y="210" font-family="monospace" font-size="11" fill="#ccc">color: </text>
+  <text x="111" y="210" font-family="monospace" font-size="11" fill="#88ddff">#fff</text>
+  <text x="136" y="210" font-family="monospace" font-size="11" fill="#ccc">;</text>
+
+  <text x="50" y="223" font-family="monospace" font-size="11" fill="#ccc">&#125;</text>
+
+  <!-- Nesting section -->
+  <text x="50" y="241" font-family="monospace" font-size="10" fill="#6a8a6a">// Nesting — no repetition!</text>
+  <text x="50" y="258" font-family="monospace" font-size="11" fill="#88ff88">.card</text>
+  <text x="95" y="258" font-family="monospace" font-size="11" fill="#ccc">&#123;</text>
+
+  <text x="68" y="271" font-family="monospace" font-size="11" fill="#ccc">background: </text>
+  <text x="181" y="271" font-family="monospace" font-size="11" fill="#88ddff">#fff</text>
+  <text x="206" y="271" font-family="monospace" font-size="11" fill="#ccc">;</text>
+
+  <text x="68" y="284" font-family="monospace" font-size="11" fill="#ccc">padding: </text>
+  <text x="131" y="284" font-family="monospace" font-size="11" fill="#cc44aa">$spacing-base</text>
+  <text x="232" y="284" font-family="monospace" font-size="11" fill="#ccc">;</text>
+
+  <!-- Nested selector -->
+  <text x="68" y="301" font-family="monospace" font-size="11" fill="#88ff88">  &amp;__title</text>
+  <text x="130" y="301" font-family="monospace" font-size="11" fill="#ccc">&#123;</text>
+  <text x="68" y="314" font-family="monospace" font-size="11" fill="#ccc">    color: </text>
+  <text x="131" y="314" font-family="monospace" font-size="11" fill="#cc44aa">$brand-color</text>
+  <text x="232" y="314" font-family="monospace" font-size="11" fill="#ccc">;</text>
+  <text x="68" y="327" font-family="monospace" font-size="11" fill="#ccc">  &#125;</text>
+
+  <!-- Button include -->
+  <text x="68" y="344" font-family="monospace" font-size="11" fill="#ccc">  .btn &#123; </text>
+  <text x="129" y="344" font-family="monospace" font-size="11" fill="#ff8855">@include</text>
+  <text x="198" y="344" font-family="monospace" font-size="11" fill="#88ff88"> button</text>
+  <text x="251" y="344" font-family="monospace" font-size="11" fill="#ccc">(); &#125;</text>
+
+  <text x="50" y="357" font-family="monospace" font-size="11" fill="#ccc">&#125;</text>
+
+  <!-- Arrow -->
+  <line x1="420" y1="200" x2="456" y2="200" stroke="#cc44aa" stroke-width="3" marker-end="url(#arrow09)"/>
+  <text x="438" y="194" font-family="monospace" font-size="8" fill="#cc44aa" text-anchor="middle">compile</text>
+
+  <!-- Compiled CSS Output (right side) -->
+  <rect x="460" y="40" width="330" height="360" rx="6" fill="#13132a" filter="url(#shadow09)"/>
+  <!-- Tab indicator -->
+  <rect x="460" y="40" width="330" height="28" rx="6" fill="#1a1a30"/>
+  <rect x="460" y="54" width="330" height="14" fill="#1a1a30"/>
+  <text x="480" y="57" font-family="monospace" font-size="9" fill="#888">styles.css — compiled output</text>
+  <!-- CSS output content -->
+  <text x="470" y="86" font-family="monospace" font-size="10" fill="#6a8a6a">/* Auto-generated by Sass */</text>
+  <text x="470" y="102" font-family="monospace" font-size="10" fill="#888">.btn &#123;</text>
+  <text x="480" y="116" font-family="monospace" font-size="10" fill="#ccc">background-color: </text>
+  <rect x="592" y="104" width="14" height="14" rx="2" fill="#007bff"/>
+  <text x="608" y="116" font-family="monospace" font-size="10" fill="#88ddff">#007bff</text>
+  <text x="657" y="116" font-family="monospace" font-size="10" fill="#ccc">;</text>
+  <text x="480" y="130" font-family="monospace" font-size="10" fill="#ccc">padding: 1rem 2rem;</text>
+  <text x="480" y="144" font-family="monospace" font-size="10" fill="#ccc">border-radius: 4px;</text>
+  <text x="480" y="158" font-family="monospace" font-size="10" fill="#ccc">color: #fff;</text>
+  <text x="470" y="172" font-family="monospace" font-size="10" fill="#888">&#125;</text>
+
+  <text x="470" y="192" font-family="monospace" font-size="10" fill="#888">.card &#123;</text>
+  <text x="480" y="206" font-family="monospace" font-size="10" fill="#ccc">background: #fff;</text>
+  <text x="480" y="220" font-family="monospace" font-size="10" fill="#ccc">padding: 1rem;</text>
+  <text x="470" y="234" font-family="monospace" font-size="10" fill="#888">&#125;</text>
+
+  <text x="470" y="254" font-family="monospace" font-size="10" fill="#888">.card__title &#123;</text>
+  <text x="480" y="268" font-family="monospace" font-size="10" fill="#ccc">color: </text>
+  <rect x="520" y="257" width="14" height="14" rx="2" fill="#007bff"/>
+  <text x="536" y="268" font-family="monospace" font-size="10" fill="#88ddff">#007bff</text>
+  <text x="585" y="268" font-family="monospace" font-size="10" fill="#ccc">;</text>
+  <text x="470" y="282" font-family="monospace" font-size="10" fill="#888">&#125;</text>
+
+  <text x="470" y="302" font-family="monospace" font-size="10" fill="#888">.card .btn &#123;</text>
+  <text x="480" y="316" font-family="monospace" font-size="10" fill="#ccc">background-color: </text>
+  <rect x="592" y="306" width="14" height="14" rx="2" fill="#007bff"/>
+  <text x="608" y="316" font-family="monospace" font-size="10" fill="#88ddff">#007bff</text>
+  <text x="657" y="316" font-family="monospace" font-size="10" fill="#ccc">;</text>
+  <text x="480" y="330" font-family="monospace" font-size="10" fill="#ccc">padding: 1rem 2rem;</text>
+  <text x="480" y="344" font-family="monospace" font-size="10" fill="#ccc">border-radius: 4px;</text>
+  <text x="480" y="358" font-family="monospace" font-size="10" fill="#ccc">color: #fff;</text>
+  <text x="470" y="372" font-family="monospace" font-size="10" fill="#888">&#125;</text>
+
+  <!-- Sass 3.0 badge -->
+  <rect x="50" y="390" width="130" height="40" rx="8" fill="#cc44aa" filter="url(#shadow09)"/>
+  <text x="115" y="408" font-family="sans-serif" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">Sass 3.0</text>
+  <text x="115" y="422" font-family="monospace" font-size="9" fill="#ffccee" text-anchor="middle">SCSS syntax</text>
+
+  <!-- Bottom caption -->
+  <text x="625" y="415" font-family="monospace" font-size="9" fill="#666" text-anchor="middle">variables · mixins · nesting → plain CSS</text>
+</svg>

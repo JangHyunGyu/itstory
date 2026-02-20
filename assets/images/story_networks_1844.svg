@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="sky1844" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87ceeb"/>
+      <stop offset="100%" stop-color="#e0f0ff"/>
+    </linearGradient>
+  </defs>
+  <!-- Daytime sky -->
+  <rect width="800" height="450" fill="url(#sky1844)"/>
+  <!-- Clouds -->
+  <g fill="white" opacity="0.8">
+    <ellipse cx="150" cy="80" rx="70" ry="35"/>
+    <ellipse cx="200" cy="70" rx="55" ry="28"/>
+    <ellipse cx="100" cy="90" rx="50" ry="25"/>
+    <ellipse cx="620" cy="100" rx="80" ry="38"/>
+    <ellipse cx="670" cy="88" rx="60" ry="30"/>
+    <ellipse cx="570" cy="108" rx="55" ry="26"/>
+  </g>
+  <!-- Ground -->
+  <rect x="0" y="340" width="800" height="110" fill="#5a8040"/>
+  <rect x="0" y="335" width="800" height="12" fill="#6a9a4a"/>
+  <!-- Road/path between cities -->
+  <path d="M 0 370 Q 400 360 800 375" stroke="#c8a878" stroke-width="25" fill="none" opacity="0.6"/>
+  <!-- Telegraph poles along road -->
+  <g fill="#6b4a25">
+    <rect x="80" y="240" width="7" height="105" rx="1"/>
+    <rect x="200" y="235" width="7" height="110" rx="1"/>
+    <rect x="330" y="232" width="7" height="113" rx="1"/>
+    <rect x="460" y="235" width="7" height="110" rx="1"/>
+    <rect x="590" y="240" width="7" height="105" rx="1"/>
+    <rect x="720" y="242" width="7" height="103" rx="1"/>
+  </g>
+  <!-- Cross arms -->
+  <g fill="#8b6535" stroke="#5a3a15" stroke-width="0.5">
+    <rect x="62" y="248" width="42" height="5" rx="1"/>
+    <rect x="182" y="243" width="42" height="5" rx="1"/>
+    <rect x="312" y="240" width="42" height="5" rx="1"/>
+    <rect x="442" y="243" width="42" height="5" rx="1"/>
+    <rect x="572" y="248" width="42" height="5" rx="1"/>
+    <rect x="702" y="250" width="42" height="5" rx="1"/>
+  </g>
+  <!-- Telegraph wire -->
+  <path d="M 83 251 Q 200 247 333 244 Q 465 247 593 251 Q 685 254 723 253" stroke="#b87020" stroke-width="2" fill="none"/>
+  <!-- Washington Telegraph Office -->
+  <g transform="translate(80, 250)">
+    <!-- Building -->
+    <rect x="-75" y="0" width="150" height="100" fill="#d4c8a0" rx="3"/>
+    <rect x="-80" y="-8" width="160" height="16" fill="#b8a880" rx="2"/>
+    <!-- Columns -->
+    <rect x="-55" y="-8" width="10" height="108" fill="#c0b090" rx="2"/>
+    <rect x="-20" y="-8" width="10" height="108" fill="#c0b090" rx="2"/>
+    <rect x="15" y="-8" width="10" height="108" fill="#c0b090" rx="2"/>
+    <rect x="50" y="-8" width="10" height="108" fill="#c0b090" rx="2"/>
+    <!-- Pediment -->
+    <polygon points="-80,-8 80,-8 0,-48" fill="#c8bc94"/>
+    <!-- Door -->
+    <rect x="-15" y="52" width="30" height="48" fill="#6a4a20" rx="3"/>
+    <!-- Windows -->
+    <rect x="-58" y="20" width="25" height="25" fill="#a8d4e8" rx="2"/>
+    <rect x="33" y="20" width="25" height="25" fill="#a8d4e8" rx="2"/>
+    <!-- Sign -->
+    <rect x="-50" y="6" width="100" height="12" fill="#4a3010" rx="1"/>
+    <text x="0" y="15" font-family="serif" font-size="7" fill="#f0d890" text-anchor="middle">WASHINGTON TELEGRAPH</text>
+  </g>
+  <!-- Crowd of people at Washington -->
+  <g fill="#4a3a28">
+    <ellipse cx="30" cy="358" rx="8" ry="8"/>
+    <rect x="25" y="362" width="10" height="18" rx="2"/>
+    <ellipse cx="55" cy="355" rx="8" ry="8"/>
+    <rect x="50" y="359" width="10" height="20" rx="2"/>
+    <ellipse cx="78" cy="360" rx="8" ry="8"/>
+    <rect x="73" y="364" width="10" height="16" rx="2"/>
+  </g>
+  <!-- Morse key operator at Washington -->
+  <g transform="translate(120, 330)">
+    <!-- Table -->
+    <rect x="-30" y="0" width="60" height="8" fill="#8a6030"/>
+    <rect x="-25" y="8" width="5" height="20" fill="#6a4a20"/>
+    <rect x="20" y="8" width="5" height="20" fill="#6a4a20"/>
+    <!-- Telegraph key on table -->
+    <rect x="-18" y="-8" width="36" height="10" fill="#c8a040" rx="2"/>
+    <!-- Operator person -->
+    <ellipse cx="0" cy="-25" rx="12" ry="12" fill="#d4a870"/>
+    <rect x="-10" y="-14" width="20" height="22" fill="#2a3a6a" rx="3"/>
+    <!-- Arm pressing key -->
+    <line x1="10" y1="-4" x2="20" y2="3" stroke="#d4a870" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <!-- Baltimore Telegraph Office -->
+  <g transform="translate(680, 260)">
+    <rect x="-70" y="-10" width="140" height="100" fill="#d4c8a0" rx="3"/>
+    <rect x="-75" y="-20" width="150" height="16" fill="#b8a880" rx="2"/>
+    <polygon points="-75,-20 75,-20 0,-58" fill="#c8bc94"/>
+    <!-- Windows glowing - receiving the message! -->
+    <rect x="-55" y="15" width="28" height="25" fill="#f0e060" rx="2" opacity="0.9"/>
+    <rect x="27" y="15" width="28" height="25" fill="#f0e060" rx="2" opacity="0.9"/>
+    <!-- Door -->
+    <rect x="-15" y="48" width="30" height="42" fill="#6a4a20" rx="3"/>
+    <!-- Excited people outside door -->
+    <ellipse cx="80" cy="368" rx="8" ry="8" fill="#d4a870"/>
+    <rect x="75" y="372" width="10" height="18" fill="#a04020" rx="2"/>
+    <ellipse cx="100" cy="363" rx="8" ry="8" fill="#c8956a"/>
+    <rect x="95" y="367" width="10" height="20" fill="#203a60" rx="2"/>
+  </g>
+  <!-- Electric signal traveling along wire - glowing dots -->
+  <g opacity="0.85">
+    <circle cx="200" cy="247" r="5" fill="#40c0ff"/>
+    <circle cx="330" cy="244" r="5" fill="#40c0ff"/>
+    <circle cx="460" cy="247" r="5" fill="#40c0ff"/>
+    <circle cx="200" cy="247" r="10" fill="#40c0ff" opacity="0.3"/>
+    <circle cx="330" cy="244" r="10" fill="#40c0ff" opacity="0.3"/>
+  </g>
+  <!-- WHAT HATH GOD WROUGHT banner -->
+  <rect x="230" y="148" width="340" height="50" fill="#2a1e0a" rx="6" opacity="0.85"/>
+  <text x="400" y="168" font-family="serif" font-size="13" font-weight="bold" fill="#f0d080" text-anchor="middle">"WHAT HATH GOD WROUGHT"</text>
+  <text x="400" y="188" font-family="serif" font-size="11" fill="#c8b870" text-anchor="middle">First public telegraph message · Washington → Baltimore</text>
+  <!-- Map line on ground -->
+  <line x1="80" y1="380" x2="680" y2="380" stroke="#f0d080" stroke-width="2" stroke-dasharray="15,8" opacity="0.6"/>
+  <!-- Distance labels -->
+  <text x="380" y="397" font-family="serif" font-size="10" fill="#f0d080" text-anchor="middle">40 miles</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#2a4a80" rx="6" opacity="0.75"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#f0d080" text-anchor="middle">1844</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#1a2a50" opacity="0.8"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">Morse Sends First Long-Distance Public Telegraph · Washington to Baltimore</text>
+</svg>

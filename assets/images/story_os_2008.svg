@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: green Android theme -->
+  <defs>
+    <linearGradient id="andBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2814"/>
+      <stop offset="100%" stop-color="#0e1a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#andBg)"/>
+
+  <!-- Android robot mascot -->
+  <!-- Antenna -->
+  <line x1="148" y1="80" x2="140" y2="52" stroke="#78c700" stroke-width="3"/>
+  <circle cx="140" cy="50" r="5" fill="#78c700"/>
+  <line x1="172" y1="80" x2="180" y2="52" stroke="#78c700" stroke-width="3"/>
+  <circle cx="180" cy="50" r="5" fill="#78c700"/>
+  <!-- Head -->
+  <rect x="120" y="80" width="80" height="60" rx="40" fill="#78c700"/>
+  <!-- Eyes -->
+  <circle cx="147" cy="108" r="7" fill="white"/>
+  <circle cx="173" cy="108" r="7" fill="white"/>
+  <circle cx="149" cy="110" r="4" fill="#1a2814"/>
+  <circle cx="175" cy="110" r="4" fill="#1a2814"/>
+  <!-- Body -->
+  <rect x="110" y="148" width="100" height="90" rx="10" fill="#78c700"/>
+  <!-- Arms -->
+  <rect x="78" y="148" width="28" height="70" rx="14" fill="#78c700"/>
+  <rect x="214" y="148" width="28" height="70" rx="14" fill="#78c700"/>
+  <!-- Legs -->
+  <rect x="125" y="238" width="28" height="60" rx="14" fill="#78c700"/>
+  <rect x="167" y="238" width="28" height="60" rx="14" fill="#78c700"/>
+  <!-- Charging port detail -->
+  <rect x="148" y="150" width="24" height="4" rx="2" fill="#5a9a00"/>
+  <!-- Label -->
+  <text x="160" y="326" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#78c700">Android</text>
+
+  <!-- Open Platform diagram -->
+  <rect x="290" y="40" width="480" height="350" rx="8" fill="#0a180a" stroke="#2a5a1a" stroke-width="2"/>
+  <text x="530" y="28" text-anchor="middle" font-family="monospace" font-size="12" fill="#78c700" font-weight="bold">Android 1.0 — 오픈 모바일 플랫폼 · 2008</text>
+
+  <!-- Android stack layers -->
+  <text x="530" y="66" text-anchor="middle" font-family="monospace" font-size="10" fill="#78c700">SOFTWARE STACK</text>
+
+  <!-- Applications -->
+  <rect x="310" y="76" width="440" height="38" rx="4" fill="#1a3a0a" stroke="#3a7a1a" stroke-width="1.5"/>
+  <text x="530" y="99" text-anchor="middle" font-family="monospace" font-size="11" fill="#88dd44">APPLICATIONS</text>
+
+  <!-- Application framework -->
+  <rect x="310" y="120" width="440" height="38" rx="4" fill="#163208" stroke="#2a6a14" stroke-width="1.5"/>
+  <text x="530" y="143" text-anchor="middle" font-family="monospace" font-size="11" fill="#66cc33">APPLICATION FRAMEWORK</text>
+
+  <!-- Libraries + Android Runtime -->
+  <rect x="310" y="164" width="215" height="52" rx="4" fill="#0e2806" stroke="#1e5810" stroke-width="1.5"/>
+  <text x="418" y="187" text-anchor="middle" font-family="monospace" font-size="10" fill="#55bb22">CORE LIBRARIES</text>
+  <text x="418" y="202" text-anchor="middle" font-family="monospace" font-size="9" fill="#448811">Dalvik VM / ART</text>
+  <rect x="533" y="164" width="217" height="52" rx="4" fill="#0e2806" stroke="#1e5810" stroke-width="1.5"/>
+  <text x="642" y="187" text-anchor="middle" font-family="monospace" font-size="10" fill="#55bb22">ANDROID RUNTIME</text>
+  <text x="642" y="202" text-anchor="middle" font-family="monospace" font-size="9" fill="#448811">Zygote · JIT / AOT</text>
+
+  <!-- Linux Kernel -->
+  <rect x="310" y="222" width="440" height="38" rx="4" fill="#0a2004" stroke="#1a4a0a" stroke-width="1.5"/>
+  <text x="530" y="245" text-anchor="middle" font-family="monospace" font-size="11" fill="#44aa22">LINUX KERNEL 2.6</text>
+
+  <!-- Hardware -->
+  <rect x="310" y="266" width="440" height="36" rx="4" fill="#061402" stroke="#123a06" stroke-width="1"/>
+  <text x="530" y="288" text-anchor="middle" font-family="monospace" font-size="10" fill="#33aa22">HARDWARE (ARM Cortex / Qualcomm)</text>
+
+  <!-- Open vs Closed comparison -->
+  <rect x="310" y="316" width="210" height="62" rx="5" fill="#0a1a0a" stroke="#2a6a1a" stroke-width="1.5"/>
+  <text x="415" y="334" text-anchor="middle" font-family="monospace" font-size="10" fill="#55cc33">✓ Android 오픈소스</text>
+  <text x="415" y="350" text-anchor="middle" font-family="monospace" font-size="9" fill="#44aa22">AOSP 라이선스</text>
+  <text x="415" y="366" text-anchor="middle" font-family="monospace" font-size="9" fill="#44aa22">제조사 커스터마이징</text>
+
+  <rect x="530" y="316" width="220" height="62" rx="5" fill="#0a1a0a" stroke="#2a6a1a" stroke-width="1.5"/>
+  <text x="640" y="334" text-anchor="middle" font-family="monospace" font-size="10" fill="#55cc33">► 생태계 성장</text>
+  <text x="640" y="350" text-anchor="middle" font-family="monospace" font-size="9" fill="#44aa22">HTC · Samsung · LG</text>
+  <text x="640" y="366" text-anchor="middle" font-family="monospace" font-size="9" fill="#44aa22">Google Play 스토어</text>
+
+  <!-- Market share note -->
+  <rect x="30" y="355" width="240" height="60" rx="5" fill="#0a1a0a" stroke="#2a5a14" stroke-width="1.5"/>
+  <text x="150" y="374" text-anchor="middle" font-family="monospace" font-size="10" fill="#78c700">Android 시장 점유율</text>
+  <text x="150" y="390" text-anchor="middle" font-family="monospace" font-size="9" fill="#55aa22">2024년: 약 72% (글로벌)</text>
+  <text x="150" y="405" text-anchor="middle" font-family="monospace" font-size="9" fill="#448811">30억+ 활성 기기</text>
+
+  <!-- Title -->
+  <rect x="0" y="410" width="800" height="40" fill="#0e1a0a" opacity="0.95"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#78c700" font-weight="bold">Android 1.0 — 오픈 모바일 플랫폼의 탄생 · 2008</text>
+</svg>

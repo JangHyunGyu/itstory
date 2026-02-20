@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: IBM conference room / computing center 1959 -->
+  <rect width="800" height="450" fill="#1e1a14"/>
+  <rect x="0" y="340" width="800" height="110" fill="#16120e"/>
+  <line x1="0" y1="340" x2="800" y2="340" stroke="#3a3020" stroke-width="2"/>
+
+  <!-- Table -->
+  <rect x="80" y="260" width="460" height="18" rx="4" fill="#3a2e1a" stroke="#5a4828" stroke-width="1.5"/>
+  <!-- Table legs -->
+  <rect x="100" y="278" width="12" height="60" fill="#2e2414"/>
+  <rect x="510" y="278" width="12" height="60" fill="#2e2414"/>
+
+  <!-- Punched card stack on table -->
+  <g>
+    <rect x="110" y="230" width="100" height="30" rx="2" fill="#f0ead8" stroke="#ccc" stroke-width="0.5"/>
+    <rect x="112" y="234" width="100" height="30" rx="2" fill="#eee8d8" stroke="#ccc" stroke-width="0.5"/>
+    <rect x="114" y="238" width="100" height="30" rx="2" fill="#ede6d4" stroke="#ccc" stroke-width="0.5"/>
+    <!-- Holes on top card -->
+    <g fill="#555">
+      <rect x="120" y="242" width="4" height="6" rx="1"/>
+      <rect x="130" y="242" width="4" height="6" rx="1"/>
+      <rect x="148" y="242" width="4" height="6" rx="1"/>
+      <rect x="162" y="242" width="4" height="6" rx="1"/>
+      <rect x="176" y="242" width="4" height="6" rx="1"/>
+      <rect x="190" y="242" width="4" height="6" rx="1"/>
+      <rect x="120" y="252" width="4" height="6" rx="1"/>
+      <rect x="140" y="252" width="4" height="6" rx="1"/>
+      <rect x="162" y="252" width="4" height="6" rx="1"/>
+      <rect x="180" y="252" width="4" height="6" rx="1"/>
+      <rect x="200" y="252" width="4" height="6" rx="1"/>
+    </g>
+    <text x="163" y="230" text-anchor="middle" font-family="monospace" font-size="9" fill="#888">SHARE MACRO DECK</text>
+  </g>
+
+  <!-- FMS workflow diagram -->
+  <rect x="240" y="80" width="340" height="230" rx="6" fill="#0e1820" stroke="#1a4060" stroke-width="2"/>
+  <text x="410" y="72" text-anchor="middle" font-family="monospace" font-size="12" fill="#4488cc" font-weight="bold">FORTRAN MONITOR SYSTEM</text>
+
+  <!-- Workflow steps with arrows -->
+  <!-- Step 1: JCL Control Card -->
+  <rect x="260" y="98" width="140" height="30" rx="4" fill="#1a3050" stroke="#2a6090" stroke-width="1.5"/>
+  <text x="330" y="117" text-anchor="middle" font-family="monospace" font-size="10" fill="#88bbee">JCL CONTROL CARD</text>
+  <!-- Arrow down -->
+  <line x1="330" y1="128" x2="330" y2="143" stroke="#4488cc" stroke-width="1.5" marker-end="url(#ba)"/>
+
+  <!-- Step 2: Compile -->
+  <rect x="260" y="143" width="140" height="30" rx="4" fill="#1a3050" stroke="#2a6090" stroke-width="1.5"/>
+  <text x="330" y="162" text-anchor="middle" font-family="monospace" font-size="10" fill="#88bbee">FORTRAN COMPILE</text>
+  <line x1="330" y1="173" x2="330" y2="188" stroke="#4488cc" stroke-width="1.5" marker-end="url(#ba)"/>
+
+  <!-- Step 3: Link -->
+  <rect x="260" y="188" width="140" height="30" rx="4" fill="#1a3050" stroke="#2a6090" stroke-width="1.5"/>
+  <text x="330" y="207" text-anchor="middle" font-family="monospace" font-size="10" fill="#88bbee">LINK + LIBRARY</text>
+  <line x1="330" y1="218" x2="330" y2="233" stroke="#4488cc" stroke-width="1.5" marker-end="url(#ba)"/>
+
+  <!-- Step 4: Execute -->
+  <rect x="260" y="233" width="140" height="30" rx="4" fill="#163020" stroke="#2a7040" stroke-width="1.5"/>
+  <text x="330" y="252" text-anchor="middle" font-family="monospace" font-size="10" fill="#66cc66">EXECUTE JOB</text>
+  <line x1="330" y1="263" x2="330" y2="278" stroke="#44aa44" stroke-width="1.5" marker-end="url(#ga2)"/>
+
+  <!-- Step 5: Print output -->
+  <rect x="260" y="278" width="140" height="28" rx="4" fill="#163020" stroke="#2a7040" stroke-width="1.5"/>
+  <text x="330" y="296" text-anchor="middle" font-family="monospace" font-size="10" fill="#66cc66">PRINT OUTPUT</text>
+
+  <!-- Library tape on right side of box -->
+  <rect x="420" y="98" width="140" height="30" rx="3" fill="#201a08" stroke="#6a5820" stroke-width="1.5"/>
+  <text x="490" y="117" text-anchor="middle" font-family="monospace" font-size="9" fill="#ccaa44">SHARED MACRO LIB</text>
+  <rect x="420" y="136" width="140" height="24" rx="3" fill="#201a08" stroke="#6a5820" stroke-width="1"/>
+  <text x="490" y="152" text-anchor="middle" font-family="monospace" font-size="9" fill="#aa8833">SQRT · SIN · COS</text>
+  <rect x="420" y="166" width="140" height="24" rx="3" fill="#201a08" stroke="#6a5820" stroke-width="1"/>
+  <text x="490" y="182" text-anchor="middle" font-family="monospace" font-size="9" fill="#aa8833">READ · WRITE · PRINT</text>
+  <rect x="420" y="196" width="140" height="24" rx="3" fill="#201a08" stroke="#6a5820" stroke-width="1"/>
+  <text x="490" y="212" text-anchor="middle" font-family="monospace" font-size="9" fill="#aa8833">SORT · MERGE · INDEX</text>
+
+  <!-- Arrow connecting library to Link step -->
+  <path d="M 420 208 L 400 208" fill="none" stroke="#6a5820" stroke-width="1.5" marker-end="url(#oa2)" stroke-dasharray="4,3"/>
+
+  <defs>
+    <marker id="ba" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#4488cc"/>
+    </marker>
+    <marker id="ga2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#44aa44"/>
+    </marker>
+    <marker id="oa2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6a5820"/>
+    </marker>
+  </defs>
+
+  <!-- SHARE members at table -->
+  <!-- Person 1 -->
+  <ellipse cx="155" cy="210" rx="18" ry="18" fill="#2a2418"/>
+  <rect x="137" y="228" width="36" height="60" rx="4" fill="#1e1a12"/>
+  <!-- Person 2 -->
+  <ellipse cx="215" cy="215" rx="18" ry="18" fill="#2a2418"/>
+  <rect x="197" y="233" width="36" height="55" rx="4" fill="#1e1a12"/>
+
+  <!-- IBM 704 output printer on left -->
+  <rect x="30" y="160" width="110" height="120" rx="4" fill="#1a1610" stroke="#4a4030" stroke-width="1.5"/>
+  <text x="85" y="152" text-anchor="middle" font-family="monospace" font-size="10" fill="#aa8844">LINE PRINTER</text>
+  <!-- Paper output -->
+  <rect x="45" y="175" width="80" height="90" rx="2" fill="#f5f0e0"/>
+  <!-- Print lines on paper -->
+  <g fill="#444" font-family="monospace" font-size="6">
+    <text x="50" y="187">OUTPUT: 3.14159265</text>
+    <text x="50" y="196">RESULT: 0.70710678</text>
+    <text x="50" y="205">TIME: 00:02:14</text>
+    <text x="50" y="214">STATUS: COMPLETE</text>
+    <text x="50" y="223">NEXT JOB: LOADING</text>
+    <text x="50" y="232">-------- --------</text>
+    <text x="50" y="241">CORE: 32768 WORDS</text>
+    <text x="50" y="250">OK</text>
+  </g>
+
+  <!-- SHARE logo/label -->
+  <rect x="600" y="90" width="170" height="80" rx="6" fill="#1a1410" stroke="#5a4a28" stroke-width="1.5"/>
+  <text x="685" y="114" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#cc9933" font-weight="bold">SHARE</text>
+  <text x="685" y="132" text-anchor="middle" font-family="monospace" font-size="9" fill="#aa8830">IBM USER GROUP</text>
+  <text x="685" y="146" text-anchor="middle" font-family="monospace" font-size="8" fill="#886820">Society to Help Avoid</text>
+  <text x="685" y="158" text-anchor="middle" font-family="monospace" font-size="8" fill="#886820">Redundant Effort</text>
+
+  <!-- Key insight box -->
+  <rect x="590" y="200" width="180" height="110" rx="5" fill="#0e1a10" stroke="#2a5a2a" stroke-width="1.5"/>
+  <text x="680" y="220" text-anchor="middle" font-family="monospace" font-size="10" fill="#44cc44">FMS 핵심 혁신</text>
+  <line x1="606" y1="226" x2="754" y2="226" stroke="#2a5a2a" stroke-width="1"/>
+  <text x="680" y="242" text-anchor="middle" font-family="monospace" font-size="9" fill="#66aa66">작업 제어 카드</text>
+  <text x="680" y="256" text-anchor="middle" font-family="monospace" font-size="9" fill="#66aa66">공용 서브루틴 라이브러리</text>
+  <text x="680" y="270" text-anchor="middle" font-family="monospace" font-size="9" fill="#66aa66">컴파일→링크→실행 자동화</text>
+  <text x="680" y="284" text-anchor="middle" font-family="monospace" font-size="9" fill="#66aa66">표준 I/O 루틴 공유</text>
+  <text x="680" y="298" text-anchor="middle" font-family="monospace" font-size="9" fill="#44aa44">→ OS 기능의 원형</text>
+
+  <!-- Title -->
+  <rect x="0" y="410" width="800" height="40" fill="#16120e" opacity="0.95"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#cc9944" font-weight="bold">Fortran Monitor System — 공용 라이브러리와 자동 작업 흐름 · 1959</text>
+</svg>

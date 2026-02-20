@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Cloud infrastructure - AWS EC2 launch and the cloud concept -->
+  <rect width="800" height="450" fill="#0d1520"/>
+  <!-- Subtle gradient sky background -->
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1020"/>
+      <stop offset="100%" stop-color="#1a2535"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#skyGrad)"/>
+  <!-- Cloud shape (central) -->
+  <g opacity="0.9">
+    <!-- Cloud body -->
+    <ellipse cx="400" cy="160" rx="180" ry="70" fill="#1a3a5a" stroke="#2a5a8a" stroke-width="2"/>
+    <ellipse cx="310" cy="145" rx="90" ry="60" fill="#1a3a5a" stroke="#2a5a8a" stroke-width="2"/>
+    <ellipse cx="490" cy="145" rx="90" ry="60" fill="#1a3a5a" stroke="#2a5a8a" stroke-width="2"/>
+    <ellipse cx="370" cy="130" rx="80" ry="55" fill="#1a3a5a" stroke="#2a5a8a" stroke-width="2"/>
+    <ellipse cx="430" cy="125" rx="85" ry="55" fill="#1a3a5a" stroke="#2a5a8a" stroke-width="2"/>
+    <!-- Cloud text content -->
+    <text x="400" y="140" font-family="monospace" font-size="11" font-weight="bold" fill="#80c0ff" text-anchor="middle">AWS CLOUD</text>
+    <text x="400" y="158" font-family="monospace" font-size="9" fill="#40a0e0" text-anchor="middle">EC2 · S3 · SQS</text>
+    <text x="400" y="174" font-family="monospace" font-size="8" fill="#2080b0" text-anchor="middle">Virtual Servers on Demand</text>
+    <!-- Server icons inside cloud -->
+    <g fill="#2a5a8a">
+      <rect x="310" y="155" width="35" height="20" rx="2"/>
+      <rect x="355" y="155" width="35" height="20" rx="2"/>
+      <rect x="400" y="155" width="35" height="20" rx="2"/>
+      <rect x="445" y="155" width="35" height="20" rx="2"/>
+    </g>
+    <g fill="#40c0ff" font-size="6" font-family="monospace" text-anchor="middle">
+      <text x="327" y="168">EC2</text>
+      <text x="372" y="168">EC2</text>
+      <text x="417" y="168">S3</text>
+      <text x="462" y="168">RDS</text>
+    </g>
+  </g>
+  <!-- Connection lines from cloud to user devices below -->
+  <g stroke="#2060a0" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.7">
+    <line x1="270" y1="218" x2="150" y2="300"/>
+    <line x1="340" y1="225" x2="300" y2="300"/>
+    <line x1="400" y1="228" x2="400" y2="305"/>
+    <line x1="460" y1="225" x2="500" y2="300"/>
+    <line x1="530" y1="218" x2="640" y2="295"/>
+  </g>
+  <!-- User devices below cloud -->
+  <!-- Laptop user -->
+  <g transform="translate(140, 330)">
+    <rect x="-35" y="-25" width="70" height="50" fill="#2a2a3a" rx="3"/>
+    <rect x="-28" y="-18" width="56" height="36" fill="#1a2a1a" rx="1"/>
+    <text x="0" y="-4" font-family="monospace" font-size="6" fill="#40c060" text-anchor="middle">$ ec2-run-instances</text>
+    <text x="0" y="7" font-family="monospace" font-size="6" fill="#20a040" text-anchor="middle">Server up in 60s!</text>
+    <text x="0" y="40" font-family="serif" font-size="8" fill="#6080a0" text-anchor="middle">Startup Dev</text>
+  </g>
+  <!-- Mobile -->
+  <g transform="translate(295, 330)">
+    <rect x="-20" y="-35" width="40" height="65" fill="#2a2a3a" rx="5"/>
+    <rect x="-14" y="-28" width="28" height="45" fill="#1a1a2a" rx="2"/>
+    <text x="0" y="-12" font-family="monospace" font-size="5" fill="#40a0ff" text-anchor="middle">App Server</text>
+    <text x="0" y="0" font-family="monospace" font-size="5" fill="#2080e0" text-anchor="middle">Online!</text>
+    <text x="0" y="45" font-family="serif" font-size="8" fill="#6080a0" text-anchor="middle">Mobile App</text>
+  </g>
+  <!-- Enterprise building -->
+  <g transform="translate(400, 335)">
+    <rect x="-35" y="-40" width="70" height="60" fill="#2a3a4a" rx="2"/>
+    <g fill="#1a2a3a">
+      <rect x="-25" y="-30" width="12" height="12" rx="1"/>
+      <rect x="-8" y="-30" width="12" height="12" rx="1"/>
+      <rect x="9" y="-30" width="12" height="12" rx="1"/>
+      <rect x="-25" y="-12" width="12" height="12" rx="1"/>
+      <rect x="9" y="-12" width="12" height="12" rx="1"/>
+    </g>
+    <text x="0" y="35" font-family="serif" font-size="8" fill="#6080a0" text-anchor="middle">Enterprise</text>
+  </g>
+  <!-- More users -->
+  <g transform="translate(500, 330)">
+    <rect x="-35" y="-25" width="70" height="50" fill="#2a2a3a" rx="3"/>
+    <rect x="-28" y="-18" width="56" height="36" fill="#1a2a1a" rx="1"/>
+    <text x="0" y="-4" font-family="monospace" font-size="6" fill="#40c060" text-anchor="middle">No servers needed</text>
+    <text x="0" y="7" font-family="monospace" font-size="6" fill="#20a040" text-anchor="middle">Pay per hour!</text>
+    <text x="0" y="40" font-family="serif" font-size="8" fill="#6080a0" text-anchor="middle">Small Business</text>
+  </g>
+  <!-- Amazon info box -->
+  <rect x="580" y="290" width="200" height="65" fill="#050f18" rx="5" stroke="#205070" stroke-width="1.5"/>
+  <text x="680" y="308" font-family="sans-serif" font-size="9" font-weight="bold" fill="#40a0ff" text-anchor="middle">AWS LAUNCH · 2006</text>
+  <text x="590" y="323" font-family="serif" font-size="8" fill="#4080a0">Amazon EC2: Mar 2006</text>
+  <text x="590" y="336" font-family="serif" font-size="8" fill="#4080a0">Amazon S3: Mar 2006</text>
+  <text x="590" y="349" font-family="serif" font-size="8" fill="#60a0d0">"Idle servers = new business"</text>
+  <!-- AWS logo area -->
+  <rect x="30" y="270" width="170" height="65" fill="#050f18" rx="5" stroke="#205070" stroke-width="1.5"/>
+  <text x="115" y="290" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ff9940" text-anchor="middle">amazon</text>
+  <text x="115" y="308" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ff9940" text-anchor="middle">web services</text>
+  <text x="115" y="323" font-family="serif" font-size="8" fill="#c07030" text-anchor="middle">Seattle · 2006</text>
+  <text x="115" y="337" font-family="serif" font-size="8" fill="#c07030" text-anchor="middle">Jeff Bezos + Andy Jassy</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#0a1a3a" rx="6" opacity="0.9" stroke="#40a0ff" stroke-width="1"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#40a0ff" text-anchor="middle">2006</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#050810" opacity="0.9"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">AWS Cloud Infrastructure · Amazon EC2 + S3 · Virtual Servers on Demand · Cloud Era Begins</text>
+</svg>

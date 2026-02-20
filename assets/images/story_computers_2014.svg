@@ -1,0 +1,263 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg2014" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0514"/>
+      <stop offset="100%" stop-color="#050a18"/>
+    </linearGradient>
+    <radialGradient id="neuronGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#aa44ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4400cc" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nnGlow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="gpuGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="gpuGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a0a2a"/>
+      <stop offset="100%" stop-color="#0d0518"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg2014)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" fill="#aa44ff" font-size="16" font-family="monospace" text-anchor="middle" font-weight="bold" filter="url(#nnGlow)">Deep Learning · AI Renaissance · 2014</text>
+
+  <!-- Neural Network diagram (large, center) -->
+  <g transform="translate(80, 55)">
+
+    <!-- Layer labels -->
+    <text x="30" y="20" fill="#6633cc" font-size="11" font-family="monospace" text-anchor="middle">Input</text>
+    <text x="30" y="33" fill="#6633cc" font-size="9" font-family="monospace" text-anchor="middle">Layer</text>
+    <text x="150" y="20" fill="#5544cc" font-size="11" font-family="monospace" text-anchor="middle">Hidden</text>
+    <text x="150" y="33" fill="#5544cc" font-size="9" font-family="monospace" text-anchor="middle">Layer 1</text>
+    <text x="270" y="20" fill="#4455dd" font-size="11" font-family="monospace" text-anchor="middle">Hidden</text>
+    <text x="270" y="33" fill="#4455dd" font-size="9" font-family="monospace" text-anchor="middle">Layer 2</text>
+    <text x="390" y="20" fill="#3366ee" font-size="11" font-family="monospace" text-anchor="middle">Hidden</text>
+    <text x="390" y="33" fill="#3366ee" font-size="9" font-family="monospace" text-anchor="middle">Layer 3</text>
+    <text x="510" y="20" fill="#2277ff" font-size="11" font-family="monospace" text-anchor="middle">Output</text>
+    <text x="510" y="33" fill="#2277ff" font-size="9" font-family="monospace" text-anchor="middle">Layer</text>
+
+    <!-- Connections (drawn first, behind nodes) -->
+    <!-- Input to Hidden 1 connections -->
+    <g stroke="#440088" stroke-width="0.8" opacity="0.5">
+      <!-- From each input node to each h1 node -->
+      <line x1="30" y1="70" x2="150" y2="70"/><line x1="30" y1="70" x2="150" y2="120"/>
+      <line x1="30" y1="70" x2="150" y2="170"/><line x1="30" y1="70" x2="150" y2="220"/>
+      <line x1="30" y1="70" x2="150" y2="270"/>
+      <line x1="30" y1="120" x2="150" y2="70"/><line x1="30" y1="120" x2="150" y2="120"/>
+      <line x1="30" y1="120" x2="150" y2="170"/><line x1="30" y1="120" x2="150" y2="220"/>
+      <line x1="30" y1="120" x2="150" y2="270"/>
+      <line x1="30" y1="170" x2="150" y2="70"/><line x1="30" y1="170" x2="150" y2="120"/>
+      <line x1="30" y1="170" x2="150" y2="170"/><line x1="30" y1="170" x2="150" y2="220"/>
+      <line x1="30" y1="170" x2="150" y2="270"/>
+      <line x1="30" y1="220" x2="150" y2="70"/><line x1="30" y1="220" x2="150" y2="120"/>
+      <line x1="30" y1="220" x2="150" y2="170"/><line x1="30" y1="220" x2="150" y2="220"/>
+      <line x1="30" y1="220" x2="150" y2="270"/>
+    </g>
+
+    <!-- H1 to H2 -->
+    <g stroke="#3300aa" stroke-width="0.8" opacity="0.5">
+      <line x1="150" y1="70" x2="270" y2="80"/><line x1="150" y1="70" x2="270" y2="130"/>
+      <line x1="150" y1="70" x2="270" y2="180"/><line x1="150" y1="70" x2="270" y2="230"/>
+      <line x1="150" y1="120" x2="270" y2="80"/><line x1="150" y1="120" x2="270" y2="130"/>
+      <line x1="150" y1="120" x2="270" y2="180"/><line x1="150" y1="120" x2="270" y2="230"/>
+      <line x1="150" y1="170" x2="270" y2="80"/><line x1="150" y1="170" x2="270" y2="130"/>
+      <line x1="150" y1="170" x2="270" y2="180"/><line x1="150" y1="170" x2="270" y2="230"/>
+      <line x1="150" y1="220" x2="270" y2="80"/><line x1="150" y1="220" x2="270" y2="130"/>
+      <line x1="150" y1="220" x2="270" y2="180"/><line x1="150" y1="220" x2="270" y2="230"/>
+      <line x1="150" y1="270" x2="270" y2="80"/><line x1="150" y1="270" x2="270" y2="130"/>
+      <line x1="150" y1="270" x2="270" y2="180"/><line x1="150" y1="270" x2="270" y2="230"/>
+    </g>
+
+    <!-- H2 to H3 -->
+    <g stroke="#2211bb" stroke-width="0.8" opacity="0.5">
+      <line x1="270" y1="80" x2="390" y2="100"/><line x1="270" y1="80" x2="390" y2="175"/>
+      <line x1="270" y1="80" x2="390" y2="250"/>
+      <line x1="270" y1="130" x2="390" y2="100"/><line x1="270" y1="130" x2="390" y2="175"/>
+      <line x1="270" y1="130" x2="390" y2="250"/>
+      <line x1="270" y1="180" x2="390" y2="100"/><line x1="270" y1="180" x2="390" y2="175"/>
+      <line x1="270" y1="180" x2="390" y2="250"/>
+      <line x1="270" y1="230" x2="390" y2="100"/><line x1="270" y1="230" x2="390" y2="175"/>
+      <line x1="270" y1="230" x2="390" y2="250"/>
+    </g>
+
+    <!-- H3 to Output -->
+    <g stroke="#1122cc" stroke-width="1" opacity="0.6">
+      <line x1="390" y1="100" x2="510" y2="120"/><line x1="390" y1="100" x2="510" y2="200"/>
+      <line x1="390" y1="100" x2="510" y2="280"/>
+      <line x1="390" y1="175" x2="510" y2="120"/><line x1="390" y1="175" x2="510" y2="200"/>
+      <line x1="390" y1="175" x2="510" y2="280"/>
+      <line x1="390" y1="250" x2="510" y2="120"/><line x1="390" y1="250" x2="510" y2="200"/>
+      <line x1="390" y1="250" x2="510" y2="280"/>
+    </g>
+
+    <!-- Active path (highlighted) -->
+    <g stroke="#aa44ff" stroke-width="2" opacity="0.8" filter="url(#nnGlow)">
+      <line x1="30" y1="120" x2="150" y2="170"/>
+      <line x1="150" y1="170" x2="270" y2="130"/>
+      <line x1="270" y1="130" x2="390" y2="175"/>
+      <line x1="390" y1="175" x2="510" y2="200"/>
+    </g>
+
+    <!-- INPUT LAYER nodes -->
+    <g filter="url(#nnGlow)">
+      <circle cx="30" cy="70" r="14" fill="url(#neuronGlow)"/>
+      <circle cx="30" cy="70" r="12" fill="#0a0514" stroke="#6633cc" stroke-width="2"/>
+      <circle cx="30" cy="120" r="14" fill="url(#neuronGlow)"/>
+      <circle cx="30" cy="120" r="12" fill="#0a0514" stroke="#6633cc" stroke-width="2"/>
+      <circle cx="30" cy="170" r="14" fill="url(#neuronGlow)"/>
+      <circle cx="30" cy="170" r="12" fill="#0a0514" stroke="#6633cc" stroke-width="2"/>
+      <circle cx="30" cy="220" r="14" fill="url(#neuronGlow)"/>
+      <circle cx="30" cy="220" r="12" fill="#0a0514" stroke="#6633cc" stroke-width="2"/>
+
+      <!-- Input symbols -->
+      <text x="30" y="74" fill="#8855ff" font-size="8" font-family="monospace" text-anchor="middle">x1</text>
+      <text x="30" y="124" fill="#8855ff" font-size="8" font-family="monospace" text-anchor="middle">x2</text>
+      <text x="30" y="174" fill="#8855ff" font-size="8" font-family="monospace" text-anchor="middle">x3</text>
+      <text x="30" y="224" fill="#8855ff" font-size="8" font-family="monospace" text-anchor="middle">x4</text>
+    </g>
+
+    <!-- HIDDEN LAYER 1 nodes -->
+    <g filter="url(#nnGlow)">
+      <circle cx="150" cy="70" r="14" fill="url(#neuronGlow)"/>
+      <circle cx="150" cy="70" r="12" fill="#0a0514" stroke="#5544cc" stroke-width="2"/>
+      <circle cx="150" cy="120" r="14" fill="url(#neuronGlow)"/>
+      <circle cx="150" cy="120" r="12" fill="#0a0514" stroke="#5544cc" stroke-width="2"/>
+      <circle cx="150" cy="170" r="18" fill="#aa44ff" opacity="0.3"/>
+      <circle cx="150" cy="170" r="14" fill="#220055" stroke="#aa44ff" stroke-width="2.5"/>
+      <circle cx="150" cy="220" r="14" fill="url(#neuronGlow)"/>
+      <circle cx="150" cy="220" r="12" fill="#0a0514" stroke="#5544cc" stroke-width="2"/>
+      <circle cx="150" cy="270" r="14" fill="url(#neuronGlow)"/>
+      <circle cx="150" cy="270" r="12" fill="#0a0514" stroke="#5544cc" stroke-width="2"/>
+      <text x="150" y="174" fill="#cc88ff" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">ReLU</text>
+    </g>
+
+    <!-- HIDDEN LAYER 2 nodes -->
+    <g filter="url(#nnGlow)">
+      <circle cx="270" cy="80" r="14" fill="url(#neuronGlow)"/>
+      <circle cx="270" cy="80" r="12" fill="#0a0514" stroke="#4455dd" stroke-width="2"/>
+      <circle cx="270" cy="130" r="18" fill="#8833ee" opacity="0.3"/>
+      <circle cx="270" cy="130" r="14" fill="#180540" stroke="#8833ee" stroke-width="2.5"/>
+      <circle cx="270" cy="180" r="14" fill="url(#neuronGlow)"/>
+      <circle cx="270" cy="180" r="12" fill="#0a0514" stroke="#4455dd" stroke-width="2"/>
+      <circle cx="270" cy="230" r="14" fill="url(#neuronGlow)"/>
+      <circle cx="270" cy="230" r="12" fill="#0a0514" stroke="#4455dd" stroke-width="2"/>
+      <text x="270" y="134" fill="#bb88ff" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">σ</text>
+    </g>
+
+    <!-- HIDDEN LAYER 3 nodes -->
+    <g filter="url(#nnGlow)">
+      <circle cx="390" cy="100" r="14" fill="url(#neuronGlow)"/>
+      <circle cx="390" cy="100" r="12" fill="#0a0514" stroke="#3366ee" stroke-width="2"/>
+      <circle cx="390" cy="175" r="20" fill="#6622ff" opacity="0.35"/>
+      <circle cx="390" cy="175" r="15" fill="#100030" stroke="#6622ff" stroke-width="2.5"/>
+      <circle cx="390" cy="250" r="14" fill="url(#neuronGlow)"/>
+      <circle cx="390" cy="250" r="12" fill="#0a0514" stroke="#3366ee" stroke-width="2"/>
+      <text x="390" y="179" fill="#aa88ff" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">tanh</text>
+    </g>
+
+    <!-- OUTPUT LAYER nodes -->
+    <g filter="url(#nnGlow)">
+      <circle cx="510" cy="120" r="16" fill="url(#neuronGlow)"/>
+      <circle cx="510" cy="120" r="14" fill="#001a00" stroke="#44ff44" stroke-width="2"/>
+      <text x="510" y="124" fill="#44ff44" font-size="8" font-family="monospace" text-anchor="middle">Cat</text>
+
+      <circle cx="510" cy="200" r="20" fill="#2244ff" opacity="0.5"/>
+      <circle cx="510" cy="200" r="16" fill="#000044" stroke="#4488ff" stroke-width="3"/>
+      <text x="510" y="204" fill="#88aaff" font-size="8" font-family="monospace" text-anchor="middle">Dog</text>
+
+      <circle cx="510" cy="280" r="16" fill="url(#neuronGlow)"/>
+      <circle cx="510" cy="280" r="14" fill="#1a0000" stroke="#cc4444" stroke-width="2"/>
+      <text x="510" y="284" fill="#cc4444" font-size="8" font-family="monospace" text-anchor="middle">Car</text>
+    </g>
+
+  </g>
+
+  <!-- GPU chip illustration (right side) -->
+  <g transform="translate(620, 55)">
+    <text x="90" y="20" fill="#aa44ff" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">GPU Accelerator</text>
+    <rect x="0" y="30" width="170" height="160" fill="url(#gpuGrad)" rx="6" stroke="#8833cc" stroke-width="2"/>
+    <rect x="8" y="38" width="154" height="144" fill="#080514" rx="4"/>
+
+    <!-- CUDA cores grid (simplified) -->
+    <text x="85" y="58" fill="#8833cc" font-size="10" font-family="monospace" text-anchor="middle">CUDA Cores</text>
+    <g fill="#4400aa" filter="url(#gpuGlow)">
+      <rect x="15" y="65" width="12" height="12" rx="2"/>
+      <rect x="30" y="65" width="12" height="12" rx="2"/>
+      <rect x="45" y="65" width="12" height="12" rx="2"/>
+      <rect x="60" y="65" width="12" height="12" rx="2"/>
+      <rect x="75" y="65" width="12" height="12" rx="2"/>
+      <rect x="90" y="65" width="12" height="12" rx="2"/>
+      <rect x="105" y="65" width="12" height="12" rx="2"/>
+      <rect x="120" y="65" width="12" height="12" rx="2"/>
+      <rect x="135" y="65" width="12" height="12" rx="2"/>
+      <rect x="150" y="65" width="12" height="12" rx="2"/>
+
+      <rect x="15" y="82" width="12" height="12" rx="2"/>
+      <rect x="30" y="82" width="12" height="12" rx="2"/>
+      <rect x="45" y="82" width="12" height="12" rx="2"/>
+      <rect x="60" y="82" width="12" height="12" rx="2"/>
+      <rect x="75" y="82" width="12" height="12" rx="2"/>
+      <rect x="90" y="82" width="12" height="12" rx="2"/>
+      <rect x="105" y="82" width="12" height="12" rx="2"/>
+      <rect x="120" y="82" width="12" height="12" rx="2"/>
+      <rect x="135" y="82" width="12" height="12" rx="2"/>
+      <rect x="150" y="82" width="12" height="12" rx="2"/>
+
+      <rect x="15" y="99" width="12" height="12" rx="2"/>
+      <rect x="30" y="99" width="12" height="12" rx="2"/>
+      <rect x="45" y="99" width="12" height="12" rx="2"/>
+      <rect x="60" y="99" width="12" height="12" rx="2"/>
+      <rect x="75" y="99" width="12" height="12" rx="2"/>
+      <rect x="90" y="99" width="12" height="12" rx="2"/>
+      <rect x="105" y="99" width="12" height="12" rx="2"/>
+      <rect x="120" y="99" width="12" height="12" rx="2"/>
+      <rect x="135" y="99" width="12" height="12" rx="2"/>
+      <rect x="150" y="99" width="12" height="12" rx="2"/>
+    </g>
+
+    <text x="85" y="130" fill="#660099" font-size="9" font-family="monospace" text-anchor="middle">4096 CUDA cores</text>
+    <text x="85" y="144" fill="#660099" font-size="9" font-family="monospace" text-anchor="middle">Parallel computation</text>
+    <text x="85" y="158" fill="#660099" font-size="9" font-family="monospace" text-anchor="middle">Deep learning workloads</text>
+
+    <!-- NVIDIA branding area -->
+    <rect x="0" y="198" width="170" height="35" fill="#77cc00" rx="5"/>
+    <text x="85" y="218" fill="white" font-size="14" font-family="sans-serif" text-anchor="middle" font-weight="bold">NVIDIA</text>
+
+    <!-- GPU stats -->
+    <rect x="0" y="243" width="170" height="100" fill="#080514" rx="5" stroke="#440088" stroke-width="1"/>
+    <text x="85" y="260" fill="#aa44ff" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">AlexNet · 2012</text>
+    <text x="10" y="278" fill="#8833cc" font-size="9" font-family="monospace">Top-5 error: 15.3%</text>
+    <text x="10" y="294" fill="#8833cc" font-size="9" font-family="monospace">GPU: 2× GTX 580</text>
+    <text x="10" y="310" fill="#8833cc" font-size="9" font-family="monospace">ImageNet winner</text>
+    <text x="10" y="326" fill="#660088" font-size="9" font-family="monospace">Sparked DL revolution</text>
+  </g>
+
+  <!-- Brain-computer connection (bottom-center) -->
+  <g transform="translate(80, 350)">
+    <rect x="0" y="0" width="520" height="60" fill="#050a14" rx="5" stroke="#2a1a4a" stroke-width="1"/>
+    <text x="260" y="20" fill="#aa44ff" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">Deep Learning Milestones</text>
+    <text x="65" y="40" fill="#6633cc" font-size="10" font-family="monospace" text-anchor="middle">AlexNet 2012</text>
+    <line x1="130" y1="32" x2="130" y2="52" stroke="#2a1a4a" stroke-width="1"/>
+    <text x="195" y="40" fill="#5544cc" font-size="10" font-family="monospace" text-anchor="middle">GAN 2014</text>
+    <line x1="260" y1="32" x2="260" y2="52" stroke="#2a1a4a" stroke-width="1"/>
+    <text x="325" y="40" fill="#4455dd" font-size="10" font-family="monospace" text-anchor="middle">ResNet 2015</text>
+    <line x1="390" y1="32" x2="390" y2="52" stroke="#2a1a4a" stroke-width="1"/>
+    <text x="455" y="40" fill="#3366ee" font-size="10" font-family="monospace" text-anchor="middle">GPT era 2018+</text>
+    <text x="65" y="54" fill="#440088" font-size="8" font-family="monospace" text-anchor="middle">CNN vision</text>
+    <text x="195" y="54" fill="#440088" font-size="8" font-family="monospace" text-anchor="middle">Generative</text>
+    <text x="325" y="54" fill="#440088" font-size="8" font-family="monospace" text-anchor="middle">Residual NN</text>
+    <text x="455" y="54" fill="#440088" font-size="8" font-family="monospace" text-anchor="middle">Transformers</text>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="0" y="400" width="800" height="50" fill="#050a14" opacity="0.97"/>
+  <text x="400" y="422" fill="#aa44ff" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">딥러닝 · AI 부활의 신호탄</text>
+  <text x="400" y="442" fill="#6633cc" font-size="12" font-family="Georgia, serif" text-anchor="middle">Deep Learning · Neural Networks · GPU Computing · AlexNet · 2014</text>
+</svg>

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg09" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#0f2340"/>
+    </linearGradient>
+    <linearGradient id="nodeGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#68a063"/>
+      <stop offset="100%" style="stop-color:#3d7040"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg09)"/>
+
+  <!-- Node.js hexagon logo hint -->
+  <polygon points="160,50 220,84 220,152 160,186 100,152 100,84" fill="#68a063" opacity="0.2"/>
+  <polygon points="160,58 212,88 212,148 160,178 108,148 108,88" fill="none" stroke="#68a063" stroke-width="2" opacity="0.5"/>
+  <text x="160" y="118" font-family="sans-serif" font-size="18" fill="#68a063" text-anchor="middle" font-weight="bold">Node</text>
+  <text x="160" y="140" font-family="sans-serif" font-size="12" fill="#8cc084" text-anchor="middle">.js</text>
+
+  <!-- V8 engine badge -->
+  <circle cx="160" cy="215" r="34" fill="#1a3040" stroke="#4285f4" stroke-width="2"/>
+  <text x="160" y="211" font-family="sans-serif" font-size="14" fill="#4285f4" text-anchor="middle" font-weight="bold">V8</text>
+  <text x="160" y="228" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">Engine</text>
+
+  <!-- Ryan Dahl's JSConf terminal -->
+  <rect x="270" y="30" width="490" height="270" rx="6" fill="#0d0d0d" stroke="#68a063" stroke-width="1.5"/>
+  <!-- Terminal title bar -->
+  <rect x="270" y="30" width="490" height="28" rx="6" fill="#1a1a1a"/>
+  <rect x="270" y="44" width="490" height="14" fill="#1a1a1a"/>
+  <circle cx="292" cy="44" r="6" fill="#ff5f57"/>
+  <circle cx="312" cy="44" r="6" fill="#febc2e"/>
+  <circle cx="332" cy="44" r="6" fill="#28c840"/>
+  <text x="515" y="49" font-family="monospace" font-size="11" fill="#888" text-anchor="middle">Terminal — JSConf 2009</text>
+
+  <!-- Terminal content -->
+  <text x="286" y="80" font-family="monospace" font-size="12" fill="#68a063">$ npm install express</text>
+  <text x="286" y="100" font-family="monospace" font-size="11" fill="#555">added 57 packages in 2.3s</text>
+  <text x="286" y="120" font-family="monospace" font-size="12" fill="#68a063">$ node server.js</text>
+  <text x="286" y="140" font-family="monospace" font-size="11" fill="#888">Server listening on port 3000...</text>
+
+  <!-- Server code -->
+  <text x="286" y="168" font-family="monospace" font-size="11" fill="#6a9955">// Ryan Dahl's live demo</text>
+  <text x="286" y="188" font-family="monospace" font-size="11" fill="#569cd6">const</text>
+  <text x="332" y="188" font-family="monospace" font-size="11" fill="#d4d4d4"> http = </text>
+  <text x="380" y="188" font-family="monospace" font-size="11" fill="#dcdcaa">require</text>
+  <text x="422" y="188" font-family="monospace" font-size="11" fill="#d4d4d4">(</text>
+  <text x="430" y="188" font-family="monospace" font-size="11" fill="#ce9178">'http'</text>
+  <text x="466" y="188" font-family="monospace" font-size="11" fill="#d4d4d4">);</text>
+  <text x="286" y="208" font-family="monospace" font-size="11" fill="#d4d4d4">http.</text>
+  <text x="316" y="208" font-family="monospace" font-size="11" fill="#dcdcaa">createServer</text>
+  <text x="398" y="208" font-family="monospace" font-size="11" fill="#d4d4d4">((</text>
+  <text x="414" y="208" font-family="monospace" font-size="11" fill="#9cdcfe">req</text>
+  <text x="438" y="208" font-family="monospace" font-size="11" fill="#d4d4d4">,</text>
+  <text x="446" y="208" font-family="monospace" font-size="11" fill="#9cdcfe">res</text>
+  <text x="466" y="208" font-family="monospace" font-size="11" fill="#d4d4d4">) =></text>
+  <text x="286" y="224" font-family="monospace" font-size="11" fill="#9cdcfe">  res</text>
+  <text x="316" y="224" font-family="monospace" font-size="11" fill="#d4d4d4">.</text>
+  <text x="322" y="224" font-family="monospace" font-size="11" fill="#dcdcaa">end</text>
+  <text x="344" y="224" font-family="monospace" font-size="11" fill="#d4d4d4">(</text>
+  <text x="352" y="224" font-family="monospace" font-size="11" fill="#ce9178">'Hello World'</text>
+  <text x="440" y="224" font-family="monospace" font-size="11" fill="#d4d4d4">))</text>
+  <text x="286" y="240" font-family="monospace" font-size="11" fill="#d4d4d4">.</text>
+  <text x="294" y="240" font-family="monospace" font-size="11" fill="#dcdcaa">listen</text>
+  <text x="330" y="240" font-family="monospace" font-size="11" fill="#d4d4d4">(</text>
+  <text x="338" y="240" font-family="monospace" font-size="11" fill="#b5cea8">3000</text>
+  <text x="362" y="240" font-family="monospace" font-size="11" fill="#d4d4d4">);</text>
+
+  <text x="286" y="268" font-family="monospace" font-size="12" fill="#68a063">$ curl localhost:3000</text>
+  <text x="286" y="288" font-family="monospace" font-size="12" fill="#fff">Hello World</text>
+
+  <!-- Event loop diagram -->
+  <rect x="270" y="314" width="490" height="96" rx="6" fill="#0a1a2a" stroke="#68a063" stroke-width="1"/>
+  <text x="290" y="334" font-family="sans-serif" font-size="12" fill="#68a063" font-weight="bold">Event Loop (Non-blocking I/O)</text>
+
+  <!-- Event loop circles -->
+  <circle cx="360" cy="370" r="28" fill="none" stroke="#68a063" stroke-width="2"/>
+  <text x="360" y="366" font-family="sans-serif" font-size="9" fill="#68a063" text-anchor="middle">Event</text>
+  <text x="360" y="378" font-family="sans-serif" font-size="9" fill="#68a063" text-anchor="middle">Loop</text>
+
+  <rect x="400" y="355" width="60" height="24" rx="4" fill="#1a3040" stroke="#4488ff" stroke-width="1"/>
+  <text x="430" y="371" font-family="sans-serif" font-size="9" fill="#4488ff" text-anchor="middle">HTTP req</text>
+  <line x1="388" y1="360" x2="400" y2="362" stroke="#4488ff" stroke-width="1.5"/>
+
+  <rect x="400" y="383" width="60" height="24" rx="4" fill="#1a3040" stroke="#ff8844" stroke-width="1"/>
+  <text x="430" y="399" font-family="sans-serif" font-size="9" fill="#ff8844" text-anchor="middle">File I/O</text>
+  <line x1="388" y1="378" x2="400" y2="390" stroke="#ff8844" stroke-width="1.5"/>
+
+  <rect x="476" y="355" width="64" height="24" rx="4" fill="#1a3040" stroke="#44dd88" stroke-width="1"/>
+  <text x="508" y="371" font-family="sans-serif" font-size="9" fill="#44dd88" text-anchor="middle">Callback</text>
+  <line x1="460" y1="362" x2="476" y2="362" stroke="#44dd88" stroke-width="1.5"/>
+
+  <rect x="476" y="383" width="64" height="24" rx="4" fill="#1a3040" stroke="#44dd88" stroke-width="1"/>
+  <text x="508" y="399" font-family="sans-serif" font-size="9" fill="#44dd88" text-anchor="middle">Callback</text>
+  <line x1="460" y1="390" x2="476" y2="390" stroke="#44dd88" stroke-width="1.5"/>
+
+  <text x="560" y="370" font-family="sans-serif" font-size="10" fill="#888">10,000+</text>
+  <text x="556" y="384" font-family="sans-serif" font-size="10" fill="#888">concurrent</text>
+  <text x="560" y="398" font-family="sans-serif" font-size="10" fill="#888">connections</text>
+
+  <!-- Left info -->
+  <rect x="30" y="270" width="220" height="120" rx="6" fill="#0a1628" stroke="#68a063" stroke-width="1"/>
+  <text x="140" y="292" font-family="sans-serif" font-size="12" fill="#68a063" text-anchor="middle" font-weight="bold">Same language:</text>
+  <text x="140" y="312" font-family="sans-serif" font-size="11" fill="#aaa" text-anchor="middle">Frontend JS</text>
+  <text x="140" y="330" font-family="sans-serif" font-size="16" fill="#68a063" text-anchor="middle">+</text>
+  <text x="140" y="350" font-family="sans-serif" font-size="11" fill="#aaa" text-anchor="middle">Backend Node.js</text>
+  <text x="140" y="372" font-family="sans-serif" font-size="10" fill="#555" text-anchor="middle">Full-stack JavaScript!</text>
+
+  <!-- Year badge -->
+  <rect x="40" y="410" width="110" height="34" rx="17" fill="#68a063"/>
+  <text x="95" y="433" font-family="sans-serif" font-size="19" font-weight="bold" fill="white" text-anchor="middle">2009</text>
+
+  <!-- Bottom caption -->
+  <text x="400" y="410" font-family="sans-serif" font-size="15" fill="#68a063" text-anchor="middle" font-weight="bold">"Server-side JS is here!" — Node.js, JSConf 2009</text>
+  <text x="400" y="432" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">Ryan Dahl · V8 Engine · npm package manager</text>
+</svg>

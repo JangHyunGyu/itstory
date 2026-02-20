@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: Java era, warm professional -->
+  <rect width="800" height="450" fill="#f8f4f0"/>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="sans-serif" font-size="15" font-weight="bold" fill="#c04020" text-anchor="middle">Java Servlet 1.0 &amp; HttpSession — 1997</text>
+  <text x="400" y="54" font-family="sans-serif" font-size="11" fill="#7a7a7a" text-anchor="middle">HTTP requests as objects · Session management · Java web standard</text>
+
+  <!-- === HTTP Request flow === -->
+
+  <!-- Browser / Client -->
+  <rect x="30" y="140" width="120" height="80" rx="10" fill="#2a4a7a"/>
+  <!-- Browser window -->
+  <rect x="38" y="148" width="104" height="12" rx="3" fill="#3a5a8a"/>
+  <circle cx="46" cy="154" r="4" fill="#ff6060"/>
+  <circle cx="56" cy="154" r="4" fill="#ffaa00"/>
+  <circle cx="66" cy="154" r="4" fill="#44cc44"/>
+  <rect x="38" y="164" width="104" height="48" rx="2" fill="#e8f0f8"/>
+  <text x="90" y="182" font-family="sans-serif" font-size="8" fill="#333" text-anchor="middle">Shopping Cart</text>
+  <text x="90" y="196" font-family="sans-serif" font-size="8" fill="#555" text-anchor="middle">Item: Book</text>
+  <rect x="60" y="202" width="60" height="10" rx="3" fill="#cc2222"/>
+  <text x="90" y="211" font-family="sans-serif" font-size="7" fill="white" text-anchor="middle">Add to Cart</text>
+  <text x="90" y="240" font-family="sans-serif" font-size="9" fill="#2a4a7a" text-anchor="middle">Browser</text>
+
+  <!-- Request arrow -->
+  <line x1="150" y1="180" x2="220" y2="180" stroke="#c04020" stroke-width="2.5"/>
+  <polygon points="220,175 234,180 220,185" fill="#c04020"/>
+  <text x="192" y="172" font-family="monospace" font-size="8" fill="#c04020">POST /cart</text>
+  <text x="192" y="200" font-family="monospace" font-size="7" fill="#888">Cookie: JSESSIONID=abc123</text>
+
+  <!-- === Web Server / Servlet Container === -->
+  <rect x="234" y="90" width="380" height="300" rx="12" fill="#c04020" opacity="0.08"/>
+  <rect x="234" y="90" width="380" height="300" rx="12" fill="none" stroke="#c04020" stroke-width="2"/>
+  <text x="424" y="112" font-family="sans-serif" font-size="11" font-weight="bold" fill="#c04020" text-anchor="middle">Servlet Container</text>
+
+  <!-- HttpServletRequest box -->
+  <rect x="254" y="124" width="160" height="110" rx="8" fill="#fff8e8" stroke="#c04020" stroke-width="1.5"/>
+  <text x="334" y="142" font-family="monospace" font-size="9" font-weight="bold" fill="#c04020" text-anchor="middle">HttpServletRequest</text>
+  <line x1="262" y1="148" x2="406" y2="148" stroke="#c04020" stroke-width="1" opacity="0.5"/>
+  <text x="262" y="162" font-family="monospace" font-size="8" fill="#555">getParameter("item")</text>
+  <text x="262" y="175" font-family="monospace" font-size="8" fill="#555">getSession()</text>
+  <text x="262" y="188" font-family="monospace" font-size="8" fill="#555">getHeader("Cookie")</text>
+  <text x="262" y="201" font-family="monospace" font-size="8" fill="#555">getRemoteAddr()</text>
+  <text x="262" y="214" font-family="monospace" font-size="8" fill="#555">getMethod() → POST</text>
+  <text x="262" y="228" font-family="monospace" font-size="8" fill="#888">// Encapsulated request</text>
+
+  <!-- Servlet class box -->
+  <rect x="254" y="248" width="160" height="120" rx="8" fill="#e8f0ff" stroke="#1a3a8a" stroke-width="1.5"/>
+  <text x="334" y="266" font-family="monospace" font-size="9" font-weight="bold" fill="#1a3a8a" text-anchor="middle">CartServlet.java</text>
+  <line x1="262" y1="272" x2="406" y2="272" stroke="#1a3a8a" stroke-width="1" opacity="0.5"/>
+  <text x="262" y="286" font-family="monospace" font-size="8" fill="#333">doPost(req, res) {</text>
+  <text x="270" y="299" font-family="monospace" font-size="8" fill="#555">  HttpSession s =</text>
+  <text x="270" y="312" font-family="monospace" font-size="8" fill="#555">  req.getSession();</text>
+  <text x="270" y="325" font-family="monospace" font-size="8" fill="#555">  s.setAttribute(</text>
+  <text x="270" y="338" font-family="monospace" font-size="8" fill="#555">    "cart", cart);</text>
+  <text x="262" y="351" font-family="monospace" font-size="8" fill="#333">}</text>
+
+  <!-- HttpSession box (center-right) -->
+  <rect x="440" y="140" width="154" height="130" rx="8" fill="#e8ffe8" stroke="#2a6a2a" stroke-width="1.5"/>
+  <text x="517" y="158" font-family="monospace" font-size="9" font-weight="bold" fill="#2a6a2a" text-anchor="middle">HttpSession</text>
+  <line x1="448" y1="164" x2="586" y2="164" stroke="#2a6a2a" stroke-width="1" opacity="0.5"/>
+  <text x="448" y="178" font-family="monospace" font-size="8" fill="#555">id: "abc123"</text>
+  <text x="448" y="191" font-family="monospace" font-size="8" fill="#555">cart: [Book, Pen]</text>
+  <text x="448" y="204" font-family="monospace" font-size="8" fill="#555">user: "alice"</text>
+  <text x="448" y="217" font-family="monospace" font-size="8" fill="#555">created: 14:32:01</text>
+  <text x="448" y="230" font-family="monospace" font-size="8" fill="#888">// Server-side state</text>
+  <text x="448" y="252" font-family="sans-serif" font-size="8" fill="#2a6a2a">Auto-managed by container</text>
+  <text x="448" y="265" font-family="sans-serif" font-size="8" fill="#2a6a2a">Survives page navigation</text>
+
+  <!-- HttpServletResponse box -->
+  <rect x="440" y="288" width="154" height="90" rx="8" fill="#fff0f8" stroke="#8a2a6a" stroke-width="1.5"/>
+  <text x="517" y="306" font-family="monospace" font-size="9" font-weight="bold" fill="#8a2a6a" text-anchor="middle">HttpServletResponse</text>
+  <line x1="448" y1="312" x2="586" y2="312" stroke="#8a2a6a" stroke-width="1" opacity="0.5"/>
+  <text x="448" y="326" font-family="monospace" font-size="8" fill="#555">setStatus(200)</text>
+  <text x="448" y="339" font-family="monospace" font-size="8" fill="#555">addCookie(JSESSION)</text>
+  <text x="448" y="352" font-family="monospace" font-size="8" fill="#555">getWriter().print(html)</text>
+  <text x="448" y="365" font-family="monospace" font-size="8" fill="#888">// Response to client</text>
+
+  <!-- Connection lines inside container -->
+  <line x1="414" y1="180" x2="440" y2="190" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="414" y1="310" x2="440" y2="330" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="334" y1="234" x2="334" y2="248" stroke="#888" stroke-width="1.5"/>
+
+  <!-- Response arrow back to browser -->
+  <line x1="234" y1="340" x2="150" y2="220" stroke="#2a6a2a" stroke-width="2.5"/>
+  <polygon points="150,220 140,232 158,228" fill="#2a6a2a"/>
+  <text x="162" y="276" font-family="monospace" font-size="8" fill="#2a6a2a">200 OK</text>
+  <text x="148" y="290" font-family="monospace" font-size="7" fill="#888">Set-Cookie: JSESSIONID</text>
+
+  <!-- Java logo hint -->
+  <circle cx="710" cy="220" r="55" fill="#f8e8d8" stroke="#c04020" stroke-width="2"/>
+  <text x="710" y="210" font-family="serif" font-size="32" font-weight="bold" fill="#c04020" text-anchor="middle">J</text>
+  <text x="710" y="238" font-family="sans-serif" font-size="12" fill="#c04020" text-anchor="middle">Java EE</text>
+  <text x="710" y="254" font-family="sans-serif" font-size="9" fill="#884444" text-anchor="middle">Servlet 1.0</text>
+  <text x="710" y="290" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">Sun Microsystems</text>
+</svg>

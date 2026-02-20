@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Xerox PARC lab interior - Alto era -->
+  <rect width="800" height="450" fill="#d8dce0"/>
+  <!-- Floor -->
+  <rect x="0" y="380" width="800" height="70" fill="#c0b8a0"/>
+  <!-- Walls -->
+  <rect x="0" y="0" width="800" height="385" fill="#dce0e4"/>
+  <!-- Large windows letting in California sunshine -->
+  <rect x="580" y="30" width="200" height="200" fill="#c0d8f0" rx="3" stroke="#8898a0" stroke-width="2"/>
+  <!-- Sun streaming in -->
+  <g fill="#f0e080" opacity="0.15">
+    <path d="M 580 30 L 800 30 L 800 230 L 580 230 Z"/>
+    <path d="M 580 30 L 700 380 L 580 380 Z"/>
+  </g>
+  <!-- The Ethernet "Ether" cable running along ceiling -->
+  <!-- Thick coaxial "thick Ethernet" cable -->
+  <rect x="0" y="38" width="800" height="10" fill="#f0c050" rx="3" opacity="0.9"/>
+  <text x="400" y="33" font-family="sans-serif" font-size="8" fill="#8a6020" text-anchor="middle">10BASE-5 "Thicknet" Coaxial Cable — Shared Bus</text>
+  <!-- Vampire tap connectors on cable -->
+  <g fill="#8a6020">
+    <rect x="148" y="33" width="4" height="18" rx="1"/>
+    <rect x="298" y="33" width="4" height="18" rx="1"/>
+    <rect x="448" y="33" width="4" height="18" rx="1"/>
+    <rect x="598" y="33" width="4" height="18" rx="1"/>
+  </g>
+  <!-- Drop cables from taps to workstations -->
+  <g stroke="#c8a040" stroke-width="2">
+    <line x1="150" y1="51" x2="150" y2="140"/>
+    <line x1="300" y1="51" x2="300" y2="140"/>
+    <line x1="450" y1="51" x2="450" y2="140"/>
+  </g>
+  <!-- Xerox Alto workstations -->
+  <!-- Alto 1 (with Metcalfe) -->
+  <g transform="translate(100, 250)">
+    <!-- Monitor - tall portrait-oriented display -->
+    <rect x="-40" y="-200" width="80" height="110" fill="#2a2a2a" rx="4" stroke="#1a1a1a" stroke-width="2"/>
+    <rect x="-33" y="-193" width="66" height="96" fill="#e0e8e0" rx="2"/>
+    <!-- Alto GUI windows -->
+    <rect x="-30" y="-188" width="60" height="14" fill="#3a3a3a" rx="1"/>
+    <text x="-28" y="-178" font-family="monospace" font-size="5" fill="#e0e8e0">Bravo Editor</text>
+    <rect x="-30" y="-172" width="60" height="28" fill="#f0f0f0" rx="1"/>
+    <text x="-28" y="-162" font-family="monospace" font-size="5" fill="#1a1a1a">Hello Ethernet!</text>
+    <text x="-28" y="-152" font-family="monospace" font-size="5" fill="#1a1a1a">Sending packet...</text>
+    <!-- Keyboard -->
+    <rect x="-48" y="-85" width="96" height="22" fill="#4a4a4a" rx="3"/>
+    <!-- Mouse (first mouse!) -->
+    <ellipse cx="60" cy="-75" rx="14" ry="10" fill="#c8c0a8"/>
+    <!-- Desk -->
+    <rect x="-60" y="-65" width="140" height="10" fill="#8a6030" rx="2"/>
+    <!-- Metcalfe figure -->
+    <ellipse cx="0" cy="-240" rx="18" ry="18" fill="#d4a870"/>
+    <rect x="-15" y="-223" width="30" height="38" fill="#2a4a2a" rx="3"/>
+    <text x="0" y="-2" font-family="serif" font-size="8" fill="#4a5060" text-anchor="middle">Bob Metcalfe</text>
+    <text x="0" y="10" font-family="serif" font-size="7" fill="#4a5060" text-anchor="middle">Ethernet inventor</text>
+  </g>
+  <!-- Alto 2 - connected to first printer on Ethernet -->
+  <g transform="translate(300, 250)">
+    <rect x="-40" y="-200" width="80" height="110" fill="#2a2a2a" rx="4" stroke="#1a1a1a" stroke-width="2"/>
+    <rect x="-33" y="-193" width="66" height="96" fill="#e0e8e0" rx="2"/>
+    <rect x="-30" y="-188" width="60" height="14" fill="#3a3a3a" rx="1"/>
+    <text x="-28" y="-178" font-family="monospace" font-size="5" fill="#e0e8e0">Print Document</text>
+    <rect x="-30" y="-172" width="60" height="28" fill="#f0f0f0" rx="1"/>
+    <text x="-28" y="-162" font-family="monospace" font-size="5" fill="#1a1a1a">Printing to</text>
+    <text x="-28" y="-152" font-family="monospace" font-size="5" fill="#1a1a1a">Dover laser...</text>
+    <rect x="-48" y="-85" width="96" height="22" fill="#4a4a4a" rx="3"/>
+    <rect x="-60" y="-65" width="140" height="10" fill="#8a6030" rx="2"/>
+    <ellipse cx="0" cy="-240" rx="18" ry="18" fill="#c8956a"/>
+    <rect x="-15" y="-223" width="30" height="38" fill="#1a2a4a" rx="3"/>
+    <text x="0" y="-2" font-family="serif" font-size="8" fill="#4a5060" text-anchor="middle">David Boggs</text>
+    <text x="0" y="10" font-family="serif" font-size="7" fill="#4a5060" text-anchor="middle">Co-inventor</text>
+  </g>
+  <!-- Alto 3 -->
+  <g transform="translate(450, 250)">
+    <rect x="-40" y="-200" width="80" height="110" fill="#2a2a2a" rx="4" stroke="#1a1a1a" stroke-width="2"/>
+    <rect x="-33" y="-193" width="66" height="96" fill="#e0e8e0" rx="2"/>
+    <rect x="-30" y="-188" width="60" height="14" fill="#3a3a3a" rx="1"/>
+    <text x="-28" y="-178" font-family="monospace" font-size="5" fill="#e0e8e0">File Server</text>
+    <rect x="-30" y="-172" width="60" height="28" fill="#f0f0f0" rx="1"/>
+    <text x="-28" y="-162" font-family="monospace" font-size="5" fill="#1a1a1a">Share OK!</text>
+    <text x="-28" y="-152" font-family="monospace" font-size="5" fill="#1a1a1a">Speed: 2.94 Mbps</text>
+    <rect x="-48" y="-85" width="96" height="22" fill="#4a4a4a" rx="3"/>
+    <rect x="-60" y="-65" width="140" height="10" fill="#8a6030" rx="2"/>
+    <ellipse cx="0" cy="-240" rx="18" ry="18" fill="#b87858"/>
+    <rect x="-15" y="-223" width="30" height="38" fill="#3a1a1a" rx="3"/>
+    <text x="0" y="-2" font-family="serif" font-size="8" fill="#4a5060" text-anchor="middle">Chuck Thacker</text>
+  </g>
+  <!-- Laser printer (Dover) -->
+  <g transform="translate(640, 260)">
+    <rect x="-50" y="-80" width="100" height="80" fill="#5a5a5a" rx="4"/>
+    <rect x="-42" y="-72" width="84" height="30" fill="#4a4a4a" rx="2"/>
+    <!-- Output tray with paper -->
+    <rect x="-40" y="-30" width="80" height="8" fill="#6a6a6a" rx="1"/>
+    <g fill="#f5ead0">
+      <rect x="-30" y="-35" width="60" height="3" rx="1"/>
+      <rect x="-28" y="-38" width="56" height="3" rx="1"/>
+    </g>
+    <!-- Status lights -->
+    <circle cx="-30" cy="-58" r="4" fill="#40ff40"/>
+    <circle cx="-18" cy="-58" r="4" fill="#40ff40"/>
+    <text x="0" y="18" font-family="serif" font-size="8" fill="#4a5060" text-anchor="middle">Dover Laser</text>
+    <text x="0" y="30" font-family="serif" font-size="7" fill="#4a5060" text-anchor="middle">Printer (shared)</text>
+    <!-- Cable to network -->
+    <line x1="-50" y1="-40" x2="-90" y2="-40" stroke="#c8a040" stroke-width="2"/>
+    <line x1="-90" y1="-40" x2="-90" y2="38" stroke="#c8a040" stroke-width="2"/>
+  </g>
+  <!-- CSMA/CD explanation diagram -->
+  <rect x="30" y="90" width="280" height="120" fill="#0a1a2a" rx="5" opacity="0.9"/>
+  <text x="170" y="112" font-family="sans-serif" font-size="10" font-weight="bold" fill="#60c0ff" text-anchor="middle">Ethernet CSMA/CD</text>
+  <text x="170" y="128" font-family="serif" font-size="8" fill="#90b0d0" text-anchor="middle">CS: Listen before transmit</text>
+  <text x="170" y="142" font-family="serif" font-size="8" fill="#90b0d0" text-anchor="middle">MA: Shared medium/cable</text>
+  <text x="170" y="156" font-family="serif" font-size="8" fill="#90b0d0" text-anchor="middle">CD: Detect collision → backoff</text>
+  <text x="170" y="172" font-family="serif" font-size="8" fill="#f0d060" text-anchor="middle">Speed: 3 Mbps → 10 Mbps</text>
+  <text x="170" y="188" font-family="monospace" font-size="7" fill="#40e040" text-anchor="middle">PARC · Metcalfe &amp; Boggs · 1973</text>
+  <!-- Ethernet frame diagram -->
+  <g transform="translate(400, 130)">
+    <text x="0" y="-25" font-family="sans-serif" font-size="9" font-weight="bold" fill="#4a5a7a" text-anchor="middle">Ethernet Frame</text>
+    <rect x="-170" y="-18" width="45" height="30" fill="#4a6a8a" rx="2"/>
+    <text x="-147" y="-1" font-family="monospace" font-size="7" fill="white" text-anchor="middle">Dest MAC</text>
+    <rect x="-122" y="-18" width="45" height="30" fill="#4a8a6a" rx="2"/>
+    <text x="-99" y="-1" font-family="monospace" font-size="7" fill="white" text-anchor="middle">Src MAC</text>
+    <rect x="-74" y="-18" width="25" height="30" fill="#8a6a4a" rx="2"/>
+    <text x="-61" y="-1" font-family="monospace" font-size="7" fill="white" text-anchor="middle">Type</text>
+    <rect x="-46" y="-18" width="130" height="30" fill="#5a5a8a" rx="2"/>
+    <text x="19" y="-1" font-family="monospace" font-size="7" fill="white" text-anchor="middle">DATA (46-1500 bytes)</text>
+    <rect x="87" y="-18" width="30" height="30" fill="#8a4a4a" rx="2"/>
+    <text x="102" y="-1" font-family="monospace" font-size="7" fill="white" text-anchor="middle">FCS</text>
+    <text x="-30" y="22" font-family="serif" font-size="7" fill="#6a7a8a" text-anchor="middle">Max 1518 bytes · 802.3 standard 1980</text>
+  </g>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#1a2a4a" rx="6" opacity="0.8"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#80c0ff" text-anchor="middle">1973</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a0a1a" opacity="0.8"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">Ethernet Invented · Xerox PARC · Metcalfe &amp; Boggs · Local Area Networks Born</text>
+</svg>

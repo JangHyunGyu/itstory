@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: dark, hacker/open source vibe, dark navy -->
+  <rect width="800" height="450" fill="#0e0e18"/>
+  <rect x="0" y="350" width="800" height="100" fill="#0a0a14"/>
+  <line x1="0" y1="350" x2="800" y2="350" stroke="#1a1a2a" stroke-width="2"/>
+
+  <!-- Linux penguin (Tux) simplified -->
+  <!-- Body -->
+  <ellipse cx="130" cy="230" rx="55" ry="70" fill="#2a2a2a"/>
+  <!-- Belly -->
+  <ellipse cx="130" cy="255" rx="35" ry="45" fill="#f0e8c8"/>
+  <!-- Head -->
+  <ellipse cx="130" cy="148" rx="42" ry="40" fill="#2a2a2a"/>
+  <!-- Face -->
+  <ellipse cx="130" cy="162" rx="28" ry="22" fill="#f0d080"/>
+  <!-- Eyes -->
+  <ellipse cx="120" cy="152" rx="7" ry="8" fill="white"/>
+  <ellipse cx="140" cy="152" rx="7" ry="8" fill="white"/>
+  <circle cx="121" cy="154" r="4" fill="#1a1a2a"/>
+  <circle cx="141" cy="154" r="4" fill="#1a1a2a"/>
+  <circle cx="122" cy="153" r="1.5" fill="white"/>
+  <circle cx="142" cy="153" r="1.5" fill="white"/>
+  <!-- Beak -->
+  <ellipse cx="130" cy="172" rx="10" ry="6" fill="#e07020"/>
+  <!-- Wings -->
+  <ellipse cx="72" cy="240" rx="22" ry="38" fill="#2a2a2a" transform="rotate(-15, 72, 240)"/>
+  <ellipse cx="188" cy="240" rx="22" ry="38" fill="#2a2a2a" transform="rotate(15, 188, 240)"/>
+  <!-- Feet -->
+  <ellipse cx="114" cy="298" rx="18" ry="8" fill="#e07020"/>
+  <ellipse cx="146" cy="298" rx="18" ry="8" fill="#e07020"/>
+  <!-- Tux label -->
+  <text x="130" y="325" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#aaaacc">TUX</text>
+
+  <!-- Terminal window showing the famous post -->
+  <rect x="240" y="60" width="520" height="280" rx="6" fill="#0a0a14" stroke="#2a2a44" stroke-width="2"/>
+  <!-- Title bar -->
+  <rect x="240" y="60" width="520" height="24" rx="6" fill="#1a1a30"/>
+  <rect x="240" y="72" width="520" height="12" fill="#1a1a30"/>
+  <circle cx="258" cy="72" r="5" fill="#cc3333"/>
+  <circle cx="274" cy="72" r="5" fill="#ccaa00"/>
+  <circle cx="290" cy="72" r="5" fill="#33aa33"/>
+  <text x="500" y="77" text-anchor="middle" font-family="monospace" font-size="10" fill="#8888bb">comp.os.minix — 1991-08-25</text>
+
+  <!-- The famous Usenet post -->
+  <g font-family="monospace" font-size="10" fill="#8888cc">
+    <text x="258" y="102">From: torvalds@klaava.Helsinki.FI (Linus Benedict Torvalds)</text>
+    <text x="258" y="118">Newsgroups: comp.os.minix</text>
+    <text x="258" y="134">Subject: What would you like to see most in minix?</text>
+    <text x="258" y="150">Date: 25 Aug 91 20:57:08 GMT</text>
+  </g>
+  <line x1="258" y1="158" x2="752" y2="158" stroke="#2a2a44" stroke-width="1"/>
+  <g font-family="monospace" font-size="10" fill="#aaaadd">
+    <text x="258" y="174">Hello everybody out there using minix -</text>
+    <text x="258" y="190">I'm doing a (free) operating system (just a hobby, won't be</text>
+    <text x="258" y="206">big and professional like gnu) for 386(486) AT clones.</text>
+    <text x="258" y="222">This has been brewing since april, and is starting to get ready.</text>
+    <text x="258" y="238">I'd like any feedback on things people like/dislike in minix,</text>
+    <text x="258" y="254">as my OS resembles it somewhat (same physical layout of the</text>
+    <text x="258" y="270">file-system (due to practical reasons) among other things).</text>
+  </g>
+  <line x1="258" y1="278" x2="752" y2="278" stroke="#2a2a44" stroke-width="1"/>
+  <g font-family="monospace" font-size="10" fill="#66cc66">
+    <text x="258" y="296">PS. Yes - it's free of any minix code, and it has a multi-threaded fs.</text>
+    <text x="258" y="312">It is NOT portable (uses 386 task switching etc), and it probably</text>
+    <text x="258" y="328">never will support anything other than AT-harddisks...</text>
+  </g>
+
+  <!-- Linux version history on right -->
+  <rect x="30" y="355" width="740" height="60" rx="5" fill="#0a0e18" stroke="#1a2040" stroke-width="1.5"/>
+  <text x="400" y="374" text-anchor="middle" font-family="monospace" font-size="10" fill="#6688cc">Linux Kernel 0.01 (1991) → 1.0 (1994) → 2.6 (2003) → 3.0 (2011) → 6.x (2024)</text>
+  <text x="400" y="392" text-anchor="middle" font-family="monospace" font-size="9" fill="#4466aa">서버 96% · Android · 임베디드 · 슈퍼컴퓨터 TOP500 100% · 화성 헬기</text>
+
+  <!-- Open source symbol -->
+  <circle cx="195" cy="100" r="32" fill="none" stroke="#66cc66" stroke-width="3"/>
+  <path d="M 195 68 A 32 32 0 1 1 163 100" fill="none" stroke="#66cc66" stroke-width="3"/>
+  <path d="M 163 100 L 155 92 M 163 100 L 171 92" stroke="#66cc66" stroke-width="3"/>
+  <text x="195" y="148" text-anchor="middle" font-family="monospace" font-size="9" fill="#66cc66">OPEN SOURCE</text>
+
+  <!-- Title -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a0a14" opacity="0.95"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6688cc" font-weight="bold">Linux — 누구나 커널에 기여하는 시대를 열다 · 1991</text>
+</svg>

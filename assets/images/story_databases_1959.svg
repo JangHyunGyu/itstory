@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f3f0eb"/>
+
+  <!-- Title banner -->
+  <rect x="0" y="0" width="800" height="60" fill="#4a3728" opacity="0.95"/>
+  <text x="400" y="38" font-family="Georgia, serif" font-size="20" fill="#f5e6c8" text-anchor="middle" font-weight="bold">CODASYL DB 위원회 · 1959</text>
+
+  <!-- Round table -->
+  <ellipse cx="400" cy="260" rx="240" ry="100" fill="#c8a97a" stroke="#8B6914" stroke-width="4"/>
+  <ellipse cx="400" cy="260" rx="220" ry="88" fill="#d4b896" stroke="#a07840" stroke-width="2"/>
+
+  <!-- Table center document -->
+  <rect x="340" y="220" width="120" height="80" rx="4" fill="#fffde7" stroke="#8B6914" stroke-width="2"/>
+  <text x="400" y="242" font-family="monospace" font-size="8" fill="#4a3728" text-anchor="middle">CODASYL</text>
+  <text x="400" y="254" font-family="monospace" font-size="8" fill="#4a3728" text-anchor="middle">STANDARD</text>
+  <line x1="350" y1="262" x2="450" y2="262" stroke="#8B6914" stroke-width="1"/>
+  <text x="400" y="273" font-family="monospace" font-size="7" fill="#5c3d1e" text-anchor="middle">Data Systems</text>
+  <text x="400" y="283" font-family="monospace" font-size="7" fill="#5c3d1e" text-anchor="middle">Languages</text>
+  <text x="400" y="293" font-family="monospace" font-size="7" fill="#5c3d1e" text-anchor="middle">1959</text>
+
+  <!-- Representatives around table -->
+  <!-- Person 1 - top left -->
+  <g transform="translate(210, 185)">
+    <circle cx="0" cy="0" r="20" fill="#ffcc80"/>
+    <rect x="-18" y="20" width="36" height="40" rx="4" fill="#1a237e"/>
+    <text x="0" y="75" font-family="Arial, sans-serif" font-size="8" fill="#4a3728" text-anchor="middle">DoD</text>
+  </g>
+
+  <!-- Person 2 - top -->
+  <g transform="translate(320, 155)">
+    <circle cx="0" cy="0" r="20" fill="#ffe0b2"/>
+    <rect x="-18" y="20" width="36" height="40" rx="4" fill="#b71c1c"/>
+    <text x="0" y="75" font-family="Arial, sans-serif" font-size="8" fill="#4a3728" text-anchor="middle">IBM</text>
+  </g>
+
+  <!-- Person 3 - top right -->
+  <g transform="translate(480, 155)">
+    <circle cx="0" cy="0" r="20" fill="#ffcc80"/>
+    <rect x="-18" y="20" width="36" height="40" rx="4" fill="#006064"/>
+    <text x="0" y="75" font-family="Arial, sans-serif" font-size="8" fill="#4a3728" text-anchor="middle">GE</text>
+  </g>
+
+  <!-- Person 4 - right -->
+  <g transform="translate(590, 200)">
+    <circle cx="0" cy="0" r="20" fill="#ffe0b2"/>
+    <rect x="-18" y="20" width="36" height="40" rx="4" fill="#4a148c"/>
+    <text x="0" y="75" font-family="Arial, sans-serif" font-size="8" fill="#4a3728" text-anchor="middle">RCA</text>
+  </g>
+
+  <!-- Person 5 - bottom right -->
+  <g transform="translate(570, 310)">
+    <circle cx="0" cy="0" r="20" fill="#ffcc80"/>
+    <rect x="-18" y="20" width="36" height="40" rx="4" fill="#1b5e20"/>
+    <text x="0" y="75" font-family="Arial, sans-serif" font-size="8" fill="#4a3728" text-anchor="middle">Honeywell</text>
+  </g>
+
+  <!-- Person 6 - bottom left -->
+  <g transform="translate(230, 310)">
+    <circle cx="0" cy="0" r="20" fill="#ffe0b2"/>
+    <rect x="-18" y="20" width="36" height="40" rx="4" fill="#bf360c"/>
+    <text x="0" y="75" font-family="Arial, sans-serif" font-size="8" fill="#4a3728" text-anchor="middle">Burroughs</text>
+  </g>
+
+  <!-- Person 7 - left -->
+  <g transform="translate(165, 230)">
+    <circle cx="0" cy="0" r="20" fill="#ffcc80"/>
+    <rect x="-18" y="20" width="36" height="40" rx="4" fill="#33691e"/>
+    <text x="0" y="75" font-family="Arial, sans-serif" font-size="8" fill="#4a3728" text-anchor="middle">Univac</text>
+  </g>
+
+  <!-- Network model diagram - right side panel -->
+  <rect x="640" y="75" width="150" height="310" rx="8" fill="#fff9f0" stroke="#8B6914" stroke-width="2"/>
+  <text x="715" y="100" font-family="Arial, sans-serif" font-size="10" fill="#4a3728" text-anchor="middle" font-weight="bold">Network Model</text>
+  <text x="715" y="116" font-family="Arial, sans-serif" font-size="8" fill="#8B6914" text-anchor="middle">(Pointer-based)</text>
+
+  <!-- Record nodes -->
+  <rect x="660" y="130" width="60" height="28" rx="4" fill="#1a237e"/>
+  <text x="690" y="149" font-family="monospace" font-size="9" fill="white" text-anchor="middle">ORDER</text>
+
+  <rect x="650" y="200" width="60" height="28" rx="4" fill="#006064"/>
+  <text x="680" y="219" font-family="monospace" font-size="9" fill="white" text-anchor="middle">CUSTOMER</text>
+
+  <rect x="725" y="200" width="55" height="28" rx="4" fill="#4a148c"/>
+  <text x="752" y="219" font-family="monospace" font-size="9" fill="white" text-anchor="middle">PRODUCT</text>
+
+  <rect x="660" y="270" width="55" height="28" rx="4" fill="#b71c1c"/>
+  <text x="687" y="289" font-family="monospace" font-size="9" fill="white" text-anchor="middle">INVOICE</text>
+
+  <rect x="725" y="270" width="55" height="28" rx="4" fill="#1b5e20"/>
+  <text x="752" y="289" font-family="monospace" font-size="9" fill="white" text-anchor="middle">SUPPLIER</text>
+
+  <!-- Pointer arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#8B6914"/>
+    </marker>
+  </defs>
+  <line x1="690" y1="158" x2="680" y2="200" stroke="#8B6914" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="700" y1="158" x2="752" y2="200" stroke="#8B6914" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="680" y1="228" x2="687" y2="270" stroke="#8B6914" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="752" y1="228" x2="752" y2="270" stroke="#8B6914" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="715" y1="284" x2="725" y2="284" stroke="#8B6914" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Pointer label -->
+  <text x="715" y="340" font-family="Arial, sans-serif" font-size="8" fill="#8B6914" text-anchor="middle">→ 포인터로 연결</text>
+  <text x="715" y="355" font-family="Arial, sans-serif" font-size="8" fill="#8B6914" text-anchor="middle">네트워크 모델</text>
+  <text x="715" y="370" font-family="Arial, sans-serif" font-size="8" fill="#4a3728" text-anchor="middle">Graph of Records</text>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#4a3728" opacity="0.9"/>
+  <text x="400" y="415" font-family="Georgia, serif" font-size="13" fill="#f5e6c8" text-anchor="middle">산업계 전문가들이 데이터 시스템 언어 표준화를 추진</text>
+  <text x="400" y="438" font-family="Georgia, serif" font-size="11" fill="#c9a87c" text-anchor="middle">Committee on Data Systems Languages · 포인터 기반 네트워크 모델</text>
+</svg>

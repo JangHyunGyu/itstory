@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="galaxy1962" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1a3a"/>
+      <stop offset="100%" stop-color="#050510"/>
+    </radialGradient>
+  </defs>
+  <!-- Deep space background -->
+  <rect width="800" height="450" fill="url(#galaxy1962)"/>
+  <!-- Nebula cloud effects -->
+  <g opacity="0.2">
+    <ellipse cx="400" cy="225" rx="350" ry="200" fill="#2040a0"/>
+    <ellipse cx="300" cy="150" rx="200" ry="120" fill="#4020a0"/>
+    <ellipse cx="550" cy="300" rx="180" ry="100" fill="#204080"/>
+  </g>
+  <!-- Stars -->
+  <g fill="white">
+    <circle cx="40" cy="25" r="1.5"/>
+    <circle cx="120" cy="60" r="1"/>
+    <circle cx="200" cy="30" r="2"/>
+    <circle cx="280" cy="80" r="1"/>
+    <circle cx="380" cy="20" r="1.5"/>
+    <circle cx="460" cy="65" r="2"/>
+    <circle cx="540" cy="35" r="1"/>
+    <circle cx="620" cy="70" r="1.5"/>
+    <circle cx="720" cy="30" r="2"/>
+    <circle cx="780" cy="55" r="1"/>
+    <circle cx="60" cy="120" r="1.5"/>
+    <circle cx="160" cy="150" r="1"/>
+    <circle cx="260" cy="140" r="1.5"/>
+    <circle cx="700" cy="100" r="1"/>
+    <circle cx="760" cy="130" r="1.5"/>
+  </g>
+  <!-- Intergalactic network concept: planets connected by data streams -->
+  <!-- Planet/node 1 (Earth) -->
+  <g transform="translate(100, 200)">
+    <circle cx="0" cy="0" r="40" fill="#2040c0" stroke="#4060e0" stroke-width="2"/>
+    <ellipse cx="0" cy="0" rx="40" ry="12" fill="none" stroke="#60a0e0" stroke-width="1.5" opacity="0.6"/>
+    <!-- Continents simplified -->
+    <g fill="#40a040" opacity="0.7">
+      <ellipse cx="-12" cy="-8" rx="12" ry="16"/>
+      <ellipse cx="15" cy="5" rx="16" ry="10"/>
+    </g>
+    <text x="0" y="60" font-family="serif" font-size="10" fill="#80c0ff" text-anchor="middle">MIT/ARPA</text>
+    <text x="0" y="73" font-family="serif" font-size="8" fill="#6090c0" text-anchor="middle">Cambridge</text>
+  </g>
+  <!-- Planet/node 2 -->
+  <g transform="translate(400, 100)">
+    <circle cx="0" cy="0" r="30" fill="#6040a0" stroke="#8060c0" stroke-width="2"/>
+    <text x="0" y="50" font-family="serif" font-size="10" fill="#c080ff" text-anchor="middle">Stanford</text>
+  </g>
+  <!-- Planet/node 3 -->
+  <g transform="translate(680, 180)">
+    <circle cx="0" cy="0" r="32" fill="#a04020" stroke="#c06040" stroke-width="2"/>
+    <text x="0" y="52" font-family="serif" font-size="10" fill="#ffb080" text-anchor="middle">UCLA</text>
+  </g>
+  <!-- Planet/node 4 -->
+  <g transform="translate(300, 340)">
+    <circle cx="0" cy="0" r="28" fill="#206040" stroke="#40a060" stroke-width="2"/>
+    <text x="0" y="46" font-family="serif" font-size="10" fill="#80ffb0" text-anchor="middle">BBN</text>
+  </g>
+  <!-- Planet/node 5 -->
+  <g transform="translate(560, 350)">
+    <circle cx="0" cy="0" r="28" fill="#804020" stroke="#c06020" stroke-width="2"/>
+    <text x="0" y="46" font-family="serif" font-size="10" fill="#ffc080" text-anchor="middle">SRI</text>
+  </g>
+  <!-- Data stream connections between nodes -->
+  <g stroke-width="2" fill="none" opacity="0.6">
+    <path d="M 140 200 Q 250 140 370 100" stroke="#40c0ff"/>
+    <path d="M 430 100 Q 560 120 648 180" stroke="#40c0ff"/>
+    <path d="M 140 215 Q 210 280 272 340" stroke="#40ff80"/>
+    <path d="M 330 340 Q 430 360 532 350" stroke="#40ff80"/>
+    <path d="M 140 230 Q 380 340 532 355" stroke="#c040ff"/>
+    <path d="M 400 130 Q 460 240 540 325" stroke="#ff8040"/>
+    <path d="M 680 212 Q 640 280 585 340" stroke="#ffff40"/>
+  </g>
+  <!-- Flowing data particles on lines -->
+  <g fill="#40c0ff" opacity="0.8">
+    <circle cx="250" cy="152" r="4"/>
+    <circle cx="350" cy="120" r="3"/>
+  </g>
+  <g fill="#40ff80" opacity="0.8">
+    <circle cx="230" cy="290" r="4"/>
+    <circle cx="450" cy="352" r="3"/>
+  </g>
+  <!-- Licklider's memo document (central element) -->
+  <g transform="translate(400, 225)">
+    <!-- Paper with dog-ear -->
+    <polygon points="-90,-100 70,-100 90,-80 90,100 -90,100" fill="#f5ead0" stroke="#8a6a30" stroke-width="1.5"/>
+    <polygon points="70,-100 90,-80 70,-80" fill="#c8b070"/>
+    <!-- Memo header -->
+    <text x="-78" y="-78" font-family="serif" font-size="10" font-weight="bold" fill="#2a1a0a">MEMORANDUM FOR:</text>
+    <text x="-78" y="-63" font-family="serif" font-size="9" fill="#4a3010">IPTO Research Staff</text>
+    <text x="-78" y="-50" font-family="serif" font-size="10" font-weight="bold" fill="#2a1a0a">FROM: J.C.R. Licklider</text>
+    <text x="-78" y="-38" font-family="serif" font-size="9" fill="#4a3010">DATE: August 1962</text>
+    <line x1="-78" y1="-30" x2="78" y2="-30" stroke="#8a6a30" stroke-width="1"/>
+    <text x="-78" y="-16" font-family="serif" font-size="8" fill="#2a1a0a">SUBJ: Members of the</text>
+    <text x="-78" y="-4" font-family="serif" font-size="8" fill="#c82020">"Intergalactic Computer</text>
+    <text x="-78" y="8" font-family="serif" font-size="8" fill="#c82020"> Network"</text>
+    <line x1="-78" y1="15" x2="78" y2="15" stroke="#8a6a30" stroke-width="0.5"/>
+    <text x="-78" y="28" font-family="serif" font-size="7" fill="#3a2a18">What if every computer</text>
+    <text x="-78" y="39" font-family="serif" font-size="7" fill="#3a2a18">could communicate with</text>
+    <text x="-78" y="50" font-family="serif" font-size="7" fill="#3a2a18">every other computer?</text>
+    <text x="-78" y="61" font-family="serif" font-size="7" fill="#3a2a18">Research could accelerate</text>
+    <text x="-78" y="72" font-family="serif" font-size="7" fill="#3a2a18">across all institutions...</text>
+    <!-- Signature area -->
+    <text x="-78" y="90" font-family="serif" font-size="8" font-style="italic" fill="#4a3010">- J.C.R. Licklider, ARPA/IPTO</text>
+  </g>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#050510" rx="6" opacity="0.9" stroke="#4060c0" stroke-width="1"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#60a0ff" text-anchor="middle">1962</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#050510" opacity="0.9"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">Licklider's "Intergalactic Network" Memo · The Dream of Connected Computers</text>
+</svg>

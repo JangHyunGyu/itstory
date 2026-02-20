@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f8f9fa"/>
+
+  <!-- Title banner -->
+  <rect x="0" y="0" width="800" height="60" fill="#263238" opacity="0.95"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">관계형 모델 논문 · E.F. Codd · 1970</text>
+
+  <!-- Paper / Document -->
+  <rect x="30" y="80" width="200" height="280" rx="4" fill="white" stroke="#90a4ae" stroke-width="2"/>
+  <rect x="30" y="80" width="200" height="35" rx="4" fill="#eceff1"/>
+  <text x="130" y="100" font-family="Georgia, serif" font-size="10" fill="#263238" text-anchor="middle" font-weight="bold">A Relational Model of</text>
+  <text x="130" y="114" font-family="Georgia, serif" font-size="10" fill="#263238" text-anchor="middle">Data for Large Shared</text>
+  <line x1="40" y1="120" x2="220" y2="120" stroke="#b0bec5" stroke-width="1"/>
+  <text x="130" y="135" font-family="Georgia, serif" font-size="9" fill="#546e7a" text-anchor="middle">Data Banks</text>
+  <text x="130" y="152" font-family="Georgia, serif" font-size="9" fill="#546e7a" text-anchor="middle">E.F. Codd</text>
+  <text x="130" y="166" font-family="Georgia, serif" font-size="8" fill="#78909c" text-anchor="middle">Communications of the ACM</text>
+  <text x="130" y="180" font-family="Georgia, serif" font-size="8" fill="#78909c" text-anchor="middle">Vol. 13, No. 6, June 1970</text>
+  <!-- Paper text lines -->
+  <g stroke="#cfd8dc" stroke-width="1">
+    <line x1="45" y1="196" x2="215" y2="196"/>
+    <line x1="45" y1="208" x2="215" y2="208"/>
+    <line x1="45" y1="220" x2="215" y2="220"/>
+    <line x1="45" y1="232" x2="215" y2="232"/>
+    <line x1="45" y1="244" x2="200" y2="244"/>
+    <line x1="45" y1="256" x2="215" y2="256"/>
+    <line x1="45" y1="268" x2="195" y2="268"/>
+    <line x1="45" y1="280" x2="215" y2="280"/>
+    <line x1="45" y1="292" x2="210" y2="292"/>
+    <line x1="45" y1="304" x2="215" y2="304"/>
+    <line x1="45" y1="316" x2="200" y2="316"/>
+    <line x1="45" y1="328" x2="215" y2="328"/>
+  </g>
+
+  <!-- Main data table visualization -->
+  <g transform="translate(250, 80)">
+    <!-- Table: CUSTOMERS -->
+    <rect x="0" y="0" width="300" height="32" rx="4" fill="#1565c0"/>
+    <text x="150" y="22" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">customers</text>
+
+    <!-- Column headers -->
+    <rect x="0" y="32" width="300" height="26" fill="#1976d2"/>
+    <text x="30" y="50" font-family="monospace" font-size="10" fill="#90caf9">id</text>
+    <text x="80" y="50" font-family="monospace" font-size="10" fill="#90caf9">name</text>
+    <text x="170" y="50" font-family="monospace" font-size="10" fill="#90caf9">city</text>
+    <text x="235" y="50" font-family="monospace" font-size="10" fill="#90caf9">balance</text>
+    <line x1="0" y1="58" x2="300" y2="58" stroke="#0d47a1" stroke-width="1"/>
+
+    <!-- Row 1 -->
+    <rect x="0" y="58" width="300" height="26" fill="#e3f2fd"/>
+    <text x="30" y="76" font-family="monospace" font-size="10" fill="#263238">1</text>
+    <text x="80" y="76" font-family="monospace" font-size="10" fill="#263238">Alice Kim</text>
+    <text x="170" y="76" font-family="monospace" font-size="10" fill="#263238">Seoul</text>
+    <text x="235" y="76" font-family="monospace" font-size="10" fill="#263238">$1,200</text>
+    <!-- Row 2 -->
+    <rect x="0" y="84" width="300" height="26" fill="white"/>
+    <text x="30" y="102" font-family="monospace" font-size="10" fill="#263238">2</text>
+    <text x="80" y="102" font-family="monospace" font-size="10" fill="#263238">Bob Park</text>
+    <text x="170" y="102" font-family="monospace" font-size="10" fill="#263238">Busan</text>
+    <text x="235" y="102" font-family="monospace" font-size="10" fill="#263238">$850</text>
+    <!-- Row 3 -->
+    <rect x="0" y="110" width="300" height="26" fill="#e3f2fd"/>
+    <text x="30" y="128" font-family="monospace" font-size="10" fill="#263238">3</text>
+    <text x="80" y="128" font-family="monospace" font-size="10" fill="#263238">Carol Lee</text>
+    <text x="170" y="128" font-family="monospace" font-size="10" fill="#263238">Incheon</text>
+    <text x="235" y="128" font-family="monospace" font-size="10" fill="#263238">$3,100</text>
+    <!-- Row 4 -->
+    <rect x="0" y="136" width="300" height="26" fill="white"/>
+    <text x="30" y="154" font-family="monospace" font-size="10" fill="#263238">4</text>
+    <text x="80" y="154" font-family="monospace" font-size="10" fill="#263238">Dan Choi</text>
+    <text x="170" y="154" font-family="monospace" font-size="10" fill="#263238">Daegu</text>
+    <text x="235" y="154" font-family="monospace" font-size="10" fill="#263238">$620</text>
+    <!-- Border -->
+    <rect x="0" y="0" width="300" height="162" rx="4" fill="none" stroke="#1565c0" stroke-width="2"/>
+    <!-- Vertical lines -->
+    <line x1="65" y1="32" x2="65" y2="162" stroke="#90caf9" stroke-width="1" opacity="0.5"/>
+    <line x1="155" y1="32" x2="155" y2="162" stroke="#90caf9" stroke-width="1" opacity="0.5"/>
+    <line x1="225" y1="32" x2="225" y2="162" stroke="#90caf9" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- SQL Query box -->
+  <rect x="250" y="280" width="300" height="90" rx="6" fill="#1e272c" stroke="#4caf50" stroke-width="2"/>
+  <text x="270" y="302" font-family="monospace" font-size="11" fill="#66bb6a">SELECT</text>
+  <text x="310" y="302" font-family="monospace" font-size="11" fill="#4fc3f7"> name, balance</text>
+  <text x="270" y="320" font-family="monospace" font-size="11" fill="#66bb6a">FROM</text>
+  <text x="310" y="320" font-family="monospace" font-size="11" fill="#f8f8f2"> customers</text>
+  <text x="270" y="338" font-family="monospace" font-size="11" fill="#66bb6a">WHERE</text>
+  <text x="316" y="338" font-family="monospace" font-size="11" fill="#f8f8f2"> balance &gt; 1000</text>
+  <text x="270" y="356" font-family="monospace" font-size="11" fill="#66bb6a">ORDER BY</text>
+  <text x="340" y="356" font-family="monospace" font-size="11" fill="#f8f8f2"> balance DESC</text>
+
+  <!-- Math set theory symbols -->
+  <g transform="translate(580, 95)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="30" fill="#7b1fa2">∩</text>
+    <text x="50" y="0" font-family="Arial, sans-serif" font-size="30" fill="#7b1fa2">∪</text>
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="30" fill="#7b1fa2">σ</text>
+    <text x="50" y="50" font-family="Arial, sans-serif" font-size="30" fill="#7b1fa2">π</text>
+    <text x="0" y="100" font-family="Arial, sans-serif" font-size="30" fill="#7b1fa2">⋈</text>
+    <text x="50" y="100" font-family="Arial, sans-serif" font-size="30" fill="#7b1fa2">÷</text>
+    <text x="0" y="145" font-family="Arial, sans-serif" font-size="12" fill="#546e7a">관계 대수</text>
+    <text x="0" y="162" font-family="Arial, sans-serif" font-size="12" fill="#546e7a">Relational</text>
+    <text x="0" y="178" font-family="Arial, sans-serif" font-size="12" fill="#546e7a">Algebra</text>
+  </g>
+
+  <!-- No pointer navigation label -->
+  <rect x="580" y="290" width="180" height="55" rx="6" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <text x="670" y="313" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32" text-anchor="middle" font-weight="bold">포인터 없이도</text>
+  <text x="670" y="329" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32" text-anchor="middle">질의(Query)로 탐색!</text>
+  <text x="670" y="343" font-family="Arial, sans-serif" font-size="9" fill="#388e3c" text-anchor="middle">No more pointer chasing</text>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#263238" opacity="0.9"/>
+  <text x="400" y="415" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">데이터를 테이블(표)로 표현 · SQL로 선언적 질의</text>
+  <text x="400" y="438" font-family="Arial, sans-serif" font-size="11" fill="#90caf9" text-anchor="middle">E.F. Codd · IBM · Communications of the ACM · 1970</text>
+</svg>

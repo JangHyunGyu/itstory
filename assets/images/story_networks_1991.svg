@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- NSFNET commercial backbone transition - US map with backbone -->
+  <rect width="800" height="450" fill="#0a0f18"/>
+  <!-- US map outline (simplified) -->
+  <path d="M 60 80 L 120 60 L 200 55 L 280 50 L 360 48 L 440 52 L 520 60 L 580 75 L 620 90 L 650 120 L 660 160 L 650 200 L 630 240 L 590 270 L 540 290 L 480 300 L 420 310 L 360 315 L 300 310 L 240 300 L 180 280 L 130 250 L 90 220 L 65 190 L 55 150 L 60 80 Z" fill="#101828" stroke="#2a4a6a" stroke-width="2"/>
+  <!-- NSF Backbone T3 (45 Mbps) links -->
+  <!-- Major backbone nodes -->
+  <!-- Seattle -->
+  <circle cx="105" cy="98" r="8" fill="#2060c0" stroke="#40a0ff" stroke-width="2"/>
+  <text x="105" y="88" font-family="sans-serif" font-size="7" fill="#60b0ff" text-anchor="middle">SEA</text>
+  <!-- San Francisco -->
+  <circle cx="95" cy="175" r="10" fill="#2060c0" stroke="#40a0ff" stroke-width="2"/>
+  <text x="95" y="165" font-family="sans-serif" font-size="7" fill="#60b0ff" text-anchor="middle">SFO</text>
+  <!-- Los Angeles -->
+  <circle cx="115" cy="220" r="8" fill="#2060c0" stroke="#40a0ff" stroke-width="2"/>
+  <text x="115" y="236" font-family="sans-serif" font-size="7" fill="#60b0ff" text-anchor="middle">LAX</text>
+  <!-- Denver -->
+  <circle cx="215" cy="165" r="8" fill="#2060c0" stroke="#40a0ff" stroke-width="2"/>
+  <text x="215" y="155" font-family="sans-serif" font-size="7" fill="#60b0ff" text-anchor="middle">DEN</text>
+  <!-- Chicago -->
+  <circle cx="360" cy="140" r="12" fill="#1040a0" stroke="#40a0ff" stroke-width="2.5"/>
+  <text x="360" y="128" font-family="sans-serif" font-size="8" fill="#80c0ff" text-anchor="middle">CHI</text>
+  <!-- Dallas -->
+  <circle cx="295" cy="240" r="8" fill="#2060c0" stroke="#40a0ff" stroke-width="2"/>
+  <text x="295" y="230" font-family="sans-serif" font-size="7" fill="#60b0ff" text-anchor="middle">DAL</text>
+  <!-- Atlanta -->
+  <circle cx="430" cy="240" r="8" fill="#2060c0" stroke="#40a0ff" stroke-width="2"/>
+  <text x="430" y="230" font-family="sans-serif" font-size="7" fill="#60b0ff" text-anchor="middle">ATL</text>
+  <!-- New York -->
+  <circle cx="540" cy="130" r="12" fill="#1040a0" stroke="#40a0ff" stroke-width="2.5"/>
+  <text x="540" y="118" font-family="sans-serif" font-size="8" fill="#80c0ff" text-anchor="middle">NYC</text>
+  <!-- Washington DC -->
+  <circle cx="520" cy="170" r="10" fill="#2060c0" stroke="#40a0ff" stroke-width="2"/>
+  <text x="520" y="158" font-family="sans-serif" font-size="7" fill="#60b0ff" text-anchor="middle">DC</text>
+  <!-- Boston -->
+  <circle cx="570" cy="110" r="8" fill="#2060c0" stroke="#40a0ff" stroke-width="2"/>
+  <text x="570" y="100" font-family="sans-serif" font-size="7" fill="#60b0ff" text-anchor="middle">BOS</text>
+  <!-- Backbone links (animated data flow) -->
+  <g stroke="#1060c0" stroke-width="3" opacity="0.6">
+    <line x1="105" y1="98" x2="95" y2="175"/>
+    <line x1="95" y1="175" x2="115" y2="220"/>
+    <line x1="95" y1="175" x2="215" y2="165"/>
+    <line x1="215" y1="165" x2="360" y2="140"/>
+    <line x1="215" y1="165" x2="295" y2="240"/>
+    <line x1="295" y1="240" x2="430" y2="240"/>
+    <line x1="360" y1="140" x2="430" y2="240"/>
+    <line x1="360" y1="140" x2="540" y2="130"/>
+    <line x1="540" y1="130" x2="570" y2="110"/>
+    <line x1="540" y1="130" x2="520" y2="170"/>
+    <line x1="430" y1="240" x2="520" y2="170"/>
+  </g>
+  <!-- Data packets moving on backbone -->
+  <circle cx="200" cy="160" r="4" fill="#40c0ff" opacity="0.9"/>
+  <circle cx="445" cy="137" r="4" fill="#40c0ff" opacity="0.9"/>
+  <circle cx="492" cy="155" r="4" fill="#40c0ff" opacity="0.9"/>
+  <!-- Speed labels on key links -->
+  <rect x="270" y="148" width="50" height="14" fill="#0a2040" rx="2"/>
+  <text x="295" y="159" font-family="monospace" font-size="7" fill="#40c0ff" text-anchor="middle">T3 45Mbps</text>
+  <!-- NSFNET info panel -->
+  <rect x="640" y="50" width="150" height="190" fill="#050f1a" rx="6" stroke="#205080" stroke-width="1.5"/>
+  <text x="715" y="73" font-family="sans-serif" font-size="9" font-weight="bold" fill="#40a0ff" text-anchor="middle">NSFNET UPGRADE</text>
+  <line x1="650" y1="80" x2="780" y2="80" stroke="#204060" stroke-width="1"/>
+  <text x="650" y="97" font-family="serif" font-size="8" fill="#6090b0">1986: T1 backbone</text>
+  <text x="650" y="110" font-family="serif" font-size="8" fill="#6090b0"> (1.5 Mbps)</text>
+  <text x="650" y="126" font-family="serif" font-size="8" fill="#a0d0ff">1991: T3 backbone</text>
+  <text x="650" y="139" font-family="serif" font-size="8" fill="#a0d0ff"> (45 Mbps)</text>
+  <line x1="650" y1="148" x2="780" y2="148" stroke="#204060" stroke-width="1"/>
+  <text x="650" y="163" font-family="serif" font-size="8" fill="#6090b0">NSF hands off to</text>
+  <text x="650" y="176" font-family="serif" font-size="8" fill="#6090b0">private ISPs:</text>
+  <text x="650" y="189" font-family="serif" font-size="8" fill="#c0d0e0">Sprint, MCI, ANS</text>
+  <text x="650" y="205" font-family="serif" font-size="8" fill="#c0d0e0">PSINet, UUNET</text>
+  <text x="650" y="220" font-family="serif" font-size="8" fill="#60ff80">Commercial Internet</text>
+  <text x="650" y="233" font-family="serif" font-size="8" fill="#60ff80">begins!</text>
+  <!-- Commercial ISP transition label -->
+  <rect x="30" y="310" width="600" height="80" fill="#050f1a" rx="6" stroke="#205080" stroke-width="1.5"/>
+  <text x="330" y="332" font-family="sans-serif" font-size="11" font-weight="bold" fill="#40a0ff" text-anchor="middle">NSFNET → COMMERCIAL INTERNET BACKBONE · 1991</text>
+  <text x="45" y="352" font-family="serif" font-size="8" fill="#6090b0">Government-funded research network gives way to commercial carriers</text>
+  <text x="45" y="367" font-family="serif" font-size="8" fill="#6090b0">45 Mbps T3 backbone connects universities, research centers, and now businesses</text>
+  <text x="45" y="382" font-family="serif" font-size="8" fill="#60ff80">Internet traffic: 1 trillion bytes/month · Merit Network manages transition</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#0a1a3a" rx="6" opacity="0.9" stroke="#40a0ff" stroke-width="1"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#40a0ff" text-anchor="middle">1991</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#050810" opacity="0.9"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">NSFNET T3 Backbone · 45 Mbps · Commercial Internet Begins · Research Net Goes Public</text>
+</svg>

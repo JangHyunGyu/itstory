@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- 1989 - BGP routing AND WWW proposal - dual scene -->
+  <rect width="800" height="450" fill="#0a0f1a"/>
+  <!-- Left half: BGP routing - autonomous systems -->
+  <rect x="0" y="0" width="400" height="450" fill="#0a1520"/>
+  <!-- Right half: WWW proposal at CERN -->
+  <rect x="400" y="0" width="400" height="450" fill="#151018"/>
+  <!-- Divider -->
+  <line x1="400" y1="0" x2="400" y2="450" stroke="#3a3a5a" stroke-width="2" stroke-dasharray="8,4"/>
+  <!-- LEFT SIDE: BGP - Internet backbone routing -->
+  <!-- AS nodes -->
+  <!-- AS 1 (top-left) -->
+  <circle cx="90" cy="110" r="45" fill="#0a2040" stroke="#2060a0" stroke-width="2"/>
+  <text x="90" y="103" font-family="monospace" font-size="9" fill="#60a0ff" text-anchor="middle">AS 1</text>
+  <text x="90" y="117" font-family="monospace" font-size="8" fill="#4070c0" text-anchor="middle">Sprint</text>
+  <!-- AS 2 (top-right of left half) -->
+  <circle cx="300" cy="110" r="45" fill="#0a2040" stroke="#2060a0" stroke-width="2"/>
+  <text x="300" y="103" font-family="monospace" font-size="9" fill="#60a0ff" text-anchor="middle">AS 2</text>
+  <text x="300" y="117" font-family="monospace" font-size="8" fill="#4070c0" text-anchor="middle">MCI</text>
+  <!-- AS 3 (bottom-left) -->
+  <circle cx="90" cy="270" r="45" fill="#0a2040" stroke="#2060a0" stroke-width="2"/>
+  <text x="90" y="263" font-family="monospace" font-size="9" fill="#60a0ff" text-anchor="middle">AS 3</text>
+  <text x="90" y="277" font-family="monospace" font-size="8" fill="#4070c0" text-anchor="middle">AT&amp;T</text>
+  <!-- AS 4 (bottom-right of left half) -->
+  <circle cx="300" cy="270" r="45" fill="#0a2040" stroke="#2060a0" stroke-width="2"/>
+  <text x="300" y="263" font-family="monospace" font-size="9" fill="#60a0ff" text-anchor="middle">AS 4</text>
+  <text x="300" y="277" font-family="monospace" font-size="8" fill="#4070c0" text-anchor="middle">NSFNet</text>
+  <!-- BGP peering connections with route data -->
+  <g stroke="#2080c0" stroke-width="2" opacity="0.7">
+    <line x1="135" y1="110" x2="255" y2="110"/>
+    <line x1="90" y1="155" x2="90" y2="225"/>
+    <line x1="300" y1="155" x2="300" y2="225"/>
+    <line x1="135" y1="270" x2="255" y2="270"/>
+    <line x1="130" y1="140" x2="260" y2="240"/>
+  </g>
+  <!-- Route update packets on connections -->
+  <rect x="175" y="98" width="50" height="16" fill="#0a3060" rx="3" stroke="#3080c0" stroke-width="1"/>
+  <text x="200" y="110" font-family="monospace" font-size="7" fill="#60c0ff" text-anchor="middle">BGP UPDATE</text>
+  <!-- BGP title -->
+  <rect x="10" y="330" width="375" height="68" fill="#050f1a" rx="6" stroke="#205080" stroke-width="1.5"/>
+  <text x="197" y="352" font-family="sans-serif" font-size="11" font-weight="bold" fill="#40a0ff" text-anchor="middle">BGP ROUTING PROTOCOL · 1989</text>
+  <text x="20" y="370" font-family="serif" font-size="8" fill="#6090b0">Border Gateway Protocol — "two napkins" RFC 1105</text>
+  <text x="20" y="385" font-family="serif" font-size="8" fill="#6090b0">Kirk Lougheed &amp; Yakov Rekhter · Cisco / IBM</text>
+  <text x="20" y="400" font-family="serif" font-size="8" fill="#6090b0">ASes share routing tables → Internet becomes one network</text>
+  <!-- RIGHT SIDE: WWW Proposal -->
+  <!-- CERN lab scene -->
+  <!-- Tim's workstation -->
+  <g transform="translate(590, 230)">
+    <rect x="-80" y="-120" width="160" height="110" fill="#1a1a2a" rx="4" stroke="#3a3a4a" stroke-width="2"/>
+    <rect x="-72" y="-112" width="144" height="94" fill="#0a0a18" rx="2"/>
+    <!-- NeXT workstation showing WWW proposal -->
+    <text x="0" y="-98" font-family="monospace" font-size="7" fill="#80c0ff" text-anchor="middle">NeXTcube · CERN</text>
+    <text x="0" y="-84" font-family="monospace" font-size="6" fill="#60a0e0" text-anchor="middle">─────────────────</text>
+    <text x="0" y="-70" font-family="monospace" font-size="6" fill="#a0d0ff" text-anchor="middle">Information Management:</text>
+    <text x="0" y="-57" font-family="monospace" font-size="6" fill="#a0d0ff" text-anchor="middle">A Proposal</text>
+    <text x="0" y="-44" font-family="monospace" font-size="6" fill="#6090c0" text-anchor="middle">T.J. Berners-Lee · 1989</text>
+    <text x="0" y="-31" font-family="monospace" font-size="6" fill="#4070a0" text-anchor="middle">Vague but exciting...</text>
+    <!-- Keyboard -->
+    <rect x="-65" y="-6" width="130" height="14" fill="#2a2a3a" rx="2"/>
+    <!-- Tim Berners-Lee figure -->
+    <ellipse cx="0" cy="-160" rx="16" ry="16" fill="#d4a870"/>
+    <rect x="-12" y="-145" width="24" height="32" fill="#1a3a6a" rx="2"/>
+    <text x="0" y="28" font-family="serif" font-size="8" fill="#8090c0" text-anchor="middle">Tim Berners-Lee</text>
+    <text x="0" y="40" font-family="serif" font-size="7" fill="#6070a0" text-anchor="middle">CERN, Geneva</text>
+  </g>
+  <!-- WWW proposal document -->
+  <rect x="420" y="55" width="160" height="210" fill="#fafaf5" rx="3" stroke="#a0a090" stroke-width="1.5"/>
+  <rect x="420" y="55" width="160" height="20" fill="#2040a0" rx="3"/>
+  <text x="500" y="70" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">PROPOSAL · MARCH 1989</text>
+  <text x="430" y="92" font-family="serif" font-size="8" fill="#1a2a4a">"Information</text>
+  <text x="430" y="104" font-family="serif" font-size="8" fill="#1a2a4a"> Management:</text>
+  <text x="430" y="116" font-family="serif" font-size="8" fill="#1a2a4a"> A Proposal"</text>
+  <line x1="430" y1="122" x2="568" y2="122" stroke="#8a8a8a" stroke-width="0.5"/>
+  <text x="430" y="135" font-family="serif" font-size="7" fill="#3a3a4a">HyperText links</text>
+  <text x="430" y="147" font-family="serif" font-size="7" fill="#3a3a4a">across computers</text>
+  <text x="430" y="159" font-family="serif" font-size="7" fill="#3a3a4a">HTTP protocol</text>
+  <text x="430" y="171" font-family="serif" font-size="7" fill="#3a3a4a">HTML documents</text>
+  <text x="430" y="183" font-family="serif" font-size="7" fill="#3a3a4a">URL addressing</text>
+  <line x1="430" y1="190" x2="568" y2="190" stroke="#8a8a8a" stroke-width="0.5"/>
+  <text x="430" y="204" font-family="serif" font-size="7" fill="#6a6a8a" font-style="italic">"Vague but</text>
+  <text x="430" y="216" font-family="serif" font-size="7" fill="#6a6a8a" font-style="italic"> exciting"</text>
+  <text x="430" y="228" font-family="serif" font-size="7" fill="#6a6a8a" font-style="italic">— Mike Sendall</text>
+  <text x="430" y="240" font-family="serif" font-size="7" fill="#6a6a8a" font-style="italic">  (supervisor)</text>
+  <text x="430" y="255" font-family="serif" font-size="7" fill="#4a5a6a">CERN · Mar 1989</text>
+  <!-- WWW label -->
+  <rect x="410" y="330" width="380" height="68" fill="#0f0810" rx="6" stroke="#503060" stroke-width="1.5"/>
+  <text x="600" y="352" font-family="sans-serif" font-size="11" font-weight="bold" fill="#c080ff" text-anchor="middle">WORLD WIDE WEB PROPOSAL · 1989</text>
+  <text x="420" y="370" font-family="serif" font-size="8" fill="#9070c0">Tim Berners-Lee proposes hypertext-based info system</text>
+  <text x="420" y="385" font-family="serif" font-size="8" fill="#9070c0">HTTP + HTML + URLs = "the Web" · First server: 1991</text>
+  <text x="420" y="400" font-family="serif" font-size="8" fill="#9070c0">CERN as birthplace · "Gift to the world" — free, open</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#0a1a3a" rx="6" opacity="0.9" stroke="#40a0ff" stroke-width="1"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#40a0ff" text-anchor="middle">1989</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#050810" opacity="0.9"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">BGP Protocol + WWW Proposal · 1989 · Two Ideas That Shaped the Internet</text>
+</svg>

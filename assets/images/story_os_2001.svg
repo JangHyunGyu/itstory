@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: Mac OS X Aqua era - deep blue/purple gradient -->
+  <defs>
+    <linearGradient id="aquaBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a3a6a"/>
+      <stop offset="100%" stop-color="#0a1a40"/>
+    </linearGradient>
+    <linearGradient id="aquaBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8d8f8"/>
+      <stop offset="100%" stop-color="#8090c0"/>
+    </linearGradient>
+    <linearGradient id="dockGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff44"/>
+      <stop offset="100%" stop-color="#ffffff11"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#aquaBg)"/>
+
+  <!-- Mac OS X window (Aqua style) -->
+  <rect x="80" y="50" width="550" height="300" rx="10" fill="#ebebeb" stroke="#aaa" stroke-width="1.5"/>
+  <!-- Aqua title bar -->
+  <rect x="80" y="50" width="550" height="28" rx="10" fill="url(#aquaBar)"/>
+  <rect x="80" y="64" width="550" height="14" fill="url(#aquaBar)"/>
+  <!-- Traffic light buttons -->
+  <circle cx="102" cy="64" r="8" fill="#ff5f57"/>
+  <circle cx="122" cy="64" r="8" fill="#febc2e"/>
+  <circle cx="142" cy="64" r="8" fill="#28c840"/>
+  <!-- Title -->
+  <text x="355" y="69" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#333" font-weight="bold">Mac OS X — Aqua Desktop</text>
+
+  <!-- Finder sidebar (metal) -->
+  <rect x="80" y="78" width="130" height="272" fill="#d0d0d8" stroke="#b0b0b8" stroke-width="0.5"/>
+  <g font-family="sans-serif" font-size="10" fill="#333">
+    <text x="100" y="100">PLACES</text>
+    <text x="96" y="120">🖥 데스크탑</text>
+    <text x="96" y="140">🏠 홈 폴더</text>
+    <text x="96" y="160">📱 응용 프로그램</text>
+    <text x="96" y="180">📄 도큐멘트</text>
+    <text x="96" y="200">🌐 네트워크</text>
+    <text x="100" y="230">DEVICES</text>
+    <text x="96" y="250">💾 Macintosh HD</text>
+    <text x="96" y="270">📀 CD/DVD</text>
+  </g>
+
+  <!-- Main desktop area in window -->
+  <rect x="210" y="78" width="420" height="272" fill="#2a4a8a"/>
+  <!-- Aqua-style wallpaper: blue swirl -->
+  <ellipse cx="420" cy="214" rx="200" ry="140" fill="#1a3a7a" opacity="0.6"/>
+  <ellipse cx="500" cy="250" rx="120" ry="80" fill="#3a6abb" opacity="0.4"/>
+  <ellipse cx="330" cy="170" rx="90" ry="60" fill="#4a7add" opacity="0.3"/>
+
+  <!-- Terminal window on desktop (showing UNIX underneath) -->
+  <rect x="230" y="100" width="280" height="140" rx="8" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+  <rect x="230" y="100" width="280" height="20" rx="8" fill="#3a3a3a"/>
+  <rect x="230" y="110" width="280" height="10" fill="#3a3a3a"/>
+  <circle cx="244" cy="110" r="5" fill="#ff5f57"/>
+  <circle cx="258" cy="110" r="5" fill="#febc2e"/>
+  <circle cx="272" cy="110" r="5" fill="#28c840"/>
+  <text x="370" y="114" text-anchor="middle" font-family="monospace" font-size="9" fill="#aaa">Terminal</text>
+  <g font-family="monospace" font-size="9" fill="#00cc66">
+    <text x="240" y="134">$ uname -a</text>
+    <text x="240" y="148" fill="#88bbee">Darwin Macintosh 5.3 RELEASE</text>
+    <text x="240" y="160" fill="#88bbee">Darwin/BSD · XNU Kernel</text>
+    <text x="240" y="174">$ ls /</text>
+    <text x="240" y="188" fill="#88bbee">bin  etc  usr  tmp  var</text>
+    <text x="240" y="202">$ whoami</text>
+    <text x="240" y="216" fill="#88bbee">steve_jobs</text>
+    <text x="240" y="230">$ _</text>
+  </g>
+
+  <!-- Dock at bottom of desktop -->
+  <rect x="240" y="310" width="370" height="38" rx="14" fill="url(#dockGrad)" stroke="#ffffff33" stroke-width="1"/>
+  <!-- Dock icons (simplified colored squares) -->
+  <rect x="252" y="318" width="26" height="26" rx="5" fill="#1a6aff"/>
+  <text x="265" y="336" text-anchor="middle" font-family="sans-serif" font-size="14">🔍</text>
+  <rect x="286" y="318" width="26" height="26" rx="5" fill="#ff6a00"/>
+  <text x="299" y="336" text-anchor="middle" font-family="sans-serif" font-size="14">🌐</text>
+  <rect x="320" y="318" width="26" height="26" rx="5" fill="#333"/>
+  <text x="333" y="336" text-anchor="middle" font-family="sans-serif" font-size="14">💻</text>
+  <rect x="354" y="314" width="30" height="30" rx="6" fill="#2a5acc" stroke="#4488ff" stroke-width="1"/>
+  <text x="369" y="334" text-anchor="middle" font-family="sans-serif" font-size="16">📁</text>
+  <rect x="392" y="318" width="26" height="26" rx="5" fill="#1abc9c"/>
+  <text x="405" y="336" text-anchor="middle" font-family="sans-serif" font-size="14">🎵</text>
+  <rect x="426" y="318" width="26" height="26" rx="5" fill="#e74c3c"/>
+  <text x="439" y="336" text-anchor="middle" font-family="sans-serif" font-size="14">✉️</text>
+  <rect x="460" y="318" width="26" height="26" rx="5" fill="#9b59b6"/>
+  <text x="473" y="336" text-anchor="middle" font-family="sans-serif" font-size="14">⚙️</text>
+  <line x1="494" y1="320" x2="494" y2="340" stroke="#ffffff66" stroke-width="1"/>
+  <rect x="500" y="318" width="26" height="26" rx="5" fill="#555"/>
+  <text x="513" y="336" text-anchor="middle" font-family="sans-serif" font-size="14">🗑️</text>
+  <rect x="534" y="318" width="26" height="26" rx="5" fill="#e8c040"/>
+  <text x="547" y="336" text-anchor="middle" font-family="sans-serif" font-size="14">📝</text>
+  <rect x="568" y="318" width="26" height="26" rx="5" fill="#27ae60"/>
+  <text x="581" y="336" text-anchor="middle" font-family="sans-serif" font-size="14">📊</text>
+
+  <!-- UNIX + Design equation -->
+  <rect x="650" y="50" width="130" height="300" rx="8" fill="#0a1830" stroke="#1a3060" stroke-width="2"/>
+  <text x="715" y="78" text-anchor="middle" font-family="monospace" font-size="11" fill="#4488cc" font-weight="bold">STACK</text>
+  <line x1="660" y1="84" x2="770" y2="84" stroke="#1a3060" stroke-width="1"/>
+
+  <rect x="662" y="92" width="106" height="36" rx="4" fill="#0a2a10" stroke="#2a6a2a" stroke-width="1.5"/>
+  <text x="715" y="112" text-anchor="middle" font-family="monospace" font-size="10" fill="#44cc44">AQUA GUI</text>
+  <rect x="662" y="134" width="106" height="36" rx="4" fill="#0a1a30" stroke="#1a4a70" stroke-width="1.5"/>
+  <text x="715" y="154" text-anchor="middle" font-family="monospace" font-size="10" fill="#4488cc">CARBON/COCOA</text>
+  <rect x="662" y="176" width="106" height="36" rx="4" fill="#1a1a30" stroke="#3a3a70" stroke-width="1.5"/>
+  <text x="715" y="196" text-anchor="middle" font-family="monospace" font-size="10" fill="#8888cc">QUARTZ/CORE</text>
+  <rect x="662" y="218" width="106" height="36" rx="4" fill="#1a0a30" stroke="#4a2a70" stroke-width="1.5"/>
+  <text x="715" y="238" text-anchor="middle" font-family="monospace" font-size="10" fill="#aa88cc">MACH / BSD</text>
+  <rect x="662" y="260" width="106" height="36" rx="4" fill="#0a1010" stroke="#1a3030" stroke-width="1.5"/>
+  <text x="715" y="278" text-anchor="middle" font-family="monospace" font-size="10" fill="#44aaaa">XNU KERNEL</text>
+  <rect x="662" y="302" width="106" height="36" rx="4" fill="#100a10" stroke="#301830" stroke-width="1.5"/>
+  <text x="715" y="322" text-anchor="middle" font-family="monospace" font-size="10" fill="#aa44aa">HARDWARE</text>
+
+  <!-- Title -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a1428" opacity="0.95"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#88aadd" font-weight="bold">Mac OS X — UNIX 안정성과 Aqua 디자인의 결합 · 2001</text>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- IEEE 802.11 Wi-Fi - cafe and office wireless scene -->
+  <rect width="800" height="450" fill="#e8ece8"/>
+  <!-- Cafe/office interior -->
+  <rect x="0" y="370" width="800" height="80" fill="#d0c8b0"/>
+  <rect x="0" y="0" width="800" height="375" fill="#ecf0e8"/>
+  <!-- Window with outside view -->
+  <rect x="600" y="30" width="180" height="180" fill="#b0d0f0" rx="3" stroke="#8098a8" stroke-width="2"/>
+  <text x="690" y="110" font-family="sans-serif" font-size="9" fill="#6080a0" text-anchor="middle">Outside</text>
+  <!-- Wireless Access Point mounted on wall/ceiling -->
+  <g transform="translate(400, 60)">
+    <rect x="-40" y="-15" width="80" height="30" fill="#1a5a1a" rx="4" stroke="#0a4a0a" stroke-width="1.5"/>
+    <text x="0" y="-2" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">802.11</text>
+    <text x="0" y="10" font-family="sans-serif" font-size="7" fill="#a0f0a0" text-anchor="middle">ACCESS POINT</text>
+    <!-- Antenna stubs -->
+    <rect x="-35" y="-26" width="4" height="14" fill="#0a4a0a" rx="1"/>
+    <rect x="31" y="-26" width="4" height="14" fill="#0a4a0a" rx="1"/>
+  </g>
+  <!-- Wireless signal rings from access point -->
+  <g fill="none" stroke="#40c040" stroke-width="1.5" opacity="0.4">
+    <ellipse cx="400" cy="65" rx="60" ry="30"/>
+    <ellipse cx="400" cy="65" rx="120" ry="60"/>
+    <ellipse cx="400" cy="65" rx="180" ry="90"/>
+    <ellipse cx="400" cy="65" rx="250" ry="130"/>
+    <ellipse cx="400" cy="65" rx="320" ry="170"/>
+  </g>
+  <!-- Laptop user 1 - at table -->
+  <g transform="translate(160, 270)">
+    <!-- Table -->
+    <rect x="-70" y="10" width="140" height="10" fill="#8a6030" rx="2"/>
+    <!-- Laptop -->
+    <rect x="-50" y="-50" width="100" height="65" fill="#2a2a2a" rx="3"/>
+    <rect x="-43" y="-43" width="86" height="50" fill="#1a2a1a" rx="1"/>
+    <text x="0" y="-25" font-family="monospace" font-size="6" fill="#40ff80" text-anchor="middle">Connected!</text>
+    <text x="0" y="-14" font-family="monospace" font-size="6" fill="#40c060" text-anchor="middle">802.11 · 2Mbps</text>
+    <text x="0" y="-3" font-family="monospace" font-size="6" fill="#40c060" text-anchor="middle">No cable!</text>
+    <!-- Person -->
+    <ellipse cx="0" cy="-90" rx="18" ry="18" fill="#d4a870"/>
+    <rect x="-14" y="-73" width="28" height="35" fill="#3a2a5a" rx="3"/>
+    <!-- WiFi signal icon above person -->
+    <g fill="none" stroke="#40c040" stroke-width="1.5" opacity="0.8">
+      <path d="M -8 -108 Q 0 -118 8 -108"/>
+      <path d="M -14 -114 Q 0 -130 14 -114"/>
+      <path d="M -20 -120 Q 0 -142 20 -120"/>
+    </g>
+    <circle cx="0" cy="-105" r="3" fill="#40c040"/>
+    <text x="0" y="32" font-family="serif" font-size="8" fill="#4a5060" text-anchor="middle">Cafe patron</text>
+    <text x="0" y="44" font-family="serif" font-size="7" fill="#6a7080" text-anchor="middle">"No wire needed!"</text>
+  </g>
+  <!-- Laptop user 2 - another location -->
+  <g transform="translate(550, 260)">
+    <rect x="-70" y="10" width="140" height="10" fill="#8a6030" rx="2"/>
+    <rect x="-50" y="-50" width="100" height="65" fill="#2a2a2a" rx="3"/>
+    <rect x="-43" y="-43" width="86" height="50" fill="#1a1a2a" rx="1"/>
+    <text x="0" y="-25" font-family="monospace" font-size="6" fill="#40a0ff" text-anchor="middle">Internet OK</text>
+    <text x="0" y="-14" font-family="monospace" font-size="6" fill="#3080e0" text-anchor="middle">SSID: CafeNet</text>
+    <text x="0" y="-3" font-family="monospace" font-size="6" fill="#3080e0" text-anchor="middle">Signal: ████</text>
+    <ellipse cx="0" cy="-90" rx="18" ry="18" fill="#c8956a"/>
+    <rect x="-14" y="-73" width="28" height="35" fill="#1a3a2a" rx="3"/>
+    <g fill="none" stroke="#4080ff" stroke-width="1.5" opacity="0.8">
+      <path d="M -8 -108 Q 0 -118 8 -108"/>
+      <path d="M -14 -114 Q 0 -130 14 -114"/>
+      <path d="M -20 -120 Q 0 -142 20 -120"/>
+    </g>
+    <circle cx="0" cy="-105" r="3" fill="#4080ff"/>
+    <text x="0" y="32" font-family="serif" font-size="8" fill="#4a5060" text-anchor="middle">Office worker</text>
+  </g>
+  <!-- 802.11 standard spec box -->
+  <rect x="240" y="175" width="320" height="135" fill="#f0f4e8" rx="5" stroke="#5a7a4a" stroke-width="1.5"/>
+  <text x="400" y="198" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2a4a1a" text-anchor="middle">IEEE 802.11 STANDARD · 1997</text>
+  <line x1="255" y1="205" x2="545" y2="205" stroke="#8aaa7a" stroke-width="1"/>
+  <text x="255" y="221" font-family="serif" font-size="8" fill="#3a5a2a">Frequency: 2.4 GHz ISM band</text>
+  <text x="255" y="235" font-family="serif" font-size="8" fill="#3a5a2a">Speed: 1-2 Mbps (original spec)</text>
+  <text x="255" y="249" font-family="serif" font-size="8" fill="#3a5a2a">Range: ~30m indoor / 100m outdoor</text>
+  <text x="255" y="263" font-family="serif" font-size="8" fill="#3a5a2a">Method: CSMA/CA (avoidance vs CD)</text>
+  <text x="255" y="277" font-family="serif" font-size="8" fill="#2a6a1a">1999: 802.11b → 11 Mbps (WiFi brand)</text>
+  <text x="255" y="291" font-family="serif" font-size="8" fill="#2a6a1a">2009: 802.11n → 600 Mbps (MIMO)</text>
+  <text x="255" y="305" font-family="serif" font-size="8" fill="#2a6a1a">2024: 802.11be (WiFi 7) → 46 Gbps</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#1a3a1a" rx="6" opacity="0.8"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#80f080" text-anchor="middle">1997</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a0a1a" opacity="0.8"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">IEEE 802.11 Wi-Fi Standard · Wireless LAN · No Cables · Internet Everywhere Begins</text>
+</svg>

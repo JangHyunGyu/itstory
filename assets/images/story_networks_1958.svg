@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="space1958" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050510"/>
+      <stop offset="50%" stop-color="#0a0a20"/>
+      <stop offset="100%" stop-color="#1a1a3a"/>
+    </linearGradient>
+  </defs>
+  <!-- Space background -->
+  <rect width="800" height="450" fill="url(#space1958)"/>
+  <!-- Stars -->
+  <g fill="white">
+    <circle cx="30" cy="20" r="1.5" opacity="0.8"/>
+    <circle cx="80" cy="60" r="1" opacity="0.6"/>
+    <circle cx="150" cy="35" r="1.5" opacity="0.9"/>
+    <circle cx="220" cy="80" r="1" opacity="0.7"/>
+    <circle cx="300" cy="25" r="2" opacity="0.8"/>
+    <circle cx="380" cy="55" r="1" opacity="0.6"/>
+    <circle cx="450" cy="40" r="1.5" opacity="0.9"/>
+    <circle cx="520" cy="70" r="1" opacity="0.7"/>
+    <circle cx="600" cy="30" r="2" opacity="0.8"/>
+    <circle cx="680" cy="55" r="1" opacity="0.6"/>
+    <circle cx="750" cy="20" r="1.5" opacity="0.9"/>
+    <circle cx="100" cy="110" r="1" opacity="0.5"/>
+    <circle cx="200" cy="140" r="1.5" opacity="0.8"/>
+    <circle cx="350" cy="120" r="1" opacity="0.6"/>
+    <circle cx="500" cy="100" r="1.5" opacity="0.9"/>
+    <circle cx="700" cy="115" r="1" opacity="0.7"/>
+  </g>
+  <!-- Sputnik I satellite orbiting -->
+  <g transform="translate(650, 100)">
+    <!-- Orbit path (ellipse) -->
+    <ellipse cx="0" cy="0" rx="180" ry="60" fill="none" stroke="#6080c0" stroke-width="1" stroke-dasharray="10,8" opacity="0.5"/>
+    <!-- Sputnik satellite -->
+    <circle cx="120" cy="-45" r="18" fill="#c8a040" stroke="#8a6a20" stroke-width="2"/>
+    <circle cx="120" cy="-45" r="12" fill="#e0b840"/>
+    <!-- Antennas (4) -->
+    <line x1="120" y1="-63" x2="110" y2="-90" stroke="#c8a040" stroke-width="2"/>
+    <line x1="120" y1="-63" x2="125" y2="-92" stroke="#c8a040" stroke-width="2"/>
+    <line x1="138" y1="-45" x2="155" y2="-35" stroke="#c8a040" stroke-width="2"/>
+    <line x1="138" y1="-45" x2="158" y2="-55" stroke="#c8a040" stroke-width="2"/>
+    <!-- Radio beep signal -->
+    <g stroke="#ff4040" stroke-width="1.5" fill="none" opacity="0.7">
+      <path d="M 108 -55 Q 95 -65 95 -45 Q 95 -28 108 -38"/>
+      <path d="M 100 -58 Q 82 -70 82 -45 Q 82 -22 100 -35"/>
+    </g>
+    <text x="120" y="-30" font-family="sans-serif" font-size="7" fill="#f0d060" text-anchor="middle">Sputnik I</text>
+    <text x="120" y="-18" font-family="sans-serif" font-size="6" fill="#f0d060" text-anchor="middle">Oct 4, 1957</text>
+  </g>
+  <!-- Pentagon building (aerial view simplified) -->
+  <g transform="translate(120, 290)">
+    <!-- Simplified pentagon shape -->
+    <polygon points="0,-80 76,-26 47,68 -47,68 -76,-26" fill="#2a3a2a" stroke="#3a5a3a" stroke-width="2"/>
+    <polygon points="0,-55 52,-18 32,47 -32,47 -52,-18" fill="#3a4a3a"/>
+    <polygon points="0,-32 30,-10 18,27 -18,27 -30,-10" fill="#4a5a4a"/>
+    <text x="0" y="5" font-family="sans-serif" font-size="8" fill="#80c080" text-anchor="middle">Pentagon</text>
+    <text x="0" y="18" font-family="sans-serif" font-size="7" fill="#80c080" text-anchor="middle">DoD</text>
+  </g>
+  <!-- ARPA logo/plaque being formed -->
+  <rect x="240" y="200" width="340" height="180" fill="#0a1a2a" rx="10" stroke="#2a6a9a" stroke-width="2" opacity="0.92"/>
+  <!-- ARPA header -->
+  <text x="410" y="228" font-family="sans-serif" font-size="14" font-weight="bold" fill="#60c0ff" text-anchor="middle">ARPA</text>
+  <text x="410" y="246" font-family="serif" font-size="9" fill="#90d0f0" text-anchor="middle">Advanced Research Projects Agency</text>
+  <text x="410" y="260" font-family="serif" font-size="8" fill="#6090b0" text-anchor="middle">Est. February 7, 1958 · DoD</text>
+  <line x1="255" y1="268" x2="565" y2="268" stroke="#2a6a9a" stroke-width="1"/>
+  <!-- Mission statement -->
+  <text x="410" y="285" font-family="serif" font-size="8" fill="#80b0d0" text-anchor="middle">Mission: Prevent technological surprises</text>
+  <text x="410" y="300" font-family="serif" font-size="8" fill="#80b0d0" text-anchor="middle">for the US in the Cold War</text>
+  <!-- Research areas listed -->
+  <g font-family="serif" font-size="8" fill="#60c0a0">
+    <text x="265" y="320">▶ Ballistic missile defense</text>
+    <text x="265" y="335">▶ Space technology</text>
+    <text x="265" y="350">▶ Computer/network research</text>
+    <text x="265" y="365">▶ IPTO: Information Processing</text>
+  </g>
+  <!-- Sputnik → ARPA connection arrow -->
+  <path d="M 620 120 Q 580 180 570 200" stroke="#ff6040" stroke-width="2.5" fill="none" opacity="0.7"/>
+  <polygon points="570,200 563,188 577,186" fill="#ff6040" opacity="0.7"/>
+  <text x="632" y="165" font-family="serif" font-size="10" fill="#ff8060" text-anchor="middle" transform="rotate(-30, 632, 165)">Response!</text>
+  <!-- Scientists at work (in meeting) -->
+  <g transform="translate(120, 390)">
+    <ellipse cx="-40" cy="-12" rx="14" ry="14" fill="#d4a870"/>
+    <rect x="-48" y="0" width="16" height="20" fill="#2a3a6a" rx="2"/>
+    <ellipse cx="0" cy="-12" rx="14" ry="14" fill="#c8956a"/>
+    <rect x="-8" y="0" width="16" height="20" fill="#3a2a4a" rx="2"/>
+    <ellipse cx="40" cy="-12" rx="14" ry="14" fill="#b87858"/>
+    <rect x="32" y="0" width="16" height="20" fill="#1a3a2a" rx="2"/>
+    <!-- Table -->
+    <rect x="-60" y="18" width="120" height="8" fill="#4a3820" rx="1"/>
+    <!-- Papers on table -->
+    <rect x="-55" y="8" width="45" height="12" fill="#f5ead0" rx="1"/>
+    <rect x="-5" y="8" width="45" height="12" fill="#f5ead0" rx="1"/>
+  </g>
+  <!-- Robert Taylor quote -->
+  <ellipse cx="360" cy="160" rx="130" ry="30" fill="#0a1a2a" opacity="0.85" stroke="#2a6a9a" stroke-width="1"/>
+  <polygon points="370,190 360,200 350,190" fill="#0a1a2a"/>
+  <text x="360" y="154" font-family="serif" font-size="9" fill="#c0d8f0" text-anchor="middle">"Connecting computers will</text>
+  <text x="360" y="168" font-family="serif" font-size="9" fill="#c0d8f0" text-anchor="middle">accelerate our research."</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#0a1a3a" rx="6" opacity="0.9" stroke="#2a6a9a" stroke-width="1"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#60c0ff" text-anchor="middle">1958</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#050510" opacity="0.9"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">ARPA Founded · After Sputnik · Seeds of the Internet</text>
+</svg>

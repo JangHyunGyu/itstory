@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: open sky, community spirit -->
+  <rect width="800" height="450" fill="#e8f4f8"/>
+  <!-- Sky gradient suggestion -->
+  <rect x="0" y="0" width="800" height="200" fill="#d0e8f8" opacity="0.6"/>
+
+  <!-- Apache feather logo (stylized) -->
+  <!-- Feather shape -->
+  <path d="M 380 60 Q 420 80 440 160 Q 420 150 400 170 Q 380 150 360 170 Q 340 150 360 80 Z" fill="#cc4444" opacity="0.9"/>
+  <path d="M 380 60 Q 410 90 420 160 Q 400 145 390 170 Q 375 145 360 170 Q 350 120 380 60 Z" fill="#dd6666" opacity="0.7"/>
+  <path d="M 380 60 L 400 170" stroke="#cc2222" stroke-width="2" opacity="0.8"/>
+  <!-- Feather barbs -->
+  <line x1="380" y1="80" x2="355" y2="95" stroke="#cc2222" stroke-width="1.5" opacity="0.7"/>
+  <line x1="382" y1="95" x2="350" y2="112" stroke="#cc2222" stroke-width="1.5" opacity="0.7"/>
+  <line x1="384" y1="110" x2="355" y2="130" stroke="#cc2222" stroke-width="1.5" opacity="0.7"/>
+  <line x1="386" y1="125" x2="360" y2="148" stroke="#cc2222" stroke-width="1.5" opacity="0.7"/>
+  <line x1="390" y1="80" x2="418" y2="95" stroke="#cc2222" stroke-width="1.5" opacity="0.7"/>
+  <line x1="392" y1="95" x2="424" y2="112" stroke="#cc2222" stroke-width="1.5" opacity="0.7"/>
+  <line x1="394" y1="110" x2="422" y2="130" stroke="#cc2222" stroke-width="1.5" opacity="0.7"/>
+  <line x1="396" y1="125" x2="416" y2="148" stroke="#cc2222" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Apache title -->
+  <text x="400" y="190" font-family="serif" font-size="36" font-weight="bold" fill="#cc2222" text-anchor="middle" opacity="0.9">Apache</text>
+  <text x="400" y="214" font-family="serif" font-size="14" fill="#884444" text-anchor="middle">HTTP Server 1.0</text>
+
+  <!-- Module blocks (pluggable architecture) -->
+  <!-- Core -->
+  <rect x="50" y="260" width="130" height="50" rx="8" fill="#cc2222"/>
+  <text x="115" y="288" font-family="sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Core httpd</text>
+
+  <!-- mod_ssl -->
+  <rect x="200" y="240" width="110" height="44" rx="8" fill="#1a6a1a"/>
+  <text x="255" y="257" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">mod_ssl</text>
+  <text x="255" y="273" font-family="sans-serif" font-size="9" fill="#aaffaa" text-anchor="middle">HTTPS</text>
+
+  <!-- mod_proxy -->
+  <rect x="330" y="240" width="110" height="44" rx="8" fill="#1a3a8a"/>
+  <text x="385" y="257" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">mod_proxy</text>
+  <text x="385" y="273" font-family="sans-serif" font-size="9" fill="#aac8ff" text-anchor="middle">Reverse Proxy</text>
+
+  <!-- mod_rewrite -->
+  <rect x="460" y="240" width="110" height="44" rx="8" fill="#8a4a1a"/>
+  <text x="515" y="257" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">mod_rewrite</text>
+  <text x="515" y="273" font-family="sans-serif" font-size="9" fill="#ffc8aa" text-anchor="middle">URL routing</text>
+
+  <!-- mod_cgi -->
+  <rect x="590" y="240" width="110" height="44" rx="8" fill="#6a1a8a"/>
+  <text x="645" y="257" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">mod_cgi</text>
+  <text x="645" y="273" font-family="sans-serif" font-size="9" fill="#e8aaff" text-anchor="middle">Dynamic scripts</text>
+
+  <!-- Connection lines from core to modules -->
+  <line x1="180" y1="285" x2="200" y2="262" stroke="#cc2222" stroke-width="2"/>
+  <line x1="180" y1="285" x2="330" y2="262" stroke="#cc2222" stroke-width="2"/>
+  <line x1="180" y1="285" x2="460" y2="262" stroke="#cc2222" stroke-width="2"/>
+  <line x1="180" y1="285" x2="590" y2="262" stroke="#cc2222" stroke-width="2"/>
+
+  <!-- Stats box -->
+  <rect x="50" y="330" width="280" height="90" rx="8" fill="white" stroke="#cc2222" stroke-width="1.5" opacity="0.9"/>
+  <text x="65" y="352" font-family="sans-serif" font-size="11" font-weight="bold" fill="#cc2222">Market Share (1996)</text>
+  <!-- Bar chart bars -->
+  <rect x="65" y="360" width="180" height="16" rx="3" fill="#cc2222"/>
+  <text x="252" y="373" font-family="sans-serif" font-size="10" fill="#333">Apache 50%+</text>
+  <rect x="65" y="380" width="70" height="14" rx="3" fill="#888"/>
+  <text x="142" y="392" font-family="sans-serif" font-size="10" fill="#333">NCSA 25%</text>
+  <rect x="65" y="398" width="44" height="14" rx="3" fill="#aaa"/>
+  <text x="116" y="410" font-family="sans-serif" font-size="10" fill="#333">Others</text>
+
+  <!-- Community developers icon group -->
+  <circle cx="540" cy="350" r="22" fill="#e8c898"/>
+  <rect x="518" y="372" width="44" height="30" rx="8" fill="#4a6a9a"/>
+  <circle cx="580" cy="355" r="20" fill="#e0c090"/>
+  <rect x="560" y="375" width="40" height="28" rx="8" fill="#cc2222"/>
+  <circle cx="620" cy="350" r="22" fill="#d8b880"/>
+  <rect x="598" y="372" width="44" height="30" rx="8" fill="#2a6a2a"/>
+  <text x="580" y="420" font-family="sans-serif" font-size="10" fill="#555" text-anchor="middle">Community Patches</text>
+
+  <!-- Labels -->
+  <text x="400" y="30" font-family="sans-serif" font-size="15" font-weight="bold" fill="#cc2222" text-anchor="middle">Apache HTTP Server 1.0 — 1995</text>
+  <text x="400" y="50" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">Modular open-source web server · Community-maintained · Industry standard</text>
+</svg>

@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: clean white/silver Apple stage -->
+  <defs>
+    <linearGradient id="iosBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0a0a18"/>
+    </linearGradient>
+    <linearGradient id="phoneGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="100%" stop-color="#3a3a3a"/>
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0044cc"/>
+      <stop offset="100%" stop-color="#001a80"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#iosBg)"/>
+
+  <!-- Steve Jobs silhouette presentation -->
+  <!-- Stage spotlight -->
+  <ellipse cx="200" cy="400" rx="180" ry="60" fill="#333300" opacity="0.5"/>
+  <!-- Steve Jobs figure -->
+  <ellipse cx="200" cy="180" rx="25" ry="25" fill="#2a2010"/>
+  <rect x="175" y="205" width="50" height="90" rx="6" fill="#1a1a1a"/>
+  <!-- One more thing... -->
+  <rect x="80" y="300" width="240" height="50" rx="6" fill="#0a0a20" stroke="#2a2a44" stroke-width="1"/>
+  <text x="200" y="323" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#aaaadd" font-style="italic">"One more thing..."</text>
+  <text x="200" y="342" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6666aa">MacWorld · Jan 9, 2007</text>
+
+  <!-- iPhone OS 1 device - centered right -->
+  <!-- Phone body -->
+  <rect x="360" y="30" width="160" height="310" rx="24" fill="url(#phoneGrad)" stroke="#555" stroke-width="2"/>
+  <rect x="362" y="32" width="156" height="306" rx="22" fill="none" stroke="#666" stroke-width="1"/>
+  <!-- Speaker -->
+  <rect x="415" y="42" width="50" height="6" rx="3" fill="#555"/>
+  <!-- Screen -->
+  <rect x="374" y="58" width="132" height="220" rx="4" fill="url(#screenGrad)"/>
+  <!-- iPhone OS Home Screen -->
+  <!-- Status bar -->
+  <rect x="374" y="58" width="132" height="14" fill="#00000044"/>
+  <text x="382" y="69" font-family="sans-serif" font-size="7" fill="white">오전 9:41</text>
+  <text x="488" y="69" text-anchor="end" font-family="sans-serif" font-size="7" fill="white">●●●●●</text>
+
+  <!-- App icons grid (iOS style) -->
+  <g>
+    <!-- Row 1 -->
+    <rect x="383" y="78" width="24" height="24" rx="6" fill="#3a7aff"/>
+    <text x="395" y="95" text-anchor="middle" font-family="sans-serif" font-size="11">📞</text>
+    <rect x="415" y="78" width="24" height="24" rx="6" fill="#34c759"/>
+    <text x="427" y="95" text-anchor="middle" font-family="sans-serif" font-size="11">📱</text>
+    <rect x="447" y="78" width="24" height="24" rx="6" fill="#ff9500"/>
+    <text x="459" y="95" text-anchor="middle" font-family="sans-serif" font-size="11">🌐</text>
+    <rect x="479" y="78" width="24" height="24" rx="6" fill="#ff3b30"/>
+    <text x="491" y="95" text-anchor="middle" font-family="sans-serif" font-size="11">✉️</text>
+    <!-- Row 2 -->
+    <rect x="383" y="112" width="24" height="24" rx="6" fill="#32ade6"/>
+    <text x="395" y="129" text-anchor="middle" font-family="sans-serif" font-size="11">🎵</text>
+    <rect x="415" y="112" width="24" height="24" rx="6" fill="#5856d6"/>
+    <text x="427" y="129" text-anchor="middle" font-family="sans-serif" font-size="11">🗺️</text>
+    <rect x="447" y="112" width="24" height="24" rx="6" fill="#1c1c1e"/>
+    <text x="459" y="129" text-anchor="middle" font-family="sans-serif" font-size="11">📷</text>
+    <rect x="479" y="112" width="24" height="24" rx="6" fill="#34c759"/>
+    <text x="491" y="129" text-anchor="middle" font-family="sans-serif" font-size="11">📊</text>
+    <!-- Row 3 -->
+    <rect x="383" y="146" width="24" height="24" rx="6" fill="#ff2d55"/>
+    <text x="395" y="163" text-anchor="middle" font-family="sans-serif" font-size="11">📸</text>
+    <rect x="415" y="146" width="24" height="24" rx="6" fill="#ff9500"/>
+    <text x="427" y="163" text-anchor="middle" font-family="sans-serif" font-size="11">⏰</text>
+    <rect x="447" y="146" width="24" height="24" rx="6" fill="#007aff"/>
+    <text x="459" y="163" text-anchor="middle" font-family="sans-serif" font-size="11">⚙️</text>
+    <rect x="479" y="146" width="24" height="24" rx="6" fill="#ff6b6b"/>
+    <text x="491" y="163" text-anchor="middle" font-family="sans-serif" font-size="11">🔖</text>
+    <!-- Row 4 -->
+    <rect x="383" y="180" width="24" height="24" rx="6" fill="#1a1a50"/>
+    <text x="395" y="197" text-anchor="middle" font-family="sans-serif" font-size="11">🔍</text>
+    <rect x="415" y="180" width="24" height="24" rx="6" fill="#3a3a50"/>
+    <text x="427" y="197" text-anchor="middle" font-family="sans-serif" font-size="11">📝</text>
+    <rect x="447" y="180" width="24" height="24" rx="6" fill="#2a5a2a"/>
+    <text x="459" y="197" text-anchor="middle" font-family="sans-serif" font-size="11">📅</text>
+    <rect x="479" y="180" width="24" height="24" rx="6" fill="#4a2a6a"/>
+    <text x="491" y="197" text-anchor="middle" font-family="sans-serif" font-size="11">🎮</text>
+  </g>
+  <!-- Dock bar at bottom of screen -->
+  <rect x="374" y="250" width="132" height="28" fill="#ffffff22"/>
+  <rect x="383" y="254" width="24" height="20" rx="5" fill="#3a7aff"/>
+  <text x="395" y="269" text-anchor="middle" font-family="sans-serif" font-size="10">📞</text>
+  <rect x="415" y="254" width="24" height="20" rx="5" fill="#1c1c1e"/>
+  <text x="427" y="269" text-anchor="middle" font-family="sans-serif" font-size="10">📱</text>
+  <rect x="447" y="254" width="24" height="20" rx="5" fill="#34c759"/>
+  <text x="459" y="269" text-anchor="middle" font-family="sans-serif" font-size="10">✉️</text>
+  <rect x="479" y="254" width="24" height="20" rx="5" fill="#32ade6"/>
+  <text x="491" y="269" text-anchor="middle" font-family="sans-serif" font-size="10">🌐</text>
+
+  <!-- Home button -->
+  <circle cx="440" cy="305" r="18" fill="#2a2a2a" stroke="#555" stroke-width="1.5"/>
+  <rect x="432" y="297" width="16" height="16" rx="3" fill="none" stroke="#666" stroke-width="1.5"/>
+
+  <!-- Touch gesture illustrations (right side) -->
+  <rect x="560" y="40" width="210" height="370" rx="8" fill="#080810" stroke="#1a1a30" stroke-width="2"/>
+  <text x="665" y="68" text-anchor="middle" font-family="monospace" font-size="12" fill="#4488cc" font-weight="bold">터치 제스처</text>
+  <line x1="572" y1="76" x2="758" y2="76" stroke="#1a1a30" stroke-width="1"/>
+
+  <!-- Pinch to zoom gesture -->
+  <text x="665" y="100" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6688aa">핀치 줌</text>
+  <ellipse cx="640" cy="130" rx="10" ry="14" fill="#ffffff22" stroke="#4488cc" stroke-width="1.5"/>
+  <ellipse cx="690" cy="130" rx="10" ry="14" fill="#ffffff22" stroke="#4488cc" stroke-width="1.5"/>
+  <path d="M 650 120 L 680 120" fill="none" stroke="#4488cc" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ta)"/>
+  <path d="M 680 140 L 650 140" fill="none" stroke="#4488cc" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ta2)"/>
+  <defs>
+    <marker id="ta" markerWidth="6" markerHeight="6" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#4488cc"/>
+    </marker>
+    <marker id="ta2" markerWidth="6" markerHeight="6" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#4488cc"/>
+    </marker>
+  </defs>
+
+  <!-- Swipe gesture -->
+  <text x="665" y="178" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6688aa">스와이프</text>
+  <ellipse cx="620" cy="210" rx="10" ry="14" fill="#ffffff22" stroke="#44cc88" stroke-width="1.5"/>
+  <path d="M 630 210 L 710 210" fill="none" stroke="#44cc88" stroke-width="2" marker-end="url(#sa)"/>
+  <defs>
+    <marker id="sa" markerWidth="6" markerHeight="6" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#44cc88"/>
+    </marker>
+  </defs>
+
+  <!-- Tap gesture -->
+  <text x="665" y="258" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6688aa">탭</text>
+  <ellipse cx="665" cy="285" rx="10" ry="14" fill="#ffffff22" stroke="#cc8844" stroke-width="1.5"/>
+  <circle cx="665" cy="285" r="22" fill="none" stroke="#cc8844" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <circle cx="665" cy="285" r="32" fill="none" stroke="#cc8844" stroke-width="1" stroke-dasharray="4,3" opacity="0.25"/>
+
+  <!-- Sandbox security note -->
+  <rect x="572" y="330" width="186" height="70" rx="5" fill="#0a1020" stroke="#1a3060" stroke-width="1"/>
+  <text x="665" y="350" text-anchor="middle" font-family="monospace" font-size="9" fill="#4488cc">샌드박스 보안</text>
+  <text x="665" y="366" text-anchor="middle" font-family="monospace" font-size="8" fill="#336699">앱 간 격리 · 권한 제어</text>
+  <text x="665" y="382" text-anchor="middle" font-family="monospace" font-size="8" fill="#336699">커널 서명 · ARM 최적화</text>
+  <text x="665" y="398" text-anchor="middle" font-family="monospace" font-size="8" fill="#2255aa">→ 모바일 OS 보안 표준</text>
+
+  <!-- Title -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a0a18" opacity="0.95"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#7799dd" font-weight="bold">iPhone OS 1 — 터치 퍼스트 인터페이스의 탄생 · 2007</text>
+</svg>

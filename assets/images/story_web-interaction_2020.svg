@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg20" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#08060f"/>
+      <stop offset="100%" style="stop-color:#0f1a2a"/>
+    </linearGradient>
+    <linearGradient id="wasmPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#654ff0"/>
+      <stop offset="100%" style="stop-color:#3a1a9a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg20)"/>
+
+  <!-- WebAssembly Logo (stylized W) -->
+  <rect x="40" y="40" width="130" height="130" rx="10" fill="#654ff0" opacity="0.2"/>
+  <text x="105" y="125" font-family="sans-serif" font-size="72" fill="#654ff0" text-anchor="middle" font-weight="bold" opacity="0.8">W</text>
+  <text x="105" y="156" font-family="sans-serif" font-size="14" fill="#9977ff" text-anchor="middle">WebAssembly</text>
+  <text x="105" y="174" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">W3C Standard 1.0</text>
+  <text x="105" y="190" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">December 2019</text>
+
+  <!-- Language pipeline diagram -->
+  <rect x="30" y="210" width="720" height="130" rx="6" fill="#0d1220" stroke="#654ff0" stroke-width="1"/>
+  <text x="400" y="232" font-family="sans-serif" font-size="12" fill="#9977ff" text-anchor="middle" font-weight="bold">Compile to WebAssembly (.wasm binary)</text>
+
+  <!-- Source languages -->
+  <!-- C/C++ -->
+  <rect x="50" y="246" width="80" height="40" rx="4" fill="#0044aa"/>
+  <text x="90" y="264" font-family="monospace" font-size="12" fill="white" text-anchor="middle">C/C++</text>
+  <text x="90" y="278" font-family="monospace" font-size="9" fill="#aaa" text-anchor="middle">.c .cpp</text>
+
+  <!-- Rust -->
+  <rect x="140" y="246" width="80" height="40" rx="4" fill="#b7410e"/>
+  <text x="180" y="264" font-family="monospace" font-size="12" fill="white" text-anchor="middle">Rust</text>
+  <text x="180" y="278" font-family="monospace" font-size="9" fill="#aaa" text-anchor="middle">.rs</text>
+
+  <!-- Go -->
+  <rect x="230" y="246" width="80" height="40" rx="4" fill="#00acd7"/>
+  <text x="270" y="264" font-family="monospace" font-size="12" fill="white" text-anchor="middle">Go</text>
+  <text x="270" y="278" font-family="monospace" font-size="9" fill="#aaa" text-anchor="middle">.go</text>
+
+  <!-- Compiler arrow -->
+  <line x1="320" y1="266" x2="368" y2="266" stroke="#9977ff" stroke-width="2"/>
+  <polygon points="364,261 374,266 364,271" fill="#9977ff"/>
+  <text x="344" y="258" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">compile</text>
+  <rect x="368" y="246" width="80" height="40" rx="4" fill="#654ff0"/>
+  <text x="408" y="268" font-family="monospace" font-size="11" fill="white" text-anchor="middle">.wasm</text>
+
+  <!-- Runtime arrow -->
+  <line x1="448" y1="266" x2="496" y2="266" stroke="#9977ff" stroke-width="2"/>
+  <polygon points="492,261 502,266 492,271" fill="#9977ff"/>
+  <text x="472" y="258" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">load</text>
+
+  <!-- Browser -->
+  <rect x="496" y="246" width="100" height="40" rx="4" fill="#1a3a5a" stroke="#4488ff" stroke-width="1"/>
+  <text x="546" y="264" font-family="sans-serif" font-size="11" fill="#88bbff" text-anchor="middle">Browser</text>
+  <text x="546" y="278" font-family="monospace" font-size="9" fill="#aaa" text-anchor="middle">V8 / SpiderMonkey</text>
+
+  <!-- Performance arrow -->
+  <line x1="596" y1="266" x2="644" y2="266" stroke="#44dd88" stroke-width="2"/>
+  <polygon points="640,261 650,266 640,271" fill="#44dd88"/>
+  <text x="620" y="258" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">near-native</text>
+  <rect x="644" y="246" width="90" height="40" rx="4" fill="#0a2a10" stroke="#44dd88" stroke-width="1"/>
+  <text x="689" y="264" font-family="sans-serif" font-size="11" fill="#44dd88" text-anchor="middle">~Native</text>
+  <text x="689" y="278" font-family="sans-serif" font-size="9" fill="#aaa" text-anchor="middle">Speed ⚡</text>
+
+  <!-- Performance comparison bar -->
+  <text x="50" y="316" font-family="sans-serif" font-size="10" fill="#888">JS:   </text>
+  <rect x="90" y="308" width="120" height="12" rx="3" fill="#f7df1e" opacity="0.8"/>
+  <text x="215" y="319" font-family="sans-serif" font-size="9" fill="#888">~10x slower</text>
+
+  <text x="50" y="334" font-family="sans-serif" font-size="10" fill="#888">Wasm:</text>
+  <rect x="90" y="326" width="240" height="12" rx="3" fill="#654ff0" opacity="0.9"/>
+  <text x="335" y="337" font-family="sans-serif" font-size="9" fill="#44dd88">near native!</text>
+
+  <text x="50" y="352" font-family="sans-serif" font-size="10" fill="#888">Native:</text>
+  <rect x="90" y="344" width="260" height="12" rx="3" fill="#44dd88" opacity="0.9"/>
+  <text x="355" y="355" font-family="sans-serif" font-size="9" fill="#aaa">100% (baseline)</text>
+
+  <!-- Right panel: Real-world uses -->
+  <rect x="220" y="30" width="230" height="170" rx="6" fill="#0d1220" stroke="#9977ff" stroke-width="1"/>
+  <text x="335" y="55" font-family="sans-serif" font-size="13" fill="#9977ff" text-anchor="middle" font-weight="bold">Use Cases 2020</text>
+  <text x="236" y="78" font-family="sans-serif" font-size="11" fill="#ccc">Autodesk: 3D modeling</text>
+  <text x="236" y="96" font-family="sans-serif" font-size="11" fill="#ccc">Figma: design editor</text>
+  <text x="236" y="114" font-family="sans-serif" font-size="11" fill="#ccc">Unity: game engine</text>
+  <text x="236" y="132" font-family="sans-serif" font-size="11" fill="#ccc">Google Earth: maps</text>
+  <text x="236" y="150" font-family="sans-serif" font-size="11" fill="#ccc">TensorFlow.js: AI/ML</text>
+  <text x="236" y="168" font-family="sans-serif" font-size="11" fill="#ccc">Piano tutor: audio</text>
+  <text x="236" y="186" font-family="sans-serif" font-size="11" fill="#888">No install needed!</text>
+
+  <!-- 3D model demo visualization -->
+  <rect x="480" y="30" width="290" height="170" rx="6" fill="#0d1220" stroke="#9977ff" stroke-width="1"/>
+  <text x="625" y="55" font-family="sans-serif" font-size="12" fill="#9977ff" text-anchor="middle">Browser 3D Demo (AutoDesk)</text>
+  <!-- Simple 3D box wireframe -->
+  <polygon points="520,100 590,80 660,100 590,120" fill="none" stroke="#654ff0" stroke-width="1.5"/>
+  <polygon points="520,100 590,120 590,160 520,140" fill="#3a1a9a" opacity="0.5" stroke="#654ff0" stroke-width="1.5"/>
+  <polygon points="590,120 660,100 660,140 590,160" fill="#4a2aaa" opacity="0.5" stroke="#654ff0" stroke-width="1.5"/>
+  <!-- Lines to top vertices -->
+  <line x1="520" y1="100" x2="520" y2="140" stroke="#654ff0" stroke-width="1.5"/>
+  <line x1="660" y1="100" x2="660" y2="140" stroke="#654ff0" stroke-width="1.5"/>
+
+  <text x="625" y="186" font-family="sans-serif" font-size="10" fill="#44dd88" text-anchor="middle">Runs at 60 FPS in browser!</text>
+
+  <!-- Year badge -->
+  <rect x="340" y="390" width="120" height="36" rx="18" fill="#654ff0"/>
+  <text x="400" y="414" font-family="sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">2020</text>
+
+  <!-- Bottom caption -->
+  <text x="400" y="407" font-family="sans-serif" font-size="15" fill="#9977ff" text-anchor="middle" font-weight="bold">WebAssembly 1.0 — Browser as Universal Runtime</text>
+  <text x="400" y="426" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">W3C Recommendation · 4 browsers · C++, Rust, Go compile to .wasm</text>
+</svg>

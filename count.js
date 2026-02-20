@@ -1,0 +1,1 @@
+const fs = require('fs'); const text = fs.readFileSync('networks.html', 'utf-8'); const stories = text.match(/<div class="event-detail__story">[\s\S]*?<\/div>/g); const notes = text.match(/<div class="event-detail__notes">[\s\S]*?<\/div>/g); console.log('Stories:', stories ? stories.length : 0, 'Notes:', notes ? notes.length : 0);

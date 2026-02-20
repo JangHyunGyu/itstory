@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg1995" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a0f05"/>
+      <stop offset="100%" stop-color="#0f0805"/>
+    </linearGradient>
+    <linearGradient id="coffeeGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#3a1a00"/>
+      <stop offset="100%" stop-color="#5a2a00"/>
+    </linearGradient>
+    <radialGradient id="steamGrad" cx="50%" cy="100%" r="50%">
+      <stop offset="0%" stop-color="#cccccc" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#cccccc" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="javaGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg1995)"/>
+
+  <!-- Java logo coffee cup (large, left) -->
+  <g transform="translate(60, 50)">
+    <!-- Steam wisps -->
+    <path d="M 80 50 Q 70 25 80 5 Q 90 -15 80 -30" fill="none" stroke="#cccccc" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+    <path d="M 100 50 Q 90 20 100 0 Q 110 -20 100 -35" fill="none" stroke="#cccccc" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 120 50 Q 110 25 120 5 Q 130 -15 120 -30" fill="none" stroke="#cccccc" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- Cup body -->
+    <path d="M 30 55 L 50 250 L 160 250 L 175 55 Z" fill="#e63f00" rx="5"/>
+    <path d="M 35 60 L 53 240 L 155 240 L 170 60 Z" fill="#cc3300"/>
+    <!-- Coffee inside -->
+    <path d="M 38 75 L 50 240 L 155 240 L 165 75 Z" fill="url(#coffeeGrad)"/>
+    <!-- Coffee surface -->
+    <ellipse cx="102" cy="80" rx="63" ry="10" fill="#5a2a00"/>
+
+    <!-- Handle -->
+    <path d="M 175 110 Q 220 110 220 155 Q 220 200 175 200" fill="none" stroke="#e63f00" stroke-width="18" stroke-linecap="round"/>
+    <path d="M 175 110 Q 210 110 210 155 Q 210 200 175 200" fill="none" stroke="#cc3300" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- Saucer -->
+    <ellipse cx="102" cy="255" rx="90" ry="16" fill="#cc3300"/>
+    <ellipse cx="102" cy="250" rx="90" ry="16" fill="#e63f00"/>
+
+    <!-- Java logo text -->
+    <text x="102" y="170" fill="#ffffff" font-size="22" font-family="sans-serif" text-anchor="middle" font-weight="bold" font-style="italic">Java</text>
+    <text x="102" y="192" fill="#ff9966" font-size="12" font-family="sans-serif" text-anchor="middle">Sun Microsystems</text>
+
+    <text x="102" y="290" fill="#ff6633" font-size="14" font-family="sans-serif" text-anchor="middle" font-weight="bold">Java · 1995</text>
+  </g>
+
+  <!-- JVM diagram (center) -->
+  <g transform="translate(290, 40)">
+    <text x="220" y="25" fill="#ff6633" font-size="15" font-family="monospace" text-anchor="middle" font-weight="bold">Write Once, Run Anywhere</text>
+
+    <!-- Source code box -->
+    <rect x="130" y="40" width="180" height="90" fill="#080d18" rx="5" stroke="#4488cc" stroke-width="1.5"/>
+    <text x="220" y="58" fill="#4488cc" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">HelloWorld.java</text>
+    <text x="145" y="75" fill="#88aacc" font-size="9" font-family="monospace">public class Hello {</text>
+    <text x="145" y="88" fill="#88aacc" font-size="9" font-family="monospace">  public static void</text>
+    <text x="145" y="101" fill="#88aacc" font-size="9" font-family="monospace">  main(String[] a) {</text>
+    <text x="145" y="114" fill="#00cc44" font-size="9" font-family="monospace">  System.out.print()</text>
+
+    <!-- Compile arrow -->
+    <line x1="220" y1="130" x2="220" y2="158" stroke="#ffd700" stroke-width="2.5"/>
+    <polygon points="220,160 213,151 227,151" fill="#ffd700"/>
+    <text x="235" y="148" fill="#ffd700" font-size="9" font-family="monospace">javac</text>
+
+    <!-- Bytecode box -->
+    <rect x="130" y="160" width="180" height="70" fill="#0d1a0d" rx="5" stroke="#44cc44" stroke-width="1.5"/>
+    <text x="220" y="178" fill="#44cc44" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">Hello.class</text>
+    <text x="145" y="195" fill="#44aa44" font-size="9" font-family="monospace">Bytecode (platform neutral)</text>
+    <text x="145" y="210" fill="#336633" font-size="9" font-family="monospace">0xCA 0xFE 0xBA 0xBE</text>
+    <text x="145" y="222" fill="#336633" font-size="9" font-family="monospace">(Magic number: CAFEBABE)</text>
+
+    <!-- Distribution arrows to platforms -->
+    <!-- Arrow to Windows -->
+    <line x1="180" y1="230" x2="80" y2="280" stroke="#88aacc" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <!-- Arrow to Mac -->
+    <line x1="220" y1="230" x2="220" y2="280" stroke="#88aacc" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <!-- Arrow to Unix -->
+    <line x1="260" y1="230" x2="360" y2="280" stroke="#88aacc" stroke-width="1.5" stroke-dasharray="4,2"/>
+
+    <!-- Platform JVM boxes -->
+    <!-- Windows JVM -->
+    <rect x="20" y="280" width="125" height="80" fill="#0a1020" rx="4" stroke="#4488cc" stroke-width="1.5"/>
+    <text x="82" y="297" fill="#4488cc" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">Windows JVM</text>
+    <rect x="28" y="305" width="109" height="18" fill="#001540" rx="2"/>
+    <text x="82" y="318" fill="#88aaff" font-size="9" font-family="monospace" text-anchor="middle">Win 95 / NT</text>
+    <text x="82" y="348" fill="#44cc44" font-size="22" font-family="sans-serif" text-anchor="middle" font-weight="bold" filter="url(#javaGlow)">RUNS!</text>
+
+    <!-- Mac JVM -->
+    <rect x="158" y="280" width="125" height="80" fill="#0a1020" rx="4" stroke="#aa44aa" stroke-width="1.5"/>
+    <text x="220" y="297" fill="#aa44aa" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">Mac JVM</text>
+    <rect x="166" y="305" width="109" height="18" fill="#1a0030" rx="2"/>
+    <text x="220" y="318" fill="#cc88ff" font-size="9" font-family="monospace" text-anchor="middle">System 7 / Mac OS</text>
+    <text x="220" y="348" fill="#44cc44" font-size="22" font-family="sans-serif" text-anchor="middle" font-weight="bold" filter="url(#javaGlow)">RUNS!</text>
+
+    <!-- Unix JVM -->
+    <rect x="295" y="280" width="125" height="80" fill="#0a1020" rx="4" stroke="#44aa44" stroke-width="1.5"/>
+    <text x="357" y="297" fill="#44aa44" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">Unix JVM</text>
+    <rect x="303" y="305" width="109" height="18" fill="#001510" rx="2"/>
+    <text x="357" y="318" fill="#88cc88" font-size="9" font-family="monospace" text-anchor="middle">Solaris / Linux</text>
+    <text x="357" y="348" fill="#44cc44" font-size="22" font-family="sans-serif" text-anchor="middle" font-weight="bold" filter="url(#javaGlow)">RUNS!</text>
+
+    <!-- Tagline -->
+    <rect x="50" y="370" width="380" height="30" fill="#1a0d00" rx="4"/>
+    <text x="240" y="390" fill="#ff6633" font-size="13" font-family="sans-serif" text-anchor="middle" font-weight="bold">Write Once, Run Anywhere (WORA)</text>
+  </g>
+
+  <!-- Java mascot Duke (right side) -->
+  <g transform="translate(665, 50)">
+    <!-- Duke character - simple -->
+    <rect x="0" y="0" width="115" height="180" fill="#0d0a18" rx="8"/>
+    <text x="57" y="20" fill="#ff6633" font-size="10" font-family="monospace" text-anchor="middle">Duke</text>
+    <!-- Body -->
+    <ellipse cx="57" cy="100" rx="35" ry="50" fill="#4a3a8a"/>
+    <!-- Head -->
+    <ellipse cx="57" cy="55" rx="28" ry="32" fill="#c8b860"/>
+    <!-- Star/spike on top -->
+    <polygon points="57,25 52,40 57,38 62,40" fill="#e8d070"/>
+    <!-- Eyes (Duke style - one big eye) -->
+    <circle cx="50" cy="55" r="8" fill="white"/>
+    <circle cx="52" cy="55" r="5" fill="#1a1a1a"/>
+    <circle cx="54" cy="55" r="1.5" fill="white"/>
+    <!-- Smile -->
+    <path d="M 44 67 Q 57 78 70 67" fill="none" stroke="#8a7030" stroke-width="2"/>
+    <!-- Arms waving -->
+    <line x1="22" y1="85" x2="5" y2="65" stroke="#c8b860" stroke-width="5" stroke-linecap="round"/>
+    <line x1="92" y1="85" x2="110" y2="60" stroke="#c8b860" stroke-width="5" stroke-linecap="round"/>
+    <text x="57" y="165" fill="#ff6633" font-size="9" font-family="monospace" text-anchor="middle">Java Duke mascot</text>
+
+    <!-- Java release info -->
+    <rect x="0" y="195" width="115" height="180" fill="#0d0a18" rx="5"/>
+    <text x="57" y="213" fill="#ff6633" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">Java Stats</text>
+    <text x="10" y="232" fill="#cc5522" font-size="9" font-family="monospace">Released: 1995</text>
+    <text x="10" y="248" fill="#cc5522" font-size="9" font-family="monospace">OOP language</text>
+    <text x="10" y="264" fill="#cc5522" font-size="9" font-family="monospace">JVM architecture</text>
+    <text x="10" y="280" fill="#cc5522" font-size="9" font-family="monospace">Garbage collect.</text>
+    <text x="10" y="296" fill="#cc5522" font-size="9" font-family="monospace">Web Applets!</text>
+    <text x="10" y="312" fill="#cc5522" font-size="9" font-family="monospace">Android today</text>
+    <text x="10" y="328" fill="#884422" font-size="9" font-family="monospace">3B+ devices run Java</text>
+    <text x="10" y="366" fill="#884422" font-size="9" font-family="monospace">Sun Microsystems</text>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="0" y="400" width="800" height="50" fill="#0f0805" opacity="0.97"/>
+  <text x="400" y="422" fill="#ff6633" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">Java 출시 · 한 번 쓰고 어디서나 실행</text>
+  <text x="400" y="442" fill="#8B3300" font-size="12" font-family="Georgia, serif" text-anchor="middle">Sun Microsystems · Java · 1995 · Write Once, Run Anywhere</text>
+</svg>

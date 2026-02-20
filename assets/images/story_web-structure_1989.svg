@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg89" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1a28"/>
+      <stop offset="100%" style="stop-color:#152a40"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg89)"/>
+
+  <!-- CERN building silhouette (simplified) -->
+  <rect x="30" y="280" width="300" height="100" fill="#1a2a3a" stroke="#4488ff" stroke-width="1"/>
+  <rect x="30" y="240" width="100" height="140" fill="#1a2a3a" stroke="#4488ff" stroke-width="1"/>
+  <rect x="150" y="260" width="80" height="120" fill="#1a2a3a" stroke="#4488ff" stroke-width="1"/>
+  <!-- Windows -->
+  <rect x="50" y="260" width="18" height="14" rx="1" fill="#ffff88" opacity="0.6"/>
+  <rect x="76" y="260" width="18" height="14" rx="1" fill="#ffff88" opacity="0.4"/>
+  <rect x="50" y="284" width="18" height="14" rx="1" fill="#ffff88" opacity="0.7"/>
+  <rect x="76" y="284" width="18" height="14" rx="1" fill="#ffff88" opacity="0.3"/>
+  <rect x="160" y="280" width="18" height="14" rx="1" fill="#ffff88" opacity="0.5"/>
+  <rect x="184" y="280" width="18" height="14" rx="1" fill="#ffff88" opacity="0.6"/>
+  <text x="180" y="394" font-family="sans-serif" font-size="11" fill="#4488ff" text-anchor="middle">CERN, Geneva 1989</text>
+
+  <!-- The famous proposal document -->
+  <rect x="350" y="30" width="420" height="380" rx="6" fill="#f5f0e8" stroke="#aa9960" stroke-width="2"/>
+  <!-- Document header -->
+  <rect x="350" y="30" width="420" height="50" rx="6" fill="#e8e0d0"/>
+  <rect x="350" y="56" width="420" height="24" fill="#e8e0d0"/>
+  <text x="560" y="56" font-family="serif" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">Information Management: A Proposal</text>
+  <text x="560" y="72" font-family="serif" font-size="10" fill="#666" text-anchor="middle">T. Berners-Lee, CERN · March 1989</text>
+
+  <!-- Proposal text -->
+  <text x="366" y="98" font-family="serif" font-size="10" fill="#555">The following document describes a</text>
+  <text x="366" y="112" font-family="serif" font-size="10" fill="#555">proposal for implementing a hypertext</text>
+  <text x="366" y="126" font-family="serif" font-size="10" fill="#555">system at CERN that allows information</text>
+  <text x="366" y="140" font-family="serif" font-size="10" fill="#555">to be stored and linked together.</text>
+
+  <!-- Simple hypertext diagram from proposal -->
+  <rect x="366" y="154" width="388" height="80" rx="4" fill="#ede8d8"/>
+  <text x="560" y="170" font-family="sans-serif" font-size="10" fill="#555" text-anchor="middle">Proposed Hypertext Structure</text>
+  <!-- Node boxes -->
+  <rect x="380" y="178" width="60" height="24" rx="3" fill="white" stroke="#4488ff" stroke-width="1"/>
+  <text x="410" y="194" font-family="monospace" font-size="8" fill="#4488ff" text-anchor="middle">Node A</text>
+  <rect x="480" y="178" width="60" height="24" rx="3" fill="white" stroke="#4488ff" stroke-width="1"/>
+  <text x="510" y="194" font-family="monospace" font-size="8" fill="#4488ff" text-anchor="middle">Node B</text>
+  <rect x="580" y="178" width="60" height="24" rx="3" fill="white" stroke="#4488ff" stroke-width="1"/>
+  <text x="610" y="194" font-family="monospace" font-size="8" fill="#4488ff" text-anchor="middle">Node C</text>
+  <rect x="680" y="178" width="60" height="24" rx="3" fill="white" stroke="#4488ff" stroke-width="1"/>
+  <text x="710" y="194" font-family="monospace" font-size="8" fill="#4488ff" text-anchor="middle">Node D</text>
+  <line x1="440" y1="190" x2="480" y2="190" stroke="#4488ff" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="540" y1="190" x2="580" y2="190" stroke="#4488ff" stroke-width="1.5"/>
+  <line x1="640" y1="190" x2="680" y2="190" stroke="#4488ff" stroke-width="1.5"/>
+  <line x1="510" y1="202" x2="410" y2="226" stroke="#4488ff" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- First HTML snippet -->
+  <rect x="366" y="244" width="388" height="140" rx="4" fill="#111"/>
+  <text x="382" y="262" font-family="monospace" font-size="11" fill="#6a9955">&lt;!-- First HTML Tags (1989) --&gt;</text>
+  <text x="382" y="280" font-family="monospace" font-size="12" fill="#4ec9b0">&lt;HEADER&gt;</text>
+  <text x="382" y="298" font-family="monospace" font-size="12" fill="#4ec9b0">  &lt;TITLE&gt;</text>
+  <text x="454" y="298" font-family="monospace" font-size="12" fill="#d4d4d4">CERN Documents</text>
+  <text x="382" y="316" font-family="monospace" font-size="12" fill="#4ec9b0">&lt;BODY&gt;</text>
+  <text x="382" y="334" font-family="monospace" font-size="12" fill="#4ec9b0">  &lt;H1&gt;</text>
+  <text x="422" y="334" font-family="monospace" font-size="12" fill="#d4d4d4">Project Summary</text>
+  <text x="382" y="352" font-family="monospace" font-size="12" fill="#4ec9b0">  &lt;A HREF=</text>
+  <text x="450" y="352" font-family="monospace" font-size="12" fill="#ce9178">"memo.html"</text>
+  <text x="534" y="352" font-family="monospace" font-size="12" fill="#4ec9b0">&gt;</text>
+  <text x="382" y="370" font-family="monospace" font-size="12" fill="#d4d4d4">    See memo</text>
+  <text x="382" y="388" font-family="monospace" font-size="12" fill="#4ec9b0">  &lt;/A&gt;</text>
+
+  <!-- Quote from Berners-Lee supervisor -->
+  <rect x="30" y="30" width="300" height="100" rx="6" fill="#0d1e30" stroke="#4488ff" stroke-width="1"/>
+  <text x="50" y="52" font-family="serif" font-size="12" fill="#88bbff" font-style="italic">"Vague but exciting"</text>
+  <line x1="46" y1="60" x2="314" y2="60" stroke="#4488ff" stroke-width="0.5"/>
+  <text x="50" y="78" font-family="sans-serif" font-size="10" fill="#888">— Mike Sendall's note on the</text>
+  <text x="50" y="94" font-family="sans-serif" font-size="10" fill="#888">  proposal, March 1989</text>
+  <text x="50" y="112" font-family="sans-serif" font-size="10" fill="#4488ff">Tim Berners-Lee · NeXT computer</text>
+
+  <!-- Key elements introduced -->
+  <rect x="30" y="148" width="300" height="120" rx="6" fill="#0d1e30" stroke="#4488ff" stroke-width="1"/>
+  <text x="180" y="168" font-family="sans-serif" font-size="12" fill="#88bbff" text-anchor="middle" font-weight="bold">HTML Innovations</text>
+  <text x="46" y="188" font-family="sans-serif" font-size="11" fill="#ccc">Hyperlinks: &lt;A HREF="..."&gt;</text>
+  <text x="46" y="206" font-family="sans-serif" font-size="11" fill="#ccc">Headings: &lt;H1&gt; to &lt;H6&gt;</text>
+  <text x="46" y="224" font-family="sans-serif" font-size="11" fill="#ccc">Images: &lt;IMG SRC="..."&gt;</text>
+  <text x="46" y="242" font-family="sans-serif" font-size="11" fill="#ccc">Lists: &lt;UL&gt;, &lt;OL&gt;, &lt;LI&gt;</text>
+
+  <!-- Year badge -->
+  <rect x="30" y="412" width="300" height="30" rx="15" fill="#1a3a5a"/>
+  <text x="180" y="431" font-family="sans-serif" font-size="16" font-weight="bold" fill="#88bbff" text-anchor="middle">HTML Proposal · CERN · 1989</text>
+</svg>

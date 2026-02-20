@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="shadow1984" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-color="#00000033"/>
+    </filter>
+  </defs>
+
+  <!-- Background: warm beige studio -->
+  <rect width="800" height="450" fill="#f5f0e8"/>
+  <!-- Desk surface -->
+  <rect x="0" y="320" width="800" height="130" fill="#c8b89a"/>
+  <!-- Desk edge highlight -->
+  <rect x="0" y="320" width="800" height="6" fill="#b8a88a"/>
+
+  <!-- Year label -->
+  <rect x="16" y="14" width="60" height="24" rx="4" fill="#3d2b1f" opacity="0.85"/>
+  <text x="46" y="30" font-family="monospace" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">1984</text>
+
+  <!-- Macintosh computer body -->
+  <rect x="240" y="100" width="220" height="200" rx="18" fill="#e8e0d0" filter="url(#shadow1984)"/>
+  <!-- Mac top bezel -->
+  <rect x="252" y="112" width="196" height="14" rx="4" fill="#d4ccbc"/>
+  <!-- Mac screen bezel -->
+  <rect x="256" y="126" width="188" height="130" rx="6" fill="#2a2a2a"/>
+  <!-- Mac screen -->
+  <rect x="262" y="132" width="176" height="118" rx="3" fill="#d4e8c8"/>
+
+  <!-- PageMaker window on Mac screen -->
+  <!-- Window title bar -->
+  <rect x="266" y="136" width="168" height="14" rx="2" fill="#888"/>
+  <circle cx="271" cy="143" r="4" fill="#cc4444"/>
+  <circle cx="283" cy="143" r="4" fill="#ccaa33"/>
+  <circle cx="295" cy="143" r="4" fill="#44aa44"/>
+  <text x="350" y="146" font-family="sans-serif" font-size="7" fill="#fff" text-anchor="middle">PageMaker 1.0</text>
+
+  <!-- Document canvas inside PageMaker -->
+  <rect x="270" y="152" width="160" height="92" fill="#fff"/>
+  <!-- Layout grid lines -->
+  <line x1="270" y1="170" x2="430" y2="170" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="270" y1="190" x2="430" y2="190" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="270" y1="210" x2="430" y2="210" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="270" y1="230" x2="430" y2="230" stroke="#ddd" stroke-width="0.5"/>
+  <!-- Column guides -->
+  <line x1="350" y1="152" x2="350" y2="244" stroke="#aaddff" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <!-- Text columns -->
+  <rect x="274" y="154" width="70" height="4" rx="1" fill="#888"/>
+  <rect x="274" y="161" width="68" height="3" rx="1" fill="#bbb"/>
+  <rect x="274" y="166" width="72" height="3" rx="1" fill="#bbb"/>
+  <rect x="274" y="171" width="65" height="3" rx="1" fill="#bbb"/>
+  <rect x="274" y="176" width="70" height="3" rx="1" fill="#bbb"/>
+  <rect x="274" y="181" width="60" height="3" rx="1" fill="#bbb"/>
+  <rect x="274" y="186" width="68" height="3" rx="1" fill="#bbb"/>
+
+  <!-- Right column text -->
+  <rect x="354" y="154" width="70" height="4" rx="1" fill="#888"/>
+  <rect x="354" y="161" width="68" height="3" rx="1" fill="#bbb"/>
+  <rect x="354" y="166" width="72" height="3" rx="1" fill="#bbb"/>
+  <rect x="354" y="171" width="65" height="3" rx="1" fill="#bbb"/>
+
+  <!-- Photo box being dragged with dashed border -->
+  <rect x="354" y="177" width="72" height="55" rx="2" fill="#c8d8e8" stroke="#4488cc" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <!-- Photo content (landscape/mountain icon) -->
+  <rect x="354" y="177" width="72" height="55" rx="2" fill="#8bb8d8" opacity="0.5"/>
+  <polygon points="354,232 376,210 390,220 408,200 426,232" fill="#6699bb" opacity="0.8"/>
+  <circle cx="368" cy="190" r="6" fill="#ffdd88" opacity="0.9"/>
+  <!-- Drag cursor -->
+  <g transform="translate(418, 196)">
+    <polygon points="0,0 0,18 4,14 7,20 9,19 6,13 11,13" fill="#333" stroke="#fff" stroke-width="0.5"/>
+  </g>
+
+  <!-- Mac disk drive slot -->
+  <rect x="290" y="265" width="80" height="8" rx="4" fill="#ccc"/>
+  <!-- Mac base/stand -->
+  <rect x="295" y="295" width="110" height="12" rx="4" fill="#d0c8b8"/>
+  <rect x="310" y="307" width="80" height="6" rx="2" fill="#b8b0a0"/>
+
+  <!-- Mouse -->
+  <rect x="475" y="280" width="44" height="32" rx="16" fill="#e0d8c8" filter="url(#shadow1984)"/>
+  <line x1="497" y1="280" x2="497" y2="296" stroke="#ccc" stroke-width="1"/>
+  <!-- Mouse cord -->
+  <path d="M 519 296 Q 560 290 560 320" stroke="#888" stroke-width="2" fill="none"/>
+
+  <!-- Designer hand (simplified) -->
+  <ellipse cx="490" cy="302" rx="18" ry="10" fill="#d4956a" opacity="0.85"/>
+
+  <!-- Keyboard -->
+  <rect x="210" y="340" width="280" height="45" rx="6" fill="#ddd6c6" filter="url(#shadow1984)"/>
+  <!-- Key rows -->
+  <rect x="218" y="347" width="264" height="8" rx="2" fill="#c8c0b0"/>
+  <rect x="218" y="358" width="264" height="8" rx="2" fill="#c8c0b0"/>
+  <rect x="218" y="369" width="264" height="8" rx="2" fill="#c8c0b0"/>
+
+  <!-- WYSIWYG label -->
+  <rect x="530" y="130" width="200" height="90" rx="10" fill="#fffde8" stroke="#ddd" stroke-width="1" filter="url(#shadow1984)"/>
+  <text x="630" y="155" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle" font-weight="bold">WYSIWYG</text>
+  <text x="630" y="172" font-family="sans-serif" font-size="9" fill="#aaa" text-anchor="middle">What You See</text>
+  <text x="630" y="184" font-family="sans-serif" font-size="9" fill="#aaa" text-anchor="middle">Is What You Get</text>
+  <!-- Arrow from label to screen -->
+  <line x1="530" y1="175" x2="460" y2="195" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowhead)"/>
+
+  <!-- Stickies / paper notes on desk -->
+  <rect x="55" y="290" width="80" height="60" rx="3" fill="#fffacd" transform="rotate(-5,95,320)" filter="url(#shadow1984)"/>
+  <text x="66" y="315" font-family="sans-serif" font-size="8" fill="#888" transform="rotate(-5,95,320)">Layout guide</text>
+  <text x="66" y="326" font-family="sans-serif" font-size="8" fill="#888" transform="rotate(-5,95,320)">2 col × 3 row</text>
+  <text x="66" y="337" font-family="sans-serif" font-size="8" fill="#888" transform="rotate(-5,95,320)">photo pg.1</text>
+
+  <!-- Aldus logo-ish badge -->
+  <rect x="55" y="120" width="130" height="50" rx="8" fill="#8b1a1a" filter="url(#shadow1984)"/>
+  <text x="120" y="143" font-family="serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">Aldus</text>
+  <text x="120" y="160" font-family="serif" font-size="10" fill="#ffcc88" text-anchor="middle">PageMaker</text>
+
+  <!-- Decorative magazine pages stacked -->
+  <rect x="60" y="195" width="100" height="130" rx="4" fill="#fff" transform="rotate(8,110,260)" filter="url(#shadow1984)"/>
+  <rect x="58" y="193" width="100" height="130" rx="4" fill="#f8f8f8" transform="rotate(3,108,258)" filter="url(#shadow1984)"/>
+  <rect x="56" y="191" width="100" height="130" rx="4" fill="#fff" stroke="#eee" stroke-width="1"/>
+  <!-- Magazine page layout preview -->
+  <rect x="62" y="198" width="40" height="30" rx="2" fill="#c8d8e8"/>
+  <rect x="62" y="232" width="88" height="4" rx="1" fill="#ddd"/>
+  <rect x="62" y="239" width="85" height="3" rx="1" fill="#eee"/>
+  <rect x="62" y="245" width="80" height="3" rx="1" fill="#eee"/>
+  <rect x="106" y="198" width="42" height="30" rx="2" fill="#e8c8c8"/>
+</svg>

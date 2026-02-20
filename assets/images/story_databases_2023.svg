@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#0a0a1a"/>
+  <!-- Subtle grid -->
+  <g stroke="#1a1a3a" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="600" y1="0" x2="600" y2="450"/>
+  </g>
+
+  <!-- Title banner -->
+  <rect x="0" y="0" width="800" height="60" fill="#1a0a2e" opacity="0.95"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" fill="#a78bfa" text-anchor="middle" font-weight="bold">벡터 데이터베이스 · AI 시대의 저장소 · 2023</text>
+
+  <!-- High-dimensional vector space visualization (left) -->
+  <g transform="translate(30, 70)">
+    <rect x="0" y="0" width="320" height="300" rx="8" fill="#0d0d24" stroke="#4c1d95" stroke-width="2"/>
+    <text x="160" y="22" font-family="Arial, sans-serif" font-size="11" fill="#a78bfa" text-anchor="middle">Vector Space (3D visualization)</text>
+
+    <!-- 3D coordinate axes -->
+    <g transform="translate(50, 160)">
+      <!-- X axis -->
+      <line x1="0" y1="0" x2="120" y2="0" stroke="#ef4444" stroke-width="2"/>
+      <polygon points="120,0 112,-4 112,4" fill="#ef4444"/>
+      <text x="130" y="5" font-family="monospace" font-size="9" fill="#ef4444">d1</text>
+      <!-- Y axis -->
+      <line x1="0" y1="0" x2="0" y2="-120" stroke="#22c55e" stroke-width="2"/>
+      <polygon points="0,-120 -4,-112 4,-112" fill="#22c55e"/>
+      <text x="8" y="-125" font-family="monospace" font-size="9" fill="#22c55e">d2</text>
+      <!-- Z axis (perspective) -->
+      <line x1="0" y1="0" x2="-70" y2="50" stroke="#3b82f6" stroke-width="2"/>
+      <polygon points="-70,50 -63,43 -60,53" fill="#3b82f6"/>
+      <text x="-85" y="60" font-family="monospace" font-size="9" fill="#3b82f6">d3</text>
+
+      <!-- Vector points (embeddings) -->
+      <!-- Cat embeddings cluster -->
+      <circle cx="80" cy="-90" r="8" fill="#f59e0b"/>
+      <circle cx="95" cy="-80" r="6" fill="#f59e0b" opacity="0.8"/>
+      <circle cx="75" cy="-75" r="7" fill="#f59e0b" opacity="0.9"/>
+      <circle cx="105" cy="-95" r="5" fill="#f59e0b" opacity="0.7"/>
+      <text x="85" y="-105" font-family="monospace" font-size="7" fill="#f59e0b" text-anchor="middle">cat</text>
+
+      <!-- Dog embeddings cluster (nearby) -->
+      <circle cx="70" cy="-55" r="8" fill="#fb923c"/>
+      <circle cx="85" cy="-48" r="6" fill="#fb923c" opacity="0.8"/>
+      <circle cx="60" cy="-60" r="7" fill="#fb923c" opacity="0.9"/>
+      <text x="72" y="-68" font-family="monospace" font-size="7" fill="#fb923c" text-anchor="middle">dog</text>
+
+      <!-- Car embeddings (far cluster) -->
+      <circle cx="20" cy="-85" r="8" fill="#60a5fa"/>
+      <circle cx="10" cy="-70" r="6" fill="#60a5fa" opacity="0.8"/>
+      <circle cx="30" cy="-90" r="7" fill="#60a5fa" opacity="0.9"/>
+      <text x="20" y="-100" font-family="monospace" font-size="7" fill="#60a5fa" text-anchor="middle">car</text>
+
+      <!-- Similarity lines (cosine) -->
+      <line x1="80" y1="-90" x2="70" y2="-55" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="85" y="-73" font-family="monospace" font-size="6" fill="#a78bfa">0.92</text>
+
+      <!-- Query point -->
+      <circle cx="88" cy="-85" r="5" fill="#f43f5e" stroke="white" stroke-width="2"/>
+      <text x="100" y="-80" font-family="monospace" font-size="7" fill="#f43f5e">Query</text>
+
+      <!-- Query radius -->
+      <circle cx="88" cy="-85" r="25" fill="none" stroke="#f43f5e" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+
+      <!-- Dimension labels -->
+      <text x="50" y="20" font-family="monospace" font-size="7" fill="#6b7280" text-anchor="middle">768 → 1536 dimensions</text>
+    </g>
+
+    <!-- Vector representation -->
+    <rect x="10" y="230" width="300" height="60" rx="4" fill="#1a1a3a"/>
+    <text x="20" y="248" font-family="monospace" font-size="8" fill="#a78bfa">"cat" → [0.231, -0.874, 0.512, ...]</text>
+    <text x="20" y="263" font-family="monospace" font-size="8" fill="#7c3aed">        → 1536-dim embedding</text>
+    <text x="20" y="278" font-family="monospace" font-size="8" fill="#6b7280">similarity(cat, dog) = 0.92</text>
+  </g>
+
+  <!-- AI Brain connecting to Vector DB -->
+  <g transform="translate(360, 80)">
+    <!-- Brain icon (simplified) -->
+    <ellipse cx="70" cy="60" rx="55" ry="45" fill="#4c1d95" stroke="#7c3aed" stroke-width="2"/>
+    <ellipse cx="50" cy="62" rx="30" ry="38" fill="#5b21b6"/>
+    <ellipse cx="90" cy="62" rx="30" ry="38" fill="#5b21b6"/>
+    <!-- Brain folds -->
+    <path d="M 30 50 Q 50 40 70 50 Q 90 40 110 50" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
+    <path d="M 25 65 Q 45 55 65 65 Q 85 55 110 65" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
+    <path d="M 28 80 Q 48 70 68 80 Q 88 70 112 80" stroke="#a78bfa" stroke-width="1.5" fill="none"/>
+    <text x="70" y="70" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">LLM</text>
+    <text x="70" y="87" font-family="Arial, sans-serif" font-size="8" fill="#c4b5fd" text-anchor="middle">AI Model</text>
+
+    <!-- Arrow down to Vector DB -->
+    <line x1="70" y1="112" x2="70" y2="158" stroke="#a78bfa" stroke-width="2.5"/>
+    <polygon points="70,162 63,152 77,152" fill="#a78bfa"/>
+    <text x="85" y="140" font-family="monospace" font-size="8" fill="#a78bfa">embed()</text>
+
+    <!-- Vector DB cylinder -->
+    <ellipse cx="70" cy="175" rx="55" ry="14" fill="#4c1d95"/>
+    <rect x="15" y="175" width="110" height="65" fill="#3b0764"/>
+    <ellipse cx="70" cy="240" rx="55" ry="14" fill="#4c1d95"/>
+    <ellipse cx="70" cy="175" rx="55" ry="14" fill="#7c3aed"/>
+    <!-- Cylinder content lines -->
+    <line x1="15" y1="195" x2="125" y2="195" stroke="#4c1d95" stroke-width="1" opacity="0.5"/>
+    <line x1="15" y1="212" x2="125" y2="212" stroke="#4c1d95" stroke-width="1" opacity="0.5"/>
+    <line x1="15" y1="229" x2="125" y2="229" stroke="#4c1d95" stroke-width="1" opacity="0.5"/>
+    <text x="70" y="210" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle" font-weight="bold">Vector DB</text>
+    <text x="70" y="228" font-family="Arial, sans-serif" font-size="7" fill="#c4b5fd" text-anchor="middle">Embeddings Storage</text>
+  </g>
+
+  <!-- RAG Architecture -->
+  <g transform="translate(490, 75)">
+    <rect x="0" y="0" width="295" height="175" rx="8" fill="#0d0d24" stroke="#7c3aed" stroke-width="2"/>
+    <text x="147" y="22" font-family="Arial, sans-serif" font-size="12" fill="#a78bfa" text-anchor="middle" font-weight="bold">RAG Architecture</text>
+
+    <!-- User question -->
+    <rect x="10" y="35" width="130" height="32" rx="4" fill="#1a1a3a" stroke="#a78bfa" stroke-width="1"/>
+    <text x="75" y="53" font-family="monospace" font-size="8" fill="#f0f0f0" text-anchor="middle">"고양이 관련 문서"</text>
+    <text x="75" y="63" font-family="monospace" font-size="7" fill="#6b7280" text-anchor="middle">User Query</text>
+
+    <!-- Arrow to embed -->
+    <line x1="140" y1="51" x2="165" y2="51" stroke="#a78bfa" stroke-width="1.5"/>
+    <polygon points="165,51 159,47 159,55" fill="#a78bfa"/>
+
+    <!-- Embedding -->
+    <rect x="165" y="35" width="120" height="32" rx="4" fill="#4c1d95"/>
+    <text x="225" y="53" font-family="monospace" font-size="8" fill="white" text-anchor="middle">[0.12, -0.87, ...]</text>
+    <text x="225" y="63" font-family="monospace" font-size="7" fill="#c4b5fd" text-anchor="middle">Query Embedding</text>
+
+    <!-- Arrow down -->
+    <line x1="225" y1="67" x2="225" y2="88" stroke="#a78bfa" stroke-width="1.5"/>
+    <polygon points="225,88 221,82 229,82" fill="#a78bfa"/>
+
+    <!-- Semantic Search -->
+    <rect x="155" y="88" width="130" height="32" rx="4" fill="#3b0764" stroke="#7c3aed" stroke-width="1"/>
+    <text x="220" y="105" font-family="monospace" font-size="8" fill="#c4b5fd" text-anchor="middle">Semantic Search</text>
+    <text x="220" y="115" font-family="monospace" font-size="7" fill="#6b7280" text-anchor="middle">ANN / HNSW Index</text>
+
+    <!-- Arrow to Context -->
+    <line x1="225" y1="120" x2="225" y2="140" stroke="#a78bfa" stroke-width="1.5"/>
+    <polygon points="225,140 221,134 229,134" fill="#a78bfa"/>
+
+    <!-- Context + LLM -->
+    <rect x="10" y="140" width="275" height="25" rx="4" fill="#1a1a3a" stroke="#22c55e" stroke-width="1"/>
+    <text x="147" y="157" font-family="monospace" font-size="8" fill="#22c55e" text-anchor="middle">Context + Prompt → LLM → Answer</text>
+  </g>
+
+  <!-- Vector DB Products -->
+  <g transform="translate(490, 270)">
+    <rect x="0" y="0" width="295" height="100" rx="8" fill="#0d0d24" stroke="#4c1d95" stroke-width="2"/>
+    <text x="147" y="20" font-family="Arial, sans-serif" font-size="11" fill="#a78bfa" text-anchor="middle" font-weight="bold">Vector DB Ecosystem</text>
+
+    <g font-family="Arial, sans-serif" font-size="9" fill="#c4b5fd">
+      <rect x="10" y="30" width="60" height="22" rx="3" fill="#4c1d95"/>
+      <text x="40" y="46" text-anchor="middle">Pinecone</text>
+      <rect x="78" y="30" width="60" height="22" rx="3" fill="#3b0764"/>
+      <text x="108" y="46" text-anchor="middle">Weaviate</text>
+      <rect x="146" y="30" width="60" height="22" rx="3" fill="#4c1d95"/>
+      <text x="176" y="46" text-anchor="middle">Qdrant</text>
+      <rect x="214" y="30" width="70" height="22" rx="3" fill="#3b0764"/>
+      <text x="249" y="46" text-anchor="middle">pgvector</text>
+      <rect x="10" y="60" width="60" height="22" rx="3" fill="#3b0764"/>
+      <text x="40" y="76" text-anchor="middle">Chroma</text>
+      <rect x="78" y="60" width="60" height="22" rx="3" fill="#4c1d95"/>
+      <text x="108" y="76" text-anchor="middle">Milvus</text>
+      <rect x="146" y="60" width="65" height="22" rx="3" fill="#3b0764"/>
+      <text x="178" y="76" text-anchor="middle">Redis VSS</text>
+      <rect x="219" y="60" width="65" height="22" rx="3" fill="#4c1d95"/>
+      <text x="251" y="76" text-anchor="middle">OpenSearch</text>
+    </g>
+  </g>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#1a0533" opacity="0.95"/>
+  <text x="400" y="415" font-family="Arial, sans-serif" font-size="13" fill="#a78bfa" text-anchor="middle">AI/ML 임베딩 저장 · 의미론적 검색 · RAG 아키텍처의 핵심</text>
+  <text x="400" y="438" font-family="Arial, sans-serif" font-size="11" fill="#7c3aed" text-anchor="middle">Pinecone · Weaviate · pgvector · 2023 · ChatGPT 시대의 데이터베이스</text>
+</svg>

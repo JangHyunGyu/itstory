@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#e3f0fb"/>
+
+  <!-- Title banner -->
+  <rect x="0" y="0" width="800" height="60" fill="#1565c0" opacity="0.95"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">IBM DB2 전신 · SQL/DS · 1981</text>
+
+  <!-- IBM Mainframe computer -->
+  <rect x="50" y="85" width="280" height="270" rx="6" fill="#1a1a2e" stroke="#1565c0" stroke-width="3"/>
+  <!-- Mainframe face -->
+  <rect x="65" y="100" width="250" height="180" rx="4" fill="#0d47a1"/>
+  <!-- Tape drives -->
+  <rect x="75" y="108" width="70" height="70" rx="4" fill="#1565c0"/>
+  <circle cx="110" cy="143" r="25" fill="#0d47a1" stroke="#42a5f5" stroke-width="2"/>
+  <circle cx="110" cy="143" r="15" fill="#1565c0"/>
+  <circle cx="110" cy="143" r="5" fill="#42a5f5"/>
+
+  <rect x="155" y="108" width="70" height="70" rx="4" fill="#1565c0"/>
+  <circle cx="190" cy="143" r="25" fill="#0d47a1" stroke="#42a5f5" stroke-width="2"/>
+  <circle cx="190" cy="143" r="15" fill="#1565c0"/>
+  <circle cx="190" cy="143" r="5" fill="#42a5f5"/>
+
+  <rect x="235" y="108" width="70" height="70" rx="4" fill="#1565c0"/>
+  <circle cx="270" cy="143" r="25" fill="#0d47a1" stroke="#42a5f5" stroke-width="2"/>
+  <circle cx="270" cy="143" r="15" fill="#1565c0"/>
+  <circle cx="270" cy="143" r="5" fill="#42a5f5"/>
+
+  <!-- Card reader slot -->
+  <rect x="75" y="190" width="250" height="20" rx="3" fill="#263238"/>
+  <text x="200" y="204" font-family="monospace" font-size="8" fill="#42a5f5" text-anchor="middle">CARD READER</text>
+
+  <!-- Panel with lights and buttons -->
+  <rect x="75" y="220" width="250" height="50" rx="3" fill="#263238"/>
+  <g fill="#4caf50">
+    <circle cx="100" cy="245" r="6"/>
+    <circle cx="120" cy="245" r="6"/>
+    <circle cx="140" cy="245" r="6"/>
+  </g>
+  <g fill="#f44336">
+    <circle cx="168" cy="245" r="6"/>
+    <circle cx="188" cy="245" r="6"/>
+  </g>
+  <g fill="#ff9800">
+    <circle cx="216" cy="245" r="6"/>
+    <circle cx="236" cy="245" r="6"/>
+  </g>
+  <g fill="#2196f3">
+    <circle cx="264" cy="245" r="6"/>
+    <circle cx="284" cy="245" r="6"/>
+    <circle cx="305" cy="245" r="6"/>
+  </g>
+
+  <!-- IBM label on mainframe -->
+  <rect x="130" y="280" width="100" height="30" fill="#1565c0"/>
+  <text x="180" y="301" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold" letter-spacing="3">IBM</text>
+
+  <!-- SQL/DS interface screen -->
+  <rect x="360" y="85" width="390" height="200" rx="6" fill="#0a1628" stroke="#1565c0" stroke-width="2"/>
+  <rect x="360" y="85" width="390" height="25" rx="6" fill="#1565c0"/>
+  <text x="555" y="102" font-family="monospace" font-size="11" fill="white" text-anchor="middle">IBM SQL/DS · System R Terminal</text>
+
+  <g font-family="monospace" font-size="10" fill="#42a5f5">
+    <text x="378" y="128">SQL/DS VERSION 1.1.0</text>
+    <text x="378" y="145">IBM CORPORATION - 1981</text>
+    <text x="378" y="162">READY.</text>
+    <text x="378" y="180">SQL&gt; CREATE TABLE EMPLOYEE (</text>
+    <text x="378" y="196">  2    EMPNO    CHAR(6) NOT NULL,</text>
+    <text x="378" y="212">  3    ENAME    VARCHAR(20),</text>
+    <text x="378" y="228">  4    DEPTNO   CHAR(3),</text>
+    <text x="378" y="244">  5    SALARY   DECIMAL(9,2)</text>
+    <text x="378" y="260">  6  );</text>
+    <text x="378" y="276">TABLE CREATED.</text>
+  </g>
+
+  <!-- Timeline: System R -> SQL/DS -> DB2 -->
+  <rect x="360" y="305" width="390" height="65" rx="6" fill="white" stroke="#1565c0" stroke-width="2"/>
+  <text x="555" y="325" font-family="Arial, sans-serif" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="bold">IBM SQL Evolution</text>
+  <g transform="translate(375,335)">
+    <!-- Timeline -->
+    <line x1="0" y1="18" x2="360" y2="18" stroke="#1565c0" stroke-width="2"/>
+    <!-- Points -->
+    <circle cx="0" cy="18" r="6" fill="#1565c0"/>
+    <circle cx="120" cy="18" r="6" fill="#1565c0"/>
+    <circle cx="240" cy="18" r="8" fill="#f44336"/>
+    <circle cx="360" cy="18" r="6" fill="#0d47a1"/>
+    <!-- Labels -->
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="9" fill="#263238" text-anchor="middle">System R</text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="8" fill="#546e7a" text-anchor="middle">1974</text>
+    <text x="120" y="10" font-family="Arial, sans-serif" font-size="9" fill="#263238" text-anchor="middle">SQL Standard</text>
+    <text x="120" y="35" font-family="Arial, sans-serif" font-size="8" fill="#546e7a" text-anchor="middle">1978</text>
+    <text x="240" y="10" font-family="Arial, sans-serif" font-size="9" fill="#c62828" text-anchor="middle" font-weight="bold">SQL/DS</text>
+    <text x="240" y="35" font-family="Arial, sans-serif" font-size="8" fill="#546e7a" text-anchor="middle">1981</text>
+    <text x="360" y="10" font-family="Arial, sans-serif" font-size="9" fill="#0d47a1" text-anchor="middle">DB2</text>
+    <text x="360" y="35" font-family="Arial, sans-serif" font-size="8" fill="#546e7a" text-anchor="middle">1983</text>
+  </g>
+
+  <!-- SQL text -->
+  <text x="180" y="400" font-family="Arial, sans-serif" font-size="16" fill="#1565c0" text-anchor="middle" font-weight="bold">SQL이 표준이 되다</text>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#0d47a1" opacity="0.9"/>
+  <text x="400" y="415" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">IBM 메인프레임 시대의 SQL 데이터베이스 · DB2의 전신</text>
+  <text x="400" y="438" font-family="Arial, sans-serif" font-size="11" fill="#90caf9" text-anchor="middle">IBM SQL/DS · VM/CMS · 1981 · System R 연구의 결실</text>
+</svg>

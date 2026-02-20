@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Online collaborative classroom - 2012 -->
+  <rect width="800" height="450" fill="#e8f0f4"/>
+  <!-- Classroom background -->
+  <rect x="0" y="380" width="800" height="70" fill="#d0d8e0"/>
+  <rect x="0" y="0" width="800" height="385" fill="#ecf4f8"/>
+  <!-- Whiteboard/smartboard at front -->
+  <rect x="60" y="40" width="680" height="200" fill="#f8fbff" stroke="#8090b0" stroke-width="2" rx="4"/>
+  <!-- Shared document on smartboard -->
+  <rect x="80" y="55" width="640" height="175" fill="#ffffff" rx="2"/>
+  <!-- Document header -->
+  <rect x="80" y="55" width="640" height="30" fill="#4080c0" rx="2"/>
+  <text x="400" y="76" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle">Team Project: Solar System Presentation</text>
+  <!-- Multiple cursor indicators (collaborative editing) -->
+  <!-- Cursor 1 (blue - teacher) -->
+  <polygon points="160,105 170,130 165,126 158,136 152,126 148,130" fill="#2060e0" opacity="0.8"/>
+  <rect x="172" y="105" width="55" height="16" fill="#2060e0" rx="8" opacity="0.8"/>
+  <text x="199" y="117" font-family="sans-serif" font-size="7" fill="white" text-anchor="middle">Teacher</text>
+  <!-- Cursor 2 (green - student 1) -->
+  <polygon points="380,110 390,135 385,131 378,141 372,131 368,135" fill="#20a030" opacity="0.8"/>
+  <rect x="392" y="110" width="45" height="16" fill="#20a030" rx="8" opacity="0.8"/>
+  <text x="414" y="122" font-family="sans-serif" font-size="7" fill="white" text-anchor="middle">Minjun</text>
+  <!-- Cursor 3 (orange - student 2) -->
+  <polygon points="560,120 570,145 565,141 558,151 552,141 548,145" fill="#e06020" opacity="0.8"/>
+  <rect x="572" y="120" width="45" height="16" fill="#e06020" rx="8" opacity="0.8"/>
+  <text x="594" y="132" font-family="sans-serif" font-size="7" fill="white" text-anchor="middle">Jisoo</text>
+  <!-- Document content (shared) -->
+  <text x="100" y="108" font-family="sans-serif" font-size="9" fill="#1a2a3a">The Solar System contains 8 planets. Mercury is the smallest.</text>
+  <text x="100" y="124" font-family="sans-serif" font-size="9" fill="#1a2a3a">Venus is the hottest planet with surface temperatures of 465°C.</text>
+  <text x="100" y="155" font-family="sans-serif" font-size="9" fill="#1a2a4a">Earth: Our home. One moon. Life exists here.</text>
+  <!-- Comment bubble -->
+  <rect x="500" y="145" width="200" height="35" fill="#fffbe0" rx="5" stroke="#d0b020" stroke-width="1.5"/>
+  <text x="510" y="160" font-family="serif" font-size="8" fill="#806020">Jisoo: Let's add a diagram!</text>
+  <text x="510" y="174" font-family="serif" font-size="7" fill="#a08030">10:32 AM ✓ seen by 3</text>
+  <!-- Comment bubble 2 -->
+  <rect x="80" y="170" width="200" height="30" fill="#e0f0ff" rx="5" stroke="#4070c0" stroke-width="1.5"/>
+  <text x="90" y="183" font-family="serif" font-size="8" fill="#2050a0">Teacher: Great work everyone!</text>
+  <text x="90" y="196" font-family="serif" font-size="7" fill="#4070a0">Edit history: 12 revisions</text>
+  <!-- Student devices at desks -->
+  <!-- Student row 1 -->
+  <g transform="translate(130, 330)">
+    <rect x="-35" y="-25" width="70" height="45" fill="#2a2a3a" rx="4"/>
+    <rect x="-28" y="-18" width="56" height="32" fill="#ecf4f8" rx="2"/>
+    <text x="0" y="-5" font-family="sans-serif" font-size="7" fill="#2060c0" text-anchor="middle">Shared Doc</text>
+    <text x="0" y="8" font-family="monospace" font-size="6" fill="#1050a0" text-anchor="middle">typing...</text>
+    <ellipse cx="0" cy="-55" rx="15" ry="15" fill="#d4a870"/>
+    <rect x="-12" y="-41" width="24" height="28" fill="#2a4a6a" rx="2"/>
+    <text x="0" y="38" font-family="serif" font-size="7" fill="#4a5060" text-anchor="middle">Minjun</text>
+  </g>
+  <g transform="translate(270, 330)">
+    <rect x="-35" y="-25" width="70" height="45" fill="#2a2a3a" rx="4"/>
+    <rect x="-28" y="-18" width="56" height="32" fill="#ecf4f8" rx="2"/>
+    <text x="0" y="-5" font-family="sans-serif" font-size="7" fill="#20a030" text-anchor="middle">Adding photo</text>
+    <text x="0" y="8" font-family="monospace" font-size="6" fill="#10801a" text-anchor="middle">uploading...</text>
+    <ellipse cx="0" cy="-55" rx="15" ry="15" fill="#c8956a"/>
+    <rect x="-12" y="-41" width="24" height="28" fill="#1a3a2a" rx="2"/>
+    <text x="0" y="38" font-family="serif" font-size="7" fill="#4a5060" text-anchor="middle">Jisoo</text>
+  </g>
+  <g transform="translate(530, 330)">
+    <rect x="-35" y="-25" width="70" height="45" fill="#2a2a3a" rx="4"/>
+    <rect x="-28" y="-18" width="56" height="32" fill="#ecf4f8" rx="2"/>
+    <text x="0" y="-5" font-family="sans-serif" font-size="7" fill="#e06020" text-anchor="middle">Comment ✓</text>
+    <ellipse cx="0" cy="-55" rx="15" ry="15" fill="#b87858"/>
+    <rect x="-12" y="-41" width="24" height="28" fill="#3a1a1a" rx="2"/>
+    <text x="0" y="38" font-family="serif" font-size="7" fill="#4a5060" text-anchor="middle">Hyun</text>
+  </g>
+  <g transform="translate(670, 330)">
+    <!-- Tablet -->
+    <rect x="-30" y="-40" width="60" height="75" fill="#2a2a3a" rx="6"/>
+    <rect x="-24" y="-34" width="48" height="55" fill="#ecf4f8" rx="2"/>
+    <text x="0" y="-18" font-family="sans-serif" font-size="6" fill="#2060c0" text-anchor="middle">Reviewing</text>
+    <text x="0" y="-6" font-family="sans-serif" font-size="6" fill="#2060c0" text-anchor="middle">draft v12</text>
+    <ellipse cx="0" cy="-65" rx="15" ry="15" fill="#d4a870"/>
+    <rect x="-12" y="-51" width="24" height="28" fill="#4a2a4a" rx="2"/>
+    <text x="0" y="50" font-family="serif" font-size="7" fill="#4a5060" text-anchor="middle">Soojin</text>
+  </g>
+  <!-- Teacher at front -->
+  <g transform="translate(400, 345)">
+    <ellipse cx="0" cy="-20" rx="20" ry="20" fill="#d4a870"/>
+    <rect x="-16" y="-2" width="32" height="38" fill="#1a3a5a" rx="3"/>
+    <text x="0" y="42" font-family="serif" font-size="8" fill="#2a3a5a" text-anchor="middle">Teacher</text>
+    <text x="0" y="54" font-family="serif" font-size="7" fill="#3a4a6a" text-anchor="middle">"Great work!"</text>
+  </g>
+  <!-- Cloud sync indicator -->
+  <rect x="580" y="290" width="180" height="55" fill="#e0f0e0" rx="5" stroke="#508050" stroke-width="1.5"/>
+  <text x="670" y="310" font-family="sans-serif" font-size="8" font-weight="bold" fill="#2a6a2a" text-anchor="middle">CLOUD SYNC</text>
+  <text x="590" y="326" font-family="serif" font-size="7" fill="#3a5a3a">Google Docs / MS OneDrive</text>
+  <text x="590" y="339" font-family="serif" font-size="7" fill="#3a5a3a">Simultaneous editing · Real-time</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#1a2a5a" rx="6" opacity="0.8"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#80c0ff" text-anchor="middle">2012</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a0a1a" opacity="0.8"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">Online Collaborative Classroom · Cloud Documents · Real-Time Simultaneous Editing</text>
+</svg>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: warm Java era -->
+  <rect width="800" height="450" fill="#f5f0ea"/>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="sans-serif" font-size="15" font-weight="bold" fill="#c04020" text-anchor="middle">Apache Tomcat — 1999</text>
+  <text x="400" y="54" font-family="sans-serif" font-size="11" fill="#887060" text-anchor="middle">Open-source servlet container · WAR deployment · Java web standard</text>
+
+  <!-- Tomcat cat logo (stylized) -->
+  <!-- Cat body -->
+  <ellipse cx="400" cy="200" rx="70" ry="55" fill="#e8a060"/>
+  <!-- Cat head -->
+  <circle cx="400" cy="135" r="50" fill="#e8a060"/>
+  <!-- Ears -->
+  <polygon points="362,100 350,66 382,90" fill="#e8a060"/>
+  <polygon points="438,100 450,66 418,90" fill="#e8a060"/>
+  <!-- Ear inner -->
+  <polygon points="364,98 355,72 378,90" fill="#e87080"/>
+  <polygon points="436,98 445,72 422,90" fill="#e87080"/>
+  <!-- Eyes -->
+  <ellipse cx="384" cy="128" rx="10" ry="12" fill="#fff"/>
+  <ellipse cx="416" cy="128" rx="10" ry="12" fill="#fff"/>
+  <circle cx="385" cy="130" r="6" fill="#2a1800"/>
+  <circle cx="417" cy="130" r="6" fill="#2a1800"/>
+  <circle cx="387" cy="128" r="2" fill="white"/>
+  <circle cx="419" cy="128" r="2" fill="white"/>
+  <!-- Nose -->
+  <ellipse cx="400" cy="146" rx="6" ry="4" fill="#e87080"/>
+  <!-- Mouth -->
+  <path d="M 394 150 Q 400 156 406 150" fill="none" stroke="#c04020" stroke-width="1.5"/>
+  <!-- Whiskers -->
+  <line x1="360" y1="142" x2="390" y2="148" stroke="#888" stroke-width="1.2"/>
+  <line x1="355" y1="150" x2="390" y2="152" stroke="#888" stroke-width="1.2"/>
+  <line x1="360" y1="158" x2="390" y2="156" stroke="#888" stroke-width="1.2"/>
+  <line x1="440" y1="142" x2="410" y2="148" stroke="#888" stroke-width="1.2"/>
+  <line x1="445" y1="150" x2="410" y2="152" stroke="#888" stroke-width="1.2"/>
+  <line x1="440" y1="158" x2="410" y2="156" stroke="#888" stroke-width="1.2"/>
+  <!-- Belly spot -->
+  <ellipse cx="400" cy="205" rx="40" ry="32" fill="#f8c8a0" opacity="0.8"/>
+  <!-- Tail -->
+  <path d="M 468 230 Q 530 200 520 270 Q 510 310 480 290" fill="none" stroke="#e8a060" stroke-width="18" stroke-linecap="round"/>
+  <!-- Paws -->
+  <ellipse cx="370" cy="252" rx="22" ry="14" fill="#e8a060"/>
+  <ellipse cx="430" cy="252" rx="22" ry="14" fill="#e8a060"/>
+
+  <!-- WAR file -->
+  <rect x="76" y="148" width="100" height="130" rx="8" fill="#1a3a6a"/>
+  <rect x="84" y="156" width="84" height="114" rx="4" fill="#fff8e8"/>
+  <!-- War file icon lines -->
+  <text x="126" y="182" font-family="monospace" font-size="10" fill="#333" text-anchor="middle">myapp</text>
+  <text x="126" y="196" font-family="monospace" font-size="11" font-weight="bold" fill="#c04020" text-anchor="middle">.war</text>
+  <line x1="92" y1="206" x2="160" y2="206" stroke="#ddd" stroke-width="1"/>
+  <text x="92" y="220" font-family="monospace" font-size="7" fill="#555">WEB-INF/</text>
+  <text x="100" y="232" font-family="monospace" font-size="7" fill="#666">web.xml</text>
+  <text x="100" y="244" font-family="monospace" font-size="7" fill="#666">classes/</text>
+  <text x="100" y="256" font-family="monospace" font-size="7" fill="#666">lib/</text>
+  <text x="92" y="268" font-family="monospace" font-size="7" fill="#555">index.jsp</text>
+  <text x="126" y="296" font-family="sans-serif" font-size="9" fill="#1a3a6a" text-anchor="middle">WAR file</text>
+
+  <!-- Deploy arrow -->
+  <line x1="176" y1="200" x2="230" y2="220" stroke="#c04020" stroke-width="2.5"/>
+  <polygon points="228,212 244,222 228,230" fill="#c04020"/>
+  <text x="200" y="198" font-family="sans-serif" font-size="9" fill="#c04020">Deploy</text>
+
+  <!-- Tomcat server box -->
+  <rect x="568" y="130" width="190" height="200" rx="12" fill="#1a3a6a"/>
+  <rect x="578" y="140" width="170" height="180" rx="8" fill="#1e4a8a"/>
+  <text x="663" y="165" font-family="sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">Apache Tomcat</text>
+  <text x="663" y="180" font-family="monospace" font-size="9" fill="#88aaff" text-anchor="middle">Servlet Container</text>
+
+  <!-- Webapps directory -->
+  <rect x="588" y="190" width="150" height="44" rx="4" fill="#0e2a4a"/>
+  <text x="588" y="208" font-family="monospace" font-size="8" fill="#4488ff">webapps/</text>
+  <text x="596" y="222" font-family="monospace" font-size="8" fill="#44aa44">  myapp/  ✓ running</text>
+  <text x="596" y="234" font-family="monospace" font-size="8" fill="#44aa44">  ROOT/   ✓ running</text>
+
+  <!-- Port info -->
+  <rect x="588" y="242" width="150" height="30" rx="4" fill="#0e2a4a"/>
+  <text x="663" y="257" font-family="monospace" font-size="9" fill="#4488ff" text-anchor="middle">localhost:8080</text>
+  <text x="663" y="268" font-family="monospace" font-size="8" fill="#88aaff" text-anchor="middle">AJP: 8009</text>
+
+  <!-- Catalina log -->
+  <rect x="588" y="280" width="150" height="30" rx="4" fill="#0e2a4a"/>
+  <text x="596" y="292" font-family="monospace" font-size="7" fill="#44cc44">Server startup in 1340 ms</text>
+  <text x="596" y="304" font-family="monospace" font-size="7" fill="#44cc44">Deploying myapp.war...</text>
+
+  <!-- Arrow from cat to Tomcat box -->
+  <line x1="470" y1="220" x2="568" y2="220" stroke="#4499cc" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Small command prompt showing startup -->
+  <rect x="30" y="316" width="260" height="110" rx="8" fill="#0a0a0a"/>
+  <text x="40" y="336" font-family="monospace" font-size="8" fill="#44cc44">$ ./catalina.sh start</text>
+  <text x="40" y="350" font-family="monospace" font-size="8" fill="#44cc44">Using CATALINA_HOME: /opt/tomcat</text>
+  <text x="40" y="364" font-family="monospace" font-size="8" fill="#44cc44">Tomcat started.</text>
+  <text x="40" y="378" font-family="monospace" font-size="8" fill="#aaaaaa">INFO: Server startup in 1340 ms</text>
+  <text x="40" y="392" font-family="monospace" font-size="8" fill="#aaaaaa">INFO: Deploying web application</text>
+  <text x="40" y="406" font-family="monospace" font-size="8" fill="#aaaaaa">INFO: myapp.war deployed</text>
+
+  <!-- Sun Microsystems label -->
+  <text x="663" y="355" font-family="sans-serif" font-size="9" fill="#4499cc" text-anchor="middle">Sun Microsystems</text>
+  <text x="663" y="370" font-family="sans-serif" font-size="9" fill="#2a6a9a" text-anchor="middle">Donated to Apache</text>
+</svg>

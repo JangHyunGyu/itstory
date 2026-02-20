@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Strowger automatic exchange interior -->
+  <rect width="800" height="450" fill="#d8c8a0"/>
+  <!-- Brick walls -->
+  <rect x="0" y="0" width="800" height="370" fill="#9a7a5a"/>
+  <g fill="#a88060" stroke="#6a4a2a" stroke-width="0.5">
+    <rect x="0" y="10" width="95" height="18" rx="1"/>
+    <rect x="105" y="10" width="95" height="18" rx="1"/>
+    <rect x="210" y="10" width="95" height="18" rx="1"/>
+    <rect x="315" y="10" width="95" height="18" rx="1"/>
+    <rect x="420" y="10" width="95" height="18" rx="1"/>
+    <rect x="525" y="10" width="95" height="18" rx="1"/>
+    <rect x="630" y="10" width="95" height="18" rx="1"/>
+    <rect x="735" y="10" width="65" height="18" rx="1"/>
+    <rect x="50" y="33" width="95" height="18" rx="1"/>
+    <rect x="155" y="33" width="95" height="18" rx="1"/>
+    <rect x="260" y="33" width="95" height="18" rx="1"/>
+    <rect x="365" y="33" width="95" height="18" rx="1"/>
+    <rect x="470" y="33" width="95" height="18" rx="1"/>
+    <rect x="575" y="33" width="95" height="18" rx="1"/>
+    <rect x="680" y="33" width="95" height="18" rx="1"/>
+  </g>
+  <!-- Floor -->
+  <rect x="0" y="365" width="800" height="85" fill="#c8a870"/>
+  <!-- The Strowger Automatic Switching Machine (center stage) -->
+  <g transform="translate(400, 220)">
+    <!-- Base cabinet -->
+    <rect x="-180" y="-20" width="360" height="120" fill="#4a3820" rx="5" stroke="#2a1808" stroke-width="2"/>
+    <!-- Main selector drum -->
+    <ellipse cx="0" cy="0" rx="80" ry="80" fill="#6a5030" stroke="#4a3010" stroke-width="3"/>
+    <ellipse cx="0" cy="0" rx="65" ry="65" fill="#7a6040"/>
+    <!-- Step ratchet mechanism -->
+    <g fill="#c8a040" stroke="#8a6020" stroke-width="1">
+      <!-- Horizontal steps (wipers) -->
+      <rect x="-55" y="-8" width="110" height="16" rx="2"/>
+      <rect x="-55" y="-8" width="10" height="16" rx="1" fill="#e8c040"/>
+      <!-- Vertical steps -->
+      <rect x="-8" y="-55" width="16" height="110" rx="2"/>
+      <rect x="-8" y="-55" width="16" height="10" rx="1" fill="#e8c040"/>
+    </g>
+    <!-- Contact points (jacks in circular pattern) -->
+    <g fill="#e8c040" stroke="#8a6020" stroke-width="0.5">
+      <circle cx="0" cy="-60" r="4"/>
+      <circle cx="42" cy="-42" r="4"/>
+      <circle cx="60" cy="0" r="4"/>
+      <circle cx="42" cy="42" r="4"/>
+      <circle cx="0" cy="60" r="4"/>
+      <circle cx="-42" cy="42" r="4"/>
+      <circle cx="-60" cy="0" r="4"/>
+      <circle cx="-42" cy="-42" r="4"/>
+    </g>
+    <!-- Electromagnet coil -->
+    <ellipse cx="0" cy="0" rx="25" ry="25" fill="#5a4020" stroke="#3a2010" stroke-width="2"/>
+    <ellipse cx="0" cy="0" rx="15" ry="15" fill="#8a6030"/>
+    <!-- Wiper arm -->
+    <line x1="15" y1="0" x2="65" y2="0" stroke="#c8a040" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="68" cy="0" r="5" fill="#e8c040"/>
+    <!-- Side mechanism -->
+    <rect x="82" y="-40" width="25" height="80" fill="#5a3818" rx="2" stroke="#3a2010" stroke-width="1"/>
+    <!-- Ratchet teeth on side -->
+    <g fill="#c8a040">
+      <polygon points="82,-35 92,-30 82,-25"/>
+      <polygon points="82,-18 92,-13 82,-8"/>
+      <polygon points="82,-1 92,4 82,9"/>
+      <polygon points="82,16 92,21 82,26"/>
+      <polygon points="82,33 92,38 82,43"/>
+    </g>
+    <!-- Wiring below machine -->
+    <g stroke="#c8a040" stroke-width="1.5" fill="none" opacity="0.7">
+      <path d="M -170 100 Q -170 130 -140 130 Q -80 130 0 128 Q 80 126 140 128 Q 160 130 170 100"/>
+      <path d="M -140 100 Q -140 118 -80 118 Q 0 116 80 116 Q 130 118 140 100"/>
+    </g>
+    <!-- Wires coming out to subscriber lines -->
+    <g stroke="#7a5020" stroke-width="2" opacity="0.6">
+      <line x1="-170" y1="105" x2="-180" y2="145"/>
+      <line x1="-130" y1="108" x2="-135" y2="145"/>
+      <line x1="-80" y1="110" x2="-80" y2="145"/>
+      <line x1="-30" y1="110" x2="-30" y2="145"/>
+      <line x1="20" y1="110" x2="20" y2="145"/>
+      <line x1="80" y1="110" x2="80" y2="145"/>
+      <line x1="130" y1="108" x2="135" y2="145"/>
+      <line x1="170" y1="105" x2="180" y2="145"/>
+    </g>
+    <text x="0" y="135" font-family="serif" font-size="10" fill="#c8b870" text-anchor="middle">Strowger Step-by-Step Automatic Selector</text>
+  </g>
+  <!-- Almon Strowger figure (inventor) on right -->
+  <g transform="translate(680, 240)">
+    <ellipse cx="0" cy="-70" rx="20" ry="20" fill="#d4a870"/>
+    <rect x="-18" y="-52" width="36" height="45" fill="#3a2a1a" rx="3"/>
+    <!-- Bowler hat -->
+    <rect x="-22" y="-90" width="44" height="8" fill="#1a1a1a" rx="1"/>
+    <rect x="-16" y="-118" width="32" height="30" fill="#222" rx="3"/>
+    <!-- Holding a diagram/patent drawing -->
+    <rect x="-35" y="-30" width="40" height="50" fill="#f5ead0" stroke="#8a6a30" stroke-width="1" transform="rotate(-15, -15, -5)"/>
+    <text x="-17" y="-16" font-family="serif" font-size="6" fill="#2a1a0a" transform="rotate(-15, -17, -16)">PATENT</text>
+    <text x="-17" y="-6" font-family="serif" font-size="6" fill="#2a1a0a" transform="rotate(-15, -17, -6)">#447,918</text>
+    <!-- Pointing at machine -->
+    <line x1="-18" y1="-40" x2="-60" y2="-20" stroke="#d4a870" stroke-width="5" stroke-linecap="round"/>
+    <text x="0" y="20" font-family="serif" font-size="9" fill="#c8b880" text-anchor="middle">A. Strowger</text>
+    <text x="0" y="32" font-family="serif" font-size="8" fill="#c8b880" text-anchor="middle">Undertaker&amp;Inventor</text>
+  </g>
+  <!-- Telephone dial on shelf (showing the new dial concept) -->
+  <g transform="translate(130, 200)">
+    <rect x="-50" y="-10" width="100" height="80" fill="#5a4020" rx="4" stroke="#3a2010" stroke-width="2"/>
+    <rect x="-42" y="-2" width="84" height="64" fill="#2a1a08" rx="2"/>
+    <!-- Rotary dial -->
+    <circle cx="0" cy="30" r="28" fill="#3a2a10" stroke="#c8a040" stroke-width="2"/>
+    <circle cx="0" cy="30" r="20" fill="#4a3820"/>
+    <!-- Finger holes -->
+    <g fill="#1a1008">
+      <circle cx="0" cy="6" r="5"/>
+      <circle cx="19" cy="14" r="5"/>
+      <circle cx="25" cy="34" r="5"/>
+      <circle cx="15" cy="52" r="5"/>
+      <circle cx="-5" cy="57" r="5"/>
+      <circle cx="-20" cy="50" r="5"/>
+      <circle cx="-25" cy="32" r="5"/>
+      <circle cx="-19" cy="14" r="5"/>
+      <circle cx="-8" cy="6" r="5"/>
+      <circle cx="8" cy="6" r="5"/>
+    </g>
+    <!-- Number labels around dial -->
+    <g font-family="monospace" font-size="6" fill="#c8a040" text-anchor="middle">
+      <text x="0" y="4">1</text>
+      <text x="16" y="11">2</text>
+      <text x="22" y="30">3</text>
+      <text x="13" y="50">4</text>
+      <text x="-4" y="55">5</text>
+      <text x="-19" y="49">6</text>
+      <text x="-22" y="30">7</text>
+      <text x="-15" y="11">8</text>
+      <text x="6" y="4">9</text>
+      <text x="-1" y="28">0</text>
+    </g>
+    <!-- Earpiece and mouthpiece on same unit -->
+    <ellipse cx="-32" cy="30" rx="8" ry="18" fill="#5a3818" stroke="#3a2010" stroke-width="1"/>
+    <ellipse cx="32" cy="30" rx="8" ry="18" fill="#5a3818" stroke="#3a2010" stroke-width="1"/>
+    <text x="0" y="88" font-family="serif" font-size="9" fill="#c8b880" text-anchor="middle">Dial Telephone</text>
+  </g>
+  <!-- Speech bubble from Strowger -->
+  <ellipse cx="550" cy="100" rx="120" ry="45" fill="#f5ead0" opacity="0.9" stroke="#8a6a30" stroke-width="1"/>
+  <polygon points="650,140 660,158 640,148" fill="#f5ead0"/>
+  <text x="550" y="88" font-family="serif" font-size="9" fill="#2a1a0a" text-anchor="middle">"No more operator</text>
+  <text x="550" y="102" font-family="serif" font-size="9" fill="#2a1a0a" text-anchor="middle">sending my calls to the</text>
+  <text x="550" y="116" font-family="serif" font-size="9" fill="#2a1a0a" text-anchor="middle">competition!"</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#2a1808" rx="6" opacity="0.8"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#f0d080" text-anchor="middle">1891</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#1a0800" opacity="0.8"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">Strowger Automatic Exchange · Dial Replaces Human Operator</text>
+</svg>

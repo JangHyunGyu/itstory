@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg1949" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0d1520"/>
+      <stop offset="100%" stop-color="#060d15"/>
+    </linearGradient>
+    <linearGradient id="memDrum" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a2a3a"/>
+      <stop offset="40%" stop-color="#2a4060"/>
+      <stop offset="100%" stop-color="#1a2a3a"/>
+    </linearGradient>
+    <linearGradient id="cpuGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a1a"/>
+      <stop offset="100%" stop-color="#0d2010"/>
+    </linearGradient>
+    <filter id="glow1949">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg1949)"/>
+
+  <!-- Title top -->
+  <text x="400" y="35" fill="#4da6ff" font-size="15" font-family="monospace" text-anchor="middle" font-weight="bold" filter="url(#glow1949)">EDSAC — Stored Program Architecture — 1949</text>
+
+  <!-- DELAY LINE MEMORY (left side) -->
+  <g transform="translate(40, 70)">
+    <text x="120" y="20" fill="#7acfff" font-size="13" font-family="monospace" text-anchor="middle" font-weight="bold">DELAY LINE MEMORY</text>
+    <text x="120" y="36" fill="#4a7aaa" font-size="10" font-family="monospace" text-anchor="middle">(Mercury Acoustic Delay Lines)</text>
+
+    <!-- Mercury tube representation -->
+    <g transform="translate(10, 50)">
+      <!-- Tube outer -->
+      <rect x="0" y="0" width="220" height="45" fill="#0d1a2a" rx="5" stroke="#2a4a6a" stroke-width="2"/>
+      <!-- Mercury -->
+      <rect x="5" y="5" width="210" height="35" fill="#1a3a5a" rx="3"/>
+      <!-- Signal waves in mercury -->
+      <g stroke="#4da6ff" stroke-width="1.5" fill="none" opacity="0.6">
+        <path d="M 10 22 Q 20 12 30 22 Q 40 32 50 22 Q 60 12 70 22 Q 80 32 90 22 Q 100 12 110 22 Q 120 32 130 22 Q 140 12 150 22 Q 160 32 170 22 Q 180 12 190 22 Q 200 32 210 22"/>
+      </g>
+      <!-- End transducers -->
+      <rect x="0" y="0" width="10" height="45" fill="#2a5a8a" rx="2"/>
+      <rect x="210" y="0" width="10" height="45" fill="#2a5a8a" rx="2"/>
+      <!-- Data labels floating above -->
+      <text x="30" y="-5" fill="#4da6ff" font-size="9" font-family="monospace">PROG</text>
+      <text x="110" y="-5" fill="#2ecc71" font-size="9" font-family="monospace">DATA</text>
+      <text x="175" y="-5" fill="#e74c3c" font-size="9" font-family="monospace">INSTR</text>
+    </g>
+
+    <!-- Multiple delay lines stacked -->
+    <g transform="translate(10, 105)">
+      <rect x="0" y="0" width="220" height="28" fill="#0d1a2a" rx="4" stroke="#1a3a5a" stroke-width="1.5"/>
+      <rect x="5" y="4" width="210" height="20" fill="#1a2a3a" rx="2"/>
+      <g stroke="#2a6a9a" stroke-width="1" fill="none" opacity="0.5">
+        <path d="M 10 14 Q 25 8 40 14 Q 55 20 70 14 Q 85 8 100 14 Q 115 20 130 14 Q 145 8 160 14 Q 175 20 190 14 Q 205 8 215 14"/>
+      </g>
+    </g>
+    <g transform="translate(10, 140)">
+      <rect x="0" y="0" width="220" height="28" fill="#0d1a2a" rx="4" stroke="#1a3a5a" stroke-width="1.5"/>
+      <rect x="5" y="4" width="210" height="20" fill="#1a2a3a" rx="2"/>
+      <g stroke="#2a6a9a" stroke-width="1" fill="none" opacity="0.5">
+        <path d="M 10 14 Q 25 20 40 14 Q 55 8 70 14 Q 85 20 100 14 Q 115 8 130 14 Q 145 20 160 14 Q 175 8 190 14 Q 205 20 215 14"/>
+      </g>
+    </g>
+    <g transform="translate(10, 175)">
+      <rect x="0" y="0" width="220" height="28" fill="#0d1a2a" rx="4" stroke="#1a3a5a" stroke-width="1.5"/>
+      <rect x="5" y="4" width="210" height="20" fill="#1a2a3a" rx="2"/>
+      <g stroke="#2a6a9a" stroke-width="1" fill="none" opacity="0.4">
+        <path d="M 10 14 Q 25 8 40 14 Q 55 20 70 14 Q 85 8 100 14 Q 115 20 130 14 Q 145 8 160 14 Q 175 20 190 14 Q 205 8 215 14"/>
+      </g>
+    </g>
+
+    <!-- Memory content annotation -->
+    <g transform="translate(10, 215)">
+      <rect x="0" y="0" width="220" height="100" fill="#070f18" rx="4" stroke="#1a3a5a" stroke-width="1"/>
+      <text x="110" y="16" fill="#7acfff" font-size="10" font-family="monospace" text-anchor="middle">Memory Contents</text>
+      <text x="10" y="32" fill="#2ecc71" font-size="9" font-family="monospace">0000: LOAD  #42</text>
+      <text x="10" y="46" fill="#2ecc71" font-size="9" font-family="monospace">0001: ADD   #67</text>
+      <text x="10" y="60" fill="#2ecc71" font-size="9" font-family="monospace">0002: STORE 200</text>
+      <text x="10" y="74" fill="#e67e22" font-size="9" font-family="monospace">0200: [DATA] 42</text>
+      <text x="10" y="88" fill="#e67e22" font-size="9" font-family="monospace">0201: [DATA] 67</text>
+    </g>
+  </g>
+
+  <!-- Central arrow - KEY INNOVATION -->
+  <g transform="translate(285, 180)" filter="url(#glow1949)">
+    <rect x="-2" y="0" width="80" height="6" fill="#ffd700" rx="3"/>
+    <polygon points="78,0 78,12 95,3" fill="#ffd700"/>
+    <text x="38" y="-8" fill="#ffd700" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">FETCH</text>
+    <rect x="-2" y="30" width="80" height="6" fill="#ff9944" rx="3"/>
+    <polygon points="78,30 78,42 95,36" fill="#ff9944"/>
+    <text x="38" y="55" fill="#ff9944" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">EXECUTE</text>
+
+    <!-- Key innovation label -->
+    <rect x="-20" y="70" width="120" height="50" fill="#1a1a0d" stroke="#ffd700" stroke-width="1.5" rx="4"/>
+    <text x="40" y="87" fill="#ffd700" font-size="10" font-family="monospace" text-anchor="middle">KEY INNOVATION:</text>
+    <text x="40" y="102" fill="#ffd700" font-size="9" font-family="monospace" text-anchor="middle">Program + Data</text>
+    <text x="40" y="116" fill="#ffd700" font-size="9" font-family="monospace" text-anchor="middle">in same memory!</text>
+  </g>
+
+  <!-- CPU Block -->
+  <g transform="translate(400, 60)">
+    <text x="170" y="20" fill="#2ecc71" font-size="13" font-family="monospace" text-anchor="middle" font-weight="bold">EDSAC CPU</text>
+
+    <rect x="60" y="30" width="220" height="200" fill="url(#cpuGrad)" rx="8" stroke="#2ecc71" stroke-width="2"/>
+
+    <!-- ALU -->
+    <rect x="80" y="50" width="90" height="60" fill="#0d200d" rx="4" stroke="#2ecc71" stroke-width="1.5"/>
+    <text x="125" y="75" fill="#2ecc71" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">ALU</text>
+    <text x="125" y="90" fill="#1a6a1a" font-size="9" font-family="monospace" text-anchor="middle">Arithmetic &amp;</text>
+    <text x="125" y="102" fill="#1a6a1a" font-size="9" font-family="monospace" text-anchor="middle">Logic Unit</text>
+
+    <!-- Control Unit -->
+    <rect x="185" y="50" width="80" height="60" fill="#0d200d" rx="4" stroke="#2ecc71" stroke-width="1.5"/>
+    <text x="225" y="75" fill="#2ecc71" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">CU</text>
+    <text x="225" y="90" fill="#1a6a1a" font-size="9" font-family="monospace" text-anchor="middle">Control</text>
+    <text x="225" y="102" fill="#1a6a1a" font-size="9" font-family="monospace" text-anchor="middle">Unit</text>
+
+    <!-- Registers -->
+    <g transform="translate(80, 125)">
+      <rect x="0" y="0" width="185" height="25" fill="#0a1a0a" rx="3" stroke="#1a5a1a" stroke-width="1"/>
+      <text x="92" y="16" fill="#2ecc71" font-size="9" font-family="monospace" text-anchor="middle">Accumulator: 0x1A2B</text>
+    </g>
+    <g transform="translate(80, 155)">
+      <rect x="0" y="0" width="185" height="25" fill="#0a1a0a" rx="3" stroke="#1a5a1a" stroke-width="1"/>
+      <text x="92" y="16" fill="#2ecc71" font-size="9" font-family="monospace" text-anchor="middle">Program Counter: 0002</text>
+    </g>
+    <g transform="translate(80, 185)">
+      <rect x="0" y="0" width="185" height="25" fill="#0a1a0a" rx="3" stroke="#1a5a1a" stroke-width="1"/>
+      <text x="92" y="16" fill="#2ecc71" font-size="9" font-family="monospace" text-anchor="middle">Instruction Reg: ADD</text>
+    </g>
+
+    <!-- Internal bus lines -->
+    <line x1="125" y1="110" x2="125" y2="125" stroke="#2ecc71" stroke-width="1.5"/>
+    <line x1="225" y1="110" x2="225" y2="125" stroke="#2ecc71" stroke-width="1"/>
+    <line x1="125" y1="150" x2="125" y2="155" stroke="#2ecc71" stroke-width="1.5"/>
+    <line x1="125" y1="180" x2="125" y2="185" stroke="#2ecc71" stroke-width="1.5"/>
+  </g>
+
+  <!-- No rewiring needed - annotation -->
+  <g transform="translate(420, 290)">
+    <rect x="0" y="0" width="340" height="60" fill="#0d1a0d" rx="5" stroke="#2ecc71" stroke-width="1" stroke-dasharray="5,3"/>
+    <text x="170" y="18" fill="#2ecc71" font-size="11" font-family="monospace" text-anchor="middle">Von Neumann Architecture</text>
+    <text x="170" y="35" fill="#1a7a1a" font-size="10" font-family="monospace" text-anchor="middle">No rewiring between programs!</text>
+    <text x="170" y="52" fill="#1a5a1a" font-size="10" font-family="monospace" text-anchor="middle">Load → Run → Load new program</text>
+  </g>
+
+  <!-- EDSAC output paper tape -->
+  <g transform="translate(50, 345)">
+    <rect x="0" y="0" width="300" height="40" fill="#e8d8b8" rx="3"/>
+    <rect x="0" y="5" width="300" height="30" fill="#f0e8d0" rx="2"/>
+    <!-- Sprocket holes -->
+    <g fill="#3a2810">
+      <circle cx="15" cy="20" r="4"/><circle cx="35" cy="20" r="4"/>
+      <circle cx="55" cy="20" r="4"/><circle cx="75" cy="20" r="4"/>
+      <circle cx="95" cy="20" r="4"/><circle cx="115" cy="20" r="4"/>
+      <circle cx="135" cy="20" r="4"/><circle cx="155" cy="20" r="4"/>
+      <circle cx="175" cy="20" r="4"/><circle cx="195" cy="20" r="4"/>
+      <circle cx="215" cy="20" r="4"/><circle cx="235" cy="20" r="4"/>
+      <circle cx="255" cy="20" r="4"/><circle cx="275" cy="20" r="4"/>
+      <circle cx="295" cy="20" r="4"/>
+    </g>
+    <text x="155" y="52" fill="#4a7aaa" font-size="10" font-family="monospace" text-anchor="middle">Paper Tape Input/Output</text>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="0" y="395" width="800" height="55" fill="#060d15" opacity="0.95"/>
+  <text x="400" y="420" fill="#4da6ff" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">EDSAC · 저장 프로그램 실행</text>
+  <text x="400" y="442" fill="#1e5a8a" font-size="12" font-family="Georgia, serif" text-anchor="middle">Electronic Delay Storage Automatic Calculator · Cambridge · 1949</text>
+</svg>

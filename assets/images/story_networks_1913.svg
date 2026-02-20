@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Government hearing room background -->
+  <rect width="800" height="450" fill="#e8dcc8"/>
+  <!-- Wood paneling walls -->
+  <rect x="0" y="0" width="800" height="360" fill="#a87848"/>
+  <g fill="#b88858" stroke="#7a5828" stroke-width="1">
+    <rect x="0" y="0" width="388" height="360"/>
+    <rect x="412" y="0" width="388" height="360"/>
+  </g>
+  <g stroke="#7a5828" stroke-width="0.7" opacity="0.5">
+    <line x1="0" y1="90" x2="388" y2="90"/>
+    <line x1="0" y1="180" x2="388" y2="180"/>
+    <line x1="0" y1="270" x2="388" y2="270"/>
+    <line x1="412" y1="90" x2="800" y2="90"/>
+    <line x1="412" y1="180" x2="800" y2="180"/>
+    <line x1="412" y1="270" x2="800" y2="270"/>
+  </g>
+  <!-- Doorway -->
+  <rect x="370" y="120" width="60" height="240" fill="#7a4a20" rx="3"/>
+  <rect x="377" y="128" width="46" height="228" fill="#8a5628" rx="2"/>
+  <!-- Floor -->
+  <rect x="0" y="355" width="800" height="95" fill="#c8a870"/>
+  <!-- Raised platform/judge's bench at front -->
+  <rect x="20" y="70" width="760" height="140" fill="#8a5a28" rx="5" stroke="#5a3a10" stroke-width="2"/>
+  <rect x="30" y="80" width="740" height="120" fill="#9a6a38"/>
+  <!-- US Seal on wall above bench -->
+  <circle cx="400" cy="45" r="35" fill="#c8b040" stroke="#8a7020" stroke-width="2"/>
+  <text x="400" y="40" font-family="serif" font-size="9" fill="#4a3010" text-anchor="middle">UNITED STATES</text>
+  <text x="400" y="52" font-family="serif" font-size="8" fill="#4a3010" text-anchor="middle">DEPARTMENT OF JUSTICE</text>
+  <!-- Government officials at bench -->
+  <g fill="#d4a870">
+    <ellipse cx="180" cy="145" rx="18" ry="18"/>
+    <ellipse cx="300" cy="140" rx="18" ry="18"/>
+    <ellipse cx="400" cy="138" rx="18" ry="18"/>
+    <ellipse cx="500" cy="140" rx="18" ry="18"/>
+    <ellipse cx="620" cy="145" rx="18" ry="18"/>
+  </g>
+  <g fill="#1a2a4a">
+    <rect x="163" y="160" width="34" height="40" rx="3"/>
+    <rect x="283" y="155" width="34" height="40" rx="3"/>
+    <rect x="383" y="153" width="34" height="40" rx="3"/>
+    <rect x="483" y="155" width="34" height="40" rx="3"/>
+    <rect x="603" y="160" width="34" height="40" rx="3"/>
+  </g>
+  <!-- Chairman with gavel -->
+  <line x1="400" y1="155" x2="415" y2="175" stroke="#8a5a28" stroke-width="5" stroke-linecap="round"/>
+  <!-- Microphone/hearing nameplate labels -->
+  <g fill="#f5ead0" font-family="serif" font-size="7" text-anchor="middle">
+    <rect x="155" y="195" width="50" height="12" fill="#2a1a0a" rx="1"/>
+    <text x="180" y="204" fill="#f0d890">A. KINGSBURY</text>
+    <rect x="370" y="195" width="60" height="12" fill="#2a1a0a" rx="1"/>
+    <text x="400" y="204" fill="#f0d890">U.S. GOV'T</text>
+    <rect x="575" y="195" width="60" height="12" fill="#2a1a0a" rx="1"/>
+    <text x="605" y="204" fill="#f0d890">ATT&amp;T COUNSEL</text>
+  </g>
+  <!-- AT&T representative table (lower) -->
+  <rect x="100" y="290" width="260" height="15" fill="#8a5a28" rx="2"/>
+  <rect x="115" y="302" width="8" height="55" fill="#6a3a18"/>
+  <rect x="340" y="302" width="8" height="55" fill="#6a3a18"/>
+  <!-- AT&T people at their table -->
+  <g transform="translate(200, 288)">
+    <ellipse cx="-30" cy="-12" rx="14" ry="14" fill="#d4a870"/>
+    <rect x="-38" y="0" width="18" height="25" fill="#1a2a4a" rx="2"/>
+    <ellipse cx="30" cy="-12" rx="14" ry="14" fill="#c8956a"/>
+    <rect x="22" y="0" width="18" height="25" fill="#2a1a3a" rx="2"/>
+    <!-- Large document (the agreement) in center -->
+    <rect x="-20" y="-18" width="40" height="50" fill="#f5ead0" stroke="#8a6a30" stroke-width="1"/>
+    <text x="0" y="-5" font-family="serif" font-size="6" fill="#2a1a0a" text-anchor="middle">KINGSBURY</text>
+    <text x="0" y="5" font-family="serif" font-size="6" fill="#2a1a0a" text-anchor="middle">COMMITMENT</text>
+    <text x="0" y="15" font-family="serif" font-size="6" fill="#2a1a0a" text-anchor="middle">1913</text>
+    <!-- Signature area -->
+    <line x1="-15" y1="25" x2="15" y2="25" stroke="#8a6a30" stroke-width="1"/>
+    <text x="0" y="35" font-family="monospace" font-size="5" fill="#4a3010" text-anchor="middle" font-style="italic">N.C. Kingsbury</text>
+  </g>
+  <!-- Network diagram on the hearing board wall -->
+  <rect x="440" y="230" width="320" height="120" fill="#f5ead0" rx="4" stroke="#8a6a30" stroke-width="1" opacity="0.9"/>
+  <text x="600" y="248" font-family="serif" font-size="9" font-weight="bold" fill="#2a1a0a" text-anchor="middle">TELEPHONE NETWORK - BEFORE</text>
+  <!-- Before: AT&T monopoly (all connected to AT&T) -->
+  <circle cx="560" cy="295" r="18" fill="#c82020" opacity="0.8"/>
+  <text x="560" y="299" font-family="serif" font-size="7" fill="white" text-anchor="middle">AT&amp;T</text>
+  <!-- Small companies disconnected -->
+  <circle cx="500" cy="260" r="8" fill="#888" opacity="0.6"/>
+  <circle cx="530" cy="320" r="8" fill="#888" opacity="0.6"/>
+  <circle cx="600" cy="260" r="8" fill="#888" opacity="0.6"/>
+  <circle cx="620" cy="320" r="8" fill="#888" opacity="0.6"/>
+  <!-- Only AT&T connected to AT&T hub -->
+  <line x1="540" y1="280" x2="508" y2="265" stroke="#c82020" stroke-width="2" opacity="0.5" stroke-dasharray="4,2"/>
+  <text x="600" y="342" font-family="serif" font-size="8" fill="#c82020" text-anchor="middle">Others disconnected!</text>
+  <!-- "AFTER" arrow + connected diagram -->
+  <!-- Arrows and protesters in audience area -->
+  <g fill="#c8956a">
+    <ellipse cx="560" cy="388" rx="10" ry="10"/>
+    <ellipse cx="600" cy="385" rx="10" ry="10"/>
+    <ellipse cx="640" cy="388" rx="10" ry="10"/>
+    <ellipse cx="680" cy="386" rx="10" ry="10"/>
+  </g>
+  <!-- Signs held by protesters/advocates -->
+  <rect x="540" y="360" width="40" height="22" fill="#f0e060" stroke="#8a6020" stroke-width="1"/>
+  <text x="560" y="372" font-family="serif" font-size="6" fill="#2a1a0a" text-anchor="middle">OPEN ACCESS</text>
+  <text x="560" y="380" font-family="serif" font-size="6" fill="#2a1a0a" text-anchor="middle">FOR ALL!</text>
+  <!-- Key agreement bullet points -->
+  <rect x="50" y="380" width="350" height="60" fill="#2a1a0a" rx="4" opacity="0.85"/>
+  <text x="225" y="398" font-family="serif" font-size="9" font-weight="bold" fill="#f0d080" text-anchor="middle">KINGSBURY COMMITMENT · 1913</text>
+  <text x="225" y="413" font-family="serif" font-size="8" fill="#c8b870" text-anchor="middle">✓ No more hostile acquisitions</text>
+  <text x="225" y="427" font-family="serif" font-size="8" fill="#c8b870" text-anchor="middle">✓ Interconnect independent companies</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#1a2a5a" rx="6" opacity="0.8"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#f0d080" text-anchor="middle">1913</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a1a3a" opacity="0.8"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">Kingsbury Commitment · AT&amp;T Must Open Network to Competitors</text>
+</svg>

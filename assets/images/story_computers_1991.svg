@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg1991" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1a"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </linearGradient>
+    <filter id="tuxGlow">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg1991)"/>
+
+  <!-- Tux penguin mascot (large, left) -->
+  <g transform="translate(60, 50)">
+    <!-- Body -->
+    <ellipse cx="100" cy="200" rx="80" ry="120" fill="#1a1a1a"/>
+    <!-- White belly -->
+    <ellipse cx="100" cy="220" rx="55" ry="90" fill="#f0f0f0"/>
+    <!-- Head -->
+    <ellipse cx="100" cy="70" rx="65" ry="70" fill="#1a1a1a"/>
+    <!-- Face white area -->
+    <ellipse cx="100" cy="90" rx="40" ry="45" fill="#f5e8b0"/>
+    <!-- Eyes -->
+    <ellipse cx="82" cy="68" rx="14" ry="16" fill="white"/>
+    <ellipse cx="118" cy="68" rx="14" ry="16" fill="white"/>
+    <circle cx="85" cy="70" r="8" fill="#1a1a1a"/>
+    <circle cx="121" cy="70" r="8" fill="#1a1a1a"/>
+    <!-- Eye shine -->
+    <circle cx="88" cy="66" r="3" fill="white"/>
+    <circle cx="124" cy="66" r="3" fill="white"/>
+    <!-- Beak -->
+    <polygon points="100,90 85,112 115,112" fill="#ff9900"/>
+    <line x1="85" y1="101" x2="115" y2="101" stroke="#cc6600" stroke-width="2"/>
+    <!-- Eyebrows (confident look) -->
+    <line x1="72" y1="56" x2="92" y2="60" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+    <line x1="108" y1="60" x2="128" y2="56" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+    <!-- Wings/flippers -->
+    <ellipse cx="30" cy="200" rx="25" ry="70" fill="#1a1a1a" transform="rotate(-15, 30, 200)"/>
+    <ellipse cx="170" cy="200" rx="25" ry="70" fill="#1a1a1a" transform="rotate(15, 170, 200)"/>
+    <!-- Feet -->
+    <ellipse cx="75" cy="315" rx="35" ry="15" fill="#ff9900"/>
+    <ellipse cx="125" cy="315" rx="35" ry="15" fill="#ff9900"/>
+    <!-- Toes -->
+    <ellipse cx="55" cy="322" rx="12" ry="8" fill="#ff9900"/>
+    <ellipse cx="75" cy="328" rx="12" ry="8" fill="#ff9900"/>
+    <ellipse cx="95" cy="322" rx="12" ry="8" fill="#ff9900"/>
+    <ellipse cx="105" cy="322" rx="12" ry="8" fill="#ff9900"/>
+    <ellipse cx="125" cy="328" rx="12" ry="8" fill="#ff9900"/>
+    <ellipse cx="145" cy="322" rx="12" ry="8" fill="#ff9900"/>
+    <!-- Name label -->
+    <text x="100" y="350" fill="#ffcc44" font-size="20" font-family="sans-serif" text-anchor="middle" font-weight="bold" filter="url(#tuxGlow)">Tux</text>
+    <text x="100" y="368" fill="#8888aa" font-size="11" font-family="sans-serif" text-anchor="middle">Linux Mascot</text>
+  </g>
+
+  <!-- Linus Torvalds figure at computer (center) -->
+  <g transform="translate(270, 130)">
+    <!-- Desk -->
+    <rect x="-20" y="180" width="240" height="15" fill="#2a1a05" rx="2"/>
+
+    <!-- Computer monitor (early 90s) -->
+    <rect x="20" y="50" width="200" height="150" fill="#2a2a1a" rx="6"/>
+    <rect x="30" y="58" width="180" height="120" fill="#0d1a0d" rx="4"/>
+    <!-- Screen - green terminal -->
+    <rect x="35" y="63" width="170" height="110" fill="#001500" rx="2"/>
+
+    <!-- Usenet post -->
+    <text x="40" y="83" fill="#00cc00" font-size="8" font-family="monospace">From: torvalds@klaava.Helsinki.FI</text>
+    <text x="40" y="96" fill="#009900" font-size="8" font-family="monospace">Newsgroups: comp.os.minix</text>
+    <text x="40" y="109" fill="#009900" font-size="8" font-family="monospace">Date: 25 Aug 1991</text>
+    <text x="40" y="122" fill="#00cc00" font-size="8" font-family="monospace">Subject: What would you like</text>
+    <text x="40" y="135" fill="#00cc00" font-size="8" font-family="monospace">to see most in minix?</text>
+    <text x="40" y="152" fill="#008800" font-size="7" font-family="monospace">"just a hobby, won't be</text>
+    <text x="40" y="163" fill="#008800" font-size="7" font-family="monospace">big and professional..."</text>
+
+    <!-- Monitor base -->
+    <rect x="95" y="198" width="60" height="10" fill="#1a1a0a" rx="2"/>
+    <rect x="75" y="207" width="100" height="8" fill="#1a1a0a" rx="2"/>
+
+    <!-- Keyboard -->
+    <rect x="20" y="215" width="200" height="40" fill="#2a2a1a" rx="3"/>
+    <g fill="#383820" stroke="#282810" stroke-width="0.5">
+      <rect x="28" y="220" width="10" height="8" rx="1"/><rect x="42" y="220" width="10" height="8" rx="1"/>
+      <rect x="56" y="220" width="10" height="8" rx="1"/><rect x="70" y="220" width="10" height="8" rx="1"/>
+      <rect x="84" y="220" width="10" height="8" rx="1"/><rect x="98" y="220" width="10" height="8" rx="1"/>
+      <rect x="112" y="220" width="10" height="8" rx="1"/><rect x="126" y="220" width="10" height="8" rx="1"/>
+      <rect x="140" y="220" width="10" height="8" rx="1"/><rect x="154" y="220" width="10" height="8" rx="1"/>
+      <rect x="168" y="220" width="10" height="8" rx="1"/><rect x="182" y="220" width="10" height="8" rx="1"/>
+      <rect x="28" y="232" width="10" height="8" rx="1"/><rect x="42" y="232" width="10" height="8" rx="1"/>
+      <rect x="56" y="232" width="10" height="8" rx="1"/><rect x="70" y="232" width="10" height="8" rx="1"/>
+      <rect x="84" y="232" width="10" height="8" rx="1"/><rect x="98" y="232" width="10" height="8" rx="1"/>
+      <rect x="112" y="232" width="10" height="8" rx="1"/><rect x="126" y="232" width="10" height="8" rx="1"/>
+      <rect x="140" y="232" width="10" height="8" rx="1"/><rect x="154" y="232" width="10" height="8" rx="1"/>
+      <rect x="75" y="244" width="100" height="8" rx="1"/>
+    </g>
+  </g>
+
+  <!-- Linus figure -->
+  <g transform="translate(360, 180)">
+    <!-- Body -->
+    <rect x="-16" y="35" width="32" height="65" fill="#2a3a5a" rx="2"/>
+    <rect x="-10" y="32" width="20" height="10" fill="#c8c0a0"/>
+    <!-- Head -->
+    <ellipse cx="0" cy="20" rx="16" ry="18" fill="#d0aa80"/>
+    <!-- Hair (Finnish, dark) -->
+    <ellipse cx="0" cy="7" rx="16" ry="10" fill="#3a2a18"/>
+    <!-- Eyes -->
+    <circle cx="-5" cy="20" r="2.5" fill="#1a1000"/>
+    <circle cx="5" cy="20" r="2.5" fill="#1a1000"/>
+    <!-- Arm typing -->
+    <line x1="-16" y1="55" x2="-45" y2="62" stroke="#d0aa80" stroke-width="6" stroke-linecap="round"/>
+    <line x1="16" y1="55" x2="45" y2="55" stroke="#d0aa80" stroke-width="6" stroke-linecap="round"/>
+    <text x="0" y="118" fill="#aaaacc" font-size="10" font-family="monospace" text-anchor="middle">Linus Torvalds</text>
+    <text x="0" y="131" fill="#6688aa" font-size="9" font-family="monospace" text-anchor="middle">Helsinki, Finland</text>
+  </g>
+
+  <!-- Open source license / GPL document (right side) -->
+  <g transform="translate(540, 50)">
+    <rect x="0" y="0" width="240" height="180" fill="#f5f0e8" rx="5" transform="rotate(-2, 120, 90)"/>
+    <rect x="0" y="0" width="240" height="180" fill="#f8f5ec" rx="5"/>
+    <rect x="10" y="8" width="220" height="18" fill="#cc0000" rx="2"/>
+    <text x="120" y="21" fill="white" font-size="11" font-family="sans-serif" text-anchor="middle" font-weight="bold">GNU GENERAL PUBLIC LICENSE</text>
+    <text x="120" y="38" fill="#333333" font-size="9" font-family="sans-serif" text-anchor="middle">Version 2, June 1991</text>
+    <line x1="10" y1="43" x2="230" y2="43" stroke="#aaaaaa" stroke-width="0.5"/>
+    <text x="15" y="58" fill="#333333" font-size="8" font-family="monospace">Copyright (C) 1989, 1991</text>
+    <text x="15" y="70" fill="#333333" font-size="8" font-family="monospace">Free Software Foundation</text>
+    <line x1="10" y1="76" x2="230" y2="76" stroke="#aaaaaa" stroke-width="0.5"/>
+    <text x="15" y="92" fill="#333333" font-size="8" font-family="monospace">You may copy, distribute</text>
+    <text x="15" y="104" fill="#333333" font-size="8" font-family="monospace">and/or modify this software</text>
+    <text x="15" y="116" fill="#333333" font-size="8" font-family="monospace">under the terms of the GNU</text>
+    <text x="15" y="128" fill="#333333" font-size="8" font-family="monospace">General Public License as</text>
+    <text x="15" y="140" fill="#333333" font-size="8" font-family="monospace">published by the Free Software</text>
+    <text x="15" y="152" fill="#333333" font-size="8" font-family="monospace">Foundation...</text>
+    <text x="15" y="168" fill="#cc0000" font-size="9" font-family="sans-serif" font-weight="bold">Open Source · Free to all</text>
+  </g>
+
+  <!-- Linux kernel stats -->
+  <g transform="translate(540, 250)">
+    <rect x="0" y="0" width="240" height="165" fill="#080d10" rx="5" stroke="#1a4a2a" stroke-width="1.5"/>
+    <text x="120" y="22" fill="#44cc44" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">Linux Kernel 0.01</text>
+    <line x1="10" y1="28" x2="230" y2="28" stroke="#1a4a2a" stroke-width="0.5"/>
+
+    <text x="15" y="48" fill="#33aa33" font-size="10" font-family="monospace">Date: Sept 17, 1991</text>
+    <text x="15" y="65" fill="#33aa33" font-size="10" font-family="monospace">Lines of code: ~10,000</text>
+    <text x="15" y="82" fill="#33aa33" font-size="10" font-family="monospace">License: GPLv2</text>
+    <text x="15" y="99" fill="#33aa33" font-size="10" font-family="monospace">Arch: x86 only</text>
+    <text x="15" y="116" fill="#33aa33" font-size="10" font-family="monospace">Today: 30+ million LOC</text>
+    <text x="15" y="133" fill="#33aa33" font-size="10" font-family="monospace">Powers: 97% of servers</text>
+    <text x="15" y="150" fill="#1a8a1a" font-size="10" font-family="monospace">Android, IoT, supercomputers</text>
+  </g>
+
+  <!-- Open source symbol (flying with Tux) -->
+  <g transform="translate(240, 40)">
+    <circle cx="0" cy="0" r="22" fill="none" stroke="#44cc44" stroke-width="2.5"/>
+    <path d="M -15 -10 L 0 -20 L 15 -10 L 8 5 L -8 5 Z" fill="none" stroke="#44cc44" stroke-width="2"/>
+    <text x="0" y="38" fill="#44cc44" font-size="10" font-family="monospace" text-anchor="middle">Open Source</text>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="0" y="400" width="800" height="50" fill="#050810" opacity="0.97"/>
+  <text x="400" y="422" fill="#44cc44" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">리눅스 커널 · 오픈소스의 씨앗</text>
+  <text x="400" y="442" fill="#1a8a1a" font-size="12" font-family="Georgia, serif" text-anchor="middle">Linus Torvalds · Linux Kernel 0.01 · "just a hobby" · GNU GPLv2 · 1991</text>
+</svg>

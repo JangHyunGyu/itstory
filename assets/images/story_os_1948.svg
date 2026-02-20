@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background: dark lab at night -->
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <!-- Floor -->
+  <rect x="0" y="340" width="800" height="110" fill="#16213e"/>
+
+  <!-- Room walls with faint grid lines suggesting valve panels -->
+  <line x1="0" y1="340" x2="800" y2="340" stroke="#0f3460" stroke-width="2"/>
+
+  <!-- Manchester Baby CRT tube panel (left) -->
+  <rect x="60" y="80" width="260" height="240" rx="6" fill="#0d1b3e" stroke="#2a4a8a" stroke-width="2"/>
+  <!-- CRT screen -->
+  <rect x="90" y="100" width="200" height="160" rx="4" fill="#001a00" stroke="#00aa44" stroke-width="2"/>
+  <!-- Phosphor dots on screen (stored program memory visualization) -->
+  <g fill="#00ff66" opacity="0.8">
+    <!-- Row 1 -->
+    <rect x="100" y="110" width="6" height="6" rx="1"/>
+    <rect x="114" y="110" width="6" height="6" rx="1"/>
+    <rect x="142" y="110" width="6" height="6" rx="1"/>
+    <rect x="170" y="110" width="6" height="6" rx="1"/>
+    <rect x="184" y="110" width="6" height="6" rx="1"/>
+    <rect x="212" y="110" width="6" height="6" rx="1"/>
+    <rect x="268" y="110" width="6" height="6" rx="1"/>
+    <!-- Row 2 -->
+    <rect x="100" y="124" width="6" height="6" rx="1"/>
+    <rect x="128" y="124" width="6" height="6" rx="1"/>
+    <rect x="156" y="124" width="6" height="6" rx="1"/>
+    <rect x="184" y="124" width="6" height="6" rx="1"/>
+    <rect x="226" y="124" width="6" height="6" rx="1"/>
+    <rect x="254" y="124" width="6" height="6" rx="1"/>
+    <!-- Row 3 -->
+    <rect x="114" y="138" width="6" height="6" rx="1"/>
+    <rect x="142" y="138" width="6" height="6" rx="1"/>
+    <rect x="170" y="138" width="6" height="6" rx="1"/>
+    <rect x="198" y="138" width="6" height="6" rx="1"/>
+    <rect x="240" y="138" width="6" height="6" rx="1"/>
+    <rect x="268" y="138" width="6" height="6" rx="1"/>
+    <!-- Row 4 -->
+    <rect x="100" y="152" width="6" height="6" rx="1"/>
+    <rect x="128" y="152" width="6" height="6" rx="1"/>
+    <rect x="170" y="152" width="6" height="6" rx="1"/>
+    <rect x="212" y="152" width="6" height="6" rx="1"/>
+    <rect x="254" y="152" width="6" height="6" rx="1"/>
+    <!-- Row 5 -->
+    <rect x="100" y="166" width="6" height="6" rx="1"/>
+    <rect x="156" y="166" width="6" height="6" rx="1"/>
+    <rect x="184" y="166" width="6" height="6" rx="1"/>
+    <rect x="226" y="166" width="6" height="6" rx="1"/>
+    <rect x="268" y="166" width="6" height="6" rx="1"/>
+    <!-- Row 6 -->
+    <rect x="114" y="180" width="6" height="6" rx="1"/>
+    <rect x="142" y="180" width="6" height="6" rx="1"/>
+    <rect x="198" y="180" width="6" height="6" rx="1"/>
+    <rect x="240" y="180" width="6" height="6" rx="1"/>
+  </g>
+  <!-- Screen label -->
+  <text x="190" y="278" text-anchor="middle" font-family="monospace" font-size="11" fill="#00aa44">CRT MEMORY DISPLAY</text>
+
+  <!-- Control panel dials and switches below screen -->
+  <rect x="90" y="270" width="200" height="38" rx="3" fill="#0a1530" stroke="#1a3060" stroke-width="1"/>
+  <circle cx="115" cy="289" r="9" fill="#1a3060" stroke="#2a5090" stroke-width="1.5"/>
+  <circle cx="115" cy="289" r="4" fill="#3060c0"/>
+  <circle cx="145" cy="289" r="9" fill="#1a3060" stroke="#2a5090" stroke-width="1.5"/>
+  <circle cx="145" cy="289" r="4" fill="#3060c0"/>
+  <circle cx="175" cy="289" r="9" fill="#1a3060" stroke="#2a5090" stroke-width="1.5"/>
+  <circle cx="175" cy="289" r="4" fill="#c04030"/>
+  <!-- Toggle switches -->
+  <rect x="200" y="281" width="8" height="14" rx="2" fill="#333"/>
+  <rect x="201" y="281" width="6" height="6" rx="1" fill="#00ff44"/>
+  <rect x="215" y="281" width="8" height="14" rx="2" fill="#333"/>
+  <rect x="216" y="281" width="6" height="6" rx="1" fill="#00ff44"/>
+  <rect x="230" y="281" width="8" height="14" rx="2" fill="#333"/>
+  <rect x="231" y="287" width="6" height="6" rx="1" fill="#444"/>
+  <rect x="245" y="281" width="8" height="14" rx="2" fill="#333"/>
+  <rect x="246" y="281" width="6" height="6" rx="1" fill="#00ff44"/>
+  <rect x="260" y="281" width="8" height="14" rx="2" fill="#333"/>
+  <rect x="261" y="287" width="6" height="6" rx="1" fill="#444"/>
+
+  <!-- Panel label -->
+  <text x="190" y="74" text-anchor="middle" font-family="monospace" font-size="13" fill="#4488cc" font-weight="bold">MANCHESTER BABY</text>
+  <text x="190" y="90" text-anchor="middle" font-family="monospace" font-size="10" fill="#336699">S.S.E.M. — 1948</text>
+
+  <!-- Valve tubes (right side of machine) -->
+  <rect x="340" y="100" width="180" height="200" rx="4" fill="#0d1b3e" stroke="#2a4a8a" stroke-width="2"/>
+  <text x="430" y="94" text-anchor="middle" font-family="monospace" font-size="11" fill="#4488cc">VALVE RACKS</text>
+  <!-- Tube shapes -->
+  <g fill="#1a3050" stroke="#3a6090" stroke-width="1">
+    <ellipse cx="370" cy="140" rx="12" ry="22"/>
+    <ellipse cx="400" cy="140" rx="12" ry="22"/>
+    <ellipse cx="430" cy="140" rx="12" ry="22"/>
+    <ellipse cx="460" cy="140" rx="12" ry="22"/>
+    <ellipse cx="490" cy="140" rx="12" ry="22"/>
+    <ellipse cx="370" cy="190" rx="12" ry="22"/>
+    <ellipse cx="400" cy="190" rx="12" ry="22"/>
+    <ellipse cx="430" cy="190" rx="12" ry="22"/>
+    <ellipse cx="460" cy="190" rx="12" ry="22"/>
+    <ellipse cx="490" cy="190" rx="12" ry="22"/>
+    <ellipse cx="370" cy="240" rx="12" ry="22"/>
+    <ellipse cx="400" cy="240" rx="12" ry="22"/>
+    <ellipse cx="430" cy="240" rx="12" ry="22"/>
+    <ellipse cx="460" cy="240" rx="12" ry="22"/>
+    <ellipse cx="490" cy="240" rx="12" ry="22"/>
+  </g>
+  <!-- Glowing filaments in tubes -->
+  <g fill="none" stroke="#ff9922" stroke-width="1" opacity="0.7">
+    <line x1="370" y1="128" x2="370" y2="152"/>
+    <line x1="400" y1="128" x2="400" y2="152"/>
+    <line x1="430" y1="128" x2="430" y2="152"/>
+    <line x1="460" y1="128" x2="460" y2="152"/>
+    <line x1="490" y1="128" x2="490" y2="152"/>
+    <line x1="370" y1="178" x2="370" y2="202"/>
+    <line x1="430" y1="178" x2="430" y2="202"/>
+    <line x1="490" y1="178" x2="490" y2="202"/>
+    <line x1="400" y1="228" x2="400" y2="252"/>
+    <line x1="460" y1="228" x2="460" y2="252"/>
+  </g>
+
+  <!-- Bootstrap flow arrows -->
+  <g fill="none" stroke="#00cc66" stroke-width="2">
+    <!-- Arrow from panel to machine -->
+    <path d="M 325 180 L 340 180" marker-end="url(#arr)"/>
+  </g>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#00cc66"/>
+    </marker>
+  </defs>
+
+  <!-- Researcher silhouette -->
+  <ellipse cx="600" cy="200" rx="22" ry="22" fill="#2a3a5a"/>
+  <rect x="578" y="222" width="44" height="80" rx="6" fill="#1e2d4a"/>
+  <rect x="556" y="240" width="22" height="10" rx="3" fill="#1e2d4a"/>
+  <rect x="622" y="240" width="22" height="10" rx="3" fill="#1e2d4a"/>
+  <!-- Notepad in hand -->
+  <rect x="622" y="240" width="18" height="24" rx="2" fill="#f5f0e0" stroke="#aaa" stroke-width="1"/>
+  <line x1="627" y1="246" x2="636" y2="246" stroke="#888" stroke-width="1"/>
+  <line x1="627" y1="250" x2="636" y2="250" stroke="#888" stroke-width="1"/>
+  <line x1="627" y1="254" x2="636" y2="254" stroke="#888" stroke-width="1"/>
+
+  <!-- Boot sequence label -->
+  <rect x="540" y="310" width="220" height="58" rx="6" fill="#0a1020" stroke="#1a4060" stroke-width="1.5"/>
+  <text x="650" y="328" text-anchor="middle" font-family="monospace" font-size="11" fill="#00cc66">BOOTSTRAP SEQUENCE</text>
+  <text x="650" y="344" text-anchor="middle" font-family="monospace" font-size="10" fill="#008844">LOAD → EXECUTE → LOOP</text>
+  <text x="650" y="359" text-anchor="middle" font-family="monospace" font-size="10" fill="#006633">17 June 1948 · 52 min</text>
+
+  <!-- Title strip at bottom -->
+  <rect x="0" y="410" width="800" height="40" fill="#0d1b3e" opacity="0.9"/>
+  <text x="400" y="432" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#7ab3e0" font-weight="bold">Manchester Baby — 저장 프로그램 부트스트랩 최초 증명</text>
+
+  <!-- Glow effect on screen -->
+  <ellipse cx="190" cy="180" rx="90" ry="70" fill="#00ff66" opacity="0.03"/>
+</svg>

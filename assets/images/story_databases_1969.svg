@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#1a1a2e"/>
+
+  <!-- Title banner -->
+  <rect x="0" y="0" width="800" height="60" fill="#16213e" opacity="0.95"/>
+  <rect x="0" y="0" width="800" height="60" fill="none" stroke="#0f3460" stroke-width="2"/>
+  <text x="400" y="38" font-family="Arial, sans-serif" font-size="20" fill="#e94560" text-anchor="middle" font-weight="bold">IDS 네트워크 모델 · Charles Bachman · 1969</text>
+
+  <!-- Network graph visualization -->
+  <!-- Edges first (behind nodes) -->
+  <defs>
+    <marker id="arrow-net" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#e94560"/>
+    </marker>
+    <marker id="arrow-net2" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0f3460"/>
+    </marker>
+  </defs>
+
+  <!-- Complex network edges -->
+  <!-- CUSTOMER to ORDER -->
+  <line x1="200" y1="180" x2="340" y2="165" stroke="#e94560" stroke-width="2" marker-end="url(#arrow-net)"/>
+  <line x1="340" y1="175" x2="205" y2="190" stroke="#0f3460" stroke-width="1.5" marker-end="url(#arrow-net2)"/>
+
+  <!-- ORDER to PRODUCT -->
+  <line x1="420" y1="155" x2="550" y2="170" stroke="#e94560" stroke-width="2" marker-end="url(#arrow-net)"/>
+  <line x1="550" y1="180" x2="425" y2="165" stroke="#0f3460" stroke-width="1.5" marker-end="url(#arrow-net2)"/>
+
+  <!-- PRODUCT to SUPPLIER -->
+  <line x1="580" y1="220" x2="620" y2="310" stroke="#e94560" stroke-width="2" marker-end="url(#arrow-net)"/>
+
+  <!-- CUSTOMER to INVOICE -->
+  <line x1="200" y1="220" x2="330" y2="310" stroke="#e94560" stroke-width="2" marker-end="url(#arrow-net)"/>
+
+  <!-- ORDER to INVOICE -->
+  <line x1="380" y1="200" x2="360" y2="305" stroke="#e94560" stroke-width="2" marker-end="url(#arrow-net)"/>
+
+  <!-- INVOICE to PRODUCT (many-to-many link) -->
+  <path d="M 400 330 Q 500 350 560 240" stroke="#53d8fb" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arrow-net)"/>
+
+  <!-- SUPPLIER to ORDER (backward link) -->
+  <path d="M 650 300 Q 680 200 440 160" stroke="#53d8fb" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arrow-net)"/>
+
+  <!-- WAREHOUSE to PRODUCT -->
+  <line x1="680" y1="180" x2="605" y2="190" stroke="#e94560" stroke-width="2" marker-end="url(#arrow-net)"/>
+
+  <!-- CUSTOMER to WAREHOUSE -->
+  <path d="M 250 170 Q 400 100 660 170" stroke="#53d8fb" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+
+  <!-- Nodes -->
+  <!-- CUSTOMER node -->
+  <circle cx="200" cy="200" r="48" fill="#0f3460" stroke="#e94560" stroke-width="3"/>
+  <text x="200" y="196" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">CUSTOMER</text>
+  <text x="200" y="212" font-family="monospace" font-size="9" fill="#53d8fb" text-anchor="middle">id, name</text>
+  <text x="200" y="224" font-family="monospace" font-size="9" fill="#53d8fb" text-anchor="middle">address</text>
+
+  <!-- ORDER node -->
+  <circle cx="380" cy="175" r="44" fill="#16213e" stroke="#e94560" stroke-width="3"/>
+  <text x="380" y="171" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">ORDER</text>
+  <text x="380" y="187" font-family="monospace" font-size="9" fill="#53d8fb" text-anchor="middle">order_id</text>
+  <text x="380" y="199" font-family="monospace" font-size="9" fill="#53d8fb" text-anchor="middle">date, total</text>
+
+  <!-- PRODUCT node -->
+  <circle cx="575" cy="200" r="44" fill="#0f3460" stroke="#53d8fb" stroke-width="3"/>
+  <text x="575" y="196" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">PRODUCT</text>
+  <text x="575" y="212" font-family="monospace" font-size="9" fill="#53d8fb" text-anchor="middle">prod_id</text>
+  <text x="575" y="224" font-family="monospace" font-size="9" fill="#53d8fb" text-anchor="middle">name, price</text>
+
+  <!-- INVOICE node -->
+  <circle cx="360" cy="330" r="40" fill="#16213e" stroke="#e94560" stroke-width="3"/>
+  <text x="360" y="326" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">INVOICE</text>
+  <text x="360" y="342" font-family="monospace" font-size="9" fill="#53d8fb" text-anchor="middle">inv#, amount</text>
+
+  <!-- SUPPLIER node -->
+  <circle cx="650" cy="320" r="40" fill="#0f3460" stroke="#53d8fb" stroke-width="3"/>
+  <text x="650" y="316" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">SUPPLIER</text>
+  <text x="650" y="332" font-family="monospace" font-size="9" fill="#53d8fb" text-anchor="middle">sup_id, name</text>
+
+  <!-- WAREHOUSE node -->
+  <circle cx="680" cy="165" r="36" fill="#16213e" stroke="#e94560" stroke-width="2"/>
+  <text x="680" y="161" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle" font-weight="bold">WAREHOUSE</text>
+  <text x="680" y="177" font-family="monospace" font-size="8" fill="#53d8fb" text-anchor="middle">location</text>
+
+  <!-- IDS label box -->
+  <rect x="30" y="330" width="160" height="50" rx="8" fill="#0f3460" stroke="#e94560" stroke-width="2"/>
+  <text x="110" y="352" font-family="Arial, sans-serif" font-size="11" fill="#e94560" text-anchor="middle" font-weight="bold">IDS Network Model</text>
+  <text x="110" y="368" font-family="Arial, sans-serif" font-size="9" fill="#53d8fb" text-anchor="middle">Many-to-Many 관계</text>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="390" width="800" height="60" fill="#0f3460" opacity="0.9"/>
+  <text x="400" y="415" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">레코드들이 웹처럼 서로 연결 · 하나의 부품이 여러 제품에 사용 가능</text>
+  <text x="400" y="438" font-family="Arial, sans-serif" font-size="11" fill="#53d8fb" text-anchor="middle">Charles Bachman · IDS (Integrated Data Store) · Graph / Network Model</text>
+</svg>

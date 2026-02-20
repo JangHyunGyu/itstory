@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Bell Labs / MIT office background -->
+  <rect width="800" height="450" fill="#e8edf5"/>
+  <!-- Floor -->
+  <rect x="0" y="370" width="800" height="80" fill="#c8c0a8"/>
+  <!-- Chalkboard on back wall -->
+  <rect x="80" y="30" width="640" height="280" fill="#2a3a2a" rx="5" stroke="#5a4a30" stroke-width="3"/>
+  <rect x="92" y="42" width="616" height="256" fill="#384838"/>
+  <!-- Chalk writings: Information Theory equations and diagrams -->
+  <!-- Shannon's formula: C = B log2(1 + S/N) -->
+  <text x="200" y="78" font-family="serif" font-size="16" font-style="italic" fill="#e8e8d0">C = B · log₂(1 + S/N)</text>
+  <text x="192" y="95" font-family="serif" font-size="9" fill="#b0c0a0">Shannon-Hartley theorem: channel capacity</text>
+  <!-- H = -Σ p(x) log p(x) -->
+  <text x="200" y="130" font-family="serif" font-size="14" font-style="italic" fill="#e8e8d0">H = -Σ pᵢ log₂ pᵢ</text>
+  <text x="192" y="148" font-family="serif" font-size="9" fill="#b0c0a0">Entropy: average information per symbol</text>
+  <!-- Channel model diagram -->
+  <g transform="translate(480, 150)">
+    <!-- Source -->
+    <rect x="-170" y="-30" width="60" height="40" fill="#4a6a4a" rx="3"/>
+    <text x="-140" y="-8" font-family="sans-serif" font-size="9" fill="#e8f0e8" text-anchor="middle">Source</text>
+    <!-- Encoder -->
+    <rect x="-90" y="-30" width="60" height="40" fill="#4a4a6a" rx="3"/>
+    <text x="-60" y="-8" font-family="sans-serif" font-size="9" fill="#e8e8f0" text-anchor="middle">Encoder</text>
+    <!-- Channel -->
+    <rect x="-10" y="-30" width="70" height="40" fill="#6a3a3a" rx="3"/>
+    <text x="25" y="-12" font-family="sans-serif" font-size="8" fill="#f0e0e0" text-anchor="middle">Channel</text>
+    <text x="25" y="2" font-family="sans-serif" font-size="7" fill="#e0c0c0" text-anchor="middle">+Noise N</text>
+    <!-- Decoder -->
+    <rect x="80" y="-30" width="60" height="40" fill="#4a4a6a" rx="3"/>
+    <text x="110" y="-8" font-family="sans-serif" font-size="9" fill="#e8e8f0" text-anchor="middle">Decoder</text>
+    <!-- Destination -->
+    <rect x="160" y="-30" width="65" height="40" fill="#4a6a4a" rx="3"/>
+    <text x="192" y="-8" font-family="sans-serif" font-size="9" fill="#e8f0e8" text-anchor="middle">Destination</text>
+    <!-- Arrows between boxes -->
+    <g fill="#e8d8a0" stroke="none">
+      <polygon points="-90,-8 -102,-4 -102,-12"/>
+      <polygon points="-10,-8 -22,-4 -22,-12"/>
+      <polygon points="80,-8 68,-4 68,-12"/>
+      <polygon points="160,-8 148,-4 148,-12"/>
+    </g>
+    <!-- Lines -->
+    <g stroke="#e8d8a0" stroke-width="1.5">
+      <line x1="-110" y1="-10" x2="-102" y2="-10"/>
+      <line x1="-30" y1="-10" x2="-22" y2="-10"/>
+      <line x1="70" y1="-10" x2="68" y2="-10"/>
+      <line x1="140" y1="-10" x2="148" y2="-10"/>
+    </g>
+    <!-- Noise arrow (squiggly) coming in from top -->
+    <path d="M 25 -50 Q 20 -40 25 -30" stroke="#ff8060" stroke-width="2" fill="none" stroke-dasharray="3,2"/>
+    <text x="25" y="-55" font-family="sans-serif" font-size="8" fill="#ff8060" text-anchor="middle">Noise</text>
+    <!-- Labels -->
+    <text x="25" y="30" font-family="serif" font-size="9" fill="#c8d0b8" text-anchor="middle">Shannon Channel Model</text>
+  </g>
+  <!-- Bit diagram -->
+  <g transform="translate(200, 220)">
+    <text x="0" y="0" font-family="monospace" font-size="13" fill="#c8e8a0">0  1  0  0  1  1  0  1</text>
+    <text x="0" y="20" font-family="serif" font-size="9" fill="#90a880">8 bits = 1 byte of information</text>
+    <!-- Binary representation as blocks -->
+    <g fill="#c8e8a0">
+      <rect x="0" y="28" width="20" height="20" rx="2"/>
+      <rect x="26" y="28" width="20" height="20" fill="#f0f0a0" rx="2"/>
+      <rect x="52" y="28" width="20" height="20" rx="2"/>
+      <rect x="78" y="28" width="20" height="20" rx="2"/>
+      <rect x="104" y="28" width="20" height="20" fill="#f0f0a0" rx="2"/>
+      <rect x="130" y="28" width="20" height="20" fill="#f0f0a0" rx="2"/>
+      <rect x="156" y="28" width="20" height="20" rx="2"/>
+      <rect x="182" y="28" width="20" height="20" fill="#f0f0a0" rx="2"/>
+    </g>
+    <g font-family="monospace" font-size="9" fill="#1a2a1a" text-anchor="middle">
+      <text x="10" y="43">0</text>
+      <text x="36" y="43">1</text>
+      <text x="62" y="43">0</text>
+      <text x="88" y="43">0</text>
+      <text x="114" y="43">1</text>
+      <text x="140" y="43">1</text>
+      <text x="166" y="43">0</text>
+      <text x="192" y="43">1</text>
+    </g>
+    <text x="0" y="70" font-family="serif" font-size="8" fill="#90a880">The "bit" - coined by Shannon, 1948</text>
+  </g>
+  <!-- Shannon figure at chalkboard -->
+  <g transform="translate(680, 250)">
+    <!-- Person -->
+    <ellipse cx="0" cy="-80" rx="22" ry="22" fill="#d4a870"/>
+    <rect x="-18" y="-60" width="36" height="50" fill="#2a3a2a" rx="3"/>
+    <!-- Lab coat look -->
+    <rect x="-20" y="-60" width="8" height="50" fill="#e8e8e8" rx="2"/>
+    <rect x="12" y="-60" width="8" height="50" fill="#e8e8e8" rx="2"/>
+    <!-- Arm holding chalk -->
+    <line x1="-18" y1="-45" x2="-45" y2="-25" stroke="#d4a870" stroke-width="6" stroke-linecap="round"/>
+    <!-- Chalk piece -->
+    <rect x="-52" y="-28" width="10" height="4" fill="white" rx="1" transform="rotate(-30, -47, -26)"/>
+    <!-- Glasses -->
+    <g stroke="#3a2818" stroke-width="1" fill="none">
+      <ellipse cx="-8" cy="-84" rx="8" ry="5"/>
+      <ellipse cx="8" cy="-84" rx="8" ry="5"/>
+      <line x1="0" y1="-84" x2="0" y2="-84"/>
+      <line x1="-16" y1="-84" x2="-20" y2="-84"/>
+      <line x1="16" y1="-84" x2="20" y2="-84"/>
+    </g>
+    <text x="0" y="12" font-family="serif" font-size="10" fill="#4a5a4a" text-anchor="middle">C. Shannon</text>
+    <text x="0" y="25" font-family="serif" font-size="8" fill="#4a5a4a" text-anchor="middle">Bell Labs 1948</text>
+  </g>
+  <!-- Book on desk in foreground -->
+  <rect x="60" y="370" width="220" height="15" fill="#8a7030" rx="2"/>
+  <rect x="70" y="340" width="100" height="32" fill="#c84040" rx="3"/>
+  <rect x="74" y="343" width="92" height="26" fill="#d05050" rx="2"/>
+  <text x="120" y="354" font-family="serif" font-size="7" fill="white" text-anchor="middle">"A Mathematical</text>
+  <text x="120" y="364" font-family="serif" font-size="7" fill="white" text-anchor="middle">Theory of Comm."</text>
+  <rect x="190" y="340" width="80" height="32" fill="#4040a0" rx="3"/>
+  <rect x="194" y="343" width="72" height="26" fill="#5050b0" rx="2"/>
+  <text x="230" y="354" font-family="serif" font-size="7" fill="white" text-anchor="middle">Bell System</text>
+  <text x="230" y="364" font-family="serif" font-size="7" fill="white" text-anchor="middle">Technical J. 1948</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#1a3a1a" rx="6" opacity="0.8"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#c8e8a0" text-anchor="middle">1948</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a1a0a" opacity="0.8"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">Shannon's Information Theory · The Bit is Born · Channel Capacity Formula</text>
+</svg>

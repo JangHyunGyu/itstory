@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="ocean1956" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a4a7a"/>
+      <stop offset="100%" stop-color="#0a1a3a"/>
+    </linearGradient>
+  </defs>
+  <!-- Ocean background -->
+  <rect width="800" height="450" fill="#b8d0e8"/>
+  <rect x="0" y="0" width="800" height="200" fill="#c8ddf0"/>
+  <!-- Calm sky -->
+  <g fill="white" opacity="0.6">
+    <ellipse cx="120" cy="60" rx="70" ry="28"/>
+    <ellipse cx="650" cy="50" rx="80" ry="30"/>
+    <ellipse cx="400" cy="80" rx="60" ry="22"/>
+  </g>
+  <!-- Ocean -->
+  <rect x="0" y="195" width="800" height="255" fill="url(#ocean1956)"/>
+  <!-- Surface waves -->
+  <g fill="#1e5a8a" opacity="0.4">
+    <path d="M 0 205 Q 100 198 200 208 Q 300 218 400 204 Q 500 192 600 204 Q 700 215 800 201 L 800 220 L 0 220 Z"/>
+  </g>
+  <!-- Underwater cable cross-section visualization -->
+  <!-- The TAT-1 cable -->
+  <!-- Sea surface dotted line -->
+  <line x1="0" y1="200" x2="800" y2="200" stroke="#4a8ab8" stroke-width="1" stroke-dasharray="15,10" opacity="0.5"/>
+  <!-- Cable route under sea -->
+  <path d="M 0 350 Q 200 340 400 348 Q 600 356 800 345" stroke="#4a3020" stroke-width="8" fill="none" opacity="0.85"/>
+  <!-- Cable detail at cross-section point in middle -->
+  <g transform="translate(400, 348)">
+    <!-- Cable cross section layers -->
+    <circle cx="0" cy="0" r="22" fill="#8a6030" stroke="#5a3010" stroke-width="1"/>
+    <circle cx="0" cy="0" r="17" fill="#c8a040" stroke="#8a6020" stroke-width="1"/>
+    <circle cx="0" cy="0" r="12" fill="#4a4a4a" stroke="#2a2a2a" stroke-width="1"/>
+    <circle cx="0" cy="0" r="7" fill="#c0c0c0" stroke="#888" stroke-width="1"/>
+    <circle cx="0" cy="0" r="3" fill="#ff4040"/>
+    <!-- Labels pointing out -->
+    <line x1="22" y1="0" x2="60" y2="-15" stroke="white" stroke-width="1" opacity="0.7"/>
+    <text x="65" y="-12" font-family="serif" font-size="7" fill="#c8e0f0">Steel armor wires</text>
+    <line x1="17" y1="-10" x2="50" y2="-35" stroke="white" stroke-width="1" opacity="0.7"/>
+    <text x="55" y="-32" font-family="serif" font-size="7" fill="#c8e0f0">Copper sheathing</text>
+    <line x1="0" y1="-22" x2="0" y2="-50" stroke="white" stroke-width="1" opacity="0.7"/>
+    <text x="0" y="-55" font-family="serif" font-size="7" fill="#c8e0f0" text-anchor="middle">Gutta-percha insulation</text>
+    <line x1="-7" y1="0" x2="-55" y2="-15" stroke="white" stroke-width="1" opacity="0.7"/>
+    <text x="-60" y="-12" font-family="serif" font-size="7" fill="#c8e0f0" text-anchor="end">Coaxial copper</text>
+  </g>
+  <!-- Amplifier stations along cable (underwater repeaters) -->
+  <g fill="#5a4030" stroke="#3a2010" stroke-width="1">
+    <ellipse cx="160" cy="344" rx="16" ry="10"/>
+    <ellipse cx="320" cy="346" rx="16" ry="10"/>
+    <ellipse cx="480" cy="348" rx="16" ry="10"/>
+    <ellipse cx="640" cy="347" rx="16" ry="10"/>
+  </g>
+  <!-- Labels for repeaters -->
+  <g font-family="sans-serif" font-size="7" fill="#80b0d0" text-anchor="middle">
+    <text x="160" y="330">Repeater #1</text>
+    <text x="320" y="328">Repeater #2</text>
+    <text x="480" y="330">Repeater #3</text>
+    <text x="640" y="329">Repeater #4</text>
+  </g>
+  <!-- Signal strength graph (showing amplification along route) -->
+  <g transform="translate(200, 100)">
+    <rect x="-10" y="-30" width="420" height="90" fill="#0a1a2a" rx="5" opacity="0.85"/>
+    <text x="200" y="-10" font-family="serif" font-size="10" font-weight="bold" fill="#60c0ff" text-anchor="middle">TAT-1 · Signal Strength Monitor</text>
+    <!-- Graph axes -->
+    <line x1="0" y1="50" x2="400" y2="50" stroke="#4080c0" stroke-width="1"/>
+    <line x1="0" y1="0" x2="0" y2="55" stroke="#4080c0" stroke-width="1"/>
+    <!-- Signal with repeaters -->
+    <path d="M 0 15 Q 50 35 90 48 Q 92 15 130 25 Q 180 45 210 48 Q 212 15 250 22 Q 300 42 330 48 Q 332 15 370 20 Q 395 42 400 48" stroke="#40ff80" stroke-width="2" fill="none"/>
+    <!-- Labels -->
+    <g font-family="sans-serif" font-size="7" fill="#4080c0">
+      <text x="0" y="60">Ireland</text>
+      <text x="395" y="60" text-anchor="end">Canada</text>
+      <text x="-5" y="15" text-anchor="end">Strong</text>
+      <text x="-5" y="48" text-anchor="end">Weak</text>
+    </g>
+    <!-- Repeater markers on graph -->
+    <g fill="#f0d060" stroke="#8a6020" stroke-width="0.5">
+      <rect x="90" y="12" width="4" height="40" rx="1"/>
+      <rect x="210" y="12" width="4" height="40" rx="1"/>
+      <rect x="330" y="12" width="4" height="40" rx="1"/>
+    </g>
+    <text x="92" y="8" font-family="sans-serif" font-size="6" fill="#f0d060">AMP</text>
+    <text x="212" y="8" font-family="sans-serif" font-size="6" fill="#f0d060">AMP</text>
+    <text x="332" y="8" font-family="sans-serif" font-size="6" fill="#f0d060">AMP</text>
+  </g>
+  <!-- Scotland coast (left) -->
+  <path d="M 0 150 Q 30 138 60 155 Q 75 165 75 450 L 0 450 Z" fill="#5a7840"/>
+  <text x="37" y="185" font-family="serif" font-size="8" fill="#f0e8d0" text-anchor="middle">SCOTLAND</text>
+  <text x="37" y="197" font-family="serif" font-size="7" fill="#f0e8d0" text-anchor="middle">Oban</text>
+  <!-- Canada/Newfoundland coast (right) -->
+  <path d="M 725 155 Q 755 142 800 155 L 800 450 L 725 450 Z" fill="#5a7840"/>
+  <text x="762" y="185" font-family="serif" font-size="8" fill="#f0e8d0" text-anchor="middle">CANADA</text>
+  <text x="762" y="197" font-family="serif" font-size="7" fill="#f0e8d0" text-anchor="middle">Clarenville</text>
+  <!-- Ships on surface -->
+  <g transform="translate(200, 192)">
+    <path d="M -40 0 Q -45 12 -30 18 L 30 16 Q 45 10 40 0 Z" fill="#2a2020"/>
+    <rect x="-40" y="-5" width="80" height="7" fill="#3a3020" rx="1"/>
+    <line x1="0" y1="-5" x2="0" y2="-35" stroke="#5a4020" stroke-width="3"/>
+    <!-- Cable being laid -->
+    <path d="M 35 12 Q 50 30 65 60" stroke="#5a3010" stroke-width="4" fill="none"/>
+  </g>
+  <!-- Control room graphic -->
+  <rect x="540" y="100" width="220" height="85" fill="#0a1a2a" rx="5" opacity="0.9"/>
+  <text x="650" y="120" font-family="serif" font-size="10" font-weight="bold" fill="#60c0ff" text-anchor="middle">TAT-1 Control Room</text>
+  <text x="650" y="136" font-family="serif" font-size="8" fill="#80c0a0" text-anchor="middle">36 telephone circuits</text>
+  <text x="650" y="150" font-family="serif" font-size="8" fill="#80c0a0" text-anchor="middle">Active since Sep 25, 1956</text>
+  <text x="650" y="164" font-family="serif" font-size="8" fill="#40ff80" text-anchor="middle">ALL CIRCUITS: NOMINAL</text>
+  <text x="650" y="178" font-family="serif" font-size="8" fill="#c0d0e0" text-anchor="middle">AT&amp;T · GPO · Teleglobe</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#1a3a6a" rx="6" opacity="0.8"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#60c0ff" text-anchor="middle">1956</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a1a3a" opacity="0.8"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">TAT-1 First Transatlantic Telephone Cable · Scotland to Newfoundland</text>
+</svg>

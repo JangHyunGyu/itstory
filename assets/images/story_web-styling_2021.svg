@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <filter id="shadow21" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#00000030"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f0f4f0"/>
+
+  <!-- Header bar -->
+  <rect x="0" y="0" width="800" height="46" fill="#1a3a2a"/>
+
+  <!-- Year label -->
+  <rect x="16" y="12" width="60" height="24" rx="4" fill="#2ecc71" opacity="0.9"/>
+  <text x="46" y="28" font-family="monospace" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">2021</text>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="sans-serif" font-size="13" fill="#8ecbaa" text-anchor="middle">@container · Component-based Responsive Design</text>
+
+  <!-- @container code snippet at top -->
+  <g transform="translate(30, 60)">
+    <rect x="0" y="0" width="350" height="165" rx="8" fill="#1e1e2e" filter="url(#shadow21)"/>
+    <rect x="0" y="0" width="350" height="24" rx="8" fill="#161628"/>
+    <rect x="0" y="14" width="350" height="10" fill="#161628"/>
+    <text x="175" y="16" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">card.css</text>
+    <circle cx="14" cy="12" r="4" fill="#ff5f57"/>
+    <circle cx="26" cy="12" r="4" fill="#febc2e"/>
+    <circle cx="38" cy="12" r="4" fill="#28c840"/>
+
+    <!-- CSS code -->
+    <text x="14" y="42" font-family="monospace" font-size="9" fill="#888">/* Define container */</text>
+    <text x="14" y="57" font-family="monospace" font-size="10" fill="#88ff88">.card-wrapper &#123;</text>
+    <text x="14" y="71" font-family="monospace" font-size="10" fill="#ccc">  container-type: </text>
+    <text x="158" y="71" font-family="monospace" font-size="10" fill="#ffcc66">inline-size</text>
+    <text x="240" y="71" font-family="monospace" font-size="10" fill="#ccc">;</text>
+    <text x="14" y="85" font-family="monospace" font-size="10" fill="#ccc">  container-name: </text>
+    <text x="162" y="85" font-family="monospace" font-size="10" fill="#ffcc66">card</text>
+    <text x="190" y="85" font-family="monospace" font-size="10" fill="#ccc">;</text>
+    <text x="14" y="99" font-family="monospace" font-size="10" fill="#88ff88">&#125;</text>
+
+    <!-- @container rule -->
+    <text x="14" y="117" font-family="monospace" font-size="10" fill="#ff8855">@container</text>
+    <text x="97" y="117" font-family="monospace" font-size="10" fill="#ccc"> card (min-width: </text>
+    <text x="233" y="117" font-family="monospace" font-size="10" fill="#ffcc66">400px</text>
+    <text x="268" y="117" font-family="monospace" font-size="10" fill="#ccc">) &#123;</text>
+    <text x="14" y="131" font-family="monospace" font-size="10" fill="#88ff88">  .card &#123;</text>
+    <text x="14" y="145" font-family="monospace" font-size="10" fill="#ccc">    flex-direction: </text>
+    <text x="162" y="145" font-family="monospace" font-size="10" fill="#ffcc66">row</text>
+    <text x="186" y="145" font-family="monospace" font-size="10" fill="#ccc">;</text>
+    <text x="14" y="159" font-family="monospace" font-size="10" fill="#88ff88">  &#125;</text>
+    <text x="14" y="159" font-family="monospace" font-size="10" fill="#88ff88">        &#125;</text>
+  </g>
+
+  <!-- WIDE CONTAINER - card in wide parent -->
+  <g transform="translate(30, 250)">
+    <!-- Wide container -->
+    <rect x="0" y="0" width="480" height="165" rx="8" fill="#fff" stroke="#2ecc71" stroke-width="2" filter="url(#shadow21)" stroke-dasharray="6,4"/>
+    <!-- Container label -->
+    <rect x="10" y="-12" width="190" height="22" rx="4" fill="#2ecc71"/>
+    <text x="105" y="4" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle" font-weight="bold">Wide container — 480px</text>
+
+    <!-- Card in wide layout (horizontal) -->
+    <rect x="16" y="20" width="448" height="130" rx="6" fill="#f8f8f8" stroke="#ddd" stroke-width="1" filter="url(#shadow21)"/>
+    <!-- Image (left side, horizontal layout) -->
+    <rect x="24" y="28" width="140" height="115" rx="4" fill="#c8e8d0"/>
+    <!-- Placeholder image content -->
+    <rect x="24" y="28" width="140" height="115" rx="4" fill="#a8d8b8"/>
+    <circle cx="60" cy="65" r="15" fill="#68b888" opacity="0.7"/>
+    <polygon points="24,143 70,110 100,125 140,90 164,143" fill="#78c898" opacity="0.8"/>
+
+    <!-- Text content (right side, horizontal layout) -->
+    <text x="178" y="50" font-family="sans-serif" font-size="11" fill="#333" font-weight="bold">Card Title</text>
+    <rect x="178" y="58" width="270" height="4" rx="1" fill="#ddd"/>
+    <rect x="178" y="66" width="250" height="4" rx="1" fill="#ddd"/>
+    <rect x="178" y="74" width="260" height="4" rx="1" fill="#ddd"/>
+    <rect x="178" y="82" width="240" height="4" rx="1" fill="#ddd"/>
+    <rect x="178" y="90" width="250" height="4" rx="1" fill="#ddd"/>
+    <rect x="178" y="104" width="270" height="4" rx="1" fill="#eee"/>
+    <rect x="178" y="112" width="240" height="4" rx="1" fill="#eee"/>
+    <rect x="178" y="127" width="90" height="18" rx="4" fill="#2ecc71"/>
+    <text x="223" y="140" font-family="sans-serif" font-size="9" fill="#fff" text-anchor="middle">Read More</text>
+
+    <!-- Arrow showing direction: row -->
+    <rect x="160" y="60" width="12" height="12" rx="2" fill="#2ecc71" opacity="0.4"/>
+    <text x="166" y="70" font-family="monospace" font-size="8" fill="#1a3a2a" text-anchor="middle">→</text>
+
+    <!-- Label -->
+    <text x="240" y="158" font-family="monospace" font-size="8" fill="#2ecc71" text-anchor="middle">flex-direction: row  (container ≥ 400px)</text>
+  </g>
+
+  <!-- NARROW CONTAINER - same card in narrow parent -->
+  <g transform="translate(540, 70)">
+    <!-- Narrow container -->
+    <rect x="0" y="0" width="235" height="340" rx="8" fill="#fff" stroke="#e67e22" stroke-width="2" filter="url(#shadow21)" stroke-dasharray="6,4"/>
+    <!-- Container label -->
+    <rect x="10" y="-12" width="200" height="22" rx="4" fill="#e67e22"/>
+    <text x="108" y="4" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle" font-weight="bold">Narrow container — 220px</text>
+
+    <!-- Same card but in narrow layout (vertical/stacked) -->
+    <rect x="16" y="20" width="203" height="305" rx="6" fill="#f8f8f8" stroke="#ddd" stroke-width="1" filter="url(#shadow21)"/>
+    <!-- Image (top, vertical layout) -->
+    <rect x="24" y="28" width="187" height="120" rx="4" fill="#a8d8b8"/>
+    <circle cx="80" cy="65" r="20" fill="#68b888" opacity="0.7"/>
+    <polygon points="24,148 80,110 120,125 187,85 211,148" fill="#78c898" opacity="0.8"/>
+
+    <!-- Text content (below, vertical layout) -->
+    <text x="30" y="168" font-family="sans-serif" font-size="10" fill="#333" font-weight="bold">Card Title</text>
+    <rect x="30" y="176" width="170" height="4" rx="1" fill="#ddd"/>
+    <rect x="30" y="184" width="155" height="4" rx="1" fill="#ddd"/>
+    <rect x="30" y="192" width="165" height="4" rx="1" fill="#ddd"/>
+    <rect x="30" y="200" width="150" height="4" rx="1" fill="#ddd"/>
+    <rect x="30" y="208" width="170" height="4" rx="1" fill="#ddd"/>
+    <rect x="30" y="220" width="170" height="4" rx="1" fill="#eee"/>
+    <rect x="30" y="228" width="140" height="4" rx="1" fill="#eee"/>
+    <rect x="30" y="236" width="155" height="4" rx="1" fill="#eee"/>
+    <rect x="30" y="248" width="80" height="18" rx="4" fill="#e67e22"/>
+    <text x="70" y="261" font-family="sans-serif" font-size="8" fill="#fff" text-anchor="middle">Read More</text>
+
+    <!-- Arrow showing direction: column -->
+    <text x="117" y="156" font-family="monospace" font-size="12" fill="#e67e22" text-anchor="middle">↓</text>
+
+    <!-- Label -->
+    <text x="117" y="295" font-family="monospace" font-size="8" fill="#e67e22" text-anchor="middle">flex-direction: column</text>
+    <text x="117" y="308" font-family="monospace" font-size="8" fill="#888" text-anchor="middle">(container &lt; 400px)</text>
+
+    <!-- "Same component!" badge -->
+    <rect x="30" y="318" width="176" height="16" rx="4" fill="#1a3a2a" opacity="0.8"/>
+    <text x="118" y="330" font-family="monospace" font-size="8" fill="#8ecbaa" text-anchor="middle">same .card component!</text>
+  </g>
+
+  <!-- Key insight label -->
+  <rect x="30" y="420" width="500" height="24" rx="6" fill="#1a3a2a" opacity="0.1"/>
+  <text x="280" y="436" font-family="sans-serif" font-size="10" fill="#1a3a2a" text-anchor="middle">Container queries: components adapt to their parent — not the viewport</text>
+</svg>

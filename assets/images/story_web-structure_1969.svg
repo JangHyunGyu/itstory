@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg69" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1428"/>
+      <stop offset="100%" style="stop-color:#1a2440"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg69)"/>
+
+  <!-- GML: semantic tag structure diagram -->
+  <!-- IBM Research label -->
+  <rect x="30" y="30" width="220" height="60" rx="6" fill="#1a2a4a" stroke="#4488ff" stroke-width="1.5"/>
+  <text x="140" y="56" font-family="sans-serif" font-size="15" fill="#4488ff" text-anchor="middle" font-weight="bold">IBM Research</text>
+  <text x="140" y="74" font-family="sans-serif" font-size="11" fill="#888" text-anchor="middle">Goldfarb, Mosher, Lorie · 1969</text>
+
+  <!-- GML Document Structure Tree -->
+  <rect x="30" y="110" width="400" height="300" rx="6" fill="#0d1828" stroke="#4488ff" stroke-width="1"/>
+  <text x="230" y="132" font-family="sans-serif" font-size="13" fill="#4488ff" text-anchor="middle" font-weight="bold">GML Document Tree</text>
+
+  <!-- Document root -->
+  <rect x="160" y="146" width="140" height="30" rx="4" fill="#1a3a6a" stroke="#4488ff" stroke-width="1.5"/>
+  <text x="230" y="165" font-family="monospace" font-size="12" fill="#88bbff" text-anchor="middle">:doctype.</text>
+
+  <!-- Line to children -->
+  <line x1="230" y1="176" x2="230" y2="196" stroke="#4488ff" stroke-width="1.5"/>
+  <line x1="130" y1="196" x2="330" y2="196" stroke="#4488ff" stroke-width="1.5"/>
+
+  <!-- Heading branch -->
+  <line x1="130" y1="196" x2="130" y2="210" stroke="#4488ff" stroke-width="1.5"/>
+  <rect x="68" y="210" width="124" height="28" rx="4" fill="#0a2a4a" stroke="#4488ff" stroke-width="1"/>
+  <text x="130" y="228" font-family="monospace" font-size="11" fill="#88bbff" text-anchor="middle">:h1.Title here.:eh1.</text>
+
+  <!-- Body branch -->
+  <line x1="230" y1="196" x2="230" y2="210" stroke="#4488ff" stroke-width="1.5"/>
+  <rect x="168" y="210" width="124" height="28" rx="4" fill="#0a2a4a" stroke="#4488ff" stroke-width="1"/>
+  <text x="230" y="228" font-family="monospace" font-size="11" fill="#88bbff" text-anchor="middle">:p.Paragraph.:ep.</text>
+
+  <!-- List branch -->
+  <line x1="330" y1="196" x2="330" y2="210" stroke="#4488ff" stroke-width="1.5"/>
+  <rect x="268" y="210" width="124" height="28" rx="4" fill="#0a2a4a" stroke="#4488ff" stroke-width="1"/>
+  <text x="330" y="228" font-family="monospace" font-size="11" fill="#88bbff" text-anchor="middle">:ol.List.:eol.</text>
+
+  <!-- GML sample code -->
+  <rect x="46" y="252" width="366" height="148" rx="4" fill="#111"/>
+  <text x="62" y="272" font-family="monospace" font-size="11" fill="#6a9955">/* GML · 1969 · IBM Document */</text>
+  <text x="62" y="292" font-family="monospace" font-size="12" fill="#ff9944">:doctype.</text>
+  <text x="62" y="310" font-family="monospace" font-size="12" fill="#ff9944">:title.</text>
+  <text x="86" y="310" font-family="monospace" font-size="12" fill="#d4d4d4">Technical Manual 1969</text>
+  <text x="62" y="328" font-family="monospace" font-size="12" fill="#ff9944">:h1.</text>
+  <text x="90" y="328" font-family="monospace" font-size="12" fill="#d4d4d4">Introduction</text>
+  <text x="62" y="346" font-family="monospace" font-size="12" fill="#ff9944">:p.</text>
+  <text x="86" y="346" font-family="monospace" font-size="12" fill="#d4d4d4">This section describes...</text>
+  <text x="62" y="364" font-family="monospace" font-size="12" fill="#ff9944">:note.</text>
+  <text x="102" y="364" font-family="monospace" font-size="12" fill="#d4d4d4">See Figure 2.</text>
+  <text x="62" y="382" font-family="monospace" font-size="12" fill="#ff9944">:enote.</text>
+  <text x="62" y="396" font-family="monospace" font-size="12" fill="#6a9955">/* Meaning, not appearance! */</text>
+
+  <!-- Right: Philosophy vs Old way -->
+  <rect x="450" y="30" width="320" height="380" rx="6" fill="#0d1828" stroke="#333" stroke-width="1"/>
+  <text x="610" y="54" font-family="sans-serif" font-size="13" fill="#888" text-anchor="middle" font-weight="bold">Before vs After GML</text>
+
+  <!-- Before (bad) -->
+  <rect x="466" y="66" width="288" height="140" rx="4" fill="#1a0a0a" stroke="#cc3333" stroke-width="1"/>
+  <text x="610" y="86" font-family="sans-serif" font-size="11" fill="#cc3333" text-anchor="middle">Before: Format-first (RUNOFF)</text>
+  <text x="476" y="106" font-family="monospace" font-size="10" fill="#888">.CENTER</text>
+  <text x="476" y="122" font-family="monospace" font-size="10" fill="#888">.INDENT 10</text>
+  <text x="476" y="138" font-family="monospace" font-size="10" fill="#888">.BOLD</text>
+  <text x="476" y="154" font-family="monospace" font-size="10" fill="#888">Section 1: Introduction</text>
+  <text x="476" y="170" font-family="monospace" font-size="10" fill="#888">.NORMAL</text>
+  <text x="476" y="186" font-family="sans-serif" font-size="10" fill="#888" font-style="italic">Change style = reformat everything!</text>
+
+  <!-- After (good) -->
+  <rect x="466" y="218" width="288" height="140" rx="4" fill="#0a1a0a" stroke="#44cc44" stroke-width="1"/>
+  <text x="610" y="238" font-family="sans-serif" font-size="11" fill="#44cc44" text-anchor="middle">After: Meaning-first (GML)</text>
+  <text x="476" y="258" font-family="monospace" font-size="10" fill="#44cc44">:h1.</text>
+  <text x="506" y="258" font-family="monospace" font-size="10" fill="#aaa">Introduction</text>
+  <text x="476" y="274" font-family="monospace" font-size="10" fill="#44cc44">:p.</text>
+  <text x="498" y="274" font-family="monospace" font-size="10" fill="#aaa">Section content here</text>
+  <text x="476" y="290" font-family="monospace" font-size="10" fill="#44cc44">:note.</text>
+  <text x="510" y="290" font-family="monospace" font-size="10" fill="#aaa">See Figure 2</text>
+  <text x="476" y="310" font-family="sans-serif" font-size="10" fill="#44cc44" font-style="italic">Structure = reusable across formats</text>
+  <text x="476" y="326" font-family="sans-serif" font-size="10" fill="#888">Print → same structure</text>
+  <text x="476" y="342" font-family="sans-serif" font-size="10" fill="#888">Screen → same structure</text>
+  <text x="476" y="358" font-family="sans-serif" font-size="10" fill="#888">→ GML.org leads to SGML · HTML</text>
+
+  <!-- Key insight callout -->
+  <rect x="466" y="370" width="288" height="32" rx="4" fill="#1a3a2a" stroke="#44cc44" stroke-width="1"/>
+  <text x="610" y="390" font-family="sans-serif" font-size="11" fill="#44cc44" text-anchor="middle">Content ≠ Presentation — the key idea!</text>
+
+  <!-- Year badge -->
+  <rect x="300" y="418" width="200" height="28" rx="14" fill="#1a3a6a"/>
+  <text x="400" y="437" font-family="sans-serif" font-size="16" font-weight="bold" fill="#88bbff" text-anchor="middle">IBM GML · 1969</text>
+</svg>

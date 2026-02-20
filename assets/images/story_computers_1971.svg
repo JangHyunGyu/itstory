@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg1971" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a0d05"/>
+      <stop offset="100%" stop-color="#0d0803"/>
+    </linearGradient>
+    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a1a08"/>
+      <stop offset="100%" stop-color="#1a1005"/>
+    </linearGradient>
+    <radialGradient id="chipMagnify" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3a2a10"/>
+      <stop offset="100%" stop-color="#1a1005"/>
+    </radialGradient>
+    <filter id="chipGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg1971)"/>
+
+  <!-- Intel logo area (top) -->
+  <g transform="translate(320, 15)">
+    <rect x="0" y="0" width="160" height="40" fill="#cc2200" rx="5"/>
+    <text x="80" y="27" fill="white" font-size="20" font-family="sans-serif" text-anchor="middle" font-weight="bold" letter-spacing="2">intel</text>
+    <text x="80" y="38" fill="#ffcccc" font-size="8" font-family="sans-serif" text-anchor="middle">&#174;</text>
+  </g>
+  <text x="400" y="70" fill="#cc4400" font-size="14" font-family="sans-serif" text-anchor="middle">4004 Microprocessor — Computer on a Chip</text>
+
+  <!-- Main chip (actual size, left) -->
+  <g transform="translate(40, 100)">
+    <text x="100" y="0" fill="#cc8844" font-size="12" font-family="monospace" text-anchor="middle">Actual Size</text>
+    <!-- DIP package -->
+    <rect x="25" y="15" width="150" height="60" fill="#1a1a0a" rx="4"/>
+    <rect x="30" y="20" width="140" height="50" fill="url(#chipGrad)" rx="2"/>
+    <!-- Die surface markings -->
+    <rect x="40" y="25" width="120" height="40" fill="#2a1a08" rx="1"/>
+    <!-- Micro circuit traces on chip -->
+    <g stroke="#cc8844" stroke-width="0.5" opacity="0.6">
+      <line x1="45" y1="30" x2="45" y2="60"/>
+      <line x1="55" y1="30" x2="55" y2="60"/>
+      <line x1="65" y1="30" x2="65" y2="60"/>
+      <line x1="75" y1="30" x2="75" y2="60"/>
+      <line x1="85" y1="30" x2="85" y2="60"/>
+      <line x1="95" y1="30" x2="95" y2="60"/>
+      <line x1="105" y1="30" x2="105" y2="60"/>
+      <line x1="115" y1="30" x2="115" y2="60"/>
+      <line x1="125" y1="30" x2="125" y2="60"/>
+      <line x1="135" y1="30" x2="135" y2="60"/>
+      <line x1="145" y1="30" x2="145" y2="60"/>
+      <line x1="45" y1="35" x2="155" y2="35"/>
+      <line x1="45" y1="45" x2="155" y2="45"/>
+      <line x1="45" y1="55" x2="155" y2="55"/>
+    </g>
+    <!-- Intel 4004 marking -->
+    <text x="100" y="48" fill="#cc8844" font-size="8" font-family="monospace" text-anchor="middle">Intel 4004</text>
+
+    <!-- DIP pins (top) -->
+    <g fill="#888860">
+      <rect x="35" y="8" width="6" height="12" rx="1"/>
+      <rect x="50" y="8" width="6" height="12" rx="1"/>
+      <rect x="65" y="8" width="6" height="12" rx="1"/>
+      <rect x="80" y="8" width="6" height="12" rx="1"/>
+      <rect x="95" y="8" width="6" height="12" rx="1"/>
+      <rect x="110" y="8" width="6" height="12" rx="1"/>
+      <rect x="125" y="8" width="6" height="12" rx="1"/>
+    </g>
+    <!-- DIP pins (bottom) -->
+    <g fill="#888860">
+      <rect x="35" y="70" width="6" height="12" rx="1"/>
+      <rect x="50" y="70" width="6" height="12" rx="1"/>
+      <rect x="65" y="70" width="6" height="12" rx="1"/>
+      <rect x="80" y="70" width="6" height="12" rx="1"/>
+      <rect x="95" y="70" width="6" height="12" rx="1"/>
+      <rect x="110" y="70" width="6" height="12" rx="1"/>
+      <rect x="125" y="70" width="6" height="12" rx="1"/>
+    </g>
+
+    <!-- Size comparison label -->
+    <text x="100" y="105" fill="#888860" font-size="10" font-family="monospace" text-anchor="middle">2300 transistors</text>
+    <text x="100" y="118" fill="#888860" font-size="10" font-family="monospace" text-anchor="middle">3 mm × 4 mm die</text>
+    <text x="100" y="131" fill="#888860" font-size="10" font-family="monospace" text-anchor="middle">740 kHz clock</text>
+    <text x="100" y="144" fill="#888860" font-size="10" font-family="monospace" text-anchor="middle">4-bit architecture</text>
+  </g>
+
+  <!-- Magnified chip view (center, large) -->
+  <g transform="translate(210, 80)">
+    <!-- Magnifying lens effect -->
+    <circle cx="170" cy="160" r="155" fill="#0d0a05" stroke="#cc8844" stroke-width="3" opacity="0.95"/>
+    <circle cx="170" cy="160" r="152" fill="none" stroke="#aa6622" stroke-width="1" opacity="0.3"/>
+
+    <!-- Magnified chip surface -->
+    <clipPath id="lensClip">
+      <circle cx="170" cy="160" r="148"/>
+    </clipPath>
+
+    <g clip-path="url(#lensClip)">
+      <!-- Grid of transistors/logic blocks -->
+      <rect x="22" y="12" width="296" height="296" fill="#1a1005"/>
+
+      <!-- Functional blocks of 4004 -->
+      <!-- ALU block -->
+      <rect x="40" y="30" width="80" height="70" fill="#2a1a08" rx="3" stroke="#cc8844" stroke-width="1.5"/>
+      <text x="80" y="55" fill="#cc8844" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">ALU</text>
+      <text x="80" y="70" fill="#aa6622" font-size="9" font-family="monospace" text-anchor="middle">4-bit</text>
+      <text x="80" y="84" fill="#aa6622" font-size="9" font-family="monospace" text-anchor="middle">adder</text>
+
+      <!-- Instruction Decoder -->
+      <rect x="140" y="30" width="95" height="70" fill="#1a2a08" rx="3" stroke="#88cc44" stroke-width="1.5"/>
+      <text x="187" y="52" fill="#88cc44" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">Instruction</text>
+      <text x="187" y="66" fill="#88cc44" font-size="10" font-family="monospace" text-anchor="middle">Decoder</text>
+      <text x="187" y="82" fill="#44aa00" font-size="9" font-family="monospace" text-anchor="middle">46 instructions</text>
+
+      <!-- Registers -->
+      <rect x="250" y="30" width="60" height="70" fill="#081a2a" rx="3" stroke="#4488cc" stroke-width="1.5"/>
+      <text x="280" y="55" fill="#4488cc" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">Regs</text>
+      <text x="280" y="70" fill="#2266aa" font-size="9" font-family="monospace" text-anchor="middle">R0-R15</text>
+      <text x="280" y="84" fill="#2266aa" font-size="8" font-family="monospace" text-anchor="middle">4-bit</text>
+
+      <!-- Control unit -->
+      <rect x="40" y="120" width="120" height="55" fill="#2a0a1a" rx="3" stroke="#cc4488" stroke-width="1.5"/>
+      <text x="100" y="142" fill="#cc4488" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">Control Unit</text>
+      <text x="100" y="158" fill="#aa2266" font-size="9" font-family="monospace" text-anchor="middle">State Machine</text>
+      <text x="100" y="170" fill="#aa2266" font-size="9" font-family="monospace" text-anchor="middle">4-state pipeline</text>
+
+      <!-- Stack -->
+      <rect x="180" y="120" width="60" height="55" fill="#1a1a2a" rx="3" stroke="#8844cc" stroke-width="1.5"/>
+      <text x="210" y="142" fill="#8844cc" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">Stack</text>
+      <text x="210" y="158" fill="#6622aa" font-size="9" font-family="monospace" text-anchor="middle">3 levels</text>
+      <text x="210" y="170" fill="#6622aa" font-size="8" font-family="monospace" text-anchor="middle">12-bit</text>
+
+      <!-- Program counter -->
+      <rect x="255" y="120" width="55" height="55" fill="#0a2a1a" rx="3" stroke="#44cc88" stroke-width="1.5"/>
+      <text x="282" y="140" fill="#44cc88" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">PC</text>
+      <text x="282" y="154" fill="#22aa66" font-size="8" font-family="monospace" text-anchor="middle">12-bit</text>
+      <text x="282" y="168" fill="#22aa66" font-size="8" font-family="monospace" text-anchor="middle">counter</text>
+
+      <!-- Micro circuit traces -->
+      <g stroke="#cc8844" stroke-width="1" opacity="0.4">
+        <line x1="120" y1="65" x2="140" y2="65"/>
+        <line x1="235" y1="65" x2="255" y2="65"/>
+        <line x1="160" y1="100" x2="160" y2="120"/>
+        <line x1="100" y1="100" x2="100" y2="120"/>
+        <line x1="240" y1="100" x2="240" y2="120"/>
+      </g>
+
+      <!-- Transistor grid texture (bottom) -->
+      <g fill="#3a2a10" opacity="0.5">
+        <g transform="translate(40, 190)">
+          <rect x="0" y="0" width="8" height="8" rx="1"/>
+          <rect x="12" y="0" width="8" height="8" rx="1"/>
+          <rect x="24" y="0" width="8" height="8" rx="1"/>
+          <rect x="36" y="0" width="8" height="8" rx="1"/>
+          <rect x="48" y="0" width="8" height="8" rx="1"/>
+          <rect x="60" y="0" width="8" height="8" rx="1"/>
+          <rect x="72" y="0" width="8" height="8" rx="1"/>
+          <rect x="0" y="12" width="8" height="8" rx="1"/>
+          <rect x="12" y="12" width="8" height="8" rx="1"/>
+          <rect x="24" y="12" width="8" height="8" rx="1"/>
+          <rect x="36" y="12" width="8" height="8" rx="1"/>
+          <rect x="48" y="12" width="8" height="8" rx="1"/>
+          <rect x="60" y="12" width="8" height="8" rx="1"/>
+          <rect x="72" y="12" width="8" height="8" rx="1"/>
+        </g>
+        <g transform="translate(140, 190)">
+          <rect x="0" y="0" width="8" height="8" rx="1"/>
+          <rect x="12" y="0" width="8" height="8" rx="1"/>
+          <rect x="24" y="0" width="8" height="8" rx="1"/>
+          <rect x="36" y="0" width="8" height="8" rx="1"/>
+          <rect x="0" y="12" width="8" height="8" rx="1"/>
+          <rect x="12" y="12" width="8" height="8" rx="1"/>
+          <rect x="24" y="12" width="8" height="8" rx="1"/>
+          <rect x="36" y="12" width="8" height="8" rx="1"/>
+        </g>
+      </g>
+
+      <!-- Magnifying glass rim highlight -->
+      <circle cx="170" cy="160" r="148" fill="none" stroke="#ddbb88" stroke-width="2" opacity="0.3"/>
+    </g>
+
+    <!-- Magnifying glass handle -->
+    <line x1="295" y1="295" x2="340" y2="345" stroke="#cc8844" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="170" cy="160" r="155" fill="none" stroke="#cc8844" stroke-width="3"/>
+  </g>
+
+  <!-- Pocket calculator (right) -->
+  <g transform="translate(600, 85)">
+    <text x="85" y="0" fill="#cc8844" font-size="12" font-family="monospace" text-anchor="middle">Busicom 141-PF</text>
+    <text x="85" y="15" fill="#8B4400" font-size="10" font-family="monospace" text-anchor="middle">Calculator using 4004</text>
+
+    <!-- Calculator body -->
+    <rect x="10" y="22" width="150" height="220" fill="#3a2a1a" rx="10"/>
+    <rect x="15" y="27" width="140" height="210" fill="#2a1a0a" rx="8"/>
+
+    <!-- Display -->
+    <rect x="20" y="35" width="130" height="40" fill="#001a00" rx="4"/>
+    <text x="85" y="62" fill="#00cc44" font-size="20" font-family="monospace" text-anchor="middle" font-weight="bold">3.14159</text>
+
+    <!-- Keys -->
+    <g fill="#4a3a1a" stroke="#6a5a2a" stroke-width="0.5">
+      <!-- Row 1 -->
+      <rect x="22" y="85" width="28" height="22" rx="3"/>
+      <rect x="55" y="85" width="28" height="22" rx="3"/>
+      <rect x="88" y="85" width="28" height="22" rx="3"/>
+      <rect x="121" y="85" width="28" height="22" rx="3"/>
+      <!-- Row 2 -->
+      <rect x="22" y="112" width="28" height="22" rx="3"/>
+      <rect x="55" y="112" width="28" height="22" rx="3"/>
+      <rect x="88" y="112" width="28" height="22" rx="3"/>
+      <rect x="121" y="112" width="28" height="22" rx="3"/>
+      <!-- Row 3 -->
+      <rect x="22" y="139" width="28" height="22" rx="3"/>
+      <rect x="55" y="139" width="28" height="22" rx="3"/>
+      <rect x="88" y="139" width="28" height="22" rx="3"/>
+      <rect x="121" y="139" width="28" height="22" rx="3"/>
+      <!-- Row 4 -->
+      <rect x="22" y="166" width="28" height="22" rx="3"/>
+      <rect x="55" y="166" width="28" height="22" rx="3"/>
+      <rect x="88" y="166" width="28" height="22" rx="3"/>
+      <rect x="121" y="166" width="28" height="22" rx="3"/>
+      <!-- Bottom row - equals wide -->
+      <rect x="22" y="193" width="61" height="22" rx="3" fill="#cc4400"/>
+      <rect x="88" y="193" width="28" height="22" rx="3"/>
+      <rect x="121" y="193" width="28" height="22" rx="3"/>
+    </g>
+
+    <!-- Key labels -->
+    <g fill="#aa8844" font-size="10" font-family="monospace" text-anchor="middle">
+      <text x="36" y="100">7</text><text x="69" y="100">8</text>
+      <text x="102" y="100">9</text><text x="135" y="100">÷</text>
+      <text x="36" y="127">4</text><text x="69" y="127">5</text>
+      <text x="102" y="127">6</text><text x="135" y="127">×</text>
+      <text x="36" y="154">1</text><text x="69" y="154">2</text>
+      <text x="102" y="154">3</text><text x="135" y="154">-</text>
+      <text x="36" y="181">0</text><text x="69" y="181">.</text>
+      <text x="102" y="181">C</text><text x="135" y="181">+</text>
+      <text x="52" y="208" fill="white">=</text>
+      <text x="102" y="208">%</text><text x="135" y="208">√</text>
+    </g>
+
+    <!-- Intel 4004 chip inside indicator -->
+    <text x="85" y="225" fill="#8B4400" font-size="8" font-family="monospace" text-anchor="middle">Powered by Intel 4004</text>
+  </g>
+
+  <!-- Title bar -->
+  <rect x="0" y="395" width="800" height="55" fill="#0d0803" opacity="0.95"/>
+  <text x="400" y="419" fill="#cc8844" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">인텔 4004 · 최초의 마이크로프로세서</text>
+  <text x="400" y="441" fill="#8B4400" font-size="12" font-family="Georgia, serif" text-anchor="middle">Intel 4004 · 1971 · 2,300 transistors · First microprocessor on a chip</text>
+</svg>

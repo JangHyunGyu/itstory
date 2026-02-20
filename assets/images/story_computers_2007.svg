@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg2007" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+    <linearGradient id="stageLight" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="spotlightGrad" cx="50%" cy="0%" r="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="iphoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d0d0d0"/>
+      <stop offset="100%" stop-color="#a0a0a0"/>
+    </linearGradient>
+    <filter id="iphoneGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background - Macworld stage -->
+  <rect width="800" height="450" fill="url(#bg2007)"/>
+
+  <!-- Stage backdrop - dark curtains -->
+  <rect x="0" y="0" width="800" height="380" fill="#0a0a0a"/>
+  <!-- Curtain texture -->
+  <g fill="#0d0d0d" opacity="0.8">
+    <rect x="0" y="0" width="60" height="380"/>
+    <rect x="70" y="0" width="60" height="380"/>
+    <rect x="140" y="0" width="60" height="380"/>
+    <rect x="700" y="0" width="60" height="380"/>
+    <rect x="725" y="0" width="60" height="380"/>
+  </g>
+
+  <!-- Spotlight from above -->
+  <ellipse cx="400" cy="0" rx="300" ry="400" fill="url(#spotlightGrad)"/>
+  <!-- Stage platform -->
+  <rect x="0" y="340" width="800" height="40" fill="#1a1a1a"/>
+  <rect x="0" y="375" width="800" height="75" fill="#0d0d0d"/>
+
+  <!-- MACWORLD backdrop sign -->
+  <rect x="150" y="20" width="500" height="80" fill="#111111" rx="8"/>
+  <text x="400" y="52" fill="#ffffff" font-size="28" font-family="sans-serif" text-anchor="middle" font-weight="bold" letter-spacing="4">Macworld</text>
+  <text x="400" y="75" fill="#888888" font-size="14" font-family="sans-serif" text-anchor="middle">San Francisco · January 9, 2007</text>
+  <!-- Apple logo in sign -->
+  <g transform="translate(185, 28)">
+    <ellipse cx="0" cy="0" rx="22" ry="25" fill="#ffffff" opacity="0.9"/>
+    <ellipse cx="0" cy="-5" rx="15" ry="20" fill="#111111"/>
+    <ellipse cx="8" cy="-15" rx="8" ry="6" fill="#ffffff" opacity="0.5" transform="rotate(-30,8,-15)"/>
+  </g>
+
+  <!-- iPhone device (large, center-left) -->
+  <g transform="translate(220, 100)">
+    <!-- iPhone 1st gen body -->
+    <rect x="0" y="0" width="160" height="280" fill="url(#iphoneGrad)" rx="20"/>
+    <rect x="3" y="3" width="154" height="274" fill="#b0b0b0" rx="18"/>
+
+    <!-- Aluminum bezel -->
+    <rect x="6" y="6" width="148" height="268" fill="#1a1a1a" rx="17"/>
+
+    <!-- Screen -->
+    <rect x="12" y="18" width="136" height="210" fill="#001040" rx="8"/>
+
+    <!-- Screen content - iPhone UI -->
+    <!-- Status bar -->
+    <rect x="12" y="18" width="136" height="18" fill="#000000"/>
+    <text x="30" y="30" fill="#ffffff" font-size="8" font-family="sans-serif">AT&amp;T</text>
+    <text x="80" y="30" fill="#ffffff" font-size="8" font-family="sans-serif" text-anchor="middle">9:41 AM</text>
+    <text x="140" y="30" fill="#ffffff" font-size="8" font-family="sans-serif" text-anchor="end">100%</text>
+
+    <!-- App icons grid -->
+    <g>
+      <!-- Row 1 -->
+      <rect x="18" y="42" width="28" height="28" fill="#4a8cd8" rx="6"/>
+      <text x="32" y="61" fill="white" font-size="8" font-family="sans-serif" text-anchor="middle">Phone</text>
+      <rect x="52" y="42" width="28" height="28" fill="#3aaa5a" rx="6"/>
+      <text x="66" y="61" fill="white" font-size="8" font-family="sans-serif" text-anchor="middle">SMS</text>
+      <rect x="86" y="42" width="28" height="28" fill="#5a5a8a" rx="6"/>
+      <text x="100" y="61" fill="white" font-size="8" font-family="sans-serif" text-anchor="middle">Mail</text>
+      <rect x="120" y="42" width="28" height="28" fill="#5aaa3a" rx="6"/>
+      <text x="134" y="61" fill="white" font-size="8" font-family="sans-serif" text-anchor="middle">Safari</text>
+
+      <!-- Row 2 -->
+      <rect x="18" y="80" width="28" height="28" fill="#c85a1a" rx="6"/>
+      <text x="32" y="99" fill="white" font-size="7" font-family="sans-serif" text-anchor="middle">iPod</text>
+      <rect x="52" y="80" width="28" height="28" fill="#8a4aaa" rx="6"/>
+      <text x="66" y="99" fill="white" font-size="7" font-family="sans-serif" text-anchor="middle">Maps</text>
+      <rect x="86" y="80" width="28" height="28" fill="#daa820" rx="6"/>
+      <text x="100" y="99" fill="white" font-size="7" font-family="sans-serif" text-anchor="middle">Photos</text>
+      <rect x="120" y="80" width="28" height="28" fill="#4a7aaa" rx="6"/>
+      <text x="134" y="99" fill="white" font-size="7" font-family="sans-serif" text-anchor="middle">Clock</text>
+    </g>
+
+    <!-- Multi-touch gesture indicator -->
+    <circle cx="80" cy="165" r="25" fill="none" stroke="#4488ff" stroke-width="2" stroke-dasharray="5,3" opacity="0.7"/>
+    <circle cx="80" cy="165" r="8" fill="#4488ff" opacity="0.4"/>
+    <!-- Touch points -->
+    <circle cx="65" cy="155" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="95" cy="175" r="5" fill="#ffffff" opacity="0.6"/>
+    <!-- Pinch to zoom lines -->
+    <line x1="65" y1="155" x2="80" y2="165" stroke="white" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+    <line x1="95" y1="175" x2="80" y2="165" stroke="white" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+
+    <!-- Home button -->
+    <circle cx="80" cy="240" r="15" fill="#2a2a2a" stroke="#3a3a3a" stroke-width="1.5"/>
+    <rect x="74" y="234" width="12" height="12" fill="none" stroke="#4a4a4a" stroke-width="1.5" rx="2"/>
+
+    <!-- iPhone antenna lines (original) -->
+    <rect x="0" y="270" width="160" height="4" fill="#888888" opacity="0.5"/>
+
+    <text x="80" y="308" fill="#aaaaaa" font-size="11" font-family="sans-serif" text-anchor="middle">iPhone · 4GB · $499</text>
+  </g>
+
+  <!-- Steve Jobs figure (right of iPhone) -->
+  <g transform="translate(420, 110)">
+    <!-- Classic black turtleneck / jeans look -->
+    <!-- Jeans -->
+    <rect x="-18" y="90" width="18" height="80" fill="#3a4a6a" rx="2"/>
+    <rect x="4" y="90" width="18" height="80" fill="#3a4a6a" rx="2"/>
+    <!-- Black turtleneck -->
+    <rect x="-20" y="35" width="44" height="58" fill="#1a1a1a" rx="2"/>
+    <!-- Turtleneck collar -->
+    <ellipse cx="2" cy="33" rx="15" ry="8" fill="#1a1a1a"/>
+    <!-- Sneakers (New Balance style) -->
+    <ellipse cx="-8" cy="172" rx="18" ry="7" fill="#d0d0d0"/>
+    <ellipse cx="14" cy="172" rx="18" ry="7" fill="#d0d0d0"/>
+    <!-- Head -->
+    <ellipse cx="2" cy="20" rx="18" ry="20" fill="#d0a070"/>
+    <!-- Black hair / beard (Steve Jobs style) -->
+    <ellipse cx="2" cy="7" rx="18" ry="12" fill="#1a1a0a"/>
+    <!-- Short beard -->
+    <ellipse cx="2" cy="30" rx="12" ry="6" fill="#2a1a08"/>
+    <!-- Glasses (Jobs era) -->
+    <ellipse cx="-7" cy="17" rx="8" ry="7" fill="none" stroke="#888888" stroke-width="1.5"/>
+    <ellipse cx="11" cy="17" rx="8" ry="7" fill="none" stroke="#888888" stroke-width="1.5"/>
+    <line x1="3" y1="17" x2="3" y2="17" stroke="#888888" stroke-width="1"/>
+    <circle cx="-7" cy="17" r="3" fill="#1a1a00"/>
+    <circle cx="11" cy="17" r="3" fill="#1a1a00"/>
+    <!-- Holding iPhone (right hand) -->
+    <line x1="22" y1="60" x2="60" y2="80" stroke="#d0a070" stroke-width="7" stroke-linecap="round"/>
+    <!-- iPhone in hand -->
+    <rect x="58" y="68" width="25" height="45" fill="#1a1a1a" rx="4"/>
+    <rect x="61" y="72" width="19" height="36" fill="#001840" rx="2"/>
+    <!-- Pointing finger (left hand) -->
+    <line x1="-22" y1="60" x2="-55" y2="45" stroke="#d0a070" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Name and quote -->
+    <text x="2" y="200" fill="#ffffff" font-size="12" font-family="sans-serif" text-anchor="middle" font-weight="bold">Steve Jobs</text>
+    <text x="2" y="216" fill="#888888" font-size="10" font-family="sans-serif" text-anchor="middle">CEO, Apple</text>
+  </g>
+
+  <!-- Famous quote -->
+  <g transform="translate(500, 130)">
+    <rect x="0" y="0" width="280" height="115" fill="#0a0a0a" rx="5" stroke="#333333" stroke-width="1"/>
+    <text x="140" y="20" fill="#888888" font-size="10" font-family="sans-serif" text-anchor="middle">"Today, Apple is going to reinvent</text>
+    <text x="140" y="36" fill="#888888" font-size="10" font-family="sans-serif" text-anchor="middle">the phone."</text>
+    <text x="140" y="60" fill="#ffffff" font-size="11" font-family="sans-serif" text-anchor="middle" font-weight="bold">iPhone = iPod + Phone + Internet</text>
+    <line x1="20" y1="70" x2="260" y2="70" stroke="#333333" stroke-width="0.5"/>
+    <text x="140" y="86" fill="#666666" font-size="9" font-family="monospace" text-anchor="middle">3.5" Multi-touch display</text>
+    <text x="140" y="101" fill="#666666" font-size="9" font-family="monospace" text-anchor="middle">ARM CPU · 128MB RAM</text>
+    <text x="140" y="110" fill="#444444" font-size="9" font-family="monospace" text-anchor="middle">No App Store (yet!)</text>
+  </g>
+
+  <!-- Impact stats -->
+  <g transform="translate(500, 260)">
+    <rect x="0" y="0" width="280" height="110" fill="#0d0d0d" rx="5" stroke="#333333" stroke-width="1"/>
+    <text x="140" y="18" fill="#ff6600" font-size="11" font-family="monospace" text-anchor="middle" font-weight="bold">Mobile Computing Revolution</text>
+    <text x="15" y="38" fill="#cc5500" font-size="10" font-family="monospace">Sales: 6M units year 1 (2007)</text>
+    <text x="15" y="55" fill="#cc5500" font-size="10" font-family="monospace">App Store: 2008 — 1M+ apps</text>
+    <text x="15" y="72" fill="#cc5500" font-size="10" font-family="monospace">Changed: Nokia, BlackBerry gone</text>
+    <text x="15" y="89" fill="#cc5500" font-size="10" font-family="monospace">Today: 1.5B iPhones in use</text>
+    <text x="15" y="106" fill="#884400" font-size="10" font-family="monospace">Spawned entire mobile era</text>
+  </g>
+
+  <!-- Floor -->
+  <rect x="0" y="375" width="800" height="75" fill="#0d0d0d"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="408" width="800" height="42" fill="#050505" opacity="0.97"/>
+  <text x="400" y="426" fill="#ffffff" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">아이폰 · 모바일 컴퓨팅 혁명</text>
+  <text x="400" y="444" fill="#888888" font-size="12" font-family="Georgia, serif" text-anchor="middle">Steve Jobs · iPhone · Macworld 2007 · Touch Revolution · Mobile Computing Era</text>
+</svg>

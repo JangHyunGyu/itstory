@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <radialGradient id="warmLight" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ff8800" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#1a0800" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bg1946" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a0d05"/>
+      <stop offset="100%" stop-color="#0d0803"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2010"/>
+      <stop offset="100%" stop-color="#1a1508"/>
+    </linearGradient>
+    <filter id="tubeGlowFilter">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="tubeInnerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff9922"/>
+      <stop offset="100%" stop-color="#ff4400" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg1946)"/>
+  <rect width="800" height="450" fill="url(#warmLight)"/>
+
+  <!-- Floor -->
+  <rect x="0" y="360" width="800" height="90" fill="#0d0803"/>
+  <rect x="0" y="355" width="800" height="10" fill="#1a1205"/>
+
+  <!-- ENIAC - Left wall panel -->
+  <rect x="0" y="20" width="180" height="340" fill="url(#panelGrad)" rx="3"/>
+  <rect x="5" y="25" width="170" height="330" fill="#1a1005" rx="2"/>
+
+  <!-- Vacuum tube rows - left panel -->
+  <g fill="none">
+    <!-- Row 1 -->
+    <g transform="translate(15, 35)">
+      <g fill="url(#tubeInnerGlow)" filter="url(#tubeGlowFilter)">
+        <circle cx="18" cy="8" r="7"/>
+        <circle cx="38" cy="8" r="7"/>
+        <circle cx="58" cy="8" r="7"/>
+        <circle cx="78" cy="8" r="7"/>
+        <circle cx="98" cy="8" r="7"/>
+        <circle cx="118" cy="8" r="7"/>
+        <circle cx="138" cy="8" r="7"/>
+        <circle cx="158" cy="8" r="7"/>
+      </g>
+      <g stroke="#ff8800" stroke-width="0.5">
+        <circle cx="18" cy="8" r="7"/><circle cx="38" cy="8" r="7"/>
+        <circle cx="58" cy="8" r="7"/><circle cx="78" cy="8" r="7"/>
+        <circle cx="98" cy="8" r="7"/><circle cx="118" cy="8" r="7"/>
+        <circle cx="138" cy="8" r="7"/><circle cx="158" cy="8" r="7"/>
+      </g>
+    </g>
+    <!-- Rows 2-12 -->
+    <g transform="translate(15, 58)">
+      <g fill="url(#tubeInnerGlow)" filter="url(#tubeGlowFilter)" opacity="0.8">
+        <circle cx="18" cy="8" r="6"/><circle cx="38" cy="8" r="6"/><circle cx="58" cy="8" r="6"/>
+        <circle cx="78" cy="8" r="6"/><circle cx="98" cy="8" r="6"/><circle cx="118" cy="8" r="6"/>
+        <circle cx="138" cy="8" r="6"/><circle cx="158" cy="8" r="6"/>
+      </g>
+    </g>
+    <g transform="translate(15, 80)" fill="url(#tubeInnerGlow)" filter="url(#tubeGlowFilter)" opacity="0.7">
+      <circle cx="18" cy="8" r="6"/><circle cx="38" cy="8" r="6"/><circle cx="58" cy="8" r="6"/>
+      <circle cx="78" cy="8" r="6"/><circle cx="98" cy="8" r="6"/><circle cx="118" cy="8" r="6"/>
+      <circle cx="138" cy="8" r="6"/><circle cx="158" cy="8" r="6"/>
+    </g>
+    <g transform="translate(15, 102)" fill="url(#tubeInnerGlow)" filter="url(#tubeGlowFilter)" opacity="0.9">
+      <circle cx="18" cy="8" r="6"/><circle cx="38" cy="8" r="6"/><circle cx="58" cy="8" r="6"/>
+      <circle cx="78" cy="8" r="6"/><circle cx="98" cy="8" r="6"/><circle cx="118" cy="8" r="6"/>
+      <circle cx="138" cy="8" r="6"/><circle cx="158" cy="8" r="6"/>
+    </g>
+    <g transform="translate(15, 124)" fill="url(#tubeInnerGlow)" filter="url(#tubeGlowFilter)" opacity="0.6">
+      <circle cx="18" cy="8" r="6"/><circle cx="38" cy="8" r="6"/><circle cx="58" cy="8" r="6"/>
+      <circle cx="78" cy="8" r="6"/><circle cx="98" cy="8" r="6"/><circle cx="118" cy="8" r="6"/>
+      <circle cx="138" cy="8" r="6"/><circle cx="158" cy="8" r="6"/>
+    </g>
+    <g transform="translate(15, 146)" fill="url(#tubeInnerGlow)" filter="url(#tubeGlowFilter)" opacity="0.85">
+      <circle cx="18" cy="8" r="6"/><circle cx="38" cy="8" r="6"/><circle cx="58" cy="8" r="6"/>
+      <circle cx="78" cy="8" r="6"/><circle cx="98" cy="8" r="6"/><circle cx="118" cy="8" r="6"/>
+      <circle cx="138" cy="8" r="6"/><circle cx="158" cy="8" r="6"/>
+    </g>
+    <g transform="translate(15, 168)" fill="url(#tubeInnerGlow)" filter="url(#tubeGlowFilter)" opacity="0.75">
+      <circle cx="18" cy="8" r="6"/><circle cx="38" cy="8" r="6"/><circle cx="58" cy="8" r="6"/>
+      <circle cx="78" cy="8" r="6"/><circle cx="98" cy="8" r="6"/><circle cx="118" cy="8" r="6"/>
+      <circle cx="138" cy="8" r="6"/><circle cx="158" cy="8" r="6"/>
+    </g>
+    <g transform="translate(15, 190)" fill="url(#tubeInnerGlow)" filter="url(#tubeGlowFilter)" opacity="0.9">
+      <circle cx="18" cy="8" r="6"/><circle cx="38" cy="8" r="6"/><circle cx="58" cy="8" r="6"/>
+      <circle cx="78" cy="8" r="6"/><circle cx="98" cy="8" r="6"/><circle cx="118" cy="8" r="6"/>
+      <circle cx="138" cy="8" r="6"/><circle cx="158" cy="8" r="6"/>
+    </g>
+    <g transform="translate(15, 212)" fill="url(#tubeInnerGlow)" filter="url(#tubeGlowFilter)" opacity="0.7">
+      <circle cx="18" cy="8" r="6"/><circle cx="38" cy="8" r="6"/><circle cx="58" cy="8" r="6"/>
+      <circle cx="78" cy="8" r="6"/><circle cx="98" cy="8" r="6"/><circle cx="118" cy="8" r="6"/>
+      <circle cx="138" cy="8" r="6"/><circle cx="158" cy="8" r="6"/>
+    </g>
+    <g transform="translate(15, 234)" fill="url(#tubeInnerGlow)" filter="url(#tubeGlowFilter)" opacity="0.8">
+      <circle cx="18" cy="8" r="6"/><circle cx="38" cy="8" r="6"/><circle cx="58" cy="8" r="6"/>
+      <circle cx="78" cy="8" r="6"/><circle cx="98" cy="8" r="6"/><circle cx="118" cy="8" r="6"/>
+      <circle cx="138" cy="8" r="6"/><circle cx="158" cy="8" r="6"/>
+    </g>
+    <g transform="translate(15, 256)" fill="url(#tubeInnerGlow)" filter="url(#tubeGlowFilter)" opacity="0.65">
+      <circle cx="18" cy="8" r="6"/><circle cx="38" cy="8" r="6"/><circle cx="58" cy="8" r="6"/>
+      <circle cx="78" cy="8" r="6"/><circle cx="98" cy="8" r="6"/><circle cx="118" cy="8" r="6"/>
+      <circle cx="138" cy="8" r="6"/><circle cx="158" cy="8" r="6"/>
+    </g>
+    <g transform="translate(15, 278)" fill="url(#tubeInnerGlow)" filter="url(#tubeGlowFilter)" opacity="0.88">
+      <circle cx="18" cy="8" r="6"/><circle cx="38" cy="8" r="6"/><circle cx="58" cy="8" r="6"/>
+      <circle cx="78" cy="8" r="6"/><circle cx="98" cy="8" r="6"/><circle cx="118" cy="8" r="6"/>
+      <circle cx="138" cy="8" r="6"/><circle cx="158" cy="8" r="6"/>
+    </g>
+    <g transform="translate(15, 300)" fill="url(#tubeInnerGlow)" filter="url(#tubeGlowFilter)" opacity="0.6">
+      <circle cx="18" cy="8" r="6"/><circle cx="38" cy="8" r="6"/><circle cx="58" cy="8" r="6"/>
+      <circle cx="78" cy="8" r="6"/><circle cx="98" cy="8" r="6"/><circle cx="118" cy="8" r="6"/>
+      <circle cx="138" cy="8" r="6"/><circle cx="158" cy="8" r="6"/>
+    </g>
+  </g>
+
+  <!-- ENIAC - Middle panels -->
+  <rect x="195" y="20" width="120" height="340" fill="url(#panelGrad)" rx="3"/>
+  <rect x="330" y="20" width="120" height="340" fill="url(#panelGrad)" rx="3"/>
+
+  <!-- Control panel dials and switches (middle) -->
+  <g transform="translate(200, 30)">
+    <g fill="#3a2a10" stroke="#6a4a20" stroke-width="1">
+      <circle cx="20" cy="20" r="12"/>
+      <circle cx="50" cy="20" r="12"/>
+      <circle cx="80" cy="20" r="12"/>
+      <circle cx="20" cy="55" r="12"/>
+      <circle cx="50" cy="55" r="12"/>
+      <circle cx="80" cy="55" r="12"/>
+      <circle cx="20" cy="90" r="12"/>
+      <circle cx="50" cy="90" r="12"/>
+      <circle cx="80" cy="90" r="12"/>
+    </g>
+    <g fill="#ff4400" filter="url(#tubeGlowFilter)" opacity="0.8">
+      <circle cx="20" cy="20" r="5"/>
+      <circle cx="80" cy="55" r="5"/>
+      <circle cx="50" cy="90" r="5"/>
+    </g>
+    <g fill="#ff8800" filter="url(#tubeGlowFilter)" opacity="0.8">
+      <circle cx="50" cy="20" r="5"/>
+      <circle cx="20" cy="55" r="5"/>
+      <circle cx="80" cy="90" r="5"/>
+    </g>
+    <g fill="#44ff44" filter="url(#tubeGlowFilter)" opacity="0.8">
+      <circle cx="80" cy="20" r="5"/>
+      <circle cx="50" cy="55" r="5"/>
+      <circle cx="20" cy="90" r="5"/>
+    </g>
+    <!-- Switches row -->
+    <g fill="#4a3a18" stroke="#8a6a30" stroke-width="1">
+      <rect x="10" y="115" width="8" height="20" rx="2"/>
+      <rect x="25" y="115" width="8" height="20" rx="2"/>
+      <rect x="40" y="115" width="8" height="20" rx="2"/>
+      <rect x="55" y="115" width="8" height="20" rx="2"/>
+      <rect x="70" y="115" width="8" height="20" rx="2"/>
+      <rect x="85" y="115" width="8" height="20" rx="2"/>
+      <rect x="100" y="115" width="8" height="20" rx="2"/>
+    </g>
+  </g>
+
+  <!-- Cables hanging from panels -->
+  <g stroke="#1a1000" stroke-width="4" fill="none" opacity="0.7">
+    <path d="M 60 360 Q 80 320 100 360"/>
+    <path d="M 110 355 Q 140 310 160 360"/>
+    <path d="M 240 360 Q 255 325 275 355"/>
+    <path d="M 380 358 Q 395 318 415 360"/>
+  </g>
+  <g stroke="#2a1808" stroke-width="3" fill="none" opacity="0.6">
+    <path d="M 80 360 Q 130 290 180 355"/>
+    <path d="M 220 360 Q 280 300 340 358"/>
+    <path d="M 360 355 Q 400 310 440 360"/>
+  </g>
+
+  <!-- Women programmers (right side of room) -->
+  <!-- Person 1 -->
+  <g transform="translate(490, 230)">
+    <!-- Dress 1940s style -->
+    <ellipse cx="0" cy="90" rx="22" ry="40" fill="#8B3A3A"/>
+    <rect x="-22" y="68" width="44" height="30" fill="#8B3A3A"/>
+    <!-- Blouse -->
+    <rect x="-14" y="35" width="28" height="36" fill="#c8a870"/>
+    <!-- Head -->
+    <ellipse cx="0" cy="22" rx="14" ry="16" fill="#d4a882"/>
+    <!-- Victory roll hair (1940s) -->
+    <ellipse cx="-8" cy="10" rx="10" ry="7" fill="#5a3a20"/>
+    <ellipse cx="8" cy="10" rx="10" ry="7" fill="#5a3a20"/>
+    <rect x="-10" y="6" width="20" height="8" fill="#4a2a10"/>
+    <!-- Eyes -->
+    <circle cx="-4" cy="22" r="2" fill="#1a1a00"/>
+    <circle cx="4" cy="22" r="2" fill="#1a1a00"/>
+    <!-- Working on panel -->
+    <line x1="14" y1="50" x2="45" y2="40" stroke="#d4a882" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Person 2 -->
+  <g transform="translate(570, 245)">
+    <ellipse cx="0" cy="85" rx="20" ry="38" fill="#3A5A8B"/>
+    <rect x="-20" y="65" width="40" height="28" fill="#3A5A8B"/>
+    <rect x="-13" y="33" width="26" height="34" fill="#e8d8b8"/>
+    <ellipse cx="0" cy="20" rx="13" ry="15" fill="#c89060"/>
+    <ellipse cx="-6" cy="8" rx="9" ry="6" fill="#2a1a00"/>
+    <ellipse cx="6" cy="8" rx="9" ry="6" fill="#2a1a00"/>
+    <circle cx="-4" cy="20" r="2" fill="#1a1a00"/>
+    <circle cx="4" cy="20" r="2" fill="#1a1a00"/>
+    <!-- Clipboard -->
+    <rect x="14" y="38" width="25" height="35" fill="#e0d0a0" rx="2"/>
+    <rect x="16" y="42" width="21" height="3" fill="#8a7840"/>
+    <rect x="16" y="48" width="18" height="3" fill="#8a7840"/>
+    <rect x="16" y="54" width="20" height="3" fill="#8a7840"/>
+  </g>
+
+  <!-- ENIAC label plate -->
+  <rect x="200" y="170" width="220" height="35" fill="#2a1808" rx="3"/>
+  <text x="310" y="193" fill="#ff8800" font-size="16" font-family="monospace" text-anchor="middle" font-weight="bold">ENIAC</text>
+
+  <!-- Stats info -->
+  <g transform="translate(475, 80)">
+    <rect x="0" y="0" width="295" height="140" fill="#100a00" opacity="0.8" rx="5"/>
+    <text x="148" y="22" fill="#ff8800" font-size="12" font-family="monospace" text-anchor="middle" font-weight="bold">ENIAC SPECIFICATIONS</text>
+    <text x="20" y="45" fill="#cc6600" font-size="11" font-family="monospace">18,000 vacuum tubes</text>
+    <text x="20" y="63" fill="#cc6600" font-size="11" font-family="monospace">70,000 resistors</text>
+    <text x="20" y="81" fill="#cc6600" font-size="11" font-family="monospace">10,000 capacitors</text>
+    <text x="20" y="99" fill="#cc6600" font-size="11" font-family="monospace">30 tons · 167 m²</text>
+    <text x="20" y="117" fill="#aa4400" font-size="11" font-family="monospace">5,000 additions/second</text>
+    <text x="20" y="135" fill="#aa4400" font-size="11" font-family="monospace">Artillery ballistics · 1946</text>
+  </g>
+
+  <!-- Title -->
+  <rect x="0" y="390" width="800" height="60" fill="#0d0800" opacity="0.95"/>
+  <text x="400" y="416" fill="#ff8800" font-size="18" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">ENIAC 가동 · 다목적 전자 컴퓨터</text>
+  <text x="400" y="440" fill="#8B4400" font-size="13" font-family="Georgia, serif" text-anchor="middle">Electronic Numerical Integrator and Computer · 1946 · 18,000 Vacuum Tubes</text>
+</svg>

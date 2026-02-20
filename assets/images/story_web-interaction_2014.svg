@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg14" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1923"/>
+      <stop offset="100%" style="stop-color:#1a2d40"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg14)"/>
+
+  <!-- Service Worker shield/layer diagram -->
+  <!-- Browser at top -->
+  <rect x="270" y="30" width="260" height="60" rx="6" fill="#1a2d40" stroke="#4488ff" stroke-width="2"/>
+  <text x="400" y="56" font-family="sans-serif" font-size="13" fill="#88bbff" text-anchor="middle">Browser (Web App)</text>
+  <text x="400" y="74" font-family="monospace" font-size="10" fill="#aaa" text-anchor="middle">index.html · app.js</text>
+
+  <!-- Arrow down to Service Worker -->
+  <line x1="400" y1="90" x2="400" y2="118" stroke="#4488ff" stroke-width="2"/>
+  <polygon points="395,114 405,114 400,122" fill="#4488ff"/>
+
+  <!-- Service Worker box (the key element) -->
+  <rect x="220" y="122" width="360" height="80" rx="8" fill="#1a3a2a" stroke="#44dd88" stroke-width="2.5"/>
+  <text x="400" y="146" font-family="sans-serif" font-size="14" fill="#44dd88" text-anchor="middle" font-weight="bold">Service Worker</text>
+  <text x="400" y="164" font-family="monospace" font-size="10" fill="#aaa" text-anchor="middle">self.addEventListener('fetch', e => {</text>
+  <text x="400" y="180" font-family="monospace" font-size="10" fill="#aaa" text-anchor="middle">  e.respondWith(caches.match(e.request))</text>
+  <text x="400" y="194" font-family="monospace" font-size="10" fill="#aaa" text-anchor="middle">})</text>
+
+  <!-- Feature icons around SW -->
+  <!-- Offline -->
+  <rect x="30" y="160" width="170" height="60" rx="6" fill="#1a2640" stroke="#4488ff" stroke-width="1"/>
+  <text x="115" y="184" font-family="sans-serif" font-size="12" fill="#88bbff" text-anchor="middle">Offline Support</text>
+  <text x="115" y="202" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">Cache → serve</text>
+  <line x1="200" y1="190" x2="220" y2="175" stroke="#4488ff" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Push notifications -->
+  <rect x="600" y="160" width="170" height="60" rx="6" fill="#2a1a40" stroke="#aa88ff" stroke-width="1"/>
+  <text x="685" y="184" font-family="sans-serif" font-size="12" fill="#bb99ff" text-anchor="middle">Push Notifications</text>
+  <text x="685" y="202" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">Browser closed → notify</text>
+  <line x1="580" y1="190" x2="600" y2="175" stroke="#aa88ff" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Arrow down to network/cache -->
+  <line x1="340" y1="202" x2="280" y2="240" stroke="#44dd88" stroke-width="1.5"/>
+  <line x1="460" y1="202" x2="520" y2="240" stroke="#44dd88" stroke-width="1.5"/>
+
+  <!-- Cache (left branch) -->
+  <rect x="190" y="240" width="180" height="60" rx="6" fill="#1a2a10" stroke="#88cc44" stroke-width="1.5"/>
+  <text x="280" y="264" font-family="sans-serif" font-size="12" fill="#aade66" text-anchor="middle">Cache Storage</text>
+  <text x="280" y="282" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">HTML, CSS, JS, Images</text>
+
+  <!-- Network (right branch) -->
+  <rect x="430" y="240" width="180" height="60" rx="6" fill="#0a1a2a" stroke="#4488ff" stroke-width="1.5"/>
+  <text x="520" y="264" font-family="sans-serif" font-size="12" fill="#88bbff" text-anchor="middle">Network</text>
+  <text x="520" y="282" font-family="monospace" font-size="9" fill="#888" text-anchor="middle">Internet (when available)</text>
+
+  <!-- PWA badge concept -->
+  <rect x="30" y="260" width="150" height="110" rx="8" fill="#0d1a28" stroke="#4488ff" stroke-width="1.5"/>
+  <text x="105" y="282" font-family="sans-serif" font-size="12" fill="#4488ff" text-anchor="middle" font-weight="bold">PWA Features</text>
+  <text x="40" y="300" font-family="sans-serif" font-size="10" fill="#888">✓ Offline access</text>
+  <text x="40" y="316" font-family="sans-serif" font-size="10" fill="#888">✓ Push notifications</text>
+  <text x="40" y="332" font-family="sans-serif" font-size="10" fill="#888">✓ Install to home</text>
+  <text x="40" y="348" font-family="sans-serif" font-size="10" fill="#888">✓ Background sync</text>
+  <text x="40" y="364" font-family="sans-serif" font-size="10" fill="#888">✓ Works like native</text>
+
+  <!-- Code snippet on right -->
+  <rect x="620" y="240" width="150" height="130" rx="6" fill="#1e1e1e" stroke="#333" stroke-width="1"/>
+  <text x="636" y="260" font-family="monospace" font-size="10" fill="#6a9955">// install SW</text>
+  <text x="636" y="276" font-family="monospace" font-size="10" fill="#d4d4d4">navigator</text>
+  <text x="636" y="292" font-family="monospace" font-size="10" fill="#d4d4d4">  .serviceWorker</text>
+  <text x="636" y="308" font-family="monospace" font-size="10" fill="#d4d4d4">  .</text>
+  <text x="648" y="308" font-family="monospace" font-size="10" fill="#dcdcaa">register</text>
+  <text x="636" y="324" font-family="monospace" font-size="10" fill="#d4d4d4">  (</text>
+  <text x="646" y="324" font-family="monospace" font-size="10" fill="#ce9178">'/sw.js'</text>
+  <text x="636" y="340" font-family="monospace" font-size="10" fill="#d4d4d4">  ).</text>
+  <text x="648" y="340" font-family="monospace" font-size="10" fill="#dcdcaa">then</text>
+  <text x="636" y="356" font-family="monospace" font-size="10" fill="#d4d4d4">  (...</text>
+
+  <!-- Notification popup demo -->
+  <rect x="250" y="320" width="280" height="60" rx="8" fill="#1a2640" stroke="#aa88ff" stroke-width="1.5"/>
+  <text x="270" y="340" font-family="sans-serif" font-size="11" fill="#bb99ff">News App</text>
+  <text x="270" y="358" font-family="sans-serif" font-size="10" fill="#ccc">Breaking: New article available!</text>
+  <rect x="454" y="332" width="60" height="22" rx="4" fill="#4488ff"/>
+  <text x="484" y="347" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">Read</text>
+
+  <!-- Year badge -->
+  <rect x="330" y="392" width="140" height="36" rx="18" fill="#44dd88"/>
+  <text x="400" y="416" font-family="sans-serif" font-size="20" font-weight="bold" fill="#0d1923" text-anchor="middle">SW 2014</text>
+
+  <!-- Caption -->
+  <text x="400" y="435" font-family="sans-serif" font-size="12" fill="#888" text-anchor="middle">Service Worker draft · Chrome Dev Summit · Offline Web Apps · 2014</text>
+</svg>

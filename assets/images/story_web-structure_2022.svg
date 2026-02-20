@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg22s" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1020"/>
+      <stop offset="100%" style="stop-color:#101828"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg22s)"/>
+
+  <!-- Design System title -->
+  <rect x="30" y="30" width="740" height="50" rx="6" fill="#1a2040" stroke="#6060ff" stroke-width="1.5"/>
+  <text x="400" y="52" font-family="sans-serif" font-size="15" fill="#8888ff" text-anchor="middle" font-weight="bold">Design Systems — Structure as Shared Language</text>
+  <text x="400" y="70" font-family="sans-serif" font-size="10" fill="#888" text-anchor="middle">2022 · Google Material · Apple HIG · IBM Carbon · UK GDS · Atlassian ADS</text>
+
+  <!-- Design System components (left) -->
+  <rect x="30" y="96" width="360" height="330" rx="6" fill="#0d1828" stroke="#6060ff" stroke-width="1"/>
+  <text x="210" y="116" font-family="sans-serif" font-size="12" fill="#8888ff" text-anchor="middle" font-weight="bold">Component Library Structure</text>
+
+  <!-- Component: Button -->
+  <rect x="46" y="128" width="328" height="80" rx="4" fill="#1a1a3a" stroke="#6060ff" stroke-width="1"/>
+  <text x="62" y="146" font-family="sans-serif" font-size="11" fill="#8888ff" font-weight="bold">Button Component</text>
+  <!-- Variants -->
+  <rect x="62" y="154" width="80" height="28" rx="4" fill="#6060ff"/>
+  <text x="102" y="172" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle">Primary</text>
+  <rect x="152" y="154" width="80" height="28" rx="4" fill="none" stroke="#6060ff" stroke-width="1.5"/>
+  <text x="192" y="172" font-family="sans-serif" font-size="11" fill="#8888ff" text-anchor="middle">Secondary</text>
+  <rect x="242" y="154" width="80" height="28" rx="4" fill="#ff4444"/>
+  <text x="282" y="172" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle">Danger</text>
+  <text x="62" y="198" font-family="monospace" font-size="9" fill="#888">&lt;Button variant="primary" size="md" /&gt;</text>
+
+  <!-- Component: Card -->
+  <rect x="46" y="218" width="328" height="90" rx="4" fill="#1a1a3a" stroke="#6060ff" stroke-width="1"/>
+  <text x="62" y="236" font-family="sans-serif" font-size="11" fill="#8888ff" font-weight="bold">Card Component</text>
+  <rect x="62" y="244" width="140" height="56" rx="4" fill="#0a1020" stroke="#333" stroke-width="1"/>
+  <rect x="62" y="244" width="140" height="20" rx="4" fill="#333"/>
+  <text x="132" y="258" font-family="sans-serif" font-size="9" fill="#aaa" text-anchor="middle">Card Title</text>
+  <text x="72" y="276" font-family="sans-serif" font-size="8" fill="#888">Card body content</text>
+  <text x="72" y="290" font-family="sans-serif" font-size="8" fill="#888">goes here...</text>
+  <text x="62" y="300" font-family="monospace" font-size="9" fill="#888">&lt;Card title="..." aria-label="..."&gt;</text>
+
+  <!-- Accessibility rules included -->
+  <rect x="46" y="318" width="328" height="100" rx="4" fill="#0a1a10" stroke="#44cc44" stroke-width="1"/>
+  <text x="210" y="336" font-family="sans-serif" font-size="11" fill="#44cc44" text-anchor="middle" font-weight="bold">Accessibility Built-In</text>
+  <text x="62" y="352" font-family="monospace" font-size="9" fill="#aaa">✓ role="button" included</text>
+  <text x="62" y="366" font-family="monospace" font-size="9" fill="#aaa">✓ aria-label required by system</text>
+  <text x="62" y="380" font-family="monospace" font-size="9" fill="#aaa">✓ keyboard: Enter/Space handles</text>
+  <text x="62" y="394" font-family="monospace" font-size="9" fill="#aaa">✓ focus visible ring enforced</text>
+  <text x="62" y="408" font-family="monospace" font-size="9" fill="#555">→ Structure + a11y = one package</text>
+
+  <!-- Right: Storybook / documentation driven -->
+  <rect x="410" y="96" width="360" height="200" rx="6" fill="#0d1828" stroke="#6060ff" stroke-width="1"/>
+  <text x="590" y="116" font-family="sans-serif" font-size="12" fill="#8888ff" text-anchor="middle" font-weight="bold">Storybook — Living Documentation</text>
+
+  <!-- Storybook UI mockup -->
+  <rect x="426" y="126" width="328" height="160" rx="4" fill="#111" stroke="#333" stroke-width="1"/>
+  <!-- Sidebar -->
+  <rect x="426" y="126" width="100" height="160" rx="4" fill="#1a1a1a" stroke="none"/>
+  <text x="476" y="144" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">Components</text>
+  <text x="436" y="160" font-family="monospace" font-size="8" fill="#6060ff">▾ Button</text>
+  <text x="446" y="174" font-family="monospace" font-size="8" fill="#aaa">  Primary</text>
+  <text x="446" y="186" font-family="monospace" font-size="8" fill="#aaa">  Secondary</text>
+  <text x="436" y="200" font-family="monospace" font-size="8" fill="#888">▸ Card</text>
+  <text x="436" y="214" font-family="monospace" font-size="8" fill="#888">▸ Modal</text>
+  <text x="436" y="228" font-family="monospace" font-size="8" fill="#888">▸ Input</text>
+  <text x="436" y="242" font-family="monospace" font-size="8" fill="#888">▸ Table</text>
+
+  <!-- Canvas area -->
+  <rect x="526" y="130" width="220" height="152" rx="2" fill="#f5f5f5"/>
+  <rect x="560" y="150" width="100" height="32" rx="4" fill="#6060ff"/>
+  <text x="610" y="170" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle">Primary</text>
+  <text x="610" y="200" font-family="sans-serif" font-size="9" fill="#888" text-anchor="middle">Controls: size, variant, disabled</text>
+  <!-- Knobs (controls) -->
+  <rect x="540" y="212" width="196" height="58" rx="2" fill="#eee"/>
+  <text x="548" y="228" font-family="monospace" font-size="7" fill="#555">variant: primary ▾</text>
+  <text x="548" y="242" font-family="monospace" font-size="7" fill="#555">size: medium ▾</text>
+  <text x="548" y="256" font-family="monospace" font-size="7" fill="#555">disabled: ☐</text>
+  <text x="548" y="270" font-family="monospace" font-size="7" fill="#555">aria-label: "Submit" |</text>
+
+  <!-- Single source of truth -->
+  <rect x="410" y="310" width="360" height="116" rx="6" fill="#0d1828" stroke="#6060ff" stroke-width="1"/>
+  <text x="590" y="330" font-family="sans-serif" font-size="12" fill="#8888ff" text-anchor="middle" font-weight="bold">Single Source of Truth</text>
+
+  <text x="426" y="350" font-family="sans-serif" font-size="10" fill="#888">Design tokens → Figma variables</text>
+  <text x="426" y="366" font-family="sans-serif" font-size="10" fill="#888">Code → npm package</text>
+  <text x="426" y="382" font-family="sans-serif" font-size="10" fill="#888">Docs → Storybook stories</text>
+  <text x="426" y="398" font-family="sans-serif" font-size="10" fill="#888">HTML structure rules in one place</text>
+  <text x="426" y="414" font-family="sans-serif" font-size="10" fill="#888">A11y guidance bundled with components</text>
+
+  <!-- Year badge -->
+  <rect x="290" y="426" width="220" height="20" rx="10" fill="#4040cc"/>
+  <text x="400" y="440" font-family="sans-serif" font-size="12" font-weight="bold" fill="#aaaaff" text-anchor="middle">Design Systems Guide · 2022</text>
+</svg>

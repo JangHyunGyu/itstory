@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- IPv6 RFC 2460 adoption - address space visualization -->
+  <rect width="800" height="450" fill="#0a0a18"/>
+  <!-- Background hex grid pattern -->
+  <g stroke="#1a1a2a" stroke-width="0.5" opacity="0.6">
+    <line x1="0" y1="50" x2="800" y2="50"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="250" x2="800" y2="250"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="350" x2="800" y2="350"/>
+  </g>
+  <!-- Central comparison: IPv4 vs IPv6 -->
+  <!-- IPv4 panel (left) -->
+  <rect x="30" y="70" width="340" height="290" fill="#0f1520" rx="8" stroke="#c04040" stroke-width="2"/>
+  <rect x="30" y="70" width="340" height="35" fill="#502020" rx="8"/>
+  <text x="200" y="93" font-family="monospace" font-size="12" font-weight="bold" fill="#ff6060" text-anchor="middle">IPv4 (1981)</text>
+  <!-- IPv4 address box -->
+  <rect x="60" y="118" width="280" height="35" fill="#1a0808" rx="4" stroke="#a04040" stroke-width="1.5"/>
+  <text x="200" y="140" font-family="monospace" font-size="14" fill="#ff8080" text-anchor="middle">192.168.1.100</text>
+  <text x="200" y="165" font-family="sans-serif" font-size="9" fill="#c06060" text-anchor="middle">32-bit address · 4 bytes</text>
+  <!-- IPv4 address space visualization (small square) -->
+  <text x="200" y="190" font-family="sans-serif" font-size="9" fill="#8060a0" text-anchor="middle">TOTAL ADDRESS SPACE:</text>
+  <rect x="140" y="200" width="120" height="80" fill="#3a1010" rx="3" stroke="#a03030" stroke-width="1"/>
+  <text x="200" y="250" font-family="monospace" font-size="10" fill="#ff6040" text-anchor="middle">2³²</text>
+  <text x="200" y="268" font-family="monospace" font-size="9" fill="#c04030" text-anchor="middle">4.3 billion</text>
+  <!-- Warning: running out! -->
+  <rect x="60" y="295" width="280" height="45" fill="#2a0808" rx="4" stroke="#ff4040" stroke-width="2"/>
+  <text x="200" y="315" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ff4040" text-anchor="middle">ADDRESS EXHAUSTION!</text>
+  <text x="200" y="330" font-family="serif" font-size="8" fill="#c06060" text-anchor="middle">APNIC ran out: April 2011</text>
+  <text x="200" y="342" font-family="serif" font-size="8" fill="#c06060" text-anchor="middle">ARIN ran out: September 2015</text>
+  <!-- IPv6 panel (right) -->
+  <rect x="430" y="70" width="340" height="290" fill="#0f1a10" rx="8" stroke="#40c040" stroke-width="2"/>
+  <rect x="430" y="70" width="340" height="35" fill="#205020" rx="8"/>
+  <text x="600" y="93" font-family="monospace" font-size="12" font-weight="bold" fill="#60ff60" text-anchor="middle">IPv6 (RFC 2460 · 1998)</text>
+  <!-- IPv6 address -->
+  <rect x="450" y="118" width="300" height="35" fill="#081808" rx="4" stroke="#40a040" stroke-width="1.5"/>
+  <text x="600" y="135" font-family="monospace" font-size="11" fill="#80ff80" text-anchor="middle">2001:0db8:85a3:</text>
+  <text x="600" y="148" font-family="monospace" font-size="11" fill="#80ff80" text-anchor="middle">0000:0000:8a2e:0370:7334</text>
+  <text x="600" y="173" font-family="sans-serif" font-size="9" fill="#40c060" text-anchor="middle">128-bit address · 16 bytes</text>
+  <!-- IPv6 address space (huge square) -->
+  <text x="600" y="195" font-family="sans-serif" font-size="9" fill="#40a060" text-anchor="middle">TOTAL ADDRESS SPACE:</text>
+  <rect x="460" y="205" width="280" height="80" fill="#082008" rx="3" stroke="#30a030" stroke-width="1"/>
+  <text x="600" y="240" font-family="monospace" font-size="11" fill="#60ff60" text-anchor="middle">2¹²⁸</text>
+  <text x="600" y="257" font-family="monospace" font-size="8" fill="#40c040" text-anchor="middle">340,282,366,920,938,463,463,374,607,431,768,211,456</text>
+  <text x="600" y="272" font-family="monospace" font-size="9" fill="#40c040" text-anchor="middle">340 undecillion addresses!</text>
+  <!-- Success message -->
+  <rect x="460" y="298" width="280" height="45" fill="#082808" rx="4" stroke="#40ff40" stroke-width="1.5"/>
+  <text x="600" y="316" font-family="sans-serif" font-size="9" fill="#60ff60" text-anchor="middle">ADDRESS SPACE: INFINITE (PRACTICAL)</text>
+  <text x="600" y="332" font-family="serif" font-size="8" fill="#40c040" text-anchor="middle">Every grain of sand on Earth can have</text>
+  <text x="600" y="344" font-family="serif" font-size="8" fill="#40c040" text-anchor="middle">thousands of IPv6 addresses!</text>
+  <!-- Arrow between panels -->
+  <polygon points="390,210 420,190 420,230" fill="#c0a040"/>
+  <text x="405" y="215" font-family="sans-serif" font-size="8" fill="#c0a040" text-anchor="middle">→</text>
+  <!-- Bottom note -->
+  <rect x="30" y="372" width="740" height="30" fill="#050a10" rx="4" stroke="#2a4a2a" stroke-width="1"/>
+  <text x="400" y="391" font-family="serif" font-size="9" fill="#60a0c0" text-anchor="middle">Steve Deering &amp; Robert Hinden authors · IETF RFC 2460 · Dec 1998 · Dual-stack transition ongoing</text>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#0a2a0a" rx="6" opacity="0.9" stroke="#40c040" stroke-width="1"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#40ff40" text-anchor="middle">1998</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#050810" opacity="0.9"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">IPv6 RFC 2460 · 128-bit Addresses · 340 Undecillion IPs · Internet Future-Proof</text>
+</svg>

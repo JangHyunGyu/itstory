@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <!-- Conference room background -->
+  <rect width="800" height="450" fill="#e0ddd5"/>
+  <!-- Conference room walls -->
+  <rect x="0" y="0" width="800" height="380" fill="#d8d5cc"/>
+  <!-- Floor -->
+  <rect x="0" y="376" width="800" height="74" fill="#c0b898"/>
+  <!-- Projection screen on wall -->
+  <rect x="200" y="30" width="400" height="250" fill="#f0ede0" stroke="#aaa090" stroke-width="3" rx="2"/>
+  <!-- IMP Architecture diagram on screen -->
+  <!-- Title -->
+  <text x="400" y="60" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a2a4a" text-anchor="middle">INTERFACE MESSAGE PROCESSOR (IMP)</text>
+  <text x="400" y="78" font-family="serif" font-size="9" fill="#3a4a6a" text-anchor="middle">ARPANET Node Design · BBN Technologies</text>
+  <!-- Network diagram on screen -->
+  <!-- Host computer boxes -->
+  <g transform="translate(400, 165)">
+    <!-- UCLA Host -->
+    <rect x="-160" y="-60" width="65" height="35" fill="#2a4a8a" rx="3"/>
+    <text x="-127" y="-40" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">HOST</text>
+    <text x="-127" y="-30" font-family="sans-serif" font-size="7" fill="#c0d8f0" text-anchor="middle">UCLA</text>
+    <!-- UCLA IMP (the new device) -->
+    <rect x="-90" y="-60" width="45" height="35" fill="#c84040" rx="3"/>
+    <text x="-67" y="-40" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">IMP</text>
+    <text x="-67" y="-30" font-family="sans-serif" font-size="7" fill="#f0c0c0" text-anchor="middle">#1</text>
+    <!-- SRI Host + IMP -->
+    <rect x="95" y="-60" width="65" height="35" fill="#2a4a8a" rx="3"/>
+    <text x="128" y="-40" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">HOST</text>
+    <text x="128" y="-30" font-family="sans-serif" font-size="7" fill="#c0d8f0" text-anchor="middle">SRI</text>
+    <rect x="45" y="-60" width="45" height="35" fill="#c84040" rx="3"/>
+    <text x="67" y="-40" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">IMP</text>
+    <text x="67" y="-30" font-family="sans-serif" font-size="7" fill="#f0c0c0" text-anchor="middle">#2</text>
+    <!-- UCSB and Utah below -->
+    <rect x="-160" y="25" width="65" height="35" fill="#2a4a8a" rx="3"/>
+    <text x="-127" y="45" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">HOST</text>
+    <text x="-127" y="55" font-family="sans-serif" font-size="7" fill="#c0d8f0" text-anchor="middle">UCSB</text>
+    <rect x="-90" y="25" width="45" height="35" fill="#c84040" rx="3"/>
+    <text x="-67" y="45" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">IMP</text>
+    <text x="-67" y="55" font-family="sans-serif" font-size="7" fill="#f0c0c0" text-anchor="middle">#3</text>
+    <rect x="95" y="25" width="65" height="35" fill="#2a4a8a" rx="3"/>
+    <text x="128" y="45" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">HOST</text>
+    <text x="128" y="55" font-family="sans-serif" font-size="7" fill="#c0d8f0" text-anchor="middle">UTAH</text>
+    <rect x="45" y="25" width="45" height="35" fill="#c84040" rx="3"/>
+    <text x="67" y="45" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">IMP</text>
+    <text x="67" y="55" font-family="sans-serif" font-size="7" fill="#f0c0c0" text-anchor="middle">#4</text>
+    <!-- 56kbps leased lines between IMPs -->
+    <g stroke="#20a020" stroke-width="2">
+      <line x1="-45" y1="-42" x2="45" y2="-42"/>
+      <line x1="-67" y1="-25" x2="-67" y2="25"/>
+      <line x1="67" y1="-25" x2="67" y2="25"/>
+      <line x1="-45" y1="42" x2="45" y2="42"/>
+      <!-- Diagonal cross connections -->
+      <line x1="-45" y1="-25" x2="45" y2="25"/>
+      <line x1="45" y1="-25" x2="-45" y2="25"/>
+    </g>
+    <!-- Wire labels -->
+    <text x="0" y="-49" font-family="sans-serif" font-size="7" fill="#208020" text-anchor="middle">56 kbps leased line</text>
+    <!-- Connection arrows from host to IMP -->
+    <g stroke="#6080c0" stroke-width="1.5">
+      <line x1="-96" y1="-42" x2="-90" y2="-42"/>
+      <line x1="90" y1="-42" x2="95" y2="-42"/>
+      <line x1="-96" y1="42" x2="-90" y2="42"/>
+      <line x1="90" y1="42" x2="95" y2="42"/>
+    </g>
+    <text x="0" y="78" font-family="sans-serif" font-size="8" fill="#4a5a6a" text-anchor="middle">IMPs handle packet routing — hosts just compute</text>
+  </g>
+  <!-- Conference room - people seated -->
+  <!-- Conference table -->
+  <rect x="100" y="310" width="600" height="20" fill="#8a6028" rx="3"/>
+  <rect x="120" y="328" width="10" height="55" fill="#6a4018"/>
+  <rect x="665" y="328" width="10" height="55" fill="#6a4018"/>
+  <rect x="390" y="328" width="10" height="55" fill="#6a4018"/>
+  <!-- Attendees at table -->
+  <g fill="#d4a870">
+    <ellipse cx="165" cy="307" rx="15" ry="15"/>
+    <ellipse cx="250" cy="303" rx="15" ry="15"/>
+    <ellipse cx="340" cy="301" rx="15" ry="15"/>
+    <ellipse cx="460" cy="301" rx="15" ry="15"/>
+    <ellipse cx="555" cy="303" rx="15" ry="15"/>
+    <ellipse cx="640" cy="307" rx="15" ry="15"/>
+  </g>
+  <g fill="#2a3a5a">
+    <rect x="152" y="320" width="24" height="28" rx="2"/>
+    <rect x="237" y="316" width="24" height="28" rx="2"/>
+    <rect x="327" y="314" width="24" height="28" rx="2"/>
+    <rect x="447" y="314" width="24" height="28" rx="2"/>
+    <rect x="542" y="316" width="24" height="28" rx="2"/>
+    <rect x="627" y="320" width="24" height="28" rx="2"/>
+  </g>
+  <!-- Larry Roberts presenting -->
+  <g transform="translate(390, 290)">
+    <ellipse cx="0" cy="-18" rx="18" ry="18" fill="#c8956a"/>
+    <rect x="-14" y="0" width="28" height="38" fill="#1a2a4a" rx="3"/>
+    <!-- Pointer extended at screen -->
+    <line x1="-14" y1="10" x2="-90" y2="-120" stroke="#c8956a" stroke-width="5" stroke-linecap="round"/>
+    <text x="0" y="55" font-family="serif" font-size="9" fill="#4a5a7a" text-anchor="middle">Larry Roberts</text>
+    <text x="0" y="67" font-family="serif" font-size="8" fill="#4a5a7a" text-anchor="middle">Presenting IMP spec</text>
+  </g>
+  <!-- Overhead projector -->
+  <rect x="380" y="370" width="100" height="30" fill="#5a5a5a" rx="3"/>
+  <ellipse cx="430" cy="355" rx="15" ry="5" fill="#4a4a4a"/>
+  <line x1="430" y1="350" x2="390" y2="285" stroke="#aaa" stroke-width="1.5" opacity="0.6"/>
+  <!-- IMP box model (physical prototype sketch) -->
+  <rect x="30" y="280" width="130" height="100" fill="#f5ead0" stroke="#8a6a30" stroke-width="1" rx="3"/>
+  <text x="95" y="298" font-family="serif" font-size="8" font-weight="bold" fill="#2a1a0a" text-anchor="middle">IMP Physical Design</text>
+  <rect x="45" y="307" width="100" height="60" fill="#4a5a6a" rx="4" stroke="#2a3a4a" stroke-width="1.5"/>
+  <g fill="#c8d0d8" font-family="monospace" font-size="6">
+    <text x="95" y="322" text-anchor="middle">Honeywell DDP-516</text>
+    <text x="95" y="334" text-anchor="middle">12KB core memory</text>
+    <text x="95" y="346" text-anchor="middle">4 × 56kbps ports</text>
+    <text x="95" y="358" text-anchor="middle">Size: refrigerator</text>
+  </g>
+  <!-- Year label -->
+  <rect x="20" y="18" width="110" height="40" fill="#1a2a5a" rx="6" opacity="0.8"/>
+  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#80c0ff" text-anchor="middle">1967</text>
+  <!-- Caption -->
+  <rect x="0" y="410" width="800" height="40" fill="#0a0a1a" opacity="0.8"/>
+  <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">IMP Design · Interface Message Processor · ARPANET's Packet Switch Node</text>
+</svg>
