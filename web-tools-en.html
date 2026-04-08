@@ -242,8 +242,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>In a creative studio, designer Min launched Dreamweaver and dragged imagery into place. HTML appeared instantly in a pane to the right. Developer June leaned over and said, "I can tweak this markup without waiting for an export."</p>
-						<p>The team cloned pages with templates and showed clients interactive mockups days sooner than before.</p>
+						<p>In the late 1990s, building a website was a punishing job. You opened a plain text editor, typed every tag by hand — <code>&lt;table border="1" cellspacing="0" cellpadding="5"&gt;</code> — and tweaked one character to nudge an image, then refreshed the browser to see if it looked right. Designers were locked out of the whole process. The unspoken rule was simple and unfair: <strong>"if you don't know code, you don't get to make websites."</strong></p>
+						<p>An engineer at Macromedia stared at this gap and thought, <em>"Wait. In a word processor you just type and the layout takes care of itself. So why can't a designer drag a photo onto a webpage and let the computer write the HTML behind it?"</em></p>
+						<p>That question became <strong>Dreamweaver</strong> in 1997. Designers dragged images and tables onto a canvas, and a panel on the right filled itself with valid HTML. A designer at an ad agency tried it for the first time and beamed, <em>"I just painted the page like a poster — and it actually works as a real website!"</em> The developer next to her opened the code view, made a few tweaks, and for the first time the two of them were collaborating on the same screen instead of waiting on each other.</p>
+						<p>That "build a website without writing code" idea is the seed of an entire modern industry. <strong>WordPress, Squarespace, Wix, Webflow, Notion sites, Substack</strong> — every tool that lets a small business owner publish a storefront, or a high schooler launch a portfolio in an afternoon, traces its lineage back to Dreamweaver. The web stopped being gated by syntax and started being something anyone could touch.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Dreamweaver combined visual editing with a code view so nondevelopers could participate in shipping websites. Later web IDEs borrowed the idea of keeping design and markup connected.</p>
@@ -261,8 +263,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>An open-source crew created a repository on SourceForge and pulled code with CVS commands. Weekend patches landed on the central server, so Monday standups finally had a clear history to review together.</p>
-						<p>Maintenance agencies adopted CVS to show clients which files changed and when, building trust through transparent logs.</p>
+						<p>In the late 1990s, two or more developers trying to write code together was a small disaster. People mailed source files as email attachments or passed them around on floppy disks and Zip drives. Sooner or later somebody opened the wrong copy and the day ended in panic: <strong>"Where did my Friday changes go? Did you overwrite my file?"</strong> Nobody could say with confidence who had touched what, and one careless save could erase a teammate's whole afternoon.</p>
+						<p>The fix sounded obvious in hindsight, but at the time it felt revolutionary. <em>"What if we kept one canonical copy of the code on a server somewhere on the internet? Everyone pulls the latest version down, makes their changes, pushes them back, and the system records every edit automatically — who, what, when."</em></p>
+						<p>By 1999, services like <strong>SourceForge</strong> were hosting <strong>CVS</strong> (Concurrent Versions System) on the public internet. Open-source teams started checking in weekend work from their bedrooms with a single command. Monday morning, the maintainer would pull up the log on the projector and say, <em>"Look — Alex committed Saturday at 3am, Priya fixed the parser bug Sunday afternoon. We can see exactly who did what."</em> Suspicion got replaced with a shared timeline.</p>
+						<p>Every collaboration habit that powers a modern engineering team — the central source of truth, the audit trail, the resolved merge conflict — started with hosted CVS. Today's <strong>GitHub, GitLab, and Bitbucket</strong> are the great-grandchildren of that idea. Software stopped being something one hero wrote alone and became, in everyone's mind, <strong>a building that a crew puts up together, brick by brick.</strong></p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Hosted CVS made server-backed version control normal. Teams learned conflict resolution and code review habits that paved the way for Git-era workflows.</p>
@@ -280,8 +284,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Linux maintainers tested Git and marveled at the speed. They could create branches and commits locally, then push to a shared origin when ready, no central gatekeeper needed.</p>
-						<p>Web agencies mirrored that habit: feature branches emerged for every experiment, and merges waited until client approval arrived.</p>
+						<p>By the early 2000s the Linux kernel had become an unprecedented collaboration: thousands of volunteers across every continent contributing patches. The version control tools couldn't keep up. They needed a network connection to do almost anything, and creating a "branch" to try something experimental was so heavy that nobody bothered. Linus Torvalds, who maintained the project, finally lost his patience. <em>"Merging thousands of contributors' work is taking days. We can't keep working like this."</em></p>
+						<p>Instead of waiting for someone to fix it, he sat down to build a new tool himself. The core insight broke every rule of the existing systems: <em>"Stop relying on a central server. Give every single developer a complete copy of the entire repository on their own laptop. Let them work offline. Make branching almost free — fast enough that you'd create one for any half-formed idea."</em></p>
+						<p>In two weeks of intense coding, he shipped it. He called it <strong>Git</strong>. Other kernel developers tried it and were stunned. <em>"Branches happen in a second. Merging is instant. I can experiment, blow it up, throw the branch away, and nothing is lost."</em> That fearlessness changed engineering culture itself — suddenly trying ten ideas a day was cheaper than agonizing over one.</p>
+						<p>Today, <strong>nearly 100% of the world's software</strong> is tracked with Git. Google, Apple, Meta, Netflix, every startup in a garage — all of it. Behind every app on your phone and every website you load, somewhere a person typed <code>git commit</code>. A tool one engineer hacked together in two weeks became the bloodstream of an entire industry, and twenty years later it still is.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Git stores snapshots instead of file diffs and embraces offline work. Fast branching and merging encouraged fearless experimentation and defined modern collaboration patterns.</p>
@@ -299,8 +305,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Early adopter Alex uploaded a side project to GitHub and invited a friend to review it through a pull request. Diff views appeared in the browser, and nobody needed to email patches around anymore.</p>
-						<p>Startups tracked tasks in issues, wrote handbooks in the wiki, and made shipping discipline a shared responsibility.</p>
+						<p>Git was powerful, but it had one ugly catch: it lived entirely <strong>on the command line</strong>, in a black terminal window. The learning curve scared off newcomers, and even seasoned developers still mailed patch files around when they wanted to share work. The unanswered question in every developer's head was, <em>"How do I actually show this side project to the world? How do I contribute to someone else's code without being their friend first?"</em></p>
+						<p>In 2008, three developers in San Francisco took a swing at it. <em>"Keep everything Git can do underneath, but wrap it in a beautiful website. Browse the code, leave comments line by line, propose changes, file bugs — all of it in the browser, with a single click."</em></p>
+						<p>That site became <strong>GitHub</strong>, and the magic ingredient was a feature called the <strong>Pull Request</strong>. Spot a bug in someone's project? Fork it, fix it, open a PR, and the maintainer sees a clean side-by-side diff in their browser, leaves comments, and merges with one click. A first-time contributor opened her first PR and could barely believe it: <em>"I didn't email anyone. I didn't know the maintainer. And my code is now in a project that thousands of people use — my name is in the contributor list!"</em></p>
+						<p>GitHub turned into something nobody expected: <strong>a developer's social network and résumé rolled into one</strong>. Hiring managers at startups and Big Tech alike now ask, "Can I see your GitHub?" — and a strong contribution history can outweigh a degree from a famous school. Over a hundred million developers meet there every day to read each other's code, argue politely, and ship things together. All of it grew out of one small bet in 2008: that code review belonged in a browser, not an inbox.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>GitHub wrapped Git workflows in a shared UI so reviews and documentation stayed close to the code. The blueprint inspired countless DevOps platforms that followed.</p>
@@ -318,8 +326,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>A frontend squad wrote a Gruntfile to compile Sass and compress images in one command. Teammate Jun said, "Our deploy checklist just became a script."</p>
-						<p>Communities shared a flood of Grunt plugins, and automation pipelines became part of the default project scaffold.</p>
+						<p>By the early 2010s, shipping a website had quietly become a manual obstacle course. Before every release, somebody had to compile Sass into real CSS, shrink all the images, concatenate a hundred JavaScript files into one, run the linter, run the tests, generate the sourcemaps. Five, ten, sometimes fifteen steps in order — and if you forgot one? <strong>You shipped a broken site to every visitor on the planet.</strong></p>
+						<p>One frontend engineer slumped at his desk and grumbled, <em>"Why am I reading a paper checklist every time I deploy? Computers are literally good at running lists. Let me just write the steps in a file and have one command do all of it."</em></p>
+						<p>That grumble became <strong>Grunt</strong> in 2012. You created a <code>Gruntfile</code> in your project, listed each task in order — "compile the styles, then optimize the images, then bundle the scripts" — and from then on you typed a single word in the terminal: <code>grunt</code>. The machine took it from there. A teammate ran it for the first time and laughed in disbelief: <em>"My pre-deploy ritual went from thirty minutes to thirty seconds."</em></p>
+						<p>The "let scripts handle the busywork" mindset spread like wildfire. Gulp came next, then npm scripts, then full-blown CI/CD platforms like GitHub Actions and CircleCI. Today, every serious software company has a pipeline that picks up your commit and runs check → build → test → deploy without anyone watching. Humans got their attention back for the creative parts, and computers took over the parts they were always better at. That whole shift began with one developer who refused to keep ticking boxes by hand.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Grunt invited teams to declare command-line tasks in configuration files. The pattern paved the way for Gulp, npm scripts, and today's CI pipelines.</p>
@@ -337,8 +347,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>A startup wired Webpack into its release process, bundling JavaScript modules, styles, and images into one graph. Before launch, the team watched bundle analyzer charts shrink after adding code splitting.</p>
-						<p>Open source maintainers published loaders and plugins, and Webpack became the default build step for complex frontends.</p>
+						<p>By the mid-2010s, JavaScript apps had grown into monsters. A site like Facebook was made of <strong>hundreds, sometimes thousands</strong> of small JavaScript files importing each other. The catch: <strong>browsers fetch files one at a time</strong>. Loading 200 files meant 200 round trips across the network, and users sat staring at a blank page. Worse, nobody could keep track of which file depended on which anymore — the dependency graph had become a hairball.</p>
+						<p>A German developer named Tobias Koppers looked at the mess and thought, <em>"What if a tool actually traced how all those files reference each other and merged them into one bundle the browser can grab in a single request? And for the parts the user doesn't need on the first screen, ship those separately and load them on demand?"</em></p>
+						<p>That tool, released in 2014, was <strong>Webpack</strong>. It walked the dependency graph, bundled JavaScript intelligently, and — almost as a side effect — let you treat images, CSS, and even fonts as importable modules. A small startup wired it into their build and watched their first-page load drop from <strong>eight seconds to two</strong>. Their growth lead exhaled: <em>"Users are actually staying on the page now."</em></p>
+						<p>Every modern web app you use — <strong>Instagram, Spotify Web, Slack, Discord, Notion, Figma</strong> — is shipped through a bundler in the Webpack lineage (or its descendants like Vite and esbuild). The reason a heavy, app-like website can paint in a second or two on your phone is that an invisible build step in some CI server crunched its dependency graph for you. It's the unsung hero that quietly makes the modern web feel fast.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Webpack parsed dependency graphs and supported dynamic imports, aligning with the need to ship efficient, modular applications. It set expectations for modern module systems.</p>
@@ -356,8 +368,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>A content team connected a GitHub repo to Netlify, triggering preview deploys for every pull request. Marketing reviewers said, "I just click a link and see the new version."</p>
-						<p>Engineers shipped forms and edge functions without standing up custom servers, proving small teams could operate globally.</p>
+						<p>Even in 2015, putting a small website online was an absurd amount of work for what you got. You rented a Linux server somewhere, registered a domain, applied for a TLS certificate, configured Apache or nginx, FTP'd your files up one by one, and prayed nothing in your <code>httpd.conf</code> had a typo. <strong>It took days, sometimes weekends.</strong> Indie developers and small teams sighed, "Writing the code is easy — it's the deployment that breaks me."</p>
+						<p>In 2016, a company called <strong>Netlify</strong> made what sounded like a wild promise. <em>"The moment you push code to GitHub, we'll automatically build it, distribute it across servers around the world, and serve it over HTTPS. No machine to provision. No config files. No certificate paperwork. Just push."</em></p>
+						<p>And it actually worked. A solo developer pushed her static site to GitHub and five minutes later visited <code>https://her-site.netlify.app</code> — a real, public URL, fast for visitors in Tokyo and São Paulo alike. Even better, every future commit automatically redeployed itself. Her marketing partner walked over and said, <em>"Wait — every pull request gets its own preview link? I can review the new homepage before it ships, in my browser?"</em></p>
+						<p>That "one person should be able to run a global website" mindset spread fast. <strong>Vercel, Cloudflare Pages, GitHub Pages, Render</strong> — they all built on the same idea. A college student today can launch a portfolio site in an afternoon and have it served from a hundred edge locations around the world. The infrastructure mountain that used to gatekeep the web didn't just shrink — it got bulldozed.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Netlify combined build pipelines, CDN edge delivery, and serverless glue, spreading JAMstack practices. Automated deploys became approachable for teams of any size.</p>
@@ -375,8 +389,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>New hires opened Codespaces with no laptop setup. Installs were ready, caches were warm, and work began within minutes. The lead engineer reported saving a full day per onboarding.</p>
-						<p>During pair programming, Live Share kept collaborators editing the same browser workspace, shrinking review cycles.</p>
+						<p>If you've ever started a new engineering job, you know the first day is not actually about coding. It's about <strong>setting up your laptop</strong>. Install the right Node version, the right Python, Docker, the database, the company's internal tools. Something doesn't match. You search Stack Overflow. You DM a coworker. The coworker shrugs: <em>"Hm, it works on my machine. Maybe your Java version is off?"</em> The infamous "works on my machine" curse has eaten entire onboarding weeks at every company on earth.</p>
+						<p>In 2021, GitHub took a swing at making the curse extinct. <em>"What if we built the entire development environment ahead of time and ran it in the cloud? A new hire opens a browser, and a fully configured workspace is just sitting there, ready to type into."</em></p>
+						<p>They called it <strong>GitHub Codespaces</strong>. A new engineer logs in on day one, doesn't install a single thing on her laptop, and clicks once. <strong>VS Code</strong> opens in her browser tab — the linter is running, the database is seeded, every dependency is already there. The team lead reported the verdict to their internal blog: <em>"Onboarding went from one full day to about five minutes. And nobody has said 'works on my machine' in this Slack since."</em></p>
+						<p>The deeper shift is even bigger. Because the environment lives in the cloud, you can code from <strong>an iPad in a coffee shop, a Chromebook on a train, even a friend's laptop in a pinch</strong>. All you need is a browser. Heavy professional development stopped being something only people with expensive hardware could do, and started becoming accessible to anyone with an internet connection — a small but real step toward making this whole industry less exclusive.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Codespaces delivers containerized environments on demand, simplifying onboarding and collaboration. Shared configs replaced manual machine setup.</p>
@@ -394,8 +410,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Teams installed AI extensions, described a function, and received inline code proposals. Junior developers said, "It drafted the test skeleton so I could focus on edge cases."</p>
-						<p>Later, AI summarized pull requests so senior reviewers spent more time on architecture and less on rote description.</p>
+						<p>Watch any working developer for an hour and you'll notice how much of the job is <strong>repetition</strong>. "I need to write another function that pulls a user from the database — how did I do it last time?" Search the codebase, copy a similar block, rename the variables, tweak two lines. Half the day disappears into copy-paste. Tests get skipped because they're tedious. Comments get postponed forever.</p>
+						<p>In 2021, GitHub and OpenAI ran a strange experiment together: <em>"There are billions of lines of source code on GitHub. What if we trained a language model on all of it and let it predict the next line a programmer is about to write?"</em> The result was <strong>GitHub Copilot</strong>. At first it felt like a parlor trick. Then 2023 happened and the underlying models took a quantum leap, and suddenly the trick wasn't a trick anymore.</p>
+						<p>A junior developer typed her first function name into the editor and watched the entire body materialize beneath the cursor — in her team's exact coding style, with the edge cases she'd been about to forget. <em>"It's like the senior on my team is reading over my shoulder, except faster and at 3am."</em> A senior engineer found her review queue lighter too: <em>"AI summarizes the PR for me in plain English. I can spend my actual brain on the architecture instead of catching typos."</em></p>
+						<p>Since then a whole ecosystem — <strong>ChatGPT, Claude, Cursor, Windsurf, GitHub Copilot Chat</strong> — has settled into the daily workflow of millions of developers. The job is shifting from "type the code character by character" to <strong>"describe what you want, then review what the machine drafted."</strong> It's the same dream that started all the way back when 1960s engineers asked computers to count the spaces in their documents — except now we're asking computers to write the spaces, and the words, and the whole function, and we get to focus on whether it solves the right problem.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>AI copilots blend natural language understanding with code generation, trimming repetitive tasks and reframing reviews. Web production teams now expect these assistants in their toolbox.</p>
