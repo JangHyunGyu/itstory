@@ -418,6 +418,14 @@ summary:hover {
 	border: 1px solid rgba(120, 90, 50, 0.25);
 }
 
+.page__topic-nav-rest {
+	flex-basis: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	align-items: center;
+}
+
 .page__topic-nav-label {
 	font-size: 0.64rem;
 	letter-spacing: 0.12em;
@@ -2038,6 +2046,11 @@ body.is-modal-open .timeline-event:focus-visible {
 	.page__topic-nav-group {
 		width: 100%;
 		padding: 0.5rem 0.75rem 0.65rem;
+	}
+	.page__topic-nav-rest {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0.6rem;
 	}
 	.page__nav {
 		width: 100%;

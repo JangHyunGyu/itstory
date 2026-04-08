@@ -33,7 +33,7 @@ files.forEach(file => {
     const wasRegex = /(<div class="page__topic-nav-group" role="group" aria-label="눈에 보이는 웹 \(프론트엔드\)">[\s\S]*?<\/div>)\s*(<a href="was.html"([^>]*)>보이지 않는 뒷단 \(백엔드\)<\/a>)/;
     
     if (wasRegex.test(content)) {
-        content = content.replace(wasRegex, `$1\n\t\t\t\t\t<div class="page__topic-nav-group" role="group" aria-label="보이지 않는 뒷단 (백엔드)">\n\t\t\t\t\t\t<span class="page__topic-nav-label">보이지 않는 뒷단 (백엔드)</span>\n\t\t\t\t\t\t<a href="was.html"$2 data-topic-role="parent">보이지 않는 뒷단 (백엔드)</a>\n\t\t\t\t\t</div>`);
+        content = content.replace(wasRegex, `$1\n\t\t\t\t\t<div class="page__topic-nav-group" role="group" aria-label="보이지 않는 뒷단 (백엔드)">\n\t\t\t\t\t\t<span class="page__topic-nav-label">보이지 않는 뒷단 (백엔드)</span>\n\t\t\t\t\t\t<a href="was.html"$3 data-topic-role="parent">보이지 않는 뒷단 (백엔드)</a>\n\t\t\t\t\t</div>`);
     }
 
     fs.writeFileSync(filePath, content, 'utf8');
