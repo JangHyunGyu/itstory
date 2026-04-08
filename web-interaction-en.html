@@ -278,8 +278,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>During internal demos, teammates clicked a button and saw an alert without contacting the server. Marketers promised dynamic “LiveScript” features, and soon forms validated instantly, thrilling webmasters who were tired of round trips.</p>
-						<p>The language adopted the JavaScript name and shipped with Navigator 2.0, inspiring a wave of interactive websites.</p>
+						<p>Until 1995, every web page was <strong>as static as a sheet of paper</strong>. HTML could show text and images, and that was it. If a user typed something into a form, processing it was strictly the server's job. Want to see "this isn't a valid email address" on a signup form? You clicked submit, the browser sent the data, the server checked it, the server sent back a whole new page, and the browser repainted everything from scratch. A single validation check could take five seconds.</p>
+						<p>A Netscape engineer named <strong>Brendan Eich</strong> stared at the problem and thought, <em>"Wait — what if a tiny program could run inside the browser itself? Something simple like checking an email format wouldn't have to make a round trip to the server. The browser could just handle it on the spot."</em></p>
+						<p>In <strong>just ten days</strong> he sketched out a brand-new programming language and shipped it inside Netscape Navigator. He called it <strong>JavaScript</strong> (similarly named to Java but, in fact, an entirely different language). The first user to try it was thrilled: <em>"I typed something invalid and a red error message appeared right there, instantly! I didn't have to reload anything!"</em> A simple form check was the modest beginning, but it would quietly rewrite the future of the web.</p>
+						<p>Today, JavaScript is the <strong>most widely used programming language on Earth</strong>. Facebook, Instagram, Gmail, YouTube, X, Discord — every site you touch in a day is built on top of it. A throwaway language one engineer wrote in ten days became the bloodstream of the internet. He almost certainly didn't expect that "let's just hack something together because we need it" would still be powering the world thirty years later.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>JavaScript introduced the event loop, dynamic typing, and DOM scripting—capabilities that defined the browser as an application runtime.</p>
@@ -297,8 +299,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Macromedia rebranded FutureSplash as Flash and demoed vector animation that stayed crisp on any monitor. Agencies rushed to craft intro reels and interactive menus, while bands launched music microsites with synchronized audio.</p>
-						<p>Users endured loading bars but reveled in motion graphics, setting expectations that the web could feel alive—not just static hyperlinks.</p>
+						<p>In the mid-1990s, websites were nothing but text and frozen photographs. The only thing that "moved" was the occasional blinking GIF. Playing a song or building an interactive animation in the browser sounded like science fiction. Graphic designers, used to working in print, were frustrated: <em>"I want to put the same kind of motion, color, and sound on the web that I can put on a magazine page. But the tools just don't exist. HTML is too limited."</em></p>
+						<p>Macromedia took a swing at the problem. <em>"Let's leave the browser simple. Instead, we'll ship a tiny 'player' that visitors install once, and inside that player we can run rich animation, sound, and interaction. Designers create the work in our editor, users see it through the player."</em></p>
+						<p>That product was <strong>Macromedia Flash 1.0</strong>, released in 1996, and it changed the look of the web overnight. An ad-agency designer finished her first piece and squealed: <em>"The buttons are dancing! Hover over one and it changes color! Click one and music plays! This actually feels more alive than a printed magazine!"</em> The early-to-mid 2000s became the <strong>golden age of Flash</strong>: games, ads, music videos, webcomics, entire interactive sites — every flashy web experience was built in Flash. Even Disney rebuilt its homepage entirely as a Flash movie.</p>
+						<p>And then Flash <strong>died</strong>. Security holes never stopped appearing, it didn't run on iPhones (Apple flatly refused), and crucially, HTML5 and JavaScript eventually grew strong enough to do everything Flash had done — without a plugin. Adobe officially shut Flash down in 2020, ending a 24-year run. But the vision Flash planted — <strong>that the web could be a living stage instead of a static page</strong> — is the spiritual ancestor of every animated, interactive, video-driven website you use today.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Although plugin-based, Flash nudged the platform toward canvas, SVG, and video tags. It conditioned teams to think in timelines, easing the later shift to JavaScript-driven animation frameworks.</p>
@@ -316,8 +320,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Outlook Web Access used the feature so users could open mail quickly without reloading. Developers reverse-engineered the API, and Mozilla plus Safari added compatible implementations, pushing it toward standardization.</p>
-						<p>Suddenly dashboards, maps, and search suggestions felt responsive without page refreshes.</p>
+						<p>By the late 1990s, websites still couldn't escape one rule: <strong>"every change to the page means reloading the whole page."</strong> Want to know if you have new email? Hit refresh. The whole screen blanked, then redrew. Anything like a search box that suggests results as you type was unthinkable. Microsoft's <strong>Outlook Web Access</strong> team — building webmail — was particularly stuck. <em>"Reloading the entire page just to check for one new message is absurdly wasteful. Can't we quietly fetch the data in the background instead?"</em></p>
+						<p>They had an idea: <em>"Let JavaScript inside the browser send a request to the server without the user noticing, get the response back, and quietly update just one little corner of the screen. There's no need to redraw the whole page."</em></p>
+						<p>The plumbing they built for it was called <strong>XMLHttpRequest</strong>, or XHR. The name is awful but the idea is simple — it's a back channel that lets JavaScript hold a private conversation with the server. Outlook Web Access used it in 1999 so that new mail would just <em>appear</em> in the inbox without the user ever clicking refresh. One tester marveled: <em>"I'm not doing anything, and a new message just pops onto the screen. It feels like a real email program!"</em></p>
+						<p>For a few years XMLHttpRequest was a Microsoft curiosity, but other browsers copied it, and six years later it would touch off the <strong>Ajax revolution</strong> (next entry). Today, every time a new post appears in your Facebook feed without a refresh, every time WhatsApp Web shows you an incoming message in real time, every time Google Search autocompletes as you type — all of it traces back to a small Outlook team in 1999 saying, "we should be able to talk to the server in the background."</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>XMLHttpRequest introduced async callbacks and laid the groundwork for Fetch, Promises, and modern SPA data flows.</p>
@@ -335,8 +341,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Product teams printed the essay and pitched Gmail-style interactivity to stakeholders. Meetups sprang up to share best practices for partial page updates. The label “Ajax” gave developers language to request budget for richer front ends.</p>
-						<p>Frameworks like Prototype, Dojo, and jQuery soon packaged Ajax utilities for mainstream use.</p>
+						<p>For six years after XMLHttpRequest was created in 1999, the technology was <strong>asleep</strong>. People knew it existed in theory, but almost nobody actually used it. Most developers were still building sites the old way: every interaction redrew the entire page. The whole concept of "asynchronous communication" felt too foreign to be worth the trouble.</p>
+						<p>Then 2005 happened, and two things landed at once. First, Google launched <strong>Google Maps</strong> and <strong>Gmail</strong>. People were stunned. You could click and drag a map and it slid smoothly under your cursor; new tiles loaded in as you panned; the page never reloaded. Gmail did the same thing for an inbox — new mail just appeared. One user gaped at his screen and asked, <em>"Wait, this is a website? It feels exactly like a desktop program."</em></p>
+						<p>Second, a designer named <strong>Jesse James Garrett</strong> wrote an essay giving the underlying bag of tricks a name. <em>"This isn't just a feature — it's a whole new paradigm. I'd like to give it a name: Asynchronous JavaScript And XML, or <strong>Ajax</strong> for short."</em> The essay went viral, and overnight "Ajax" was on every web developer's lips. Suddenly everyone was building sites the Ajax way.</p>
+						<p>It was at this point that people stopped saying <em>website</em> and started saying <strong>web app</strong>. The line between a static page and a real desktop program had finally blurred. Facebook, Twitter, Instagram, Trello, Notion, Slack — every "this feels like a real application in my browser" experience you take for granted started with the Ajax moment in 2005. It's a rare case of a single word changing an industry.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Naming the pattern legitimized asynchronous web apps, accelerating the shift toward single-page application architecture.</p>
@@ -354,8 +362,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>John Resig unveiled a chainable API that normalized selectors, events, and animation. Teams dropped bags of conditional comments and maintained one script that ran from IE6 to Firefox.</p>
-						<p>Plugins flourished: lightboxes, tabs, sliders, autocomplete—all composable with a single `$(".widget").plugin()` call.</p>
+						<p>By the mid-2000s, manipulating a webpage with JavaScript was still <strong>painful</strong> for one big reason: <strong>every browser spoke a slightly different dialect</strong>. The line of code to find an element on the page looked one way in Internet Explorer, another in Firefox, and a third in Safari. To do anything meaningful, you had to wrap your code in stacks of if-else branches and test it in three browsers. Developers grumbled, <em>"It takes fifty lines of JavaScript to make a dropdown menu open — and then I have to test it in every browser."</em></p>
+						<p>A developer named <strong>John Resig</strong> decided he'd had enough. <em>"Let's hide all the browser nonsense inside one library. The developer just writes 'open this menu' in one line, and the library figures out which dialect each browser needs underneath."</em></p>
+						<p>The result, <strong>jQuery 1.0</strong>, came out in 2006 and developers fell in love with it instantly. The whole API revolved around a single tiny function: <code>$()</code>. Those fifty lines of menu code collapsed into <code>$("#menu").show()</code>. One developer wrote his first jQuery site and gushed, <em>"My code is one-fifth the size and it works identically in every browser. Is this magic?"</em> By the early 2010s, more than <strong>70% of all websites on the internet</strong> were using jQuery. It was a de facto standard.</p>
+						<p>Eventually jQuery handed the throne to more powerful tools like React and Vue, but its influence is enormous. It taught the industry that <strong>"if you make hard things easy, everybody adopts them."</strong> Even the JavaScript language itself was reshaped by jQuery: today's standard <code>document.querySelector</code> is essentially native browsers admitting that <code>$()</code> had the right idea all along. A library quietly dragged a whole standard forward to meet it.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>jQuery popularized fluent APIs and a vibrant plugin ecosystem. It paved the way for modern utility libraries and helped developers acclimate to JavaScript-heavy frontends before frameworks took over.</p>
@@ -373,8 +383,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>At JSConf EU, Dahl’s live demo streamed file changes to the browser via WebSockets. Developers cheered at the ability to use one language across client and server, jump-starting an ecosystem of npm packages.</p>
-						<p>Companies adopted Node for chat, data streaming, and build tooling, cementing JavaScript’s full-stack role.</p>
+						<p>Until 2009, JavaScript was <strong>a language that lived only inside the browser</strong>. That was its identity. On the server side you used PHP, Java, Python, or Ruby — all completely separate languages — and as a result, becoming a "full-stack" developer meant fluency in two or three of them. Frontend and backend engineers at the same company felt like they were doing different jobs in different worlds.</p>
+						<p>A developer named <strong>Ryan Dahl</strong> kept asking himself a heretical question. <em>"Why is JavaScript trapped inside the browser? It's a fast, lightweight language. Why couldn't it run on a server? In fact, JavaScript's event-driven model might be a <em>better</em> fit for handling thousands of users at once than the traditional thread-per-request languages."</em></p>
+						<p>In 2009 he unveiled <strong>Node.js</strong>, a runtime that lets JavaScript live <strong>outside the browser, directly on a server</strong>. The audience at his first talk was stunned: <em>"You're saying I can use the same language for the frontend and the backend? One person can build both halves of the app?"</em> Even more astonishing was the performance. Where the older languages might need ten servers to handle ten thousand concurrent users, Node.js could do the same with one.</p>
+						<p>From that point JavaScript spread everywhere. Servers, build tools, command-line utilities, even desktop apps (VS Code, Slack, and Discord are all secretly built on the Node.js stack). Roughly half of the most-used development tools in the world today run on Node. The throwaway language a Netscape engineer wrote in ten days back in 1995 finally became the bloodstream of the entire industry — fourteen years later, in one keynote demo.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Node popularized non-blocking I/O patterns and birthed the package ecosystem that fuels today’s front-end tooling.</p>
@@ -392,8 +404,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Browsers shipped the Upgrade handshake so apps could keep one persistent connection alive. Trading floors streamed prices, multiplayer games synchronized positions, and support teams embedded real-time chat without Flash.</p>
-						<p>Developers ditched comet and long-poll workarounds, simplifying infrastructure while lowering latency.</p>
+						<p>Until the early 2010s, building <strong>real-time chat</strong> on the web was painfully wasteful. To make something like a WhatsApp-style chat work in a browser, your JavaScript had to call the server roughly every second and ask, "Hey, any new messages?" The server would answer "no" ninety-nine times before finally answering "yes." This trick was called <strong>polling</strong>, and it burned mountains of server resources while still leaving users waiting up to a full second per message.</p>
+						<p>The IETF, the body that maintains internet standards, had a better idea. <em>"Once a browser opens a connection to a server, why don't we just leave it open? Let both sides freely send messages back and forth whenever they have something to say. The server can push new data instantly, and we throw away the wasted polling traffic entirely."</em></p>
+						<p>In 2011 they ratified that idea as <strong>WebSocket</strong>. Once a client said "please open a WebSocket," the two ends of the connection could chat like old friends, instantly, for as long as they liked. A team building a chat product flipped the switch and reported: <em>"Server load dropped about 95% compared to polling. And messages actually arrive immediately — what used to be a one-second delay is now a hundredth of a second."</em></p>
+						<p>Every <strong>real-time feature</strong> you use today rides on WebSocket: WhatsApp Web's incoming messages, Slack's typing indicators, Google Docs' collaborative cursors, Discord's voice channels, the live ticks on a stock chart, multiplayer game lobbies. All of it. WebSocket is the moment the web evolved from "fetch a page, look at it, fetch the next page" into "stay connected and react to whatever happens."</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>WebSocket laid the groundwork for realtime APIs and influenced later specs like WebRTC’s data channels. It remains the baseline for push notifications and collaborative editing.</p>
@@ -411,8 +425,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Initially controversial, React’s JSX demos at JSConf US showed how UI updates could be predictable. Teams rapidly built single-page apps with reusable components and improved developer tooling.</p>
-						<p>The component mindset spread to other frameworks, influencing Angular, Vue, and design systems.</p>
+						<p>By the early 2010s Facebook had a problem on its hands. <strong>Hundreds of millions of people were using the site every day</strong>, and the codebase had grown so tangled that adding a new feature would invariably break something somewhere else. Notification counts went out of sync. Comments displayed wrong. The same number showed two different values in two corners of the same page. A Facebook engineer named <strong>Jordan Walke</strong> sighed in a meeting: <em>"The real bug is that humans are manually keeping all these screen elements in sync. Forget one and you have an outage."</em></p>
+						<p>He flipped the problem on its head. <em>"What if humans never updated the screen directly? What if you just declared, in one place, '<strong>given today's data, this is what the screen should look like</strong>' — like a function — and the computer figured out how to make the actual pixels match? The whole class of sync bugs disappears."</em></p>
+						<p>The implementation he and his team built, released by Facebook in 2013, was called <strong>React</strong>. Two ideas made it work. First, you broke the UI into small <strong>components</strong> — Lego-like building blocks. Second, when data changed, React used a clever system called the <strong>Virtual DOM</strong> to figure out the minimal set of edits needed to refresh the actual screen. People were skeptical at first, but the developers who tried it came back evangelizing: <em>"Bugs dropped 90%. The code is so much cleaner. I can actually predict what the page will look like!"</em></p>
+						<p>React quickly became the default for serious web development worldwide. Facebook, Instagram, Netflix, Airbnb, Discord, Shopify, Notion — almost every big web product is built on it. The simple philosophy underneath — <strong>"the UI is a function of state"</strong> — rewired how the entire industry thinks about building interfaces. An internal tool at one company became a global standard in less than five years.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>React normalized unidirectional data flow, state management patterns, and server rendering strategies that define modern web app architecture.</p>
@@ -430,8 +446,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Developers prototyped offline-first to-do apps and background sync. Standards discussions focused on security and lifecycle guarantees. By the time PWA guidance launched, teams were confident the browser could deliver app-like reliability.</p>
-						<p>Service Worker became the heart of progressive web apps, enabling installability and push notifications.</p>
+						<p>By the early 2010s mobile had taken over, and people were spending almost all their attention inside apps. Websites had two glaring weaknesses compared to apps: <strong>they died the moment your internet went out, and they couldn't send push notifications</strong>. Lose signal in the subway and you saw nothing. A new message arrived and you had no idea. People naturally concluded "apps are just better," and companies started pouring all their engineering into native apps instead of the web.</p>
+						<p>Engineers at Google had a counter-proposal. <em>"The web has to be able to work offline and send push notifications too. To pull that off, we need a tiny background program living quietly inside the browser — one that manages a cache and listens for server messages even when the user isn't actively looking at the site."</em></p>
+						<p>That tiny background program, introduced in 2014, was the <strong>Service Worker</strong>. The first time a user opened the site, the service worker installed itself, and from then on it kept running <strong>even after the browser tab was closed</strong>, quietly caching the site's important files. The next time the user opened the page with no internet, the service worker served them the cached version instantly. It also relayed push notifications from the server to the user. A news developer described his first deployment: <em>"My site loads in the subway now. New articles pop up as push notifications. It actually feels like an app!"</em></p>
+						<p>This collection of capabilities crystallized into a new idea called the <strong>PWA</strong> (Progressive Web App). Twitter Lite, Starbucks Order, Pinterest, and Uber rebuilt themselves as PWAs, and users discovered they could "install" a website right from the browser without ever visiting the App Store. The hard line between "web" and "app" started dissolving — and it began with one humble background worker.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Fetch interception and programmable caches redefined the web as a capable offline platform, influencing edge and worker-based architectures.</p>
@@ -449,8 +467,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Game studios, CAD tools, and data science projects ported code to WebAssembly, noting predictable performance. Toolchains like Emscripten and Rust targets matured, expanding the developer base.</p>
-						<p>The milestone signaled that the browser could host compute-heavy workloads once reserved for native apps.</p>
+						<p>Until the late 2010s, the web was full of <strong>things you simply couldn't do</strong>. 3D modeling, video editing, high-end gaming, physics simulations — anything heavy was the exclusive territory of desktop programs written in C++ or C#. JavaScript in the browser was just too slow. Users had no choice but to download and install bulky native apps. A designer who wanted to show a teammate a 3D model first had to say, "okay, install this 90 megabyte program."</p>
+						<p>The web standards bodies had a wild idea. <em>"What if the browser could run more than just JavaScript? What if it could run code at almost <strong>raw machine-code speed</strong>, in any language? Then we could take a 3D engine written in C++ and bring it straight to the web. The user wouldn't install anything — they'd just visit a URL."</em></p>
+						<p>The standardized result, finalized in 2020, was <strong>WebAssembly</strong> (Wasm for short). Programs written in C++, Rust, or Go could be compiled to a Wasm bundle and then executed in the browser at speeds approaching native desktop performance. A 3D design company ported their flagship app to the web and beamed: <em>"Customers can now do full 3D modeling in their browser with no install. It runs smoothly and our signups tripled."</em></p>
+						<p>That's why apps like <strong>Figma</strong>, <strong>Google Earth</strong>'s 3D mode, <strong>AutoCAD Web</strong>, and in-browser video editors all feel impossibly fluid today. People have even ported old AAA games and full Windows 95 emulators to run in a browser tab. The web has finished its transformation from "a place to display text and images" into <strong>a universal computing platform that can run almost any program you can imagine</strong>.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>WebAssembly introduced a secure binary format, linear memory, and streaming compilation—features now used in serverless runtimes and edge workers.</p>
@@ -468,8 +488,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Video platforms prototyped real-time editing tools where creators trimmed clips entirely client-side. Cloud gaming teams shaved frame delays by decoding streams on the spot while keeping controller feedback tight.</p>
-						<p>Developers gained direct access to hardware decoders, stitching WebRTC, Canvas, and Workers into seamless multimedia workflows.</p>
+						<p>By the late 2010s video had become the king of the internet, and developers wanted to do real things with it in the browser. But there was a wall: browsers were great at <strong>opening and playing</strong> a video, but almost incapable of letting JavaScript <strong>touch individual frames, transform them in real time, or process them</strong>. Try to build a Zoom-style background blur as a web app and the video would stutter to a crawl, because the heavy lifting couldn't reach the right hardware.</p>
+						<p>The Chrome team thought about it this way. <em>"The browser already has a powerful hardware video encoder and decoder built in. The problem is JavaScript can't talk to them directly. Let's open a private channel so developers can grab raw frames, manipulate them, and re-encode them — all at full hardware speed."</em></p>
+						<p>That channel, shipped in Chrome 94 in 2021, was the <strong>WebCodecs API</strong>. Suddenly JavaScript could grab a video frame, run a filter on it, re-encode it, and send it onward — all in under ten milliseconds. A video-conferencing team flipped it on and cheered: <em>"Background blur runs without a single dropped frame. AI face touch-ups are real-time. This used to be desktop-only territory!"</em></p>
+						<p>From that single API came an explosion of what's possible with video on the web: in-browser video editors, live-streaming dashboards, AI-powered visual effects, and cloud gaming clients. The web took another step from "a place to watch video" into "a place to <strong>make</strong> video." Today, when Zoom or Google Meet or Discord runs a sophisticated effect right in your browser tab, this is the API that makes it possible.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>WebCodecs complements WebAssembly and WebGPU, turning the browser into a production studio for encoding, compositing, and playback—without native dependencies.</p>
@@ -487,8 +509,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Developers ported compute shaders and real-time rendering engines, demonstrating browser-based ML training and immersive experiences. Mozilla and Apple followed with implementations, confirming cross-browser viability.</p>
-						<p>WebGPU narrowed the gap between native and web, especially for creative and scientific tools.</p>
+						<p>WebAssembly (2020) had let the web run fast programs, but the real horsepower in a modern computer — <strong>the graphics card (GPU)</strong> — was still locked away. A modern GPU can do certain jobs (gaming, 3D rendering, AI inference) about a hundred times faster than the CPU, but the only door the web had to it was an aging API called WebGL from 2011, which couldn't even use half of what current GPUs can do. Game developers groaned: <em>"Our game runs at 4K and 60fps on the desktop, but the web port can barely manage 1080p at 30. We can't reach the GPU directly, so there's nothing we can do."</em></p>
+						<p>The major browser vendors got together and built a new standard. <em>"Operating systems and game engines talk to GPUs directly. The web should too. Let's build an API that gives the browser the same level of access modern game engines have, so the web can match desktop-class performance."</em></p>
+						<p>That API, stabilized in 2023, is <strong>WebGPU</strong>. Browsers can now drive the graphics card directly and reach desktop-tier performance. A game studio ported a PC title over and could barely contain themselves: <em>"120fps in a browser tab, no driver install, no plugin. It really is just like the desktop version. And we can run AI model inference on the same GPU too!"</em></p>
+						<p>WebGPU's true significance reaches beyond games into <strong>AI</strong>. Suddenly it became feasible to run a large language model entirely inside a browser tab, which means a new category of <strong>"local AI"</strong> where your data never leaves your device. Today, when you can play a heavy game in your browser, or use AI features without sending anything to a remote server, this is the technology making it possible. It's the last big puzzle piece in the web's long journey from "static documents" to <strong>"a universal computing platform"</strong> — finally clicked into place.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>WebGPU’s explicit API, bind groups, and compute passes open doors for high-performance workloads, complementing WebAssembly and WebRTC.</p>
