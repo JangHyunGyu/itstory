@@ -65,5 +65,5 @@
   <!-- Bottom info bar -->
   <rect x="0" y="390" width="800" height="60" fill="#33691e" opacity="0.9"/>
   <text x="400" y="415" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">SQL이 국제 표준이 되어 데이터베이스 이식성 실현</text>
-  <text x="400" y="438" font-family="Arial, sans-serif" font-size="11" fill="#c5e1a5" text-anchor="middle">ANSI X3.135-1986 · ISO 9075:1987 · SQL이 보편적 언어로 자리잡다</text>
+  <text x="400" y="438" font-family="Arial, sans-serif" font-size="11" fill="#c5e1a5" text-anchor="middle">ANSI X3.135-1986 · ISO 9075:1987 · SQL이 보편적 언어로 자리 잡다</text>
 </svg>

@@ -41,7 +41,7 @@
                 var messages = {
                     ko: {
                         btn: "공유",
-                        msg: "이 페이지는 Safari 브라우저에서<br>정상적으로 작동합니다.<br><br>우측 하단의 <b>[ {btn} ]</b> 버튼을 누르고<br><b>[Safari로 열기]</b>를 선택해주세요."
+                        msg: "이 페이지는 Safari 브라우저에서<br>정상적으로 작동합니다.<br><br>오른쪽 아래의 <b>[ {btn} ]</b> 버튼을 누르고<br><b>[Safari로 열기]</b>를 선택해주세요."
                     },
                     en: {
                         btn: "Share",
