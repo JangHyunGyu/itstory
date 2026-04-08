@@ -108,15 +108,15 @@
 				<section class="timeline-hero" aria-labelledby="timeline-title">
 					<div class="timeline-hero__head">
 						<p class="hero__eyebrow">Web Server Story for Backend Builders</p>
-						<h1 class="timeline-hero__title" id="timeline-title">“Can we trust the response?” The operators who kept web servers evolving</h1>
+						<h1 class="timeline-hero__title" id="timeline-title">From one tiny first website to giant servers handling billions of people, the unseen story of what holds the internet up</h1>
 						<p class="timeline-hero__lede">
-							In 1990 a CERN researcher gasped, “I click one link and the paper opens?” Tim Berners-Lee grinned and said, “Just send a GET.” From that moment the server stopped being a dusty file cabinet and became an active teammate.
+							In a Swiss research lab in 1990, Tim Berners-Lee booted a small program on one little computer and opened the very first website in the world. When another researcher typed in the address and saw the words pop up on screen, the team had a realization: "Instead of photocopying paper reports and passing them around, all we have to do now is share an internet address."
 						</p>
 						<p class="timeline-hero__lede">
-							Soon teams demanded, “Remember each user, encrypt their session, split traffic from logic.” Servlet specs promised consistent request objects, Tomcat bragged “Drop in a WAR, I’ll handle threads,” and SSL crews flashed lock icons to win over finance leads.
+							Then the popularity exploded, and new worries followed. "How do we hold up when thousands of people show up at once?", "How do we keep passwords safe?", "If one machine dies, how do we keep the site online?" The people running the servers built or borrowed a new tool every time, and the answers piled up into the giant server systems we have today.
 						</p>
 						<p class="timeline-hero__lede">
-							Today operators demo Nginx configs, Spring Boot starters, Lambda triggers, and Kubernetes Ingress rules while saying, “Setup is scripted, scaling is automatic.” Pick a year to hear the quote, the pain, and the pattern each tool left behind.
+							Today you upload a single line of code and the computer figures out how to deliver your site to users all over the world. Click a year below and you'll meet the secret behind why giants like Facebook and Instagram never seem to go down.
 						</p>
 					</div>
 				</section>
@@ -127,8 +127,8 @@
 					<section class="timeline-group" aria-labelledby="decade-1990-webserver topic-1990-webserver">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1990-webserver">1990–1995</p>
-							<h3 class="timeline-group__topic" id="topic-1990-webserver">“Drag the code, run your own server”</h3>
-							<p class="timeline-group__summary">CERN, NCSA, and Apache teams handed out source tarballs and said, “Install it yourself,” igniting the open-source web server wave.</p>
+							<h3 class="timeline-group__topic" id="topic-1990-webserver">"Could I run a website on my own computer?"</h3>
+							<p class="timeline-group__summary">From the moment Tim Berners-Lee booted up the first website in a Swiss lab, an era opened where universities and neighborhood developers could grab free programs and run their own sites.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1990-cern-httpd">
@@ -149,8 +149,8 @@
 					<section class="timeline-group" aria-labelledby="decade-1994-infra topic-1994-infra">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1994-infra">1994–1998</p>
-							<h3 class="timeline-group__topic" id="topic-1994-infra">“Edge handles the lock, backend handles the logic”</h3>
-							<p class="timeline-group__summary">SSL, mod_proxy, and LVS let operators declare, “Encrypt here, split traffic here,” cementing the web-tier plus app-tier split.</p>
+							<h3 class="timeline-group__topic" id="topic-1994-infra">"We needed locks and a traffic cop"</h3>
+							<p class="timeline-group__summary">The lock icon next to the address bar, sites that don't crash even when tens of thousands of people show up at once — these things we take for granted today were each built, one by one, in this five-year stretch.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1994-ssl">
@@ -171,8 +171,8 @@
 					<section class="timeline-group" aria-labelledby="decade-1990-was topic-1990-was">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-1990-was">1997–1999</p>
-							<h3 class="timeline-group__topic" id="topic-1990-was">“Requests are objects, sessions are mine”</h3>
-							<p class="timeline-group__summary">Servlet specs and Tomcat containers promised, “We’ll model the request and remember the user,” powering dynamic web apps.</p>
+							<h3 class="timeline-group__topic" id="topic-1990-was">"Keep my shopping cart alive on the next page"</h3>
+							<p class="timeline-group__summary">The roots of Korean bank, government, and big-corporate sites were laid in this period. Once Servlet and Tomcat showed up, you could finally build real shopping-mall–level services in Java.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-servlet">
@@ -193,8 +193,8 @@
 					<section class="timeline-group" aria-labelledby="decade-2000-was topic-2000-was">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2000-was">2003</p>
-							<h3 class="timeline-group__topic" id="topic-2000-was">“EJB isn’t the only path”</h3>
-							<p class="timeline-group__summary">Spring 1.0 told teams, “Keep plain Java classes, we’ll wire the rest,” ushering in lightweight application stacks.</p>
+							<h3 class="timeline-group__topic" id="topic-2000-was">"What used to take a week now takes a day"</h3>
+							<p class="timeline-group__summary">One book and one bundle of code by an Australian developer flipped the entire world of Java development. The very guts of Korea's banking systems were born here.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2003-spring">
@@ -207,8 +207,8 @@
 					<section class="timeline-group" aria-labelledby="decade-2005-session topic-2005-session">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2005-session">2005</p>
-							<h3 class="timeline-group__topic" id="topic-2005-session">“Throw the session into the cache”</h3>
-							<p class="timeline-group__summary">Memcached fans insisted, “Store it in shared memory,” unlocking easy scaling across application nodes.</p>
+							<h3 class="timeline-group__topic" id="topic-2005-session">"Don't ask the same question twice"</h3>
+							<p class="timeline-group__summary">A blog site exhausted from pulling up the same post 10,000 times a minute came up with a "memory pantry" — and that pantry ended up holding up Facebook and Wikipedia.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-memcached">
@@ -221,8 +221,8 @@
 					<section class="timeline-group" aria-labelledby="decade-2010-was topic-2010-was">
 						<header class="timeline-group__head">
 							<p class="timeline-group__decade" id="decade-2010-was">2011–2015</p>
-							<h3 class="timeline-group__topic" id="topic-2010-was">“Configure less, let the platform route”</h3>
-							<p class="timeline-group__summary">Nginx, Spring Boot, Lambda, and Ingress declared, “We’ll proxy, auto-configure, run on demand, and route for the cluster,” reshaping operations.</p>
+							<h3 class="timeline-group__topic" id="topic-2010-was">"The era when you can forget the server even exists"</h3>
+							<p class="timeline-group__summary">Push one line of code and the same way Netflix and Toss do it, your site auto-deploys worldwide. This is the secret behind one-person developers who can run a site for $0 a month.</p>
 						</header>
 						<div class="timeline-group__list" role="list">
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2011-nginx">
@@ -313,8 +313,8 @@
 			<article class="event-detail" aria-labelledby="event-1990-cern-httpd-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1990</p>
-					<h2 id="event-1990-cern-httpd-title">CERN httpd pilot</h2>
-					<p class="event-detail__summary">“Hit GET and the paper appears.” Tim Berners-Lee ran CERN’s first web daemon so researchers could share linked docs.</p>
+					<h2 id="event-1990-cern-httpd-title">CERN httpd, the day the world's first website went live</h2>
+					<p class="event-detail__summary">"A document on your computer is on my screen! This feels like magic, doesn't it?" One small program Tim Berners-Lee wrote in a Swiss research lab became the ancestor of Naver, Google, and Facebook.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -334,8 +334,8 @@
 			<article class="event-detail" aria-labelledby="event-1993-ncsa-httpd-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1993</p>
-					<h2 id="event-1993-ncsa-httpd-title">NCSA HTTPd release</h2>
-					<p class="event-detail__summary">Teams whispered, “Grab the tarball and run it tonight,” as NCSA HTTPd spread across campuses and companies.</p>
+					<h2 id="event-1993-ncsa-httpd-title">NCSA HTTPd, the era when even a pizza shop opened a website</h2>
+					<p class="event-detail__summary">"I uploaded the catalog myself! Students search the books without ever coming in!" The moment the University of Illinois set its code free, the number of websites worldwide multiplied dozens of times in a year.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -355,8 +355,8 @@
 			<article class="event-detail" aria-labelledby="event-1995-apache-httpd-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1995</p>
-					<h2 id="event-1995-apache-httpd-title">Apache HTTP Server 1.0</h2>
-					<p class="event-detail__summary">“Flip on the modules you need,” the Apache Group said as version 1.0 became the web’s default server.</p>
+					<h2 id="event-1995-apache-httpd-title">Apache, the legend that started as "a server covered in patches"</h2>
+					<p class="event-detail__summary">"We don't even have a way to share our patches." The moment those scattered tinkerers gathered in one place, the giant that would run more than half the web servers in the world for the next decade was born.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -376,8 +376,8 @@
 			<article class="event-detail" aria-labelledby="event-1994-ssl-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1994</p>
-					<h2 id="event-1994-ssl-title">Netscape SSL 2.0 pilot</h2>
-					<p class="event-detail__summary">“See the lock icon stay on,” Netscape promised as the SSL 2.0 beta proved web checkout could be trusted.</p>
+					<h2 id="event-1994-ssl-title">SSL, the start of the little padlock icon next to the address bar</h2>
+					<p class="event-detail__summary">"There is absolutely no way we can take payments online like this." Back when credit card numbers leaked over café Wi-Fi, the small padlock that made Toss and Coupang checkout safe was first switched on here.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -397,8 +397,8 @@
 			<article class="event-detail" aria-labelledby="event-1996-mod-proxy-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1996</p>
-					<h2 id="event-1996-mod-proxy-title">Apache mod_proxy arrives</h2>
-					<p class="event-detail__summary">Admins cheered, “Point this upstream tonight,” when Apache dropped mod_proxy to handle proxying, caching, and balancing in one hit.</p>
+					<h2 id="event-1996-mod-proxy-title">mod_proxy, putting a "front gate" in front of every site</h2>
+					<p class="event-detail__summary">"The same page is being requested 10,000 times and we're rebuilding it from scratch every single time." The blueprint for the countless invisible "front-gate servers" sitting in front of Naver, Kakao, and Toss today was born here.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -418,8 +418,8 @@
 			<article class="event-detail" aria-labelledby="event-1998-lvs-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1998</p>
-					<h2 id="event-1998-lvs-title">Linux Virtual Server project</h2>
-					<p class="event-detail__summary">“Kernel-level load balancing, no pricey appliance,” Zhang Wensong said unveiling Linux Virtual Server for every Linux rack.</p>
+					<h2 id="event-1998-lvs-title">LVS, when Linux became the traffic cop</h2>
+					<p class="event-detail__summary">"We were capped at 10,000 users — now we're handling 100,000!" The idea of a Chinese graduate student named Wensong Zhang became the direct ancestor of the way Facebook's hundreds of thousands of servers split traffic.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -439,8 +439,8 @@
 			<article class="event-detail" aria-labelledby="event-1997-httpsession-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1997</p>
-					<h2 id="event-1997-httpsession-title">HttpSession API</h2>
-					<p class="event-detail__summary">“Call <code>getSession()</code> and relax,” the Servlet 1.0 crew assured teams while containers took over cookie and session chores.</p>
+					<h2 id="event-1997-httpsession-title">HttpSession, the day shopping malls started remembering you</h2>
+					<p class="event-detail__summary">"I added it to my cart, and on the next page the cart's empty." The reason Coupang and Naver still know who you are once you've logged in starts here.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -460,8 +460,8 @@
 			<article class="event-detail" aria-labelledby="event-2005-memcached-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">2005</p>
-					<h2 id="event-2005-memcached-title">Memcached goes open source</h2>
-					<p class="event-detail__summary">LiveJournal laughed, “Just stash it in RAM,” as Memcached went open source and made shared caches the norm.</p>
+					<h2 id="event-2005-memcached-title">Memcached, the "memory pantry" even Facebook used</h2>
+					<p class="event-detail__summary">"This same post is being requested 10,000 times a minute and never changes once." A single insight from LiveJournal engineer Brad Fitzpatrick cut database load by 95%.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -481,8 +481,8 @@
 			<article class="event-detail" aria-labelledby="event-1997-servlet-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1997</p>
-					<h2 id="event-1997-servlet-title">Servlet 1.0 spec</h2>
-					<p class="event-detail__summary">“Treat every request as a Java object,” Sun urged when the Servlet 1.0 spec landed with a shared contract.</p>
+					<h2 id="event-1997-servlet-title">Servlet, the birth of the roots of Korean bank and government sites</h2>
+					<p class="event-detail__summary">"Spinning up a fresh program for every single user is hideously wasteful." One simple rule from Sun Microsystems pushed performance up 50x and made Java the default language of enterprise web infrastructure.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -502,8 +502,8 @@
 			<article class="event-detail" aria-labelledby="event-1999-tomcat-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">1999</p>
-					<h2 id="event-1999-tomcat-title">Apache Tomcat release</h2>
-					<p class="event-detail__summary">Apache grinned, “Drop in the WAR, I’ll serve it,” after Sun gifted the Tomcat reference implementation to the community.</p>
+					<h2 id="event-1999-tomcat-title">Tomcat, the cat that set free a $50,000 server license</h2>
+					<p class="event-detail__summary">"How is a student supposed to pay a $50,000 license?" One foundation's decision let students and startups run Java websites for free, and 25 years later it still holds up roughly half of the Korean internet.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -523,8 +523,8 @@
 			<article class="event-detail" aria-labelledby="event-2003-spring-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">2003</p>
-					<h2 id="event-2003-spring-title">Spring 1.0 launch</h2>
-					<p class="event-detail__summary">Spring 1.0 whispered, “Keep the beans plain, we’ll wire them,” easing teams away from heavyweight EJB stacks.</p>
+					<h2 id="event-2003-spring-title">Spring, when one book flipped the entire Java world</h2>
+					<p class="event-detail__summary">"It takes a week to add a 'register a user' feature." A book and a code bundle from Australian developer Rod Johnson, handed to grumbling Java developers, opened the era when the same job got done in a single day.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -544,8 +544,8 @@
 			<article class="event-detail" aria-labelledby="event-2011-nginx-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">2011</p>
-					<h2 id="event-2011-nginx-title">Nginx 1.0 stable</h2>
-					<p class="event-detail__summary">Operators bragged, “Half the memory, twice the throughput,” when Nginx 1.0 marked the event-driven proxy era.</p>
+					<h2 id="event-2011-nginx-title">Nginx, the secret behind one waiter handling 100 customers</h2>
+					<p class="event-detail__summary">"We were capped at 5,000 users — now we're handling 50,000. Is this magic?" One small tool from Russian developer Igor Sysoev guards the front door of Netflix, Airbnb, Uber, Coupang, Toss, and Kakao.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -565,8 +565,8 @@
 			<article class="event-detail" aria-labelledby="event-2014-spring-boot-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">2014</p>
-					<h2 id="event-2014-spring-boot-title">Spring Boot 1.0</h2>
-					<p class="event-detail__summary">Spring Boot set "just run it" as the default, spinning up a Spring backend in minutes with embedded Tomcat.</p>
+					<h2 id="event-2014-spring-boot-title">Spring Boot, three days of setup turned into five minutes</h2>
+					<p class="event-detail__summary">"The first three days of every new project disappear into config wrangling." The decisive tool that lets Kakao, Naver, and Toss keep using Java arrived here.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -586,8 +586,8 @@
 			<article class="event-detail" aria-labelledby="event-2014-lambda-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">2014</p>
-					<h2 id="event-2014-lambda-title">AWS Lambda launch</h2>
-					<p class="event-detail__summary">“Upload the function, we’ll scale it,” AWS teased at Lambda’s launch and kicked off the serverless wave.</p>
+					<h2 id="event-2014-lambda-title">AWS Lambda, the magic of running a site for $0 a month</h2>
+					<p class="event-detail__summary">"My site gets called 100 times a month and my bill is literally $0!" One audacious idea from Amazon kicked off the era when servers became truly invisible.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
@@ -607,8 +607,8 @@
 			<article class="event-detail" aria-labelledby="event-2015-k8s-ingress-title">
 				<header class="event-detail__header">
 					<p class="event-detail__year">2015</p>
-					<h2 id="event-2015-k8s-ingress-title">Kubernetes Ingress resource</h2>
-					<p class="event-detail__summary">Kubernetes engineers said, “Describe the host in YAML and relax,” as Ingress let clusters manage HTTP entry points.</p>
+					<h2 id="event-2015-k8s-ingress-title">Ingress, conducting 100 servers from one file</h2>
+					<p class="event-detail__summary">"The days of editing config files by hand are over!" The decisive step that opened the gate to the Kubernetes era, where 100 servers move as one block.</p>
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
