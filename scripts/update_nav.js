@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const dir = 'c:\\workspace\\itstory';
+const dir = 'd:\\workspace\\itstory';
 const files = fs.readdirSync(dir).filter(f => f.endsWith('.html') && !f.includes('-en.html'));
 
 const replacements = {
