@@ -81,7 +81,7 @@
 
   <!-- RUNOFF commands + output -->
   <text x="295" y="100" font-family="monospace" font-size="12" fill="#888">.CENTER</text>
-  <text x="295" y="116" font-family="monospace" font-size="12" fill="#333" text-anchor="middle" x="500">RESEARCH REPORT No. 47</text>
+  <text x="500" y="116" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">RESEARCH REPORT No. 47</text>
   <text x="295" y="140" font-family="monospace" font-size="12" fill="#888">.LEFT MARGIN 5</text>
   <text x="295" y="156" font-family="monospace" font-size="12" fill="#888">.RIGHT MARGIN 70</text>
   <text x="295" y="172" font-family="monospace" font-size="12" fill="#888">.INDENT 5</text>

@@ -82,7 +82,7 @@
     <text x="55" y="32" fill="#4488ff" font-size="9" font-family="monospace">GPT-4 · Model</text>
 
     <!-- User message 1 -->
-    <rect x="100" y="55" width="240" height="40" fill="url(#userBubble)" rx="10" rx="10"/>
+    <rect x="100" y="55" width="240" height="40" fill="url(#userBubble)" rx="10"/>
     <text x="220" y="72" fill="#88cc88" font-size="10" font-family="sans-serif" text-anchor="middle">Python 코드 작성해줘:</text>
     <text x="220" y="87" fill="#88cc88" font-size="10" font-family="sans-serif" text-anchor="middle">피보나치 수열 출력</text>
 

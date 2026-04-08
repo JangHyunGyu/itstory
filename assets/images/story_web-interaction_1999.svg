@@ -120,7 +120,7 @@
   <text x="534" y="314" font-family="monospace" font-size="11" fill="#d4d4d4"> ActiveXObject(</text>
   <text x="442" y="330" font-family="monospace" font-size="11" fill="#ce9178">  "MSXML2.XMLHTTP"</text>
   <text x="442" y="346" font-family="monospace" font-size="11" fill="#d4d4d4">);</text>
-  <text x="442" y="346" font-family="monospace" font-size="11" fill="#9cdcfe" x="470">xhr</text>
+  <text x="470" y="346" font-family="monospace" font-size="11" fill="#9cdcfe">xhr</text>
   <text x="442" y="348" font-family="monospace" font-size="9" fill="#6a9955">// Outlook Web Access, IE5 · 1999</text>
 
   <!-- Year + label -->
