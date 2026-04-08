@@ -351,8 +351,11 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>In the MIT basement he fed punch cards into the mainframe and ran RUNOFF. Pages rolled out with centered titles and tidy notes, and a nearby researcher marveled that a few commands fixed the whole layout.</p>
-						<p>Saltzer jotted down a short list of commands such as #CENTER and shared it with classmates. His advisor checked the printout and suggested using the program on the next assignment as well.</p>
+						<p>Writing a research paper as a graduate student in the 1960s was an exhausting ordeal. Want a heading <strong>centered on the page</strong>? You measured with a ruler and counted exactly how many spaces to type before it. To check that your footnotes had ended up on the bottom of the right page, you traced the lines with your finger. And if you fixed a single sentence, every page after it shifted out of alignment and you had to start over. At MIT, "you'll pull an all-nighter writing one paper" was just folklore.</p>
+						<p>One graduate student decided to kill the tedium. He had an <strong>idea that flipped the problem on its head</strong>:</p>
+						<p><em>"What I actually want is just 'center this.' So instead of counting spaces myself, why don't I write <code>.CENTER</code> as one line in the manuscript and let the computer figure out the spacing?"</em></p>
+						<p>That insight became a program where you sprinkled short directives like <code>.CENTER</code>, <code>.PARAGRAPH</code>, and <code>.FOOTNOTE</code> throughout your text, and the computer read them and laid the page out beautifully on your behalf. The program was called <strong>RUNOFF</strong>. A colleague at the next desk picked up the first printout and gaped: <em>"You typed a few commands and every footnote landed in the right place by itself!"</em></p>
+						<p>It looks small, but this moment is a fork in IT history. <strong>"Separate the content from the way it looks"</strong> — that simple idea is the same one that will eventually power <strong>every webpage in existence</strong>. The reason the heading you're reading right now is centered, the reason a news article is laid out cleanly on screen — all of it traces back to a basement lab at MIT in 1967.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>RUNOFF mixed simple instructions with the text so the machine handled line breaks and footnotes. It proved that computers could manage document structure, paving the way for later markup languages.</p>
@@ -370,8 +373,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>At IBM&#39;s Yorktown lab, Charles Goldfarb and his teammates listed parts like title and references on a chalkboard and chose tags such as :TITLE to mark them in text.</p>
-						<p>When the sample document printed correctly, a quality reviewer noted the pages realigned just by editing the tag, and a client considered adopting it to cut editing time.</p>
+						<p>Two years after RUNOFF, in 1969, an IBM researcher named Charles Goldfarb spotted a new problem. <em>"Wait — I've been writing 'center this, bold this, blue this' all over our company manuals. What happens when management decides the new design is left-aligned and black? I have a thousand headings. Do I edit them one by one?"</em></p>
+						<p>He came up with a <strong>completely different approach</strong>. <em>"Instead of writing 'center this' in the manuscript, what if I just wrote '<strong>this is a heading</strong>'? Then later we decide once how all headings should look, and a thousand of them update at the same time."</em></p>
+						<p>Goldfarb built a language that let you tag content with semantic labels like <code>:TITLE</code>, <code>:P</code> (paragraph), <code>:LIST</code>. He called it <strong>GML</strong> (Generalized Markup Language). A colleague tried it on a sample document and was startled: <em>"I edited the heading style in one place and every heading across the manual changed at the same time!"</em></p>
+						<p>RUNOFF told the computer "how it should look." GML described <strong>"what this is"</strong> — a fundamentally different perspective. And that perspective is the direct ancestor of HTML tags like <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code>. The reason you can change how every heading on a website looks with one CSS rule today is because of an insight in an IBM lab in 1969.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>GML used plain words to label sections such as title and body. Separating meaning from appearance made documents reusable and laid the groundwork for SGML and later HTML tags.</p>
@@ -389,8 +394,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Students were frustrated that fonts and margins changed on each machine. Reid introduced commands like @Heading to declare the structure once and let Scribe handle the rest.</p>
-						<p>When a classmate printed the same file on another mainframe and saw the layout match, the department adopted Scribe for theses.</p>
+						<p>Carnegie Mellon University, early 1970s. Students were sending carefully typeset papers to friends at other schools and getting <strong>tragic replies</strong>: "Hey, your file came in but the headings look like body text and the footnotes are in random places." When the receiving machine was a different model, the formatting fell apart. Today's equivalent is opening a Mac document on Windows and watching every font silently morph into something else.</p>
+						<p>A grad student named Brian Reid traced the root cause. <em>"The problem is people write things like 'left margin 2 cm on A4 paper' — concrete numbers — into the manuscript itself. Different machines interpret those numbers differently, so it breaks. What if you just wrote 'this is a heading' as <strong>information</strong>, and let each computer render it however it knows how?"</em></p>
+						<p>So Reid built a language where the markup was <strong>information only</strong>: <code>@Heading</code>, <code>@Paragraph</code>, and so on. He called it <strong>Scribe</strong>. A colleague sent a Scribe document to a different mainframe at another university, ran it, and nodded approvingly at the printout: <em>"The machines are completely different, but the headings still look like headings. The structure survives the trip!"</em></p>
+						<p>The reason this idea matters is simple. <strong>"A document should read the same on any computer"</strong> — and the reason the same webpage looks fine on your iPhone, your friend's Android, and your laptop is that the conviction started here. Scribe's <code>@Heading</code> is the great-grandfather of HTML's <code>&lt;h1&gt;</code>.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Scribe split document meaning from presentation and showed the same content could be reused on different devices. SGML and HTML designers later borrowed that idea.</p>
@@ -408,8 +415,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>In Geneva, committee members compared airplane manuals and legal codes and noticed each one used different tag names for the same sections.</p>
-						<p>They proposed document type definitions (DTDs) so teams could publish their tag list in advance, and archives welcomed the chance to share files safely.</p>
+						<p>By the mid-1970s, the problem was getting serious. IBM marked headings with <code>:TITLE</code>. Carnegie Mellon used <code>@Heading</code>. Other companies invented their own symbols. <strong>The same concept of "heading" had a dozen different names.</strong> When an airline tried to share aircraft maintenance manuals with another country's airline, or when a court tried to exchange judgments with foreign courts, they couldn't read each other's files at all.</p>
+						<p>In 1978, delegates from various countries gathered in Geneva at an ISO (International Organization for Standardization) meeting. The British delegate sighed: <em>"Look at this. These are technical manuals with the same structure, and every one of them uses slightly different tag names. We can't translate between them. We need to lay down some rules."</em></p>
+						<p>The committee came up with a clever workaround. Instead of forcing everyone to use the same tag names, <strong>require every document to start with a list saying "here are the tags this document uses."</strong> An IBM document declares "in this file, <code>:TITLE</code> means heading," a Carnegie Mellon document declares "in this file, <code>@Heading</code> means heading," and the receiver only has to consult the list to understand the meaning. They called this prefix declaration the <strong>DTD</strong> (Document Type Definition).</p>
+						<p>That same idea is still in use on the modern internet. The line <code>&lt;!DOCTYPE html&gt;</code> at the very top of every webpage — you may have noticed it — is the direct descendant of that 1978 idea. It's the document declaring, "I follow the HTML rules."</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>The SGML draft introduced the habit of declaring your tag vocabulary and rules first. That groundwork led to the 1986 standard.</p>
@@ -427,8 +436,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>After the vote, aviation teams updated their systems so catalogs matched the approved DTD. Missing sections were caught early instead of during press checks.</p>
-						<p>Publishers installed SGML editors to make both printed books and data files from the same source, and clients liked receiving the two formats at once.</p>
+						<p>For eight years after the 1978 draft, multiple countries field-tested the proposal and refined the rules. Then in 1986 it finally got an official ISO number — <strong>ISO 8879</strong> — and <strong>SGML</strong> (Standard Generalized Markup Language) became an international standard. Becoming an international standard meant: from now on, any country, any company, anywhere on the planet could adopt this as an official language for their documents.</p>
+						<p>The first industries to react were the ones drowning in <strong>complex manuals</strong>. A Boeing aircraft maintenance manual was <strong>thousands of pages</strong> long. The technical training materials for a fighter jet filled an entire library shelf. The documentation team had to update them constantly, and every revision was a small nightmare.</p>
+						<p>Once SGML became a standard, something close to a miracle happened. A documentation manager at an airline explained it to a coworker: <em>"Look — I've tagged every part description as data. From this one source file, we generate the printed manual <em>and</em> the searchable maintenance database <em>and</em> the on-aircraft lookup tool. Write it once, every system pulls what it needs."</em> The same content could simultaneously become a printed book, a database, and an online query system.</p>
+						<p>SGML is an unfamiliar name to most people, but it's the <strong>grandfather</strong> of technologies you use every day. HTML is essentially a simplified version of SGML, and XML is its nephew. Before the web even existed, the principle of "let's structure documents so machines can understand them" had quietly become an international standard.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>ISO 8879 spelled out how tags should look and how software should read them. Shared rules let different companies exchange documents and prepared the way for HTML.</p>
@@ -446,8 +457,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>At CERN he trimmed SGML to a short list of tags and showed colleagues how an &lt;a&gt; link could jump between memos.</p>
-						<p>Researchers tested headings, lists, and links, pleased that the language stayed small and easy to share.</p>
+						<p>1989. <strong>CERN</strong> (the European particle physics lab) sat in the countryside outside Geneva, Switzerland, and the scientists who worked there came from all over the world to collaborate. They had a recurring problem: <strong>"Dr. Kim updated her experiment notes yesterday — how do I find them?"</strong> The only options were to mail paper notes, attach a file to an email, or physically walk to her office.</p>
+						<p>A British engineer working at CERN named <strong>Tim Berners-Lee</strong> had a simple but revolutionary idea. <em>"SGML is great, but it's too complicated for working scientists to use. Let's keep just a few essential tags, and add one magic feature on top — <strong>links that jump to other documents</strong>."</em></p>
+						<p>He handed a draft memo to a colleague. It contained only a handful of dead-simple tags: <code>&lt;h1&gt;</code> for a heading, <code>&lt;p&gt;</code> for a paragraph, and crucially <code>&lt;a&gt;</code> — <strong>a bridge to another document</strong>. The colleague clicked an experimental link, watched it jump from Dr. Kim's note to Dr. Lee's note in another corner of the lab, and his eyes widened: <em>"This… anyone could use this. You don't need any complicated software."</em></p>
+						<p>That single memo was the beginning of <strong>the World Wide Web</strong>. The acronym for HyperText Markup Language — <strong>HTML</strong> — and the reason you can casually click from Wikipedia to YouTube to a blog and back today, all started in that moment. Berners-Lee never tried to make money from the idea: he <strong>gave it away to the world for free</strong>. That's why the internet ended up belonging to all of us instead of one company.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>HTML kept the useful parts of SGML and made links the central feature. That balance let browsers read documents and connect them.</p>
@@ -465,8 +478,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>The IETF working group collected common browser behavior and published RFC 1866. Netscape and Microsoft agreed to follow it when handling forms, headings, and lists.</p>
-						<p>Support teams soon reported fewer calls about pages looking different, thanks to the shared instructions.</p>
+						<p>As the internet exploded through the early 1990s, an <strong>absurd problem</strong> emerged. A webpage that looked beautiful in Netscape would render as a garbled mess in Internet Explorer. And vice versa. The reason was simple: <strong>there was no official rule for how to interpret each tag.</strong> Each browser vendor had basically guessed "this probably means roughly this" and implemented their own interpretation.</p>
+						<p>As the web grew, the chaos got worse. Web designers were in despair: <em>"It's the same HTML, but every browser shows it differently. My customer is yelling that the site looks broken on his computer. What am I supposed to do about that?"</em></p>
+						<p>In 1995 the <strong>IETF</strong>, the body that maintains internet standards, stepped in. They gathered HTML experts and produced an official spec. "The <code>&lt;form&gt;</code> tag accepts user input and behaves like this. The <code>&lt;img&gt;</code> tag displays an image and uses these attributes." Every detail nailed down precisely. They called it <strong>HTML 2.0</strong> (formally known as RFC 1866).</p>
+						<p>Once the spec existed, the chaos started to subside. Engineers at Netscape and Microsoft could read the same document and build against it. Web developers could finally promise, with confidence, "this code will behave the same everywhere." Standards sound boring, but they are quietly the magic that <strong>lets everyone speak the same language</strong>. The reason every site you visit today renders correctly no matter which browser you use is that someone, in 1995, said, "let's write down the rules."</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>The spec explained what each tag meant and how browsers should react, giving developers a stable base for future features.</p>
@@ -484,8 +499,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>During a W3C briefing, Tim Bray demonstrated an order list written in XML that needed no extra software to understand.</p>
-						<p>Newsrooms and software companies wrote DTDs and namespaces so partners could exchange information in a predictable structure.</p>
+						<p>By the mid-1990s developers were stuck on a new tension. HTML was great for <strong>displaying webpages</strong>, but it was a poor fit when two companies just needed to exchange <strong>data</strong> (an order list, a product catalog). SGML was powerful but punishingly hard to learn. What people wanted was something in the middle: <em>"lightweight, easy to learn, but still capable of carrying structured data."</em></p>
+						<p>In 1997, Tim Bray and a W3C team delivered <strong>XML</strong> (eXtensible Markup Language). XML looked a lot like HTML, but with one <strong>decisive difference</strong>: where HTML had a fixed set of tags (<code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, etc.), <strong>XML let you invent any tag you wanted</strong>. A bookstore could write something like this:</p>
+						<p><em><code>&lt;book&gt;&lt;title&gt;The Little Prince&lt;/title&gt;&lt;author&gt;Saint-Exupéry&lt;/author&gt;&lt;price&gt;12&lt;/price&gt;&lt;/book&gt;</code> — see, I just made up a <code>&lt;book&gt;</code> tag, and anyone reading this can understand exactly what it means. I can send this to another bookstore's system and they can read it as-is.</em></p>
+						<p>That freedom — "invent your own tags" — turned XML into a <strong>universal data format</strong>. Newspapers published their headlines as XML feeds. Banks exchanged transaction records in XML. Mobile apps and servers spoke XML to each other. The SVG images you see on the web, the RSS feeds your podcast app subscribes to — they're all cousins of XML. Because of XML, programs from different companies could finally hold a conversation in a shared language.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>XML&#39;s rules for element names and attributes made it easy for different programs to share a data tree. SVG, RSS, and many business formats grew from that idea.</p>
@@ -503,8 +520,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>Browser engineers agreed to treat the document as a tree, so document.getElementById and similar methods behaved the same everywhere.</p>
-						<p>A developer built a test page that added a new paragraph with a button and celebrated that it finally worked in every browser.</p>
+						<p>In the late 1990s, webpages were still <strong>frozen posters</strong>. Once a page loaded, the content was set in stone. To change anything you had to fetch the entire page over again. Posting a single comment meant the whole screen blanked, then redrew. The idea of "click a button and a new paragraph appears <strong>right there</strong>" felt like a magic trick.</p>
+						<p>Browser engineers gathered at the W3C and worked on a solution. The core idea was this: <em>"Look at the HTML document as a tree. The body is the root, headings are branches, paragraphs are leaves. Then let a program walk that tree and say, 'find the second leaf on the third branch and change it.'"</em></p>
+						<p>They named that tree structure the <strong>DOM</strong> (Document Object Model) — "treat the document as a manipulable object." When the official Level 1 spec arrived in 1998, JavaScript could call <code>document.getElementById("comments")</code> and reach the comments section directly. A web developer built a test page and blogged about it: <em>"Click the button and a new paragraph appears in place. The page doesn't reload. This is genuinely a new world!"</em></p>
+						<p>The reason a "Like" count on Facebook updates <strong>in place</strong> when you click it, the reason Google Search shows suggestions <strong>without a page reload</strong> as you type, the reason WhatsApp Web shows messages <strong>in real time</strong> — all of it is the DOM. The promise made in 1998 is what turned the web from "something you read" into "something you write into and touch."</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Seeing a page as parents and children let JavaScript edit structure safely, opening the door to dynamic web apps.</p>
@@ -522,8 +541,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>At a meeting in San Jose, editor Ian Hickson proposed features such as canvas and input type="email", and engineers immediately sketched implementation plans.</p>
-						<p>Requests for video, form validation, and other upgrades poured into the mailing list, shaping the drafts in the open.</p>
+						<p>In the early 2000s, the web was stuck in a strange deadlock. The <strong>W3C</strong>, which managed web standards, was pursuing a new direction called XHTML — strict, complex, theoretically pure. Working developers were unhappy. <em>"We're saying things like, 'just make it easier to build an email input field' or 'we need a tag for embedding video.' But upstairs they're spending years writing a theoretically perfect spec we won't be able to use."</em></p>
+						<p>In 2004 three browser vendors lost their patience and made a decision. <strong>Apple, Mozilla (Firefox), and Opera</strong> agreed: "We can't keep waiting. Let's build a practical web standard ourselves." They formed a group called the <strong>WHATWG</strong> (Web Hypertext Application Technology Working Group). The name is long, but the mission was simple: <strong>"Make the web work like an app."</strong></p>
+						<p>At their first meeting, Ian Hickson proposed features that sounded radical at the time. <em>"Let's make a <code>&lt;canvas&gt;</code> tag so you can draw graphics directly in HTML. Let <code>&lt;input type='email'&gt;</code> create an email input field in one line. Add a <code>&lt;video&gt;</code> tag that just embeds video. Developers should be able to build apps without installing extra plugins."</em> People in the room looked at each other. It sounded almost utopian, but they all agreed: yes, this is what we need.</p>
+						<p>The drafts that came out of that group eventually became <strong>HTML5</strong>. The reason the YouTube player you use is built on a real <code>&lt;video&gt;</code> tag, the reason Google Maps uses <code>&lt;canvas&gt;</code> for its interactive maps, the reason your browser checks an email field's format automatically — all of it traces back to a few developers in 2004 who said, <em>"Fine, we'll just build it ourselves."</em></p>
 					</div>
 					<div class="event-detail__notes">
 						<p>WHATWG kept HTML evolving based on real needs and set the stage for HTML5&#39;s richer elements.</p>
@@ -541,8 +562,11 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>At BarCamp, attendees tried class="fn org" on blog posts and watched address-book apps import the data automatically.</p>
-						<p>Examples piled up on microformats.org, encouraging search teams to test pulling schedules and reviews straight from the markup.</p>
+						<p>By 2005 the web had a curious dilemma. Pages were full of <strong>contact info, event listings, restaurant reviews</strong> — but machines couldn't tell what any of it was. A human eye could glance at a page and say "ah, that's a phone number, that's a date." But a search engine just saw plain paragraphs. <strong>"There's no &lt;phone&gt; tag in HTML, so I have to write phone numbers as ordinary text. To Google, that just looks like a regular sentence."</strong></p>
+						<p>Developers weighed two options. Inventing new HTML tags would mean changing the standard, which takes years. So they went a completely different direction. <em>"Don't invent new tags at all. Use the existing <code>class</code> attribute and just <strong>agree on the names</strong>. If everyone agrees that <code>class='tel'</code> means phone number, that's enough."</em></p>
+						<p>The convention was named <strong>microformats</strong>. A vCard contact, for example, looked like this:</p>
+						<p><em><code>&lt;div class="vcard"&gt;&lt;span class="fn"&gt;Jane Doe&lt;/span&gt;&lt;span class="org"&gt;ArcherLab&lt;/span&gt;&lt;span class="tel"&gt;+1-555-1234&lt;/span&gt;&lt;/div&gt;</code> — name is 'fn', organization is 'org', phone is 'tel.' Any program that knows the convention can extract structured contact info from this HTML.</em></p>
+						<p>It looks humble, but the approach delivered surprising results. It proved that <em>"you don't need a new official standard — you just need users to agree on a convention."</em> That seed grew into <strong>schema.org</strong> in 2011, which is what lets Google and Bing automatically pull star ratings, recipes, and product prices straight out of webpages today. The reason searching "best ramen" instantly shows you star ratings and opening hours in the results — it all traces back to a few developers in 2005 who said, <em>"Let's just agree on names."</em></p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Microformats proved you can add meaning without new tags, inspiring later efforts such as schema.org and microdata.</p>
@@ -560,8 +584,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>At SMX they showed how adding <code>itemprop</code> attributes made star ratings appear in search results, sending marketers home to update their pages.</p>
-						<p>Within a year, shopping sites exposed price and stock information with the shared vocabulary, and browser devtools added structured data checkers.</p>
+						<p>By 2011 the web had a strange picture. <strong>Search engines were crawling hundreds of millions of pages</strong>, but to find "cooking time" on a recipe page or a "rating" on a movie page, they had to <em>guess</em>. One site put the rating in one tag, another put it in a different tag, and there was no consistency. To improve search results, the chaos needed to be tidied up.</p>
+						<p>Something shocking happened. Three search engine companies that <strong>fiercely competed every other day</strong> — Google, Bing, and Yahoo — walked onto a stage together. <em>"Folks, we've jointly built a shared 'vocabulary,' and we're calling it schema.org. From now on, if you mark up your recipe with <code>itemprop='cookTime'</code>, all three of us will recognize it as the cooking time. Use <code>ratingValue</code> for review ratings, <code>price</code> for prices — adopt the shared vocabulary, and your search results will stand out with star ratings, prices, and ingredients right inside the listing."</em></p>
+						<p>The announcement got an immediate reaction. An e-commerce marketing lead ran to her engineering team and said: <em>"Roll this out on our product pages today. If our prices and stock status show up directly in the search results, our click-through rate is going to explode."</em> Sites that adopted schema.org saw measurable lifts in search traffic, and the phrase "structure is money" started circulating in SEO circles.</p>
+						<p>The reason searching for "kimchi stew recipe" on Google today shows the cook time, calories, and star rating right in the results — that's schema.org. A one-time alliance between competing search engines, joined together for a single shared dictionary, made the web noticeably smarter for everyone.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>schema.org acts as a shared dictionary so search engines and voice assistants can read the same structure. It helps front-end and back-end teams speak the same language.</p>
@@ -579,8 +605,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>One web lead replaced &lt;div id="content"&gt; with &lt;main&gt; and ran screen-reader tests; the QA report noted that navigation became easier.</p>
-						<p>Blog posts and design systems quickly explained when to use section and aside, spreading the habit of semantic markup.</p>
+						<p>The HTML5 work that began in WHATWG back in 2004 finally became the <strong>official W3C web standard</strong> in 2014, after a ten-year journey. The core philosophy of HTML5 can be summed up in one phrase: <strong>"give meaning back to tags."</strong></p>
+						<p>Until then, a webpage was a forest of "generic boxes." <code>&lt;div class="header"&gt;</code>, <code>&lt;div class="nav"&gt;</code>, <code>&lt;div class="main"&gt;</code>, <code>&lt;div class="footer"&gt;</code> — <code>&lt;div&gt;</code> just means "a generic box," so you only knew which box was the header, the menu, or the body if you read the class name. To a <strong>screen reader</strong> (the program a blind user relies on to hear webpage content), this whole layout was just "box, box, box, box."</p>
+						<p>HTML5 fixed this with <strong>tags whose names carry meaning</strong>: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>. A web team lead replaced all the old <code>&lt;div id="content"&gt;</code> wrappers on her site with <code>&lt;main&gt;</code> and ran it past a screen reader. A blind tester was thrilled: <em>"Now the 'jump to main content' shortcut actually works. I can skip past the ads and land on the article body in one keystroke."</em></p>
+						<p>It looks like a small thing, but those semantic tags were the <strong>key to making the web equally usable for everyone</strong>. Blind users can navigate comfortably, search engines can identify the real article body precisely, and later voice assistants like Siri and Alexa can read webpages and answer questions about them. 2014 is the year the web took a real step from being purely <strong>visual</strong> to also being <strong>meaningful</strong>.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>HTML5 introduced names such as main, header, and nav so tools and assistive tech could understand a page&#39;s roles.</p>
@@ -598,8 +626,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>A museum web team added ARIA roles to its tab component and testers reported that screen readers now announced each tab correctly.</p>
-						<p>The pattern guide listed keyboard order and states, becoming a go-to reference for front-end teams.</p>
+						<p>HTML5 (2014) introduced a lot of meaningful tags, but it had a limit. Modern web apps were full of complex UI patterns — <strong>tabs</strong> (like the "Overview / Reviews / Specs" tabs on an Amazon product page), <strong>accordions</strong> (FAQ items that expand when you click them), <strong>dropdown menus</strong>. None of those were expressible as basic HTML tags. Developers built them all by hand from generic boxes plus JavaScript.</p>
+						<p>The trouble started when blind users tried to use these pages. The <strong>screen reader</strong> only saw generic boxes and would say "box," and the user would protest, <em>"Is this a tab or a button? How am I even supposed to know if this tab is currently selected?"</em></p>
+						<p>The W3C answered with <strong>ARIA</strong> (Accessible Rich Internet Applications) — a set of attributes you could attach to existing HTML to add information like <strong>"this is a tab," "this is open right now," "this button is disabled."</strong> The 2017 update, <strong>ARIA 1.1</strong>, expanded the patterns it covered to handle more complex UI components. A museum website team applied ARIA to their tab component and ran a usability test with blind users. The tester was impressed: <em>"Now it actually says, 'Exhibition info tab, 1 of 3.' I can move between tabs with the arrow keys. This page used to be unusable for me — now it works."</em></p>
+						<p>The reason the buttons, dialogs, autocomplete fields, and radio buttons you take for granted on the web also work for blind users is ARIA. Web accessibility is becoming legally required in more and more places, which means ARIA has gone from "nice to have" to <strong>an essential standard for building a web that belongs to everyone</strong>.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>ARIA 1.1 fills gaps when semantic HTML alone is not enough, so complex components still share their structure and state.</p>
@@ -617,8 +647,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>A public agency defined a &lt;gov-card&gt; component so editors only needed to write the tag in Markdown to get a consistent card.</p>
-						<p>Accessibility specialists reviewed the element to ensure it kept semantic HTML inside, and surveys later showed people recognized the pattern across pages.</p>
+						<p>By 2020, web developers were in an <strong>odd situation</strong>. The basic HTML tags — <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, etc. — were extremely simple, but real-world products needed dramatically more. Every company had its own custom buttons, cards, and navigation, and stitching them together was always messy.</p>
+						<p>Frameworks like <strong>React</strong> and <strong>Vue</strong> showed up in the 2010s and solved the problem — but only inside their own ecosystems. A component built in React couldn't be dropped into a Vue project, and vice versa. Developers sighed, <em>"What if we could invent our own tags right inside the browser, without being chained to any one framework?"</em></p>
+						<p>Finally, in 2020, every major browser stably supported <strong>Custom Elements</strong>. This was a real shift. A developer can now declare, <em>"I'm inventing a new tag called <code>&lt;my-button&gt;</code>,"</em> and the browser treats it like a first-class HTML element. A government web team built a tag called <code>&lt;gov-card&gt;</code> and explained: <em>"Now anyone in any agency can write <code>&lt;gov-card title='Public Notice'&gt;...&lt;/gov-card&gt;</code> and they get our standard government card design automatically. When the design changes, we update one place and every site across every department updates with us."</em></p>
+						<p>You'll rarely see this technology directly, but it's powering more and more of the <strong>backstage</strong> of services you use. The YouTube video player, embeddable Google Maps widgets, payment buttons from Stripe — the complex pieces that used to be impossible to share between sites are now portable as a single tag. HTML finally became the kind of language where you can <strong>extend it with your own elements</strong>.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Custom Elements v1 lets teams create new tags with their own templates and accessibility settings, making reusable structure easy to share.</p>
@@ -636,8 +668,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>A government UX center posted ready-made page skeletons, and content teams liked that heading levels and landmarks were already in place.</p>
-						<p>Internal office hours paired designers and developers to review the rules and share scripts that test page structure automatically.</p>
+						<p>By the early 2020s, large IT services were chewing on a <strong>new headache</strong>. As companies grew, the number of engineering teams ballooned into the dozens, and each team built its own buttons, leading to inconsistencies inside the same product: "the buttons on this page are rounded and the buttons on that page are square." The user experience felt patched together, and every new designer who joined had to ask, "What font do we even use for headings here?"</p>
+						<p>Tech giants like Google, Microsoft, and IBM started building <strong>design systems</strong> as the answer. These weren't simple style guides. They were a unified package — <strong>"every button at our company looks like this, must be written with this HTML structure, and must include this attribute for screen readers"</strong> — combining a rulebook, a code library, and full documentation in one place.</p>
+						<p>The amazing twist was that these companies <strong>released their design systems to the world for free</strong>. Google published <strong>Material Design</strong>, IBM released <strong>Carbon</strong>, Microsoft put out <strong>Fluent</strong>. The guides were full of detail like: <em>"Buttons have 16px horizontal padding, text is 14px, hover background is this hex code. To support blind users, every button needs a label attribute. The focus ring is this thickness…"</em> Design, code, and accessibility, all bound up in one book.</p>
+						<p>The reason a startup developer today can ship a respectable-looking website in a single afternoon is hidden right here. They don't have to start from nothing — they can pull in a design system that a multinational spent years polishing. The culture of <strong>"share the structural and visual rules"</strong> raised the baseline quality of the entire web.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Documenting structure keeps new pages consistent and makes accessibility checks part of standard practice.</p>
@@ -655,8 +689,10 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
-						<p>The community group introduced names such as <code>&quot;color.background.surface&quot;</code>. Designers said a single file could now update apps and websites together, and engineers swapped themes by importing the JSON.</p>
-						<p>Conference talks echoed that tokens were the new blueprint, capturing hierarchy, contrast, and component rules in one place.</p>
+						<p>2023 was the year the line between design and development blurred in an important way. The <strong>design systems</strong> we just talked about (2022) were a rulebook saying "buttons look like this." Now the field took another step forward: turn the design itself into <strong>data</strong>.</p>
+						<p>The problem looked like this. Imagine one company that makes a website, a mobile app (iOS and Android), email newsletters, and PDFs. They decide to change their brand color from sky blue to forest green. <strong>The web developer edits CSS, the iOS developer edits Swift, the Android developer edits XML, the email designer rebuilds the templates, and the docs team regenerates the PDFs.</strong> The same color has to be updated in four or five different places, and inevitably one place gets missed — "wait, the email is still the old color." It happens every time.</p>
+						<p>The W3C answered with the <strong>Design Tokens</strong> draft standard. The idea: gather every visual property — colors, spacing, font sizes — as <strong>named variables</strong> in a single JSON file. For example, <code>color.brand.primary = "#00AA44"</code> is the canonical definition, in one place. The web team converts the file into CSS, the iOS team converts it into Swift constants, the Android team converts it into XML. Want to change the color? Edit one value in the source file and every platform syncs automatically.</p>
+						<p>A designer who tried it was thrilled: <em>"Now I just change the color in Figma and the app and the website both update. I don't have to file a ticket asking a developer to please change that color."</em> The structure of documents and even the <strong>visual properties</strong> have become data that machines can synchronize on their own. <strong>Fifty-six years</strong> after RUNOFF first whispered "let's separate content from presentation" in 1967, that idea has grown into a global system spanning every platform humans use. The history of web document structure is still being written.</p>
 					</div>
 					<div class="event-detail__notes">
 						<p>Design tokens store visual and structural decisions as key-value pairs so tools can apply the same intent across web, app, and email interfaces.</p>
