@@ -1,0 +1,34 @@
+# ArcherLab IT Story
+> IT history timeline hub covering computers, networks, operating systems, databases, web servers, and web development.
+
+## About
+ArcherLab IT Story is an educational timeline hub for developers, students, and curious readers. It organizes major milestones in computing and software history into readable chronological pages.
+
+## Topics
+- Computer history
+- Network and internet history
+- Operating system history
+- Database history
+- Web development history
+- Web server and WAS history
+- Frontend, backend, and web interaction timelines
+
+## Features
+- Korean and English timeline pages
+- Structured historical summaries
+- Topic-specific pages for core IT domains
+- Search-friendly educational content
+- Built as a static browser site
+
+## Links
+- Home: https://itstory.archerlab.dev/
+- English home: https://itstory.archerlab.dev/index-en.html
+- Sitemap: https://itstory.archerlab.dev/sitemap.xml
+- Developer: https://archerlab.dev
+
+## Languages
+- Korean (한국어)
+- English
+
+## Category
+IT History, Computer Science, Developer Education, Technology Timeline
