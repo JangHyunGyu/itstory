@@ -151,20 +151,82 @@ for (const htmlFile of allHtmlFiles) {
     }
 }
 
-// ─── 7. JSON-LD structured data ───
+// ─── 7. JSON-LD structured data and visible-content parity ───
 console.log('\n[7] JSON-LD structured data');
 
 for (const htmlFile of allHtmlFiles) {
     const content = fs.readFileSync(path.join(ROOT, htmlFile), 'utf-8');
-    const jsonLdMatch = content.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
-    if (jsonLdMatch) {
+    const body = content.split(/<body\b/i)[1] || '';
+    const jsonLdRegex = /<script\s+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g;
+    const jsonLdBlocks = [...content.matchAll(jsonLdRegex)];
+    let pageIdentityCount = 0;
+
+    check(
+        jsonLdBlocks.length > 0,
+        `${htmlFile}: found ${jsonLdBlocks.length} JSON-LD block(s)`,
+        `${htmlFile}: JSON-LD MISSING`
+    );
+
+    for (const [index, jsonLdMatch] of jsonLdBlocks.entries()) {
         try {
-            JSON.parse(jsonLdMatch[1]);
-            pass(`${htmlFile}: JSON-LD is valid JSON`);
+            const data = JSON.parse(jsonLdMatch[1]);
+            pass(`${htmlFile}: JSON-LD block ${index + 1} is valid JSON`);
+            const nodes = Array.isArray(data?.['@graph']) ? data['@graph'] : [data];
+
+            for (const node of nodes) {
+                if (!node || typeof node !== 'object') continue;
+
+                if (node['@type'] === 'FAQPage') {
+                    const questions = Array.isArray(node.mainEntity) ? node.mainEntity : [];
+                    check(
+                        questions.length > 0,
+                        `${htmlFile}: FAQ schema has questions`,
+                        `${htmlFile}: FAQ schema has no questions`
+                    );
+                    for (const item of questions) {
+                        const question = item?.name || '';
+                        const answer = item?.acceptedAnswer?.text || '';
+                        check(
+                            Boolean(question && answer && body.includes(question) && body.includes(answer)),
+                            `${htmlFile}: FAQ content is visible`,
+                            `${htmlFile}: FAQ schema contains content not visible in the page`
+                        );
+                    }
+                }
+
+                if (node['@id'] && /#(?:article|collection)$/.test(node['@id'])) {
+                    pageIdentityCount++;
+                    check(
+                        Boolean(node.url && node.datePublished && node.dateModified && node.author && node.publisher),
+                        `${htmlFile}: page identity has URL, dates, author, and publisher`,
+                        `${htmlFile}: page identity is missing required provenance fields`
+                    );
+                    if (node['@type'] === 'Article') {
+                        check(
+                            Array.isArray(node.citation) && node.citation.length > 0,
+                            `${htmlFile}: article identity links visible sources`,
+                            `${htmlFile}: article identity has no source citations`
+                        );
+                    }
+                }
+            }
         } catch (e) {
-            fail(`${htmlFile}: JSON-LD parse error: ${e.message}`);
+            fail(`${htmlFile}: JSON-LD block ${index + 1} parse error: ${e.message}`);
         }
     }
+
+    check(
+        pageIdentityCount === 1,
+        `${htmlFile}: exactly one page identity schema`,
+        `${htmlFile}: expected one page identity schema, found ${pageIdentityCount}`
+    );
+
+    const h1Count = (content.match(/<h1\b/gi) || []).length;
+    check(
+        h1Count === 1,
+        `${htmlFile}: exactly one H1`,
+        `${htmlFile}: expected one H1, found ${h1Count}`
+    );
 }
 
 // ─── 8. SVG story images referenced in content pages ───
