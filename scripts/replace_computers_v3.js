@@ -6,7 +6,7 @@ let content = fs.readFileSync(filePath, 'utf-8');
 const replacements = [
     [
         '<p class="event-detail__summary">"대포알이 어디로 날아갈지 빨리 계산해 줄 수 없나요\\?"라는 부탁에 1만 8천 개의 반짝이는 진공관이 짠! 하고 대답한 순간이에요\\.</p>',
-        '<p class="event-detail__summary">포탄의 궤적을 신속하게 계산해야 하는 군사적 필요성에 의해, 최초의 범용 전자식 컴퓨터인 ENIAC이 개발되었습니다.</p>'
+        '<p class="event-detail__summary">포탄의 궤적을 신속하게 계산해야 한다는 군사적 필요에서, 최초의 범용 전자식 컴퓨터인 ENIAC이 개발되었습니다.</p>'
     ],
     [
         '<div class="event-detail__story">\\s*<img src="assets/images/story_computers_1946\\.png" alt="1946년의 이야기 그림" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">\\s*<p>에니악은 집채만큼 커다란 몸집에 전구처럼 생긴 진공관을 1만 8천 개나 품고 있는 거인 계산기였어요\\. 비록 사람들이 복잡한 전선을 일일이 손으로 꽂아야 했지만, 사람이 며칠 밤을 새워야 할 계산을 눈 깜짝할 새인 몇 초 만에 뚝딱 해치웠답니다\\. 전기로 움직이는 컴퓨터가 얼마나 대단한지 세상에 널리 알린 멋진 친구였죠\\.</p>\\s*</div>',

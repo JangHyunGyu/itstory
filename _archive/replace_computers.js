@@ -102,7 +102,7 @@ const replacements = [
     ],
     [
         /<p class="event-detail__summary">"전쟁을 빨리 끝내려면 대포알이 어디로 떨어질지 빨리 알아야 해!"라는 다급한 목소리가 세상에서 가장 유명한 컴퓨터를 만들었어요\.<\/p>/g,
-        '<p class="event-detail__summary">포탄의 궤적을 신속하게 계산해야 하는 군사적 필요성에 의해, 최초의 범용 전자식 컴퓨터인 ENIAC이 개발되었습니다.</p>'
+        '<p class="event-detail__summary">포탄의 궤적을 신속하게 계산해야 한다는 군사적 필요에서, 최초의 범용 전자식 컴퓨터인 ENIAC이 개발되었습니다.</p>'
     ],
     [
         /<div class="event-detail__story">\\s*<img src="assets\\/images\\/story_computers_1946\\.png" alt="1946년의 이야기 그림" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">\\s*<p>군인 아저씨들은 대포알이 날아가는 길을 계산하느라 너무 바빴어요\\. "사람이 계산하면 며칠이 걸리는데, 기계로 하면 안 될까\\?" 그래서 모클리와 에커트라는 두 발명가가 진공관 1만 8천 개를 모아 방 하나를 꽉 채우는 거대한 기계, 에니악\\(ENIAC\\)을 만들었죠\\.<\\/p>\\s*<p>에니악은 사람이 20시간 동안 끙끙대며 풀던 문제를 단 30초 만에 척척 풀어냈어요! "우와, 마법이다!" 사람들은 깜짝 놀랐고, 이때부터 진짜 전자 컴퓨터의 시대가 활짝 열렸답니다\\.<\\/p>\\s*<\\/div>/g,
