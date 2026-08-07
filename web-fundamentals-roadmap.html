@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="color-scheme" content="dark" />
-    <title>웹 개발 기본기 스터디 · 20주 커리큘럼 | ArcherLab IT Story</title>
+    <title>웹 개발 기본기 스터디 · 20주 커리큘럼 + 보너스 | ArcherLab IT Story</title>
     <meta
       name="description"
-      content="IT 초보자 4명이 함께 공부하는 20주 웹 개발 기본기 스터디 커리큘럼"
+      content="IT 초보자 4명이 함께 공부하는 20주 웹 개발 기본기 스터디 커리큘럼과 생성형 AI 보너스 주차"
     />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <style>
@@ -270,6 +270,19 @@
 
       tbody tr.phase-start:not(:first-child) > * {
         border-top: 2px solid var(--line-strong);
+      }
+
+      tbody tr.bonus-row {
+        background: linear-gradient(90deg, rgba(93, 159, 199, 0.08), rgba(213, 163, 94, 0.035));
+      }
+
+      .bonus-row .week-cell {
+        color: var(--question);
+        background: #111923;
+      }
+
+      .bonus-row .week-cell span {
+        color: var(--question);
       }
 
       .week-cell {
@@ -737,11 +750,11 @@
     </header>
 
     <main>
-      <p class="eyebrow">20-Week Curriculum</p>
+      <p class="eyebrow">20-Week Curriculum + Bonus</p>
       <h1>웹 개발 기본기 스터디</h1>
       <p class="intro">
         웹이 연결되고, 요청하고, 렌더링되고, 운영되는 전 과정을 4명이 함께 탐구하는
-        20주 개념 커리큘럼입니다.
+        20주 개념 커리큘럼과 생성형 AI 보너스 주차입니다.
       </p>
       <ul class="meta-list" aria-label="스터디 정보">
         <li>주 1회</li>
@@ -752,16 +765,16 @@
 
       <section class="table-section" aria-labelledby="roadmap-heading">
         <h2 id="roadmap-heading" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0)">
-          20주 스터디 로드맵
+          20주 + 보너스 스터디 로드맵
         </h2>
         <div class="table-note" aria-hidden="true">
           <span><strong>각 회차:</strong> 4명이 세부 주제를 하나씩 담당합니다.</span>
           <span>질문은 쉬운 말로 묻지만, 비슷한 개념의 차이와 이유까지 설명해야 합니다.</span>
         </div>
 
-        <div class="table-scroll" tabindex="0" role="region" aria-label="20주 웹 개발 기본기 스터디 표">
+        <div class="table-scroll" tabindex="0" role="region" aria-label="20주와 보너스 웹 개발 기본기 스터디 표">
           <table>
-            <caption>20주 웹 개발 기본기 스터디 커리큘럼</caption>
+            <caption>20주 웹 개발 기본기 스터디 커리큘럼과 보너스 주차</caption>
             <colgroup>
               <col style="width: 76px" />
               <col style="width: 190px" />
@@ -1094,6 +1107,22 @@
                     <li><span class="question-text">Vue/eXBuilder 정적 파일과 eGovFrame 프로그램을 같은 방식으로 배포해도 될까요?</span></li>
                     <li><span class="question-text">Apache를 재시작하지 않고 정적 파일만 바꾼 경우와 WildFly에 새 애플리케이션을 올린 경우는 무엇이 다른가요?</span></li>
                     <li><span class="question-text">새로 배포했는데 일부 사용자만 예전 화면을 본다면 서버 배포와 브라우저 캐시 중 어느 쪽 문제인지 어떻게 구분할까요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="phase-start bonus-row">
+                <th class="week-cell" scope="row"><span>Bonus</span>AI</th>
+                <td class="theme-cell">생성형 AI와 웹 개발</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>생성형 AI와 LLM</li><li>프롬프트·토큰·컨텍스트·환각</li><li>클라우드 AI와 API</li><li>로컬 LLM과 Ollama</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">ChatGPT, LLM, Ollama는 같은 것인가요? 각각 어떤 역할을 하며 서로 어떻게 연결되는지 설명할 수 있나요?</span></li>
+                    <li><span class="question-text">Vue 화면에서 클라우드 LLM을 직접 호출하면 API 키가 노출될 수 있는 이유와 eGovFrame·WildFly 백엔드를 거치는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">eGovFrame·WildFly가 질문을 LLM API에 보내고 답을 받는 과정은 우리가 사용하던 HTTP 요청·응답과 어떻게 연결되나요?</span></li>
+                    <li><span class="question-text">내 컴퓨터의 <code>localhost:11434</code>에서 Ollama가 실행되는데 다른 팀원의 컴퓨터에서는 바로 접속할 수 없는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">클라우드 LLM은 응답하지 않지만 Ollama는 동작하거나 그 반대라면 인터넷 연결, 로컬 프로그램, 컴퓨터 자원 중 무엇부터 구분해 확인할까요?</span></li>
                   </ul>
                 </td>
               </tr>
