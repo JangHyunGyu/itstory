@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="color-scheme" content="dark" />
+    <title>웹 개발 기본기 스터디 · 20주 커리큘럼 | ArcherLab IT Story</title>
+    <meta
+      name="description"
+      content="IT 초보자 4명이 함께 공부하는 20주 웹 개발 기본기 스터디 커리큘럼"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --background: #080a0f;
+        --surface: #0f131c;
+        --surface-raised: #151a24;
+        --surface-soft: rgba(255, 255, 255, 0.035);
+        --text: #f3f0e8;
+        --text-secondary: #c8c2b7;
+        --muted: #958f84;
+        --line: rgba(213, 179, 116, 0.17);
+        --line-strong: rgba(226, 192, 128, 0.4);
+        --accent: #d5a35e;
+        --accent-bright: #f0d8a2;
+        --accent-soft: rgba(213, 163, 94, 0.12);
+        --question: #9fcae6;
+        --question-soft: rgba(93, 159, 199, 0.1);
+        --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-width: 320px;
+        background: var(--background);
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 15% -10%, rgba(213, 163, 94, 0.14), transparent 30rem),
+          radial-gradient(circle at 90% 5%, rgba(66, 121, 156, 0.12), transparent 28rem),
+          var(--background);
+        font-family: var(--font-sans);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      code {
+        padding: 0.13em 0.38em;
+        border: 1px solid rgba(159, 202, 230, 0.18);
+        border-radius: 5px;
+        color: #cde8fa;
+        background: rgba(159, 202, 230, 0.08);
+        font-family: var(--font-mono);
+        font-size: 0.9em;
+      }
+
+      .page-header {
+        border-bottom: 1px solid var(--line);
+        background: rgba(8, 10, 15, 0.82);
+        backdrop-filter: blur(18px);
+      }
+
+      .page-header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: min(100% - 40px, 1440px);
+        min-height: 68px;
+        margin-inline: auto;
+      }
+
+      .brand {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: -0.035em;
+      }
+
+      .header-label {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 650;
+        letter-spacing: 0.04em;
+      }
+
+      main {
+        width: min(100% - 40px, 1440px);
+        margin-inline: auto;
+        padding: clamp(54px, 8vw, 104px) 0 80px;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 900px;
+        margin: 0;
+        font-size: clamp(34px, 5vw, 66px);
+        line-height: 1.08;
+        letter-spacing: -0.052em;
+      }
+
+      .intro {
+        max-width: 760px;
+        margin: 20px 0 0;
+        color: var(--text-secondary);
+        font-size: clamp(15px, 1.6vw, 18px);
+      }
+
+      .meta-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 0;
+        margin: 28px 0 0;
+        list-style: none;
+      }
+
+      .meta-list li {
+        padding: 7px 11px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--text-secondary);
+        background: var(--surface-soft);
+        font-size: 13px;
+        font-weight: 650;
+      }
+
+      .table-section {
+        margin-top: clamp(42px, 6vw, 68px);
+      }
+
+      .table-note {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 14px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .table-note strong {
+        color: var(--text-secondary);
+      }
+
+      .table-scroll {
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(15, 19, 28, 0.9);
+        box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+        scrollbar-color: var(--line-strong) transparent;
+      }
+
+      table {
+        width: 100%;
+        min-width: 1080px;
+        border-collapse: separate;
+        border-spacing: 0;
+        table-layout: fixed;
+      }
+
+      caption {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      th,
+      td {
+        padding: 18px 20px;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      thead th {
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        color: var(--accent-bright);
+        background: #15171d;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      thead th:first-child {
+        left: 0;
+        z-index: 4;
+      }
+
+      tbody tr:last-child th,
+      tbody tr:last-child td {
+        border-bottom: 0;
+      }
+
+      tbody tr {
+        transition: background-color 160ms ease;
+      }
+
+      tbody tr:hover {
+        background: rgba(213, 163, 94, 0.035);
+      }
+
+      tbody tr.phase-start:not(:first-child) > * {
+        border-top: 2px solid var(--line-strong);
+      }
+
+      .week-cell {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+        width: 76px;
+        color: var(--accent-bright);
+        background: #11141b;
+        text-align: center;
+        font-size: 20px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .week-cell span {
+        display: block;
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 750;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .theme-cell {
+        width: 190px;
+        color: var(--text);
+        font-size: 16px;
+        font-weight: 750;
+        letter-spacing: -0.02em;
+      }
+
+      .parts-cell {
+        width: 430px;
+      }
+
+      .parts {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+        counter-reset: presenter;
+        list-style: none;
+      }
+
+      .parts li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 38px;
+        padding: 8px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 9px;
+        color: var(--text-secondary);
+        background: rgba(255, 255, 255, 0.025);
+        font-size: 13px;
+        line-height: 1.35;
+        counter-increment: presenter;
+      }
+
+      .parts li::before {
+        flex: 0 0 auto;
+        color: var(--accent);
+        content: counter(presenter, decimal-leading-zero);
+        font-family: var(--font-mono);
+        font-size: 10px;
+        font-weight: 700;
+      }
+
+      .question-cell {
+        color: #d9e8f2;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      .question-cell::before {
+        display: none;
+      }
+
+      .question-cell a {
+        color: var(--question);
+        text-decoration-color: rgba(159, 202, 230, 0.45);
+        text-underline-offset: 3px;
+      }
+
+      .question-list {
+        display: grid;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+        counter-reset: question;
+        list-style: none;
+      }
+
+      .question-list li {
+        display: grid;
+        grid-template-columns: 22px minmax(0, 1fr);
+        align-items: start;
+        gap: 8px;
+        counter-increment: question;
+      }
+
+      .question-list li::before {
+        color: var(--question);
+        content: counter(question, decimal-leading-zero);
+        font-family: var(--font-mono);
+        font-size: 10px;
+        font-weight: 800;
+        line-height: 1.55;
+      }
+
+      .study-rule {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 14px;
+        max-width: 820px;
+        padding: 20px 22px;
+        margin-top: 24px;
+        border: 1px solid rgba(159, 202, 230, 0.16);
+        border-radius: 14px;
+        color: var(--text-secondary);
+        background: var(--question-soft);
+        font-size: 14px;
+      }
+
+      .study-rule strong {
+        color: var(--question);
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+      }
+
+      .study-rule p {
+        margin: 0;
+      }
+
+      footer {
+        width: min(100% - 40px, 1440px);
+        padding: 0 0 44px;
+        margin-inline: auto;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      @media (max-width: 700px) {
+        .page-header__inner,
+        main,
+        footer {
+          width: min(100% - 28px, 1440px);
+        }
+
+        .header-label {
+          display: none;
+        }
+
+        main {
+          padding-top: 44px;
+        }
+
+        .table-note {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 4px;
+        }
+
+        .table-scroll {
+          overflow: visible;
+          border: 0;
+          border-radius: 0;
+          background: transparent;
+          box-shadow: none;
+        }
+
+        table,
+        tbody {
+          display: block;
+          width: 100%;
+          min-width: 0;
+        }
+
+        thead {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+
+        tbody {
+          display: grid;
+          gap: 14px;
+        }
+
+        tbody tr {
+          display: grid;
+          grid-template-columns: 72px minmax(0, 1fr);
+          overflow: hidden;
+          border: 1px solid var(--line);
+          border-radius: 12px;
+          background: rgba(15, 19, 28, 0.9);
+          box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16);
+        }
+
+        tbody tr.phase-start:not(:first-child) {
+          margin-top: 10px;
+          border-top-color: var(--line-strong);
+        }
+
+        tbody tr.phase-start:not(:first-child) > * {
+          border-top: 0;
+        }
+
+        tbody th,
+        tbody td {
+          width: auto;
+          min-width: 0;
+          max-width: 100%;
+          padding: 14px;
+          overflow-wrap: anywhere;
+        }
+
+        .week-cell {
+          position: static;
+          width: auto;
+          min-width: 0;
+          grid-row: 1;
+          grid-column: 1;
+          border-right: 1px solid var(--line);
+          background: rgba(213, 163, 94, 0.055);
+          font-size: 19px;
+        }
+
+        .theme-cell {
+          width: auto;
+          min-width: 0;
+          grid-row: 1;
+          grid-column: 2;
+          display: flex;
+          align-items: center;
+          min-height: 72px;
+          font-size: 16px;
+        }
+
+        .parts-cell {
+          width: auto;
+          min-width: 0;
+          grid-column: 1 / -1;
+          padding: 14px;
+        }
+
+        .parts-cell::before {
+          display: block;
+          margin-bottom: 9px;
+          color: var(--muted);
+          content: "4인 세부 분량";
+          font-size: 10px;
+          font-weight: 800;
+          letter-spacing: 0.08em;
+        }
+
+        .parts {
+          width: 100%;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 7px;
+        }
+
+        .parts li {
+          min-width: 0;
+          min-height: 40px;
+          font-size: 12px;
+          overflow-wrap: anywhere;
+        }
+
+        .question-cell {
+          grid-column: 1 / -1;
+          padding: 14px;
+          border-bottom: 0;
+          background: var(--question-soft);
+          font-size: 13px;
+        }
+
+        .question-cell::before {
+          display: block;
+          margin: 0 0 10px;
+          content: "질문 예시 · 쉬운 말로 답하고 이유까지 설명";
+          font-family: var(--font-sans);
+          font-size: 10px;
+          letter-spacing: 0.08em;
+        }
+
+        .question-list {
+          gap: 11px;
+        }
+
+        .study-rule {
+          grid-template-columns: 1fr;
+          gap: 6px;
+        }
+      }
+
+      @media print {
+        :root {
+          color-scheme: light;
+          --background: #ffffff;
+          --surface: #ffffff;
+          --text: #111111;
+          --text-secondary: #303030;
+          --muted: #666666;
+          --line: #d9d9d9;
+          --line-strong: #a9a9a9;
+          --accent: #8a5d22;
+          --accent-bright: #6d4718;
+          --question: #245c7c;
+        }
+
+        body {
+          background: #ffffff;
+        }
+
+        .page-header,
+        .meta-list,
+        .table-note,
+        .study-rule,
+        footer {
+          display: none;
+        }
+
+        main {
+          width: 100%;
+          padding: 0;
+        }
+
+        h1 {
+          font-size: 30px;
+        }
+
+        .intro {
+          margin-bottom: 20px;
+          font-size: 13px;
+        }
+
+        .table-section {
+          margin-top: 0;
+        }
+
+        .table-scroll {
+          overflow: visible;
+          border: 1px solid var(--line);
+          box-shadow: none;
+        }
+
+        table {
+          display: table;
+          min-width: 0;
+          font-size: 9px;
+        }
+
+        thead {
+          position: static;
+          display: table-header-group;
+          width: auto;
+          height: auto;
+          padding: initial;
+          margin: 0;
+          overflow: visible;
+          clip: auto;
+          white-space: normal;
+        }
+
+        tbody {
+          display: table-row-group;
+        }
+
+        tbody tr {
+          display: table-row;
+          border: 0;
+          border-radius: 0;
+          background: transparent;
+          box-shadow: none;
+        }
+
+        tbody th,
+        tbody td {
+          display: table-cell;
+          width: auto;
+          overflow-wrap: normal;
+        }
+
+        thead th,
+        .week-cell {
+          position: static;
+          color: var(--text);
+          background: #f2f2f2;
+        }
+
+        th,
+        td {
+          padding: 7px;
+        }
+
+        .parts {
+          display: block;
+        }
+
+        .parts-cell::before {
+          display: none;
+        }
+
+        .parts li {
+          min-height: 0;
+          padding: 1px 0;
+          border: 0;
+          color: var(--text-secondary);
+          background: none;
+          font-size: 8px;
+        }
+
+        .question-cell {
+          color: var(--text);
+          font-size: 8px;
+        }
+
+        .question-cell::before {
+          display: none;
+        }
+
+        .question-list {
+          gap: 4px;
+        }
+
+        .question-list li {
+          grid-template-columns: 18px minmax(0, 1fr);
+          gap: 4px;
+        }
+
+        .question-list li::before {
+          color: var(--text);
+          font-size: 7px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__inner">
+        <a class="brand" href="/">ArcherLab IT Story</a>
+        <span class="header-label">TEAM STUDY ROADMAP</span>
+      </div>
+    </header>
+
+    <main>
+      <p class="eyebrow">20-Week Curriculum</p>
+      <h1>웹 개발 기본기 스터디</h1>
+      <p class="intro">
+        웹이 연결되고, 요청하고, 렌더링되고, 운영되는 전 과정을 4명이 함께 탐구하는
+        20주 개념 커리큘럼입니다.
+      </p>
+      <ul class="meta-list" aria-label="스터디 정보">
+        <li>주 1회</li>
+        <li>4인 발표</li>
+        <li>개념 중심</li>
+        <li>공동 질문 토론</li>
+      </ul>
+
+      <section class="table-section" aria-labelledby="roadmap-heading">
+        <h2 id="roadmap-heading" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0)">
+          20주 스터디 로드맵
+        </h2>
+        <div class="table-note" aria-hidden="true">
+          <span><strong>각 회차:</strong> 4명이 세부 주제를 하나씩 담당합니다.</span>
+          <span>질문은 쉬운 말로 묻지만, 비슷한 개념의 차이와 이유까지 설명해야 합니다.</span>
+        </div>
+
+        <div class="table-scroll" tabindex="0" role="region" aria-label="20주 웹 개발 기본기 스터디 표">
+          <table>
+            <caption>20주 웹 개발 기본기 스터디 커리큘럼</caption>
+            <colgroup>
+              <col style="width: 76px" />
+              <col style="width: 190px" />
+              <col style="width: 430px" />
+              <col />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">회차</th>
+                <th scope="col">공통 주제</th>
+                <th scope="col">4인 세부 분량</th>
+                <th scope="col">질문 예시 (5개)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="phase-start">
+                <th class="week-cell" scope="row"><span>Week</span>01</th>
+                <td class="theme-cell">웹의 구성 요소</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>인터넷</li><li>웹</li><li>브라우저</li><li>HTML</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">노트북 두 대를 랜선으로 직접 연결해 파일을 주고받았다면 인터넷을 사용한 것인가요?</span></li>
+                    <li><span class="question-text">인터넷을 끊어도 Vue 개발 화면인 <code>localhost</code>가 열린다면 웹을 사용한 것인가요?</span></li>
+                    <li><span class="question-text">외부 인터넷은 끊겼지만 사내 Apache 페이지가 열린다면 인터넷과 웹 중 무엇이 동작하는 것인가요?</span></li>
+                    <li><span class="question-text">eXBuilder 화면 파일을 이미 받은 뒤 네트워크가 끊겨도 화면 일부가 보일 수 있는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">화면은 보이는데 새 데이터만 나오지 않는다면 브라우저와 서버 중 어느 쪽까지는 정상이라고 볼 수 있나요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>02</th>
+                <td class="theme-cell">웹 애플리케이션의 역할</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>클라이언트</li><li>서버</li><li>프론트엔드</li><li>백엔드</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">클라이언트와 프론트엔드, 서버와 백엔드는 각각 같은 개념인지 판단하고, 그렇게 생각한 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">Vue와 eXBuilder는 프론트엔드 기술이면서 클라이언트에서 실행된다고 말할 수 있나요?</span></li>
+                    <li><span class="question-text">Apache가 WildFly에 요청을 보낼 때 Apache는 서버인가요, 클라이언트인가요?</span></li>
+                    <li><span class="question-text">Tibero는 서버인가요, 백엔드인가요, 데이터베이스인가요? 한 가지만 골라야 하나요?</span></li>
+                    <li><span class="question-text">화면은 열리지만 데이터가 없다면 Vue/eXBuilder → Apache → WildFly → eGovFrame → Tibero 중 어디까지 정상인지 어떻게 좁혀갈까요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>03</th>
+                <td class="theme-cell">네트워크 연결</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>IP</li><li>DNS</li><li>포트</li><li>TCP/UDP</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">하나의 IP 주소로 Apache와 WildFly를 함께 실행할 수 있다면 포트는 왜 필요한가요?</span></li>
+                    <li><span class="question-text">DNS가 도메인을 IP 주소로 바꿔줬다면 원하는 WildFly 프로그램까지 찾아준 것인가요?</span></li>
+                    <li><span class="question-text"><code>localhost</code>와 <code>127.0.0.1</code>은 인터넷에 있는 다른 서버를 뜻하나요?</span></li>
+                    <li><span class="question-text">브라우저–Apache 연결과 Apache–WildFly 연결은 하나의 TCP 연결인가요, 서로 다른 연결인가요?</span></li>
+                    <li><span class="question-text">도메인은 IP로 잘 바뀌지만 접속이 거부된다면 DNS가 고장 난 것이라고 볼 수 있나요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>04</th>
+                <td class="theme-cell">HTTP</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>URL과 리소스</li><li>메서드와 멱등성</li><li>상태 코드와 메시지</li><li>HTTP 캐시</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text"><code>404</code> 응답을 받았다면 서버 연결에 실패한 것인가요, 서버가 답을 준 것인가요?</span></li>
+                    <li><span class="question-text">HTTP 상태가 <code>200</code>이어도 업무 처리는 실패할 수 있나요? 가능하다면 화면은 무엇을 확인해야 하나요?</span></li>
+                    <li><span class="question-text">같은 조회 요청을 여러 번 보내는 것과 같은 저장 요청을 여러 번 보내는 것은 결과가 왜 다를 수 있나요?</span></li>
+                    <li><span class="question-text">Apache가 <code>200</code>으로 CSS를 보냈는데도 예전 화면이 보인다면 HTTP 캐시를 의심할 수 있나요?</span></li>
+                    <li><span class="question-text">Apache 화면은 열리지만 API에서 <code>502</code>가 나온다면 WildFly와의 연결을 의심하는 이유는 무엇인가요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="phase-start">
+                <th class="week-cell" scope="row"><span>Week</span>05</th>
+                <td class="theme-cell">HTML</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>문서 구조</li><li>콘텐츠 모델</li><li>시맨틱과 접근성</li><li>폼과 데이터</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">CSS로 <code>p</code>를 크게 만들고 <code>h1</code>을 작게 만들었다면 실제 제목은 어느 쪽인가요?</span></li>
+                    <li><span class="question-text"><code>div</code>를 버튼처럼 꾸미고 클릭 기능을 넣으면 <code>button</code>과 완전히 같아지나요?</span></li>
+                    <li><span class="question-text">HTML에 <code>html</code>, <code>head</code>, <code>body</code>를 생략했는데 개발자 도구에 보이는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">Vue나 eXBuilder가 만든 화면이라면 알맞은 HTML 태그와 웹 접근성을 신경 쓰지 않아도 되나요?</span></li>
+                    <li><span class="question-text">입력 화면에서 Enter를 눌렀더니 예상하지 못한 저장 요청이 갔다면 HTML 폼의 기본 동작을 의심할 수 있나요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>06</th>
+                <td class="theme-cell">CSS 적용 원리</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>캐스케이드</li><li>명시도와 상속</li><li>박스 모델</li><li>문서 흐름과 display</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">나중에 작성한 CSS가 항상 먼저 작성한 CSS를 덮어쓰나요?</span></li>
+                    <li><span class="question-text">부모의 글자색은 자식에게 전달되는데 부모의 너비는 그대로 전달되지 않는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">너비가 <code>100%</code>인 요소에 padding과 border를 더했더니 부모보다 커질 수 있는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">Vue의 scoped 스타일을 사용하면 다른 모든 CSS의 영향을 완전히 받지 않게 되나요?</span></li>
+                    <li><span class="question-text">Jenkins로 새 CSS를 배포했는데 일부 사용자만 예전 모양을 본다면 코드와 캐시 중 무엇을 먼저 비교할까요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>07</th>
+                <td class="theme-cell">CSS 레이아웃</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>Flexbox</li><li>Grid</li><li>Position과 Stacking Context</li><li>반응형 디자인</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">Flexbox와 Grid로 비슷한 화면을 만들 수 있는데도 둘을 나누어 배우는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">요소에 <code>position: absolute</code>를 주자 아래 요소가 위로 올라온 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text"><code>z-index: 9999</code>인데도 다른 요소 뒤에 보인다면 숫자만의 문제일까요?</span></li>
+                    <li><span class="question-text">eXBuilder에서 위치와 크기를 고정한 화면이 작은 모니터에서 잘리는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">모바일에서 오른쪽 카드가 잘릴 때 카드 자체보다 부모의 고정 너비를 먼저 확인해야 하는 이유는 무엇인가요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>08</th>
+                <td class="theme-cell">브라우저 렌더링</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>HTML 파싱과 DOM</li><li>CSSOM</li><li>렌더 트리와 레이아웃</li><li>페인트와 합성</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">DOM에 요소가 존재해도 화면에는 보이지 않을 수 있나요?</span></li>
+                    <li><span class="question-text"><code>display: none</code>인 요소는 화면 자리를 차지할까요, 차지하지 않을까요?</span></li>
+                    <li><span class="question-text">Vue 상태가 아닌 DOM을 직접 바꿨는데 다음 화면 갱신 때 원래대로 돌아갈 수 있는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">Apache의 화면 파일은 도착했지만 WildFly의 데이터가 늦으면 어떤 부분부터 먼저 보일 수 있나요?</span></li>
+                    <li><span class="question-text">API 응답은 <code>200</code>인데 화면이 비어 있다면 서버 성공만으로 화면 성공을 보장할 수 없는 이유는 무엇인가요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="phase-start">
+                <th class="week-cell" scope="row"><span>Week</span>09</th>
+                <td class="theme-cell">JavaScript의 값</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>값과 타입</li><li>타입 변환과 동등성</li><li>참조와 동일성</li><li>가변성과 불변성</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">내용이 같은 두 배열을 <code>===</code>로 비교하면 왜 <code>false</code>가 나오나요?</span></li>
+                    <li><span class="question-text"><code>const</code>로 만든 객체의 속성을 바꿀 수 있다면 const는 무엇을 바꾸지 못하게 하는 것인가요?</span></li>
+                    <li><span class="question-text">객체를 복사했는데 안쪽 객체를 수정하자 원본도 바뀌었다면 완전히 복사된 것인가요?</span></li>
+                    <li><span class="question-text">숫자 <code>1</code>과 문자열 <code>"1"</code>은 화면에 같아 보여도 왜 다르게 다뤄야 하나요?</span></li>
+                    <li><span class="question-text">Tibero의 숫자가 화면에서 문자열이 되어 <code>1000 + 2000</code>이 <code>10002000</code>이 됐다면 어느 구간부터 타입을 확인할까요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>10</th>
+                <td class="theme-cell">함수와 실행 모델</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>함수와 실행 컨텍스트</li><li>렉시컬 스코프</li><li>호출 스택</li><li>클로저</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">바깥 함수가 끝났는데 클릭 함수가 바깥 함수의 값을 계속 기억할 수 있는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">함수 안과 밖에 같은 이름의 변수가 있다면 함수는 어느 값을 사용할까요?</span></li>
+                    <li><span class="question-text">이벤트에 함수를 등록할 때 함수를 넘기는 것과 그 자리에서 바로 호출하는 것은 무엇이 다른가요?</span></li>
+                    <li><span class="question-text">서버 응답을 처리하는 함수는 처음 요청한 함수가 끝난 뒤에도 실행될 수 있나요?</span></li>
+                    <li><span class="question-text">버튼을 한 번 눌렀는데 함수가 두 번 실행된다면 함수 내용보다 이벤트 등록 횟수를 먼저 확인하는 이유는 무엇인가요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>11</th>
+                <td class="theme-cell">객체와 자료구조</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>객체와 프로토타입</li><li>배열과 순차 자료구조</li><li>해시·Map·Set</li><li>시간·공간 복잡도</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">사용자를 번호로 자주 찾는다면 배열을 처음부터 훑는 것과 번호를 키로 바로 찾는 것 중 무엇이 유리할까요?</span></li>
+                    <li><span class="question-text">배열에 같은 값이 여러 번 들어 있는데 Set으로 바꾸면 어떤 값이 남나요?</span></li>
+                    <li><span class="question-text">Vue 목록에서 각 행의 고유한 번호를 빼면 화면 갱신 때 잘못된 행이 바뀔 수 있는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">Tibero에서 받은 여러 행을 화면의 배열로 바꿀 때 열 이름을 객체의 키로 쓰면 어떤 점이 편한가요?</span></li>
+                    <li><span class="question-text">조회 결과가 수만 건일 때 서버가 빨라도 브라우저 화면이 멈출 수 있는 이유는 무엇인가요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>12</th>
+                <td class="theme-cell">프론트엔드 화면과 상태</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>DOM과 이벤트</li><li>컴포넌트</li><li>상태와 반응성</li><li>데이터 바인딩과 생명주기</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">화면에 보이는 값과 프로그램이 기억하는 상태는 항상 같은 것인가요?</span></li>
+                    <li><span class="question-text">Vue 화면을 컴포넌트로 나눴는데 모든 컴포넌트가 같은 상태를 직접 바꾸면 어떤 문제가 생길까요?</span></li>
+                    <li><span class="question-text">Vue의 상태를 바꾸면 DOM을 직접 찾지 않아도 화면이 바뀌는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">eXBuilder에서 하나의 데이터셋과 두 입력 칸을 연결하면 한쪽 변경이 다른 쪽에도 보일 수 있는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">데이터 값은 바뀌었는데 화면이 그대로라면 값 자체와 데이터 바인딩 중 무엇을 확인해야 하나요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>13</th>
+                <td class="theme-cell">비동기와 데이터 통신</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>동기와 비동기</li><li>이벤트 루프</li><li>Promise와 async/await</li><li>API 통신과 오류 처리</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text"><code>setTimeout(fn, 0)</code>은 0초 뒤 실행인데도 현재 코드보다 나중에 실행되는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">Promise가 아직 기다리는 중인 상태는 성공인가요, 실패인가요?</span></li>
+                    <li><span class="question-text">Vue에서 API 두 개를 차례로 요청했더라도 두 번째 응답이 먼저 올 수 있나요?</span></li>
+                    <li><span class="question-text"><code>await</code>로 서버 응답을 기다리면 브라우저의 모든 버튼도 함께 멈추나요?</span></li>
+                    <li><span class="question-text">이전 검색의 느린 응답이 최신 검색 결과를 덮어썼다면 요청 순서와 응답 순서 중 무엇이 달라진 것인가요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="phase-start">
+                <th class="week-cell" scope="row"><span>Week</span>14</th>
+                <td class="theme-cell">API 설계</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>리소스와 REST</li><li>직렬화와 JSON</li><li>검증과 오류 모델</li><li>페이지네이션과 버전</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">동작만 한다면 조회와 저장을 포함한 모든 API 요청을 <code>POST</code>로 만들어도 괜찮나요?</span></li>
+                    <li><span class="question-text">Tibero 테이블의 열 이름을 그대로 API에 공개하면 테이블이 바뀔 때 화면도 함께 고쳐야 할까요?</span></li>
+                    <li><span class="question-text">Vue와 eXBuilder가 같은 API를 쓰는데 한쪽만 실패한다면 API 자체가 항상 고장 난 것일까요?</span></li>
+                    <li><span class="question-text">화면에서 필수 값을 검사했더라도 eGovFrame에서 다시 검사해야 하는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">목록 API가 모든 데이터를 한 번에 보내면 사용자가 적을 때는 괜찮아도 데이터가 늘면 문제가 되는 이유는 무엇인가요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>15</th>
+                <td class="theme-cell">웹 서버와 애플리케이션 서버</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>웹 서버(Apache)</li><li>WAS(WildFly)</li><li>애플리케이션(eGovFrame)</li><li>프로세스·스레드와 동시성</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">Apache와 WildFly는 둘 다 서버에서 실행되는데 같은 일을 하는 프로그램인가요?</span></li>
+                    <li><span class="question-text">eGovFrame은 WildFly처럼 서버를 실행하는 프로그램인가요, 업무 프로그램을 만드는 틀인가요?</span></li>
+                    <li><span class="question-text">Apache가 WildFly에 API 요청을 전달할 때 Apache는 요청을 받는 쪽인가요, 보내는 쪽인가요?</span></li>
+                    <li><span class="question-text">WildFly 프로그램 하나가 여러 사용자의 요청을 거의 동시에 처리할 수 있는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">Apache는 정상인데 <code>502</code>가 나온다면 사용자 브라우저보다 WildFly 쪽을 먼저 확인하는 이유는 무엇인가요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>16</th>
+                <td class="theme-cell">관계형 데이터베이스</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>테이블·키·관계</li><li>SQL과 JOIN</li><li>인덱스와 실행 계획</li><li>트랜잭션과 잠금</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">인덱스를 많이 만들수록 Tibero의 모든 작업이 항상 빨라지나요?</span></li>
+                    <li><span class="question-text">A 계좌에서는 돈이 빠졌는데 B 계좌에는 들어오지 않았다면 두 작업을 하나의 트랜잭션으로 묶어야 하는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">JOIN 결과의 행이 예상보다 많아졌다면 같은 데이터가 여러 번 연결됐을 가능성이 있나요?</span></li>
+                    <li><span class="question-text">WildFly가 Tibero 연결을 매번 새로 만들지 않고 미리 모아두면 어떤 점이 좋아질까요?</span></li>
+                    <li><span class="question-text">같은 SQL이 개발에서는 빠르고 운영에서는 느리다면 SQL 문장만 같다는 이유로 같은 조건이라고 볼 수 있나요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>17</th>
+                <td class="theme-cell">인증과 인가</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>인증과 인가</li><li>비밀번호 해시</li><li>쿠키와 세션</li><li>토큰과 JWT</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">로그인에 성공한 사용자가 모든 메뉴를 사용할 수 없다면 인증과 인가의 어떤 차이 때문인가요?</span></li>
+                    <li><span class="question-text">Vue나 eXBuilder에서 관리자 버튼을 숨기면 일반 사용자의 관리자 API 호출도 막을 수 있나요?</span></li>
+                    <li><span class="question-text">쿠키에는 세션 번호만 있고 사용자 정보는 WildFly에 있다면 브라우저는 어떻게 로그인 상태를 이어갈까요?</span></li>
+                    <li><span class="question-text">JWT를 사용하면 서버가 사용자와 관련된 상태를 전혀 저장하지 않아도 되나요?</span></li>
+                    <li><span class="question-text">로그인은 했는데 <code>403</code>이 나온 경우와 로그인하지 않아 <code>401</code>이 나온 경우는 무엇이 다른가요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>18</th>
+                <td class="theme-cell">웹 보안</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>HTTPS/TLS</li><li>동일 출처 정책과 CORS</li><li>XSS</li><li>CSRF</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">브라우저에서는 CORS 오류가 나는데 같은 요청이 <code>curl</code>에서는 성공하는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">HTTPS를 사용하면 XSS나 CSRF 같은 공격도 자동으로 막아주나요?</span></li>
+                    <li><span class="question-text">Tibero에서 가져온 글이라도 화면에 그대로 넣으면 XSS가 생길 수 있는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">사용자가 이미 로그인한 상태에서 다른 사이트가 몰래 요청을 보내면 쿠키가 함께 갈 수 있는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">도메인은 같지만 포트가 바뀌었다면 브라우저는 같은 출처로 볼까요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="phase-start">
+                <th class="week-cell" scope="row"><span>Week</span>19</th>
+                <td class="theme-cell">형상관리와 개발 품질</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>Git과 SVN</li><li>변경 이력과 충돌</li><li>테스트</li><li>디버깅과 로그</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">Git에서 커밋했다고 해서 다른 사람의 컴퓨터에도 바로 변경 내용이 보이나요? SVN 커밋과 무엇이 다른가요?</span></li>
+                    <li><span class="question-text">Git이나 SVN에 코드를 올렸다는 것은 운영 서버에 배포했다는 뜻인가요?</span></li>
+                    <li><span class="question-text">두 사람이 같은 파일의 같은 줄을 다르게 수정하면 도구가 자동으로 정답을 고를 수 있나요?</span></li>
+                    <li><span class="question-text">내 컴퓨터에서는 테스트가 모두 통과했는데 Jenkins에서는 실패할 수 있는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">운영 화면이 예전 버전이라면 개발자의 최신 파일보다 Git/SVN 리비전과 Jenkins 빌드 번호를 확인해야 하는 이유는 무엇인가요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th class="week-cell" scope="row"><span>Week</span>20</th>
+                <td class="theme-cell">빌드·배포·운영</td>
+                <td class="parts-cell">
+                  <ol class="parts"><li>Maven과 의존성</li><li>Jenkins 파이프라인</li><li>Apache·WildFly 배포</li><li>환경 설정·모니터링·롤백</li></ol>
+                </td>
+                <td class="question-cell">
+                  <ul class="question-list">
+                    <li><span class="question-text">Maven 빌드가 성공했다면 새 프로그램이 WildFly에서 이미 실행 중인 것인가요?</span></li>
+                    <li><span class="question-text">Jenkins 작업이 성공으로 끝나도 배포 단계가 빠져 있었다면 운영 코드는 바뀔까요?</span></li>
+                    <li><span class="question-text">Vue/eXBuilder 정적 파일과 eGovFrame 프로그램을 같은 방식으로 배포해도 될까요?</span></li>
+                    <li><span class="question-text">Apache를 재시작하지 않고 정적 파일만 바꾼 경우와 WildFly에 새 애플리케이션을 올린 경우는 무엇이 다른가요?</span></li>
+                    <li><span class="question-text">새로 배포했는데 일부 사용자만 예전 화면을 본다면 서버 배포와 브라우저 캐시 중 어느 쪽 문제인지 어떻게 구분할까요?</span></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="study-rule" aria-label="스터디 진행 원칙">
+          <strong>PRESENTATION RULE</strong>
+          <p>IT에 대한 사전 지식이 없는 학생도 이해할 수 있도록 전문용어를 먼저 쉬운 말로 풀고, 질문에는 결론과 그 이유를 일상적인 예시로 함께 설명합니다.</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer>ArcherLab IT Story · Web Fundamentals Study Roadmap</footer>
+  </body>
+</html>
