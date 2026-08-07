@@ -80,22 +80,54 @@
       }
 
       .page-header__inner {
-        display: flex;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
         align-items: center;
-        justify-content: space-between;
         width: min(100% - 40px, 1440px);
         min-height: 68px;
         margin-inline: auto;
       }
 
       .brand {
+        justify-self: start;
         text-decoration: none;
         font-size: 18px;
         font-weight: 800;
         letter-spacing: -0.035em;
       }
 
+      .home-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 34px;
+        padding: 5px 13px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--surface-soft);
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 750;
+        transition:
+          color 160ms ease,
+          border-color 160ms ease,
+          background-color 160ms ease;
+      }
+
+      .home-link:hover {
+        border-color: var(--line-strong);
+        background: var(--accent-soft);
+        color: var(--text);
+      }
+
+      .home-link:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+
       .header-label {
+        justify-self: end;
         color: var(--muted);
         font-size: 13px;
         font-weight: 650;
@@ -393,6 +425,11 @@
           display: none;
         }
 
+        .home-link {
+          min-height: 32px;
+          padding: 4px 11px;
+        }
+
         main {
           padding-top: 44px;
         }
@@ -542,6 +579,12 @@
         }
       }
 
+      @media (max-width: 380px) {
+        .brand-prefix {
+          display: none;
+        }
+      }
+
       @media print {
         :root {
           color-scheme: light;
@@ -687,7 +730,8 @@
   <body>
     <header class="page-header">
       <div class="page-header__inner">
-        <a class="brand" href="/">ArcherLab IT Story</a>
+        <a class="brand" href="/" aria-label="ArcherLab IT Story"><span class="brand-prefix">ArcherLab </span>IT Story</a>
+        <a class="home-link" href="https://itstory.archerlab.dev/index.html" aria-label="IT Story 홈으로 이동">홈</a>
         <span class="header-label">TEAM STUDY ROADMAP</span>
       </div>
     </header>
