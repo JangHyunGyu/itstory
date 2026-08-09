@@ -352,6 +352,23 @@
         font-weight: 700;
       }
 
+      .part-topic {
+        min-width: 0;
+      }
+
+      .part-owner {
+        flex: 0 0 auto;
+        padding: 2px 7px;
+        margin-left: auto;
+        border: 1px solid rgba(213, 163, 94, 0.2);
+        border-radius: 999px;
+        color: var(--accent-bright);
+        background: var(--accent-soft);
+        font-size: 11px;
+        font-weight: 750;
+        white-space: nowrap;
+      }
+
       .question-cell {
         color: #d9e8f2;
         font-size: 13px;
@@ -794,7 +811,12 @@
                 <th class="week-cell" scope="row"><span>회차</span>01</th>
                 <td class="theme-cell">웹의 구성 요소</td>
                 <td class="parts-cell">
-                  <ol class="parts"><li>인터넷</li><li>웹</li><li>브라우저</li><li>HTML</li></ol>
+                  <ol class="parts">
+                    <li><span class="part-topic">인터넷</span><span class="part-owner">장현규</span></li>
+                    <li><span class="part-topic">웹</span><span class="part-owner">김유진</span></li>
+                    <li><span class="part-topic">브라우저</span><span class="part-owner">김수민</span></li>
+                    <li><span class="part-topic">HTML</span><span class="part-owner">변진수</span></li>
+                  </ol>
                 </td>
                 <td class="question-cell">
                   <ul class="question-list">
