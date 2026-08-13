@@ -385,6 +385,55 @@
         text-underline-offset: 3px;
       }
 
+      .question-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 42px;
+        padding: 9px 12px;
+        border: 1px solid rgba(159, 202, 230, 0.22);
+        border-radius: 10px;
+        color: var(--question);
+        background: rgba(159, 202, 230, 0.07);
+        font: inherit;
+        font-weight: 800;
+        text-align: left;
+        cursor: pointer;
+        transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+      }
+
+      .question-toggle::after {
+        flex: 0 0 auto;
+        margin-left: 12px;
+        color: var(--question);
+        content: "+";
+        font-family: var(--font-mono);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .question-toggle:hover {
+        border-color: rgba(159, 202, 230, 0.42);
+        background: rgba(159, 202, 230, 0.12);
+      }
+
+      .question-toggle:focus-visible {
+        outline: 2px solid var(--question);
+        outline-offset: 3px;
+      }
+
+      .question-toggle[aria-expanded="true"] {
+        border-color: rgba(159, 202, 230, 0.38);
+        color: #e7f5ff;
+        background: rgba(159, 202, 230, 0.14);
+      }
+
+      .question-toggle[aria-expanded="true"]::after {
+        content: "−";
+      }
+
       .question-list {
         display: grid;
         gap: 10px;
@@ -392,6 +441,14 @@
         margin: 0;
         counter-reset: question;
         list-style: none;
+      }
+
+      .question-list.is-collapsible {
+        margin-top: 12px;
+      }
+
+      .question-list[hidden] {
+        display: none;
       }
 
       .question-list li {
@@ -593,7 +650,7 @@
         .question-cell::before {
           display: block;
           margin: 0 0 10px;
-          content: "질문 예시 · 쉬운 말로 답하고 이유까지 설명";
+          content: "쉬운 말로 답하고 이유까지 설명";
           font-family: var(--font-sans);
           font-size: 10px;
           letter-spacing: 0.08em;
@@ -741,8 +798,16 @@
           display: none;
         }
 
+        .question-toggle {
+          display: none;
+        }
+
         .question-list {
           gap: 4px;
+        }
+
+        .question-list[hidden] {
+          display: grid;
         }
 
         .question-list li {
@@ -1265,5 +1330,55 @@
     </main>
 
     <footer>ArcherLab IT Story · 웹 개발 기본기 스터디</footer>
+
+    <script>
+      (() => {
+        const setExpanded = (button, expanded) => {
+          const list = document.getElementById(button.getAttribute("aria-controls"));
+          if (!list) return;
+
+          const count = button.dataset.questionCount;
+          const label = button.querySelector(".question-toggle__label");
+          button.setAttribute("aria-expanded", String(expanded));
+          list.hidden = !expanded;
+          if (label) label.textContent = `질문 예시 ${expanded ? "닫기" : "펼치기"} (${count}개)`;
+        };
+
+        document.querySelectorAll(".question-cell").forEach((cell, index) => {
+          const list = cell.querySelector(".question-list");
+          if (!list) return;
+
+          const count = list.children.length;
+          const listId = `question-list-${index + 1}`;
+          const button = document.createElement("button");
+          const label = document.createElement("span");
+
+          list.id = listId;
+          list.classList.add("is-collapsible");
+          list.hidden = true;
+
+          button.type = "button";
+          button.className = "question-toggle";
+          button.dataset.questionCount = String(count);
+          button.setAttribute("aria-controls", listId);
+          button.setAttribute("aria-expanded", "false");
+
+          label.className = "question-toggle__label";
+          label.textContent = `질문 예시 펼치기 (${count}개)`;
+          button.append(label);
+          cell.insertBefore(button, list);
+
+          button.addEventListener("click", () => {
+            const shouldOpen = button.getAttribute("aria-expanded") !== "true";
+            if (shouldOpen) {
+              document.querySelectorAll('.question-toggle[aria-expanded="true"]').forEach((openButton) => {
+                if (openButton !== button) setExpanded(openButton, false);
+              });
+            }
+            setExpanded(button, shouldOpen);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
