@@ -198,4 +198,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/web-tools-en.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/web-tools-en.html" />
   </url>
+<!-- traffic-pages:start -->
+  <url>
+    <loc>https://itstory.archerlab.dev/seo/it-history-study-order.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itstory.archerlab.dev/seo/developer-technology-timeline.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+<!-- traffic-pages:end -->
 </urlset>

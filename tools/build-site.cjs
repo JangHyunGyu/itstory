@@ -43,7 +43,10 @@ fs.mkdirSync(dist, { recursive: true });
 
 const deployFiles = [
   ...rootFiles,
-  ...listFiles(path.join(root, 'assets'), 'assets')
+  ...listFiles(path.join(root, 'assets'), 'assets'),
+  ...fs.readdirSync(path.join(root, 'seo'))
+    .filter((name) => name.endsWith('.html'))
+    .map((name) => `seo/${name}`)
 ].sort();
 
 deployFiles.forEach(copyExact);
