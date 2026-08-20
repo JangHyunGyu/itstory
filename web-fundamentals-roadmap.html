@@ -1188,20 +1188,20 @@
                 <th class="week-cell" scope="row"><span>회차</span>15</th>
                 <td class="theme-cell">웹 서버와 애플리케이션 서버</td>
                 <td class="parts-cell">
-                  <ol class="parts"><li>웹 서버(Apache)</li><li>WAS(WildFly)</li><li>애플리케이션(eGovFrame)</li><li>프로세스·스레드와 동시성</li></ol>
+                  <ol class="parts"><li>웹 서버(Apache)</li><li>WAS(JBoss)</li><li>애플리케이션(eGovFrame)</li><li>프로세스·스레드와 동시성</li></ol>
                 </td>
                 <td class="question-cell">
                   <ul class="question-list">
-                    <li><span class="question-text">Apache와 WildFly는 둘 다 서버에서 실행되는데 같은 일을 하는 프로그램인가요?</span></li>
-                    <li><span class="question-text">eGovFrame은 WildFly처럼 서버를 실행하는 프로그램인가요, 업무 프로그램을 만드는 틀인가요?</span></li>
-                    <li><span class="question-text">브라우저가 Apache에 파일을 요청하고 Apache는 그 요청을 WildFly로 넘깁니다. 이 한 번의 사용자 클릭 안에서 Apache는 몇 개의 연결에 참여하며 각 연결에서 요청을 받는 쪽인가요 보내는 쪽인가요?</span></li>
-                    <li><span class="question-text">WildFly 프로그램 하나는 여러 작업 흐름(스레드)을 사용해 서로 다른 사용자의 요청을 나눠 처리합니다. 여러 요청에 거의 동시에 응답할 수 있는 이유는 무엇인가요?</span></li>
-                    <li><span class="question-text">Apache의 화면 파일은 <code>200</code>으로 열리지만 WildFly로 넘긴 API 요청만 <code>502</code> 오류가 납니다. 브라우저와 Apache 사이보다 Apache와 WildFly 사이의 연결과 WildFly 실행 상태를 먼저 확인해야 하는 이유는 무엇인가요?</span></li>
-                    <li><span class="question-text">Apache가 브라우저 요청을 대신 받아 WildFly로 전달하는 방식(reverse proxy)을 사용하면, 브라우저가 WildFly의 실제 주소와 포트를 몰라도 되는 이유와 장점은 무엇인가요?</span></li>
-                    <li><span class="question-text">정적 Vue 파일은 Apache가 직접 보내고 업무 API만 WildFly가 처리하도록 나누면 각 서버의 부담과 장애 범위가 어떻게 달라지나요?</span></li>
-                    <li><span class="question-text">eGovFrame의 공유 객체에 사용자별 값을 필드로 저장하면 WildFly의 여러 요청 스레드 사이에서 데이터가 섞일 수 있는 이유는 무엇인가요?</span></li>
-                    <li><span class="question-text">WildFly가 동시에 처리할 수 있는 요청 수나 Tibero에 동시에 연결할 수 있는 수가 꽉 찼습니다. CPU 여유가 있어도 새 요청이 빈자리를 기다려야 하는 이유는 무엇인가요?</span></li>
-                    <li><span class="question-text">WildFly 프로세스 하나를 재시작하면 그 안의 모든 요청이 끊깁니다. 스레드 하나만 문제가 생긴 경우와 프로세스 전체가 내려간 경우는 영향 범위가 어떻게 다른가요?</span></li>
+                    <li><span class="question-text">Apache는 Vue 3·eXBuilder 파일을 직접 보내고 API 요청은 JBoss로 전달합니다. 정적 응답과 reverse proxy가 Apache에서 어떻게 구분되나요?</span></li>
+                    <li><span class="question-text">화면 파일은 <code>200</code>인데 API만 <code>502</code>입니다. Apache 자체 응답은 성공했어도 Apache–JBoss 연결을 따로 확인해야 하는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">JBoss는 eGovFrame WAR를 실행하고 요청마다 Java 코드를 호출합니다. Apache와 달리 애플리케이션 생명주기와 런타임을 관리한다는 뜻은 무엇인가요?</span></li>
+                    <li><span class="question-text">JBoss에 새 WAR를 배포하는 동안 기존 요청이 처리 중입니다. 애플리케이션 교체와 서버 프로세스 재시작의 영향 범위는 어떻게 다른가요?</span></li>
+                    <li><span class="question-text">eGovFrame은 업무 코드를 구성하는 프레임워크이고 JBoss는 그 코드를 실행하는 WAS입니다. 둘 중 하나만 있어서는 API가 동작하지 않는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">eGovFrame의 공유 객체 필드에 사용자별 값을 저장했습니다. JBoss의 여러 요청 스레드가 같은 객체를 사용할 때 값이 섞일 수 있는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">한 조회에서 Apache는 브라우저의 요청을 받고 JBoss에는 새 요청을 보냅니다. Apache가 두 연결에서 서버와 클라이언트 역할을 각각 맡는 이유는 무엇인가요?</span></li>
+                    <li><span class="question-text">JBoss 요청 스레드는 남아 있지만 Tibero 연결 풀이 가득 찼습니다. CPU가 여유로워도 새 요청이 기다리는 이유를 두 풀의 관계로 설명해 보세요.</span></li>
+                    <li><span class="question-text">요청 스레드 하나가 멈춘 경우와 JBoss 프로세스가 종료된 경우가 있습니다. 진행 중인 요청과 전체 서비스에 미치는 범위는 어떻게 다른가요?</span></li>
+                    <li><span class="question-text">동시에 들어온 두 eGovFrame 요청이 같은 Tibero 행을 수정합니다. 스레드 동시성과 DB 트랜잭션을 따로 제어해야 하는 이유는 무엇인가요?</span></li>
                   </ul>
                 </td>
               </tr>
