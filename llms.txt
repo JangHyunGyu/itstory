@@ -21,10 +21,22 @@ ArcherLab IT Story is an educational timeline hub for developers, students, and 
 - Built as a static browser site
 
 ## Links
-- Home: https://itstory.archerlab.dev/
-- English home: https://itstory.archerlab.dev/index-en.html
-- Sitemap: https://itstory.archerlab.dev/sitemap.xml
-- Developer: https://archerlab.dev
+- [Home](https://itstory.archerlab.dev/)
+- [English home](https://itstory.archerlab.dev/index-en.html)
+- [Computer history timeline](https://itstory.archerlab.dev/computers.html)
+- [Database history timeline](https://itstory.archerlab.dev/databases.html)
+- [Network history timeline](https://itstory.archerlab.dev/networks.html)
+- [Operating system history timeline](https://itstory.archerlab.dev/os.html)
+- [Web server and WAS history timeline](https://itstory.archerlab.dev/was.html)
+- [Web development history timeline](https://itstory.archerlab.dev/web.html)
+- [HTML and web structure timeline](https://itstory.archerlab.dev/web-structure.html)
+- [CSS and web styling timeline](https://itstory.archerlab.dev/web-styling.html)
+- [JavaScript and web interaction timeline](https://itstory.archerlab.dev/web-interaction.html)
+- [Web development tools timeline](https://itstory.archerlab.dev/web-tools.html)
+- [IT history study order guide](https://itstory.archerlab.dev/seo/it-history-study-order.html)
+- [Developer technology timeline guide](https://itstory.archerlab.dev/seo/developer-technology-timeline.html)
+- [Sitemap](https://itstory.archerlab.dev/sitemap.xml)
+- [Developer](https://archerlab.dev/)
 
 ## Languages
 - Korean (한국어)
