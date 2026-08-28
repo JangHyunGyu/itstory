@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
+  <script defer src="/assets/js/ga.js"></script>
+  <script defer src="/assets/js/ga-engagement.js?v=20260618-engagement"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>인터넷과 웹의 차이 | 브라우저에서 페이지가 열리는 과정</title>
+  <meta name="description" content="인터넷과 월드 와이드 웹이 같은 말이 아닌 이유부터 DNS, 연결, HTTPS, HTTP 응답을 거쳐 브라우저가 웹페이지를 표시하는 순서까지 설명합니다.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://itstory.archerlab.dev/seo/internet-vs-web.html">
+  <link rel="sitemap" type="application/xml" href="https://itstory.archerlab.dev/sitemap.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ArcherLab IT Story">
+  <meta property="og:title" content="인터넷과 웹의 차이 | 브라우저에서 페이지가 열리는 과정">
+  <meta property="og:description" content="인터넷과 웹을 구분하고 주소 입력부터 웹페이지 표시까지 이어지는 핵심 단계를 살펴봅니다.">
+  <meta property="og:url" content="https://itstory.archerlab.dev/seo/internet-vs-web.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="인터넷과 웹의 차이 | 브라우저에서 페이지가 열리는 과정">
+  <meta name="twitter:description" content="인터넷과 웹을 구분하고 주소 입력부터 웹페이지 표시까지 이어지는 핵심 단계를 살펴봅니다.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebSite", "@id": "https://itstory.archerlab.dev/#website", "url": "https://itstory.archerlab.dev/", "name": "ArcherLab IT Story", "inLanguage": "ko" },
+      { "@type": "WebPage", "@id": "https://itstory.archerlab.dev/seo/internet-vs-web.html#webpage", "url": "https://itstory.archerlab.dev/seo/internet-vs-web.html", "name": "인터넷과 웹의 차이 | 브라우저에서 페이지가 열리는 과정", "description": "인터넷과 월드 와이드 웹이 같은 말이 아닌 이유부터 브라우저가 웹페이지를 표시하는 순서까지 설명합니다.", "inLanguage": "ko", "datePublished": "2026-08-28", "dateModified": "2026-08-28", "isPartOf": { "@id": "https://itstory.archerlab.dev/#website" } },
+      { "@type": "Article", "@id": "https://itstory.archerlab.dev/seo/internet-vs-web.html#article", "headline": "인터넷과 웹의 차이, 주소 입력부터 화면 표시까지", "description": "인터넷이라는 통신 기반 위에서 웹이 작동하는 구조와 브라우저의 요청 과정을 설명합니다.", "inLanguage": "ko", "datePublished": "2026-08-28", "dateModified": "2026-08-28", "author": { "@type": "Organization", "name": "ArcherLab", "url": "https://archerlab.dev/" }, "publisher": { "@type": "Organization", "name": "ArcherLab", "url": "https://archerlab.dev/" }, "mainEntityOfPage": { "@id": "https://itstory.archerlab.dev/seo/internet-vs-web.html#webpage" } },
+      { "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "ArcherLab IT Story", "item": "https://itstory.archerlab.dev/" }, { "@type": "ListItem", "position": 2, "name": "인터넷과 웹의 차이", "item": "https://itstory.archerlab.dev/seo/internet-vs-web.html" } ] }
+    ]
+  }
+  </script>
+  <style>
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f2f7fc;color:#25232a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",Arial,sans-serif;line-height:1.75}.shell{width:min(760px,calc(100% - 36px));margin:0 auto;padding:28px 0 72px}.brand{display:inline-flex;align-items:center;color:#153f72;font-weight:800;text-decoration:none}.hero{padding:54px 0 34px}.eyebrow,.byline{margin:0 0 10px;color:#2563a8;font-size:.88rem;font-weight:700}.eyebrow{letter-spacing:.1em;text-transform:uppercase}h1{margin:0;color:#19171d;font-size:clamp(2rem,6vw,3.35rem);line-height:1.16;letter-spacing:-.045em}.intro{margin:22px 0 12px;font-size:1.1rem;color:#514d58}.cta{display:inline-flex;margin-top:22px;padding:13px 22px;border-radius:999px;background:#2563a8;color:#fff;font-weight:800;text-decoration:none;box-shadow:0 10px 28px rgba(37,99,168,.24)}main section{margin-top:28px;padding:26px;background:#fff;border:1px solid #ccdeef;border-radius:18px;box-shadow:0 12px 34px rgba(30,25,35,.06)}h2{margin:0 0 14px;color:#153f72;font-size:1.35rem;line-height:1.35}p{margin:0 0 12px}p:last-child{margin-bottom:0}.flow{margin:12px 0 0;padding-left:22px}.flow li{margin:8px 0}.related{margin-top:36px}.related-grid{display:grid;gap:12px}.related-card{display:grid;gap:6px;padding:18px;background:#fff;border:1px solid #ccdeef;border-radius:14px;text-decoration:none;color:#27232b}.related-card strong{color:#153f72}.related-card span{font-size:.94rem;color:#625d69}.final-cta{margin-top:38px;padding:30px;text-align:center;background:linear-gradient(135deg,#2563a8,#153f72);border-radius:20px;color:#fff}.final-cta .cta{margin-top:10px;background:#fff;color:#153f72;box-shadow:none}footer{margin-top:40px;padding-top:22px;border-top:1px solid #ccdeef;font-size:.9rem;color:#716b77}footer a{color:#153f72}@media(max-width:560px){.shell{width:min(100% - 26px,760px)}.hero{padding:40px 0 24px}main section{padding:21px}.final-cta{padding:24px 18px}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <a class="brand" href="/">ArcherLab IT Story</a>
+    <header class="hero">
+      <p class="eyebrow">웹 기초 개념</p>
+      <h1>인터넷은 길이고 웹은 그 길을 이용하는 서비스입니다</h1>
+      <p class="intro">인터넷과 웹은 자주 같은 뜻으로 쓰이지만 기술적으로는 범위가 다릅니다. 이 차이를 알면 브라우저, 서버, DNS, HTTP를 따로 외우지 않고 하나의 요청 과정으로 연결할 수 있습니다.</p>
+      <p class="byline">작성: ArcherLab · 업데이트: 2026-08-28</p>
+      <a class="cta" href="/networks.html">네트워크 역사 연표 보기</a>
+    </header>
+    <main>
+      <section><h2>인터넷은 여러 네트워크를 연결하는 기반</h2><p>인터넷은 서로 다른 네트워크가 공통 규칙을 사용해 데이터를 주고받도록 연결한 전 세계적인 통신 기반입니다. 데이터는 작은 단위로 나뉘어 여러 장비와 경로를 지나 목적지에 도착합니다. 이 기반 위에서는 웹뿐 아니라 이메일, 파일 전송, 원격 접속, 음성 통화 같은 여러 서비스가 동작합니다.</p><p>따라서 브라우저를 닫아도 인터넷 자체가 사라지는 것은 아닙니다. 메일 앱이 메시지를 동기화하거나 게임이 서버와 통신하는 동안에도 같은 네트워크 기반을 이용하고 있습니다.</p></section>
+      <section><h2>웹은 URL과 HTTP, 문서로 연결된 정보 공간</h2><p>월드 와이드 웹은 인터넷을 이용해 문서와 자원을 주고받는 서비스입니다. 브라우저는 URL로 위치를 표현하고 HTTP 또는 HTTPS로 서버에 요청을 보냅니다. 서버가 돌려준 HTML은 문서 구조를, CSS는 표현을, JavaScript는 상호작용을 맡는 경우가 많습니다.</p><p>웹의 핵심은 링크입니다. 한 문서가 다른 문서의 주소를 가리키면서 정보가 연결됩니다. 검색엔진도 공개된 링크와 사이트맵을 따라 페이지를 발견하고, 문서의 제목과 본문, 구조화된 정보를 바탕으로 내용을 이해합니다.</p></section>
+      <section><h2>주소를 입력하면 먼저 목적지를 찾습니다</h2><p>브라우저 주소창에 도메인을 입력하면 컴퓨터는 먼저 그 이름에 대응하는 서버 주소를 알아내야 합니다. DNS는 사람이 읽기 쉬운 도메인 이름을 통신에 사용할 주소와 연결하는 역할을 합니다. 브라우저나 운영체제에 최근 결과가 남아 있다면 이 조회 과정은 생략되거나 짧아질 수 있습니다.</p><p>목적지를 확인한 뒤에는 서버와 통신할 연결을 준비합니다. HTTPS라면 암호화 통신에 사용할 상대와 인증서를 확인하고 안전한 세션을 협상합니다. 이 과정은 사용자가 보낸 내용이 이동 중에 그대로 노출되거나 바뀌는 위험을 줄입니다.</p></section>
+      <section><h2>요청과 응답은 정해진 형식으로 오갑니다</h2><p>연결이 준비되면 브라우저는 원하는 경로와 가능한 응답 형식, 쿠키 같은 정보를 담아 HTTP 요청을 보냅니다. 서버는 요청을 처리한 뒤 상태 코드, 콘텐츠 형식, 캐시 지침과 함께 본문을 돌려줍니다. 200은 일반적인 성공 응답이고, 301은 다른 주소로의 영구 이동, 404는 요청한 자원을 찾지 못했다는 뜻입니다.</p><ol class="flow"><li>도메인을 서버 주소로 확인</li><li>서버와 연결하고 HTTPS 보안 협상</li><li>경로와 헤더를 담은 HTTP 요청 전송</li><li>상태 코드와 HTML 응답 수신</li><li>추가 CSS, JavaScript, 이미지 요청</li></ol></section>
+      <section><h2>브라우저가 받은 파일을 화면으로 조립합니다</h2><p>브라우저는 HTML을 읽어 문서 구조를 만들고 CSS 규칙을 적용해 각 요소의 크기와 위치를 계산합니다. 필요한 JavaScript를 실행하고 이미지나 글꼴을 불러온 뒤 화면에 픽셀을 그립니다. 스크립트가 문서 읽기를 오래 막거나 큰 이미지가 늦게 도착하면 사용자가 첫 화면을 보는 시간도 길어집니다.</p><p>개발자 도구의 네트워크 패널을 열면 이 과정을 직접 확인할 수 있습니다. 어떤 요청이 먼저 시작됐는지, 상태 코드는 무엇인지, 응답 크기와 대기 시간이 어느 정도인지 보면 “웹페이지가 느리다”는 현상을 네트워크, 서버, 파일 처리 단계로 나누어 볼 수 있습니다.</p></section>
+      <section><h2>개념을 구분하면 장애 원인도 좁혀집니다</h2><p>다른 인터넷 서비스는 되는데 특정 웹사이트만 열리지 않는다면 인터넷 연결 전체보다 DNS, 해당 서버, 인증서, 브라우저 캐시를 먼저 의심할 수 있습니다. 반대로 여러 앱과 사이트가 모두 통신하지 못한다면 장치의 네트워크 연결이나 공유기, 통신사 구간을 확인해야 합니다.</p><p>인터넷과 웹의 차이는 시험용 정의에 그치지 않습니다. 요청이 어느 층에서 막혔는지를 판단하는 기준이며, 프런트엔드와 백엔드, 네트워크가 하나의 사용자 경험으로 이어지는 출발점입니다.</p></section>
+    </main>
+    <section class="related" aria-labelledby="related-title"><h2 id="related-title">함께 보면 좋은 안내</h2><div class="related-grid"><a class="related-card" href="/networks.html"><strong>네트워크 역사 연표</strong><span>패킷 교환과 인터넷 프로토콜이 발전한 흐름을 시대순으로 확인하세요.</span></a><a class="related-card" href="/web.html"><strong>웹 개발 역사 연표</strong><span>초기 웹 문서부터 현대 웹 애플리케이션까지 이어지는 변화를 살펴보세요.</span></a><a class="related-card" href="/seo/it-history-study-order.html"><strong>IT 역사 공부 순서</strong><span>컴퓨터, 네트워크, 운영체제, 데이터베이스와 웹을 연결해 공부하는 순서입니다.</span></a></div></section>
+    <section class="final-cta"><p>주소 입력부터 화면 표시까지의 흐름을 연표 속 기술과 연결해 보세요.</p><a class="cta" href="/">IT 기술 연표 둘러보기</a></section>
+    <footer><a href="/">ArcherLab IT Story 홈으로</a> · 작성 및 업데이트 2026-08-28</footer>
+  </div>
+</body>
+</html>

@@ -35,6 +35,7 @@ ArcherLab IT Story is an educational timeline hub for developers, students, and 
 - [Web development tools timeline](https://itstory.archerlab.dev/web-tools.html)
 - [IT history study order guide](https://itstory.archerlab.dev/seo/it-history-study-order.html)
 - [Developer technology timeline guide](https://itstory.archerlab.dev/seo/developer-technology-timeline.html)
+- [Internet vs. Web guide](https://itstory.archerlab.dev/seo/internet-vs-web.html): Internet infrastructure, the Web, DNS, HTTPS, HTTP, and browser rendering in one request flow
 - [Sitemap](https://itstory.archerlab.dev/sitemap.xml)
 - [Developer](https://archerlab.dev/)
 
