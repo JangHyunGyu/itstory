@@ -12,26 +12,27 @@
       content="IT 초보자들이 함께 공부하는 21주 웹 개발 기본기 스터디 커리큘럼"
     />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="assets/vendor/pretendard/pretendard.css" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDBPXC8PL7"></script>
     <script defer src="assets/js/ga.js"></script>
     <script defer src="assets/js/ga-engagement.js?v=20260618-engagement"></script>
     <style>
       :root {
         color-scheme: dark;
-        --background: #080a0f;
-        --surface: #0f131c;
-        --surface-raised: #151a24;
-        --surface-soft: rgba(255, 255, 255, 0.035);
-        --text: #f3f0e8;
-        --text-secondary: #c8c2b7;
-        --muted: #958f84;
-        --line: rgba(213, 179, 116, 0.17);
-        --line-strong: rgba(226, 192, 128, 0.4);
-        --accent: #d5a35e;
-        --accent-bright: #f0d8a2;
-        --accent-soft: rgba(213, 163, 94, 0.12);
-        --question: #9fcae6;
-        --question-soft: rgba(93, 159, 199, 0.1);
+        --background: #0b0d0c;
+        --surface: #121513;
+        --surface-raised: #191d1a;
+        --surface-soft: rgba(238, 244, 232, 0.045);
+        --text: #f3f5ee;
+        --text-secondary: #c9cec4;
+        --muted: #8e958c;
+        --line: rgba(225, 235, 218, 0.11);
+        --line-strong: rgba(181, 239, 87, 0.34);
+        --accent: #b5ef57;
+        --accent-bright: #dcff9e;
+        --accent-soft: rgba(181, 239, 87, 0.1);
+        --question: #9fc2ff;
+        --question-soft: rgba(122, 166, 240, 0.09);
         --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
           "Segoe UI", sans-serif;
         --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
@@ -676,6 +677,929 @@
         }
       }
 
+      /* 2026 roadmap refresh */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+          radial-gradient(circle at 78% 4%, rgba(181, 239, 87, 0.1), transparent 25rem),
+          radial-gradient(circle at 10% 32%, rgba(82, 124, 201, 0.08), transparent 34rem),
+          var(--background);
+        background-size: 48px 48px, 48px 48px, auto, auto, auto;
+      }
+
+      body::before {
+        position: fixed;
+        z-index: -1;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(11, 13, 12, 0.05), var(--background) 62%);
+        content: "";
+        pointer-events: none;
+      }
+
+      ::selection {
+        color: #10150a;
+        background: var(--accent);
+      }
+
+      .page-header {
+        position: sticky;
+        z-index: 20;
+        top: 0;
+        border-color: rgba(225, 235, 218, 0.08);
+        background: rgba(11, 13, 12, 0.78);
+        backdrop-filter: blur(22px) saturate(140%);
+      }
+
+      .page-header__inner,
+      main,
+      footer {
+        width: min(100% - 64px, 1600px);
+      }
+
+      .page-header__inner {
+        min-height: 72px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        letter-spacing: -0.025em;
+      }
+
+      .brand::before {
+        width: 11px;
+        height: 11px;
+        border-radius: 3px;
+        background: var(--accent);
+        box-shadow: 0 0 22px rgba(181, 239, 87, 0.38);
+        content: "";
+        transform: rotate(12deg);
+      }
+
+      .header-label {
+        justify-self: center;
+        color: var(--text-secondary);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .home-link {
+        justify-self: end;
+        gap: 7px;
+        min-height: 38px;
+        padding: 7px 14px;
+        border-color: rgba(225, 235, 218, 0.12);
+        color: var(--text-secondary);
+        background: rgba(255, 255, 255, 0.035);
+        font-size: 12px;
+      }
+
+      .home-link::after {
+        color: var(--accent);
+        content: "↗";
+        font-size: 13px;
+      }
+
+      main {
+        padding: 0 0 96px;
+      }
+
+      .hero {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(360px, 0.65fr);
+        align-items: end;
+        gap: clamp(48px, 7vw, 120px);
+        min-height: min(720px, calc(100svh - 72px));
+        padding: clamp(80px, 10vw, 152px) 0 clamp(76px, 9vw, 124px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero::after {
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        width: min(28vw, 420px);
+        height: 1px;
+        background: var(--accent);
+        content: "";
+      }
+
+      .hero-copy {
+        min-width: 0;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 18px;
+        color: var(--accent);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: none;
+      }
+
+      .eyebrow::before {
+        width: 30px;
+        height: 1px;
+        background: currentColor;
+        content: "";
+      }
+
+      h1 {
+        max-width: 920px;
+        font-size: clamp(46px, 5.35vw, 84px);
+        font-weight: 850;
+        line-height: 1.03;
+        letter-spacing: -0.065em;
+        text-wrap: balance;
+      }
+
+      h1 .title-accent {
+        color: var(--accent-bright);
+      }
+
+      .intro {
+        max-width: 720px;
+        margin-top: 28px;
+        color: #b8beb5;
+        font-size: clamp(16px, 1.25vw, 19px);
+        line-height: 1.75;
+        text-wrap: pretty;
+      }
+
+      .meta-list {
+        gap: 10px;
+        margin-top: 34px;
+      }
+
+      .meta-list li {
+        position: relative;
+        padding: 7px 0 7px 17px;
+        border: 0;
+        border-radius: 0;
+        color: var(--text-secondary);
+        background: none;
+        font-size: 13px;
+      }
+
+      .meta-list li::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border: 1px solid var(--accent);
+        border-radius: 50%;
+        content: "";
+        transform: translateY(-50%);
+      }
+
+      .hero-overview {
+        position: relative;
+        overflow: hidden;
+        padding: clamp(26px, 3vw, 38px);
+        border: 1px solid rgba(225, 235, 218, 0.12);
+        border-radius: 26px;
+        background: rgba(20, 24, 21, 0.72);
+        box-shadow: 0 28px 100px rgba(0, 0, 0, 0.28);
+        backdrop-filter: blur(18px);
+      }
+
+      .hero-overview::before {
+        position: absolute;
+        top: -72px;
+        right: -72px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid rgba(181, 239, 87, 0.18);
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 28px rgba(181, 239, 87, 0.025),
+          0 0 0 56px rgba(181, 239, 87, 0.018);
+        content: "";
+      }
+
+      .overview-label {
+        margin: 0 0 26px;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+      }
+
+      .overview-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .overview-stats li {
+        min-width: 0;
+        padding-right: 14px;
+      }
+
+      .overview-stats li + li {
+        padding-left: 18px;
+        border-left: 1px solid var(--line);
+      }
+
+      .overview-stats strong {
+        display: block;
+        color: var(--text);
+        font-size: clamp(30px, 3vw, 44px);
+        font-weight: 850;
+        line-height: 1;
+        letter-spacing: -0.055em;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .overview-stats span {
+        display: block;
+        margin-top: 9px;
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .overview-route {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 6px;
+        padding: 34px 2px 0;
+        margin-top: 34px;
+        border-top: 1px solid var(--line);
+      }
+
+      .overview-route::before {
+        position: absolute;
+        top: 42px;
+        right: 8px;
+        left: 8px;
+        height: 1px;
+        background: rgba(181, 239, 87, 0.24);
+        content: "";
+      }
+
+      .overview-route span {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        place-items: center;
+        width: 18px;
+        height: 18px;
+        border: 5px solid var(--surface-raised);
+        border-radius: 50%;
+        background: var(--accent);
+      }
+
+      .table-section {
+        margin-top: 0;
+        padding-top: clamp(80px, 8vw, 120px);
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 32px;
+        margin-bottom: 34px;
+      }
+
+      .section-kicker {
+        margin: 0 0 9px;
+        color: var(--accent);
+        font-family: var(--font-mono);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .section-heading h2 {
+        margin: 0;
+        font-size: clamp(32px, 3.4vw, 50px);
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+      }
+
+      .section-heading__meta {
+        max-width: 440px;
+        margin: 0 0 4px;
+        color: var(--muted);
+        font-size: 14px;
+        text-align: right;
+      }
+
+      .roadmap-tools {
+        position: sticky;
+        z-index: 10;
+        top: 72px;
+        display: grid;
+        grid-template-columns: minmax(240px, 340px) minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 14px;
+        padding: 14px;
+        margin-bottom: 16px;
+        border: 1px solid rgba(225, 235, 218, 0.1);
+        border-radius: 18px;
+        background: rgba(15, 18, 16, 0.88);
+        box-shadow: 0 16px 50px rgba(0, 0, 0, 0.22);
+        backdrop-filter: blur(20px) saturate(140%);
+      }
+
+      .search-field {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .search-field svg {
+        position: absolute;
+        left: 14px;
+        width: 17px;
+        height: 17px;
+        color: var(--muted);
+        pointer-events: none;
+      }
+
+      .search-field input {
+        width: 100%;
+        min-height: 44px;
+        padding: 9px 14px 9px 42px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        outline: none;
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.035);
+        font: inherit;
+        font-size: 13px;
+        transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+      }
+
+      .search-field input::placeholder {
+        color: #737a72;
+      }
+
+      .search-field input:focus {
+        border-color: rgba(181, 239, 87, 0.58);
+        background: rgba(255, 255, 255, 0.055);
+        box-shadow: 0 0 0 3px rgba(181, 239, 87, 0.09);
+      }
+
+      .phase-filters {
+        display: flex;
+        gap: 7px;
+        min-width: 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .phase-filters::-webkit-scrollbar {
+        display: none;
+      }
+
+      .phase-filter {
+        flex: 0 0 auto;
+        min-height: 38px;
+        padding: 7px 12px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        color: var(--muted);
+        background: transparent;
+        font: inherit;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+      }
+
+      .phase-filter:hover {
+        color: var(--text);
+        background: var(--surface-soft);
+      }
+
+      .phase-filter:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+
+      .phase-filter[aria-pressed="true"] {
+        border-color: rgba(181, 239, 87, 0.2);
+        color: #16200d;
+        background: var(--accent);
+      }
+
+      .filter-status {
+        min-width: 76px;
+        color: var(--muted);
+        font-family: var(--font-mono);
+        font-size: 11px;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .table-note {
+        margin: 0 2px 16px;
+        font-size: 12px;
+      }
+
+      .table-scroll {
+        border-color: rgba(225, 235, 218, 0.12);
+        border-radius: 24px;
+        background: rgba(15, 18, 16, 0.88);
+        box-shadow: 0 36px 100px rgba(0, 0, 0, 0.3);
+      }
+
+      table {
+        min-width: 1200px;
+      }
+
+      thead th {
+        padding: 17px 22px;
+        color: #8d958b;
+        background: #171a18;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+      }
+
+      th,
+      td {
+        padding: 22px;
+        border-color: rgba(225, 235, 218, 0.08);
+      }
+
+      tbody tr {
+        background: transparent;
+        transition: background-color 180ms ease;
+      }
+
+      tbody tr:hover {
+        background: rgba(181, 239, 87, 0.027);
+      }
+
+      tbody tr[hidden] {
+        display: none;
+      }
+
+      tbody tr.phase-start:not(:first-child) > * {
+        border-top: 10px solid #0b0d0c;
+      }
+
+      tbody tr.ai-row {
+        background: rgba(122, 166, 240, 0.04);
+      }
+
+      .week-cell {
+        width: 96px;
+        color: var(--text);
+        background: #131714;
+        font-family: var(--font-mono);
+        font-size: 21px;
+        font-weight: 800;
+      }
+
+      .week-cell span {
+        margin-bottom: 5px;
+        color: #717970;
+        font-size: 8px;
+        letter-spacing: 0.12em;
+      }
+
+      .theme-cell {
+        width: 230px;
+        font-size: 17px;
+        font-weight: 800;
+        line-height: 1.35;
+      }
+
+      .phase-label {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--accent);
+        font-family: var(--font-mono);
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+      }
+
+      .ai-row .phase-label,
+      .ai-row .week-cell,
+      .ai-row .week-cell span {
+        color: var(--question);
+      }
+
+      .ai-row .week-cell {
+        background: #121821;
+      }
+
+      .parts-cell {
+        width: 500px;
+      }
+
+      .parts {
+        gap: 9px;
+      }
+
+      .parts li {
+        min-height: 42px;
+        padding: 9px 11px;
+        border-color: rgba(225, 235, 218, 0.075);
+        border-radius: 11px;
+        color: #bdc4b9;
+        background: rgba(255, 255, 255, 0.025);
+        font-size: 12px;
+      }
+
+      .parts li::before {
+        color: #747c72;
+        font-size: 9px;
+      }
+
+      .part-owner {
+        padding: 2px 7px;
+        border-color: rgba(181, 239, 87, 0.16);
+        color: #d9eeae;
+        background: rgba(181, 239, 87, 0.07);
+        font-size: 10px;
+      }
+
+      .question-cell {
+        min-width: 360px;
+        color: #cad8ef;
+      }
+
+      .question-toggle {
+        min-height: 44px;
+        padding: 10px 13px;
+        border-color: rgba(159, 194, 255, 0.15);
+        border-radius: 12px;
+        color: #a8c8ff;
+        background: rgba(122, 166, 240, 0.055);
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      .question-toggle::after {
+        display: grid;
+        place-items: center;
+        width: 24px;
+        height: 24px;
+        margin-left: 12px;
+        border: 1px solid rgba(159, 194, 255, 0.18);
+        border-radius: 50%;
+        font-size: 14px;
+      }
+
+      .question-list.is-collapsible {
+        gap: 0;
+        padding: 5px 2px 2px;
+        margin-top: 12px;
+        border-top: 1px solid rgba(159, 194, 255, 0.12);
+      }
+
+      .question-list li {
+        grid-template-columns: 28px minmax(0, 1fr);
+        gap: 10px;
+        padding: 12px 4px;
+        border-bottom: 1px solid rgba(225, 235, 218, 0.07);
+      }
+
+      .question-list li:last-child {
+        border-bottom: 0;
+      }
+
+      .question-list li::before {
+        display: grid;
+        place-items: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 7px;
+        color: var(--question);
+        background: rgba(122, 166, 240, 0.08);
+        line-height: 1;
+      }
+
+      .no-results {
+        padding: 72px 24px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .study-rule {
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 18px;
+        max-width: none;
+        padding: 24px 26px;
+        margin-top: 18px;
+        border-color: rgba(225, 235, 218, 0.1);
+        border-radius: 18px;
+        color: var(--text-secondary);
+        background: rgba(255, 255, 255, 0.025);
+      }
+
+      .study-rule__number {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid rgba(181, 239, 87, 0.22);
+        border-radius: 12px;
+        color: var(--accent);
+        background: var(--accent-soft);
+        font-family: var(--font-mono);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .study-rule strong {
+        display: block;
+        margin: 1px 0 5px;
+        color: var(--text);
+        font-family: var(--font-sans);
+        font-size: 14px;
+        letter-spacing: -0.01em;
+      }
+
+      .study-rule p {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 48px;
+        border-top: 1px solid var(--line);
+        padding-top: 24px;
+      }
+
+      .footer-note {
+        color: #666d66;
+      }
+
+      @media (max-width: 1120px) {
+        .hero {
+          grid-template-columns: minmax(0, 1fr);
+          min-height: auto;
+        }
+
+        .hero-overview {
+          max-width: 640px;
+        }
+
+        .roadmap-tools {
+          grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+        }
+
+        .filter-status {
+          display: none;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .page-header__inner,
+        main,
+        footer {
+          width: min(100% - 32px, 1600px);
+        }
+
+        .page-header__inner {
+          grid-template-columns: minmax(0, 1fr) auto;
+          min-height: 64px;
+        }
+
+        .header-label {
+          display: none;
+        }
+
+        .home-link {
+          grid-column: 2;
+        }
+
+        .hero {
+          gap: 48px;
+          padding: 72px 0 68px;
+        }
+
+        .hero::after {
+          width: 42%;
+        }
+
+        h1 {
+          font-size: clamp(40px, 12vw, 58px);
+          line-height: 1.06;
+        }
+
+        .intro {
+          margin-top: 22px;
+          font-size: 15px;
+          line-height: 1.7;
+        }
+
+        .meta-list {
+          gap: 4px 14px;
+          margin-top: 24px;
+        }
+
+        .meta-list li {
+          font-size: 12px;
+        }
+
+        .hero-overview {
+          padding: 24px 20px;
+          border-radius: 20px;
+        }
+
+        .overview-stats li + li {
+          padding-left: 12px;
+        }
+
+        .overview-stats strong {
+          font-size: 30px;
+        }
+
+        .section-heading {
+          display: block;
+        }
+
+        .section-heading__meta {
+          margin-top: 12px;
+          text-align: left;
+        }
+
+        .roadmap-tools {
+          position: static;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 10px;
+          padding: 10px;
+          border-radius: 16px;
+        }
+
+        .phase-filters {
+          padding: 1px 0;
+        }
+
+        .table-note {
+          display: block;
+          margin: 12px 2px 14px;
+        }
+
+        .table-note span + span {
+          display: none;
+        }
+
+        .table-scroll {
+          overflow: visible;
+          border: 0;
+          border-radius: 0;
+          background: transparent;
+          box-shadow: none;
+        }
+
+        table,
+        tbody {
+          display: block;
+          width: 100%;
+          min-width: 0;
+        }
+
+        thead {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+
+        tbody {
+          display: grid;
+          gap: 12px;
+        }
+
+        tbody tr {
+          display: grid;
+          grid-template-columns: 76px minmax(0, 1fr);
+          overflow: hidden;
+          border: 1px solid var(--line);
+          border-radius: 18px;
+          background: rgba(18, 21, 19, 0.92);
+          box-shadow: 0 14px 36px rgba(0, 0, 0, 0.15);
+        }
+
+        tbody tr.phase-start:not(:first-child) {
+          margin-top: 18px;
+          border-top-color: rgba(181, 239, 87, 0.32);
+        }
+
+        tbody tr.phase-start:not(:first-child) > * {
+          border-top: 0;
+        }
+
+        tbody th,
+        tbody td {
+          width: auto;
+          min-width: 0;
+          max-width: 100%;
+          padding: 15px;
+          overflow-wrap: anywhere;
+        }
+
+        .week-cell {
+          position: static;
+          grid-row: 1;
+          grid-column: 1;
+          border-right: 1px solid var(--line);
+          background: rgba(181, 239, 87, 0.045);
+          font-size: 20px;
+        }
+
+        .theme-cell {
+          display: flex;
+          grid-row: 1;
+          grid-column: 2;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          min-height: 76px;
+          font-size: 16px;
+        }
+
+        .phase-label {
+          margin-bottom: 5px;
+        }
+
+        .parts-cell {
+          grid-column: 1 / -1;
+          padding: 15px;
+        }
+
+        .parts-cell::before {
+          margin-bottom: 10px;
+          color: #737a72;
+          content: "발표 주제";
+        }
+
+        .parts {
+          grid-template-columns: 1fr;
+          gap: 7px;
+        }
+
+        .parts li {
+          min-height: 40px;
+          font-size: 12px;
+        }
+
+        .question-cell {
+          grid-column: 1 / -1;
+          min-width: 0;
+          padding: 15px;
+          border-bottom: 0;
+          background: rgba(122, 166, 240, 0.055);
+        }
+
+        .question-cell::before {
+          display: none;
+        }
+
+        .study-rule {
+          grid-template-columns: 38px minmax(0, 1fr);
+          gap: 14px;
+          padding: 20px;
+        }
+
+        .study-rule__number {
+          width: 38px;
+          height: 38px;
+        }
+
+        footer {
+          display: block;
+        }
+
+        .footer-note {
+          display: block;
+          margin-top: 5px;
+        }
+      }
+
       @media print {
         :root {
           color-scheme: light;
@@ -830,32 +1754,79 @@
     <header class="page-header">
       <div class="page-header__inner">
         <a class="brand" href="/" aria-label="ArcherLab IT Story"><span class="brand-prefix">ArcherLab </span>IT Story</a>
-        <a class="home-link" href="https://itstory.archerlab.dev/index.html" aria-label="IT Story 홈으로 이동">홈</a>
         <span class="header-label">웹 개발 스터디</span>
+        <a class="home-link" href="https://itstory.archerlab.dev/index.html" aria-label="IT Story 홈으로 이동">IT Story 홈</a>
       </div>
     </header>
 
     <main>
-      <p class="eyebrow">21주 커리큘럼</p>
-      <h1>웹 개발 기본기 스터디</h1>
-      <p class="intro">
-        인터넷과 브라우저부터 배포·운영, 생성형 AI까지 웹 개발의 흐름을
-        01~03회차는 4명이, 04회차부터는 5명이 함께 공부하는 21주 커리큘럼입니다.
-      </p>
-      <ul class="meta-list" aria-label="스터디 정보">
-        <li>주 1회</li>
-        <li>04회차부터 5인 발표</li>
-        <li>개념 중심</li>
-        <li>함께 토론</li>
-      </ul>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">웹 개발 기본기 스터디</p>
+          <h1 id="page-title">웹이 움직이는 순서를<br /><span class="title-accent">따라가는 21주</span></h1>
+          <p class="intro">
+            주소를 입력해 화면을 띄우는 데서 시작해 서버·데이터베이스·배포까지 이어지는 과정을
+            21주 동안 차근차근 공부합니다. 1~3회차는 4명, 4회차부터는 5명이 발표를 나눠 맡습니다.
+          </p>
+          <ul class="meta-list" aria-label="스터디 정보">
+            <li>주 1회</li>
+            <li>4회차부터 5인 발표</li>
+            <li>개념부터 차근차근</li>
+            <li>질문으로 함께 확인</li>
+          </ul>
+        </div>
+
+        <aside class="hero-overview" aria-label="커리큘럼 요약">
+          <p class="overview-label">CURRICULUM AT A GLANCE</p>
+          <ul class="overview-stats">
+            <li><strong>21</strong><span>회차</span></li>
+            <li><strong>210</strong><span>질문</span></li>
+            <li><strong>06</strong><span>흐름</span></li>
+          </ul>
+          <div class="overview-route" aria-label="여섯 단계로 이어지는 학습 흐름">
+            <span title="웹의 출발"></span>
+            <span title="화면 만들기"></span>
+            <span title="프로그래밍"></span>
+            <span title="서버와 데이터"></span>
+            <span title="개발과 운영"></span>
+            <span title="AI 활용"></span>
+          </div>
+        </aside>
+      </section>
 
       <section class="table-section" aria-labelledby="roadmap-heading">
-        <h2 id="roadmap-heading" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0)">
-          21주 스터디 로드맵
-        </h2>
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">01—21 / ROADMAP</p>
+            <h2 id="roadmap-heading">전체 커리큘럼</h2>
+          </div>
+          <p class="section-heading__meta">궁금한 회차를 골라 발표 주제와 질문을 살펴보세요.</p>
+        </div>
+
+        <div class="roadmap-tools" aria-label="커리큘럼 찾기">
+          <label class="search-field">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"></circle>
+              <path d="m16 16 4 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path>
+            </svg>
+            <span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">회차나 발표 주제 검색</span>
+            <input id="roadmap-search" type="search" placeholder="회차나 발표 주제 검색" autocomplete="off" />
+          </label>
+          <div class="phase-filters" role="group" aria-label="학습 흐름 필터">
+            <button class="phase-filter" type="button" data-phase="all" aria-pressed="true">전체</button>
+            <button class="phase-filter" type="button" data-phase="foundation" aria-pressed="false">웹의 출발</button>
+            <button class="phase-filter" type="button" data-phase="visual" aria-pressed="false">화면 만들기</button>
+            <button class="phase-filter" type="button" data-phase="programming" aria-pressed="false">프로그래밍</button>
+            <button class="phase-filter" type="button" data-phase="server" aria-pressed="false">서버와 데이터</button>
+            <button class="phase-filter" type="button" data-phase="operation" aria-pressed="false">개발과 운영</button>
+            <button class="phase-filter" type="button" data-phase="ai" aria-pressed="false">AI 활용</button>
+          </div>
+          <output class="filter-status" id="filter-status" aria-live="polite">전체 21회차</output>
+        </div>
+
         <div class="table-note" aria-hidden="true">
-          <span><strong>발표 인원:</strong> 01~03회차는 4명, 04회차부터는 5명이 세부 주제를 하나씩 담당합니다.</span>
-          <span>질문은 쉬운 말로 묻지만 비슷한 개념의 차이와 이유까지 설명해야 합니다.</span>
+          <span><strong>발표 인원</strong> · 1~3회차 4명, 4회차부터 5명</span>
+          <span>질문마다 개념의 차이와 작동 이유까지 확인합니다.</span>
         </div>
 
         <div class="table-scroll" tabindex="0" role="region" aria-label="21주 웹 개발 기본기 스터디 표">
@@ -878,7 +1849,7 @@
             <tbody>
               <tr class="phase-start">
                 <th class="week-cell" scope="row"><span>회차</span>01</th>
-                <td class="theme-cell">웹의 구성 요소</td>
+                <td class="theme-cell"><span class="phase-label">01 · 웹의 출발</span>웹의 구성 요소</td>
                 <td class="parts-cell">
                   <ol class="parts">
                     <li><span class="part-topic">인터넷</span><span class="part-owner">장현규</span></li>
@@ -977,7 +1948,7 @@
               </tr>
               <tr class="phase-start">
                 <th class="week-cell" scope="row"><span>회차</span>05</th>
-                <td class="theme-cell">HTML</td>
+                <td class="theme-cell"><span class="phase-label">02 · 화면 만들기</span>HTML</td>
                 <td class="parts-cell">
                   <ol class="parts"><li>문서 구조</li><li>콘텐츠 모델</li><li>시맨틱 구조</li><li>접근성</li><li>폼과 데이터</li></ol>
                 </td>
@@ -1061,7 +2032,7 @@
               </tr>
               <tr class="phase-start">
                 <th class="week-cell" scope="row"><span>회차</span>09</th>
-                <td class="theme-cell">JavaScript의 값</td>
+                <td class="theme-cell"><span class="phase-label">03 · 프로그래밍</span>JavaScript의 값</td>
                 <td class="parts-cell">
                   <ol class="parts"><li>값과 타입</li><li>타입 변환과 동등성</li><li>참조와 동일성</li><li>가변성과 불변성</li><li>null·undefined와 값의 부재</li></ol>
                 </td>
@@ -1166,7 +2137,7 @@
               </tr>
               <tr class="phase-start">
                 <th class="week-cell" scope="row"><span>회차</span>14</th>
-                <td class="theme-cell">API 설계</td>
+                <td class="theme-cell"><span class="phase-label">04 · 서버와 데이터</span>API 설계</td>
                 <td class="parts-cell">
                   <ol class="parts"><li>REST와 리소스 설계</li><li>JSON·DTO와 직렬화</li><li>검증과 오류 모델</li><li>페이지네이션</li><li>API 계약과 버전 관리</li></ol>
                 </td>
@@ -1271,7 +2242,7 @@
               </tr>
               <tr class="phase-start">
                 <th class="week-cell" scope="row"><span>회차</span>19</th>
-                <td class="theme-cell">형상관리와 개발 품질</td>
+                <td class="theme-cell"><span class="phase-label">05 · 개발과 운영</span>형상관리와 개발 품질</td>
                 <td class="parts-cell">
                   <ol class="parts"><li>Git과 SVN</li><li>변경 이력과 충돌</li><li>테스트 범위와 테스트 대역</li><li>테스트 환경과 재현성</li><li>디버깅과 로그</li></ol>
                 </td>
@@ -1313,7 +2284,7 @@
               </tr>
               <tr class="phase-start ai-row">
                 <th class="week-cell" scope="row"><span>회차</span>21</th>
-                <td class="theme-cell">생성형 AI와 웹 개발</td>
+                <td class="theme-cell"><span class="phase-label">06 · AI 활용</span>생성형 AI와 웹 개발</td>
                 <td class="parts-cell">
                   <ol class="parts"><li>생성형 AI와 LLM</li><li>프롬프트·컨텍스트와 응답 신뢰성</li><li>클라우드 AI 연동</li><li>로컬 LLM</li><li>AI 결과 검증과 안전한 활용</li></ol>
                 </td>
@@ -1334,19 +2305,81 @@
               </tr>
             </tbody>
           </table>
+          <p class="no-results" id="no-results" hidden>조건에 맞는 회차가 없습니다. 검색어를 조금 줄여 보세요.</p>
         </div>
 
         <aside class="study-rule" aria-label="스터디 진행 원칙">
-          <strong>발표 원칙</strong>
-          <p>전문용어는 IT를 처음 배우는 학생도 이해하도록 쉬운 말로 먼저 풉니다. 질문에 답할 때는 결론만 말하지 않고 그 이유를 일상적인 예시와 함께 설명합니다.</p>
+          <span class="study-rule__number" aria-hidden="true">TIP</span>
+          <div>
+            <strong>발표는 이렇게</strong>
+            <p>용어부터 쉽게 풉니다. 답을 외우는 데서 그치지 않고, 왜 그런지 일상적인 예와 함께 설명합니다.</p>
+          </div>
         </aside>
       </section>
     </main>
 
-    <footer>ArcherLab IT Story · 웹 개발 기본기 스터디</footer>
+    <footer>
+      <span>ArcherLab IT Story · 웹 개발 기본기 스터디</span>
+      <span class="footer-note">21주 커리큘럼</span>
+    </footer>
 
     <script>
       (() => {
+        const rows = [...document.querySelectorAll("tbody tr")];
+        const search = document.getElementById("roadmap-search");
+        const filters = [...document.querySelectorAll(".phase-filter")];
+        const status = document.getElementById("filter-status");
+        const noResults = document.getElementById("no-results");
+        const phaseRanges = [
+          { key: "foundation", from: 1, to: 4 },
+          { key: "visual", from: 5, to: 8 },
+          { key: "programming", from: 9, to: 13 },
+          { key: "server", from: 14, to: 18 },
+          { key: "operation", from: 19, to: 20 },
+          { key: "ai", from: 21, to: 21 }
+        ];
+        let activePhase = "all";
+
+        rows.forEach((row, index) => {
+          const week = index + 1;
+          const phase = phaseRanges.find(({ from, to }) => week >= from && week <= to);
+          const searchableText = [
+            String(week),
+            String(week).padStart(2, "0"),
+            row.querySelector(".theme-cell")?.textContent,
+            row.querySelector(".parts-cell")?.textContent
+          ].join(" ");
+          row.dataset.phase = phase?.key || "";
+          row.dataset.search = searchableText.replace(/\s+/g, " ").trim().toLocaleLowerCase("ko");
+        });
+
+        const applyFilters = () => {
+          const query = search.value.trim().toLocaleLowerCase("ko");
+          let visibleCount = 0;
+
+          rows.forEach((row) => {
+            const matchesPhase = activePhase === "all" || row.dataset.phase === activePhase;
+            const matchesQuery = !query || row.dataset.search.includes(query);
+            const isVisible = matchesPhase && matchesQuery;
+            row.hidden = !isVisible;
+            if (isVisible) visibleCount += 1;
+          });
+
+          status.textContent = visibleCount === rows.length ? "전체 21회차" : `${visibleCount}회차 표시`;
+          noResults.hidden = visibleCount !== 0;
+        };
+
+        search.addEventListener("input", applyFilters);
+        filters.forEach((filter) => {
+          filter.addEventListener("click", () => {
+            activePhase = filter.dataset.phase;
+            filters.forEach((button) => {
+              button.setAttribute("aria-pressed", String(button === filter));
+            });
+            applyFilters();
+          });
+        });
+
         const setExpanded = (button, expanded) => {
           const list = document.getElementById(button.getAttribute("aria-controls"));
           if (!list) return;
@@ -1355,7 +2388,7 @@
           const label = button.querySelector(".question-toggle__label");
           button.setAttribute("aria-expanded", String(expanded));
           list.hidden = !expanded;
-          if (label) label.textContent = `질문 예시 ${expanded ? "닫기" : "펼치기"} (${count}개)`;
+          if (label) label.textContent = expanded ? "질문 접기" : `질문 ${count}개 보기`;
         };
 
         document.querySelectorAll(".question-cell").forEach((cell, index) => {
@@ -1378,7 +2411,7 @@
           button.setAttribute("aria-expanded", "false");
 
           label.className = "question-toggle__label";
-          label.textContent = `질문 예시 펼치기 (${count}개)`;
+          label.textContent = `질문 ${count}개 보기`;
           button.append(label);
           cell.insertBefore(button, list);
 
