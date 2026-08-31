@@ -159,7 +159,7 @@
     <text x="80" y="25" fill="white" font-size="16" font-family="sans-serif" text-anchor="middle" font-weight="bold">AMD</text>
     <text x="80" y="38" fill="#ffaaaa" font-size="9" font-family="sans-serif" text-anchor="middle">Opteron 2003</text>
   </g>
-  <g transform="translate(230" y="400">
+  <g transform="translate(230, 400)">
     <text x="0" y="0" fill="#4488ff" font-size="10" font-family="monospace">+ Intel EM64T (2004)</text>
     <text x="0" y="18" fill="#2266aa" font-size="10" font-family="monospace">= x86-64 standard</text>
   </g>

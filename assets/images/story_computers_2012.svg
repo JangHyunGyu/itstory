@@ -121,7 +121,7 @@
     </g>
 
     <!-- HDMI port -->
-    <g transform="translate(20" y="200)">
+    <g>
       <rect x="20" y="200" width="50" height="18" fill="#2a2a3a" rx="2" stroke="#cc9900" stroke-width="1"/>
       <text x="45" y="213" fill="#cc9900" font-size="8" font-family="monospace" text-anchor="middle">HDMI</text>
     </g>

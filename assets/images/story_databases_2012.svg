@@ -80,8 +80,8 @@
     <line x1="155" y1="90" x2="95" y2="145" stroke="#ff5722" stroke-width="1" opacity="0.4"/>
 
     <!-- Latency labels -->
-    <text x="107" y="88" font-family="monospace" font-size="7" fill="#1565c0">< 5ms</text>
-    <text x="188" y="88" font-family="monospace" font-size="7" fill="#1565c0">< 8ms</text>
+    <text x="107" y="88" font-family="monospace" font-size="7" fill="#1565c0">&lt; 5ms</text>
+    <text x="188" y="88" font-family="monospace" font-size="7" fill="#1565c0">&lt; 8ms</text>
     <text x="145" y="175" font-family="Arial, sans-serif" font-size="9" fill="#283593" text-anchor="middle">Global, consistent, ACID</text>
   </g>
 

@@ -96,10 +96,10 @@
     <!-- Door -->
     <rect x="-15" y="48" width="30" height="42" fill="#6a4a20" rx="3"/>
     <!-- Excited people outside door -->
-    <ellipse cx="80" cy="368" rx="8" ry="8" fill="#d4a870"/>
-    <rect x="75" y="372" width="10" height="18" fill="#a04020" rx="2"/>
-    <ellipse cx="100" cy="363" rx="8" ry="8" fill="#c8956a"/>
-    <rect x="95" y="367" width="10" height="20" fill="#203a60" rx="2"/>
+    <ellipse cx="80" cy="98" rx="8" ry="8" fill="#d4a870"/>
+    <rect x="75" y="102" width="10" height="18" fill="#a04020" rx="2"/>
+    <ellipse cx="100" cy="93" rx="8" ry="8" fill="#c8956a"/>
+    <rect x="95" y="97" width="10" height="20" fill="#203a60" rx="2"/>
   </g>
   <!-- Electric signal traveling along wire - glowing dots -->
   <g opacity="0.85">

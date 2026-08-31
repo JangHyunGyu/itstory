@@ -88,7 +88,7 @@
     <text x="645" y="165" fill="#7acfff">1</text>
     <text x="695" y="165" fill="#7acfff">0</text>
     <text x="745" y="165" fill="#7acfff">1</text>
-    <text x="790" y="165" fill="#7acfff">...</text>
+    <text x="775" y="165" fill="#7acfff">...</text>
   </g>
 
   <!-- Read/Write head -->

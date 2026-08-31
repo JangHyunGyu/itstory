@@ -33,7 +33,7 @@
       <!-- Z axis (perspective) -->
       <line x1="0" y1="0" x2="-70" y2="50" stroke="#3b82f6" stroke-width="2"/>
       <polygon points="-70,50 -63,43 -60,53" fill="#3b82f6"/>
-      <text x="-85" y="60" font-family="monospace" font-size="9" fill="#3b82f6">d3</text>
+      <text x="-75" y="60" font-family="monospace" font-size="9" fill="#3b82f6">d3</text>
 
       <!-- Vector points (embeddings) -->
       <!-- Cat embeddings cluster -->

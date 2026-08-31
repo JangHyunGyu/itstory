@@ -29,11 +29,11 @@
   <!-- Twisted pair cables from hub to workstations (star topology) -->
   <g stroke="#f0a020" stroke-width="3" opacity="0.8">
     <!-- To top-left desk -->
-    <line x1="345" y1="215" x2="145" y2="110"/>
+    <line x1="345" y1="215" x2="145" y2="130"/>
     <!-- To top desk -->
-    <line x1="390" y1="200" x2="330" y2="110"/>
+    <line x1="390" y1="200" x2="330" y2="125"/>
     <!-- To top-right desk -->
-    <line x1="410" y1="200" x2="490" y2="110"/>
+    <line x1="410" y1="200" x2="490" y2="130"/>
     <!-- To right desk -->
     <line x1="470" y1="230" x2="640" y2="200"/>
     <!-- To bottom-right desk -->
@@ -43,7 +43,7 @@
   </g>
   <!-- Workstation desks in star pattern -->
   <!-- Top-left workstation -->
-  <g transform="translate(120, 110)">
+  <g transform="translate(120, 130)">
     <rect x="-55" y="-10" width="110" height="10" fill="#8a6030" rx="1"/>
     <!-- PC monitor -->
     <rect x="-38" y="-80" width="70" height="55" fill="#2a2a2a" rx="3"/>
@@ -56,7 +56,7 @@
     <text x="0" y="18" font-family="serif" font-size="7" fill="#5a5a5a" text-anchor="middle">Alice</text>
   </g>
   <!-- Top-center workstation -->
-  <g transform="translate(310, 105)">
+  <g transform="translate(310, 125)">
     <rect x="-55" y="-10" width="110" height="10" fill="#8a6030" rx="1"/>
     <rect x="-38" y="-80" width="70" height="55" fill="#2a2a2a" rx="3"/>
     <rect x="-31" y="-73" width="56" height="42" fill="#1a2a3a" rx="1"/>
@@ -67,7 +67,7 @@
     <text x="0" y="18" font-family="serif" font-size="7" fill="#5a5a5a" text-anchor="middle">Bob</text>
   </g>
   <!-- Top-right workstation -->
-  <g transform="translate(500, 110)">
+  <g transform="translate(500, 130)">
     <rect x="-55" y="-10" width="110" height="10" fill="#8a6030" rx="1"/>
     <rect x="-38" y="-80" width="70" height="55" fill="#2a2a2a" rx="3"/>
     <rect x="-31" y="-73" width="56" height="42" fill="#1a2a3a" rx="1"/>

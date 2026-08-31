@@ -114,7 +114,7 @@
   </g>
 
   <!-- LLM Architecture visualization (right) -->
-  <g transform="translate(410, 65)">
+  <g transform="translate(410, 50)">
     <text x="190" y="18" fill="#4488ff" font-size="13" font-family="monospace" text-anchor="middle" font-weight="bold">Transformer Architecture</text>
 
     <!-- Token embedding -->

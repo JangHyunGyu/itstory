@@ -48,8 +48,8 @@
     <!-- Desk -->
     <rect x="-60" y="-65" width="140" height="10" fill="#8a6030" rx="2"/>
     <!-- Metcalfe figure -->
-    <ellipse cx="0" cy="-240" rx="18" ry="18" fill="#d4a870"/>
-    <rect x="-15" y="-223" width="30" height="38" fill="#2a4a2a" rx="3"/>
+    <ellipse cx="0" cy="-220" rx="18" ry="18" fill="#d4a870"/>
+    <rect x="-15" y="-203" width="30" height="38" fill="#2a4a2a" rx="3"/>
     <text x="0" y="-2" font-family="serif" font-size="8" fill="#4a5060" text-anchor="middle">Bob Metcalfe</text>
     <text x="0" y="10" font-family="serif" font-size="7" fill="#4a5060" text-anchor="middle">Ethernet inventor</text>
   </g>
@@ -64,8 +64,8 @@
     <text x="-28" y="-152" font-family="monospace" font-size="5" fill="#1a1a1a">Dover laser...</text>
     <rect x="-48" y="-85" width="96" height="22" fill="#4a4a4a" rx="3"/>
     <rect x="-60" y="-65" width="140" height="10" fill="#8a6030" rx="2"/>
-    <ellipse cx="0" cy="-240" rx="18" ry="18" fill="#c8956a"/>
-    <rect x="-15" y="-223" width="30" height="38" fill="#1a2a4a" rx="3"/>
+    <ellipse cx="0" cy="-220" rx="18" ry="18" fill="#c8956a"/>
+    <rect x="-15" y="-203" width="30" height="38" fill="#1a2a4a" rx="3"/>
     <text x="0" y="-2" font-family="serif" font-size="8" fill="#4a5060" text-anchor="middle">David Boggs</text>
     <text x="0" y="10" font-family="serif" font-size="7" fill="#4a5060" text-anchor="middle">Co-inventor</text>
   </g>
@@ -80,8 +80,8 @@
     <text x="-28" y="-152" font-family="monospace" font-size="5" fill="#1a1a1a">Speed: 2.94 Mbps</text>
     <rect x="-48" y="-85" width="96" height="22" fill="#4a4a4a" rx="3"/>
     <rect x="-60" y="-65" width="140" height="10" fill="#8a6030" rx="2"/>
-    <ellipse cx="0" cy="-240" rx="18" ry="18" fill="#b87858"/>
-    <rect x="-15" y="-223" width="30" height="38" fill="#3a1a1a" rx="3"/>
+    <ellipse cx="0" cy="-220" rx="18" ry="18" fill="#b87858"/>
+    <rect x="-15" y="-203" width="30" height="38" fill="#3a1a1a" rx="3"/>
     <text x="0" y="-2" font-family="serif" font-size="8" fill="#4a5060" text-anchor="middle">Chuck Thacker</text>
   </g>
   <!-- Laser printer (Dover) -->
@@ -127,8 +127,8 @@
     <text x="-30" y="22" font-family="serif" font-size="7" fill="#6a7a8a" text-anchor="middle">Max 1518 bytes · 802.3 standard 1980</text>
   </g>
   <!-- Year label -->
-  <rect x="20" y="18" width="110" height="40" fill="#1a2a4a" rx="6" opacity="0.8"/>
-  <text x="75" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#80c0ff" text-anchor="middle">1973</text>
+  <rect x="10" y="18" width="80" height="40" fill="#1a2a4a" rx="6" opacity="0.8"/>
+  <text x="50" y="44" font-family="serif" font-size="28" font-weight="bold" fill="#80c0ff" text-anchor="middle">1973</text>
   <!-- Caption -->
   <rect x="0" y="410" width="800" height="40" fill="#0a0a1a" opacity="0.8"/>
   <text x="400" y="432" font-family="serif" font-size="14" fill="#e8d8a0" text-anchor="middle">Ethernet Invented · Xerox PARC · Metcalfe &amp; Boggs · Local Area Networks Born</text>
