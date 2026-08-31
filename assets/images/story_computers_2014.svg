@@ -258,6 +258,6 @@
 
   <!-- Title bar -->
   <rect x="0" y="400" width="800" height="50" fill="#050a14" opacity="0.97"/>
-  <text x="400" y="422" fill="#aa44ff" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">딥러닝 · AI 부활의 신호탄</text>
+  <text x="400" y="422" fill="#aa44ff" font-size="17" font-family="Georgia, serif" text-anchor="middle" font-weight="bold">딥러닝 · AI 부활의 계기</text>
   <text x="400" y="442" fill="#6633cc" font-size="12" font-family="Georgia, serif" text-anchor="middle">Deep Learning · Neural Networks · GPU Computing · AlexNet · 2014</text>
 </svg>
