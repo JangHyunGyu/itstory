@@ -374,6 +374,34 @@
         white-space: nowrap;
       }
 
+      .week-deadline {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 6px 10px;
+        margin: 0 0 10px;
+        padding: 8px 10px;
+        border: 1px solid rgba(181, 239, 87, 0.22);
+        border-radius: 10px;
+        color: var(--accent-bright);
+        background: rgba(181, 239, 87, 0.08);
+        font-size: 12px;
+        font-weight: 750;
+      }
+
+      .week-deadline__time {
+        font-family: var(--font-mono);
+        font-size: 13px;
+        font-variant-numeric: tabular-nums;
+        letter-spacing: 0.02em;
+      }
+
+      .week-deadline__meta {
+        margin-left: auto;
+        color: var(--muted);
+        font-weight: 650;
+      }
+
       .question-cell {
         color: #d9e8f2;
         font-size: 13px;
@@ -1234,6 +1262,12 @@
         font-size: 10px;
       }
 
+      .week-deadline {
+        border-color: rgba(181, 239, 87, 0.2);
+        background: rgba(181, 239, 87, 0.07);
+        color: #dcff9e;
+      }
+
       .question-cell {
         min-width: 360px;
         color: #cad8ef;
@@ -1555,6 +1589,14 @@
           margin-bottom: 10px;
           color: #737a72;
           content: "발표 주제";
+        }
+
+        .week-deadline {
+          font-size: 11px;
+        }
+
+        .week-deadline__meta {
+          margin-left: 0;
         }
 
         .parts {
@@ -2289,6 +2331,7 @@
       <span class="footer-note">21주 커리큘럼</span>
     </footer>
 
+    <script src="assets/js/study-week.js"></script>
     <script>
       (() => {
         const rows = [...document.querySelectorAll("tbody tr")];
@@ -2296,6 +2339,7 @@
         const filters = [...document.querySelectorAll(".phase-filter")];
         const status = document.getElementById("filter-status");
         const noResults = document.getElementById("no-results");
+        const study = window.ITStoryStudyWeek;
         const phaseRanges = [
           { key: "foundation", from: 1, to: 4 },
           { key: "visual", from: 5, to: 8 },
@@ -2391,6 +2435,47 @@
             setExpanded(button, shouldOpen);
           });
         });
+
+        const missingOwnerCount = (row) =>
+          [...row.querySelectorAll(".parts li")].filter((item) => {
+            const owner = item.querySelector(".part-owner");
+            return !owner || !owner.textContent.trim();
+          }).length;
+
+        const syncCountdown = () => {
+          if (!study) return;
+          const week = study.getAssignmentWeek(new Date());
+          rows.forEach((row) => row.classList.remove("is-assignment-week"));
+          document.querySelectorAll(".week-deadline").forEach((node) => {
+            if (Number(node.dataset.week) !== week) node.remove();
+          });
+          if (!week || week > rows.length) return;
+
+          const row = rows[week - 1];
+          const missing = missingOwnerCount(row);
+          const existing = row.querySelector(".week-deadline");
+          if (!missing) {
+            existing?.remove();
+            return;
+          }
+
+          row.classList.add("is-assignment-week");
+          const deadline = study.deadlineForWeek(week);
+          const cell = row.querySelector(".parts-cell");
+          const banner = existing || document.createElement("p");
+          if (!existing) {
+            banner.className = "week-deadline";
+            banner.dataset.week = String(week);
+            cell.insertBefore(banner, cell.firstChild);
+          }
+          banner.innerHTML =
+            `<span class="week-deadline__label">금요일 18시 자동 배정까지</span>` +
+            `<time class="week-deadline__time" datetime="${deadline.toISOString()}">${study.formatCountdown(deadline.getTime() - Date.now())}</time>` +
+            `<span class="week-deadline__meta">미지정 ${missing}명</span>`;
+        };
+
+        syncCountdown();
+        setInterval(syncCountdown, 1000);
       })();
     </script>
   </body>

@@ -1,0 +1,65 @@
+name: Assign weekly presenters
+
+on:
+  schedule:
+    - cron: '0 18 * * 5'
+      timezone: 'Asia/Seoul'
+  workflow_dispatch:
+    inputs:
+      week:
+        description: '회차 번호. 비우면 오늘(한국시간) 기준 해당 회차'
+        required: false
+        type: string
+      dry_run:
+        description: '파일만 확인하고 커밋하지 않음'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: assign-weekly-presenters
+  cancel-in-progress: false
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Assign missing owners
+        id: assign
+        env:
+          WEEK: ${{ github.event.inputs.week }}
+        run: |
+          # Keep already named presenters. Randomly fill only empty slots.
+          args=()
+          if [ -n "$WEEK" ]; then
+            args+=(--week "$WEEK")
+          fi
+          node scripts/assign-week-owners.js "${args[@]}"
+
+      - name: Validate
+        if: steps.assign.outputs.changed == 'true'
+        run: npm test
+
+      - name: Commit and push
+        if: steps.assign.outputs.changed == 'true' && github.event.inputs.dry_run != 'true'
+        run: |
+          branch="$(git branch --show-current)"
+          echo "Commit branch: $branch"
+          if [ "$branch" != "main" ]; then
+            echo "Refusing to publish from $branch"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- roadmap.html
+          git commit -m "docs: assign remaining week $(printf '%02d' '${{ steps.assign.outputs.week }}') topic owners"
+          git push origin HEAD:main
