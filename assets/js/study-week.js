@@ -10,7 +10,10 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   const STUDY_START_DATE = '2026-08-07';
   const LAST_WEEK = 21;
-  const DEADLINE_HOUR = 18;
+  const DEADLINE_HOUR = 20;
+  const DEADLINE_WEEKDAY_OFFSET = -2;
+  const EARLY_PRESENTERS = ['장현규', '김유진', '김수민', '변진수'];
+  const FULL_PRESENTERS = EARLY_PRESENTERS.concat(['김태훈']);
 
   function seoulYmd(date) {
     return new Intl.DateTimeFormat('en-CA', {
@@ -33,18 +36,33 @@
   }
 
   function deadlineForWeek(week, startYmd = STUDY_START_DATE) {
-    const start = Date.parse(`${startYmd}T${String(DEADLINE_HOUR).padStart(2, '0')}:00:00+09:00`);
-    return new Date(start + (week - 1) * 7 * 86400000);
+    const friday = Date.parse(`${startYmd}T00:00:00+09:00`) + (week - 1) * 7 * 86400000;
+    const wednesday = friday + DEADLINE_WEEKDAY_OFFSET * 86400000;
+    return new Date(wednesday + DEADLINE_HOUR * 3600000);
   }
 
   function getAssignmentWeek(now = new Date(), startYmd = STUDY_START_DATE) {
-    const week = getStudyWeek(now, startYmd);
-    if (week < 1 || week > LAST_WEEK) return 0;
-    if (now.getTime() >= deadlineForWeek(week, startYmd).getTime()) {
-      const next = week + 1;
-      return next > LAST_WEEK ? 0 : next;
+    for (let week = 1; week <= LAST_WEEK; week += 1) {
+      if (now.getTime() < deadlineForWeek(week, startYmd).getTime()) return week;
     }
-    return week;
+    return 0;
+  }
+
+  function getWeekToFinalize(now = new Date(), startYmd = STUDY_START_DATE) {
+    let closed = 0;
+    for (let week = 1; week <= LAST_WEEK; week += 1) {
+      if (now.getTime() >= deadlineForWeek(week, startYmd).getTime()) closed = week;
+      else break;
+    }
+    return closed;
+  }
+
+  function isSelectionOpen(now = new Date(), week = getAssignmentWeek(now), startYmd = STUDY_START_DATE) {
+    return Boolean(week) && week === getAssignmentWeek(now, startYmd) && now.getTime() < deadlineForWeek(week, startYmd).getTime();
+  }
+
+  function presentersForWeek(week) {
+    return week <= 3 ? EARLY_PRESENTERS.slice() : FULL_PRESENTERS.slice();
   }
 
   function pad(value) {
@@ -65,9 +83,14 @@
     STUDY_START_DATE,
     LAST_WEEK,
     DEADLINE_HOUR,
+    EARLY_PRESENTERS,
+    FULL_PRESENTERS,
     getStudyWeek,
     getAssignmentWeek,
+    getWeekToFinalize,
+    isSelectionOpen,
     deadlineForWeek,
+    presentersForWeek,
     formatCountdown
   };
 });

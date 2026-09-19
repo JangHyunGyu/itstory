@@ -402,6 +402,21 @@
         font-weight: 650;
       }
 
+      .part-owner-select {
+        flex: 0 0 auto;
+        min-width: 96px;
+        max-width: 46%;
+        margin-left: auto;
+        padding: 3px 8px;
+        border: 1px solid rgba(181, 239, 87, 0.28);
+        border-radius: 999px;
+        color: var(--accent-bright);
+        background: rgba(11, 13, 12, 0.92);
+        font: inherit;
+        font-size: 11px;
+        font-weight: 750;
+      }
+
       .question-cell {
         color: #d9e8f2;
         font-size: 13px;
@@ -1599,6 +1614,11 @@
           margin-left: 0;
         }
 
+        .part-owner-select {
+          min-width: 88px;
+          font-size: 11px;
+        }
+
         .parts {
           grid-template-columns: 1fr;
           gap: 7px;
@@ -2332,6 +2352,7 @@
     </footer>
 
     <script src="assets/js/study-week.js"></script>
+    <script src="assets/js/presenter-select.js"></script>
     <script>
       (() => {
         const rows = [...document.querySelectorAll("tbody tr")];
@@ -2436,30 +2457,38 @@
           });
         });
 
-        const missingOwnerCount = (row) =>
-          [...row.querySelectorAll(".parts li")].filter((item) => {
+        const missingOwnerCount = (row) => {
+          const selects = [...row.querySelectorAll(".part-owner-select")];
+          if (selects.length) return selects.filter((select) => !select.value).length;
+          return [...row.querySelectorAll(".parts li")].filter((item) => {
             const owner = item.querySelector(".part-owner");
             return !owner || !owner.textContent.trim();
           }).length;
+        };
 
         const syncCountdown = () => {
           if (!study) return;
-          const week = study.getAssignmentWeek(new Date());
+          const now = new Date();
+          const week = study.getAssignmentWeek(now);
+          const open = study.isSelectionOpen(now, week);
           rows.forEach((row) => row.classList.remove("is-assignment-week"));
           document.querySelectorAll(".week-deadline").forEach((node) => {
             if (Number(node.dataset.week) !== week) node.remove();
           });
-          if (!week || week > rows.length) return;
+          if (!week || week > rows.length || !open) {
+            document.querySelectorAll(".week-deadline").forEach((node) => node.remove());
+            return;
+          }
 
           const row = rows[week - 1];
           const missing = missingOwnerCount(row);
           const existing = row.querySelector(".week-deadline");
+          row.classList.add("is-assignment-week");
           if (!missing) {
             existing?.remove();
             return;
           }
 
-          row.classList.add("is-assignment-week");
           const deadline = study.deadlineForWeek(week);
           const cell = row.querySelector(".parts-cell");
           const banner = existing || document.createElement("p");
@@ -2469,13 +2498,15 @@
             cell.insertBefore(banner, cell.firstChild);
           }
           banner.innerHTML =
-            `<span class="week-deadline__label">금요일 18시 자동 배정까지</span>` +
+            `<span class="week-deadline__label">수요일 20시 자동 배정까지</span>` +
             `<time class="week-deadline__time" datetime="${deadline.toISOString()}">${study.formatCountdown(deadline.getTime() - Date.now())}</time>` +
             `<span class="week-deadline__meta">미지정 ${missing}명</span>`;
         };
 
+        if (window.ITStoryPresenterSelect) window.ITStoryPresenterSelect.mount(rows, study);
         syncCountdown();
         setInterval(syncCountdown, 1000);
+        window.addEventListener("itstory-assignments", syncCountdown);
       })();
     </script>
   </body>

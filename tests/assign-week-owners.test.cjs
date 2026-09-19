@@ -6,6 +6,7 @@ const path = require('node:path');
 const {
   getStudyWeek,
   getAssignmentWeek,
+  getWeekToFinalize,
   deadlineForWeek,
   presentersForWeek,
   parsePartItems,
@@ -34,12 +35,14 @@ test('Friday 18:00 KST maps to that calendar week', () => {
   assert.equal(getStudyWeek(new Date('2026-09-25T18:00:00+09:00')), 8);
 });
 
-test('assignment countdown stays on the current week until Friday 18:00', () => {
-  assert.equal(getAssignmentWeek(new Date('2026-09-18T17:59:59+09:00')), 7);
-  assert.equal(getAssignmentWeek(new Date('2026-09-18T18:00:00+09:00')), 8);
+test('assignment stays open until Wednesday 20:00 before that Friday session', () => {
+  assert.equal(deadlineForWeek(8).toISOString(), new Date('2026-09-23T20:00:00+09:00').toISOString());
+  assert.equal(getAssignmentWeek(new Date('2026-09-16T19:59:59+09:00')), 7);
+  assert.equal(getAssignmentWeek(new Date('2026-09-16T20:00:00+09:00')), 8);
   assert.equal(getAssignmentWeek(new Date('2026-09-19T09:00:00+09:00')), 8);
-  assert.equal(getAssignmentWeek(new Date('2026-09-25T17:59:59+09:00')), 8);
-  assert.equal(deadlineForWeek(8).toISOString(), new Date('2026-09-25T18:00:00+09:00').toISOString());
+  assert.equal(getAssignmentWeek(new Date('2026-09-23T19:59:59+09:00')), 8);
+  assert.equal(getAssignmentWeek(new Date('2026-09-23T20:00:00+09:00')), 9);
+  assert.equal(getWeekToFinalize(new Date('2026-09-23T20:05:00+09:00')), 8);
 });
 
 test('countdown clock formats remaining time', () => {
@@ -140,10 +143,19 @@ test('assignment is idempotent after empty slots are filled', () => {
   assert.equal(again.changed, false);
 });
 
+test('remote combo choices are kept before random fill', () => {
+  const html = `<th class="week-cell" scope="row"><span>회차</span>08</th>
+<td class="parts-cell"><ol class="parts"><li>HTML 파싱과 DOM</li><li>CSSOM</li><li>렌더 트리와 레이아웃</li><li>페인트와 합성</li><li>렌더링 타이밍과 성능</li></ol></td>`;
+  const result = assignWeekOwners(html, 8, () => 0, { CSSOM: '김유진', 'HTML 파싱과 DOM': '장현규' });
+  assert.match(result.html, /<span class="part-topic">HTML 파싱과 DOM<\/span><span class="part-owner">장현규<\/span>/);
+  assert.match(result.html, /<span class="part-topic">CSSOM<\/span><span class="part-owner">김유진<\/span>/);
+});
+
 test('roadmap includes study-week countdown assets', () => {
   const html = fs.readFileSync(path.join(__dirname, '..', 'roadmap.html'), 'utf8');
   assert.match(html, /assets\/js\/study-week\.js/);
-  assert.match(html, /금요일 18시 자동 배정까지/);
+  assert.match(html, /수요일 20시 자동 배정까지/);
+  assert.match(html, /assets\/js\/presenter-select\.js/);
   assert.match(html, /<span class="part-topic">Flexbox<\/span><span class="part-owner">김유진<\/span>/);
 });
 

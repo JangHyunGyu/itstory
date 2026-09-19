@@ -2,7 +2,7 @@ name: Assign weekly presenters
 
 on:
   schedule:
-    - cron: '0 18 * * 5'
+    - cron: '5 20 * * 3'
       timezone: 'Asia/Seoul'
   workflow_dispatch:
     inputs:
@@ -37,8 +37,9 @@ jobs:
         id: assign
         env:
           WEEK: ${{ github.event.inputs.week }}
+          PRESENTER_API_URL: https://itstory-presenters.archerlab.dev
         run: |
-          # Keep already named presenters. Randomly fill only empty slots.
+          # Keep chosen presenters. Randomly fill only empty slots after Wednesday 20:00.
           args=()
           if [ -n "$WEEK" ]; then
             args+=(--week "$WEEK")

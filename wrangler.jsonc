@@ -1,0 +1,20 @@
+{
+  "name": "itstory-presenters",
+  "main": "worker/presenters.js",
+  "compatibility_date": "2026-09-18",
+  "observability": {
+    "enabled": true
+  },
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "itstory-presenters.archerlab.dev/*", "zone_name": "archerlab.dev" }
+  ],
+  "durable_objects": {
+    "bindings": [
+      { "name": "BOARD", "class_name": "PresenterBoard" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["PresenterBoard"] }
+  ]
+}

@@ -8,8 +8,15 @@ const {
   LAST_WEEK,
   getStudyWeek,
   getAssignmentWeek,
+  getWeekToFinalize,
   deadlineForWeek
 } = require('../assets/js/study-week.js');
+
+const PRESENTER_API_URLS = [
+  process.env.PRESENTER_API_URL,
+  'https://itstory-presenters.archerlab.dev',
+  'https://itstory-presenters.yama5993.workers.dev'
+].filter(Boolean);
 
 const EARLY_PRESENTERS = ['장현규', '김유진', '김수민', '변진수'];
 const FULL_PRESENTERS = [...EARLY_PRESENTERS, '김태훈'];
@@ -87,7 +94,7 @@ function fillUnassignedOwners(items, week, randomInt) {
   });
 }
 
-function assignWeekOwners(html, week, randomInt) {
+function assignWeekOwners(html, week, randomInt, seedOwners = {}) {
   if (week < 1 || week > LAST_WEEK) {
     return { changed: false, html, week, reason: 'out-of-range', assignments: [] };
   }
@@ -97,13 +104,17 @@ function assignWeekOwners(html, week, randomInt) {
     return { changed: false, html, week, reason: 'missing-week', assignments: [] };
   }
 
-  const items = parsePartItems(found.inner);
-  if (!items.length) {
+  const originalItems = parsePartItems(found.inner);
+  if (!originalItems.length) {
     return { changed: false, html, week, reason: 'no-topics', assignments: [] };
   }
 
+  const items = originalItems.map((item) => ({
+    ...item,
+    owner: item.owner || seedOwners[item.topic] || ''
+  }));
   const assigned = fillUnassignedOwners(items, week, randomInt);
-  const newlyAssigned = assigned.filter((item, index) => item.owner && item.owner !== items[index].owner);
+  const newlyAssigned = assigned.filter((item, index) => item.owner && item.owner !== originalItems[index].owner);
   if (!newlyAssigned.length) {
     return { changed: false, html, week, reason: 'already-assigned', assignments: assigned };
   }
@@ -144,12 +155,27 @@ function parseArgs(argv) {
   return options;
 }
 
-function main(argv = process.argv.slice(2)) {
+async function fetchRemoteOwners(week) {
+  for (const base of PRESENTER_API_URLS) {
+    try {
+      const response = await fetch(`${base.replace(/\/$/, '')}/week/${week}`);
+      if (!response.ok) continue;
+      const payload = await response.json();
+      if (payload.assignments && typeof payload.assignments === 'object') return payload.assignments;
+    } catch (error) {
+      // try the next API host
+    }
+  }
+  return {};
+}
+
+async function main(argv = process.argv.slice(2)) {
   const options = parseArgs(argv);
   const now = options.now ? new Date(options.now) : new Date();
-  const week = options.week || getStudyWeek(now);
+  const week = options.week || getWeekToFinalize(now);
   const original = fs.readFileSync(options.file, 'utf8');
-  const result = assignWeekOwners(original, week);
+  const seedOwners = await fetchRemoteOwners(week);
+  const result = assignWeekOwners(original, week, undefined, seedOwners);
 
   const summary = result.newlyAssigned
     ? result.newlyAssigned.map((item) => `${item.topic}=${item.owner}`).join(', ')
@@ -175,6 +201,7 @@ module.exports = {
   FULL_PRESENTERS,
   getStudyWeek,
   getAssignmentWeek,
+  getWeekToFinalize,
   deadlineForWeek,
   presentersForWeek,
   shuffle,
@@ -186,5 +213,8 @@ module.exports = {
 };
 
 if (require.main === module) {
-  main();
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
 }

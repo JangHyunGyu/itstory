@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "node tools/build-site.cjs",
-    "test": "node tests/browser-check.test.cjs && node tests/assign-week-owners.test.cjs && node validate.js && npm run build"
+    "test": "node tests/browser-check.test.cjs && node tests/assign-week-owners.test.cjs && node tests/presenter-assign.test.cjs && node validate.js && npm run build",
+    "deploy:presenters": "npx --yes wrangler@4 deploy"
   }
 }
