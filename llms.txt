@@ -45,3 +45,9 @@ ArcherLab IT Story is an educational timeline hub for developers, students, and 
 
 ## Category
 IT History, Computer Science, Developer Education, Technology Timeline
+
+## Service guide (what it is, pricing, how to use, FAQ)
+- Korean: https://itstory.archerlab.dev/seo/itstory-about.html
+- English: https://itstory.archerlab.dev/seo/itstory-about-en.html
+- Full text for AI systems: https://itstory.archerlab.dev/llms-full.txt
+- Last updated: 2026-10-02

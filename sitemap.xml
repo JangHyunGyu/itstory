@@ -216,4 +216,24 @@
     <lastmod>2026-10-02</lastmod>
   </url>
 <!-- traffic-pages:end -->
+<!-- about-pages:start -->
+  <url>
+    <loc>https://itstory.archerlab.dev/seo/itstory-about.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/seo/itstory-about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/seo/itstory-about-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/seo/itstory-about-en.html"/>
+  </url>
+  <url>
+    <loc>https://itstory.archerlab.dev/seo/itstory-about-en.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itstory.archerlab.dev/seo/itstory-about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itstory.archerlab.dev/seo/itstory-about-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itstory.archerlab.dev/seo/itstory-about-en.html"/>
+  </url>
+<!-- about-pages:end -->
 </urlset>

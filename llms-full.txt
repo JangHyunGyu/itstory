@@ -1,0 +1,119 @@
+# ArcherLab IT Story — full service description
+
+---
+
+## IT 스토리란? 컴퓨터·인터넷·OS·웹·DB의 역사를 연표로 읽는 사이트 (ko)
+
+URL: https://itstory.archerlab.dev/seo/itstory-about.html
+Last updated: 2026-10-02
+
+ArcherLab IT Story는 1830년대 전신부터 컴퓨터, 운영체제, 웹과 서버, 데이터베이스까지 IT 기술의 발전 과정을 연도별 타임라인으로 정리한 무료 학습 사이트입니다. 기술 이름보다 그때 막힌 문제와 사람을 먼저 적고, 낯선 용어에는 짧은 풀이를 달았습니다. 회원가입이나 설치 없이 브라우저에서 읽을 수 있습니다.
+
+### 한눈에 보기
+- 서비스: ArcherLab IT Story — IT 역사 타임라인 허브
+- 이용 요금: 무료
+- 가입·설치: 회원가입과 설치 없이 브라우저에서 이용
+- 구성: 컴퓨터, 네트워크, 운영체제, 데이터베이스, 웹 제작(구조·스타일·인터랙션·도구), 웹 서버 연대기
+- 준비 중: 보안과 신뢰, 프로토콜과 표준
+- 언어: 한국어, 영어
+- 운영: ArcherLab (장현규)
+
+### Who it is for / 대상
+- 개발자나 IT 전공 학생으로 기술이 왜 지금 모습이 되었는지 흐름을 알고 싶은 분
+- 웹이나 서버, 데이터베이스를 쓰면서 배경을 한 번 훑고 싶은 입문자
+- IT 역사에 관심 있는 일반 독자
+
+### How to use / 이용 방법
+1. 홈에서 보고 싶은 주제(컴퓨터, 네트워크, 운영체제, 웹, 웹 서버, 데이터베이스)를 고릅니다.
+2. 연표에서 관심 있는 연도 카드를 누르면 그해의 일과 배경이 열립니다.
+3. 웹 제작 연대기는 구조·스타일·인터랙션·도구 네 개의 세부 타임라인으로 나뉘어 있으니 순서대로 이어 읽습니다.
+4. 어디서부터 읽을지 모르겠다면 IT 역사 공부 순서 안내를 먼저 봅니다.
+
+### Features / 기능
+- 주제별 연대기: 컴퓨터, 네트워크, 운영체제, 데이터베이스, 웹 제작, 웹 서버
+- 연도 카드를 누르면 그해의 문제와 다음 기술에 남은 영향을 읽는 방식
+- 낯선 용어에 붙인 짧은 풀이
+- 한국어와 영어 페이지
+
+### Notes / 알아 둘 점
+- IT 역사는 자료마다 연도나 해석이 다를 수 있습니다. 학술적 인용이 필요하면 원 자료를 함께 확인하세요.
+- 보안과 프로토콜·표준 연표는 아직 준비 중입니다.
+
+### FAQ
+
+**IT 스토리는 무료인가요?**
+네. 무료이고 가입도 필요하지 않습니다.
+
+**어떤 주제를 다루나요?**
+컴퓨터, 네트워크, 운영체제, 데이터베이스, 웹 제작, 웹 서버의 연대기를 다룹니다. 보안과 프로토콜·표준은 준비 중입니다.
+
+**어디서부터 읽으면 좋은가요?**
+IT 역사 공부 순서 안내가 컴퓨터부터 웹까지 읽는 순서를 정리해 두었습니다. 아니면 관심 있는 주제의 연대기에서 바로 시작해도 됩니다.
+
+**연도 카드는 무엇인가요?**
+타임라인의 각 연도를 누르면 그해에 있었던 일과 배경이 한 화면에 열리는 카드입니다.
+
+**영어로도 볼 수 있나요?**
+네. 각 연대기에 영어 페이지가 있습니다.
+
+**인터넷과 웹은 같은 건가요?**
+다릅니다. 인터넷은 네트워크 기반 구조이고 웹은 그 위에서 돌아가는 서비스입니다. 차이는 인터넷과 웹 안내에서 한 번의 요청 흐름으로 설명합니다.
+
+---
+
+## What is IT Story? Read the history of computers, the internet, OS, web and databases as timelines (en)
+
+URL: https://itstory.archerlab.dev/seo/itstory-about-en.html
+Last updated: 2026-10-02
+
+ArcherLab IT Story is a free learning site that follows IT history from the 1830s telegraph through computers, operating systems, the web and servers, and databases, as year-by-year timelines. Each entry starts with the problem and the people behind a technology, and unfamiliar terms come with short explanations. It runs in the browser with no signup or install.
+
+### At a glance
+- Service: ArcherLab IT Story — IT history timeline hub
+- Price: Free
+- Signup / install: No signup or install; runs in the browser
+- Contents: Computers, networks, operating systems, databases, web making (structure, styling, interaction, tools) and web servers
+- In progress: Security and trust, protocols and standards
+- Languages: Korean, English
+- Operator: ArcherLab (Hyungyu Jang)
+
+### Who it is for / 대상
+- Developers and CS students who want to know why technology looks the way it does
+- Beginners using the web, servers or databases who want the background
+- General readers interested in the history of IT
+
+### How to use / 이용 방법
+1. From the home page, choose a topic: computers, networks, operating systems, web, web servers or databases.
+2. Select a year card on the timeline to open what happened that year and why.
+3. The web making timeline splits into four parts — structure, styling, interaction and tools — so read them in turn.
+4. If you are unsure where to begin, start with the study-order guide (Korean).
+
+### Features / 기능
+- Topic timelines: computers, networks, operating systems, databases, web making and web servers
+- Year cards that explain the problem of the time and its effect on later technology
+- Short explanations for unfamiliar terms
+- Korean and English pages
+
+### Notes / 알아 둘 점
+- Dates and interpretations differ between sources. If you need to cite IT history formally, check the original sources too.
+- The security and protocol/standards timelines are not available yet.
+
+### FAQ
+
+**Is IT Story free?**
+Yes. It is free and needs no account.
+
+**What topics does it cover?**
+Computers, networks, operating systems, databases, web making and web servers. Security and protocols/standards are in progress.
+
+**Where should I start?**
+Pick any topic that interests you. The Korean study-order guide suggests a path from computers to the web.
+
+**What is a year card?**
+A card on the timeline that opens a short explanation of what happened that year and its background.
+
+**Is there a Korean version?**
+Yes. The Korean home page is the main version and each timeline has both languages.
+
+**Are the internet and the web the same?**
+No. The internet is the network infrastructure and the web is a service that runs on it. The Korean "Internet vs Web" guide walks through one request.
