@@ -203,6 +203,10 @@
 								<span class="timeline-event__year">2014</span>
 								<span class="timeline-event__label">Webpack 1.0</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2016-left-pad">
+								<span class="timeline-event__year">2016</span>
+								<span class="timeline-event__label">npm left-pad outage</span>
+							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2016-netlify">
 								<span class="timeline-event__year">2016</span>
 								<span class="timeline-event__label">Netlify CI/CD</span>
@@ -220,6 +224,10 @@
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2021-codespaces">
 								<span class="timeline-event__year">2021</span>
 								<span class="timeline-event__label">GitHub Codespaces GA</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2021-codecov">
+								<span class="timeline-event__year">2021</span>
+								<span class="timeline-event__label">Codecov supply-chain breach</span>
 							</button>
 							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-ai-assist">
 								<span class="timeline-event__year">2023</span>
@@ -385,6 +393,27 @@
 			</article>
 		</template>
 
+		<template id="event-2016-left-pad">
+			<article class="event-detail" aria-labelledby="event-2016-left-pad-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2016</p>
+					<h2 id="event-2016-left-pad-title">left-pad, when 11 lines of code stopped the world</h2>
+					<p class="event-detail__summary">One person deleted an 11-line package, and the build systems at companies the size of Facebook and Netflix stopped at the same time.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>One day in March 2016, development systems at thousands of companies <strong>stopped at once</strong>. Facebook, Netflix, Airbnb — even the giants could not build their code. The cause was the deletion of <strong>one 11-line package</strong>. Its name was <code>left-pad</code>. All it did was pad the front of a string so the length matched.</p>
+						<p>JavaScript developers do not write every small helper themselves. They take other people's code from a shared warehouse called <strong>npm</strong>. left-pad was one of those helpers, and it was so convenient that huge projects such as React and Babel all depended on it. That day a developer got into a name dispute with npm and, as a protest, deleted every package he had published. left-pad was among them.</p>
+						<p>Builds failed in a chain, like dominoes. One developer typed into chat: <em>"Why did we suddenly get 'cannot find left-pad'? Nobody touched our code!"</em> A teammate answered: <em>"Someone deleted the package from npm. We depend on a package that depends on a package that depends on it, and the whole chain broke."</em> npm restored the package and the outage settled, but the fact that 11 lines had shaken the world was the shock.</p>
+						<p>The lesson was blunt: <strong>depending on other people's code without a limit is dangerous.</strong> Afterward companies made <strong>lockfiles</strong> (pinning an exact version), <strong>private registries</strong> (keeping a copy of important packages inside the company), and security checks mandatory. Eleven lines of code changed the safety habits of a whole industry.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>npm used the incident to revise package-ownership rules and to limit unpublishing of core packages. left-pad made supply-chain risk concrete, and many organizations added registry mirrors, live-patch plans, and signature checks because of it.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
 		<template id="event-2016-netlify">
 			<article class="event-detail" aria-labelledby="event-2016-netlify-title">
 				<header class="event-detail__header">
@@ -422,6 +451,27 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>Codespaces delivers containerized environments on demand, simplifying onboarding and collaboration. Shared configs replaced manual machine setup.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2021-codecov">
+			<article class="event-detail" aria-labelledby="event-2021-codecov-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2021</p>
+					<h2 id="event-2021-codecov-title">The Codecov breach, when a trusted tool stole secrets</h2>
+					<p class="event-detail__summary">A popular checking tool was quietly compromised for three months, and company passwords and access keys were leaving the building.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p>In April 2021, security teams around the world went cold. <strong>Codecov</strong>, a popular tool, had been <strong>compromised in secret for three months</strong>. Codecov checks how much of a codebase the tests cover. Thousands of companies, from giants such as Facebook and Google down to small startups, had wired it into their automated builds.</p>
+						<p>The attacker was precise. Companies download a small script automatically when they run Codecov, and the attacker <strong>added one hidden line to that script</strong>. The line's job was to send out secrets the company thought it was keeping private: <strong>API keys, database passwords, and cloud credentials</strong>. Companies used a tool they trusted every day and did not know it was taking their secrets.</p>
+						<p>After the discovery, a SaaS security lead said in an emergency meeting: <em>"Reissue every API key right now. We cannot tell who took our secrets, so every existing key has to be revoked."</em> Companies worldwide rotated secrets at the same time. If left-pad the year before had shown how a supply chain can fall over by accident, Codecov showed <strong>how it can fall over because someone attacked it</strong>.</p>
+						<p>The new habit was: <strong>check, every time, that the tool you are running is still the tool you think it is.</strong> Standards for signing code so tampering is visible — <strong>sigstore and SLSA</strong> — spread quickly, and verifying a chain of trust inside every automated build became an obligation. A baseline for threats you cannot see had arrived.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Codecov disclosed the breach on its blog and in an SEC filing on April 15, 2021. The incident put CI/CD supply-chain risk back in view, and many teams added script integrity checks, least-privilege secrets, and audit-log monitoring because of it.</p>
 					</div>
 				</section>
 			</article>

@@ -380,7 +380,7 @@
 	const resetModalScroll = () => {
 		if (modalContent) {
 			if (typeof modalContent.scrollTo === 'function') {
-				modalContent.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+				modalContent.scrollTo({ top: 0, left: 0, behavior: 'auto' });
 			} else {
 				modalContent.scrollTop = 0;
 				modalContent.scrollLeft = 0;
@@ -388,7 +388,7 @@
 		}
 		if (modalWindow) {
 			if (typeof modalWindow.scrollTo === 'function') {
-				modalWindow.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+				modalWindow.scrollTo({ top: 0, left: 0, behavior: 'auto' });
 			} else {
 				modalWindow.scrollTop = 0;
 				modalWindow.scrollLeft = 0;

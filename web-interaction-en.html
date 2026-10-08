@@ -239,6 +239,14 @@
 								<span class="timeline-event__year">2014</span>
 								<span class="timeline-event__label">Service Worker Draft</span>
 							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2015-flash-zero-day">
+								<span class="timeline-event__year">2015</span>
+								<span class="timeline-event__label">Flash Zero-Day Shutdown</span>
+							</button>
+							<button class="timeline-event" type="button" role="listitem" data-event-id="2017-cloudbleed">
+								<span class="timeline-event__year">2017</span>
+								<span class="timeline-event__label">Cloudflare Cloudbleed</span>
+							</button>
 						</div>
 					</section>
 
@@ -504,6 +512,48 @@
 					</div>
 					<div class="event-detail__notes">
 						<p>Fetch interception and programmable caches redefined the web as a capable offline platform, influencing edge and worker-based architectures.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2015-flash-zero-day">
+			<article class="event-detail" aria-labelledby="event-2015-flash-zero-day-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2015</p>
+					<h2 id="event-2015-flash-zero-day-title">The fall of Flash, a 24-year throne collapses</h2>
+					<p class="event-detail__summary">An Italian hacking company got hacked, and Flash's hidden security holes spilled into public view. Hundreds of thousands of people were hit within days, and Google, Mozilla, and Microsoft started blocking Flash together.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p><strong>Flash</strong> (1996) had built the golden age of the 2000s web, but it had an Achilles heel: <strong>serious security holes that never stopped appearing</strong>. Attackers used those gaps to take over a visitor's computer, and Adobe had to ship an emergency patch almost every month. Plenty of sites, especially video sites, still depended on Flash, so people kept the plugin installed anyway.</p>
+						<p>In July 2015 the shock arrived. <strong>Hacking Team</strong>, an Italian company that sold hacking tools to governments, was itself breached and its internal files were dumped. Inside was a <strong>Flash zero-day</strong> nobody had known about, CVE-2015-5119. Once it was public, attackers worldwide started using the hole immediately. Hundreds of thousands of people were harmed within a few days.</p>
+						<p>The major browser makers decided together. <strong>Google, Mozilla, and Microsoft blocked Flash by default.</strong> A security lead put it plainly: <em>"A site that still needs Flash is a risk. Ask the user 'do you really want to run this?' every time, and block it unless they say yes. We cannot keep depending on Flash."</em> That incident was the blow that started the end.</p>
+						<p>Five years later, on <strong>December 31, 2020</strong>, Adobe officially retired Flash. A technology that had held the throne of web animation for 24 years was over. The larger lesson stuck: <strong>even a core technology has to be dropped when the security cost gets too high.</strong> Afterward the industry got faster at making that call, and at planning an end date before the next incident forced one.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Adobe shipped APSB15-16 to fix critical bugs including CVE-2015-5119 and CVE-2015-5122. The incident pushed Flash-dependent services off NPAPI and ActiveX and onto JavaScript and HTML5, and it is why the major browsers disabled Flash by default.</p>
+					</div>
+				</section>
+			</article>
+		</template>
+
+		<template id="event-2017-cloudbleed">
+			<article class="event-detail" aria-labelledby="event-2017-cloudbleed-title">
+				<header class="event-detail__header">
+					<p class="event-detail__year">2017</p>
+					<h2 id="event-2017-cloudbleed-title">Cloudbleed, passwords leaking for five months</h2>
+					<p class="event-detail__summary">A giant company that protected millions of sites was, without knowing it, spilling user passwords and chat text into Google search. One small bug showed that a single mistake can shake the whole internet.</p>
+				</header>
+				<section class="event-detail__body">
+					<div class="event-detail__story">
+						<p><strong>Cloudflare</strong> sits in front of millions of websites, taking their traffic, caching it, and protecting it. In February 2017 a Google security researcher found something grim: <strong>pieces of Cloudflare server memory were being mixed at random into responses for other sites.</strong> That memory held <strong>passwords, session tokens, chat messages, and email</strong>.</p>
+						<p>The cause was a <strong>small bug in an HTML parser</strong>. Certain HTML made the parser read past a memory boundary and print another user's data along with the page. Search engines had cached the poisoned pages, so a password could show up in a Google result. The researcher told Cloudflare immediately. The incident was named <strong>Cloudbleed</strong>.</p>
+						<p>Cloudflare's security team shipped a patch in seven hours, but the bug had already been running for five months. A security lead wrote in the postmortem: <em>"We immediately asked every search engine to delete the cached pages, and we told the affected sites. Fortunately we found no sign that anyone had exploited it on purpose."</em> The trust shock was still large. A security company had been leaking other people's secrets for five months without noticing.</p>
+						<p>The incident made the danger of a <strong>single point of failure</strong> concrete. When too many sites depend on one company, that company's small bug can move the whole internet. Many companies later put more than one CDN in front of the same site, and a push began to rewrite critical infrastructure in memory-safe languages such as Rust. It was one step toward a safer web.</p>
+					</div>
+					<div class="event-detail__notes">
+						<p>Cloudflare said the bug was a boundary error in its HTML parser and that the leak ran from February 13 to February 18, 2017. The incident showed that reverse proxies and CDNs need their own incident process, and it pushed major services to invalidate sessions automatically and watch their traffic more closely.</p>
 					</div>
 				</section>
 			</article>

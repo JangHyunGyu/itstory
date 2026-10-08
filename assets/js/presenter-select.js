@@ -81,12 +81,13 @@
     }
     const current = assignments[topic] || '';
     const names = [''].concat(availablePeople(assignments, topic, presenters));
-    const markup = names
-      .map((name) => `<option value="${name}"${name === current ? ' selected' : ''}>${name || '미지정'}</option>`)
-      .join('');
-    if (select.innerHTML !== markup) {
-      select.innerHTML = markup;
+    const desired = names.map((name) => `${name}=${name === current ? '1' : '0'}`).join('|');
+    if (select.dataset.optionState !== desired) {
+      select.innerHTML = names
+        .map((name) => `<option value="${name}"${name === current ? ' selected' : ''}>${name || '미지정'}</option>`)
+        .join('');
       select.value = current;
+      select.dataset.optionState = desired;
     }
     select.disabled = false;
   }
