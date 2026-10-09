@@ -261,6 +261,24 @@
 					});
 					return fallbackFragment;
 				})();
+			// 모달에 복제되는 제목 id와 겹치면 대화상자의 이름이 숨은 본문을 가리킨다.
+			fragment.querySelectorAll('[id]').forEach((node) => {
+				node.id = `archive-${node.id}`;
+			});
+			fragment.querySelectorAll('[aria-labelledby],[aria-describedby]').forEach((node) => {
+				['aria-labelledby', 'aria-describedby'].forEach((attribute) => {
+					const value = node.getAttribute(attribute);
+					if (!value) return;
+					node.setAttribute(
+						attribute,
+						value
+							.split(/\s+/)
+							.filter(Boolean)
+							.map((id) => (id.startsWith('archive-') ? id : `archive-${id}`))
+							.join(' ')
+					);
+				});
+			});
 			body.appendChild(fragment);
 			details.appendChild(body);
 			listContainer.appendChild(details);
@@ -508,13 +526,19 @@
 	};
 
 	// 간단한 용어집: 전문 용어를 일상어로 풀어쓴 설명
-	const GLOSSARY = {
+	const GLOSSARY_KO = {
 		"Ethernet": "LAN 케이블이라고 부르는 선으로 여러 기기가 차례대로 데이터를 주고받을 수 있게 만든 통신 방법입니다.",
 		"TSN": "Time-Sensitive Networking의 줄임말로, 공장 로봇이나 자율주행차처럼 타이밍이 중요한 장비가 끊김 없이 정보를 처리하도록 돕는 이더넷 기능입니다.",
 		"IEEE": "전 세계 연구자와 기업이 모여 전기와 전자 제품이 같은 규칙으로 동작하도록 기준을 만드는 국제 단체입니다.",
 		"프레임": "네트워크에서 한 번에 보내는 데이터 꾸러미입니다. 편지 봉투 하나에 주소와 내용을 담아 보내는 것과 비슷합니다.",
 		"지터": "동영상이나 통화가 끊길 때 느끼는 들쭉날쭉한 지연입니다. 데이터가 제시간에 도착하지 못해 생기는 시간 차이를 말합니다."
 	};
+	const GLOSSARY_EN = {
+		"Ethernet": "A method that lets devices on the same local network take turns sending data over a cable. The network port on a home router is Ethernet.",
+		"TSN": "Short for Time-Sensitive Networking. Ethernet features that help equipment which must stay on schedule, such as factory robots and autonomous vehicles, exchange data without timing gaps.",
+		"IEEE": "The international body where researchers and companies agree on shared rules so electrical and electronic products can work together."
+	};
+	const GLOSSARY = currentDocumentLanguage === 'en' ? GLOSSARY_EN : GLOSSARY_KO;
 
 	const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 	const GLOSSARY_PATTERN = Object.keys(GLOSSARY).map(escapeRegExp).join("|");

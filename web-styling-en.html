@@ -323,6 +323,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_1984.svg" alt="Illustration of the 1984 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>Up through the early 1980s, making a magazine or a book was strictly <strong>professional territory</strong>. To get your writing to look like real print, you either walked into a print shop where typesetters laid out metal type by hand, or you used industrial equipment that cost as much as a car. A neighborhood café that wanted a menu, or a school club that wanted a newsletter, paid a designer real money — and then waited a week for the result.</p>
 						<p>When the Macintosh appeared in 1984, somebody at Aldus had a bold thought: <em>"You can lay out text and pictures right here on this little screen. And you can print exactly what you see on one of those new laser printers. So… why couldn't a person just make a magazine at home, without ever calling a print shop?"</em></p>
 						<p>That question became <strong>Aldus PageMaker</strong>, released in 1984. A designer would arrange text and photos on the Macintosh screen with a mouse, and the layer of paper that came out of the printer matched it exactly. A magazine editor finished her first issue and was almost emotional about it: <em>"The work I used to send out to a print shop, I'm doing on my own desk now. The cost is one-tenth of what it was, and I see the result instantly."</em> A new word was coined for what was happening — <strong>"desktop publishing."</strong></p>
@@ -344,6 +345,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_1987.svg" alt="Illustration of the 1987 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>Letters on a 1980s computer had a strange limitation. They looked decent at small sizes, but the moment you blew them up, the curves <strong>turned into staircases</strong>. Each letter was stored as a small grid of dots (pixels), and zooming in just made the dots bigger. Ad designers grumbled, <em>"I want to print my poster headline really large, but every digital font I try looks shattered. Do I really have to draw the headline by hand on paper?"</em></p>
 						<p>Engineers at Adobe had a completely different idea. <em>"Don't store letters as dots. Store them as <strong>mathematical formulas</strong>. 'A curve starts here, bends at this angle, ends here.' Then you can draw the same letter at any size and it will always be smooth."</em></p>
 						<p>That insight shipped as <strong>PostScript Type 1</strong> in 1987, and it was a quiet revolution for typography. A print shop owner saw his first PostScript output and was startled: <em>"The curves I see on the screen come out exactly the same on paper. I can blow up a 12pt letter to 72pt and the edges still look perfect."</em> Whatever size you printed at, the same font came out the same shape.</p>
@@ -365,6 +367,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_1994.svg" alt="Illustration of the 1994 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>In the early 1990s, web pages had a strange habit. All the visual decisions — colors, fonts, margins — were <strong>baked directly into the HTML</strong> file. Things like <code>&lt;font color="red" size="5"&gt;Headline&lt;/font&gt;</code>. Now imagine your site grows to 100 pages. The day the company decides to switch from red to blue, somebody has to find every single <code>color="red"</code> across all 100 pages and change them by hand. Miss one, and that one page stays red forever.</p>
 						<p>A Norwegian developer named <strong>Håkon Wium Lie</strong> was working at CERN in 1994 and felt this pain every day. He sent a memo around to his colleagues. <em>"Let's do this differently. Inside HTML, we describe only the <strong>structure</strong> — 'this is a heading, this is a paragraph.' But we move the <strong>visual styling</strong> — the colors and fonts — into a separate file. Then to redesign the whole site, you only edit that one file. And designers and developers get to work in parallel for the first time."</em></p>
 						<p>The idea inside that memo was <strong>CSS</strong> (Cascading Style Sheets). The deeper concept of "separate content from presentation" wasn't actually new — IBM's GML had been preaching it back in 1969. But it took 25 years for the web to take it seriously.</p>
@@ -386,6 +389,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_1996.svg" alt="Illustration of the 1996 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>The CSS idea existed by 1994, but actually using it had a serious problem: <strong>every browser interpreted it differently</strong>. You wrote "red" and got real red in Netscape, an orangey hue in Internet Explorer, and pink in another browser. "Margin: 10 pixels" came out as 8 pixels here and 12 there. Designers were despairing: <em>"Which browser is even right? What am I supposed to design against?"</em></p>
 						<p>The web standards body <strong>W3C</strong> stepped in. <em>"Let's write the rules down. 'Red is exactly this color.' '10 pixels is exactly this distance.' One official document that everyone agrees on, and every browser has to follow it."</em></p>
 						<p>In 1996, the <strong>CSS1</strong> Recommendation was published. It was the first official spec that nailed down all the basics — colors, fonts, margins, alignment, backgrounds, borders. The lead at a web studio breathed a sigh of relief: <em>"I can finally promise a client, 'this will look the same in every browser,' and mean it. We can predict our own work."</em></p>
@@ -407,6 +411,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_1998.svg" alt="Illustration of the 1998 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>CSS1 (1996) covered the basics, but <strong>important things were still missing</strong>. Take printing: when you sent a webpage to your printer, you wanted just the article, not the ads or the navigation menu — but CSS1 had no way to give you a different style for print versus screen. Visually impaired users with screen readers? No way to style for them either. Everything got rendered the same way for everyone, which was a real ceiling.</p>
 						<p>So in 1998 the W3C published <strong>CSS2</strong> with a new proposal: <em>"Let one page have multiple style sheets that activate in different contexts. A screen style. A print style. A speech-synthesis style. The same content adapts to where it's going."</em></p>
 						<p>The key piece was a new bit of syntax: <code>@media</code>. Write <code>@media print { .ad { display: none; } }</code> and the moment a user hit Print, the ads quietly vanished. A newspaper web team rolled it out and reported: <em>"When readers print an article, the ads and sidebar disappear and just the body comes out clean. We're saving paper and the readability is way better."</em> CSS2 also introduced absolute positioning, so for the first time you could place an element at a precise spot on the page.</p>
@@ -428,6 +433,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_2003.svg" alt="Illustration of the 2003 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>By the early 2000s plenty of web developers were still doing it the old way — colors and fonts shoved straight into the HTML. They knew about CSS's separation principle in theory, but they hadn't <strong>felt how powerful it actually was</strong>. The skepticism was real: "Why bother separating? What does that even buy me?"</p>
 						<p>A web designer named <strong>Dave Shea</strong> believed one good demo would be worth a thousand explanations. <em>"Fine. Let me just show you. Same HTML file, untouched, not a character changed. Watch how completely different the design can become when only the CSS changes."</em></p>
 						<p>In 2003 he launched a site called <strong>CSS Zen Garden</strong>. The rules were elegant: he gave you one fixed HTML file, and you submitted your own CSS for it. The site then displayed the result for everyone to see. The submissions were astonishing. One person did it in the style of a Japanese ink painting. Someone else made it look like a sci-fi spaceship console. A third made it look like a vintage newspaper. <strong>The HTML never changed by a single character</strong>, and yet the designs were hundreds of completely different worlds. One designer, scrolling through them, exclaimed, <em>"Wait — is this really possible? The same content can look this many different ways?"</em></p>
@@ -449,6 +455,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_2006.svg" alt="Illustration of the 2006 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>Up through the mid-2000s, a CSS tweak meant a brutal little ritual: <strong>edit the CSS file, save, switch to the browser, refresh, look, hate it, switch back, edit again</strong>. A designer would slump at her desk: <em>"I have no idea where the margin on this red box is coming from. I've grepped the CSS files and can't find it. Some other rule is overriding it but I have no way to figure out which one."</em></p>
 						<p>A Firefox extension developer named <strong>Joe Hewitt</strong> looked at this misery and thought, <em>"The browser already knows everything. It knows exactly which CSS rules are being applied to every element. Why don't we just show that to the user? Click an element on the page, and every style affecting it pops up instantly."</em></p>
 						<p>That extension, released in 2006, was <strong>Firebug 1.0</strong>, and it changed web developers' lives overnight. Click any element on the page and you could see its HTML, its CSS, its event handlers — everything. Even better, you could <strong>edit it right there</strong>. Change a color value and the page updated instantly. If you liked it, you copied the value back into your real source file. A frontend developer cheered: <em>"The infinite edit-save-refresh loop is over. I touch the screen and see results immediately. My debugging time dropped to one-tenth what it was."</em></p>
@@ -470,6 +477,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_2009.svg" alt="Illustration of the 2009 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>CSS was powerful but, compared to actual programming languages, <strong>almost childishly simple</strong>. There were no variables, so the brand color <code>#00aaff</code> got typed out in 100 different places. There were no functions, so similar blocks of styling got copy-pasted endlessly. To darken the brand color one notch, you had to find and update every single usage. Big sites had CSS files with thousands of lines of near-duplicate code.</p>
 						<p>A developer thought, <em>"Why can't we make CSS more like a real programming language? Add variables, functions, modules. Let people write rich expressive style code, and at the very end automatically compile it down to plain old CSS that the browser still understands."</em></p>
 						<p>That tool, called <strong>Sass</strong> (Syntactically Awesome StyleSheets), really took off when version 3.0 landed in 2009. Define <code>$primary-color: #00aaff;</code> once, and reference it as <code>$primary-color</code> in 100 places. Switching the brand color became a one-line change. A design system team cheered: <em>"Brand colors live in one place, functions calculate hover/active variants automatically, and we can split components into separate files. CSS finally grew up."</em></p>
@@ -491,6 +499,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_2010.svg" alt="Illustration of the 2010 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>Around 2010 the IT industry felt an <strong>earthquake</strong>. iPhones and Android phones were spreading explosively, and people were starting to view websites on tiny mobile screens. The problem was that almost every existing website had been designed for desktop monitors. Open them on a phone and the text was unreadably small, or you had to drag-scroll horizontally to even see the page. Companies panicked: <em>"So do we have to build a separate mobile site? Maintain two versions of everything? And then a third for tablets?"</em></p>
 						<p>A designer named <strong>Ethan Marcotte</strong> proposed a different approach in a 2010 essay. <em>"Don't build two or three sites. Build one that adapts to any screen size. Let CSS detect how wide the current screen is — when it's wide, lay things out horizontally; when it's narrow, stack them vertically."</em></p>
 						<p>The title of his essay was <strong>"Responsive Web Design,"</strong> and from that day on the phrase became the industry's standard term. The technical hammer was the <code>@media</code> queries CSS2 had quietly introduced years earlier. Write <code>@media (max-width: 768px)</code> and you could define styles that only kicked in at 768 pixels or below. A content team rolled it out and breathed easier: <em>"One codebase serves desktop, tablet, and phone. We don't have to maintain two separate sites anymore!"</em></p>
@@ -512,6 +521,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_2017.svg" alt="Illustration of the 2017 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>Up through the mid-2010s, building complex layouts on the web — especially anything resembling the grid layouts of newspapers and magazines — was <strong>a parade of hacks</strong>. CSS had no real grid tool, so developers were forcing the <code>&lt;table&gt;</code> tag and <code>float</code> property to do jobs they were never designed for. A designer would sigh, <em>"I designed this like a magazine spread, and the developer says, 'CSS can't do this.' So I have to redraw my whole design as a boring vertical stack."</em></p>
 						<p>The CSS standards committee decided to actually fix it. The idea was simple: <em>"Put a real grid into CSS, like a spreadsheet — N columns wide, M rows tall. Then let each piece of content say, 'I belong in columns 1 to 3, row 2.'"</em></p>
 						<p>In 2017 the major browsers all started supporting <strong>CSS Grid</strong> at the same time. Designers could finally translate their imagination directly into code. A magazine site designer's first project came back glowing: <em>"I'm laying things out as freely as I used to do for print. A big photo spans three columns. Small captions sit beside it in single columns. The same kind of layout I used to do on paper, I'm now doing on the web!"</em></p>
@@ -533,6 +543,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_2018.svg" alt="Illustration of the 2018 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>Sass (2009) had given CSS variables and functions and made it powerful, but it had a <strong>significant catch</strong>. Sass processed variables at <em>build time</em> and compiled down to plain CSS, which meant <strong>you couldn't change a variable while the page was running</strong>. Building a dark mode toggle that flipped the colors instantly when a user clicked a button? Awkward. Teams had to ship two complete CSS files and swap them out wholesale.</p>
 						<p>The CSS standards committee made a decision: <em>"Put variables directly into the standard. No build tool needed, and JavaScript can change the values live, while the page is running."</em></p>
 						<p>By 2018 the major browsers were stably supporting <strong>CSS Custom Properties</strong> (almost everyone calls them "CSS variables"). Define <code>--brand-color: #00aaff;</code> once, and reference it anywhere as <code>var(--brand-color)</code>. The magical part: when a user clicked the dark mode button, JavaScript could change the value of <code>--brand-color</code>, and every color across the entire site updated instantly. A design system team was thrilled: <em>"Dark mode, per-user themes, brand recoloring — it's all just one variable away. The code feels so much cleaner."</em></p>
@@ -554,6 +565,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_2021.svg" alt="Illustration of the 2021 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>Responsive web design (2010) was a landmark, but it had <strong>one limitation</strong>. It could react to the size of the screen, but it couldn't react to <strong>the size of a component's parent</strong>. What does that mean? Picture the same "product card" component dropped into a narrow sidebar on one page and a wide main column on another. It really should look smaller in the sidebar and bigger in the main column. But the card had no idea where it was being placed, so it always rendered the same. Designers were frustrated: <em>"It's literally the same card, but I have to build a separate version for every location. 'Sidebar card,' 'main card,' 'mobile card.' This is absurd."</em></p>
 						<p>The CSS committee thought it through. <em>"Let the component look at its own parent's size and decide its own shape. Inside the component, you write, 'if my container is 600 pixels wide or more, lay out horizontally; otherwise, stack vertically.'"</em></p>
 						<p>That answer arrived in 2021 as <strong>Container Queries</strong>. Write <code>@container (min-width: 600px)</code> and the styles kick in only when "my container is 600 pixels or wider." Design system teams cheered: <em>"Now I build the card component once, drop it anywhere, and it adapts itself. Small in a sidebar, big in the main column, full-width on mobile. We maintain exactly one card."</em></p>
@@ -575,6 +587,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_2022.svg" alt="Illustration of the 2022 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>The CSS on a large website is genuinely a <strong>battlefield</strong>. The company's own styles, third-party libraries, the design system, and per-page custom tweaks are all mashed together, and the typical bug report sounds like this: <em>"I set this to red, but the screen shows blue. Something is overriding it and I cannot find what."</em> Tracking which rule was beating which other rule in the cascade was its own special debugging hell.</p>
 						<p>The CSS standards committee proposed a new approach. <em>"Stop leaving the cascade to chance. Let people group their rules into explicit 'layers' — 'reset,' 'components,' 'utilities' — and declare which layers win over which others, in plain text."</em></p>
 						<p>By 2022 the major browsers were supporting <strong>CSS Cascade Layers</strong>. One line — <code>@layer reset, components, utilities;</code> — and the priority became obvious: utilities beat components, components beat reset. A team at a large product flipped it on and exhaled: <em>"Even when we pull in an external library like Bootstrap, our own styles don't get clobbered anymore. Explicit layer ordering made the conflicts disappear."</em></p>
@@ -596,6 +609,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-styling_2023.svg" alt="Illustration of the 2023 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>The most beloved feature in Sass (2009) was <strong>nesting</strong> — expressing parent-child relationships through indentation. You could write the rule for a "card" and, indented inside it, the rules for the heading and button that lived inside that card. The code was dramatically cleaner and easier to read. But standard CSS didn't support nesting, so to use Sass you needed a build step. For small projects, that build setup was a real burden.</p>
 						<p>The CSS committee made a decision: <em>"If it's that beloved in Sass, it belongs in the standard. Everyone should be able to use it, with no build tools required."</em></p>
 						<p>In 2023 the major browsers started shipping <strong>native CSS nesting</strong>. You could write nested syntax in a plain old <code>.css</code> file with no build pipeline at all and the browser understood it directly. A solo developer cheered: <em>"For my side projects I always dreaded setting up a build step. Now I don't need one. I just write nesting in regular CSS and the browser gets it!"</em></p>

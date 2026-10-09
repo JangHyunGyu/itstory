@@ -276,6 +276,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-tools_1997.svg" alt="Illustration of the 1997 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>In the late 1990s, building a website was a punishing job. You opened a plain text editor, typed every tag by hand — <code>&lt;table border="1" cellspacing="0" cellpadding="5"&gt;</code> — and tweaked one character to nudge an image, then refreshed the browser to see if it looked right. Designers were locked out of the whole process. The unspoken rule was simple and unfair: <strong>"if you don't know code, you don't get to make websites."</strong></p>
 						<p>An engineer at Macromedia stared at this gap and thought, <em>"Wait. In a word processor you just type and the layout takes care of itself. So why can't a designer drag a photo onto a webpage and let the computer write the HTML behind it?"</em></p>
 						<p>That question became <strong>Dreamweaver</strong> in 1997. Designers dragged images and tables onto a canvas, and a panel on the right filled itself with valid HTML. A designer at an ad agency tried it for the first time and beamed, <em>"I just painted the page like a poster — and it actually works as a real website!"</em> The developer next to her opened the code view, made a few tweaks, and for the first time the two of them were collaborating on the same screen instead of waiting on each other.</p>
@@ -297,6 +298,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-tools_1999.svg" alt="Illustration of the 1999 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>In the late 1990s, two or more developers trying to write code together was a small disaster. People mailed source files as email attachments or passed them around on floppy disks and Zip drives. Sooner or later somebody opened the wrong copy and the day ended in panic: <strong>"Where did my Friday changes go? Did you overwrite my file?"</strong> Nobody could say with confidence who had touched what, and one careless save could erase a teammate's whole afternoon.</p>
 						<p>The fix sounded obvious in hindsight, but at the time it felt revolutionary. <em>"What if we kept one canonical copy of the code on a server somewhere on the internet? Everyone pulls the latest version down, makes their changes, pushes them back, and the system records every edit automatically — who, what, when."</em></p>
 						<p>By 1999, services like <strong>SourceForge</strong> were hosting <strong>CVS</strong> (Concurrent Versions System) on the public internet. Open-source teams started checking in weekend work from their bedrooms with a single command. Monday morning, the maintainer would pull up the log on the projector and say, <em>"Look — Alex committed Saturday at 3am, Priya fixed the parser bug Sunday afternoon. We can see exactly who did what."</em> Suspicion got replaced with a shared timeline.</p>
@@ -318,6 +320,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-tools_2005.svg" alt="Illustration of the 2005 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>By the early 2000s the Linux kernel had become an unprecedented collaboration: thousands of volunteers across every continent contributing patches. The version control tools couldn't keep up. They needed a network connection to do almost anything, and creating a "branch" to try something experimental was so heavy that nobody bothered. Linus Torvalds, who maintained the project, finally lost his patience. <em>"Merging thousands of contributors' work is taking days. We can't keep working like this."</em></p>
 						<p>Instead of waiting for someone to fix it, he sat down to build a new tool himself. The core insight broke every rule of the existing systems: <em>"Stop relying on a central server. Give every single developer a complete copy of the entire repository on their own laptop. Let them work offline. Make branching almost free — fast enough that you'd create one for any half-formed idea."</em></p>
 						<p>In two weeks of intense coding, he shipped it. He called it <strong>Git</strong>. Other kernel developers tried it and were stunned. <em>"Branches happen in a second. Merging is instant. I can experiment, blow it up, throw the branch away, and nothing is lost."</em> That fearlessness changed engineering culture itself — suddenly trying ten ideas a day was cheaper than agonizing over one.</p>
@@ -339,6 +342,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-tools_2008.svg" alt="Illustration of the 2008 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>Git was powerful, but it had one ugly catch: it lived entirely <strong>on the command line</strong>, in a black terminal window. The learning curve scared off newcomers, and even seasoned developers still mailed patch files around when they wanted to share work. The unanswered question in every developer's head was, <em>"How do I actually show this side project to the world? How do I contribute to someone else's code without being their friend first?"</em></p>
 						<p>In 2008, three developers in San Francisco took a swing at it. <em>"Keep everything Git can do underneath, but wrap it in a beautiful website. Browse the code, leave comments line by line, propose changes, file bugs — all of it in the browser, with a single click."</em></p>
 						<p>That site became <strong>GitHub</strong>, and the magic ingredient was a feature called the <strong>Pull Request</strong>. Spot a bug in someone's project? Fork it, fix it, open a PR, and the maintainer sees a clean side-by-side diff in their browser, leaves comments, and merges with one click. A first-time contributor opened her first PR and could barely believe it: <em>"I didn't email anyone. I didn't know the maintainer. And my code is now in a project that thousands of people use — my name is in the contributor list!"</em></p>
@@ -360,6 +364,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-tools_2012.svg" alt="Illustration of the 2012 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>By the early 2010s, shipping a website had quietly become a manual obstacle course. Before every release, somebody had to compile Sass into real CSS, shrink all the images, concatenate a hundred JavaScript files into one, run the linter, run the tests, generate the sourcemaps. Five, ten, sometimes fifteen steps in order — and if you forgot one? <strong>You shipped a broken site to every visitor on the planet.</strong></p>
 						<p>One frontend engineer slumped at his desk and grumbled, <em>"Why am I reading a paper checklist every time I deploy? Computers are literally good at running lists. Let me just write the steps in a file and have one command do all of it."</em></p>
 						<p>That grumble became <strong>Grunt</strong> in 2012. You created a <code>Gruntfile</code> in your project, listed each task in order — "compile the styles, then optimize the images, then bundle the scripts" — and from then on you typed a single word in the terminal: <code>grunt</code>. The machine took it from there. A teammate ran it for the first time and laughed in disbelief: <em>"My pre-deploy ritual went from thirty minutes to thirty seconds."</em></p>
@@ -381,6 +386,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-tools_2014.svg" alt="Illustration of the 2014 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>By the mid-2010s, JavaScript apps had grown into monsters. A site like Facebook was made of <strong>hundreds, sometimes thousands</strong> of small JavaScript files importing each other. The catch: <strong>browsers fetch files one at a time</strong>. Loading 200 files meant 200 round trips across the network, and users sat staring at a blank page. Worse, nobody could keep track of which file depended on which anymore — the dependency graph had become a hairball.</p>
 						<p>A German developer named Tobias Koppers looked at the mess and thought, <em>"What if a tool actually traced how all those files reference each other and merged them into one bundle the browser can grab in a single request? And for the parts the user doesn't need on the first screen, ship those separately and load them on demand?"</em></p>
 						<p>That tool, released in 2014, was <strong>Webpack</strong>. It walked the dependency graph, bundled JavaScript intelligently, and — almost as a side effect — let you treat images, CSS, and even fonts as importable modules. A small startup wired it into their build and watched their first-page load drop from <strong>eight seconds to two</strong>. Their growth lead exhaled: <em>"Users are actually staying on the page now."</em></p>
@@ -402,6 +408,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-tools_2016.svg" alt="Illustration of the 2016 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>One day in March 2016, development systems at thousands of companies <strong>stopped at once</strong>. Facebook, Netflix, Airbnb — even the giants could not build their code. The cause was the deletion of <strong>one 11-line package</strong>. Its name was <code>left-pad</code>. All it did was pad the front of a string so the length matched.</p>
 						<p>JavaScript developers do not write every small helper themselves. They take other people's code from a shared warehouse called <strong>npm</strong>. left-pad was one of those helpers, and it was so convenient that huge projects such as React and Babel all depended on it. That day a developer got into a name dispute with npm and, as a protest, deleted every package he had published. left-pad was among them.</p>
 						<p>Builds failed in a chain, like dominoes. One developer typed into chat: <em>"Why did we suddenly get 'cannot find left-pad'? Nobody touched our code!"</em> A teammate answered: <em>"Someone deleted the package from npm. We depend on a package that depends on a package that depends on it, and the whole chain broke."</em> npm restored the package and the outage settled, but the fact that 11 lines had shaken the world was the shock.</p>
@@ -423,6 +430,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-tools_2016.svg" alt="Illustration of the 2016 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>Even in 2015, putting a small website online was an absurd amount of work for what you got. You rented a Linux server somewhere, registered a domain, applied for a TLS certificate, configured Apache or nginx, FTP'd your files up one by one, and prayed nothing in your <code>httpd.conf</code> had a typo. <strong>It took days, sometimes weekends.</strong> Indie developers and small teams sighed, "Writing the code is easy — it's the deployment that breaks me."</p>
 						<p>In 2016, a company called <strong>Netlify</strong> made what sounded like a wild promise. <em>"The moment you push code to GitHub, we'll automatically build it, distribute it across servers around the world, and serve it over HTTPS. No machine to provision. No config files. No certificate paperwork. Just push."</em></p>
 						<p>And it actually worked. A solo developer pushed her static site to GitHub and five minutes later visited <code>https://her-site.netlify.app</code> — a real, public URL, fast for visitors in Tokyo and São Paulo alike. Even better, every future commit automatically redeployed itself. Her marketing partner walked over and said, <em>"Wait — every pull request gets its own preview link? I can review the new homepage before it ships, in my browser?"</em></p>
@@ -444,6 +452,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-tools_2021.svg" alt="Illustration of the 2021 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>If you've ever started a new engineering job, you know the first day is not actually about coding. It's about <strong>setting up your laptop</strong>. Install the right Node version, the right Python, Docker, the database, the company's internal tools. Something doesn't match. You search Stack Overflow. You DM a coworker. The coworker shrugs: <em>"Hm, it works on my machine. Maybe your Java version is off?"</em> The infamous "works on my machine" curse has eaten entire onboarding weeks at every company on earth.</p>
 						<p>In 2021, GitHub took a swing at making the curse extinct. <em>"What if we built the entire development environment ahead of time and ran it in the cloud? A new hire opens a browser, and a fully configured workspace is just sitting there, ready to type into."</em></p>
 						<p>They called it <strong>GitHub Codespaces</strong>. A new engineer logs in on day one, doesn't install a single thing on her laptop, and clicks once. <strong>VS Code</strong> opens in her browser tab — the linter is running, the database is seeded, every dependency is already there. The team lead reported the verdict to their internal blog: <em>"Onboarding went from one full day to about five minutes. And nobody has said 'works on my machine' in this Slack since."</em></p>
@@ -465,6 +474,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-tools_2021.svg" alt="Illustration of the 2021 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>In April 2021, security teams around the world went cold. <strong>Codecov</strong>, a popular tool, had been <strong>compromised in secret for three months</strong>. Codecov checks how much of a codebase the tests cover. Thousands of companies, from giants such as Facebook and Google down to small startups, had wired it into their automated builds.</p>
 						<p>The attacker was precise. Companies download a small script automatically when they run Codecov, and the attacker <strong>added one hidden line to that script</strong>. The line's job was to send out secrets the company thought it was keeping private: <strong>API keys, database passwords, and cloud credentials</strong>. Companies used a tool they trusted every day and did not know it was taking their secrets.</p>
 						<p>After the discovery, a SaaS security lead said in an emergency meeting: <em>"Reissue every API key right now. We cannot tell who took our secrets, so every existing key has to be revoked."</em> Companies worldwide rotated secrets at the same time. If left-pad the year before had shown how a supply chain can fall over by accident, Codecov showed <strong>how it can fall over because someone attacked it</strong>.</p>
@@ -486,6 +496,7 @@
 				</header>
 				<section class="event-detail__body">
 					<div class="event-detail__story">
+						<img src="assets/images/story_web-tools_2023.svg" alt="Illustration of the 2023 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
 						<p>Watch any working developer for an hour and you'll notice how much of the job is <strong>repetition</strong>. "I need to write another function that pulls a user from the database — how did I do it last time?" Search the codebase, copy a similar block, rename the variables, tweak two lines. Half the day disappears into copy-paste. Tests get skipped because they're tedious. Comments get postponed forever.</p>
 						<p>In 2021, GitHub and OpenAI ran a strange experiment together: <em>"There are billions of lines of source code on GitHub. What if we trained a language model on all of it and let it predict the next line a programmer is about to write?"</em> The result was <strong>GitHub Copilot</strong>. At first it felt like a parlor trick. Then 2023 happened and the underlying models took a quantum leap, and suddenly the trick wasn't a trick anymore.</p>
 						<p>A junior developer typed her first function name into the editor and watched the entire body materialize beneath the cursor — in her team's exact coding style, with the edge cases she'd been about to forget. <em>"It's like the senior on my team is reading over my shoulder, except faster and at 3am."</em> A senior engineer found her review queue lighter too: <em>"AI summarizes the PR for me in plain English. I can spend my actual brain on the architecture instead of catching typos."</em></p>

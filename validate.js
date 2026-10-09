@@ -258,8 +258,75 @@ for (const [page, prefix] of Object.entries(topicSvgPrefixes)) {
         `${page}: No story SVGs found with prefix "${prefix}"`);
 }
 
-// ─── 9. Other required files ───
-console.log('\n[9] Other project files');
+// ─── 9. Korean/English story image parity ───
+console.log('\n[9] Story image parity');
+
+function storyImageMap(html) {
+    const map = new Map();
+    const templateRe = /<template id="event-([^"]+)"[\s\S]*?<\/template>/g;
+    let match;
+    while ((match = templateRe.exec(html)) !== null) {
+        const imageTag = match[0].match(/<img\b[^>]*class="story-image"[^>]*>/);
+        const src = imageTag ? (imageTag[0].match(/\ssrc="([^"]+)"/) || [])[1] : '';
+        map.set(match[1], src || '');
+    }
+    return map;
+}
+
+for (let i = 0; i < koreanPages.length; i++) {
+    const ko = koreanPages[i];
+    const en = englishPages[i];
+    if (!fileExists(ko) || !fileExists(en)) continue;
+    const koImages = storyImageMap(fs.readFileSync(path.join(ROOT, ko), 'utf-8'));
+    const enImages = storyImageMap(fs.readFileSync(path.join(ROOT, en), 'utf-8'));
+    const ids = new Set([...koImages.keys(), ...enImages.keys()]);
+    for (const id of ids) {
+        const koSrc = koImages.get(id) || '';
+        const enSrc = enImages.get(id) || '';
+        check(
+            koSrc === enSrc,
+            `${ko}: ${id} story image matches English`,
+            `${ko}: ${id} story image "${koSrc || '(none)'}" != English "${enSrc || '(none)'}"`
+        );
+        if (koSrc && !fileExists(koSrc)) {
+            fail(`${ko}: ${id} image file missing ${koSrc}`);
+        }
+    }
+}
+
+// ─── 10. Story SVG duplicate attributes ───
+console.log('\n[10] Story SVG well-formed attributes');
+
+function duplicateSvgAttributes(text) {
+    const stripped = text.replace(/<!--[\s\S]*?-->/g, '');
+    const tagRe = /<([A-Za-z][\w:.-]*)\b([^<>]*)>/g;
+    const found = [];
+    let tagMatch;
+    while ((tagMatch = tagRe.exec(stripped)) !== null) {
+        const seen = new Set();
+        const attrRe = /([:\w.-]+)\s*=\s*(?:"[^"]*"|'[^']*')/g;
+        let attrMatch;
+        while ((attrMatch = attrRe.exec(tagMatch[2])) !== null) {
+            const name = attrMatch[1].toLowerCase();
+            if (seen.has(name)) found.push(name);
+            seen.add(name);
+        }
+    }
+    return found;
+}
+
+for (const svgName of svgFiles) {
+    const svgText = fs.readFileSync(path.join(ROOT, 'assets', 'images', svgName), 'utf-8');
+    const duplicates = duplicateSvgAttributes(svgText);
+    check(
+        duplicates.length === 0,
+        `${svgName}: attributes are unique`,
+        `${svgName}: duplicate attributes ${duplicates.join(', ')}`
+    );
+}
+
+// ─── 11. Other required files ───
+console.log('\n[11] Other project files');
 
 const otherFiles = [
     'robots.txt',
