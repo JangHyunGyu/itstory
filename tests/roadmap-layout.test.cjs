@@ -38,17 +38,26 @@ async function main() {
     browser = await ({ chromium, webkit, firefox }[engine]).launch();
     const touch = device?.hasTouch || process.env.LAYOUT_TOUCH === '1';
     const page = await browser.newPage(device || { viewport: { width: 900, height: 900 }, hasTouch: touch });
+    const activate = locator => touch ? locator.tap() : locator.click();
     const pageErrors = [];
     page.on('pageerror', error => pageErrors.push(error.message));
     await page.clock.setFixedTime(new Date('2026-10-12T03:00:00Z'));
     const assignments = {};
     let posts = 0;
+    let failNextSave = false;
+    let delayNextSave = false;
     await page.route(/https:\/\/itstory-presenters\.[^/]+\/week\//, async route => {
       const week = Number(new URL(route.request().url()).pathname.split('/').pop());
       if (route.request().method() === 'POST') {
+        posts++;
+        if (delayNextSave) { delayNextSave = false; await new Promise(resolve => setTimeout(resolve, 300)); }
+        if (failNextSave) {
+          failNextSave = false;
+          await route.fulfill({ status: 409, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify({ error: 'conflict' }) });
+          return;
+        }
         const { topic, owner, topics } = route.request().postDataJSON();
         assignments[week] = applySelection(assignments[week] || {}, topic, owner, presentersForWeek(week), topics);
-        posts++;
       }
       await route.fulfill({ status: 200, contentType: 'application/json',
         headers: { 'access-control-allow-origin': '*', 'access-control-allow-headers': 'content-type', 'access-control-allow-methods': 'GET,POST,OPTIONS' },
@@ -71,6 +80,8 @@ async function main() {
       return;
     }
     assert.equal(await selects.count(), 5);
+    assert.equal(await page.locator('select').count(), 0);
+    assert.equal(await selects.first().getAttribute('role'), 'combobox');
 
     for (const [width, height] of sizes) {
       await page.setViewportSize({ width, height });
@@ -83,7 +94,7 @@ async function main() {
           const card = element.getBoundingClientRect();
           if (card.left < -1 || card.right > viewport + 1) errors.push('card outside viewport');
           if (element.scrollWidth > element.clientWidth + 1) errors.push('card content clipped');
-          const select = element.querySelector('select');
+          const select = element.querySelector('.part-owner-select');
           const topic = element.querySelector('.part-topic');
           if (!select) continue;
           const box = select.getBoundingClientRect();
@@ -105,34 +116,100 @@ async function main() {
           const style = getComputedStyle(select);
           if (style.appearance !== 'none') errors.push('native arrow adds unmeasured label padding');
           canvas.font = style.font;
-          const labelWidth = canvas.measureText(select.selectedOptions[0].textContent).width;
+          const labelWidth = canvas.measureText(select.textContent).width;
           if (labelWidth > box.width - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight) - 2) errors.push('selected label clipped');
         }
         return [...new Set(errors)];
       });
       assert.deepEqual(failures, [], `${engine} ${width}x${height}: ${failures.join(', ')}`);
+      await activate(selects.first());
+      assert.equal(await selects.first().getAttribute('aria-expanded'), 'true', `open ${width}x${height}: ${JSON.stringify(await selects.first().boundingBox())}`);
+      const popupFailures = await page.evaluate(() => {
+        const menu = document.querySelector('.part-owner-popup:not([hidden])');
+        const rect = menu.getBoundingClientRect();
+        const viewport = visualViewport;
+        const errors = [];
+        if (rect.left < (viewport?.offsetLeft || 0) || rect.top < (viewport?.offsetTop || 0) || rect.right > (viewport?.offsetLeft || 0) + (viewport?.width || innerWidth) + 1 || rect.bottom > (viewport?.offsetTop || 0) + (viewport?.height || innerHeight) + 1) errors.push('popup outside viewport');
+        const target = document.elementFromPoint(rect.left + 15, rect.top + 15);
+        if (!menu.contains(target)) errors.push('popup covered or clipped');
+        if (!menu.querySelector('[aria-selected="true"]')) errors.push('selected option missing');
+        return errors;
+      });
+      assert.deepEqual(popupFailures, [], `${engine} popup ${width}x${height}`);
       if (output && (device || ([390, 768, 900, 1440].includes(width) && height === 900))) {
-        await active.scrollIntoViewIfNeeded();
         await page.screenshot({ path: path.join(output, `${deviceName || engine}${touch ? '-touch' : ''}-${width}.png`), scale: 'css' });
       }
+      await page.keyboard.press('Escape');
+      assert.equal(await selects.first().getAttribute('aria-expanded'), 'false');
     }
 
+    await page.setViewportSize({ width: 390, height: 480 });
+    await selects.first().evaluate(node => window.scrollTo({ top: node.getBoundingClientRect().top + scrollY - innerHeight + 40, behavior: 'instant' }));
+    await activate(selects.first());
+    assert.equal(await page.getByRole('listbox').getAttribute('data-placement'), 'above');
+    await page.keyboard.press('Escape');
     await page.setViewportSize({ width: 390, height: 844 });
     const first = selects.first();
-    const owner = await first.locator('option').nth(1).getAttribute('value');
-    await first.selectOption(owner);
+    await activate(first);
+    const owner = await page.getByRole('option').nth(1).getAttribute('data-value');
+    delayNextSave = true;
+    await activate(page.getByRole('option').nth(1));
+    assert.equal(await first.getAttribute('aria-busy'), 'true');
+    assert.equal(await selects.nth(1).getAttribute('aria-disabled'), 'true');
     await page.waitForFunction(() => document.querySelector('.part-owner-select').value !== '');
     await page.waitForTimeout(100);
     assert.equal(posts, 1);
-    await first.selectOption('');
+    await activate(first);
+    await activate(page.getByRole('option').first());
     await page.waitForTimeout(100);
     assert.equal(posts, 2);
     await first.focus();
+    await first.press('Tab');
+    await page.keyboard.press('Shift+Tab');
+    await first.press('ArrowDown');
+    await first.press('End');
+    const focusedOption = await first.getAttribute('aria-activedescendant');
     await page.evaluate(() => { window.testSelect = document.querySelector('.part-owner-select'); });
     await page.waitForTimeout(4300);
-    assert.equal(await first.inputValue(), '');
+    assert.equal(await first.evaluate(node => node.value), '');
+    assert.equal(await first.getAttribute('aria-activedescendant'), focusedOption);
+    assert.equal(await first.getAttribute('aria-expanded'), 'true');
     assert.equal(await page.evaluate(() => document.activeElement === window.testSelect && window.testSelect === document.querySelector('.part-owner-select')), true);
     assert.equal(await first.evaluate(node => getComputedStyle(node).outlineStyle), 'solid');
+    await first.press('Escape');
+    assert.equal(posts, 2);
+    await first.press('Enter');
+    await first.press('Home');
+    await first.press('ArrowDown');
+    await first.press('Enter');
+    await page.waitForFunction(expected => document.querySelector('.part-owner-select').value === expected, owner);
+    assert.equal(posts, 3);
+    await activate(first);
+    await first.press('Home');
+    await first.press('Tab');
+    await page.waitForFunction(() => document.querySelector('.part-owner-select').value === '');
+    assert.equal(posts, 4);
+    assert.notEqual(await page.evaluate(() => document.activeElement === window.testSelect), true);
+
+    failNextSave = true;
+    await activate(first);
+    await activate(page.getByRole('option').nth(1));
+    await page.locator('.part-owner-feedback:not([hidden])').waitFor();
+    assert.equal(await first.evaluate(node => node.value), '');
+    await activate(first);
+    await activate(page.getByRole('option').nth(1));
+    await page.waitForFunction(expected => document.querySelector('.part-owner-select').value === expected, owner);
+    assert.equal(await page.locator('.part-owner-feedback:not([hidden])').count(), 0);
+    assert.equal(posts, 6);
+
+    // Keep both triggers visible beside the popup when switching directly.
+    await page.setViewportSize({ width: 900, height: 900 });
+    await activate(first);
+    await activate(selects.nth(1));
+    assert.equal(await page.getByRole('listbox').count(), 1, `${deviceName || engine} switch: ${await selects.nth(1).getAttribute('aria-expanded')}, focus ${await page.evaluate(() => document.activeElement?.outerHTML)}`);
+    assert.equal(await first.getAttribute('aria-expanded'), 'false');
+    await page.locator('#roadmap-search').click();
+    assert.equal(await page.getByRole('listbox').count(), 0);
 
     await page.locator('#roadmap-search').fill('JavaScript');
     assert.ok(await page.locator('tbody tr:visible').count() < await page.locator('tbody tr').count());
@@ -150,8 +227,9 @@ async function main() {
     await page.clock.setFixedTime(new Date('2026-10-14T12:00:00Z'));
     await page.waitForTimeout(4300);
     assert.equal(await week11.locator('.parts li.is-editable').count(), 0);
-    assert.equal(await week11.locator('select').count(), 0);
-    assert.equal(await page.locator('tbody tr').nth(11).locator('select').count(), 5);
+    assert.equal(await week11.locator('[role="combobox"]').count(), 0);
+    assert.equal(await page.locator('tbody tr').nth(11).locator('[role="combobox"]').count(), 5);
+    assert.equal(await page.locator('.part-owner-popup').count(), 5);
     assert.deepEqual(pageErrors, []);
     console.log(`${deviceName || engine}${touch ? ' touch' : ''}: ${sizes.length} viewports passed; selection, unassignment, polling focus, search, filters, questions, and deadline passed.`);
   } finally {

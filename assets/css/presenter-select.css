@@ -57,8 +57,14 @@ body {
   background-size: 8px 6px;
   background-repeat: no-repeat;
   font-size: 11px;
+  font-family: inherit;
   line-height: 1.35;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   cursor: pointer;
+  touch-action: manipulation;
   scroll-margin-block: 6rem 2rem;
 }
 
@@ -69,6 +75,79 @@ body {
 .parts .part-owner-select:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+}
+
+.parts .part-owner-select[aria-expanded="true"] {
+  border-color: var(--accent);
+  background-color: #1b2613;
+}
+
+.parts .part-owner-select[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: progress;
+}
+
+.part-owner-popup {
+  position: fixed;
+  z-index: 1000;
+  box-sizing: border-box;
+  padding: 4px;
+  margin: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  border: 1px solid #425331;
+  border-radius: 12px;
+  background: #171d15;
+  color: #e5eadf;
+  box-shadow: 0 12px 32px #0009;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  scrollbar-width: thin;
+  scrollbar-color: #53663e #171d15;
+}
+
+.part-owner-popup[hidden],
+.part-owner-feedback[hidden] {
+  display: none;
+}
+
+.part-owner-option {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 7px 30px 7px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.part-owner-option.is-active {
+  background: #2c3b20;
+  color: #d7ffa0;
+  outline: 1px solid #668542;
+  outline-offset: -1px;
+}
+
+.part-owner-option[aria-selected="true"] {
+  color: #c7f886;
+}
+
+.part-owner-option[aria-selected="true"]::after {
+  position: absolute;
+  right: 10px;
+  content: '\2713';
+}
+
+.part-owner-feedback {
+  flex: 1 0 100%;
+  color: #ffb4a6;
+  font-size: 11px;
+  line-height: 1.5;
 }
 
 .week-deadline > * {

@@ -6,6 +6,7 @@
     'https://itstory-presenters.yama5993.workers.dev'
   ];
   let API_URL = API_CANDIDATES[0];
+  const controls = new WeakMap();
 
   async function apiFetch(path, options) {
     let lastError;
@@ -28,7 +29,7 @@
     const topic = item.querySelector('.part-topic');
     if (topic) return topic.textContent.trim();
     const clone = item.cloneNode(true);
-    clone.querySelectorAll('.part-owner, .part-owner-select').forEach((node) => node.remove());
+    clone.querySelectorAll('.part-owner, .part-owner-select, .part-owner-feedback').forEach((node) => node.remove());
     return clone.textContent.replace(/\s+/g, ' ').trim();
   }
 
@@ -48,7 +49,8 @@
 
   function setOwnerText(item, owner) {
     item.classList.remove('is-editable');
-    item.querySelector('.part-owner-select')?.remove();
+    const button = item.querySelector('.part-owner-select');
+    if (button) controls.get(button)?.destroy();
     let badge = item.querySelector('.part-owner');
     if (!owner) {
       badge?.remove();
@@ -73,25 +75,15 @@
     ensureTopic(item, topic);
     item.classList.add('is-editable');
     item.querySelector('.part-owner')?.remove();
-    let select = item.querySelector('.part-owner-select');
-    if (!select) {
-      select = document.createElement('select');
-      select.className = 'part-owner-select';
-      select.setAttribute('aria-label', `${topic} 발표자`);
-      item.append(select);
-      select.onchange = () => onChange(topic, select.value);
+    let button = item.querySelector('.part-owner-select');
+    if (!button) {
+      const control = root.ITStoryPresenterCombo.create({ item, topic, onChange: owner => onChange(topic, owner) });
+      button = control.button;
+      controls.set(button, control);
     }
     const current = assignments[topic] || '';
     const names = [''].concat(availablePeople(assignments, topic, presenters));
-    const desired = names.map((name) => `${name}=${name === current ? '1' : '0'}`).join('|');
-    if (select.dataset.optionState !== desired) {
-      select.innerHTML = names
-        .map((name) => `<option value="${name}"${name === current ? ' selected' : ''}>${name || '미지정'}</option>`)
-        .join('');
-      select.value = current;
-      select.dataset.optionState = desired;
-    }
-    select.disabled = false;
+    controls.get(button).update(current, names, owner => onChange(topic, owner));
   }
 
   async function readWeek(week) {
@@ -114,6 +106,8 @@
   function mount(rows, study) {
     let live = {};
     let boundWeek = 0;
+    let saving = false;
+    let revision = 0;
 
     const paint = (week, assignments, open) => {
       const row = rows[week - 1];
@@ -123,14 +117,21 @@
       const presenters = study.presentersForWeek(week);
       if (open) {
         const onChange = async (topic, owner) => {
+          if (saving) throw new Error('save-in-progress');
+          saving = true;
+          revision++;
+          rows.forEach(row => row.querySelectorAll('.part-owner-select').forEach(button => controls.get(button).setSaving(true)));
           try {
             const saved = await writeSelection(week, topic, owner, topics);
             live = saved.assignments || {};
-            paint(week, live, true);
+            paint(week, live, study.isSelectionOpen(new Date(), week));
             root.dispatchEvent(new CustomEvent('itstory-assignments', { detail: { week, assignments: live } }));
           } catch (error) {
             console.warn(error);
-            sync();
+            throw error;
+          } finally {
+            saving = false;
+            rows.forEach(row => row.querySelectorAll('.part-owner-select').forEach(button => controls.get(button).setSaving(false)));
           }
         };
         items.forEach((item) => renderSelect(item, topicOf(item), assignments, presenters, onChange));
@@ -143,14 +144,18 @@
     };
 
     const sync = async () => {
+      if (saving) return;
+      const version = revision;
       const now = new Date();
       const week = study.getAssignmentWeek(now);
       const closed = study.getWeekToFinalize(now);
       if (closed && closed !== week) {
         try {
           const locked = await readWeek(closed);
+          if (version !== revision || saving) return;
           paint(closed, locked.assignments || live, false);
         } catch (error) {
+          if (version !== revision || saving) return;
           paint(closed, live, false);
         }
       }
@@ -167,12 +172,14 @@
       if (open || boundWeek === week) {
         try {
           const data = await readWeek(week);
+          if (version !== revision || saving) return;
           live = data.assignments || live;
         } catch (error) {
           if (open && !Object.keys(live).length) live = {};
         }
       }
       boundWeek = week;
+      if (version !== revision || saving) return;
       paint(week, live, open);
       root.dispatchEvent(new CustomEvent('itstory-assignments', { detail: { week, assignments: live, open } }));
     };

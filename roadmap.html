@@ -1666,6 +1666,10 @@
       }
 
       @media print {
+        .part-owner-popup,
+        .part-owner-feedback {
+          display: none !important;
+        }
         :root {
           color-scheme: light;
           --background: #ffffff;
@@ -1814,7 +1818,7 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="assets/css/presenter-select.css?v=20261012-uniform-v4" media="screen">
+    <link rel="stylesheet" href="assets/css/presenter-select.css?v=20261012-custom-v5" media="screen">
   </head>
   <body>
     <header class="page-header">
@@ -2356,7 +2360,8 @@
     </footer>
 
     <script src="assets/js/study-week.js"></script>
-    <script src="assets/js/presenter-select.js?v=20261012-responsive-v1"></script>
+    <script src="assets/js/presenter-combobox.js?v=20261012-custom-v5"></script>
+    <script src="assets/js/presenter-select.js?v=20261012-custom-v5"></script>
     <script>
       (() => {
         const rows = [...document.querySelectorAll("tbody tr")];
