@@ -1,5 +1,27 @@
 # Presenter control layout — 2026-10-12
 
+## Badge-sized control and adaptive wrapping
+
+After further user feedback, desktop controls are 76×24px with 11px labels;
+coarse-pointer controls are 88×32px with 16px labels. Cards use a wrapping flex
+layout: topics retain a 120px preferred width, and the control shares their row
+when there is room. Narrow desktop cards wrap the control to a second line.
+This reduces the height of wide cards without squeezing topic text.
+
+The select remains a native HTML select with its normal keyboard and popup
+behavior. `appearance: none` plus a fixed-size chevron makes label space
+predictable: a visual check caught native indicator space truncating names even
+when the earlier text-width assertion passed. The regression test now checks
+that condition as well as label width, overlap, and unnecessary stacking.
+
+Validation scope: Chromium, Firefox, and WebKit desktop engines; Chromium and
+WebKit with touch emulation; 33 viewport sizes per configuration (165 total),
+including 240–2560px widths and short landscape screens. Existing interaction
+checks and default tests/build passed. Desktop and touch screenshots were
+visually inspected. These are browser/viewport simulations, not tests on physical
+iPhones, Android phones, or every device/OS/browser combination. This update
+supersedes both previous control sizes below.
+
 ## Compact control follow-up
 
 The user found the first full-width control too large. It now uses a compact

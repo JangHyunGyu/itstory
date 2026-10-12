@@ -85,10 +85,11 @@ async function main() {
           const box = select.getBoundingClientRect();
           const text = topic.getBoundingClientRect();
           const coarse = matchMedia('(any-pointer: coarse)').matches;
-          if (box.height < (coarse ? 44 : 30)) errors.push('control target too small');
-          if (box.width > (coarse ? 112 : 96) + 1) errors.push('control too wide');
-          if (!coarse && box.height > 32) errors.push('desktop control too tall');
-          if (box.top < text.bottom - 1) errors.push('topic and select overlap');
+          if (box.height < (coarse ? 32 : 24)) errors.push('control target too small');
+          if (box.width > (coarse ? 88 : 76) + 1) errors.push('control too wide');
+          if (box.height > (coarse ? 32 : 24) + 1) errors.push('control too tall');
+          if (box.left < text.right - 1 && box.right > text.left + 1 && box.top < text.bottom - 1 && box.bottom > text.top + 1) errors.push('topic and select overlap');
+          if (innerWidth >= 320 && innerWidth <= 480 && box.top >= text.bottom) errors.push('wide card unnecessarily stacks control');
           if (box.left < card.left || box.right > card.right) errors.push('select outside card');
           if (topic.scrollWidth > topic.clientWidth + 1 || topic.scrollHeight > topic.clientHeight + 1) errors.push('topic clipped');
           const range = document.createRange();
@@ -98,6 +99,7 @@ async function main() {
           }
           const canvas = document.createElement('canvas').getContext('2d');
           const style = getComputedStyle(select);
+          if (style.appearance !== 'none') errors.push('native arrow adds unmeasured label padding');
           canvas.font = style.font;
           const labelWidth = canvas.measureText(select.selectedOptions[0].textContent).width;
           if (labelWidth > box.width - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight) - 2) errors.push('selected label clipped');

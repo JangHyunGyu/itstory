@@ -1,4 +1,4 @@
-/* Keep topic text above a compact native presenter control. */
+/* Wrap the presenter badge only when the topic needs its own line. */
 html,
 body {
   min-width: 0;
@@ -17,44 +17,46 @@ body {
 }
 
 .parts li.is-editable {
-  display: grid;
-  grid-template-columns: 1.25rem minmax(0, 1fr);
-  grid-template-rows: 1fr auto;
-  align-items: start;
-  gap: 6px 8px;
-  padding: 10px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  padding: 8px 10px 8px 26px;
   font-size: 12px;
   scroll-margin-block: 6rem 2rem;
 }
 
 .parts li.is-editable::before {
-  grid-column: 1;
-  grid-row: 1;
-  padding-top: 2px;
+  position: absolute;
+  top: 11px;
+  left: 10px;
   line-height: 1.55;
 }
 
 .parts li.is-editable .part-topic {
-  grid-column: 2;
-  grid-row: 1;
+  flex: 1 1 120px;
   min-width: 0;
   max-width: 100%;
 }
 
 .parts .part-owner-select {
-  grid-column: 1 / -1;
-  grid-row: 2;
+  appearance: none;
+  flex: 0 1 76px;
   box-sizing: border-box;
-  width: 96px;
-  justify-self: end;
+  width: 76px;
   min-width: 0;
   max-width: 100%;
-  height: 30px;
-  min-height: 30px;
-  margin: 0;
-  padding: 5px 24px 5px 10px;
+  height: 24px;
+  min-height: 24px;
+  margin: 0 0 0 auto;
+  padding: 2px 20px 2px 8px;
   border-radius: 999px;
-  font-size: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6' viewBox='0 0 8 6'%3E%3Cpath d='m1 1 3 3 3-3' fill='none' stroke='%23b5ef57' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: right 7px center;
+  background-size: 8px 6px;
+  background-repeat: no-repeat;
+  font-size: 11px;
   line-height: 1.35;
   cursor: pointer;
   scroll-margin-block: 6rem 2rem;
@@ -69,13 +71,14 @@ body {
   outline-offset: 3px;
 }
 
-/* Retain a finger-sized target and avoid focus zoom on touch devices. */
+/* Keep touch controls compact while avoiding focus zoom on touch devices. */
 @media (any-pointer: coarse) {
   .parts .part-owner-select {
-    width: 112px;
-    height: 44px;
-    min-height: 44px;
-    padding: 10px 26px 10px 10px;
+    flex-basis: 88px;
+    width: 88px;
+    height: 32px;
+    min-height: 32px;
+    padding: 3px 22px 3px 8px;
     font-size: 16px;
   }
 }
