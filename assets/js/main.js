@@ -336,8 +336,13 @@
 		const isHidden = modalScrollButton.hasAttribute('hidden');
 		if (shouldShow && isHidden) {
 			modalScrollButton.removeAttribute('hidden');
+			setModalFocusables();
 		} else if (!shouldShow && !isHidden) {
+			if (document.activeElement === modalScrollButton && typeof modalWindow.focus === 'function') {
+				modalWindow.focus();
+			}
 			modalScrollButton.setAttribute('hidden', '');
+			setModalFocusables();
 		}
 	};
 
@@ -356,8 +361,12 @@
 		const hasVerticalOverflow = modalContent.scrollHeight - modalContent.clientHeight > 2;
 		if (!hasVerticalOverflow) {
 			detachModalScrollHandler();
-			if (modalScrollButton) {
+			if (modalScrollButton && !modalScrollButton.hasAttribute('hidden')) {
+				if (document.activeElement === modalScrollButton && typeof modalWindow.focus === 'function') {
+					modalWindow.focus();
+				}
 				modalScrollButton.setAttribute('hidden', '');
+				setModalFocusables();
 			}
 			return;
 		}
@@ -472,6 +481,7 @@
 		if (event.key !== 'Tab') {
 			return;
 		}
+		setModalFocusables();
 		if (!focusableElements.length) {
 			event.preventDefault();
 			modalWindow.focus();
@@ -529,9 +539,7 @@
 	const GLOSSARY_KO = {
 		"Ethernet": "LAN 케이블이라고 부르는 선으로 여러 기기가 차례대로 데이터를 주고받을 수 있게 만든 통신 방법입니다.",
 		"TSN": "Time-Sensitive Networking의 줄임말로, 공장 로봇이나 자율주행차처럼 타이밍이 중요한 장비가 끊김 없이 정보를 처리하도록 돕는 이더넷 기능입니다.",
-		"IEEE": "전 세계 연구자와 기업이 모여 전기와 전자 제품이 같은 규칙으로 동작하도록 기준을 만드는 국제 단체입니다.",
-		"프레임": "네트워크에서 한 번에 보내는 데이터 꾸러미입니다. 편지 봉투 하나에 주소와 내용을 담아 보내는 것과 비슷합니다.",
-		"지터": "동영상이나 통화가 끊길 때 느끼는 들쭉날쭉한 지연입니다. 데이터가 제시간에 도착하지 못해 생기는 시간 차이를 말합니다."
+		"IEEE": "전 세계 연구자와 기업이 모여 전기와 전자 제품이 같은 규칙으로 동작하도록 기준을 만드는 국제 단체입니다."
 	};
 	const GLOSSARY_EN = {
 		"Ethernet": "A method that lets devices on the same local network take turns sending data over a cable. The network port on a home router is Ethernet.",
@@ -541,8 +549,19 @@
 	const GLOSSARY = currentDocumentLanguage === 'en' ? GLOSSARY_EN : GLOSSARY_KO;
 
 	const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-	const GLOSSARY_PATTERN = Object.keys(GLOSSARY).map(escapeRegExp).join("|");
-	const GLOSSARY_REGEX_SOURCE = GLOSSARY_PATTERN ? `\\b(${GLOSSARY_PATTERN})\\b` : '';
+	const glossaryTerms = Object.keys(GLOSSARY);
+	const asciiTerms = glossaryTerms.filter((term) => !/[가-힣]/.test(term));
+	const hangulTerms = glossaryTerms.filter((term) => /[가-힣]/.test(term));
+	const glossarySources = [];
+	// `\b`는 ASCII 단어 경계만 본다. 한글 용어는 앞뒤가 한글이면 경계가 생기지 않아 툴팁이 빠진다.
+	if (asciiTerms.length) {
+		glossarySources.push(`\\b(?:${asciiTerms.map(escapeRegExp).join('|')})\\b`);
+	}
+	if (hangulTerms.length) {
+		const particles = '들|입니다|이에요|예요|이었|였|이라는|이란|이다|이|가|을|를|은|는|도|만|와|과|으로부터|으로|로|의|에서|에|으|란|인|처럼|까지|부터|마다';
+		glossarySources.push(`(?<![가-힣A-Za-z0-9_])(?:${hangulTerms.map(escapeRegExp).join('|')})(?!워크)(?=$|[^가-힣A-Za-z0-9_]|(?:${particles})(?![가-힣]))`);
+	}
+	const GLOSSARY_REGEX_SOURCE = glossarySources.length ? `(${glossarySources.join('|')})` : '';
 	const buildGlossaryRegex = () => (GLOSSARY_REGEX_SOURCE ? new RegExp(GLOSSARY_REGEX_SOURCE, 'g') : null);
 
 	function applyGlossaryTooltips(root) {
