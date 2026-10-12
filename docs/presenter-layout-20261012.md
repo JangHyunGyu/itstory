@@ -1,5 +1,21 @@
 # Presenter control layout — 2026-10-12
 
+## Uniform size on Galaxy phones and tablets
+
+The user accepted the PC layout but reported that Galaxy phones still looked
+too large. Removed the coarse-pointer override that enlarged controls to 88×32px
+and labels to 16px. All pointer types now use the accepted PC size of 76×24px
+with 11px text. No desktop layout/style rule changed. The CSS URL is versioned
+again so mobile browsers request the updated stylesheet.
+
+Validation: the default tests/build and the five 33-viewport configurations
+passed. Added optional `LAYOUT_DEVICE` support to the browser regression test;
+Galaxy S24, Galaxy A55, iPad Mini, and iPad Pro 11 emulation each passed portrait
+and landscape layout and interaction checks. Inspected phone and tablet
+screenshots. These profiles emulate mobile viewport, touch, pixel density, and
+user agent; they are not physical-device or Samsung Internet tests. This section
+supersedes the larger touch sizes below.
+
 ## Badge-sized control and adaptive wrapping
 
 After further user feedback, desktop controls are 76×24px with 11px labels;

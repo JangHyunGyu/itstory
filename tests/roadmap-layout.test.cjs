@@ -1,7 +1,7 @@
 'use strict';
 
 // Run after npm run build. Install Playwright locally or set PLAYWRIGHT_MODULE_PATH.
-const { chromium, webkit, firefox } = require(process.env.PLAYWRIGHT_MODULE_PATH || 'playwright');
+const { chromium, webkit, firefox, devices } = require(process.env.PLAYWRIGHT_MODULE_PATH || 'playwright');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -10,7 +10,11 @@ const { applySelection, presentersForWeek } = require('../scripts/presenter-assi
 
 const root = path.resolve(__dirname, '../dist');
 const output = process.env.LAYOUT_ARTIFACT_DIR;
-const sizes = [240, 280, 320, 360, 375, 390, 414, 430, 480, 568, 667, 700,
+const deviceName = process.env.LAYOUT_DEVICE;
+const device = deviceName ? devices[deviceName] : null;
+if (deviceName && !device) throw new Error(`Unknown Playwright device: ${deviceName}`);
+const sizes = device ? [[device.viewport.width, device.viewport.height],
+  [device.viewport.height, device.viewport.width]] : [240, 280, 320, 360, 375, 390, 414, 430, 480, 568, 667, 700,
   759, 760, 761, 768, 820, 900, 1024, 1120, 1200, 1279, 1280, 1281, 1366,
   1440, 1600, 1920, 2560].map(width => [width, 900])
   .concat([[568, 320], [667, 375], [844, 390], [1024, 600]]);
@@ -30,10 +34,10 @@ async function main() {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   let browser;
   try {
-    const engine = process.env.LAYOUT_BROWSER || 'chromium';
+    const engine = process.env.LAYOUT_BROWSER || device?.defaultBrowserType || 'chromium';
     browser = await ({ chromium, webkit, firefox }[engine]).launch();
-    const touch = process.env.LAYOUT_TOUCH === '1';
-    const page = await browser.newPage({ viewport: { width: 900, height: 900 }, hasTouch: touch });
+    const touch = device?.hasTouch || process.env.LAYOUT_TOUCH === '1';
+    const page = await browser.newPage(device || { viewport: { width: 900, height: 900 }, hasTouch: touch });
     const pageErrors = [];
     page.on('pageerror', error => pageErrors.push(error.message));
     await page.clock.setFixedTime(new Date('2026-10-12T03:00:00Z'));
@@ -84,10 +88,10 @@ async function main() {
           if (!select) continue;
           const box = select.getBoundingClientRect();
           const text = topic.getBoundingClientRect();
-          const coarse = matchMedia('(any-pointer: coarse)').matches;
-          if (box.height < (coarse ? 32 : 24)) errors.push('control target too small');
-          if (box.width > (coarse ? 88 : 76) + 1) errors.push('control too wide');
-          if (box.height > (coarse ? 32 : 24) + 1) errors.push('control too tall');
+          if (box.height < 24) errors.push('control target too small');
+          if (box.width > 77) errors.push('control too wide');
+          if (box.height > 25) errors.push('control too tall');
+          if (parseFloat(getComputedStyle(select).fontSize) !== 11) errors.push('control text unexpectedly enlarged');
           if (box.left < text.right - 1 && box.right > text.left + 1 && box.top < text.bottom - 1 && box.bottom > text.top + 1) errors.push('topic and select overlap');
           if (innerWidth >= 320 && innerWidth <= 480 && box.top >= text.bottom) errors.push('wide card unnecessarily stacks control');
           if (box.left < card.left || box.right > card.right) errors.push('select outside card');
@@ -107,9 +111,9 @@ async function main() {
         return [...new Set(errors)];
       });
       assert.deepEqual(failures, [], `${engine} ${width}x${height}: ${failures.join(', ')}`);
-      if (output && [390, 768, 900, 1440].includes(width) && height === 900) {
+      if (output && (device || ([390, 768, 900, 1440].includes(width) && height === 900))) {
         await active.scrollIntoViewIfNeeded();
-        await page.screenshot({ path: path.join(output, `${engine}${touch ? '-touch' : ''}-${width}.png`) });
+        await page.screenshot({ path: path.join(output, `${deviceName || engine}${touch ? '-touch' : ''}-${width}.png`), scale: 'css' });
       }
     }
 
@@ -149,7 +153,7 @@ async function main() {
     assert.equal(await week11.locator('select').count(), 0);
     assert.equal(await page.locator('tbody tr').nth(11).locator('select').count(), 5);
     assert.deepEqual(pageErrors, []);
-    console.log(`${engine}${touch ? ' touch' : ''}: ${sizes.length} viewports passed; selection, unassignment, polling focus, search, filters, questions, and deadline passed.`);
+    console.log(`${deviceName || engine}${touch ? ' touch' : ''}: ${sizes.length} viewports passed; selection, unassignment, polling focus, search, filters, questions, and deadline passed.`);
   } finally {
     if (browser) await browser.close();
     await new Promise(resolve => server.close(resolve));

@@ -71,18 +71,6 @@ body {
   outline-offset: 3px;
 }
 
-/* Keep touch controls compact while avoiding focus zoom on touch devices. */
-@media (any-pointer: coarse) {
-  .parts .part-owner-select {
-    flex-basis: 88px;
-    width: 88px;
-    height: 32px;
-    min-height: 32px;
-    padding: 3px 22px 3px 8px;
-    font-size: 16px;
-  }
-}
-
 .week-deadline > * {
   min-width: 0;
   max-width: 100%;
