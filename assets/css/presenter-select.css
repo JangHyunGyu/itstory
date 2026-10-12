@@ -1,4 +1,4 @@
-/* Keep topic text and native presenter controls in separate, full-width rows. */
+/* Keep topic text above a compact native presenter control. */
 html,
 body {
   min-width: 0;
@@ -21,16 +21,16 @@ body {
   grid-template-columns: 1.25rem minmax(0, 1fr);
   grid-template-rows: 1fr auto;
   align-items: start;
-  gap: 10px 8px;
-  padding: 12px;
-  font-size: 14px;
+  gap: 6px 8px;
+  padding: 10px;
+  font-size: 12px;
   scroll-margin-block: 6rem 2rem;
 }
 
 .parts li.is-editable::before {
   grid-column: 1;
   grid-row: 1;
-  padding-top: 4px;
+  padding-top: 2px;
   line-height: 1.55;
 }
 
@@ -45,15 +45,16 @@ body {
   grid-column: 1 / -1;
   grid-row: 2;
   box-sizing: border-box;
-  width: 100%;
+  width: 96px;
+  justify-self: end;
   min-width: 0;
   max-width: 100%;
-  height: auto;
-  min-height: 44px;
+  height: 30px;
+  min-height: 30px;
   margin: 0;
-  padding: 10px 30px 10px 12px;
-  border-radius: 10px;
-  font-size: 16px;
+  padding: 5px 24px 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
   line-height: 1.35;
   cursor: pointer;
   scroll-margin-block: 6rem 2rem;
@@ -66,6 +67,17 @@ body {
 .parts .part-owner-select:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+}
+
+/* Retain a finger-sized target and avoid focus zoom on touch devices. */
+@media (any-pointer: coarse) {
+  .parts .part-owner-select {
+    width: 112px;
+    height: 44px;
+    min-height: 44px;
+    padding: 10px 26px 10px 10px;
+    font-size: 16px;
+  }
 }
 
 .week-deadline > * {

@@ -32,7 +32,8 @@ async function main() {
   try {
     const engine = process.env.LAYOUT_BROWSER || 'chromium';
     browser = await ({ chromium, webkit, firefox }[engine]).launch();
-    const page = await browser.newPage({ viewport: { width: 900, height: 900 } });
+    const touch = process.env.LAYOUT_TOUCH === '1';
+    const page = await browser.newPage({ viewport: { width: 900, height: 900 }, hasTouch: touch });
     const pageErrors = [];
     page.on('pageerror', error => pageErrors.push(error.message));
     await page.clock.setFixedTime(new Date('2026-10-12T03:00:00Z'));
@@ -83,7 +84,10 @@ async function main() {
           if (!select) continue;
           const box = select.getBoundingClientRect();
           const text = topic.getBoundingClientRect();
-          if (box.height < 44) errors.push('touch target under 44px');
+          const coarse = matchMedia('(any-pointer: coarse)').matches;
+          if (box.height < (coarse ? 44 : 30)) errors.push('control target too small');
+          if (box.width > (coarse ? 112 : 96) + 1) errors.push('control too wide');
+          if (!coarse && box.height > 32) errors.push('desktop control too tall');
           if (box.top < text.bottom - 1) errors.push('topic and select overlap');
           if (box.left < card.left || box.right > card.right) errors.push('select outside card');
           if (topic.scrollWidth > topic.clientWidth + 1 || topic.scrollHeight > topic.clientHeight + 1) errors.push('topic clipped');
@@ -103,7 +107,7 @@ async function main() {
       assert.deepEqual(failures, [], `${engine} ${width}x${height}: ${failures.join(', ')}`);
       if (output && [390, 768, 900, 1440].includes(width) && height === 900) {
         await active.scrollIntoViewIfNeeded();
-        await page.screenshot({ path: path.join(output, `${engine}-${width}.png`) });
+        await page.screenshot({ path: path.join(output, `${engine}${touch ? '-touch' : ''}-${width}.png`) });
       }
     }
 
@@ -143,7 +147,7 @@ async function main() {
     assert.equal(await week11.locator('select').count(), 0);
     assert.equal(await page.locator('tbody tr').nth(11).locator('select').count(), 5);
     assert.deepEqual(pageErrors, []);
-    console.log(`${engine}: ${sizes.length} viewports passed; selection, unassignment, polling focus, search, filters, questions, and deadline passed.`);
+    console.log(`${engine}${touch ? ' touch' : ''}: ${sizes.length} viewports passed; selection, unassignment, polling focus, search, filters, questions, and deadline passed.`);
   } finally {
     if (browser) await browser.close();
     await new Promise(resolve => server.close(resolve));

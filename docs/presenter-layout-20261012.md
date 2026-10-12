@@ -1,5 +1,22 @@
 # Presenter control layout — 2026-10-12
 
+## Compact control follow-up
+
+The user found the first full-width control too large. It now uses a compact
+96px-wide, 30px-high pill on pointer-driven desktops, with 12px text. Editable
+card text matches the adjacent 12px topic cards; padding and row gaps are reduced.
+The topic stays on a separate row, preventing the original collision.
+
+Devices with any coarse pointer use a 112px-wide control with a 44px minimum
+height and 16px text for touch input. The control remains width-constrained at
+very narrow viewports. The stylesheet URL is versioned again for this adjustment.
+
+Validation: the default tests/build passed. All 33 viewport cases and interaction
+checks passed in Chromium, Firefox, and WebKit, plus touch emulation in Chromium
+and WebKit (165 viewport checks total). Visually compared the previous 1440px
+render with the compact version, and checked mobile touch rendering. This section
+supersedes the full-width/44px-on-all-devices description of the initial fix below.
+
 ## Cause and fix
 
 The desktop table put a topic, its number, and a select with a 104px minimum
