@@ -36,7 +36,8 @@ function applySelection(assignments, topic, owner, presenters, topics) {
   const empty = topics.filter((name) => !next[name]);
   const used = new Set(topics.map((name) => next[name]).filter(Boolean));
   const unused = presenters.filter((name) => !used.has(name));
-  if (empty.length === 1 && unused.length === 1) {
+  // Complete a positive selection, but preserve an explicit unassignment.
+  if (owner && empty.length === 1 && unused.length === 1) {
     next[empty[0]] = unused[0];
   }
   return next;

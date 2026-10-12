@@ -53,4 +53,32 @@ test('rejects unknown people and topics', () => {
   assert.throws(() => applySelection({}, 'CSSOM', '홍길동', presenters, topics), /unknown-person/);
 });
 
+test('clearing any owner from a full week leaves that topic unassigned', () => {
+  const full = Object.fromEntries(topics.map((topic, index) => [topic, presenters[index]]));
+  for (const cleared of topics) {
+    const result = applySelection(full, cleared, '', presenters, topics);
+    assert.equal(result[cleared], '');
+    for (const topic of topics.filter((name) => name !== cleared)) assert.equal(result[topic], full[topic]);
+    assert.deepEqual(full, Object.fromEntries(topics.map((topic, index) => [topic, presenters[index]])));
+    assert.deepEqual(applySelection(result, cleared, '', presenters, topics), result);
+  }
+});
+
+test('the early four-person pool also permits explicit unassignment', () => {
+  const people = presentersForWeek(3);
+  const earlyTopics = topics.slice(0, people.length);
+  const full = Object.fromEntries(earlyTopics.map((topic, index) => [topic, people[index]]));
+  for (const topic of earlyTopics) {
+    const result = applySelection(full, topic, '', people, earlyTopics);
+    assert.equal(result[topic], '');
+    assert.equal(Object.values(result).filter(Boolean).length, people.length - 1);
+  }
+});
+
+test('a released owner can be selected again without changing the other assignments', () => {
+  const full = Object.fromEntries(topics.map((topic, index) => [topic, presenters[index]]));
+  const cleared = applySelection(full, topics[0], '', presenters, topics);
+  assert.deepEqual(applySelection(cleared, topics[0], presenters[0], presenters, topics), full);
+});
+
 console.log(`presenter-assign: ${passed} cases passed`);
