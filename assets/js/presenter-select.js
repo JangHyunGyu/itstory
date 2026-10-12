@@ -47,6 +47,7 @@
   }
 
   function setOwnerText(item, owner) {
+    item.classList.remove('is-editable');
     item.querySelector('.part-owner-select')?.remove();
     let badge = item.querySelector('.part-owner');
     if (!owner) {
@@ -70,6 +71,7 @@
 
   function renderSelect(item, topic, assignments, presenters, onChange) {
     ensureTopic(item, topic);
+    item.classList.add('is-editable');
     item.querySelector('.part-owner')?.remove();
     let select = item.querySelector('.part-owner-select');
     if (!select) {
