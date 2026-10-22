@@ -12,7 +12,7 @@
   const LAST_WEEK = 21;
   const DEADLINE_HOUR = 20;
   const DEADLINE_WEEKDAY_OFFSET = -2;
-  const EARLY_PRESENTERS = ['장현규', '김유진', '김수민', '변진수'];
+  const EARLY_PRESENTERS = ['archerlab', '김유진', '김수민', '변진수'];
   const FULL_PRESENTERS = EARLY_PRESENTERS.concat(['김태훈']);
 
   function seoulYmd(date) {

@@ -18,7 +18,7 @@ const PRESENTER_API_URLS = [
   'https://itstory-presenters.yama5993.workers.dev'
 ].filter(Boolean);
 
-const EARLY_PRESENTERS = ['장현규', '김유진', '김수민', '변진수'];
+const EARLY_PRESENTERS = ['archerlab', '김유진', '김수민', '변진수'];
 const FULL_PRESENTERS = [...EARLY_PRESENTERS, '김태훈'];
 const WEEK_OL_RE =
   /<th class="week-cell" scope="row"><span>회차<\/span>(\d{2})<\/th>[\s\S]*?<ol class="parts">([\s\S]*?)<\/ol>/g;

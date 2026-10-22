@@ -24,7 +24,7 @@ test('defaults to unassigned and keeps a person on only one topic', () => {
 
 test('hides a selected person from remaining capacity by occupying that name', () => {
   const assigned = applySelection(
-    { CSSOM: '김유진', 'HTML 파싱과 DOM': '장현규' },
+    { CSSOM: '김유진', 'HTML 파싱과 DOM': 'archerlab' },
     '렌더 트리와 레이아웃',
     '변진수',
     presenters,
@@ -37,7 +37,7 @@ test('hides a selected person from remaining capacity by occupying that name', (
 
 test('auto-selects the last remaining person when four are chosen', () => {
   const four = {
-    'HTML 파싱과 DOM': '장현규',
+    'HTML 파싱과 DOM': 'archerlab',
     CSSOM: '김유진',
     '렌더 트리와 레이아웃': '김수민',
     '페인트와 합성': '변진수',
