@@ -52,7 +52,7 @@ test('countdown clock formats remaining time', () => {
 });
 
 test('presenter pool grows from week 4', () => {
-  assert.deepEqual(presentersForWeek(3), ['archerlab', '김유진', '김수민', '변진수']);
+  assert.deepEqual(presentersForWeek(3), ['장현규', '김유진', '김수민', '변진수']);
   assert.equal(presentersForWeek(4).length, 5);
   assert.ok(presentersForWeek(4).includes('김태훈'));
 });
@@ -81,7 +81,7 @@ test('fills only empty slots with leftover people', () => {
   assert.equal(assigned[2].owner, '김수민');
   assert.deepEqual(
     assigned.filter((item) => !['김유진', '김수민'].includes(item.owner)).map((item) => item.owner).sort(),
-    ['김태훈', '변진수', 'archerlab'].sort()
+    ['김태훈', '변진수', '장현규'].sort()
   );
   assert.equal(new Set(assigned.map((item) => item.owner)).size, 5);
 });
@@ -115,7 +115,7 @@ test('assigns missing week 8 owners in compact markup', () => {
   assert.equal(result.changed, true);
   assert.equal(result.newlyAssigned.length, 5);
   const owners = result.newlyAssigned.map((item) => item.owner).sort();
-  assert.deepEqual(owners, ['archerlab', '김수민', '김유진', '김태훈', '변진수']);
+  assert.deepEqual(owners, ['김수민', '김유진', '김태훈', '변진수', '장현규']);
   assert.match(result.html, /<span class="part-topic">HTML 파싱과 DOM<\/span><span class="part-owner">/);
   assert.equal(result.html.includes('<li>CSSOM</li>'), false);
 });
@@ -146,8 +146,8 @@ test('assignment is idempotent after empty slots are filled', () => {
 test('remote combo choices are kept before random fill', () => {
   const html = `<th class="week-cell" scope="row"><span>회차</span>08</th>
 <td class="parts-cell"><ol class="parts"><li>HTML 파싱과 DOM</li><li>CSSOM</li><li>렌더 트리와 레이아웃</li><li>페인트와 합성</li><li>렌더링 타이밍과 성능</li></ol></td>`;
-  const result = assignWeekOwners(html, 8, () => 0, { CSSOM: '김유진', 'HTML 파싱과 DOM': 'archerlab' });
-  assert.match(result.html, /<span class="part-topic">HTML 파싱과 DOM<\/span><span class="part-owner">archerlab<\/span>/);
+  const result = assignWeekOwners(html, 8, () => 0, { CSSOM: '김유진', 'HTML 파싱과 DOM': '장현규' });
+  assert.match(result.html, /<span class="part-topic">HTML 파싱과 DOM<\/span><span class="part-owner">장현규<\/span>/);
   assert.match(result.html, /<span class="part-topic">CSSOM<\/span><span class="part-owner">김유진<\/span>/);
 });
 
