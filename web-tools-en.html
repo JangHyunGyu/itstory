@@ -160,90 +160,98 @@
 				<section class="timeline-grid" id="timeline" aria-labelledby="timeline-title" aria-describedby="timeline-instructions">
 					<p class="timeline-grid__instructions sr-only" id="timeline-instructions">Pick a year to open a nearby dialog so you can keep your place in the timeline.</p>
 
-					<section class="timeline-group" aria-labelledby="decade-1990 topic-1990">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-1990">1990s</p>
-							<h3 class="timeline-group__topic" id="topic-1990">“Drag a mouse around and a webpage appears”</h3>
-							<p class="timeline-group__summary">Tools showed up that let designers who didn't know a line of code build sites, and the habit of gathering scattered code files into one spot on the internet started taking root.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1997-dreamweaver">
-								<span class="timeline-event__year">1997</span>
-								<span class="timeline-event__label">Dreamweaver 1.0</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="1999-cvs-hosting">
-								<span class="timeline-event__year">1999</span>
-								<span class="timeline-event__label">CVS hosting services</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-2000 topic-2000">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2000">2000s</p>
-							<h3 class="timeline-group__topic" id="topic-2000">“Build freely on your own, then gather in one place”</h3>
-							<p class="timeline-group__summary">Git and GitHub arrived, and developers all over the world started trying whatever they wanted on their own machines, then meeting in an online town square to naturally hand each other's work around.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2005-git">
-								<span class="timeline-event__year">2005</span>
-								<span class="timeline-event__label">Git debuts</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2008-github">
-								<span class="timeline-event__year">2008</span>
-								<span class="timeline-event__label">GitHub launches</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-2010 topic-2010">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2010">2010s</p>
-							<h3 class="timeline-group__topic" id="topic-2010">“Leave the boring repetitive stuff to the computer”</h3>
-							<p class="timeline-group__summary">A flood of tools showed up that let computers handle the simple tasks humans used to do by hand, and an era opened where you could just push your code and the site would float onto the internet on its own.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2012-grunt">
-								<span class="timeline-event__year">2012</span>
-								<span class="timeline-event__label">Grunt 0.4</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2014-webpack">
-								<span class="timeline-event__year">2014</span>
-								<span class="timeline-event__label">Webpack 1.0</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2016-left-pad">
-								<span class="timeline-event__year">2016</span>
-								<span class="timeline-event__label">npm left-pad outage</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2016-netlify">
-								<span class="timeline-event__year">2016</span>
-								<span class="timeline-event__label">Netlify CI/CD</span>
-							</button>
-						</div>
-					</section>
-
-					<section class="timeline-group" aria-labelledby="decade-2020 topic-2020">
-						<header class="timeline-group__head">
-							<p class="timeline-group__decade" id="decade-2020">2020s</p>
-							<h3 class="timeline-group__topic" id="topic-2020">“Open a browser and start coding — AI helps from the next seat over”</h3>
-							<p class="timeline-group__summary">You don't install anything on your laptop anymore: as long as you've got internet, you can start coding, and a new way of working — where AI writes code alongside you like a teammate — is spreading fast.</p>
-						</header>
-						<div class="timeline-group__list" role="list">
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2021-codespaces">
-								<span class="timeline-event__year">2021</span>
-								<span class="timeline-event__label">GitHub Codespaces GA</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2021-codecov">
-								<span class="timeline-event__year">2021</span>
-								<span class="timeline-event__label">Codecov supply-chain breach</span>
-							</button>
-							<button class="timeline-event" type="button" role="listitem" data-event-id="2023-ai-assist">
-								<span class="timeline-event__year">2023</span>
-								<span class="timeline-event__label">AI coding copilots</span>
-							</button>
-						</div>
-					</section>
+				<section class="timeline-group" aria-labelledby="decade-1990-tools topic-1990-tools">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-1990-tools">1990s</p>
+						<h3 class="timeline-group__topic" id="topic-1990-tools">“Visual Web Editors and Shared Code Hosting”</h3>
+						<p class="timeline-group__summary">Dreamweaver bridged visual design and code, while hosted CVS repositories gave distributed open-source teams a shared home on the internet.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1997-dreamweaver">
+							<span class="timeline-event__year">1997</span>
+							<span class="timeline-event__label">Dreamweaver 1.0</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="1999-cvs-hosting">
+							<span class="timeline-event__year">1999</span>
+							<span class="timeline-event__label">CVS hosting services</span>
+						</button>
+					</div>
 				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-2000-git topic-2000-git">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-2000-git">2000s</p>
+						<h3 class="timeline-group__topic" id="topic-2000-git">“Distributed Version Control and Social Coding”</h3>
+						<p class="timeline-group__summary">Linus Torvalds created Git in two weeks, and GitHub turned branching, pull requests, and code review into a global collaborative workflow.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2005-git">
+							<span class="timeline-event__year">2005</span>
+							<span class="timeline-event__label">Git debuts</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2008-github">
+							<span class="timeline-event__year">2008</span>
+							<span class="timeline-event__label">GitHub launches</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-2010-automation topic-2010-automation">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-2010-automation">2010s</p>
+						<h3 class="timeline-group__topic" id="topic-2010-automation">“Package Registries, Type Safety, Bundlers, and Instant Deploy”</h3>
+						<p class="timeline-group__summary">npm unlocked millions of reusable packages, TypeScript brought compile-time safety, Grunt and Webpack automated builds, left-pad hardened supply chains, and Netlify popularized git-push deployments.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2010-npm">
+							<span class="timeline-event__year">2010</span>
+							<span class="timeline-event__label">npm Package Manager Launch</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2012-grunt">
+							<span class="timeline-event__year">2012</span>
+							<span class="timeline-event__label">Grunt 0.4</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2012-typescript">
+							<span class="timeline-event__year">2012</span>
+							<span class="timeline-event__label">TypeScript Static Typing</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2014-webpack">
+							<span class="timeline-event__year">2014</span>
+							<span class="timeline-event__label">Webpack 1.0</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2016-left-pad">
+							<span class="timeline-event__year">2016</span>
+							<span class="timeline-event__label">npm left-pad outage</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2016-netlify">
+							<span class="timeline-event__year">2016</span>
+							<span class="timeline-event__label">Netlify CI/CD</span>
+						</button>
+					</div>
+				</section>
+
+				<section class="timeline-group" aria-labelledby="decade-2020-cloudai topic-2020-cloudai">
+					<header class="timeline-group__head">
+						<p class="timeline-group__decade" id="decade-2020-cloudai">2020s</p>
+						<h3 class="timeline-group__topic" id="topic-2020-cloudai">“Instant ESM Tooling, Cloud Dev Environments, and AI Pair Programming”</h3>
+						<p class="timeline-group__summary">Vite made dev servers start in milliseconds, GitHub Codespaces moved full dev environments to the cloud, and AI coding assistants transformed everyday software creation.</p>
+					</header>
+					<div class="timeline-group__list" role="list">
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2020-vite">
+							<span class="timeline-event__year">2020</span>
+							<span class="timeline-event__label">Vite Next-Gen Build Tool</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2021-codespaces">
+							<span class="timeline-event__year">2021</span>
+							<span class="timeline-event__label">GitHub Codespaces GA</span>
+						</button>
+						<button class="timeline-event" type="button" role="listitem" data-event-id="2023-ai-assist">
+							<span class="timeline-event__year">2023</span>
+							<span class="timeline-event__label">AI coding copilots</span>
+						</button>
+					</div>
+				</section>
+			</section>
 
 				<section class="sources" id="sources" aria-labelledby="sources-title">
 					<div class="section__head">
@@ -275,247 +283,291 @@
 			</div>
 		</div>
 
-		<template id="event-1997-dreamweaver">
-			<article class="event-detail" aria-labelledby="event-1997-dreamweaver-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1997</p>
-					<h2 id="event-1997-dreamweaver-title">Dreamweaver 1.0, drawing a website without writing code</h2>
-					<p class="event-detail__summary">“I just dragged it with my mouse and the code wrote itself!” Thanks to Dreamweaver, designers could finally join in on making websites for the first time.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<img src="assets/images/story_web-tools_1997.svg" alt="Illustration of the 1997 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-						<p>In the late 1990s, building a website was a punishing job. You opened a plain text editor, typed every tag by hand — <code>&lt;table border="1" cellspacing="0" cellpadding="5"&gt;</code> — and tweaked one character to nudge an image, then refreshed the browser to see if it looked right. Designers were locked out of the whole process. The unspoken rule was simple and unfair: <strong>"if you don't know code, you don't get to make websites."</strong></p>
-						<p>An engineer at Macromedia stared at this gap and thought, <em>"Wait. In a word processor you just type and the layout takes care of itself. So why can't a designer drag a photo onto a webpage and let the computer write the HTML behind it?"</em></p>
-						<p>That question became <strong>Dreamweaver</strong> in 1997. Designers dragged images and tables onto a canvas, and a panel on the right filled itself with valid HTML. A designer at an ad agency tried it for the first time and beamed, <em>"I just painted the page like a poster — and it actually works as a real website!"</em> The developer next to her opened the code view, made a few tweaks, and for the first time the two of them were collaborating on the same screen instead of waiting on each other.</p>
-						<p>That "build a website without writing code" idea is the seed of an entire modern industry. <strong>WordPress, Squarespace, Wix, Webflow, Notion sites, Substack</strong> — every tool that lets a small business owner publish a storefront, or a high schooler launch a portfolio in an afternoon, traces its lineage back to Dreamweaver. The web stopped being gated by syntax and started being something anyone could touch.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Dreamweaver combined visual editing with a code view so nondevelopers could participate in shipping websites. Later web IDEs borrowed the idea of keeping design and markup connected.</p>
-					</div>
-				</section>
-			</article>
-		</template>
+	<template id="event-1997-dreamweaver">
+		<article class="event-detail" aria-labelledby="event-1997-dreamweaver-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1997</p>
+				<h2 id="event-1997-dreamweaver-title">Dreamweaver 1.0, drawing a website without writing code</h2>
+				<p class="event-detail__summary">“I just dragged it with my mouse and the code wrote itself!” Thanks to Dreamweaver, designers could finally join in on making websites for the first time.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<img src="assets/images/story_web-tools_1997-dreamweaver.png" alt="1997 Dreamweaver 1.0, drawing a website without writing code visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+					<p>In the late 1990s, building a website was a punishing job. You opened a plain text editor, typed every tag by hand — <code>&lt;table border="1" cellspacing="0" cellpadding="5"&gt;</code> — and tweaked one character to nudge an image, then refreshed the browser to see if it looked right. Designers were locked out of the whole process. The unspoken rule was simple and unfair: <strong>"if you don't know code, you don't get to make websites."</strong></p>
+					<p>An engineer at Macromedia stared at this gap and thought, <em>"Wait. In a word processor you just type and the layout takes care of itself. So why can't a designer drag a photo onto a webpage and let the computer write the HTML behind it?"</em></p>
+					<p>That question became <strong>Dreamweaver</strong> in 1997. Designers dragged images and tables onto a canvas, and a panel on the right filled itself with valid HTML. A designer at an ad agency tried it for the first time and beamed, <em>"I just painted the page like a poster — and it actually works as a real website!"</em> The developer next to her opened the code view, made a few tweaks, and for the first time the two of them were collaborating on the same screen instead of waiting on each other.</p>
+					<p>That "build a website without writing code" idea is the seed of an entire modern industry. <strong>WordPress, Squarespace, Wix, Webflow, Notion sites, Substack</strong> — every tool that lets a small business owner publish a storefront, or a high schooler launch a portfolio in an afternoon, traces its lineage back to Dreamweaver. The web stopped being gated by syntax and started being something anyone could touch.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Dreamweaver combined visual editing with a code view so nondevelopers could participate in shipping websites. Later web IDEs borrowed the idea of keeping design and markup connected.</p>
+				</div>
+			</section>
+		</article>
+	</template>
 
-		<template id="event-1999-cvs-hosting">
-			<article class="event-detail" aria-labelledby="event-1999-cvs-hosting-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">1999</p>
-					<h2 id="event-1999-cvs-hosting-title">CVS hosting, the start of gathering code in one place</h2>
-					<p class="event-detail__summary">“Stop passing files around on USB sticks — let's just throw everything in one place on the internet!” The era of mailing code around ended, and the door opened for groups of people to work together.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<img src="assets/images/story_web-tools_1999.svg" alt="Illustration of the 1999 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-						<p>In the late 1990s, two or more developers trying to write code together was a small disaster. People mailed source files as email attachments or passed them around on floppy disks and Zip drives. Sooner or later somebody opened the wrong copy and the day ended in panic: <strong>"Where did my Friday changes go? Did you overwrite my file?"</strong> Nobody could say with confidence who had touched what, and one careless save could erase a teammate's whole afternoon.</p>
-						<p>The fix sounded obvious in hindsight, but at the time it felt revolutionary. <em>"What if we kept one canonical copy of the code on a server somewhere on the internet? Everyone pulls the latest version down, makes their changes, pushes them back, and the system records every edit automatically — who, what, when."</em></p>
-						<p>By 1999, services like <strong>SourceForge</strong> were hosting <strong>CVS</strong> (Concurrent Versions System) on the public internet. Open-source teams started checking in weekend work from their bedrooms with a single command. Monday morning, the maintainer would pull up the log on the projector and say, <em>"Look — Alex committed Saturday at 3am, Priya fixed the parser bug Sunday afternoon. We can see exactly who did what."</em> Suspicion got replaced with a shared timeline.</p>
-						<p>Every collaboration habit that powers a modern engineering team — the central source of truth, the audit trail, the resolved merge conflict — started with hosted CVS. Today's <strong>GitHub, GitLab, and Bitbucket</strong> are the great-grandchildren of that idea. Software stopped being something one hero wrote alone and became, in everyone's mind, <strong>a building that a crew puts up together, brick by brick.</strong></p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Hosted CVS made server-backed version control normal. Teams learned conflict resolution and code review habits that paved the way for Git-era workflows.</p>
-					</div>
-				</section>
-			</article>
-		</template>
+	<template id="event-1999-cvs-hosting">
+		<article class="event-detail" aria-labelledby="event-1999-cvs-hosting-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">1999</p>
+				<h2 id="event-1999-cvs-hosting-title">CVS hosting, the start of gathering code in one place</h2>
+				<p class="event-detail__summary">“Stop passing files around on USB sticks — let's just throw everything in one place on the internet!” The era of mailing code around ended, and the door opened for groups of people to work together.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<img src="assets/images/story_web-tools_1999-cvs-hosting.png" alt="1999 CVS hosting, the start of gathering code in one place visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+					<p>In the late 1990s, two or more developers trying to write code together was a small disaster. People mailed source files as email attachments or passed them around on floppy disks and Zip drives. Sooner or later somebody opened the wrong copy and the day ended in panic: <strong>"Where did my Friday changes go? Did you overwrite my file?"</strong> Nobody could say with confidence who had touched what, and one careless save could erase a teammate's whole afternoon.</p>
+					<p>The fix sounded obvious in hindsight, but at the time it felt revolutionary. <em>"What if we kept one canonical copy of the code on a server somewhere on the internet? Everyone pulls the latest version down, makes their changes, pushes them back, and the system records every edit automatically — who, what, when."</em></p>
+					<p>By 1999, services like <strong>SourceForge</strong> were hosting <strong>CVS</strong> (Concurrent Versions System) on the public internet. Open-source teams started checking in weekend work from their bedrooms with a single command. Monday morning, the maintainer would pull up the log on the projector and say, <em>"Look — Alex committed Saturday at 3am, Priya fixed the parser bug Sunday afternoon. We can see exactly who did what."</em> Suspicion got replaced with a shared timeline.</p>
+					<p>Every collaboration habit that powers a modern engineering team — the central source of truth, the audit trail, the resolved merge conflict — started with hosted CVS. Today's <strong>GitHub, GitLab, and Bitbucket</strong> are the great-grandchildren of that idea. Software stopped being something one hero wrote alone and became, in everyone's mind, <strong>a building that a crew puts up together, brick by brick.</strong></p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Hosted CVS made server-backed version control normal. Teams learned conflict resolution and code review habits that paved the way for Git-era workflows.</p>
+				</div>
+			</section>
+		</article>
+	</template>
 
-		<template id="event-2005-git">
-			<article class="event-detail" aria-labelledby="event-2005-git-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2005</p>
-					<h2 id="event-2005-git-title">Git, an era of trying things freely on your own machine</h2>
-					<p class="event-detail__summary">“I can experiment on my own computer all I want and nothing gets broken!” Git is the tool that let developers try new ideas without any fear.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<img src="assets/images/story_web-tools_2005.svg" alt="Illustration of the 2005 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-						<p>By the early 2000s the Linux kernel had become an unprecedented collaboration: thousands of volunteers across every continent contributing patches. The version control tools couldn't keep up. They needed a network connection to do almost anything, and creating a "branch" to try something experimental was so heavy that nobody bothered. Linus Torvalds, who maintained the project, finally lost his patience. <em>"Merging thousands of contributors' work is taking days. We can't keep working like this."</em></p>
-						<p>Instead of waiting for someone to fix it, he sat down to build a new tool himself. The core insight broke every rule of the existing systems: <em>"Stop relying on a central server. Give every single developer a complete copy of the entire repository on their own laptop. Let them work offline. Make branching almost free — fast enough that you'd create one for any half-formed idea."</em></p>
-						<p>In two weeks of intense coding, he shipped it. He called it <strong>Git</strong>. Other kernel developers tried it and were stunned. <em>"Branches happen in a second. Merging is instant. I can experiment, blow it up, throw the branch away, and nothing is lost."</em> That fearlessness changed engineering culture itself — suddenly trying ten ideas a day was cheaper than agonizing over one.</p>
-						<p>Today, <strong>nearly 100% of the world's software</strong> is tracked with Git. Google, Apple, Meta, Netflix, every startup in a garage — all of it. Behind every app on your phone and every website you load, somewhere a person typed <code>git commit</code>. A tool one engineer hacked together in two weeks became the bloodstream of an entire industry, and twenty years later it still is.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Git stores snapshots instead of file diffs and embraces offline work. Fast branching and merging encouraged fearless experimentation and defined modern collaboration patterns.</p>
-					</div>
-				</section>
-			</article>
-		</template>
+	<template id="event-2005-git">
+		<article class="event-detail" aria-labelledby="event-2005-git-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2005</p>
+				<h2 id="event-2005-git-title">Git, an era of trying things freely on your own machine</h2>
+				<p class="event-detail__summary">“I can experiment on my own computer all I want and nothing gets broken!” Git is the tool that let developers try new ideas without any fear.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<img src="assets/images/story_web-tools_2005-git.png" alt="2005 Git, an era of trying things freely on your own machine visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+					<p>By the early 2000s the Linux kernel had become an unprecedented collaboration: thousands of volunteers across every continent contributing patches. The version control tools couldn't keep up. They needed a network connection to do almost anything, and creating a "branch" to try something experimental was so heavy that nobody bothered. Linus Torvalds, who maintained the project, finally lost his patience. <em>"Merging thousands of contributors' work is taking days. We can't keep working like this."</em></p>
+					<p>Instead of waiting for someone to fix it, he sat down to build a new tool himself. The core insight broke every rule of the existing systems: <em>"Stop relying on a central server. Give every single developer a complete copy of the entire repository on their own laptop. Let them work offline. Make branching almost free — fast enough that you'd create one for any half-formed idea."</em></p>
+					<p>In two weeks of intense coding, he shipped it. He called it <strong>Git</strong>. Other kernel developers tried it and were stunned. <em>"Branches happen in a second. Merging is instant. I can experiment, blow it up, throw the branch away, and nothing is lost."</em> That fearlessness changed engineering culture itself — suddenly trying ten ideas a day was cheaper than agonizing over one.</p>
+					<p>Today, <strong>nearly 100% of the world's software</strong> is tracked with Git. Google, Apple, Meta, Netflix, every startup in a garage — all of it. Behind every app on your phone and every website you load, somewhere a person typed <code>git commit</code>. A tool one engineer hacked together in two weeks became the bloodstream of an entire industry, and twenty years later it still is.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Git stores snapshots instead of file diffs and embraces offline work. Fast branching and merging encouraged fearless experimentation and defined modern collaboration patterns.</p>
+				</div>
+			</section>
+		</article>
+	</template>
 
-		<template id="event-2008-github">
-			<article class="event-detail" aria-labelledby="event-2008-github-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2008</p>
-					<h2 id="event-2008-github-title">GitHub, the town square where developers from all over the world meet</h2>
-					<p class="event-detail__summary">“Hey, I tried fixing this part like this” — once that kind of suggestion could fly with one browser click, anyone in the world could join anyone else's project.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<img src="assets/images/story_web-tools_2008.svg" alt="Illustration of the 2008 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-						<p>Git was powerful, but it had one ugly catch: it lived entirely <strong>on the command line</strong>, in a black terminal window. The learning curve scared off newcomers, and even seasoned developers still mailed patch files around when they wanted to share work. The unanswered question in every developer's head was, <em>"How do I actually show this side project to the world? How do I contribute to someone else's code without being their friend first?"</em></p>
-						<p>In 2008, three developers in San Francisco took a swing at it. <em>"Keep everything Git can do underneath, but wrap it in a beautiful website. Browse the code, leave comments line by line, propose changes, file bugs — all of it in the browser, with a single click."</em></p>
-						<p>That site became <strong>GitHub</strong>, and the magic ingredient was a feature called the <strong>Pull Request</strong>. Spot a bug in someone's project? Fork it, fix it, open a PR, and the maintainer sees a clean side-by-side diff in their browser, leaves comments, and merges with one click. A first-time contributor opened her first PR and could barely believe it: <em>"I didn't email anyone. I didn't know the maintainer. And my code is now in a project that thousands of people use — my name is in the contributor list!"</em></p>
-						<p>GitHub turned into something nobody expected: <strong>a developer's social network and résumé rolled into one</strong>. Hiring managers at startups and Big Tech alike now ask, "Can I see your GitHub?" — and a strong contribution history can outweigh a degree from a famous school. Over a hundred million developers meet there every day to read each other's code, argue politely, and ship things together. All of it grew out of one small bet in 2008: that code review belonged in a browser, not an inbox.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>GitHub wrapped Git workflows in a shared UI so reviews and documentation stayed close to the code. The blueprint inspired countless DevOps platforms that followed.</p>
-					</div>
-				</section>
-			</article>
-		</template>
+	<template id="event-2008-github">
+		<article class="event-detail" aria-labelledby="event-2008-github-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2008</p>
+				<h2 id="event-2008-github-title">GitHub, the town square where developers from all over the world meet</h2>
+				<p class="event-detail__summary">“Hey, I tried fixing this part like this” — once that kind of suggestion could fly with one browser click, anyone in the world could join anyone else's project.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<img src="assets/images/story_web-tools_2008-github.png" alt="2008 GitHub, the town square where developers from all over the world meet visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+					<p>Git was powerful, but it had one ugly catch: it lived entirely <strong>on the command line</strong>, in a black terminal window. The learning curve scared off newcomers, and even seasoned developers still mailed patch files around when they wanted to share work. The unanswered question in every developer's head was, <em>"How do I actually show this side project to the world? How do I contribute to someone else's code without being their friend first?"</em></p>
+					<p>In 2008, three developers in San Francisco took a swing at it. <em>"Keep everything Git can do underneath, but wrap it in a beautiful website. Browse the code, leave comments line by line, propose changes, file bugs — all of it in the browser, with a single click."</em></p>
+					<p>That site became <strong>GitHub</strong>, and the magic ingredient was a feature called the <strong>Pull Request</strong>. Spot a bug in someone's project? Fork it, fix it, open a PR, and the maintainer sees a clean side-by-side diff in their browser, leaves comments, and merges with one click. A first-time contributor opened her first PR and could barely believe it: <em>"I didn't email anyone. I didn't know the maintainer. And my code is now in a project that thousands of people use — my name is in the contributor list!"</em></p>
+					<p>GitHub turned into something nobody expected: <strong>a developer's social network and résumé rolled into one</strong>. Hiring managers at startups and Big Tech alike now ask, "Can I see your GitHub?" — and a strong contribution history can outweigh a degree from a famous school. Over a hundred million developers meet there every day to read each other's code, argue politely, and ship things together. All of it grew out of one small bet in 2008: that code review belonged in a browser, not an inbox.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>GitHub wrapped Git workflows in a shared UI so reviews and documentation stayed close to the code. The blueprint inspired countless DevOps platforms that followed.</p>
+				</div>
+			</section>
+		</article>
+	</template>
 
-		<template id="event-2012-grunt">
-			<article class="event-detail" aria-labelledby="event-2012-grunt-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2012</p>
-					<h2 id="event-2012-grunt-title">Grunt 0.4, handing the boring stuff over to the computer</h2>
-					<p class="event-detail__summary">“The 30-minute checklist I used to run by hand shrank to 30 seconds!” Grunt was the start of a culture where computers take over the repetitive work for us.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<img src="assets/images/story_web-tools_2012.svg" alt="Illustration of the 2012 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-						<p>By the early 2010s, shipping a website had quietly become a manual obstacle course. Before every release, somebody had to compile Sass into real CSS, shrink all the images, concatenate a hundred JavaScript files into one, run the linter, run the tests, generate the sourcemaps. Five, ten, sometimes fifteen steps in order — and if you forgot one? <strong>You shipped a broken site to every visitor on the planet.</strong></p>
-						<p>One frontend engineer slumped at his desk and grumbled, <em>"Why am I reading a paper checklist every time I deploy? Computers are literally good at running lists. Let me just write the steps in a file and have one command do all of it."</em></p>
-						<p>That grumble became <strong>Grunt</strong> in 2012. You created a <code>Gruntfile</code> in your project, listed each task in order — "compile the styles, then optimize the images, then bundle the scripts" — and from then on you typed a single word in the terminal: <code>grunt</code>. The machine took it from there. A teammate ran it for the first time and laughed in disbelief: <em>"My pre-deploy ritual went from thirty minutes to thirty seconds."</em></p>
-						<p>The "let scripts handle the busywork" mindset spread like wildfire. Gulp came next, then npm scripts, then full-blown CI/CD platforms like GitHub Actions and CircleCI. Today, every serious software company has a pipeline that picks up your commit and runs check → build → test → deploy without anyone watching. Humans got their attention back for the creative parts, and computers took over the parts they were always better at. That whole shift began with one developer who refused to keep ticking boxes by hand.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Grunt invited teams to declare command-line tasks in configuration files. The pattern paved the way for Gulp, npm scripts, and today's CI pipelines.</p>
-					</div>
-				</section>
-			</article>
-		</template>
+	<template id="event-2010-npm">
+		<article class="event-detail" aria-labelledby="event-2010-npm-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2010</p>
+				<h2 id="event-2010-npm-title">npm Turns Open-Source Code Into One-Line Building Blocks</h2>
+				<p class="event-detail__summary">Instead of hunting down .zip files across the web, npm let developers install, share, and version millions of JavaScript packages with a single command.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<img src="assets/images/story_web-tools_2010-npm.png" alt="2010 npm Turns Open-Source Code Into One-Line Building Blocks visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+					<p>Throughout the 2000s, adding a third-party library to a web project meant hunting down a download link, unpacking a <code>.zip</code> file, copying scripts into a folder, and manually tracking dependencies whenever a bug fix came out.</p>
+					<p>Shortly after Node.js arrived, <strong>Isaac Z. Schlueter</strong> built a dedicated package manager for JavaScript: <em>"Record every dependency and its version in a single <code>package.json</code> file, and let one terminal command fetch the entire dependency tree automatically."</em></p>
+					<p>Launched in January 2010, <strong>npm</strong> became the engine of JavaScript's explosive growth. Developers around the world published reusable modules, and teams could assemble complex applications in hours starting from <code>npm install</code>.</p>
+					<p>Today the npm registry hosts millions of packages and remains the largest software ecosystem in history.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>npm introduced declarative dependency management via package.json and a centralized package registry, powering both Node.js back-ends and modern front-end toolchains.</p>
+				</div>
+			</section>
+		</article>
+	</template>
 
-		<template id="event-2014-webpack">
-			<article class="event-detail" aria-labelledby="event-2014-webpack-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2014</p>
-					<h2 id="event-2014-webpack-title">Webpack 1.0, smartly bundling scattered files into one</h2>
-					<p class="event-detail__summary">“We merged 100 files into one and the page went from 8 seconds to 2!” The unsung hero that makes even huge web apps feel light.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<img src="assets/images/story_web-tools_2014.svg" alt="Illustration of the 2014 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-						<p>By the mid-2010s, JavaScript apps had grown into monsters. A site like Facebook was made of <strong>hundreds, sometimes thousands</strong> of small JavaScript files importing each other. The catch: <strong>browsers fetch files one at a time</strong>. Loading 200 files meant 200 round trips across the network, and users sat staring at a blank page. Worse, nobody could keep track of which file depended on which anymore — the dependency graph had become a hairball.</p>
-						<p>A German developer named Tobias Koppers looked at the mess and thought, <em>"What if a tool actually traced how all those files reference each other and merged them into one bundle the browser can grab in a single request? And for the parts the user doesn't need on the first screen, ship those separately and load them on demand?"</em></p>
-						<p>That tool, released in 2014, was <strong>Webpack</strong>. It walked the dependency graph, bundled JavaScript intelligently, and — almost as a side effect — let you treat images, CSS, and even fonts as importable modules. A small startup wired it into their build and watched their first-page load drop from <strong>eight seconds to two</strong>. Their growth lead exhaled: <em>"Users are actually staying on the page now."</em></p>
-						<p>Every modern web app you use — <strong>Instagram, Spotify Web, Slack, Discord, Notion, Figma</strong> — is shipped through a bundler in the Webpack lineage (or its descendants like Vite and esbuild). The reason a heavy, app-like website can paint in a second or two on your phone is that an invisible build step in some CI server crunched its dependency graph for you. It's the unsung hero that quietly makes the modern web feel fast.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Webpack parsed dependency graphs and supported dynamic imports, aligning with the need to ship efficient, modular applications. It set expectations for modern module systems.</p>
-					</div>
-				</section>
-			</article>
-		</template>
+	<template id="event-2012-grunt">
+		<article class="event-detail" aria-labelledby="event-2012-grunt-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2012</p>
+				<h2 id="event-2012-grunt-title">Grunt 0.4, handing the boring stuff over to the computer</h2>
+				<p class="event-detail__summary">“The 30-minute checklist I used to run by hand shrank to 30 seconds!” Grunt was the start of a culture where computers take over the repetitive work for us.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<img src="assets/images/story_web-tools_2012-grunt.png" alt="2012 Grunt 0.4, handing the boring stuff over to the computer visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+					<p>By the early 2010s, shipping a website had quietly become a manual obstacle course. Before every release, somebody had to compile Sass into real CSS, shrink all the images, concatenate a hundred JavaScript files into one, run the linter, run the tests, generate the sourcemaps. Five, ten, sometimes fifteen steps in order — and if you forgot one? <strong>You shipped a broken site to every visitor on the planet.</strong></p>
+					<p>One frontend engineer slumped at his desk and grumbled, <em>"Why am I reading a paper checklist every time I deploy? Computers are literally good at running lists. Let me just write the steps in a file and have one command do all of it."</em></p>
+					<p>That grumble became <strong>Grunt</strong> in 2012. You created a <code>Gruntfile</code> in your project, listed each task in order — "compile the styles, then optimize the images, then bundle the scripts" — and from then on you typed a single word in the terminal: <code>grunt</code>. The machine took it from there. A teammate ran it for the first time and laughed in disbelief: <em>"My pre-deploy ritual went from thirty minutes to thirty seconds."</em></p>
+					<p>The "let scripts handle the busywork" mindset spread like wildfire. Gulp came next, then npm scripts, then full-blown CI/CD platforms like GitHub Actions and CircleCI. Today, every serious software company has a pipeline that picks up your commit and runs check → build → test → deploy without anyone watching. Humans got their attention back for the creative parts, and computers took over the parts they were always better at. That whole shift began with one developer who refused to keep ticking boxes by hand.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Grunt invited teams to declare command-line tasks in configuration files. The pattern paved the way for Gulp, npm scripts, and today's CI pipelines.</p>
+				</div>
+			</section>
+		</article>
+	</template>
 
-		<template id="event-2016-left-pad">
-			<article class="event-detail" aria-labelledby="event-2016-left-pad-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2016</p>
-					<h2 id="event-2016-left-pad-title">left-pad, when 11 lines of code stopped the world</h2>
-					<p class="event-detail__summary">One person deleted an 11-line package, and the build systems at companies the size of Facebook and Netflix stopped at the same time.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<img src="assets/images/story_web-tools_2016.svg" alt="Illustration of the 2016 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-						<p>One day in March 2016, development systems at thousands of companies <strong>stopped at once</strong>. Facebook, Netflix, Airbnb — even the giants could not build their code. The cause was the deletion of <strong>one 11-line package</strong>. Its name was <code>left-pad</code>. All it did was pad the front of a string so the length matched.</p>
-						<p>JavaScript developers do not write every small helper themselves. They take other people's code from a shared warehouse called <strong>npm</strong>. left-pad was one of those helpers, and it was so convenient that huge projects such as React and Babel all depended on it. That day a developer got into a name dispute with npm and, as a protest, deleted every package he had published. left-pad was among them.</p>
-						<p>Builds failed in a chain, like dominoes. One developer typed into chat: <em>"Why did we suddenly get 'cannot find left-pad'? Nobody touched our code!"</em> A teammate answered: <em>"Someone deleted the package from npm. We depend on a package that depends on a package that depends on it, and the whole chain broke."</em> npm restored the package and the outage settled, but the fact that 11 lines had shaken the world was the shock.</p>
-						<p>The lesson was blunt: <strong>depending on other people's code without a limit is dangerous.</strong> Afterward companies made <strong>lockfiles</strong> (pinning an exact version), <strong>private registries</strong> (keeping a copy of important packages inside the company), and security checks mandatory. Eleven lines of code changed the safety habits of a whole industry.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>npm used the incident to revise package-ownership rules and to limit unpublishing of core packages. left-pad made supply-chain risk concrete, and many organizations added registry mirrors, live-patch plans, and signature checks because of it.</p>
-					</div>
-				</section>
-			</article>
-		</template>
+	<template id="event-2012-typescript">
+		<article class="event-detail" aria-labelledby="event-2012-typescript-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2012</p>
+				<h2 id="event-2012-typescript-title">TypeScript Catches Bugs Before the Browser Ever Runs Your Code</h2>
+				<p class="event-detail__summary">To stop "Cannot read property of undefined" crashes in production, TypeScript wrapped JavaScript in compile-time type safety and instant editor autocomplete.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<img src="assets/images/story_web-tools_2012-typescript.png" alt="2012 TypeScript Catches Bugs Before the Browser Ever Runs Your Code visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+					<p>As JavaScript codebases grew from a few hundred lines to hundreds of thousands, dynamic typing became a minefield. Renaming a single property or passing a string instead of a number often went unnoticed until a real user clicked a button and triggered a runtime crash.</p>
+					<p>Led by C# creator <strong>Anders Hejlsberg</strong> at Microsoft, the team took a pragmatic approach: <em>"Don't replace JavaScript—make every valid JavaScript file valid TypeScript, and layer optional static types on top that compile cleanly away."</em></p>
+					<p>Unveiled in October 2012, <strong>TypeScript</strong> gave editors superpowers. Typos like <code>user.naem</code> lit up with red squiggles before saving the file, refactoring across hundreds of files became safe, and pressing a dot (<code>.</code>) revealed exact autocomplete suggestions.</p>
+					<p>Today TypeScript is the de facto standard for professional web development across front-end and Node.js teams alike.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>TypeScript added structural static typing and compile-time verification as a superset of JavaScript, preventing runtime type errors and powering rich IDE tooling.</p>
+				</div>
+			</section>
+		</article>
+	</template>
 
-		<template id="event-2016-netlify">
-			<article class="event-detail" aria-labelledby="event-2016-netlify-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2016</p>
-					<h2 id="event-2016-netlify-title">Netlify, push your code and the site is up in 5 minutes</h2>
-					<p class="event-detail__summary">“No server setup, no certificates. Just push your code.” An era opened where a solo developer could run a site at the same level as a giant corporation.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<img src="assets/images/story_web-tools_2016.svg" alt="Illustration of the 2016 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-						<p>Even in 2015, putting a small website online was an absurd amount of work for what you got. You rented a Linux server somewhere, registered a domain, applied for a TLS certificate, configured Apache or nginx, FTP'd your files up one by one, and prayed nothing in your <code>httpd.conf</code> had a typo. <strong>It took days, sometimes weekends.</strong> Indie developers and small teams sighed, "Writing the code is easy — it's the deployment that breaks me."</p>
-						<p>In 2016, a company called <strong>Netlify</strong> made what sounded like a wild promise. <em>"The moment you push code to GitHub, we'll automatically build it, distribute it across servers around the world, and serve it over HTTPS. No machine to provision. No config files. No certificate paperwork. Just push."</em></p>
-						<p>And it actually worked. A solo developer pushed her static site to GitHub and five minutes later visited <code>https://her-site.netlify.app</code> — a real, public URL, fast for visitors in Tokyo and São Paulo alike. Even better, every future commit automatically redeployed itself. Her marketing partner walked over and said, <em>"Wait — every pull request gets its own preview link? I can review the new homepage before it ships, in my browser?"</em></p>
-						<p>That "one person should be able to run a global website" mindset spread fast. <strong>Vercel, Cloudflare Pages, GitHub Pages, Render</strong> — they all built on the same idea. A college student today can launch a portfolio site in an afternoon and have it served from a hundred edge locations around the world. The infrastructure mountain that used to gatekeep the web didn't just shrink — it got bulldozed.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Netlify combined build pipelines, CDN edge delivery, and serverless glue, spreading JAMstack practices. Automated deploys became approachable for teams of any size.</p>
-					</div>
-				</section>
-			</article>
-		</template>
+	<template id="event-2014-webpack">
+		<article class="event-detail" aria-labelledby="event-2014-webpack-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2014</p>
+				<h2 id="event-2014-webpack-title">Webpack 1.0, smartly bundling scattered files into one</h2>
+				<p class="event-detail__summary">“We merged 100 files into one and the page went from 8 seconds to 2!” The unsung hero that makes even huge web apps feel light.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<img src="assets/images/story_web-tools_2014-webpack.png" alt="2014 Webpack 1.0, smartly bundling scattered files into one visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+					<p>By the mid-2010s, JavaScript apps had grown into monsters. A site like Facebook was made of <strong>hundreds, sometimes thousands</strong> of small JavaScript files importing each other. The catch: <strong>browsers fetch files one at a time</strong>. Loading 200 files meant 200 round trips across the network, and users sat staring at a blank page. Worse, nobody could keep track of which file depended on which anymore — the dependency graph had become a hairball.</p>
+					<p>A German developer named Tobias Koppers looked at the mess and thought, <em>"What if a tool actually traced how all those files reference each other and merged them into one bundle the browser can grab in a single request? And for the parts the user doesn't need on the first screen, ship those separately and load them on demand?"</em></p>
+					<p>That tool, released in 2014, was <strong>Webpack</strong>. It walked the dependency graph, bundled JavaScript intelligently, and — almost as a side effect — let you treat images, CSS, and even fonts as importable modules. A small startup wired it into their build and watched their first-page load drop from <strong>eight seconds to two</strong>. Their growth lead exhaled: <em>"Users are actually staying on the page now."</em></p>
+					<p>Every modern web app you use — <strong>Instagram, Spotify Web, Slack, Discord, Notion, Figma</strong> — is shipped through a bundler in the Webpack lineage (or its descendants like Vite and esbuild). The reason a heavy, app-like website can paint in a second or two on your phone is that an invisible build step in some CI server crunched its dependency graph for you. It's the unsung hero that quietly makes the modern web feel fast.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Webpack parsed dependency graphs and supported dynamic imports, aligning with the need to ship efficient, modular applications. It set expectations for modern module systems.</p>
+				</div>
+			</section>
+		</article>
+	</template>
 
-		<template id="event-2021-codespaces">
-			<article class="event-detail" aria-labelledby="event-2021-codespaces-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2021</p>
-					<h2 id="event-2021-codespaces-title">GitHub Codespaces, coding without installing a single thing on your laptop</h2>
-					<p class="event-detail__summary">“On my first day, I opened a browser and was writing code 5 minutes later!” It's not about how powerful your laptop is anymore — as long as you've got internet, you can work from anywhere.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<img src="assets/images/story_web-tools_2021.svg" alt="Illustration of the 2021 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-						<p>If you've ever started a new engineering job, you know the first day is not actually about coding. It's about <strong>setting up your laptop</strong>. Install the right Node version, the right Python, Docker, the database, the company's internal tools. Something doesn't match. You search Stack Overflow. You DM a coworker. The coworker shrugs: <em>"Hm, it works on my machine. Maybe your Java version is off?"</em> The infamous "works on my machine" curse has eaten entire onboarding weeks at every company on earth.</p>
-						<p>In 2021, GitHub took a swing at making the curse extinct. <em>"What if we built the entire development environment ahead of time and ran it in the cloud? A new hire opens a browser, and a fully configured workspace is just sitting there, ready to type into."</em></p>
-						<p>They called it <strong>GitHub Codespaces</strong>. A new engineer logs in on day one, doesn't install a single thing on her laptop, and clicks once. <strong>VS Code</strong> opens in her browser tab — the linter is running, the database is seeded, every dependency is already there. The team lead reported the verdict to their internal blog: <em>"Onboarding went from one full day to about five minutes. And nobody has said 'works on my machine' in this Slack since."</em></p>
-						<p>The deeper shift is even bigger. Because the environment lives in the cloud, you can code from <strong>an iPad in a coffee shop, a Chromebook on a train, even a friend's laptop in a pinch</strong>. All you need is a browser. Heavy professional development stopped being something only people with expensive hardware could do, and started becoming accessible to anyone with an internet connection — a small but real step toward making this whole industry less exclusive.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Codespaces delivers containerized environments on demand, simplifying onboarding and collaboration. Shared configs replaced manual machine setup.</p>
-					</div>
-				</section>
-			</article>
-		</template>
+	<template id="event-2016-left-pad">
+		<article class="event-detail" aria-labelledby="event-2016-left-pad-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2016</p>
+				<h2 id="event-2016-left-pad-title">left-pad, when 11 lines of code stopped the world</h2>
+				<p class="event-detail__summary">One person deleted an 11-line package, and the build systems at companies the size of Facebook and Netflix stopped at the same time.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<img src="assets/images/story_web-tools_2016-left-pad.png" alt="2016 left-pad, when 11 lines of code stopped the world visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+					<p>One day in March 2016, development systems at thousands of companies <strong>stopped at once</strong>. Facebook, Netflix, Airbnb — even the giants could not build their code. The cause was the deletion of <strong>one 11-line package</strong>. Its name was <code>left-pad</code>. All it did was pad the front of a string so the length matched.</p>
+					<p>JavaScript developers do not write every small helper themselves. They take other people's code from a shared warehouse called <strong>npm</strong>. left-pad was one of those helpers, and it was so convenient that huge projects such as React and Babel all depended on it. That day a developer got into a name dispute with npm and, as a protest, deleted every package he had published. left-pad was among them.</p>
+					<p>Builds failed in a chain, like dominoes. One developer typed into chat: <em>"Why did we suddenly get 'cannot find left-pad'? Nobody touched our code!"</em> A teammate answered: <em>"Someone deleted the package from npm. We depend on a package that depends on a package that depends on it, and the whole chain broke."</em> npm restored the package and the outage settled, but the fact that 11 lines had shaken the world was the shock.</p>
+					<p>The lesson was blunt: <strong>depending on other people's code without a limit is dangerous.</strong> Afterward companies made <strong>lockfiles</strong> (pinning an exact version), <strong>private registries</strong> (keeping a copy of important packages inside the company), and security checks mandatory. Eleven lines of code changed the safety habits of a whole industry.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>npm used the incident to revise package-ownership rules and to limit unpublishing of core packages. left-pad made supply-chain risk concrete, and many organizations added registry mirrors, live-patch plans, and signature checks because of it.</p>
+				</div>
+			</section>
+		</article>
+	</template>
 
-		<template id="event-2021-codecov">
-			<article class="event-detail" aria-labelledby="event-2021-codecov-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2021</p>
-					<h2 id="event-2021-codecov-title">The Codecov breach, when a trusted tool stole secrets</h2>
-					<p class="event-detail__summary">A popular checking tool was quietly compromised for three months, and company passwords and access keys were leaving the building.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<img src="assets/images/story_web-tools_2021.svg" alt="Illustration of the 2021 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-						<p>In April 2021, security teams around the world went cold. <strong>Codecov</strong>, a popular tool, had been <strong>compromised in secret for three months</strong>. Codecov checks how much of a codebase the tests cover. Thousands of companies, from giants such as Facebook and Google down to small startups, had wired it into their automated builds.</p>
-						<p>The attacker was precise. Companies download a small script automatically when they run Codecov, and the attacker <strong>added one hidden line to that script</strong>. The line's job was to send out secrets the company thought it was keeping private: <strong>API keys, database passwords, and cloud credentials</strong>. Companies used a tool they trusted every day and did not know it was taking their secrets.</p>
-						<p>After the discovery, a SaaS security lead said in an emergency meeting: <em>"Reissue every API key right now. We cannot tell who took our secrets, so every existing key has to be revoked."</em> Companies worldwide rotated secrets at the same time. If left-pad the year before had shown how a supply chain can fall over by accident, Codecov showed <strong>how it can fall over because someone attacked it</strong>.</p>
-						<p>The new habit was: <strong>check, every time, that the tool you are running is still the tool you think it is.</strong> Standards for signing code so tampering is visible — <strong>sigstore and SLSA</strong> — spread quickly, and verifying a chain of trust inside every automated build became an obligation. A baseline for threats you cannot see had arrived.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>Codecov disclosed the breach on its blog and in an SEC filing on April 15, 2021. The incident put CI/CD supply-chain risk back in view, and many teams added script integrity checks, least-privilege secrets, and audit-log monitoring because of it.</p>
-					</div>
-				</section>
-			</article>
-		</template>
+	<template id="event-2016-netlify">
+		<article class="event-detail" aria-labelledby="event-2016-netlify-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2016</p>
+				<h2 id="event-2016-netlify-title">Netlify, push your code and the site is up in 5 minutes</h2>
+				<p class="event-detail__summary">“No server setup, no certificates. Just push your code.” An era opened where a solo developer could run a site at the same level as a giant corporation.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<img src="assets/images/story_web-tools_2016-netlify.png" alt="2016 Netlify, push your code and the site is up in 5 minutes visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+					<p>Even in 2015, putting a small website online was an absurd amount of work for what you got. You rented a Linux server somewhere, registered a domain, applied for a TLS certificate, configured Apache or nginx, FTP'd your files up one by one, and prayed nothing in your <code>httpd.conf</code> had a typo. <strong>It took days, sometimes weekends.</strong> Indie developers and small teams sighed, "Writing the code is easy — it's the deployment that breaks me."</p>
+					<p>In 2016, a company called <strong>Netlify</strong> made what sounded like a wild promise. <em>"The moment you push code to GitHub, we'll automatically build it, distribute it across servers around the world, and serve it over HTTPS. No machine to provision. No config files. No certificate paperwork. Just push."</em></p>
+					<p>And it actually worked. A solo developer pushed her static site to GitHub and five minutes later visited <code>https://her-site.netlify.app</code> — a real, public URL, fast for visitors in Tokyo and São Paulo alike. Even better, every future commit automatically redeployed itself. Her marketing partner walked over and said, <em>"Wait — every pull request gets its own preview link? I can review the new homepage before it ships, in my browser?"</em></p>
+					<p>That "one person should be able to run a global website" mindset spread fast. <strong>Vercel, Cloudflare Pages, GitHub Pages, Render</strong> — they all built on the same idea. A college student today can launch a portfolio site in an afternoon and have it served from a hundred edge locations around the world. The infrastructure mountain that used to gatekeep the web didn't just shrink — it got bulldozed.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Netlify combined build pipelines, CDN edge delivery, and serverless glue, spreading JAMstack practices. Automated deploys became approachable for teams of any size.</p>
+				</div>
+			</section>
+		</article>
+	</template>
 
-		<template id="event-2023-ai-assist">
-			<article class="event-detail" aria-labelledby="event-2023-ai-assist-title">
-				<header class="event-detail__header">
-					<p class="event-detail__year">2023</p>
-					<h2 id="event-2023-ai-assist-title">AI code teammates, an era of coding shoulder to shoulder</h2>
-					<p class="event-detail__summary">“I just described what I wanted and the AI wrote the code for me!” Instead of typing every line by hand, developers started a whole new era of building code by chatting with AI.</p>
-				</header>
-				<section class="event-detail__body">
-					<div class="event-detail__story">
-						<img src="assets/images/story_web-tools_2023.svg" alt="Illustration of the 2023 story" class="story-image" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-						<p>Watch any working developer for an hour and you'll notice how much of the job is <strong>repetition</strong>. "I need to write another function that pulls a user from the database — how did I do it last time?" Search the codebase, copy a similar block, rename the variables, tweak two lines. Half the day disappears into copy-paste. Tests get skipped because they're tedious. Comments get postponed forever.</p>
-						<p>In 2021, GitHub and OpenAI ran a strange experiment together: <em>"There are billions of lines of source code on GitHub. What if we trained a language model on all of it and let it predict the next line a programmer is about to write?"</em> The result was <strong>GitHub Copilot</strong>. At first it felt like a parlor trick. Then 2023 happened and the underlying models took a quantum leap, and suddenly the trick wasn't a trick anymore.</p>
-						<p>A junior developer typed her first function name into the editor and watched the entire body materialize beneath the cursor — in her team's exact coding style, with the edge cases she'd been about to forget. <em>"It's like the senior on my team is reading over my shoulder, except faster and at 3am."</em> A senior engineer found her review queue lighter too: <em>"AI summarizes the PR for me in plain English. I can spend my actual brain on the architecture instead of catching typos."</em></p>
-						<p>Since then a whole ecosystem — <strong>ChatGPT, Claude, Cursor, Windsurf, GitHub Copilot Chat</strong> — has settled into the daily workflow of millions of developers. The job is shifting from "type the code character by character" to <strong>"describe what you want, then review what the machine drafted."</strong> It's the same dream that started all the way back when 1960s engineers asked computers to count the spaces in their documents — except now we're asking computers to write the spaces, and the words, and the whole function, and we get to focus on whether it solves the right problem.</p>
-					</div>
-					<div class="event-detail__notes">
-						<p>AI copilots blend natural language understanding with code generation, trimming repetitive tasks and reframing reviews. Web production teams now expect these assistants in their toolbox.</p>
-					</div>
-				</section>
-			</article>
-		</template>
+	<template id="event-2020-vite">
+		<article class="event-detail" aria-labelledby="event-2020-vite-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2020</p>
+				<h2 id="event-2020-vite-title">Vite Starts Dev Servers in 300 Milliseconds</h2>
+				<p class="event-detail__summary">Instead of bundling thousands of files before showing a single page, Vite leveraged native browser ES modules and esbuild for instant server startup.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<img src="assets/images/story_web-tools_2020-vite.png" alt="2020 Vite Starts Dev Servers in 300 Milliseconds visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+					<p>By 2020, large front-end projects routinely contained thousands of modules. Traditional bundlers had to crawl, transform, and bundle the entire application before the local dev server could even open—turning startup into a minute-long coffee break and slowing hot reloads to a crawl.</p>
+					<p>Vue.js creator <strong>Evan You</strong> asked a simple question: <em>"Modern browsers already support native ES modules (<code>import</code>). During development, why bundle everything upfront? Serve modules on demand as the browser requests them, and pre-bundle dependencies with a native Go compiler."</em></p>
+					<p>Named after the French word for "fast," <strong>Vite</strong> launched in 2020 and made dev servers start in a fraction of a second regardless of project size, while keeping Hot Module Replacement nearly instantaneous.</p>
+					<p>Vite quickly became the default build tool across React, Vue, Svelte, and modern web frameworks.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Vite combined native browser ES modules for on-demand serving in development with esbuild pre-bundling and Rollup production builds, eliminating bundle-time bottlenecks.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2021-codespaces">
+		<article class="event-detail" aria-labelledby="event-2021-codespaces-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2021</p>
+				<h2 id="event-2021-codespaces-title">GitHub Codespaces, coding without installing a single thing on your laptop</h2>
+				<p class="event-detail__summary">“On my first day, I opened a browser and was writing code 5 minutes later!” It's not about how powerful your laptop is anymore — as long as you've got internet, you can work from anywhere.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<img src="assets/images/story_web-tools_2021-codespaces.png" alt="2021 GitHub Codespaces, coding without installing a single thing on your laptop visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+					<p>If you've ever started a new engineering job, you know the first day is not actually about coding. It's about <strong>setting up your laptop</strong>. Install the right Node version, the right Python, Docker, the database, the company's internal tools. Something doesn't match. You search Stack Overflow. You DM a coworker. The coworker shrugs: <em>"Hm, it works on my machine. Maybe your Java version is off?"</em> The infamous "works on my machine" curse has eaten entire onboarding weeks at every company on earth.</p>
+					<p>In 2021, GitHub took a swing at making the curse extinct. <em>"What if we built the entire development environment ahead of time and ran it in the cloud? A new hire opens a browser, and a fully configured workspace is just sitting there, ready to type into."</em></p>
+					<p>They called it <strong>GitHub Codespaces</strong>. A new engineer logs in on day one, doesn't install a single thing on her laptop, and clicks once. <strong>VS Code</strong> opens in her browser tab — the linter is running, the database is seeded, every dependency is already there. The team lead reported the verdict to their internal blog: <em>"Onboarding went from one full day to about five minutes. And nobody has said 'works on my machine' in this Slack since."</em></p>
+					<p>The deeper shift is even bigger. Because the environment lives in the cloud, you can code from <strong>an iPad in a coffee shop, a Chromebook on a train, even a friend's laptop in a pinch</strong>. All you need is a browser. Heavy professional development stopped being something only people with expensive hardware could do, and started becoming accessible to anyone with an internet connection — a small but real step toward making this whole industry less exclusive.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>Codespaces delivers containerized environments on demand, simplifying onboarding and collaboration. Shared configs replaced manual machine setup.</p>
+				</div>
+			</section>
+		</article>
+	</template>
+
+	<template id="event-2023-ai-assist">
+		<article class="event-detail" aria-labelledby="event-2023-ai-assist-title">
+			<header class="event-detail__header">
+				<p class="event-detail__year">2023</p>
+				<h2 id="event-2023-ai-assist-title">AI code teammates, an era of coding shoulder to shoulder</h2>
+				<p class="event-detail__summary">“I just described what I wanted and the AI wrote the code for me!” Instead of typing every line by hand, developers started a whole new era of building code by chatting with AI.</p>
+			</header>
+			<section class="event-detail__body">
+				<div class="event-detail__story">
+					<img src="assets/images/story_web-tools_2023-ai-assist.png" alt="2023 AI code teammates, an era of coding shoulder to shoulder visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+					<p>Watch any working developer for an hour and you'll notice how much of the job is <strong>repetition</strong>. "I need to write another function that pulls a user from the database — how did I do it last time?" Search the codebase, copy a similar block, rename the variables, tweak two lines. Half the day disappears into copy-paste. Tests get skipped because they're tedious. Comments get postponed forever.</p>
+					<p>In 2021, GitHub and OpenAI ran a strange experiment together: <em>"There are billions of lines of source code on GitHub. What if we trained a language model on all of it and let it predict the next line a programmer is about to write?"</em> The result was <strong>GitHub Copilot</strong>. At first it felt like a parlor trick. Then 2023 happened and the underlying models took a quantum leap, and suddenly the trick wasn't a trick anymore.</p>
+					<p>A junior developer typed her first function name into the editor and watched the entire body materialize beneath the cursor — in her team's exact coding style, with the edge cases she'd been about to forget. <em>"It's like the senior on my team is reading over my shoulder, except faster and at 3am."</em> A senior engineer found her review queue lighter too: <em>"AI summarizes the PR for me in plain English. I can spend my actual brain on the architecture instead of catching typos."</em></p>
+					<p>Since then a whole ecosystem — <strong>ChatGPT, Claude, Cursor, Windsurf, GitHub Copilot Chat</strong> — has settled into the daily workflow of millions of developers. The job is shifting from "type the code character by character" to <strong>"describe what you want, then review what the machine drafted."</strong> It's the same dream that started all the way back when 1960s engineers asked computers to count the spaces in their documents — except now we're asking computers to write the spaces, and the words, and the whole function, and we get to focus on whether it solves the right problem.</p>
+				</div>
+				<div class="event-detail__notes">
+					<p>AI copilots blend natural language understanding with code generation, trimming repetitive tasks and reframing reviews. Web production teams now expect these assistants in their toolbox.</p>
+				</div>
+			</section>
+		</article>
+	</template>
 
 		<button type="button" class="scroll-top" data-scroll-top aria-label="Scroll to top" hidden>↑</button>
 

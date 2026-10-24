@@ -233,9 +233,9 @@ for (const htmlFile of allHtmlFiles) {
 console.log('\n[8] SVG story images in assets/images');
 
 const svgFiles = fs.readdirSync(path.join(ROOT, 'assets', 'images'))
-    .filter(f => f.startsWith('story_') && f.endsWith('.svg'));
+    .filter(f => f.startsWith('story_') && f.endsWith('.png'));
 
-check(svgFiles.length > 0, `Found ${svgFiles.length} story SVG images`, 'No story SVG images found');
+check(svgFiles.length > 0, `Found ${svgFiles.length} story PNG images`, 'No story PNG images found');
 
 // Check that story images are referenced in the correct topic pages
 const topicSvgPrefixes = {
@@ -254,8 +254,8 @@ for (const [page, prefix] of Object.entries(topicSvgPrefixes)) {
     if (!fileExists(page)) continue;
     const pageSvgs = svgFiles.filter(f => f.startsWith(prefix));
     check(pageSvgs.length > 0,
-        `${page}: ${pageSvgs.length} story SVGs with prefix "${prefix}"`,
-        `${page}: No story SVGs found with prefix "${prefix}"`);
+        `${page}: ${pageSvgs.length} story PNGs with prefix "${prefix}"`,
+        `${page}: No story PNGs found with prefix "${prefix}"`);
 }
 
 // ─── 9. Korean/English story image parity ───
@@ -294,8 +294,8 @@ for (let i = 0; i < koreanPages.length; i++) {
     }
 }
 
-// ─── 10. Story SVG duplicate attributes ───
-console.log('\n[10] Story SVG well-formed attributes');
+// ─── 10. Story PNG duplicate attributes ───
+console.log('\n[10] Story PNG well-formed attributes');
 
 function duplicateSvgAttributes(text) {
     const stripped = text.replace(/<!--[\s\S]*?-->/g, '');
@@ -316,12 +316,12 @@ function duplicateSvgAttributes(text) {
 }
 
 for (const svgName of svgFiles) {
-    const svgText = fs.readFileSync(path.join(ROOT, 'assets', 'images', svgName), 'utf-8');
-    const duplicates = duplicateSvgAttributes(svgText);
+    const pngBuf = fs.readFileSync(path.join(ROOT, 'assets', 'images', svgName));
+    const validPng = pngBuf.length > 1024 && pngBuf[0] === 0x89 && pngBuf[1] === 0x50 && pngBuf[2] === 0x4E && pngBuf[3] === 0x47;
     check(
-        duplicates.length === 0,
-        `${svgName}: attributes are unique`,
-        `${svgName}: duplicate attributes ${duplicates.join(', ')}`
+        validPng,
+        `${svgName}: valid PNG (${pngBuf.length} bytes)`,
+        `${svgName}: invalid PNG`
     );
 }
 
