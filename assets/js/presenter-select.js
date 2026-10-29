@@ -1,28 +1,19 @@
 'use strict';
 
 (function (root) {
-  const API_CANDIDATES = [
-    'https://itstory-presenters.archerlab.dev',
-    'https://itstory-presenters.yama5993.workers.dev'
-  ];
-  let API_URL = API_CANDIDATES[0];
+  const API_URL = 'https://itstory-presenters.yama5993.workers.dev';
+  const POLL_INTERVAL = 30000;
+  const MAX_RETRY_INTERVAL = 300000;
   const controls = new WeakMap();
 
   async function apiFetch(path, options) {
-    let lastError;
-    for (const base of API_CANDIDATES) {
-      try {
-        const response = await fetch(`${base}${path}`, options);
-        if (response.ok || response.status === 400 || response.status === 409) {
-          API_URL = base;
-          return response;
-        }
-        lastError = new Error(`http-${response.status}`);
-      } catch (error) {
-        lastError = error;
-      }
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000);
+    try {
+      return await fetch(`${API_URL}${path}`, { ...options, signal: controller.signal });
+    } finally {
+      clearTimeout(timeout);
     }
-    throw lastError || new Error('api-unreachable');
   }
 
   function topicOf(item) {
@@ -108,6 +99,32 @@
     let boundWeek = 0;
     let saving = false;
     let revision = 0;
+    let syncing = false;
+    const weeks = new Map();
+
+    const stateFor = (week) => {
+      if (!weeks.has(week)) weeks.set(week, { assignments: {}, nextRead: 0, failures: 0, finalized: false });
+      return weeks.get(week);
+    };
+
+    const refreshWeek = async (week, finalized) => {
+      const state = stateFor(week);
+      if (state.finalized || Date.now() < state.nextRead) return state.assignments;
+      const version = revision;
+      try {
+        const data = await readWeek(week);
+        if (version !== revision || saving) return state.assignments;
+        state.assignments = data.assignments || {};
+        state.failures = 0;
+        state.finalized = finalized;
+        state.nextRead = Date.now() + POLL_INTERVAL;
+      } catch (error) {
+        if (version !== revision || saving) return state.assignments;
+        state.failures++;
+        state.nextRead = Date.now() + Math.min(MAX_RETRY_INTERVAL, POLL_INTERVAL * 2 ** (state.failures - 1));
+      }
+      return state.assignments;
+    };
 
     const paint = (week, assignments, open) => {
       const row = rows[week - 1];
@@ -124,6 +141,7 @@
           try {
             const saved = await writeSelection(week, topic, owner, topics);
             live = saved.assignments || {};
+            Object.assign(stateFor(week), { assignments: live, nextRead: Date.now() + POLL_INTERVAL, failures: 0 });
             paint(week, live, study.isSelectionOpen(new Date(), week));
             root.dispatchEvent(new CustomEvent('itstory-assignments', { detail: { week, assignments: live } }));
           } catch (error) {
@@ -143,21 +161,22 @@
       }
     };
 
-    const sync = async () => {
+    const syncWeeks = async () => {
       if (saving) return;
       const version = revision;
       const now = new Date();
       const week = study.getAssignmentWeek(now);
       const closed = study.getWeekToFinalize(now);
       if (closed && closed !== week) {
-        try {
-          const locked = await readWeek(closed);
-          if (version !== revision || saving) return;
-          paint(closed, locked.assignments || live, false);
-        } catch (error) {
-          if (version !== revision || saving) return;
-          paint(closed, live, false);
+        // A newly closed week needs one final read even if its open poll was recent.
+        const state = stateFor(closed);
+        if (boundWeek === closed && !state.closing) {
+          state.nextRead = 0;
+          state.closing = true;
         }
+        const locked = await refreshWeek(closed, true);
+        if (version !== revision || saving) return;
+        paint(closed, locked, false);
       }
       rows.forEach((row, index) => {
         if (week && index + 1 === week) return;
@@ -170,13 +189,9 @@
       if (!week) return;
       const open = study.isSelectionOpen(now, week);
       if (open || boundWeek === week) {
-        try {
-          const data = await readWeek(week);
-          if (version !== revision || saving) return;
-          live = data.assignments || live;
-        } catch (error) {
-          if (open && !Object.keys(live).length) live = {};
-        }
+        live = await refreshWeek(week, false);
+      } else {
+        live = stateFor(week).assignments;
       }
       boundWeek = week;
       if (version !== revision || saving) return;
@@ -184,6 +199,23 @@
       root.dispatchEvent(new CustomEvent('itstory-assignments', { detail: { week, assignments: live, open } }));
     };
 
+    const sync = async () => {
+      if (syncing || saving || document.hidden || root.navigator.onLine === false) return;
+      syncing = true;
+      try {
+        await syncWeeks();
+      } finally {
+        syncing = false;
+      }
+    };
+
+    const resume = () => {
+      if (document.hidden || root.navigator.onLine === false) return;
+      weeks.forEach(state => { if (!state.finalized) state.nextRead = 0; });
+      sync();
+    };
+    document.addEventListener('visibilitychange', resume);
+    root.addEventListener('online', resume);
     sync();
     setInterval(sync, 4000);
   }

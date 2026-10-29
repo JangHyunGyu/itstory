@@ -44,10 +44,12 @@ async function main() {
     await page.clock.setFixedTime(new Date('2026-10-12T03:00:00Z'));
     const assignments = {};
     let posts = 0;
+    let reads = 0;
     let failNextSave = false;
     let delayNextSave = false;
     await page.route(/https:\/\/itstory-presenters\.[^/]+\/week\//, async route => {
       const week = Number(new URL(route.request().url()).pathname.split('/').pop());
+      if (route.request().method() === 'GET') reads++;
       if (route.request().method() === 'POST') {
         posts++;
         if (delayNextSave) { delayNextSave = false; await new Promise(resolve => setTimeout(resolve, 300)); }
@@ -170,7 +172,10 @@ async function main() {
     await first.press('End');
     const focusedOption = await first.getAttribute('aria-activedescendant');
     await page.evaluate(() => { window.testSelect = document.querySelector('.part-owner-select'); });
+    const readsBeforePoll = reads;
+    await page.clock.setFixedTime(new Date('2026-10-12T03:00:32Z'));
     await page.waitForTimeout(4300);
+    assert.equal(reads, readsBeforePoll + 1);
     assert.equal(await first.evaluate(node => node.value), '');
     assert.equal(await first.getAttribute('aria-activedescendant'), focusedOption);
     assert.equal(await first.getAttribute('aria-expanded'), 'true');

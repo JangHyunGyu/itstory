@@ -37,7 +37,7 @@ jobs:
         id: assign
         env:
           WEEK: ${{ github.event.inputs.week }}
-          PRESENTER_API_URL: https://itstory-presenters.archerlab.dev
+          PRESENTER_API_URL: https://itstory-presenters.yama5993.workers.dev
         run: |
           # Keep chosen presenters. Randomly fill only empty slots after Wednesday 20:00.
           args=()

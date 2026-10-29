@@ -14,7 +14,6 @@ const {
 
 const PRESENTER_API_URLS = [
   process.env.PRESENTER_API_URL,
-  'https://itstory-presenters.archerlab.dev',
   'https://itstory-presenters.yama5993.workers.dev'
 ].filter(Boolean);
 

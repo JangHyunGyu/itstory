@@ -5,7 +5,7 @@
   "scripts": {
     "build": "node tools/build-site.cjs",
     "test:layout": "node tests/roadmap-layout.test.cjs",
-    "test": "node tests/browser-check.test.cjs && node tests/assign-week-owners.test.cjs && node tests/presenter-assign.test.cjs && node --test tests/presenter-worker.test.cjs && node validate.js && npm run build",
+    "test": "node tests/browser-check.test.cjs && node tests/assign-week-owners.test.cjs && node tests/presenter-assign.test.cjs && node --test tests/presenter-worker.test.cjs tests/presenter-polling.test.cjs && node validate.js && npm run build",
     "deploy:presenters": "npx --yes wrangler@4 deploy"
   }
 }
