@@ -178,13 +178,13 @@
 						<p class="hero__eyebrow">Web Server Story for Backend Builders</p>
 						<h1 class="timeline-hero__title" id="timeline-title">From one tiny first website to giant servers handling billions of people, the unseen story of what holds the internet up</h1>
 						<p class="timeline-hero__lede">
-							In a Swiss research lab in 1990, Tim Berners-Lee booted a small program on one little computer and opened the very first website in the world. When another researcher typed in the address and saw the words pop up on screen, the team had a realization: "Instead of photocopying paper reports and passing them around, all we have to do now is share an internet address."
+							In a Swiss research lab in 1990, Tim Berners-Lee booted a small program on one little computer and opened the very first website in the world.<br>When another researcher typed in the address and saw the words pop up on screen, the team had a realization: "Instead of photocopying paper reports and passing them around, all we have to do now is share an internet address."
 						</p>
 						<p class="timeline-hero__lede">
-							Then the popularity exploded, and new worries followed. "How do we hold up when thousands of people show up at once?", "How do we keep passwords safe?", "If one machine dies, how do we keep the site online?" The people running the servers built or borrowed a new tool every time, and the answers piled up into the giant server systems we have today.
+							Then the popularity exploded, and new worries followed.<br>"How do we hold up when thousands of people show up at once?", "How do we keep passwords safe?", "If one machine dies, how do we keep the site online?"<br>The people running the servers built or borrowed a new tool every time, and the answers piled up into the giant server systems we have today.
 						</p>
 						<p class="timeline-hero__lede">
-							Today you upload a single line of code and the computer figures out how to deliver your site to users all over the world. Click a year below and you'll meet the secret behind why giants like Facebook and Instagram never seem to go down.
+							Today, some services let you simply upload your code and open a site to users all over the world right away.<br>Click a year below to follow the behind-the-scenes story of how giant services like Facebook and Instagram keep running without interruption.
 						</p>
 					</div>
 				</section>
@@ -252,7 +252,7 @@
 					<header class="timeline-group__head">
 						<p class="timeline-group__decade" id="decade-2000-was">2003–2005</p>
 						<h3 class="timeline-group__topic" id="topic-2000-was">“Lightweight Frameworks and In-Memory Caching”</h3>
-						<p class="timeline-group__summary">Spring replaced heavyweight enterprise Java with clean dependency injection, while Memcached shielded databases with distributed memory caching.</p>
+						<p class="timeline-group__summary">Spring made complex enterprise Java development lightweight, while Memcached answered repeated questions in a thousandth of a second from a shared memory store instead of hitting the database.</p>
 					</header>
 					<div class="timeline-group__list" role="list">
 						<button class="timeline-event" type="button" role="listitem" data-event-id="2003-spring">
@@ -270,7 +270,7 @@
 					<header class="timeline-group__head">
 						<p class="timeline-group__decade" id="decade-2010-was">2011–2015</p>
 						<h3 class="timeline-group__topic" id="topic-2010-was">“Event-Driven Scale, Serverless, and Cloud Routing”</h3>
-						<p class="timeline-group__summary">Nginx conquered the C10K concurrency wall, Spring Boot eliminated XML configuration, and AWS Lambda and Kubernetes Ingress ushered in cloud-native infrastructure.</p>
+						<p class="timeline-group__summary">Nginx handled tens of thousands of users with little memory, Spring Boot ended days of setup headaches, and AWS Lambda and Kubernetes Ingress completed the modern cloud backend.</p>
 					</header>
 					<div class="timeline-group__list" role="list">
 						<button class="timeline-event" type="button" role="listitem" data-event-id="2011-nginx">
@@ -362,18 +362,23 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">1990</p>
 				<h2 id="event-1990-cern-httpd-title">CERN httpd, the day the world's first website went live</h2>
-				<p class="event-detail__summary">"A document on your computer is on my screen! This feels like magic, doesn't it?" One small program Tim Berners-Lee wrote in a Swiss research lab became the ancestor of Naver, Google, and Facebook.</p>
+				<p class="event-detail__summary">"A document on your computer is on my screen! This feels like magic, doesn't it?"<br>One small program Tim Berners-Lee wrote in a Swiss research lab became the ancestor of Naver, Google, and Facebook.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_1990-cern-httpd.png" alt="1990 CERN httpd, the day the world's first website went live visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>In 1990, <strong>"the web" as we know it didn't exist yet</strong>. The internet was there, but it was for sending email between universities and shipping files around with FTP. The very idea that you could "view" a document sitting on someone else's computer wasn't a thing. To share information, you mailed a file, FTP'd it down, or — surreal as it sounds today — printed it and put it in an envelope.</p>
-					<p>A researcher at CERN named <strong>Tim Berners-Lee</strong> had a strange idea. <em>"What if my computer just stayed running, and any time someone said 'show me that page,' a small program on it sent the contents back? Then anyone in the world could see my notes, instantly."</em></p>
-					<p>He wrote that small program himself and called it <strong>CERN httpd</strong>. It was the world's first <strong>web server</strong>. The mechanic was simple: somebody typed a <code>http://...</code> address into a browser, CERN httpd received the request, found the matching HTML file on disk, and sent it back. The first colleague to fetch a page from another machine actually exclaimed: <em>"I just clicked a link and a document on your computer is on my screen. This feels like magic!"</em></p>
-					<p>That tiny program is <strong>the ancestor of every website on Earth</strong>. The colossal sites of today — Google, Facebook, Amazon — are doing exactly what CERN httpd did, just at billions of times the scale: receive a request, return the right page. A small program one researcher wrote in his lab quietly seeded the way humanity would share information thirty years later.</p>
+					<p>In 1990, <strong>the web as we know it didn't exist yet</strong>. The internet was there, but it was for sending email between scholars and transferring files.</p>
+					<p>The very idea that you could open and view a document sitting on someone else's computer right on your screen wasn't a thing.</p>
+					<p>To share information, you emailed a file, downloaded it with a file transfer program (FTP), or printed it on paper and mailed it in an envelope.</p>
+					<p>A researcher at CERN named <strong>Tim Berners-Lee</strong> had a strange idea.<br><em>"What if my computer just stayed running, and any time someone said 'show me that page,' a small program on it sent the contents back? Then anyone in the world could see my notes, instantly."</em></p>
+					<p>He wrote that small program himself and called it <strong>CERN httpd</strong>. It was the world's first <strong>web server</strong>.</p>
+					<p>The mechanism was simple: somebody typed an <code>http://...</code> address into a browser, CERN httpd received the request, found the matching web document file (HTML) on disk, and sent it back.</p>
+					<p>The first colleague to fetch a page from another machine exclaimed:<br><em>"I just clicked a link and a document on your computer is on my screen! This feels like magic!"</em></p>
+					<p>That tiny program is <strong>the prototype of every website on Earth</strong>.</p>
+					<p>Huge sites today like Naver, Google, and Facebook are still doing the exact job CERN httpd did — receiving a request and returning the right page — just at billions of times the scale. A small program written by one researcher was where it all began.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>CERN httpd primarily served static files but also listed directories and triggered simple scripts, paving the way for CGI. The pattern of accepting a request, interpreting it, and returning a response was set, allowing later WAS platforms to plug in business logic while reusing the same flow.</p>
+					<p>CERN httpd showed pre-written fixed documents (static documents) and folder listings.<br>Later web servers built on this same structure to handle much more complex work.<br>The core role of a web server — receiving a user's request, interpreting it, and returning the right result — was first defined here.</p>
 				</div>
 			</section>
 		</article>
@@ -384,18 +389,23 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">1993</p>
 				<h2 id="event-1993-ncsa-httpd-title">NCSA HTTPd, the era when even a pizza shop opened a website</h2>
-				<p class="event-detail__summary">"I uploaded the catalog myself! Students search the books without ever coming in!" The moment the University of Illinois set its code free, the number of websites worldwide multiplied dozens of times in a year.</p>
+				<p class="event-detail__summary">"I uploaded the catalog myself! Students search the books without ever coming in!"<br>The moment the University of Illinois set its code free, the number of websites worldwide multiplied dozens of times in a year.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_1993-ncsa-httpd.png" alt="1993 NCSA HTTPd, the era when even a pizza shop opened a website visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>CERN httpd showed the world a web server in 1990, but in practice it lived only inside the CERN community. <strong>If a regular university or company wanted its own website, no one quite knew how to build one</strong>. Running a "web server" felt as far-fetched and intimidating in 1990 as "launching your own satellite" sounds today.</p>
-					<p>The <strong>NCSA</strong> (National Center for Supercomputing Applications) at the University of Illinois made a deliberate choice. <em>"Let's write a web server anybody can use, give it away for free, and write friendly documentation. That's the only way the web actually spreads."</em></p>
-					<p>The result, released in 1993, was <strong>NCSA HTTPd</strong>, and it took off explosively. Computer science professors stood up sites for their course materials. Newspapers launched their first online editions. A pizza shop, of all things, took the world's first "web order" through a menu page it built itself. A university librarian beamed: <em>"I installed a web server myself and put up the catalog! Students can now search the collection without coming to the library. It feels like magic!"</em></p>
-					<p>NCSA HTTPd was the <strong>fuse that lit the web explosion</strong> of the early-to-mid 1990s. Once people knew "anyone can run a web server," the number of websites worldwide multiplied dozens of times in a single year. The internet axiom we take for granted today — "anybody can have their own site" — started with NCSA's decision in 1993 to give away its code.</p>
+					<p>CERN httpd showed the world a web server in 1990, but in practice it lived only inside the CERN community. <strong>If a regular university or company wanted its own website, no one quite knew how to build one</strong>.</p>
+					<p>Running a "web server" felt as far-fetched and intimidating in 1990 as "launching your own satellite" sounds today.</p>
+					<p>The <strong>NCSA</strong> (National Center for Supercomputing Applications) at the University of Illinois made a deliberate choice.</p>
+					<p><em>"Let's write a web server anybody can use, give it away for free, and write friendly documentation. That's the only way the web actually spreads."</em></p>
+					<p>The result, released in 1993, was <strong>NCSA HTTPd</strong>, and it was a huge hit.</p>
+					<p>Computer science professors put up sites for their course materials, newspapers launched their first online editions, and one pizza shop even took the world's first online order through a site with its menu.</p>
+					<p>University librarians welcomed it too:<br><em>"I installed a web server myself and put up our book catalog! Now students can search what books we have right away without coming to the library!"</em></p>
+					<p>Once word spread that <strong>anyone could spin up a web server</strong>, the number of websites worldwide multiplied dozens of times in a single year.</p>
+					<p>The era in which any individual or shop could own a website began with NCSA's 1993 decision to release its program blueprint (source code) for free.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>Open-source HTTP servers normalized the idea that anyone could install and modify their own infrastructure. Apache eventually dominated usage, and a clean separation formed between proxy/static tiers and application servers underneath.</p>
+					<p>As open-source web servers whose code anyone could view spread, developers increasingly modified and added features themselves.<br>A clear division of roles took shape from this point on: the web server handled basic requests, while separate programs behind it handled complex calculations.</p>
 				</div>
 			</section>
 		</article>
@@ -406,18 +416,24 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">1994</p>
 				<h2 id="event-1994-ssl-title">SSL, the start of the little padlock icon next to the address bar</h2>
-				<p class="event-detail__summary">"There is absolutely no way we can take payments online like this." Back when credit card numbers leaked over café Wi-Fi, the small padlock that made Toss and Coupang checkout safe was first switched on here.</p>
+				<p class="event-detail__summary">"There is absolutely no way we can take payments online like this."<br>Back when credit card numbers leaked over café Wi-Fi, the small padlock that made Toss and Coupang checkout safe was first switched on here.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_1994-ssl.png" alt="1994 SSL, the start of the little padlock icon next to the address bar visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>The web was spreading fast in the early 1990s, but it had a <strong>fatal flaw</strong>: every byte of communication was sent <strong>completely in the clear</strong>. If a user typed a credit card number into a webpage, that number drifted across the internet readable to anyone watching along the path. Sniffing your café neighbor's password from public Wi-Fi was technically straightforward. A bank executive said it bluntly: <em>"There is no way we can accept payments over the internet like this. Without security, who would ever type a credit card into a webpage?"</em></p>
-					<p>Engineers at Netscape thought the answer through. <em>"Before the browser and server actually exchange data, let them first agree on a secret key. From that moment on, everything they send is locked with that key. Even if someone in the middle is listening, without the key they see nothing. And let's give the server an 'ID card' (a certificate) so the user can verify they're talking to the real bank."</em></p>
-					<p>The result, in 1994, was <strong>SSL 2.0</strong> (Secure Sockets Layer). Netscape's first public demo was a real credit card transaction over the internet. A reporter typed in his card number, hit pay, and a tiny <strong>padlock icon</strong> appeared at the bottom of the browser window — the symbol that "this connection is encrypted and safe." The bank executives in the audience exhaled: <em>"We can finally take payments online. E-commerce can actually happen now!"</em></p>
-					<p>SSL was later renamed to <strong>TLS</strong> (Transport Layer Security) and refined over many versions, and today it underpins every site on the web. The padlock you see in your browser's address bar, the "s" in <code>https://</code> — these are direct descendants of what Netscape built in 1994. The reason it's safe to bank online, buy from Amazon, or send a message through Slack today is that someone, thirty years ago, decided "let's encrypt this."</p>
+					<p>The web was spreading fast in the early 1990s, but it had a <strong>fatal flaw</strong>: all communication traveled as unencrypted plain text, or <strong>plaintext</strong>.</p>
+					<p>If a user typed a credit card number, anyone along the network path could eavesdrop on it. Even grabbing the password of the person sitting next to you on café Wi-Fi was technically possible.</p>
+					<p>Bank executives shook their heads:<br><em>"There is no way we can accept payments over the internet like this. Without security, who would ever type in a credit card?"</em></p>
+					<p>Engineers at Netscape thought the answer through.<br><em>"Before the browser and server actually exchange data, let them first agree on a secret key. From that moment on, everything they send is locked with that key. Even if someone in the middle is listening, without the key they see nothing. And let's give the server an 'ID card' (a certificate) so the user can verify they're talking to the real bank."</em></p>
+					<p>The answer in 1994 was <strong>SSL 2.0</strong> (Secure Sockets Layer, a security standard for creating a safe communication channel). For its first demo, Netscape showed a live credit card payment over the internet.</p>
+					<p>When a reporter typed in a card number and clicked pay, a small <strong>padlock icon</strong> appeared at the bottom of the screen — showing that the connection was encrypted and safe.</p>
+					<p>Watching bank executives breathed a sigh of relief:<br><em>"We can finally take payments online. Real e-commerce is possible now!"</em></p>
+					<p>SSL was later renamed <strong>TLS</strong> (Transport Layer Security) and kept evolving into the baseline of every website today.</p>
+					<p>The padlock icon in your browser's address bar and the 's' (Secure) in <code>https://</code> are direct descendants of Netscape's 1994 SSL.</p>
+					<p>Encrypted Toss transfers, Coupang checkouts, and KakaoTalk web messages all trace back to SSL.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>SSL layered encryption, integrity, and authentication on top of TCP. Later TLS versions refined it, making HTTPS the norm. Web servers handled certificate management, letting WAS tiers avoid storing sensitive data in plaintext.</p>
+					<p>SSL greatly strengthened internet communication security by adding encryption, tamper protection (verifying that data was not altered in transit), and server identity verification.<br>This technology led to today's HTTPS, and with the web server handling encryption up front, backend application servers could focus on data processing without complex security logic.</p>
 				</div>
 			</section>
 		</article>
@@ -428,18 +444,25 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">1995</p>
 				<h2 id="event-1995-apache-httpd-title">Apache, the legend that started as "a server covered in patches"</h2>
-				<p class="event-detail__summary">"We don't even have a way to share our patches." The moment those scattered tinkerers gathered in one place, the giant that would run more than half the web servers in the world for the next decade was born.</p>
+				<p class="event-detail__summary">"We don't even have a way to share our patches."<br>The moment those scattered tinkerers gathered in one place, the giant that would run more than half the web servers in the world for the next decade was born.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_1995-apache-httpd.png" alt="1995 Apache, the legend that started as &quot;a server covered in patches&quot; visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>By 1994, the popular NCSA HTTPd had a problem. Its lead developer moved on to other things, and <strong>updates simply stopped</strong>. Users were fixing bugs themselves and circulating their patches by email. But different people's patches conflicted, nobody could track who was running which combination, and a sysadmin somewhere groaned: <em>"I'm running eight separate patches against NCSA HTTPd. I know other people are doing the same thing and we don't even have a way to share them."</em></p>
-					<p>The patch authors finally got together and made a decision. <em>"Let's pick up NCSA HTTPd ourselves. Pool our patches, add the new features the community needs, and turn it into a project that doesn't depend on any single person."</em> The name was a half-joke — a server "built out of patches," "<em>a patchy server</em>" — which became <strong>Apache</strong>.</p>
-					<p>When <strong>Apache HTTP Server 1.0</strong> shipped in 1995, it took off. The killer feature was its <strong>modular architecture</strong>. You could plug in only the modules you needed (HTTPS, compression, caching, etc.). A web hosting company cheered: <em>"We deploy the same Apache to thousands of customers, and each one just enables the modules they need in their config. Operations got dramatically simpler."</em> Within a year Apache had overtaken NCSA HTTPd, and for more than a decade after, <strong>over half of all web servers on the internet</strong> were running Apache.</p>
-					<p>Apache became more than a server program — it became the <strong>blueprint for how an open source community runs itself</strong>. Hundreds of developers shared responsibility instead of one company holding the keys; decisions were made transparently in public; anyone could contribute. That governance model went on to shape Linux, MySQL, Hadoop, and countless other projects. Apache changed not just code, but <strong>how software gets made</strong>.</p>
+					<p>By 1994, the popular NCSA HTTPd had a problem. Its lead developer moved on to other things, and <strong>updates simply stopped</strong>.</p>
+					<p>Users were fixing bugs themselves and making small repair code bundles (patches). But different people's patches conflicted, and it was hard to track who was using which patch.</p>
+					<p>System administrators at the time complained:<br><em>"I'm applying eight separate patches to NCSA HTTPd myself. Other people are doing the same thing, and we don't even have a way to share them."</em></p>
+					<p>The patch authors finally got together and made a decision.<br><em>"Let's pick up NCSA HTTPd ourselves. Pool our patches, add the new features the community needs, and turn it into a project that doesn't depend on any single person."</em></p>
+					<p>The name was a half-joke — a server "built out of patches," "<em>a patchy server</em>" — which became <strong>Apache</strong>.</p>
+					<p>When <strong>Apache HTTP Server 1.0</strong> shipped in 1995, it was an immediate hit.</p>
+					<p>The key was its <strong>modular architecture</strong>: like Lego blocks, you could plug in only the features you needed (secure connections, file compression, temporary caching, and more).</p>
+					<p>Web hosting companies welcomed it:<br><em>"We install the same Apache for thousands of customers, and each one just turns on the modules they need in the settings. Management got so much easier."</em></p>
+					<p>Within a year Apache overtook NCSA HTTPd, and for more than a decade after, <strong>over half of all web servers in the world</strong> were Apache.</p>
+					<p>Apache became more than a server program — it became <strong>a model for how an open-source community is run</strong>.</p>
+					<p>An organization where hundreds of developers share responsibility instead of a single company, transparent operating rules (governance) for making decisions, and an open culture where anyone can contribute all took shape in Apache and became the model for countless open-source projects (Linux, MySQL, Hadoop, and more). It is a rare case that changed not only code, but <strong>the way people work</strong>.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>Apache introduced multi-processing modules (MPM) and a modular config system, so new capabilities like CGI and PHP slots could be added without rewriting the core. The front web server versus backend application server pattern became the operational standard, often with Apache proxying traffic to Tomcat or JBoss.</p>
+					<p>Apache made request handling more efficient and added snap-in modules so web servers could be used much more widely.<br>Putting Apache in front and a business-logic server behind it began spreading across the industry.</p>
 				</div>
 			</section>
 		</article>
@@ -450,18 +473,27 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">1996</p>
 				<h2 id="event-1996-mod-proxy-title">mod_proxy, putting a "front gate" in front of every site</h2>
-				<p class="event-detail__summary">"The same page is being requested 10,000 times and we're rebuilding it from scratch every single time." The blueprint for the countless invisible "front-gate servers" sitting in front of Naver, Kakao, and Toss today was born here.</p>
+				<p class="event-detail__summary">"The same page is being requested 10,000 times and we're rebuilding it from scratch every single time."<br>The blueprint for the countless invisible "front-gate servers" sitting in front of Naver, Kakao, and Toss today was born here.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_1996-mod-proxy.png" alt="1996 mod_proxy, putting a &quot;front gate&quot; in front of every site visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>By the mid-1990s, popular websites were running into a new ceiling. <strong>A single server couldn't keep up with the surging traffic.</strong> As visitors climbed, response times slowed; if the server crashed, the entire site went down with it. Worse, generating the same identical page thousands of times in a row was sheer waste. A newspaper sysadmin sighed: <em>"Our front page gets hit 10,000 times an hour, and we rebuild it from scratch all 10,000 times. Couldn't we build it once, save it briefly, and reuse it?"</em></p>
-					<p>The Apache developers proposed a fix. <em>"Put another Apache <em>in front of</em> Apache, acting as a 'gatekeeper.' That front Apache takes the incoming requests, hands them to the real server behind it, and for things asked for over and over it caches the answer and serves it back instantly. We'll call this a 'reverse proxy.'"</em></p>
-					<p>The Apache module that delivered this in 1996 was <strong>mod_proxy</strong>. A few lines in a config file turned Apache into a reverse proxy. A sysadmin who tried it cheered: <em>"Repeated requests come right out of the cache, so the load on the real backend dropped about 90%. And when the backend dies for a moment, the cache keeps serving the site so users barely notice!"</em></p>
-					<p>The reverse proxy is now <strong>the foundation of foundations</strong> for internet infrastructure. Every giant site (Google, Facebook, Amazon, Netflix) sits behind a fleet of reverse proxies that distribute traffic, cache, and shield the real machines underneath. <strong>Cloudflare</strong> and <strong>Fastly</strong> are essentially reverse proxies at planetary scale. The simple idea inside mod_proxy in 1996 became the load-bearing column of internet infrastructure thirty years later.</p>
+					<p>By the mid-1990s, popular websites were running into a new ceiling.</p>
+					<p><strong>A single server couldn't keep up with the surging traffic.</strong> As visitors climbed, response times slowed; if the server crashed, the entire site went down with it.</p>
+					<p>Worse, generating the same identical page thousands of times in a row was sheer waste.</p>
+					<p>A newspaper sysadmin sighed:<br><em>"Our front page gets hit 10,000 times an hour, and we rebuild it from scratch all 10,000 times. Couldn't we build it once, save it briefly, and reuse it?"</em></p>
+					<p>The Apache developers proposed a fix.<br><em>"Put another Apache <em>in front of</em></p>
+					<p>Apache, acting as a 'front gate.'</p>
+					<p>That front Apache takes incoming requests, hands them to the real server behind it, and for frequently requested items, stashes them briefly in a temporary storage box (cache) to return right away. Let's call this stand-in guarding the front a 'reverse proxy.'"</em></p>
+					<p>The module added to Apache in 1996 for this job was <strong>mod_proxy</strong>.</p>
+					<p>A few lines in a config file turned Apache into a reverse proxy (a front-gate server that receives outside requests first and hands them to backend servers).</p>
+					<p>System administrators in the field felt the change right away:<br><em>"Repeated page requests return straight from the cache, cutting backend server load by 90%. And even if the backend goes down briefly, the site stays visible thanks to the cache!"</em></p>
+					<p>The reverse proxy is now <strong>the foundation of foundations</strong> for internet infrastructure.</p>
+					<p>Every giant site (Naver, Kakao, Toss, Facebook, Google) has countless reverse proxies standing in front to distribute traffic, cache responses, and protect the backend.</p>
+					<p>The core job of giant companies like <strong>Cloudflare</strong> and <strong>Fastly</strong> is also reverse proxying. The simple idea behind mod_proxy in 1996 became the heart of internet infrastructure 30 years later.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>mod_proxy later grew balancer and <code>mod_jk</code> add-ons, standardizing connections to Tomcat, JBoss, and WebLogic. Three-tier layouts with Apache in front became the rule, clarifying the boundary between web serving and application execution.</p>
+					<p>With proxy features like <code>mod_proxy</code> built in, it became common for a web server to act as a reverse proxy that receives user requests and routes them to the right backend server.<br>Separating the user-facing front web server from the backend application server handling business logic became standard practice.</p>
 				</div>
 			</section>
 		</article>
@@ -472,18 +504,24 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">1997</p>
 				<h2 id="event-1997-servlet-title">Servlet, the birth of the roots of Korean bank and government sites</h2>
-				<p class="event-detail__summary">"Spinning up a fresh program for every single user is hideously wasteful." One simple rule from Sun Microsystems pushed performance up 50x and made Java the default language of enterprise web infrastructure.</p>
+				<p class="event-detail__summary">"Spinning up a fresh program for every single user is hideously wasteful."<br>One simple rule from Sun Microsystems pushed performance up 50x and made Java the default language of enterprise web infrastructure.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_1997-servlet.png" alt="1997 Servlet, the birth of the roots of Korean bank and government sites visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>In the early days of the web, processing form input on the server was <strong>extremely primitive</strong>. The standard way was something called <strong>CGI</strong> (Common Gateway Interface): every time a user submitted a form, the server launched a brand new program from scratch to handle the request, and threw the program away when done. A hundred form submissions per second meant a hundred fresh program launches per second. Just the startup time burned roughly half a second every time. A Java developer sighed: <em>"Spinning up a new Java Virtual Machine for each user is hideous. Couldn't we start the JVM once and process every request inside the same one?"</em></p>
-					<p>In 1997 Sun Microsystems answered with the <strong>Servlet 1.0</strong> spec. <em>"Start one JVM and run a 'servlet container' inside it. When a request arrives, the container calls a Java class to handle it. Startup time disappears, and all the requests can share memory inside the same JVM."</em></p>
-					<p>That spec rewrote how Java web development was done. You inherited from a class called <code>HttpServlet</code> and implemented <code>doGet()</code> or <code>doPost()</code> to handle HTTP requests. A Java developer cheered: <em>"Performance went up 50x. And because there's a standard, my code runs on any vendor's servlet container — I'm not locked in!"</em></p>
-					<p>The Servlet spec made Java <strong>the heavyweight of enterprise web development</strong>. Tomcat (1999), JBoss, WebLogic, WebSphere — every Java web server that came after was built on top of this spec. The reason almost every bank, government portal, and large enterprise system in many countries still runs on Java today is that the standard set in 1997 made Java the default language of business-grade web infrastructure.</p>
+					<p>In the early days of the web, processing user-entered data like sign-ups or searches was <strong>very primitive</strong>.</p>
+					<p>The method used at the time, <strong>CGI</strong> (Common Gateway Interface, an early way to connect a web server with external programs), launched a brand-new program from scratch every time a user submitted an input form and shut it down when done.</p>
+					<p>Submitting 100 forms per second meant starting a program 100 times per second, burning 0.5 seconds on startup each time.</p>
+					<p>Java developers were frustrated too:<br><em>"Starting a new Java execution engine (Java Virtual Machine, JVM) for every single user is terribly inefficient. Couldn't we start Java once and handle all requests inside the same Java process?"</em></p>
+					<p>In 1997 Sun Microsystems answered with the <strong>Servlet 1.0</strong> specification.<br><em>"Keep one Java Virtual Machine running and launch a program called a 'servlet container (request-handling manager)' inside it. When a user request arrives, call the waiting Java program component (class) inside the container to handle it. Startup time disappears, and requests can share memory inside the same Java environment."</em></p>
+					<p>That specification completely changed how Java web development worked.</p>
+					<p>By building on the base <code>HttpServlet</code> class and filling in only the read (<code>doGet()</code>) or submit (<code>doPost()</code>) actions, handling web requests was done.</p>
+					<p>Developers reacted immediately:<br><em>"Performance jumped 50x. And because there's a standard, the same code runs on any vendor's servlet container!"</em></p>
+					<p>The Servlet spec made Java <strong>the heavyweight of enterprise web development</strong>. Tomcat (1999), JBoss, WebLogic, WebSphere — every Java web server that came after was built on top of this spec.</p>
+					<p>The reason almost every bank, government portal, and large enterprise system in many countries still runs on Java today is that the standard set in 1997 made Java the default language of business-grade web infrastructure.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>The spec defined request and response objects, filters, and lifecycle hooks. Developers could deploy the same code on any compliant container, while vendors focused on threading, security, and session management. JSP, Tomcat, and Spring later layered on top of this foundation.</p>
+					<p>The Servlet specification set a standard way to handle web requests and responses.<br>Developers built programs with the same code regardless of which company's server they used, while server vendors focused on common technologies like security and concurrent connection handling.</p>
 				</div>
 			</section>
 		</article>
@@ -494,18 +532,21 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">1997</p>
 				<h2 id="event-1997-httpsession-title">HttpSession, the day shopping malls started remembering you</h2>
-				<p class="event-detail__summary">"I added it to my cart, and on the next page the cart's empty." The reason Coupang and Naver still know who you are once you've logged in starts here.</p>
+				<p class="event-detail__summary">"I added it to my cart, and on the next page the cart's empty."<br>The reason Coupang and Naver still know who you are once you've logged in starts here.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_1997-httpsession.png" alt="1997 HttpSession, the day shopping malls started remembering you visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>The early web had a fundamental weakness: <strong>web servers couldn't remember users</strong>. When the same person clicked through five pages in a row, the server thought, "who is this? a stranger" every single time. On a shopping site, you'd add an item to your cart, click to the next page, and the cart would be <strong>empty</strong> — because the server had no idea you were the same person who put it there. A shopping mall developer groaned: <em>"The user logs in, and the next page asks them to log in again. Nobody is going to use this."</em></p>
-					<p>In 1997 the Java community standardized a fix. <em>"When a user first arrives at the site, the server hands them a small 'admission ticket' (a session ID), and the user includes that ticket in every subsequent request. The server sees the ticket and goes, 'oh, this is User A.' We keep the actual data about that user (cart contents, login state) in server memory, indexed by the session ID."</em></p>
-					<p>The resulting standard was called <strong>HttpSession</strong>, and it became part of the Java Servlet spec. From then on, every Java web developer remembered users the same way. A shopping site developer rolled it out and cheered: <em>"My cart finally survives across pages! Once a user logs in, they stay logged in. It actually behaves like a real shop now!"</em></p>
-					<p>The reason your cart on Amazon stays full as you click around, the reason logging into Google once carries you across every Google service, the reason you don't have to re-authenticate on every page — it all descends from the "remember the user" pattern that HttpSession formalized in 1997. It looks deceptively simple, but without this standard, no web service we use today would be possible.</p>
+					<p>The early web had a fundamental weakness: <strong>web servers couldn't remember users</strong>. When the same person clicked through five pages in a row, the server thought, "who is this? a stranger" every single time.</p>
+					<p>On a shopping site, you'd add an item to your cart, click to the next page, and the cart would be <strong>empty</strong> — because the server had no idea you were the same person who put it there.</p>
+					<p>A shopping mall developer groaned:<br><em>"The user logs in, and the next page asks them to log in again. Nobody is going to use this."</em></p>
+					<p>In 1997 the Java community standardized a fix.<br><em>"When a user first arrives at the site, the server hands them a small 'admission ticket' (a session ID), and the user includes that ticket in every subsequent request. The server sees the ticket and goes, 'oh, this is User A.' We keep the actual data about that user (cart contents, login state) in server memory, indexed by the session ID."</em></p>
+					<p>The resulting standard was called <strong>HttpSession</strong>, and it became part of the Java Servlet spec. From then on, every Java web developer remembered users the same way.</p>
+					<p>A shopping site developer rolled it out and cheered:<br><em>"My cart finally survives across pages! Once a user logs in, they stay logged in. It actually behaves like a real shop now!"</em></p>
+					<p>The reason your cart on Coupang stays full across pages and logging into Naver once keeps you logged in all the way through comes from the "remember the user" pattern that HttpSession organized in 1997.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>The API enabled cookie-based IDs, URL rewriting, and distributed session stores. Other frameworks such as PHP, ASP, and Rails mirrored the approach, leaving WAS platforms in charge of user state while frontends simply sent cookies along.</p>
+					<p>Session technology introduced a standard way to identify users and keep their data using a small name tag stored in the browser (a cookie).<br>As many programming languages and frameworks followed this approach, it became standard for the web server to manage user state while the screen side (frontend) simply passed the identifier along.</p>
 				</div>
 			</section>
 		</article>
@@ -516,18 +557,24 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">1998</p>
 				<h2 id="event-1998-lvs-title">LVS, when Linux became the traffic cop</h2>
-				<p class="event-detail__summary">"We were capped at 10,000 users — now we're handling 100,000!" The idea of a Chinese graduate student named Wensong Zhang became the direct ancestor of the way Facebook's hundreds of thousands of servers split traffic.</p>
+				<p class="event-detail__summary">"We were capped at 10,000 users — now we're handling 100,000!"<br>The idea of a Chinese graduate student named Wensong Zhang became the direct ancestor of the way Facebook's hundreds of thousands of servers split traffic.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_1998-lvs.png" alt="1998 LVS, when Linux became the traffic cop visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>In the late 1990s, popular sites kept hitting new ceilings. Even with reverse proxies (1996), one big problem remained: <strong>spreading traffic evenly across many servers</strong>. Suppose you had five servers. How exactly do you split 10,000 incoming users across them so none gets overloaded? When one server got hit harder than the rest, it crashed, and every user already on it was disconnected.</p>
-					<p>A Chinese developer named <strong>Wensong Zhang</strong> had an audacious idea. <em>"Don't do load balancing in a regular application program. Build it into the <strong>Linux operating system itself</strong>. If the OS distributes packets directly at the kernel level, it'll be vastly faster and more efficient."</em></p>
-					<p>His project, started in 1998, was the <strong>Linux Virtual Server</strong> (LVS). With LVS installed, one Linux box sat in front like a traffic cop, accepting every incoming request and automatically distributing them across five or ten backend servers. An ISP engineer who deployed it cheered: <em>"One server used to cap out at 10,000 users. With LVS in front of ten servers, we handle 100,000. And when one of the ten dies, LVS automatically pulls it out of the rotation and the rest pick up the slack!"</em></p>
-					<p>This concept of <strong>load balancing</strong> ushered in the era of internet-scale services. Today, companies like Meta run hundreds of thousands of servers, and the systems distributing traffic across them are direct descendants of LVS. AWS's Elastic Load Balancer, Cloudflare's traffic distribution — same idea. A graduate student's insight in 1998 turned out to be a load-bearing piece of the modern internet's scale.</p>
+					<p>In the late 1990s, popular sites kept hitting new ceilings. Even with reverse proxies (1996), one big problem remained: <strong>spreading traffic evenly across many servers</strong>.</p>
+					<p>Suppose you had five servers. How exactly do you split 10,000 incoming users across them so none gets overloaded?</p>
+					<p>When one server got hit harder than the rest, it crashed, and every user already on it was disconnected.</p>
+					<p>A Chinese developer named <strong>Wensong Zhang</strong> made a bold move.<br><em>"Don't distribute traffic in a regular application program — build that capability into the <strong>Linux operating system itself</strong>. If the OS distributes network data chunks (packets) directly, it'll be far faster and more efficient."</em></p>
+					<p>His project, started in 1998, was the <strong>Linux Virtual Server</strong> (LVS).</p>
+					<p>With LVS installed, one Linux box sat in front like a traffic cop, accepting every incoming request and automatically distributing them across five or ten backend servers.</p>
+					<p>An ISP engineer who deployed it cheered:<br><em>"One server used to cap out at 10,000 users. With LVS in front of ten servers, we handle 100,000. And when one of the ten dies, LVS automatically pulls it out of the rotation and the rest pick up the slack!"</em></p>
+					<p>This concept of <strong>load balancing</strong> ushered in the era of internet-scale services.</p>
+					<p>Today, companies like Meta run hundreds of thousands of servers, and the systems distributing traffic across them are direct descendants of LVS.</p>
+					<p>AWS's Elastic Load Balancer, Cloudflare's traffic distribution — same idea. A graduate student's insight in 1998 turned out to be a load-bearing piece of the modern internet's scale.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>LVS exposed the IPVS module plus <code>ipvsadm</code> tooling for layer 4 distribution. Sticky sessions and health checks meant WAS nodes could scale out while preserving user experience, laying groundwork later refined by HAProxy, Nginx, and cloud load balancers.</p>
+					<p>LVS and its <code>ipvsadm</code> tool split incoming connection requests at the network stage and kept a given user connected to the same server.<br>Even when servers were scaled out, users kept using the service without interruption, and later load-balancing technologies inherited this approach.</p>
 				</div>
 			</section>
 		</article>
@@ -538,18 +585,24 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">1999</p>
 				<h2 id="event-1999-tomcat-title">Tomcat, the cat that set free a $50,000 server license</h2>
-				<p class="event-detail__summary">"How is a student supposed to pay a $50,000 license?" One foundation's decision let students and startups run Java websites for free, and 25 years later it still holds up roughly half of the Korean internet.</p>
+				<p class="event-detail__summary">"How is a student supposed to pay a $50,000 license?"<br>One foundation's decision let students and startups run Java websites for free, and 25 years later it still holds up roughly half of the Korean internet.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_1999-tomcat.png" alt="1999 Tomcat, the cat that set free a $50,000 server license visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>The Servlet spec arrived in 1997, but <strong>there weren't many free programs that could actually run it</strong>. The commercial servers (WebLogic, WebSphere) cost tens of thousands of dollars in licenses, far out of reach for hobbyists or small companies. If you wanted to build a Java web app, you either paid a fortune or cobbled something together from sketchy alternatives. A student despaired: <em>"I learned how to build Java web apps from a textbook, but to actually run it I'm told I need a $50,000 license. How is a student supposed to do this?"</em></p>
-					<p>The Apache Foundation made a decision. <em>"Let's build a free, open-source servlet container. Anyone should be able to download it and run their Java web application."</em></p>
-					<p>The result, released in 1999, was <strong>Apache Tomcat</strong> — and it changed the landscape of Java web development. ('Tom' as in tomcat; the project mascot is, naturally, a cat.) The workflow was simple. Bundle your Java web app into a single <strong>WAR file</strong> (Web Application aRchive), drop it into Tomcat's special folder, and Tomcat ran it automatically. A student developer cheered: <em>"I downloaded it for free and had my web app running in five minutes! I can build a real Java website for my class assignment now!"</em></p>
-					<p>Tomcat became the tool that <strong>opened Java web development to everyone</strong>. Students, indie developers, small startups, and eventually huge enterprises all ended up running their Java systems on Tomcat. A surprising fraction of the internet's banks, card processors, government portals, and university systems still runs on it — even today. Twenty-five years on, Tomcat is still active duty: a rare case of an open source tool that simply refuses to retire.</p>
+					<p>The Servlet spec arrived in 1997, but <strong>there were not enough free programs that could actually run it</strong>.</p>
+					<p>Commercial servers (WebLogic, WebSphere) cost tens of thousands of dollars, out of reach for small companies or individuals.</p>
+					<p>Even if you wanted to build for the web in Java, you had to pay a steep price or rely on unstable makeshift tools.</p>
+					<p>Students studying Java felt stuck too:<br><em>"I learned how to build a Java website from a book, but to actually run it the server usage right (license) costs $50,000. How is a student supposed to pay that?"</em></p>
+					<p>The Apache Foundation made a decision.<br><em>"Let's build a free, open-source servlet container. Anyone should be able to download it and run their Java web application."</em></p>
+					<p>The result, released in 1999, was <strong>Apache Tomcat</strong> — and it changed the landscape of Java web development. ('Tom' as in tomcat; the project mascot is, naturally, a cat.)</p>
+					<p>The workflow was simple. Bundle your Java web app into a single <strong>WAR file</strong> (Web Application aRchive), drop it into Tomcat's special folder, and Tomcat ran it automatically.</p>
+					<p>A student developer cheered:<br><em>"I downloaded it for free and had my web app running in five minutes! I can build a real Java website for my class assignment now!"</em></p>
+					<p>Tomcat became the tool that <strong>opened Java web development to everyone</strong>. From students, indie developers, and small startups to giant corporations, countless Java web systems began running on Tomcat.</p>
+					<p>Roughly half of the Korean internet runs on Tomcat — banks, card companies, government sites, and university portals almost always have Tomcat behind them, and it is still actively used 25 years later.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>Tomcat bundled connectors, thread pools, and a JSP compiler, becoming the default developer WAS. Shared containers aligned dev and prod environments, while Spring and Struts integrated seamlessly. Tomcat's openness encouraged Jetty, JBoss, and others to enter the scene.</p>
+					<p>Tomcat bundled the web server and application execution environment into one, making development and testing convenient.<br>Matching development and production environments reduced errors and made Tomcat the de facto standard in Java web development.</p>
 				</div>
 			</section>
 		</article>
@@ -560,18 +613,25 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">2003</p>
 				<h2 id="event-2003-spring-title">Spring, when one book flipped the entire Java world</h2>
-				<p class="event-detail__summary">"It takes a week to add a 'register a user' feature." A book and a code bundle from Australian developer Rod Johnson, handed to grumbling Java developers, opened the era when the same job got done in a single day.</p>
+				<p class="event-detail__summary">"It takes a week to add a 'register a user' feature."<br>A book and a code bundle from Australian developer Rod Johnson, handed to grumbling Java developers, opened the era when the same job got done in a single day.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_2003-spring.png" alt="2003 Spring, when one book flipped the entire Java world visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>In the early 2000s, building a big enterprise Java system was <strong>notoriously painful</strong>. The standard approach was a heavyweight framework called <strong>EJB</strong> (Enterprise JavaBeans). Building a single screen meant writing 5–10 Java files, scribbling page after page of XML config, and running a heavy server just to test it. A Java developer sighed: <em>"It takes a week to add a 'register a user' feature. EJB is too heavy and too complicated. Is this really the only way?"</em></p>
-					<p>An Australian developer named <strong>Rod Johnson</strong> wrote a book called <em>"J2EE Without EJB."</em> His message was simple. <em>"EJB is too heavy. With nothing more than plain Java objects (POJOs) and a few key patterns, we can do the same job dramatically faster. Look — I've written the code."</em></p>
-					<p>The code he released alongside the book was <strong>Spring 1.0</strong>. Its core idea was <strong>dependency injection</strong> (Inversion of Control). It sounds intimidating, but the gist is simple: don't hard-code how components are wired together — declare it externally so the wiring can change without rewriting the components. Suddenly testing got easy and components were swappable. A developer who tried it cheered: <em>"What used to take a week takes a day. The code is so much cleaner. EJB's heaviness just… vanished."</em></p>
-					<p>Spring quickly became <strong>the de facto standard for enterprise Java</strong>. EJB practically disappeared, and every big Java system was rewritten on top of Spring. To this day, almost every major bank, card company, and government portal in many countries runs on Spring, and "experience with Spring" is the first line of nearly every Java job posting. It's a rare case of one developer's book single-handedly rewriting how the global Java industry works.</p>
+					<p>In the early 2000s, building a large enterprise system in Java was <strong>notoriously painful</strong>.</p>
+					<p>The standard approach at the time was a heavy development structure (framework) called <strong>EJB</strong> (Enterprise JavaBeans), where building a single screen meant writing 5–10 Java files, filling out piles of complex XML config files, and starting a heavy server.</p>
+					<p>Java developers in the field were frustrated:<br><em>"It takes a week to build a single user registration feature. EJB is too heavy and complicated. Is this really the only way?"</em></p>
+					<p>Australian developer <strong>Rod Johnson</strong> pushed back head-on in late 2002 with a book titled <em>J2EE Without EJB</em>.</p>
+					<p>His core message was clear:<br><em>"EJB is too heavy. With ordinary, lightweight Java objects not tied to special specs (POJOs) and a few key patterns, we can do the same job much faster. Look — I've built the method in code."</em></p>
+					<p>The code he released alongside the book was <strong>Spring 1.0</strong>. Its core idea was <strong>dependency injection</strong> (Inversion of Control).</p>
+					<p>It sounds intimidating, but the gist is simple: don't hard-code how components are wired together — declare it externally so the wiring can change without rewriting the components. Suddenly testing got easy and components were swappable.</p>
+					<p>A developer who tried it cheered:<br><em>"What used to take a week takes a day. The code is so much cleaner. EJB's heaviness just… vanished."</em></p>
+					<p>Spring quickly became <strong>the de facto standard for enterprise Java</strong>. EJB practically disappeared, and every big Java system was rewritten on top of Spring.</p>
+					<p>To this day, almost every major bank, card company, and government portal in many countries runs on Spring, and "experience with Spring" is the first line of nearly every Java job posting.</p>
+					<p>It's a rare case of one developer's book single-handedly rewriting how the global Java industry works.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>Spring's IoC container and AOP support injected dependencies and wrapped transactions declaratively. Teams maintained thin service layers with strong test coverage, delivering predictable APIs to frontend partners. Spring MVC, Security, and Boot extended the same principles.</p>
+					<p>Spring flexibly assembled program components and handled common tasks like database connections and security on the developer's behalf.<br>Developers spent less time on low-level setup and more time implementing service features, making programs easier to scale and maintain.</p>
 				</div>
 			</section>
 		</article>
@@ -582,18 +642,23 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">2005</p>
 				<h2 id="event-2005-memcached-title">Memcached, the "memory pantry" even Facebook used</h2>
-				<p class="event-detail__summary">"This same post is being requested 10,000 times a minute and never changes once." A single insight from LiveJournal engineer Brad Fitzpatrick cut database load by 95%.</p>
+				<p class="event-detail__summary">"This same post is being requested 10,000 times a minute and never changes once."<br>A single insight from LiveJournal engineer Brad Fitzpatrick cut database load by 95%.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_2005-memcached.png" alt="2005 Memcached, the &quot;memory pantry&quot; even Facebook used visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>By the mid-2000s, big sites were tormented by a new problem: <strong>they were asking the database for the same information over and over.</strong> On a blogging service like LiveJournal, a popular post would be viewed a hundred times a second — and every single one of those views asked the database, "fetch me that post again." The database had to repeat the same answer a hundred times and groaned under the load. An ops engineer shouted: <em>"This post got requested ten thousand times in the last minute, and the contents never changed once. But we hit the database ten thousand times. How does that even make sense?"</em></p>
-					<p>A LiveJournal engineer named <strong>Brad Fitzpatrick</strong> built the answer. <em>"Let's run a 'shared memory pantry' that lots of servers can talk to. When the database returns a result, we stash it there. The next ten thousand requests don't touch the database at all — they pull it straight from the pantry. Memory access is a thousand times faster than disk."</em></p>
-					<p>Built in 2003 and publicly released in 2005, that tool was <strong>Memcached</strong> — a giant distributed memory cache that any number of servers could read and write at the same time. LiveJournal absorbed its growing traffic without breaking, and almost immediately <strong>Facebook, Wikipedia, YouTube, and Twitter</strong> all adopted Memcached too. One site engineer cheered: <em>"Database load dropped 95%. The same number of servers now handles ten times the users."</em></p>
-					<p>Behind every large web service you use today there is a cache layer. Memcached, Redis, and the many cache tools descended from them — they all trace back to LiveJournal's simple realization in 2005. The ancient computer science maxim <strong>"don't do the same work twice"</strong> finally got rewritten at internet scale.</p>
+					<p>By the mid-2000s, big sites were tormented by a new problem: <strong>they were asking the database for the same information over and over.</strong> On a blogging service like LiveJournal, a popular post would be viewed a hundred times a second — and every single one of those views asked the database, "fetch me that post again."</p>
+					<p>The database had to repeat the same answer a hundred times and groaned under the load.</p>
+					<p>An ops engineer shouted:<br><em>"This post got requested ten thousand times in the last minute, and the contents never changed once. But we hit the database ten thousand times. How does that even make sense?"</em></p>
+					<p>LiveJournal engineer <strong>Brad Fitzpatrick</strong> built a solution.<br><em>"Let's create a 'memory pantry' shared by multiple servers. We'll briefly stash the result fetched from the database there, and serve the next 10,000 requests straight from that memory pantry instead of the database. Pulling from memory (RAM) is 1,000 times faster than searching disk."</em></p>
+					<p>Built in 2003 and publicly released in 2005, that tool was <strong>Memcached</strong> — a giant distributed memory cache that any number of servers could read and write at the same time.</p>
+					<p>LiveJournal absorbed its growing traffic without breaking, and almost immediately <strong>Facebook, Wikipedia, YouTube, and Twitter</strong> all adopted Memcached too.</p>
+					<p>One site engineer cheered:<br><em>"Database load dropped 95%. The same number of servers now handles ten times the users."</em></p>
+					<p>Behind every large web service you use today there is a cache layer.</p>
+					<p>Memcached, Redis, and the many cache tools descended from them — they all trace back to LiveJournal's simple realization in 2005. The ancient computer science maxim <strong>"don't do the same work twice"</strong> finally got rewritten at internet scale.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>Memcached lets multiple application servers share the same in-memory key-value store. Externalizing session data keeps load balancers free to direct traffic anywhere while retaining state, enabling painless horizontal scaling.</p>
+					<p>Memcached gives multiple networked servers the effect of sharing one large pool of memory.<br>Keeping frequently used data there avoids querying the database every time, speeding up responses and making it easy to maintain data consistency even as more servers are added.</p>
 				</div>
 			</section>
 		</article>
@@ -604,18 +669,26 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">2011</p>
 				<h2 id="event-2011-nginx-title">Nginx, the secret behind one waiter handling 100 customers</h2>
-				<p class="event-detail__summary">"We were capped at 5,000 users — now we're handling 50,000. Is this magic?" One small tool from Russian developer Igor Sysoev guards the front door of Netflix, Airbnb, Uber, Coupang, Toss, and Kakao.</p>
+				<p class="event-detail__summary">"We were capped at 5,000 users — now we're handling 50,000. Is this magic?"<br>One small tool from Russian developer Igor Sysoev guards the front door of Netflix, Airbnb, Uber, Coupang, Toss, and Kakao.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_2011-nginx.png" alt="2011 Nginx, the secret behind one waiter handling 100 customers visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>By the late 2000s, Apache had revealed its <strong>Achilles' heel</strong>. Apache spawned a separate process or thread for every concurrent user, so once concurrency reached around 10,000 users, memory blew up. People called it the <strong>"C10K problem"</strong> — can a single server handle ten thousand concurrent connections? Big sites bought server after server and still couldn't keep up; the bills became astronomical.</p>
-					<p>A Russian developer named <strong>Igor Sysoev</strong>, working at a Russian search engine, lived this problem firsthand. He took a different approach. <em>"Don't spawn a new process per user. Have a small number of processes use an 'event loop' to juggle tens of thousands of users at once — like one waiter taking orders from a hundred tables instead of hiring a hundred waiters."</em></p>
-					<p>His project, first released in 2004 and stabilized as 1.0 in 2011, was <strong>Nginx</strong>. A site operator who switched from Apache to Nginx was beaming: <em>"Same single server, concurrent users went from 5,000 to 50,000! And memory usage actually <em>dropped</em> by half. Is this magic?"</em> If heavy, dependable Apache ruled the 1990s, lean and fast Nginx ruled the 2010s.</p>
-					<p>Today, almost every giant site in the world has Nginx sitting at the front. <strong>Netflix, Airbnb, Uber, GitHub, WordPress.com</strong> — they all push their traffic through it. And Nginx isn't just a web server anymore; it serves as a reverse proxy, a load balancer, and an API gateway. A small project written by one Russian engineer became part of the bloodstream of internet infrastructure worldwide. A simple idea — event-driven architecture — produced a giant change.</p>
+					<p>By the late 2000s, Apache had revealed its <strong>Achilles' heel</strong>.</p>
+					<p>Apache created a separate workspace (process or thread) for every user, so once concurrent users reached 10,000, memory ran out and the server would stall.</p>
+					<p>People called it the <strong>"C10K problem"</strong> (the 10,000-concurrent-connections barrier) — could a single server handle 10,000 people at once?</p>
+					<p>Giant sites bought piles of servers and still fell short, while costs snowballed.</p>
+					<p>A Russian developer named <strong>Igor Sysoev</strong>, working at a search engine company, experienced this problem firsthand.</p>
+					<p>He took a different approach:<br><em>"Don't create a new process per user. Have a small number of processes handle tens of thousands of users at once using an 'event loop' that processes tasks in order only as work arrives — like one waiter taking orders from 100 customers in turn."</em></p>
+					<p>His project, first released in 2004 and stabilized as 1.0 in 2011, was <strong>Nginx</strong>.</p>
+					<p>A site operator who switched from Apache to Nginx was beaming:<br><em>"Same single server, concurrent users went from 5,000 to 50,000! And memory usage actually <em>dropped</em></p>
+					<p>by half. Is this magic?"</em> If heavy, dependable Apache ruled the 1990s, lean and fast Nginx ruled the 2010s.</p>
+					<p>Today, almost every giant site has Nginx standing at the front. <strong>Netflix, Airbnb, Uber, Coupang, Toss, and Kakao</strong> all process their traffic through Nginx.</p>
+					<p>Nginx is used not only as a web server, but also as a reverse proxy, a traffic distributor (load balancer), and a service entry point (API gateway).</p>
+					<p>A small tool made by one Russian developer became the default front door for large sites.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>Nginx relies on non-blocking I/O and an asynchronous event loop. That architecture encouraged teams to split backend services and let Nginx steer traffic, a pattern later mirrored in microservices and container platforms.</p>
+					<p>Instead of creating a new workspace for every incoming connection, Nginx handled multiple requests at once within a single workspace.<br>Because it was lightweight and fast, it came to handle traffic splitting in complex web services.</p>
 				</div>
 			</section>
 		</article>
@@ -626,18 +699,23 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">2014</p>
 				<h2 id="event-2014-spring-boot-title">Spring Boot, three days of setup turned into five minutes</h2>
-				<p class="event-detail__summary">"The first three days of every new project disappear into config wrangling." The decisive tool that lets Kakao, Naver, and Toss keep using Java arrived here.</p>
+				<p class="event-detail__summary">"The first three days of every new project disappear into config wrangling."<br>The decisive tool that lets Kakao, Naver, and Toss keep using Java arrived here.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_2014-spring-boot.png" alt="2014 Spring Boot, three days of setup turned into five minutes visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>Spring (2003) had revolutionized Java development, but as the years wore on, a <strong>new headache</strong> emerged. Spring itself was lightweight, but starting an actual project meant writing piles of configuration files and reconciling library versions — multiple days of setup before you could write a single line of business logic. Every new project was the same copy-paste setup. A developer groaned: <em>"The first three days of every new project disappear into config wrangling. It takes forever to get to the first real line of code."</em></p>
-					<p>The Spring team made a decision. <em>"Stop making developers configure everything by hand. We'll pre-decide the 'good defaults for the common case' ourselves. The developer just writes their code and the project starts up. They only need to override config when they're doing something unusual."</em></p>
-					<p>The answer, released in 2014, was <strong>Spring Boot 1.0</strong>. Starting a new project took five minutes. Add one line to your <code>main</code> function and an embedded Tomcat fired up automatically; database connections, security defaults, everything "just worked." A developer cheered: <em>"Project startup time dropped from three days to five minutes. And to ship, I just hand someone a single JAR file. No separate server install needed!"</em></p>
-					<p>Spring Boot let Java <strong>adapt to the microservices era</strong>. Splitting a giant monolith into dozens of small services was getting popular, but configuring fifty services by hand was infeasible. Spring Boot made microservices easy enough that Java developers could keep up, and that's the decisive reason why companies like Netflix, Goldman Sachs, and many of the world's largest banks still run their main systems in Java today.</p>
+					<p>Spring (2003) had transformed Java development, but as time went on, a <strong>new headache</strong> emerged.</p>
+					<p>Spring itself was lightweight, but starting an actual project took days of writing numerous configuration files and matching versions of external tool bundles (libraries). Every new project repeated the same copy-and-paste setup.</p>
+					<p>Developers in the field were frustrated:<br><em>"The first three days of starting a new project just vanish into writing configs. It takes way too long to write the first line of code."</em></p>
+					<p>The Spring team made a decision.<br><em>"Stop making developers configure everything by hand. We'll pre-decide the 'good defaults for the common case' ourselves. The developer just writes their code and the project starts up. They only need to override config when they're doing something unusual."</em></p>
+					<p>The answer that arrived in 2014 was <strong>Spring Boot 1.0</strong>. Five minutes was enough to start a new project.</p>
+					<p>Adding one line to the <code>main</code> function automatically started an embedded Tomcat server, and database connections and security settings were configured automatically so everything worked right away.</p>
+					<p>Developers responded enthusiastically:<br><em>"New project startup time dropped from three days to five minutes. Plus, running a single packaged executable file (JAR) is all it takes. No separate server installation needed!"</em></p>
+					<p>Spring Boot helped Java <strong>adapt to the microservices era</strong>. Breaking a giant monolithic system into dozens of small services became popular, and configuring 50 small services manually was nearly impossible.</p>
+					<p>Thanks to Spring Boot, Java developers could build small services lightly, and companies like Kakao, Naver, and Toss in Korea continue to use Java as a primary language.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>Spring Boot offers auto-configuration, starter dependencies, and embedded servers, turning services into self-contained deployables. Backend teams iterate faster, while frontend teams enjoy consistent REST or GraphQL endpoints. Spring Cloud and Kubernetes deployments picked up the same momentum.</p>
+					<p>Spring Boot pre-packaged common settings and included the web server right inside the program, greatly reducing deployment steps.<br>Developers spent less time on infrastructure setup and more time quickly building and shipping small, independent services.</p>
 				</div>
 			</section>
 		</article>
@@ -648,18 +726,22 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">2014</p>
 				<h2 id="event-2014-lambda-title">AWS Lambda, the magic of running a site for $0 a month</h2>
-				<p class="event-detail__summary">"My site gets called 100 times a month and my bill is literally $0!" One audacious idea from Amazon kicked off the era when servers became truly invisible.</p>
+				<p class="event-detail__summary">"My site gets called 100 times a month and my bill is literally $0!"<br>One audacious idea from Amazon kicked off the era when servers became truly invisible.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_2014-lambda.png" alt="2014 AWS Lambda, the magic of running a site for $0 a month visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>Up through the early 2010s, "running a web service" meant <strong>"keeping a server running 24/7 and managing it."</strong> Whether one user showed up or ten thousand, the server had to be on; when traffic surged, you bought new servers and configured them. For small companies and indie developers, the burden was real. <em>"My site only gets a hundred visitors a day, but I have to keep a server running around the clock. It costs me $50 a month, and if it crashes at 3am I have to wake up to fix it."</em></p>
-					<p>The AWS team at Amazon had a wild idea. <em>"Throw out the 'server running 24/7' model. Only run code at the moment a request actually arrives. The rest of the time, nothing is running. When a request comes in, your function spins up in a tenth of a second, returns a response, and disappears. You only pay for what you actually used."</em></p>
-					<p>That model, announced in 2014, was <strong>AWS Lambda</strong>, and it came with a new word: <strong>serverless</strong>. There are still servers, of course — you just don't have to manage them. A solo developer rolled it out and cheered: <em>"My site gets called a hundred times a month and my bill is literally $0! Lambda's free tier covers the first million requests. And if traffic suddenly explodes 10,000x, it scales automatically. No more 3am wake-up calls!"</em></p>
-					<p>Lambda <strong>changed the operating model of web services</strong>. Tiny sites can essentially run for free, and giant ones can autoscale through traffic spikes effortlessly. Google (Cloud Functions), Microsoft (Azure Functions), and Cloudflare (Workers) shipped equivalents soon after, and today an enormous number of web services run on serverless. The backend of your favorite mobile app, that chatbot you used yesterday, the image-resizing service powering your photo uploads — many of them are really just collections of Lambda functions. The era when infrastructure became truly "invisible" started here.</p>
+					<p>Up through the early 2010s, "running a web service" meant <strong>"keeping a server running 24/7 and managing it."</strong> Whether one user showed up or ten thousand, the server had to be on; when traffic surged, you bought new servers and configured them.</p>
+					<p>For small companies and indie developers, the burden was real.<br><em>"My site only gets a hundred visitors a day, but I have to keep a server running around the clock. It costs me $50 a month, and if it crashes at 3am I have to wake up to fix it."</em></p>
+					<p>The AWS team at Amazon put forward a bold idea.<br><em>"Drop the model of keeping a server running 24/7. Have a small piece of code (a function) run only at the exact moment a user request arrives. Nothing runs normally, and when a request comes in, the function runs in 0.1 seconds, returns an answer, and disappears. You only pay for the time it runs."</em></p>
+					<p>That model, announced in 2014, was <strong>AWS Lambda</strong>, and it came with a new word: <strong>serverless</strong>. There are still servers, of course — you just don't have to manage them.</p>
+					<p>A solo developer rolled it out and cheered:<br><em>"My site gets called a hundred times a month and my bill is literally $0! Lambda's free tier covers the first million requests. And if traffic suddenly explodes 10,000x, it scales automatically. No more 3am wake-up calls!"</em></p>
+					<p>Lambda <strong>changed the operating model of web services</strong>. Tiny sites can essentially run for free, and giant ones can autoscale through traffic spikes effortlessly.</p>
+					<p>Google (Cloud Functions), Microsoft (Azure Functions), and Cloudflare (Workers) shipped equivalents soon after, and today an enormous number of web services run on serverless.</p>
+					<p>The backend of your favorite mobile app, that chatbot you used yesterday, the image-resizing service powering your photo uploads — many of them are really just collections of Lambda functions. The era when infrastructure became truly "invisible" started here.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>Serverless platforms scale and bill automatically. Backend teams focus on business logic while frontends serve static assets from CDNs and call APIs on demand. The model foreshadowed today's event-driven architectures.</p>
+					<p>The serverless model automatically increases processing capacity when traffic spikes and incurs no cost when there are no users.<br>Developers wrote service logic without touching server operating systems or network settings.</p>
 				</div>
 			</section>
 		</article>
@@ -670,18 +752,22 @@
 			<header class="event-detail__header">
 				<p class="event-detail__year">2015</p>
 				<h2 id="event-2015-k8s-ingress-title">Ingress, conducting 100 servers from one file</h2>
-				<p class="event-detail__summary">"The days of editing config files by hand are over!" The decisive step that opened the gate to the Kubernetes era, where 100 servers move as one block.</p>
+				<p class="event-detail__summary">"The days of editing config files by hand are over!"<br>The decisive step that opened the gate to the Kubernetes era, where 100 servers move as one block.</p>
 			</header>
 			<section class="event-detail__body">
 				<div class="event-detail__story">
 					<img src="assets/images/story_was_2015-k8s-ingress.png" alt="2015 Ingress, conducting 100 servers from one file visual concept illustration" class="story-image" loading="lazy" decoding="async" style="width:100%; border-radius:8px; margin-bottom:1rem;">
-					<p>In the mid-2010s, <strong>Kubernetes</strong> (k8s for short) appeared and changed how servers were managed. When a company ran a hundred servers, Kubernetes let them treat that hundred as if it were "one big machine." But there was a big gap: <strong>how do outside users actually reach a specific service inside that hundred-server cluster?</strong> "Send the checkout page to the checkout service, send the catalog to the catalog service" — that routing had to be configured by hand for every new service.</p>
-					<p>The Kubernetes team introduced a new concept. <em>"Routing rules should be declarative, just like everything else. Write 'this URL goes to this service, that URL goes to that service, HTTPS is automatic' in a YAML file, and Kubernetes applies it for you."</em></p>
-					<p>That feature, added in Kubernetes 1.1 in 2015, was the <strong>Ingress</strong> resource. A few lines of YAML covered domain routing, HTTPS certificates, and path-based dispatch — all automatic. An ops engineer cheered: <em>"Now traffic routing is managed as code! When we add a new service, we drop in one more YAML file and the routing happens automatically. The days of editing nginx configs by hand are over."</em></p>
-					<p>Ingress was a defining moment for the era of <strong>"Infrastructure as Code."</strong> Today, almost every large internet service runs on Kubernetes, and its public entry points are managed through Ingress definitions. The systems running Spotify, Airbnb, Shopify, and countless others all sit behind some flavor of Ingress. We moved from "a sysadmin manually edits a config file on a server" to "every piece of infrastructure lives in a git repo and deploys itself," and Ingress was the moment that shift became real.</p>
+					<p>In the mid-2010s, <strong>Kubernetes</strong> (k8s for short) appeared and greatly changed how servers were managed. When a company ran 100 servers, Kubernetes let them handle those 100 as if they were a single block.</p>
+					<p>But a major challenge remained: <strong>how do outside users reach a specific service inside those 100 servers?</strong> Traffic direction (routing) — such as sending checkout pages to the checkout service and product pages to the product service — had to be configured by hand every time.</p>
+					<p>The Kubernetes team introduced a new concept.<br><em>"Let's make traffic direction (routing) rules declarative in a simple text configuration sheet (a YAML file) just like every other setting. Write 'this path goes to this service, that path goes to that service, and HTTPS secure connections are automatic' in one file, and Kubernetes applies it automatically."</em></p>
+					<p>That feature, added in Kubernetes 1.1 in 2015, was the <strong>Ingress</strong> resource. A few lines of YAML covered domain routing, HTTPS certificates, and path-based dispatch — all automatic.</p>
+					<p>An ops engineer cheered:<br><em>"Now traffic routing is managed as code! When we add a new service, we drop in one more YAML file and the routing happens automatically. The days of editing nginx configs by hand are over."</em></p>
+					<p>Ingress demonstrated how to write infrastructure settings as code (<strong>Infrastructure as Code</strong>). Nearly every giant service runs on Kubernetes, and its entry points are managed through Ingress settings.</p>
+					<p>Korean companies like Kakao, Naver, Toss, and Coupang work the same way.</p>
+					<p>Operations moved from system administrators editing config files by hand to recording infrastructure in a code repository and deploying it automatically.</p>
 				</div>
 				<div class="event-detail__notes">
-					<p>Ingress absorbed layer 7 routing and TLS termination into Kubernetes objects, reinforcing the line between application runtime and platform traffic control. Spring Boot or Tomcat containers now rely on Ingress controllers and service meshes for modern traffic patterns.</p>
+					<p>Ingress connects incoming outside requests to the right service inside a server cluster.<br>By making network management tasks like HTTPS handling and domain-based traffic distribution configurable in a standard way, it became a basic building block of cloud environments.</p>
 				</div>
 			</section>
 		</article>

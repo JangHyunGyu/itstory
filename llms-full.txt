@@ -7,7 +7,7 @@
 URL: https://itstory.archerlab.dev/seo/itstory-about.html
 Last updated: 2026-10-02
 
-ArcherLab IT Story는 1830년대 전신부터 컴퓨터, 운영체제, 웹과 서버, 데이터베이스까지 IT 기술의 발전 과정을 연도별 타임라인으로 정리한 무료 학습 사이트입니다. 기술 이름보다 그때 막힌 문제와 사람을 먼저 적고, 낯선 용어에는 짧은 풀이를 달았습니다. 회원가입이나 설치 없이 브라우저에서 읽을 수 있습니다.
+ArcherLab IT Story는 1830년대 전신부터 컴퓨터, 운영체제, 웹과 서버, 데이터베이스까지 IT 기술의 발전 과정을 연도별 타임라인으로 정리한 무료 학습 사이트입니다. 기술 이름보다 그때 막힌 문제와 사람을 먼저 적고 낯선 용어에는 짧은 풀이를 달았습니다. 회원가입이나 설치 없이 브라우저에서 읽을 수 있습니다.
 
 ### 한눈에 보기
 - 서비스: ArcherLab IT Story — IT 역사 타임라인 허브
@@ -48,7 +48,7 @@ ArcherLab IT Story는 1830년대 전신부터 컴퓨터, 운영체제, 웹과 �
 컴퓨터, 네트워크, 운영체제, 데이터베이스, 웹 제작, 웹 서버의 연대기를 다룹니다. 보안과 프로토콜·표준은 준비 중입니다.
 
 **어디서부터 읽으면 좋은가요?**
-IT 역사 공부 순서 안내가 컴퓨터부터 웹까지 읽는 순서를 정리해 두었습니다. 아니면 관심 있는 주제의 연대기에서 바로 시작해도 됩니다.
+IT 역사 공부 순서 안내에서 컴퓨터부터 웹까지 읽는 순서를 볼 수 있습니다. 관심 있는 주제의 연대기에서 바로 시작해도 됩니다.
 
 **연도 카드는 무엇인가요?**
 타임라인의 각 연도를 누르면 그해에 있었던 일과 배경이 한 화면에 열리는 카드입니다.
@@ -57,7 +57,7 @@ IT 역사 공부 순서 안내가 컴퓨터부터 웹까지 읽는 순서를 정
 네. 각 연대기에 영어 페이지가 있습니다.
 
 **인터넷과 웹은 같은 건가요?**
-다릅니다. 인터넷은 네트워크 기반 구조이고 웹은 그 위에서 돌아가는 서비스입니다. 차이는 인터넷과 웹 안내에서 한 번의 요청 흐름으로 설명합니다.
+다릅니다. 인터넷은 전 세계 컴퓨터를 잇는 통신망이고 웹은 그 위에서 문서를 주고받는 서비스입니다. 자세한 차이는 인터넷과 웹 안내에서 주소 입력부터 화면 표시까지의 순서로 설명합니다.
 
 ---
 
@@ -107,7 +107,7 @@ Yes. It is free and needs no account.
 Computers, networks, operating systems, databases, web making and web servers. Security and protocols/standards are in progress.
 
 **Where should I start?**
-Pick any topic that interests you. The Korean study-order guide suggests a path from computers to the web.
+You can check the reading order from computers to the web in the Korean study-order guide, or start directly from any topic timeline that interests you.
 
 **What is a year card?**
 A card on the timeline that opens a short explanation of what happened that year and its background.
@@ -116,4 +116,4 @@ A card on the timeline that opens a short explanation of what happened that year
 Yes. The Korean home page is the main version and each timeline has both languages.
 
 **Are the internet and the web the same?**
-No. The internet is the network infrastructure and the web is a service that runs on it. The Korean "Internet vs Web" guide walks through one request.
+No. The internet is the network connecting computers worldwide, and the web is a service for exchanging documents on top of it. The Korean "Internet vs Web" guide explains the difference in order from typing an address to rendering the screen.
