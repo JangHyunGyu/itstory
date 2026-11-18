@@ -1,4 +1,4 @@
-(() => {
+(() => { var __oc1;
 	const navLinks = Array.from(document.querySelectorAll('.page__nav a'));
 	const languageSelects = Array.from(document.querySelectorAll('[data-language-switch]'));
 	const LANGUAGE_STORAGE_KEY = 'archerlab:language';
@@ -49,7 +49,9 @@
 		}
 		return (
 			Array.from(select.options || []).find((option) =>
-				normalizeLanguage(option.dataset?.languageCode || option.value) === languageCode
+				{ var __oc0; return (
+normalizeLanguage((((__oc0 = option.dataset) === null || __oc0 === void 0 ? void 0 : __oc0.languageCode)) || option.value) === languageCode
+); }
 			) || null
 		);
 	};
@@ -68,7 +70,7 @@
 		return select.options[index] || null;
 	};
 
-	const currentDocumentLanguage = normalizeLanguage(document.documentElement?.lang || '');
+	const currentDocumentLanguage = normalizeLanguage((((__oc1 = document.documentElement) === null || __oc1 === void 0 ? void 0 : __oc1.lang)) || '');
 	const storedLanguage = normalizeLanguage(getStoredLanguage());
 	const browserLanguage = detectBrowserLanguage();
 	const preferredLanguage = storedLanguage || browserLanguage;
@@ -95,8 +97,8 @@
 		if (!candidates.size) {
 			return;
 		}
-		candidates.forEach((node) => {
-			const key = node.dataset?.linkKey || 'main';
+		candidates.forEach((node) => { var __oc2;
+			const key = (((__oc2 = node.dataset) === null || __oc2 === void 0 ? void 0 : __oc2.linkKey)) || 'main';
 			const targets = languageLinkTargets[key] || languageLinkTargets.main;
 			if (!targets) {
 				return;
@@ -131,12 +133,12 @@
 	}
 
 	languageSelects.forEach((select) => {
-		select.addEventListener('change', (event) => {
+		select.addEventListener('change', (event) => { var __oc3;
 			const target = event.target;
-			const destination = target?.value;
+			const destination = ((target === null || target === void 0 ? void 0 : target.value));
 			const selectedOption = getSelectedOption(target);
 			const selectedLanguageCode = normalizeLanguage(
-				selectedOption?.dataset?.languageCode || selectedOption?.value || ''
+				(((__oc3 = selectedOption === null || selectedOption === void 0 ? void 0 : selectedOption.dataset) === null || __oc3 === void 0 ? void 0 : __oc3.languageCode)) || ((selectedOption === null || selectedOption === void 0 ? void 0 : selectedOption.value)) || ''
 			);
 			if (selectedLanguageCode) {
 				setStoredLanguage(selectedLanguageCode);
@@ -230,8 +232,8 @@
 		const listContainer = document.createElement('div');
 		listContainer.className = 'timeline-archive__list';
 		archiveSection.appendChild(listContainer);
-		eventButtons.forEach((button, index) => {
-			const eventId = button.dataset?.eventId;
+		eventButtons.forEach((button, index) => { var __oc4, __oc5, __oc6, __oc7, __oc8;
+			const eventId = (((__oc4 = button.dataset) === null || __oc4 === void 0 ? void 0 : __oc4.eventId));
 			if (!eventId) {
 				return;
 			}
@@ -246,8 +248,8 @@
 			}
 			const summary = document.createElement('summary');
 			summary.className = 'timeline-archive__summary';
-			const yearText = button.querySelector('.timeline-event__year')?.textContent?.trim();
-			const labelText = button.querySelector('.timeline-event__label')?.textContent?.trim();
+			const yearText = (((__oc6 = (__oc5 = button.querySelector('.timeline-event__year')) === null || __oc5 === void 0 ? void 0 : __oc5.textContent) === null || __oc6 === void 0 ? void 0 : __oc6.trim()));
+			const labelText = (((__oc8 = (__oc7 = button.querySelector('.timeline-event__label')) === null || __oc7 === void 0 ? void 0 : __oc7.textContent) === null || __oc8 === void 0 ? void 0 : __oc8.trim()));
 			summary.textContent = yearText && labelText ? `${yearText} · ${labelText}` : button.textContent.trim();
 			details.appendChild(summary);
 			const body = document.createElement('div');
@@ -503,8 +505,8 @@
 	};
 	// 모달 닫기 공통 로직: 내용 정리, 포커스 복귀, 이벤트 정리 등을 한 번에 처리합니다.
 
-	const openModal = (button) => {
-		const eventId = button?.dataset?.eventId;
+	const openModal = (button) => { var __oc9;
+		const eventId = (((__oc9 = button === null || button === void 0 ? void 0 : button.dataset) === null || __oc9 === void 0 ? void 0 : __oc9.eventId));
 		if (!eventId) {
 			return;
 		}
@@ -559,7 +561,7 @@
 	}
 	if (hangulTerms.length) {
 		const particles = '들|입니다|이에요|예요|이었|였|이라는|이란|이다|이|가|을|를|은|는|도|만|와|과|으로부터|으로|로|의|에서|에|으|란|인|처럼|까지|부터|마다';
-		glossarySources.push(`(?<![가-힣A-Za-z0-9_])(?:${hangulTerms.map(escapeRegExp).join('|')})(?!워크)(?=$|[^가-힣A-Za-z0-9_]|(?:${particles})(?![가-힣]))`);
+		glossarySources.push(`(?:${hangulTerms.map(escapeRegExp).join('|')})(?!워크)(?=$|[^가-힣A-Za-z0-9_]|(?:${particles})(?![가-힣]))`);
 	}
 	const GLOSSARY_REGEX_SOURCE = glossarySources.length ? `(${glossarySources.join('|')})` : '';
 	const buildGlossaryRegex = () => (GLOSSARY_REGEX_SOURCE ? new RegExp(GLOSSARY_REGEX_SOURCE, 'g') : null);
@@ -581,9 +583,18 @@
 			re.lastIndex = 0;
 			if (!re.test(text)) return;
 			re.lastIndex = 0;
+			let hasValidMatch = false;
 			const frag = document.createDocumentFragment();
 			let lastIndex = 0;
-			text.replace(re, (match, p1, offset) => {
+			let m;
+			while ((m = re.exec(text)) !== null) {
+				const match = m[0];
+				const p1 = m[1];
+				const offset = m.index;
+				if (offset > 0 && /[가-힣]/.test(match) && /[가-힣A-Za-z0-9_]/.test(text.charAt(offset - 1))) {
+					re.lastIndex = offset + 1;
+					continue;
+				}
 				if (offset > lastIndex) {
 					frag.appendChild(document.createTextNode(text.slice(lastIndex, offset)));
 				}
@@ -592,9 +603,10 @@
 				abbr.title = GLOSSARY[match] || GLOSSARY[p1] || '';
 				abbr.className = 'glossary-abbr';
 				frag.appendChild(abbr);
+				hasValidMatch = true;
 				lastIndex = offset + match.length;
-				return match;
-			});
+			}
+			if (!hasValidMatch) return;
 			if (lastIndex < text.length) {
 				frag.appendChild(document.createTextNode(text.slice(lastIndex)));
 			}

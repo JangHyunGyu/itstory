@@ -38,13 +38,13 @@
     return label;
   }
 
-  function setOwnerText(item, owner) {
+  function setOwnerText(item, owner) { var __oc0;
     item.classList.remove('is-editable');
     const button = item.querySelector('.part-owner-select');
-    if (button) controls.get(button)?.destroy();
+    if (button) (((__oc0 = controls.get(button)) === null || __oc0 === void 0 ? void 0 : __oc0.destroy()));
     let badge = item.querySelector('.part-owner');
     if (!owner) {
-      badge?.remove();
+      ((badge === null || badge === void 0 ? void 0 : badge.remove()));
       return;
     }
     if (!badge) {
@@ -62,10 +62,10 @@
     return presenters.filter((name) => name === current || !taken.has(name));
   }
 
-  function renderSelect(item, topic, assignments, presenters, onChange) {
+  function renderSelect(item, topic, assignments, presenters, onChange) { var __oc1;
     ensureTopic(item, topic);
     item.classList.add('is-editable');
-    item.querySelector('.part-owner')?.remove();
+    (((__oc1 = item.querySelector('.part-owner')) === null || __oc1 === void 0 ? void 0 : __oc1.remove()));
     let button = item.querySelector('.part-owner-select');
     if (!button) {
       const control = root.ITStoryPresenterCombo.create({ item, topic, onChange: owner => onChange(topic, owner) });
@@ -154,9 +154,9 @@
         };
         items.forEach((item) => renderSelect(item, topicOf(item), assignments, presenters, onChange));
       } else {
-        items.forEach((item) => {
+        items.forEach((item) => { var __oc2;
           const topic = topicOf(item);
-          setOwnerText(item, assignments[topic] || item.querySelector('.part-owner')?.textContent.trim() || '');
+          setOwnerText(item, assignments[topic] || (((__oc2 = item.querySelector('.part-owner')) === null || __oc2 === void 0 ? void 0 : __oc2.textContent.trim())) || '');
         });
       }
     };

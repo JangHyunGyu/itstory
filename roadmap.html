@@ -2380,16 +2380,16 @@
         ];
         let activePhase = "all";
 
-        rows.forEach((row, index) => {
+        rows.forEach((row, index) => { var __oc0, __oc1;
           const week = index + 1;
           const phase = phaseRanges.find(({ from, to }) => week >= from && week <= to);
           const searchableText = [
             String(week),
             String(week).padStart(2, "0"),
-            row.querySelector(".theme-cell")?.textContent,
-            row.querySelector(".parts-cell")?.textContent
+            (((__oc0 = row.querySelector(".theme-cell")) === null || __oc0 === void 0 ? void 0 : __oc0.textContent)),
+            (((__oc1 = row.querySelector(".parts-cell")) === null || __oc1 === void 0 ? void 0 : __oc1.textContent))
           ].join(" ");
-          row.dataset.phase = phase?.key || "";
+          row.dataset.phase = ((phase === null || phase === void 0 ? void 0 : phase.key)) || "";
           row.dataset.search = searchableText.replace(/\s+/g, " ").trim().toLocaleLowerCase("ko");
         });
 
@@ -2494,7 +2494,7 @@
           const existing = row.querySelector(".week-deadline");
           row.classList.add("is-assignment-week");
           if (!missing) {
-            existing?.remove();
+            ((existing === null || existing === void 0 ? void 0 : existing.remove()));
             return;
           }
 

@@ -54,10 +54,10 @@
       const anchor = button.getBoundingClientRect();
       if (!button.isConnected || !button.getClientRects().length) { close(); return; }
       const viewport = root.visualViewport;
-      const left = (viewport?.offsetLeft || 0) + 8;
-      const top = (viewport?.offsetTop || 0) + 8;
-      const right = left + (viewport?.width || root.innerWidth) - 16;
-      const bottom = top + (viewport?.height || root.innerHeight) - 16;
+      const left = (((viewport === null || viewport === void 0 ? void 0 : viewport.offsetLeft)) || 0) + 8;
+      const top = (((viewport === null || viewport === void 0 ? void 0 : viewport.offsetTop)) || 0) + 8;
+      const right = left + (((viewport === null || viewport === void 0 ? void 0 : viewport.width)) || root.innerWidth) - 16;
+      const bottom = top + (((viewport === null || viewport === void 0 ? void 0 : viewport.height)) || root.innerHeight) - 16;
       if (anchor.bottom < top || anchor.top > bottom || anchor.right < left || anchor.left > right) { close(); return; }
       const width = Math.min(164, right - left);
       menu.style.width = `${width}px`;
@@ -81,7 +81,7 @@
       if (menu.contains(event.target)) return;
       position();
     }
-    function close(restoreFocus = false) {
+    function close(restoreFocus = false) { var __oc0, __oc1;
       menu.hidden = true;
       button.setAttribute('aria-expanded', 'false');
       button.removeAttribute('aria-activedescendant');
@@ -90,11 +90,11 @@
       document.removeEventListener('focusin', outside);
       document.removeEventListener('scroll', scrolled, true);
       root.removeEventListener('resize', position);
-      root.visualViewport?.removeEventListener('resize', position);
-      root.visualViewport?.removeEventListener('scroll', position);
+      (((__oc0 = root.visualViewport) === null || __oc0 === void 0 ? void 0 : __oc0.removeEventListener('resize', position)));
+      (((__oc1 = root.visualViewport) === null || __oc1 === void 0 ? void 0 : __oc1.removeEventListener('scroll', position)));
       if (restoreFocus && button.isConnected) button.focus({ preventScroll: true });
     }
-    function open() {
+    function open() { var __oc2, __oc3;
       if (saving || !names.length) return;
       if (opened && opened !== control) opened.close();
       button.focus({ preventScroll: true });
@@ -108,8 +108,8 @@
       document.addEventListener('focusin', outside);
       document.addEventListener('scroll', scrolled, true);
       root.addEventListener('resize', position);
-      root.visualViewport?.addEventListener('resize', position);
-      root.visualViewport?.addEventListener('scroll', position);
+      (((__oc2 = root.visualViewport) === null || __oc2 === void 0 ? void 0 : __oc2.addEventListener('resize', position)));
+      (((__oc3 = root.visualViewport) === null || __oc3 === void 0 ? void 0 : __oc3.addEventListener('scroll', position)));
     }
     function setSaving(pending) {
       saving = pending;
