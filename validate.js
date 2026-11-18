@@ -117,15 +117,21 @@ for (const htmlFile of allHtmlFiles) {
         if (checked.has(cleanRef)) continue;
         checked.add(cleanRef);
 
-        // For .html links, check file existence
+        // Check static assets and extensionless HTML page links
         if (cleanRef.endsWith('.html') || cleanRef.endsWith('.css') || cleanRef.endsWith('.js') ||
             cleanRef.endsWith('.png') || cleanRef.endsWith('.svg') || cleanRef.endsWith('.jpg') ||
             cleanRef.endsWith('.json') || cleanRef.endsWith('.xml') || cleanRef.endsWith('.txt') ||
             cleanRef.endsWith('.ico')) {
-            const refPath = path.join(ROOT, cleanRef);
+            const refPath = path.join(ROOT, cleanRef.replace(/^\//, ''));
             check(fs.existsSync(refPath),
                 `${htmlFile}: ref "${cleanRef}" OK`,
                 `${htmlFile}: ref "${cleanRef}" NOT FOUND`);
+        } else if (!path.extname(cleanRef)) {
+            const slug = cleanRef.replace(/^\//, '');
+            const targetFile = slug ? `${slug}.html` : 'index.html';
+            check(fileExists(targetFile) || fileExists(slug),
+                `${htmlFile}: extensionless ref "${cleanRef}" -> "${targetFile}" OK`,
+                `${htmlFile}: extensionless ref "${cleanRef}" NOT FOUND`);
         }
     }
 }
@@ -133,21 +139,36 @@ for (const htmlFile of allHtmlFiles) {
 // ─── 6. Internal page links consistency ───
 console.log('\n[6] Internal page links');
 
-// Korean pages should link to Korean pages, English to English
-for (const htmlFile of allHtmlFiles) {
+const seoHtmlFiles = fs.existsSync(path.join(ROOT, 'seo'))
+    ? fs.readdirSync(path.join(ROOT, 'seo')).filter(f => f.endsWith('.html')).map(f => `seo/${f}`)
+    : [];
+
+for (const htmlFile of [...allHtmlFiles, ...seoHtmlFiles]) {
     const content = fs.readFileSync(path.join(ROOT, htmlFile), 'utf-8');
-    const isEnglish = htmlFile.includes('-en.');
-    const linkRegex = /href="([^"]+\.html)"/g;
+    const hrefRegex = /href="([^"]+)"/g;
     let match;
 
-    while ((match = linkRegex.exec(content)) !== null) {
-        const linkedFile = match[1].split('?')[0].split('#')[0];
-        // Skip external
-        if (/^https?:\/\//.test(linkedFile)) continue;
-
-        check(fileExists(linkedFile),
-            `${htmlFile} -> "${linkedFile}" exists`,
-            `${htmlFile} -> "${linkedFile}" BROKEN LINK`);
+    while ((match = hrefRegex.exec(content)) !== null) {
+        const rawHref = match[1];
+        if (/^(?:#|data:|javascript:|\/\/|mailto:|tel:)/.test(rawHref)) continue;
+        const cleanHref = rawHref.split('?')[0].split('#')[0];
+        if (!cleanHref || cleanHref === '/') continue;
+        if (/^https?:\/\//.test(cleanHref)) {
+            if (/^https:\/\/(?:itstory\.)?archerlab\.dev\/[^\s"]*\.html$/i.test(cleanHref)) {
+                fail(`${htmlFile} still links to .html URL: ${rawHref}`);
+            }
+            continue;
+        }
+        if (/\.html$/i.test(cleanHref)) {
+            fail(`${htmlFile} contains internal .html link: ${rawHref}`);
+            continue;
+        }
+        if (!path.extname(cleanHref)) {
+            const targetFile = `${cleanHref.replace(/^\//, '')}.html`;
+            check(fileExists(targetFile),
+                `${htmlFile} -> "${rawHref}" resolves to ${targetFile}`,
+                `${htmlFile} -> "${rawHref}" BROKEN LINK`);
+        }
     }
 }
 
@@ -336,6 +357,46 @@ const otherFiles = [
 
 for (const file of otherFiles) {
     check(fileExists(file), `${file} exists`, `${file} MISSING`);
+}
+
+// ─── 12. Sitemap and canonical URLs ───
+console.log('\n[12] Sitemap and canonical URLs');
+
+const sitemapText = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf-8');
+const sitemapLocs = [...sitemapText.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim());
+const sitemapAlts = [...sitemapText.matchAll(/<xhtml:link\b[^>]*href="([^"]+)"/g)].map(m => m[1].trim());
+
+check(
+    sitemapLocs.length === 27,
+    `sitemap.xml has 27 <loc> URLs`,
+    `sitemap.xml expected 27 <loc> URLs, found ${sitemapLocs.length}`
+);
+check(
+    [...sitemapLocs, ...sitemapAlts].every(u => !/\.html$/i.test(u)),
+    'sitemap.xml contains zero .html URLs',
+    'sitemap.xml still contains .html URL(s)'
+);
+
+for (const loc of sitemapLocs) {
+    const pathname = new URL(loc).pathname;
+    const htmlRel = pathname === '/' ? 'index.html' : `${pathname.replace(/^\//, '')}.html`;
+    if (!fileExists(htmlRel)) {
+        fail(`sitemap target file missing: ${htmlRel} (${loc})`);
+        continue;
+    }
+    const pageHtml = fs.readFileSync(path.join(ROOT, htmlRel), 'utf-8');
+    const canonical = (pageHtml.match(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"/i) || [])[1];
+    const ogUrl = (pageHtml.match(/<meta\b[^>]*property="og:url"[^>]*content="([^"]+)"/i) || [])[1];
+    check(
+        canonical === loc,
+        `${htmlRel}: canonical matches sitemap (${loc})`,
+        `${htmlRel}: canonical "${canonical}" !== sitemap "${loc}"`
+    );
+    check(
+        ogUrl === loc,
+        `${htmlRel}: og:url matches sitemap (${loc})`,
+        `${htmlRel}: og:url "${ogUrl}" !== sitemap "${loc}"`
+    );
 }
 
 // ─── Summary ───

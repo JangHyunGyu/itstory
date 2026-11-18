@@ -78,7 +78,7 @@
 	const languageLinkTargets = {
 		main: {
 			ko: 'https://archerlab.dev',
-			en: 'https://archerlab.dev/index-en.html'
+			en: 'https://archerlab.dev/index-en'
 		}
 	};
 

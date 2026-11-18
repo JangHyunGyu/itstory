@@ -4,7 +4,7 @@
 
 ## IT 스토리란? 컴퓨터·인터넷·OS·웹·DB의 역사를 연표로 읽는 사이트 (ko)
 
-URL: https://itstory.archerlab.dev/seo/itstory-about.html
+URL: https://itstory.archerlab.dev/seo/itstory-about
 Last updated: 2026-10-02
 
 ArcherLab IT Story는 1830년대 전신부터 컴퓨터, 운영체제, 웹과 서버, 데이터베이스까지 IT 기술의 발전 과정을 연도별 타임라인으로 정리한 무료 학습 사이트입니다. 기술 이름보다 그때 막힌 문제와 사람을 먼저 적고 낯선 용어에는 짧은 풀이를 달았습니다. 회원가입이나 설치 없이 브라우저에서 읽을 수 있습니다.
@@ -63,7 +63,7 @@ IT 역사 공부 순서 안내에서 컴퓨터부터 웹까지 읽는 순서를 
 
 ## What is IT Story? Read the history of computers, the internet, OS, web and databases as timelines (en)
 
-URL: https://itstory.archerlab.dev/seo/itstory-about-en.html
+URL: https://itstory.archerlab.dev/seo/itstory-about-en
 Last updated: 2026-10-02
 
 ArcherLab IT Story is a free learning site that follows IT history from the 1830s telegraph through computers, operating systems, the web and servers, and databases, as year-by-year timelines. Each entry starts with the problem and the people behind a technology, and unfamiliar terms come with short explanations. It runs in the browser with no signup or install.
